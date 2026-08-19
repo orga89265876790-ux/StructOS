@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="favicon-bg" x1="70" y1="36" x2="438" y2="482" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12ccff"/>
+      <stop offset=".42" stop-color="#0876ff"/>
+      <stop offset="1" stop-color="#032fc4"/>
+    </linearGradient>
+    <linearGradient id="favicon-glass" x1="168" y1="105" x2="338" y2="408" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#bdefff"/>
+    </linearGradient>
+  </defs>
+  <rect x="18" y="18" width="476" height="476" rx="112" fill="#f7fcff"/>
+  <rect x="38" y="38" width="436" height="436" rx="96" fill="url(#favicon-bg)"/>
+  <path d="M126 393V221l88-65v237H126Z" fill="url(#favicon-glass)"/>
+  <path d="M229 393V123l82-57v327h-82Z" fill="#fff"/>
+  <path d="M327 393V170l70 55v168h-70Z" fill="url(#favicon-glass)"/>
+  <path d="M214 156v237M311 66v327M327 170v223" fill="none" stroke="#0771ef" stroke-width="9" opacity=".72"/>
+  <path d="M126 310l88-66M327 252l70 55" fill="none" stroke="#0771ef" stroke-width="8" opacity=".66"/>
+  <path d="M102 410h318" fill="none" stroke="#dff9ff" stroke-width="10" stroke-linecap="round"/>
+</svg>

@@ -67,7 +67,8 @@ Object.assign(translations.RU, {
   menuFeatures: 'Возможности',
   menuPricing: 'Тарифы',
   menuVideo: 'Видео презентация',
-  menuDemo: 'Демо версия'
+  menuDemo: 'Демо версия',
+  objectRequired: 'Укажите название объекта'
 });
 
 Object.assign(translations.EN, {
@@ -75,7 +76,8 @@ Object.assign(translations.EN, {
   menuFeatures: 'Features',
   menuPricing: 'Pricing',
   menuVideo: 'Video presentation',
-  menuDemo: 'Demo version'
+  menuDemo: 'Demo version',
+  objectRequired: 'Enter the object name'
 });
 
 Object.assign(translations.TJ, {
@@ -83,7 +85,8 @@ Object.assign(translations.TJ, {
   menuFeatures: 'Имкониятҳо',
   menuPricing: 'Тарифҳо',
   menuVideo: 'Муаррифии видеоӣ',
-  menuDemo: 'Нусхаи намоишӣ'
+  menuDemo: 'Нусхаи намоишӣ',
+  objectRequired: 'Номи объектро ворид кунед'
 });
 
 Object.assign(translations.KG, {
@@ -91,7 +94,8 @@ Object.assign(translations.KG, {
   menuFeatures: 'Мүмкүнчүлүктөр',
   menuPricing: 'Тарифтер',
   menuVideo: 'Видео презентация',
-  menuDemo: 'Демо версия'
+  menuDemo: 'Демо версия',
+  objectRequired: 'Объекттин аталышын жазыңыз'
 });
 
 Object.assign(translations.TR, {
@@ -99,7 +103,8 @@ Object.assign(translations.TR, {
   menuFeatures: 'Özellikler',
   menuPricing: 'Fiyatlandırma',
   menuVideo: 'Video sunumu',
-  menuDemo: 'Demo sürümü'
+  menuDemo: 'Demo sürümü',
+  objectRequired: 'Proje adını girin'
 });
 
 const themeButton = $('.theme-switch');
@@ -115,6 +120,7 @@ const installDialog = $('#install-dialog');
 const modalInput = $('#modal-file-input');
 const objectNameInput = $('#object-name');
 const selectedFiles = { project: null, contract: null, estimate: null };
+let pendingFile = null;
 const acceptMap = {
   project: '.pdf,.dwg,.rvt,.jpg,.jpeg,.png,.webp,.heic,image/*',
   contract: '.pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.heic,image/*',
@@ -178,14 +184,18 @@ function escapeHtml(value) {
 
 function openUpload(kind) {
   activeKind = kind;
+  pendingFile = selectedFiles[kind];
   modalInput.accept = acceptMap[kind];
   modalInput.value = '';
   const names = { project: t('project'), contract: t('contract'), estimate: t('estimate') };
   $('#upload-dialog-title').textContent = `${t('upload')} ${names[kind].toLowerCase()}`;
   $('.dropzone-formats').textContent = `${acceptMap[kind].replaceAll(',', ', ')} · до ${sizeLimits[kind]} МБ`;
   renderModalFile();
-  renderSlots();
+  setObjectNameError(false);
+  updateUploadButton();
   if (!uploadDialog.open) uploadDialog.showModal();
+  uploadDialog.classList.remove('is-constructing');
+  requestAnimationFrame(() => uploadDialog.classList.add('is-constructing'));
 }
 
 function setFile(file) {
@@ -194,21 +204,52 @@ function setFile(file) {
     showToast(`Файл превышает ${sizeLimits[activeKind]} МБ`);
     return;
   }
-  selectedFiles[activeKind] = file;
+  pendingFile = file;
   renderModalFile();
-  renderUploadCards();
-  renderSlots();
   showToast(`Файл «${file.name}» выбран`);
 }
 
 function renderModalFile() {
-  const file = selectedFiles[activeKind];
+  const file = pendingFile;
   $('.selected-file').hidden = !file;
   $('.dropzone').hidden = Boolean(file);
   $('.device-file-actions').hidden = Boolean(file);
-  if (!file) return;
-  $('.selected-file strong').textContent = file.name;
-  $('.selected-file small').textContent = `${file.type || 'Файл'} · ${fileSize(file)}`;
+  if (file) {
+    $('.selected-file strong').textContent = file.name;
+    $('.selected-file small').textContent = `${file.type || 'Файл'} · ${fileSize(file)}`;
+  }
+  updateUploadButton();
+}
+
+function setObjectNameError(show) {
+  objectNameInput.classList.toggle('field-error', show);
+  $('#object-name-error').hidden = !show;
+  objectNameInput.setAttribute('aria-invalid', String(show));
+}
+
+function updateUploadButton() {
+  $('.modal-upload-button').disabled = !(pendingFile && objectNameInput.value.trim());
+}
+
+function confirmUpload() {
+  const objectName = objectNameInput.value.trim();
+  if (!objectName) {
+    setObjectNameError(true);
+    objectNameInput.focus();
+    showToast(t('objectRequired'));
+    return;
+  }
+  if (!pendingFile) {
+    showToast(t('selectFile'));
+    return;
+  }
+  setObjectNameError(false);
+  selectedFiles[activeKind] = pendingFile;
+  renderUploadCards();
+  renderSlots();
+  uploadDialog.close();
+  uploadDialog.classList.remove('is-constructing');
+  showToast(t('uploaded'));
 }
 
 function renderUploadCards() {
@@ -337,8 +378,9 @@ function goToUploads() { $('#uploads').scrollIntoView({ behavior: 'smooth', bloc
 $('#start').addEventListener('click', goToUploads);
 $('#start').addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); goToUploads(); } });
 $$('.upload-card').forEach((card) => { card.addEventListener('click', () => openUpload(card.dataset.kind)); card.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') openUpload(card.dataset.kind); }); });
-$$('.upload-slots [data-slot]').forEach((slot) => slot.addEventListener('click', () => openUpload(slot.dataset.slot)));
 modalInput.addEventListener('change', () => setFile(modalInput.files?.[0]));
+objectNameInput.addEventListener('input', () => { setObjectNameError(false); updateUploadButton(); });
+objectNameInput.addEventListener('blur', () => { if (!objectNameInput.value.trim()) setObjectNameError(true); });
 $('.choose-device').addEventListener('click', () => { modalInput.removeAttribute('capture'); modalInput.accept = acceptMap[activeKind]; modalInput.click(); });
 $('.choose-photo').addEventListener('click', () => { modalInput.accept = 'image/*'; modalInput.setAttribute('capture', 'environment'); modalInput.click(); });
 $('.dropzone').addEventListener('click', () => $('.choose-device').click());
@@ -347,10 +389,10 @@ $('.dropzone').addEventListener('keydown', (event) => { if (event.key === 'Enter
 ['dragleave', 'drop'].forEach((type) => $('.dropzone').addEventListener(type, (event) => { event.preventDefault(); $('.dropzone').classList.remove('dragging'); }));
 $('.dropzone').addEventListener('drop', (event) => { if (event.dataTransfer.files.length > 1) showToast('Можно добавить только один файл в эту категорию'); setFile(event.dataTransfer.files[0]); });
 $('.replace-file').addEventListener('click', () => $('.choose-device').click());
-$('.delete-file').addEventListener('click', () => { selectedFiles[activeKind] = null; renderModalFile(); renderUploadCards(); renderSlots(); });
-$('.upload-close').addEventListener('click', () => uploadDialog.close());
-$('.modal-analysis-button').addEventListener('click', startAnalysis);
-$('.primary-cta').addEventListener('click', () => { if (Object.values(selectedFiles).some(Boolean)) startAnalysis(); else openUpload('project'); });
+$('.delete-file').addEventListener('click', () => { pendingFile = null; modalInput.value = ''; renderModalFile(); });
+$('.upload-close').addEventListener('click', () => { uploadDialog.close(); uploadDialog.classList.remove('is-constructing'); });
+$('.modal-upload-button').addEventListener('click', confirmUpload);
+$('.landing-analysis-button').addEventListener('click', () => { if (Object.values(selectedFiles).some(Boolean)) startAnalysis(); else openUpload('project'); });
 $('.minimize-analysis').addEventListener('click', () => { analysisDialog.close(); $('.analysis-dock').hidden = false; });
 $('.analysis-dock').addEventListener('click', () => { $('.analysis-dock').hidden = true; analysisDialog.showModal(); });
 $('.view-results-button').addEventListener('click', showResults);

@@ -1908,3 +1908,189 @@ html[data-theme="dark"] .readiness-ring { background: conic-gradient(var(--blue)
   .trust-title-track,
   .trust-logos-track { animation: none !important; }
 }
+
+/* Confirmed upload flow and branded finale */
+.landing-analysis-button {
+  margin: 9px 3px 11px;
+}
+
+.upload-dialog .dialog-card {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(rgba(0, 104, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 104, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 88% 0%, rgba(132, 196, 255, 0.23), transparent 15rem),
+    var(--surface);
+  background-size: 24px 24px, 24px 24px, auto, auto;
+}
+
+.upload-dialog .dialog-card > *:not(.blueprint-frame) {
+  position: relative;
+  z-index: 2;
+}
+
+.blueprint-frame {
+  position: absolute;
+  z-index: 1;
+  inset: 7px;
+  overflow: hidden;
+  border-radius: 19px;
+  pointer-events: none;
+}
+
+.blueprint-frame span {
+  position: absolute;
+  display: block;
+  background: linear-gradient(90deg, #20d0ff, #0868ff);
+  box-shadow: 0 0 8px rgba(0, 109, 255, 0.38);
+}
+
+.blueprint-ground { right: 10px; bottom: 7px; left: 10px; height: 1.5px; transform: scaleX(0); transform-origin: left; }
+.blueprint-column { bottom: 7px; width: 1.5px; height: calc(100% - 18px); transform: scaleY(0); transform-origin: bottom; }
+.blueprint-column.left { left: 7px; }
+.blueprint-column.right { right: 7px; }
+.blueprint-floor { right: 7px; left: 7px; height: 1px; opacity: 0.36; transform: scaleX(0); transform-origin: left; }
+.blueprint-floor.floor-one { bottom: 28%; }
+.blueprint-floor.floor-two { bottom: 54%; }
+.blueprint-floor.floor-three { bottom: 78%; }
+.blueprint-node { width: 7px; height: 7px; border: 1px solid #0b72ff; border-radius: 50%; background: var(--surface) !important; opacity: 0; }
+.blueprint-node.node-one { right: 4px; bottom: 3px; }
+.blueprint-node.node-two { top: 7px; left: 4px; }
+.blueprint-scan { right: 0; bottom: 6px; width: 36%; height: 2px; opacity: 0; }
+
+.upload-dialog.is-constructing .dialog-card { animation: blueprint-shell-build 0.52s cubic-bezier(0.18, 0.78, 0.24, 1) both; }
+.upload-dialog.is-constructing .blueprint-ground { animation: blueprint-draw-x 0.36s 0.08s ease-out forwards; }
+.upload-dialog.is-constructing .blueprint-column { animation: blueprint-draw-y 0.48s 0.25s ease-out forwards; }
+.upload-dialog.is-constructing .floor-one { animation: blueprint-draw-x 0.28s 0.42s ease-out forwards; }
+.upload-dialog.is-constructing .floor-two { animation: blueprint-draw-x 0.28s 0.53s ease-out forwards; }
+.upload-dialog.is-constructing .floor-three { animation: blueprint-draw-x 0.28s 0.64s ease-out forwards; }
+.upload-dialog.is-constructing .blueprint-node { animation: blueprint-node-on 0.35s 0.74s ease-out forwards; }
+.upload-dialog.is-constructing .blueprint-scan { animation: blueprint-scan 1.8s 0.82s ease-in-out infinite; }
+
+.object-name-field em { color: #e5223e; font-style: normal; }
+.object-name-field .field-error-message { color: #e5223e; font-weight: 650; }
+
+.modal-upload-button {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 14px;
+  border: 0;
+  border-radius: 14px;
+  color: #fff;
+  background: linear-gradient(100deg, #0878ff, #0049e8);
+  box-shadow: 0 10px 26px rgba(0, 79, 230, 0.24);
+  font-weight: 750;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-upload-button:active:not(:disabled) { transform: scale(0.993); }
+.modal-upload-button:disabled { opacity: 0.42; box-shadow: none; cursor: not-allowed; }
+
+.brand-finale {
+  position: relative;
+  min-height: 176px;
+  margin: 12px 3px 0;
+  padding: 24px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(0, 103, 255, 0.13);
+  border-radius: 18px;
+  background:
+    linear-gradient(rgba(0, 102, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 255, 0.055) 1px, transparent 1px),
+    radial-gradient(circle at 22% 45%, rgba(0, 190, 255, 0.15), transparent 27%),
+    linear-gradient(145deg, rgba(251, 254, 255, 0.98), rgba(233, 245, 255, 0.94));
+  background-size: 22px 22px, 22px 22px, auto, auto;
+  box-shadow: 0 14px 36px rgba(11, 62, 132, 0.11);
+}
+
+.finale-brand {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.finale-mark {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  flex: 0 0 76px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 0 25px rgba(0, 105, 255, 0.22);
+}
+
+.finale-mark::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 1.5px solid rgba(0, 181, 255, 0.55);
+  border-left-color: transparent;
+  border-radius: inherit;
+  animation: finale-orbit 3.8s linear infinite;
+}
+
+.finale-mark img { width: 65px; height: 65px; border-radius: 17px; }
+.finale-brand strong { display: block; color: #070d18; font-size: clamp(31px, 9vw, 48px); line-height: 0.94; letter-spacing: -0.055em; }
+.finale-brand strong span { color: var(--blue); }
+.finale-brand p { margin: 8px 0 0; color: #41536c; font-size: clamp(7px, 2.1vw, 10px); letter-spacing: 0.015em; }
+
+.finale-blueprint {
+  position: absolute;
+  right: -18px;
+  bottom: 0;
+  width: 48%;
+  height: 88%;
+  opacity: 0.24;
+}
+
+.finale-blueprint span { position: absolute; display: block; border-color: #0876ff; }
+.finale-ground { right: 0; bottom: 12px; left: 0; border-top: 1px solid; }
+.finale-column { bottom: 12px; height: 72%; border-left: 1px solid; }
+.finale-column.left { left: 18%; }
+.finale-column.right { right: 18%; }
+.finale-floor { right: 18%; left: 18%; border-top: 1px solid; }
+.finale-floor.one { bottom: 29%; }
+.finale-floor.two { bottom: 47%; }
+.finale-floor.three { bottom: 65%; }
+.finale-roof { right: 18%; bottom: 84%; left: 18%; border-top: 1px solid; transform: skewY(-12deg); transform-origin: left; }
+
+html[data-theme="dark"] .brand-finale {
+  background:
+    linear-gradient(rgba(50, 126, 226, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(50, 126, 226, 0.07) 1px, transparent 1px),
+    radial-gradient(circle at 22% 45%, rgba(0, 132, 255, 0.17), transparent 28%),
+    linear-gradient(145deg, #0a182a, #0d2138);
+}
+
+html[data-theme="dark"] .finale-brand strong { color: #f4f8ff; }
+html[data-theme="dark"] .finale-brand p { color: #a8b8cd; }
+
+@keyframes blueprint-shell-build {
+  0% { opacity: 0; transform: translateY(16px); clip-path: inset(100% 0 0 0 round 24px); }
+  100% { opacity: 1; transform: translateY(0); clip-path: inset(0 0 0 0 round 24px); }
+}
+
+@keyframes blueprint-draw-x { to { transform: scaleX(1); } }
+@keyframes blueprint-draw-y { to { transform: scaleY(1); } }
+@keyframes blueprint-node-on { 55% { opacity: 1; transform: scale(1.45); } 100% { opacity: 0.9; transform: scale(1); } }
+@keyframes blueprint-scan { 0%, 100% { opacity: 0; transform: translateX(-180%); } 45%, 60% { opacity: 1; } 100% { transform: translateX(300%); } }
+@keyframes finale-orbit { to { transform: rotate(360deg); } }
+
+@media (min-width: 768px) {
+  .landing-analysis-button { margin: 12px auto 18px; }
+  .brand-finale { min-height: 238px; max-width: 900px; margin: 18px auto 0; border-radius: 23px; }
+  .finale-brand { gap: 24px; }
+  .finale-mark { width: 112px; height: 112px; flex-basis: 112px; }
+  .finale-mark img { width: 96px; height: 96px; border-radius: 24px; }
+  .finale-brand strong { font-size: 70px; }
+  .finale-brand p { font-size: 12px; }
+}

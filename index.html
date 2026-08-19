@@ -11,8 +11,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="StructOS" />
     <title>StructOS — единый строительный интеллект</title>
-    <link rel="icon" href="assets/structos-mark.jpg" />
-    <link rel="apple-touch-icon" href="assets/structos-mark.jpg" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -79,6 +80,8 @@
           <article class="upload-card estimate" data-kind="estimate" tabindex="0"><div class="doc-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="12" y="6" width="24" height="36" rx="2"/><path d="M17 13h14M18 21h4M26 21h4M18 27h4M26 27h4M18 33h4M26 33h4"/></svg></div><div class="upload-copy"><h3 data-i18n="estimate">СМЕТА</h3><p data-i18n="estimateFormats">XLSX, CSV, PDF, изображения<br />до 100 МБ</p><span class="file-name" aria-live="polite"></span></div><button class="upload-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg><span data-i18n="upload">Загрузить</span></button><span class="chevron" aria-hidden="true">›</span></article>
         </section>
 
+        <button class="primary-cta landing-analysis-button" type="button"><span data-i18n="startAnalysis">Начать анализ</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5" /></svg></button>
+
         <section class="stats" aria-label="StructOS в цифрах">
           <article class="stat-card"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="14" r="7"/><circle cx="10" cy="19" r="5"/><circle cx="38" cy="19" r="5"/><path d="M12 40v-5c0-7 5-11 12-11s12 4 12 11v5M2 39v-4c0-5 3-8 8-8M46 39v-4c0-5-3-8-8-8"/></svg></span><div><strong>1 250+</strong><p data-i18n="companies">компаний<br />уже с нами</p></div></article>
           <article class="stat-card"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 13h14l4 5h20v24H5z"/><path d="M5 18V9h13l4 4h10"/></svg></span><div><strong>85 000+</strong><p data-i18n="projectsAnalyzed">проектов<br />проанализировано</p></div></article>
@@ -88,8 +91,12 @@
 
         <section class="trust" aria-label="Нам доверяют лидеры строительной отрасли"><div class="trust-title-viewport"><div class="trust-title-track" aria-hidden="true"><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span></div></div><div class="trust-logos-viewport" aria-label="ПИК, SetlGroup, GloraX, DOGMA, Инград и ЛСР"><div class="trust-logos-track"><span class="logo-raster"><img src="assets/trusted-companies.jpg" alt="" /></span><span class="logo-raster"><img src="assets/trusted-companies.jpg" alt="" /></span></div></div></section>
 
-        <button class="primary-cta" type="button"><span data-i18n="startAnalysis">Начать анализ</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5" /></svg></button>
         <button class="install-app-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="3"/><path d="M12 6v8M8.5 10.5 12 14l3.5-3.5M10 18h4"/></svg><span data-i18n="installPhone">Установить StructOS на телефон</span></button>
+
+        <section class="brand-finale" aria-label="StructOS — единый строительный интеллект">
+          <div class="finale-blueprint" aria-hidden="true"><span class="finale-ground"></span><span class="finale-column left"></span><span class="finale-column right"></span><span class="finale-floor one"></span><span class="finale-floor two"></span><span class="finale-floor three"></span><span class="finale-roof"></span></div>
+          <div class="finale-brand"><span class="finale-mark"><img src="assets/structos-mark.jpg" alt="" /></span><div><strong>Struct<span>OS</span></strong><p data-i18n="tagline">ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ</p></div></div>
+        </section>
       </div>
 
       <section class="result-screen" id="result-screen" hidden aria-label="Результат анализа">
@@ -112,13 +119,13 @@
 
     <dialog class="app-dialog upload-dialog" id="upload-dialog">
       <div class="dialog-card">
+        <div class="blueprint-frame" aria-hidden="true"><span class="blueprint-ground"></span><span class="blueprint-column left"></span><span class="blueprint-column right"></span><span class="blueprint-floor floor-one"></span><span class="blueprint-floor floor-two"></span><span class="blueprint-floor floor-three"></span><span class="blueprint-node node-one"></span><span class="blueprint-node node-two"></span><span class="blueprint-scan"></span></div>
         <header><div><span class="dialog-eyebrow" data-i18n="oneFilePerCategory">Один файл в каждой категории</span><h2 id="upload-dialog-title">Загрузить проект</h2></div><button class="dialog-close upload-close" type="button" aria-label="Закрыть">×</button></header>
-        <label class="object-name-field"><span data-i18n="objectName">Название объекта</span><input id="object-name" type="text" maxlength="100" placeholder="Например, ЖК Северный" autocomplete="organization" /><small data-i18n="objectNameHint">Объединим проект, договор и смету в одном объекте</small></label>
+        <label class="object-name-field"><span><span data-i18n="objectName">Название объекта</span> <em aria-hidden="true">*</em></span><input id="object-name" type="text" maxlength="100" placeholder="Например, ЖК Северный" autocomplete="organization" required aria-required="true" aria-describedby="object-name-hint object-name-error" /><small id="object-name-hint" data-i18n="objectNameHint">Объединим проект, договор и смету в одном объекте</small><small class="field-error-message" id="object-name-error" data-i18n="objectRequired" hidden>Укажите название объекта</small></label>
         <div class="dropzone" tabindex="0"><input id="modal-file-input" type="file" /><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg><strong data-i18n="selectFile">Выберите файл</strong><span data-i18n="dropFile">или перетащите его сюда</span><small class="dropzone-formats"></small></div>
         <div class="selected-file" hidden><span class="selected-file-icon">▤</span><div><strong></strong><small></small></div><button type="button" class="replace-file" data-i18n="replace">Заменить</button><button type="button" class="delete-file" aria-label="Удалить файл">×</button></div>
         <div class="device-file-actions"><button type="button" class="choose-device" data-i18n="deviceFile">Файл с устройства</button><button type="button" class="choose-photo" data-i18n="photoOrCamera">Фото / камера</button></div>
-        <div class="upload-slots" aria-label="Выбранные файлы"><button type="button" data-slot="project"><span>●</span><strong data-i18n="project">Проект</strong><small data-i18n="notSelected">не выбран</small></button><button type="button" data-slot="contract"><span>●</span><strong data-i18n="contract">Договор</strong><small data-i18n="notSelected">не выбран</small></button><button type="button" data-slot="estimate"><span>●</span><strong data-i18n="estimate">Смета</strong><small data-i18n="notSelectedFemale">не выбрана</small></button></div>
-        <button type="button" class="modal-analysis-button" data-i18n="startAnalysis">Начать анализ</button>
+        <button type="button" class="modal-upload-button" data-i18n="upload" disabled>Загрузить</button>
       </div>
     </dialog>
 
