@@ -1,0 +1,21 @@
+{
+  "name": "StructOS — единый строительный интеллект",
+  "short_name": "StructOS",
+  "description": "Анализ строительных проектов, договоров и смет.",
+  "lang": "ru",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f7fbff",
+  "theme_color": "#075de8",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
