@@ -107,6 +107,56 @@ Object.assign(translations.TR, {
   objectRequired: 'Proje adını girin'
 });
 
+Object.assign(translations.RU, {
+  analysisComplete: 'Анализ завершён',
+  openAnalysis: 'Открыть',
+  footerBase: 'База всех строительных ИИ России',
+  builderPassport: 'Паспорт строителя',
+  reportGateTitle: 'Полный отчёт доступен после регистрации',
+  reportGateCopy: 'После регистрации и присвоения вам Паспорта строителя вы сможете посмотреть и скачать полный отчёт StructOS.',
+  reportRegister: 'Зарегистрироваться'
+});
+
+Object.assign(translations.EN, {
+  analysisComplete: 'Analysis complete',
+  openAnalysis: 'Open',
+  footerBase: 'The home of construction AI for Russia',
+  builderPassport: 'Builder Passport',
+  reportGateTitle: 'The full report is available after registration',
+  reportGateCopy: 'After registration and receiving your Builder Passport, you will be able to view and download the full StructOS report.',
+  reportRegister: 'Register'
+});
+
+Object.assign(translations.TJ, {
+  analysisComplete: 'Таҳлил анҷом ёфт',
+  openAnalysis: 'Кушодан',
+  footerBase: 'Пойгоҳи ҳамаи ИИ-и сохтмонии Русия',
+  builderPassport: 'Шиносномаи сохтмончӣ',
+  reportGateTitle: 'Ҳисоботи пурра пас аз бақайдгирӣ дастрас аст',
+  reportGateCopy: 'Пас аз бақайдгирӣ ва гирифтани Шиносномаи сохтмончӣ шумо метавонед ҳисоботи пурраи StructOS-ро бинед ва зеркашӣ кунед.',
+  reportRegister: 'Бақайдгирӣ'
+});
+
+Object.assign(translations.KG, {
+  analysisComplete: 'Талдоо аяктады',
+  openAnalysis: 'Ачуу',
+  footerBase: 'Россиядагы бардык курулуш ИИлеринин базасы',
+  builderPassport: 'Куруучунун паспорту',
+  reportGateTitle: 'Толук отчет катталгандан кийин жеткиликтүү',
+  reportGateCopy: 'Катталгандан жана Куруучунун паспорту берилгенден кийин StructOS толук отчетун көрүп жана жүктөп ала аласыз.',
+  reportRegister: 'Катталуу'
+});
+
+Object.assign(translations.TR, {
+  analysisComplete: 'Analiz tamamlandı',
+  openAnalysis: 'Aç',
+  footerBase: "Rusya'daki tüm inşaat yapay zekâlarının merkezi",
+  builderPassport: 'İnşaatçı Pasaportu',
+  reportGateTitle: 'Tam rapor kayıt sonrasında kullanılabilir',
+  reportGateCopy: 'Kayıt olup İnşaatçı Pasaportunuzu aldıktan sonra StructOS tam raporunu görüntüleyebilir ve indirebilirsiniz.',
+  reportRegister: 'Kayıt ol'
+});
+
 const themeButton = $('.theme-switch');
 const themeMeta = $('meta[name="theme-color"]');
 const languageButton = $('.language-button');
@@ -116,6 +166,7 @@ const menuButton = $('.menu-button');
 const mainMenu = $('.main-menu');
 const uploadDialog = $('#upload-dialog');
 const analysisDialog = $('#analysis-dialog');
+const reportDialog = $('#report-dialog');
 const installDialog = $('#install-dialog');
 const modalInput = $('#modal-file-input');
 const objectNameInput = $('#object-name');
@@ -131,6 +182,8 @@ let activeKind = 'project';
 let selectedLanguage = localStorage.getItem('structos-language') || 'RU';
 let toastTimer;
 let analysisTimer;
+let analysisComplete = false;
+let analysisDockDismissed = false;
 let deferredInstallPrompt;
 
 function t(key) {
@@ -148,6 +201,7 @@ function applyLanguage(language) {
   });
   renderUploadCards();
   renderSlots();
+  syncAnalysisAccess();
 }
 
 function applyTheme(theme) {
@@ -193,9 +247,11 @@ function openUpload(kind) {
   renderModalFile();
   setObjectNameError(false);
   updateUploadButton();
-  if (!uploadDialog.open) uploadDialog.showModal();
   uploadDialog.classList.remove('is-constructing');
-  requestAnimationFrame(() => uploadDialog.classList.add('is-constructing'));
+  requestAnimationFrame(() => {
+    uploadDialog.classList.add('is-constructing');
+    if (!uploadDialog.open) uploadDialog.showModal();
+  });
 }
 
 function setFile(file) {
@@ -245,6 +301,10 @@ function confirmUpload() {
   }
   setObjectNameError(false);
   selectedFiles[activeKind] = pendingFile;
+  analysisComplete = false;
+  analysisDockDismissed = true;
+  $('.analysis-dock').hidden = true;
+  syncAnalysisAccess();
   renderUploadCards();
   renderSlots();
   uploadDialog.close();
@@ -291,6 +351,10 @@ function validateBeforeAnalysis() {
 function startAnalysis() {
   if (!validateBeforeAnalysis()) return;
   if (uploadDialog.open) uploadDialog.close();
+  analysisComplete = false;
+  analysisDockDismissed = false;
+  syncAnalysisAccess();
+  $('.analysis-dialog h2').textContent = t('analysisInProgress');
   const kinds = Object.keys(selectedFiles).filter((kind) => selectedFiles[kind]);
   const progress = Object.fromEntries(kinds.map((kind) => [kind, 0]));
   const labels = { project: t('project'), contract: t('contract'), estimate: t('estimate') };
@@ -318,10 +382,39 @@ function startAnalysis() {
     $('.dock-progress').textContent = `${overall}%`;
     if (overall >= 100) {
       clearInterval(analysisTimer);
+      analysisComplete = true;
+      analysisDockDismissed = false;
       $('.view-results-button').disabled = false;
-      $('.analysis-dock').hidden = true;
+      $('.analysis-dialog h2').textContent = t('analysisComplete');
+      syncAnalysisAccess();
+      if (!analysisDialog.open) $('.analysis-dock').hidden = false;
     }
   }, 420);
+}
+
+function syncAnalysisAccess() {
+  const landingButton = $('.landing-analysis-button');
+  const landingLabel = $('span[data-i18n]', landingButton);
+  const dock = $('.analysis-dock');
+  const dockTitle = $('.dock-title');
+  const dockActionLabel = $('.dock-action span[data-i18n]');
+  const landingKey = analysisComplete ? 'viewResult' : 'startAnalysis';
+  const dockActionKey = analysisComplete ? 'viewResult' : 'openAnalysis';
+  landingLabel.dataset.i18n = landingKey;
+  landingLabel.textContent = t(landingKey);
+  landingButton.classList.toggle('result-ready', analysisComplete);
+  dock.classList.toggle('is-complete', analysisComplete);
+  dockTitle.dataset.i18n = analysisComplete ? 'analysisComplete' : 'analysisContinues';
+  dockTitle.textContent = t(dockTitle.dataset.i18n);
+  dockActionLabel.dataset.i18n = dockActionKey;
+  dockActionLabel.textContent = t(dockActionKey);
+  if (analysisComplete) $('.dock-progress').textContent = '100%';
+}
+
+function openAnalysisDock() {
+  analysisDockDismissed = false;
+  syncAnalysisAccess();
+  $('.analysis-dock').hidden = false;
 }
 
 function showResults() {
@@ -392,15 +485,16 @@ $('.replace-file').addEventListener('click', () => $('.choose-device').click());
 $('.delete-file').addEventListener('click', () => { pendingFile = null; modalInput.value = ''; renderModalFile(); });
 $('.upload-close').addEventListener('click', () => { uploadDialog.close(); uploadDialog.classList.remove('is-constructing'); });
 $('.modal-upload-button').addEventListener('click', confirmUpload);
-$('.landing-analysis-button').addEventListener('click', () => { if (Object.values(selectedFiles).some(Boolean)) startAnalysis(); else openUpload('project'); });
-$('.minimize-analysis').addEventListener('click', () => { analysisDialog.close(); $('.analysis-dock').hidden = false; });
-$('.analysis-dock').addEventListener('click', () => { $('.analysis-dock').hidden = true; analysisDialog.showModal(); });
+$('.landing-analysis-button').addEventListener('click', () => { if (analysisComplete) showResults(); else if (Object.values(selectedFiles).some(Boolean)) startAnalysis(); else openUpload('project'); });
+$('.minimize-analysis').addEventListener('click', () => { analysisDialog.close(); openAnalysisDock(); });
+analysisDialog.addEventListener('cancel', (event) => { event.preventDefault(); analysisDialog.close(); openAnalysisDock(); });
+$('.dock-action').addEventListener('click', () => { if (analysisComplete) showResults(); else { $('.analysis-dock').hidden = true; analysisDialog.showModal(); } });
+$('.dock-dismiss').addEventListener('click', () => { analysisDockDismissed = true; $('.analysis-dock').hidden = true; });
 $('.view-results-button').addEventListener('click', showResults);
-$('.result-back').addEventListener('click', () => { $('#result-screen').hidden = true; $('#landing-view').hidden = false; window.scrollTo({ top: 0, behavior: 'smooth' }); });
-$('.report-button').addEventListener('click', () => showToast(`Отчёт будет сохранён: RU + ${selectedLanguage}`));
+$('.result-back').addEventListener('click', () => { $('#result-screen').hidden = true; $('#landing-view').hidden = false; if (analysisComplete && !analysisDockDismissed) openAnalysisDock(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+$('.report-button').addEventListener('click', () => reportDialog.showModal());
+$('.report-close').addEventListener('click', () => reportDialog.close());
 $$('.document-result > button').forEach((button) => button.addEventListener('click', () => showToast('Детальный просмотр подключим на следующем этапе')));
-
-$$('.login-link, .register-button, .account-button').forEach((button) => button.addEventListener('click', () => { closeMenu(); showToast('Личный кабинет будет подключён на следующем этапе'); }));
 $$('.install-app-button').forEach((button) => button.addEventListener('click', openInstall));
 $('.install-close').addEventListener('click', () => installDialog.close());
 $$('.browser-tabs button').forEach((button) => button.addEventListener('click', () => selectBrowserTab(button.dataset.browser)));

@@ -35,7 +35,6 @@
             <div class="language-menu" id="language-menu" role="menu" hidden><button type="button" data-language="RU">RU</button><button type="button" data-language="EN">EN</button><button type="button" data-language="TJ">TJ</button><button type="button" data-language="KG">KG</button><button type="button" data-language="TR">TR</button></div>
           </div>
           <button class="theme-switch" type="button" aria-label="Включить тёмную тему" aria-pressed="false"><span class="theme-icon sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></span><span class="theme-icon moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z"/></svg></span></button>
-          <button class="account-button" type="button" aria-label="Войти в личный кабинет"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c.6-4.5 3.1-7 7.5-7s6.9 2.5 7.5 7"/></svg></button>
           <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button>
         </div>
         <nav class="main-menu" id="main-menu" aria-label="Разделы StructOS" hidden>
@@ -93,9 +92,13 @@
 
         <button class="install-app-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="3"/><path d="M12 6v8M8.5 10.5 12 14l3.5-3.5M10 18h4"/></svg><span data-i18n="installPhone">Установить StructOS на телефон</span></button>
 
-        <section class="brand-finale" aria-label="StructOS — единый строительный интеллект">
+        <section class="brand-finale" aria-label="StructOS — база строительных ИИ России">
           <div class="finale-blueprint" aria-hidden="true"><span class="finale-ground"></span><span class="finale-column left"></span><span class="finale-column right"></span><span class="finale-floor one"></span><span class="finale-floor two"></span><span class="finale-floor three"></span><span class="finale-roof"></span></div>
-          <div class="finale-brand"><span class="finale-mark"><img src="assets/structos-mark.jpg" alt="" /></span><div><strong>Struct<span>OS</span></strong><p data-i18n="tagline">ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ</p></div></div>
+          <div class="finale-brand">
+            <div class="finale-identity"><span class="finale-mark"><img src="assets/structos-building-mark.svg" alt="" /></span><div class="finale-wordmark"><strong>Struct<span>OS</span></strong><p data-i18n="tagline">ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ</p></div></div>
+            <span class="finale-divider" aria-hidden="true"></span>
+            <p class="finale-base" data-i18n="footerBase">База всех строительных ИИ России</p>
+          </div>
         </section>
       </div>
 
@@ -114,12 +117,17 @@
         <button class="primary-cta report-button" type="button"><span data-i18n="fullReport">Сформировать полный отчёт</span><span>→</span></button><p class="result-languages">◎ <span data-i18n="resultsLanguages">Результаты: RU + выбранный язык</span></p>
       </section>
 
-      <div class="analysis-dock" role="button" tabindex="0" hidden><span class="dock-spinner"></span><div><strong data-i18n="analysisContinues">Анализ продолжается</strong><span class="dock-progress">0%</span></div><span>⌃</span></div><div class="toast" role="status" aria-live="polite" hidden></div>
+      <aside class="analysis-dock" aria-live="polite" hidden>
+        <span class="dock-state" aria-hidden="true"><span class="dock-spinner"></span><span class="dock-check">✓</span></span>
+        <div class="dock-copy"><strong class="dock-title" data-i18n="analysisContinues">Анализ продолжается</strong><span class="dock-progress">0%</span></div>
+        <button class="dock-action" type="button"><span data-i18n="openAnalysis">Открыть</span><span aria-hidden="true">→</span></button>
+        <button class="dock-dismiss" type="button" aria-label="Закрыть">×</button>
+      </aside><div class="toast" role="status" aria-live="polite" hidden></div>
     </main>
 
     <dialog class="app-dialog upload-dialog" id="upload-dialog">
       <div class="dialog-card">
-        <div class="blueprint-frame" aria-hidden="true"><span class="blueprint-ground"></span><span class="blueprint-column left"></span><span class="blueprint-column right"></span><span class="blueprint-floor floor-one"></span><span class="blueprint-floor floor-two"></span><span class="blueprint-floor floor-three"></span><span class="blueprint-node node-one"></span><span class="blueprint-node node-two"></span><span class="blueprint-scan"></span></div>
+        <div class="blueprint-frame" aria-hidden="true"><span class="blueprint-ground"></span><span class="blueprint-column left"></span><span class="blueprint-column inner-left"></span><span class="blueprint-column inner-right"></span><span class="blueprint-column right"></span><span class="blueprint-top"></span><span class="blueprint-floor floor-one"></span><span class="blueprint-floor floor-two"></span><span class="blueprint-floor floor-three"></span><span class="blueprint-node node-one"></span><span class="blueprint-node node-two"></span><span class="blueprint-node node-three"></span><span class="blueprint-node node-four"></span><span class="blueprint-scan"></span></div>
         <header><div><span class="dialog-eyebrow" data-i18n="oneFilePerCategory">Один файл в каждой категории</span><h2 id="upload-dialog-title">Загрузить проект</h2></div><button class="dialog-close upload-close" type="button" aria-label="Закрыть">×</button></header>
         <label class="object-name-field"><span><span data-i18n="objectName">Название объекта</span> <em aria-hidden="true">*</em></span><input id="object-name" type="text" maxlength="100" placeholder="Например, ЖК Северный" autocomplete="organization" required aria-required="true" aria-describedby="object-name-hint object-name-error" /><small id="object-name-hint" data-i18n="objectNameHint">Объединим проект, договор и смету в одном объекте</small><small class="field-error-message" id="object-name-error" data-i18n="objectRequired" hidden>Укажите название объекта</small></label>
         <div class="dropzone" tabindex="0"><input id="modal-file-input" type="file" /><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg><strong data-i18n="selectFile">Выберите файл</strong><span data-i18n="dropFile">или перетащите его сюда</span><small class="dropzone-formats"></small></div>
@@ -131,6 +139,15 @@
 
     <dialog class="app-dialog analysis-dialog" id="analysis-dialog">
       <div class="dialog-card"><header><div><span class="dialog-eyebrow" data-i18n="structosProcessing">StructOS обрабатывает документы</span><h2 data-i18n="analysisInProgress">Идёт анализ</h2></div><button class="minimize-analysis" type="button" aria-label="Свернуть">—</button></header><div class="overall-progress"><div><strong data-i18n="overallProgress">Общий прогресс</strong><span>0%</span></div><progress value="0" max="100"></progress></div><div class="analysis-files"></div><p class="analysis-note" data-i18n="analysisBackground">Можно свернуть окно — анализ продолжится в фоне.</p><button class="view-results-button" type="button" disabled><span data-i18n="viewResult">Смотреть результат</span> →</button></div>
+    </dialog>
+
+    <dialog class="app-dialog report-dialog" id="report-dialog">
+      <div class="dialog-card report-gate-card">
+        <header><div><span class="dialog-eyebrow" data-i18n="builderPassport">Паспорт строителя</span><h2 data-i18n="reportGateTitle">Полный отчёт доступен после регистрации</h2></div><button class="dialog-close report-close" type="button" aria-label="Закрыть">×</button></header>
+        <div class="report-passport-visual" aria-hidden="true"><span class="passport-building"><img src="assets/structos-building-mark.svg" alt="" /></span><span class="passport-line one"></span><span class="passport-line two"></span><span class="passport-line three"></span><span class="passport-check">✓</span></div>
+        <p data-i18n="reportGateCopy">После регистрации и присвоения вам Паспорта строителя вы сможете посмотреть и скачать полный отчёт StructOS.</p>
+        <button class="report-register-button" type="button" data-i18n="reportRegister">Зарегистрироваться</button>
+      </div>
     </dialog>
 
     <dialog class="app-dialog install-dialog" id="install-dialog">

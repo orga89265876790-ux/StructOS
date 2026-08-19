@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420">
+  <defs>
+    <linearGradient id="structos-mark-blue" x1="56" y1="38" x2="312" y2="386" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24dcff"/>
+      <stop offset=".38" stop-color="#0788ff"/>
+      <stop offset=".72" stop-color="#0757ec"/>
+      <stop offset="1" stop-color="#082ebf"/>
+    </linearGradient>
+    <filter id="structos-mark-glow" x="-45%" y="-35%" width="190%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feColorMatrix in="blur" values="0 0 0 0 0 0 0 0 0 0.48 0 0 0 0 1 0 0 0 .55 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#structos-mark-glow)" fill="url(#structos-mark-blue)">
+    <path d="M42 368V184l94-70v254H42Z"/>
+    <path d="M150 368V68l84-58v358h-84Z"/>
+    <path d="M250 368V122l76 58v188h-76Z"/>
+  </g>
+  <g fill="none" stroke="#bff8ff" stroke-width="5" opacity=".92">
+    <path d="M136 114v254M234 10v358M250 122v246"/>
+    <path d="m42 271 94-70M250 212l76 57"/>
+  </g>
+  <path d="M22 384h316" fill="none" stroke="#39c8ff" stroke-width="7" stroke-linecap="round" opacity=".88"/>
+</svg>
