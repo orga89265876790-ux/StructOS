@@ -55,7 +55,11 @@
 
       <section class="hero" id="top">
         <div class="building-visual" aria-hidden="true">
-          <img src="assets/structos-building.jpg" alt="" />
+          <picture>
+            <source media="(min-width: 1200px)" srcset="assets/building-desktop.webp" />
+            <source media="(min-width: 768px)" srcset="assets/building-tablet.webp" />
+            <img src="assets/structos-building.jpg" alt="" />
+          </picture>
           <span class="building-scan"></span>
           <span class="foundation-glow"></span>
         </div>
