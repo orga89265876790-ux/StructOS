@@ -62,6 +62,46 @@ Object.assign(translations.TR, {
   safariStep1: 'Safari’de “Paylaş”a dokunun.', safariStep2: '“Ana Ekrana Ekle”yi seçin.', safariStep3: '“Web Uygulaması Olarak Aç”ı etkinleştirin.', safariStep4: '“Ekle”ye dokunun.', chromeStep1: '⋮ menüsünü açın.', chromeStep2: '“Uygulamayı yükle” veya “Ana ekrana ekle”yi seçin.', chromeStep3: 'Yüklemeyi onaylayın.', yandexStep1: 'Yandex Browser menüsünü açın.', yandexStep2: '“Kısayol ekle”yi seçin.', yandexStep3: '“Ekle”ye dokunun.', yandexNote: 'Kısayol StructOS’u Yandex Browser üzerinden açar.'
 });
 
+Object.assign(translations.RU, {
+  menuLogin: 'Вход в StructOS',
+  menuFeatures: 'Возможности',
+  menuPricing: 'Тарифы',
+  menuVideo: 'Видео презентация',
+  menuDemo: 'Демо версия'
+});
+
+Object.assign(translations.EN, {
+  menuLogin: 'Sign in to StructOS',
+  menuFeatures: 'Features',
+  menuPricing: 'Pricing',
+  menuVideo: 'Video presentation',
+  menuDemo: 'Demo version'
+});
+
+Object.assign(translations.TJ, {
+  menuLogin: 'Воридшавӣ ба StructOS',
+  menuFeatures: 'Имкониятҳо',
+  menuPricing: 'Тарифҳо',
+  menuVideo: 'Муаррифии видеоӣ',
+  menuDemo: 'Нусхаи намоишӣ'
+});
+
+Object.assign(translations.KG, {
+  menuLogin: 'StructOSко кирүү',
+  menuFeatures: 'Мүмкүнчүлүктөр',
+  menuPricing: 'Тарифтер',
+  menuVideo: 'Видео презентация',
+  menuDemo: 'Демо версия'
+});
+
+Object.assign(translations.TR, {
+  menuLogin: "StructOS'a giriş",
+  menuFeatures: 'Özellikler',
+  menuPricing: 'Fiyatlandırma',
+  menuVideo: 'Video sunumu',
+  menuDemo: 'Demo sürümü'
+});
+
 const themeButton = $('.theme-switch');
 const themeMeta = $('meta[name="theme-color"]');
 const languageButton = $('.language-button');
@@ -279,7 +319,18 @@ applyLanguage(selectedLanguage);
 themeButton.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
 languageButton.addEventListener('click', () => { const open = languageMenu.hidden; languageMenu.hidden = !open; languageButton.setAttribute('aria-expanded', String(open)); });
 languageMenu.addEventListener('click', (event) => { const option = event.target.closest('[data-language]'); if (!option) return; applyLanguage(option.dataset.language); languageMenu.hidden = true; languageButton.setAttribute('aria-expanded', 'false'); });
-menuButton.addEventListener('click', () => { const open = mainMenu.hidden; mainMenu.hidden = !open; menuButton.setAttribute('aria-expanded', String(open)); menuButton.classList.toggle('is-open', open); });
+menuButton.addEventListener('click', () => {
+  const open = mainMenu.hidden;
+  mainMenu.hidden = !open;
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.classList.toggle('is-open', open);
+  if (open) {
+    mainMenu.classList.remove('is-building');
+    requestAnimationFrame(() => mainMenu.classList.add('is-building'));
+  } else {
+    mainMenu.classList.remove('is-building');
+  }
+});
 document.addEventListener('click', (event) => { if (!event.target.closest('.language-wrap')) languageMenu.hidden = true; if (!event.target.closest('.topbar')) closeMenu(); });
 
 function goToUploads() { $('#uploads').scrollIntoView({ behavior: 'smooth', block: 'center' }); }
@@ -307,12 +358,12 @@ $('.result-back').addEventListener('click', () => { $('#result-screen').hidden =
 $('.report-button').addEventListener('click', () => showToast(`Отчёт будет сохранён: RU + ${selectedLanguage}`));
 $$('.document-result > button').forEach((button) => button.addEventListener('click', () => showToast('Детальный просмотр подключим на следующем этапе')));
 
-$$('.login-link, .register-button, .account-button, .menu-login, .menu-register').forEach((button) => button.addEventListener('click', () => { closeMenu(); showToast('Личный кабинет будет подключён на следующем этапе'); }));
-$$('.install-app-button, .menu-install').forEach((button) => button.addEventListener('click', openInstall));
+$$('.login-link, .register-button, .account-button').forEach((button) => button.addEventListener('click', () => { closeMenu(); showToast('Личный кабинет будет подключён на следующем этапе'); }));
+$$('.install-app-button').forEach((button) => button.addEventListener('click', openInstall));
 $('.install-close').addEventListener('click', () => installDialog.close());
 $$('.browser-tabs button').forEach((button) => button.addEventListener('click', () => selectBrowserTab(button.dataset.browser)));
 $('.native-install-button').addEventListener('click', async () => { if (!deferredInstallPrompt) return; deferredInstallPrompt.prompt(); await deferredInstallPrompt.userChoice; deferredInstallPrompt = null; installDialog.close(); });
 window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); deferredInstallPrompt = event; });
-window.addEventListener('appinstalled', () => { localStorage.setItem('structos-installed', 'true'); $$('.install-app-button, .menu-install').forEach((button) => { button.hidden = true; }); showToast('StructOS установлен ✓'); });
+window.addEventListener('appinstalled', () => { localStorage.setItem('structos-installed', 'true'); $$('.install-app-button').forEach((button) => { button.hidden = true; }); showToast('StructOS установлен ✓'); });
 
 if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));

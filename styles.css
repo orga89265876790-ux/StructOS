@@ -1311,34 +1311,99 @@ html[data-theme="dark"] .trust {
 
 .main-menu {
   position: absolute;
-  z-index: 20;
+  z-index: 40;
   top: calc(100% + 8px);
   right: 0;
-  width: min(280px, calc(100vw - 34px));
-  padding: 8px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: var(--surface);
-  box-shadow: 0 18px 50px rgba(11, 42, 91, 0.2);
-  backdrop-filter: blur(18px);
+  width: min(320px, calc(100vw - 24px));
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 100, 255, 0.2);
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  box-shadow: 0 22px 58px rgba(11, 42, 91, 0.24), 0 0 28px rgba(0, 100, 255, 0.08);
+  transform-origin: top right;
+  backdrop-filter: blur(22px);
 }
 
-.main-menu button {
+.main-menu[hidden] { display: none; }
+
+.main-menu.is-building { animation: menu-shell-build 0.42s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+.menu-build-visual {
+  position: relative;
+  height: 62px;
+  margin: 2px 2px 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 100, 255, 0.12);
+  border-radius: 13px;
+  background:
+    linear-gradient(rgba(0, 100, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 100, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(0, 105, 255, 0.06), rgba(0, 212, 255, 0.02));
+  background-size: 16px 16px, 16px 16px, auto;
+}
+
+.menu-build-visual span { position: absolute; display: block; background: linear-gradient(90deg, #00c9ff, #0664ff); box-shadow: 0 0 9px rgba(0, 106, 255, 0.5); }
+.menu-build-ground { right: 22px; bottom: 9px; left: 22px; height: 2px; transform: scaleX(0); transform-origin: left; }
+.menu-build-column { bottom: 9px; width: 2px; height: 42px; transform: scaleY(0); transform-origin: bottom; }
+.menu-build-column.column-left { left: 88px; }
+.menu-build-column.column-right { right: 88px; }
+.menu-build-floor { right: 88px; left: 88px; height: 2px; transform: scaleX(0); transform-origin: left; }
+.menu-build-floor.floor-one { bottom: 21px; }
+.menu-build-floor.floor-two { bottom: 33px; }
+.menu-build-floor.floor-three { bottom: 45px; }
+.menu-build-beacon { top: 6px; left: 50%; width: 7px; height: 7px; border-radius: 50%; opacity: 0; transform: translateX(-50%) scale(0.2); }
+
+.main-menu.is-building .menu-build-ground { animation: menu-draw-x 0.32s 0.08s ease-out forwards; }
+.main-menu.is-building .menu-build-column { animation: menu-draw-y 0.38s 0.22s ease-out forwards; }
+.main-menu.is-building .floor-one { animation: menu-draw-x 0.25s 0.34s ease-out forwards; }
+.main-menu.is-building .floor-two { animation: menu-draw-x 0.25s 0.43s ease-out forwards; }
+.main-menu.is-building .floor-three { animation: menu-draw-x 0.25s 0.52s ease-out forwards; }
+.main-menu.is-building .menu-build-beacon { animation: menu-beacon 0.42s 0.68s ease-out forwards; }
+
+.menu-list { display: grid; gap: 4px; }
+
+.menu-entry {
   width: 100%;
-  min-height: 46px;
-  padding: 0 12px;
-  display: flex;
+  min-height: 49px;
+  padding: 0 11px;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 22px;
   align-items: center;
-  justify-content: space-between;
-  border: 0;
+  gap: 9px;
+  border: 1px solid transparent;
   border-radius: 12px;
   color: var(--text);
   background: transparent;
+  opacity: 0;
+  transform: translateY(12px);
   cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
-.main-menu button:hover { background: rgba(0, 105, 255, 0.07); }
-.menu-register { color: var(--blue) !important; font-weight: 700; }
+.main-menu.is-building .menu-entry { animation: menu-item-rise 0.34s ease-out forwards; }
+.main-menu.is-building .menu-entry:nth-child(1) { animation-delay: 0.7s; }
+.main-menu.is-building .menu-entry:nth-child(2) { animation-delay: 0.78s; }
+.main-menu.is-building .menu-entry:nth-child(3) { animation-delay: 0.86s; }
+.main-menu.is-building .menu-entry:nth-child(4) { animation-delay: 0.94s; }
+.main-menu.is-building .menu-entry:nth-child(5) { animation-delay: 1.02s; }
+.menu-entry:hover,
+.menu-entry:focus-visible { color: var(--blue); border-color: rgba(0, 101, 255, 0.18); background: rgba(0, 105, 255, 0.07); transform: translateX(2px); outline: none; }
+.menu-index { color: var(--blue); font-size: 10px; font-weight: 800; letter-spacing: 0.06em; }
+.menu-arrow { color: var(--blue); font-size: 17px; text-align: right; transition: transform 0.2s ease; }
+.menu-entry:hover .menu-arrow,
+.menu-entry:focus-visible .menu-arrow { transform: translateX(3px); }
+
+@keyframes menu-shell-build {
+  0% { opacity: 0; transform: translateY(-8px) scale(0.96); clip-path: inset(0 0 100% 0 round 20px); }
+  100% { opacity: 1; transform: translateY(0) scale(1); clip-path: inset(0 0 0 0 round 20px); }
+}
+
+@keyframes menu-draw-x { to { transform: scaleX(1); } }
+@keyframes menu-draw-y { to { transform: scaleY(1); } }
+@keyframes menu-beacon { 55% { opacity: 1; transform: translateX(-50%) scale(1.45); } 100% { opacity: 0.9; transform: translateX(-50%) scale(1); } }
+@keyframes menu-item-rise { to { opacity: 1; transform: translateY(0); } }
 
 .menu-button[aria-expanded="true"] span:first-child { transform: translateY(7px) rotate(45deg); }
 .menu-button[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
@@ -1769,6 +1834,8 @@ progress::-moz-progress-bar { border-radius: 10px; background: linear-gradient(9
 
 html[data-theme="dark"] .account-button,
 html[data-theme="dark"] .install-app-button { color: var(--text); background: rgba(10, 22, 39, 0.85); }
+html[data-theme="dark"] .main-menu { background: rgba(8, 20, 36, 0.94); border-color: rgba(54, 139, 255, 0.3); box-shadow: 0 22px 58px rgba(0, 0, 0, 0.42), 0 0 30px rgba(0, 109, 255, 0.13); }
+html[data-theme="dark"] .menu-build-visual { background-color: rgba(5, 17, 34, 0.82); }
 html[data-theme="dark"] .logo-raster img,
 html[data-theme="dark"] .install-hero img { mix-blend-mode: normal; }
 html[data-theme="dark"] .trust { background: #eef5ff; }
@@ -1801,8 +1868,6 @@ html[data-theme="dark"] .readiness-ring { background: conic-gradient(var(--blue)
 
 @media (min-width: 768px) {
   .auth-actions-desktop { display: flex; }
-  .main-menu .menu-login,
-  .main-menu .menu-register { display: none; }
   .install-app-button { width: min(100%, 620px); min-height: 50px; margin: 10px auto 0; font-size: 13px; }
   .trust-title-track span { font-size: 14px; }
   .result-screen { max-width: 1020px; margin: 0 auto; }

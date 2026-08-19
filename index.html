@@ -37,7 +37,24 @@
           <button class="account-button" type="button" aria-label="Войти в личный кабинет"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c.6-4.5 3.1-7 7.5-7s6.9 2.5 7.5 7"/></svg></button>
           <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button>
         </div>
-        <nav class="main-menu" id="main-menu" hidden><button type="button" class="menu-login"><span data-i18n="login">Войти</span><span>→</span></button><button type="button" class="menu-register"><span data-i18n="register">Регистрация</span><span>→</span></button><button type="button" class="menu-install"><span data-i18n="installPhone">Установить на телефон</span><span>↓</span></button></nav>
+        <nav class="main-menu" id="main-menu" aria-label="Разделы StructOS" hidden>
+          <div class="menu-build-visual" aria-hidden="true">
+            <span class="menu-build-ground"></span>
+            <span class="menu-build-column column-left"></span>
+            <span class="menu-build-column column-right"></span>
+            <span class="menu-build-floor floor-one"></span>
+            <span class="menu-build-floor floor-two"></span>
+            <span class="menu-build-floor floor-three"></span>
+            <span class="menu-build-beacon"></span>
+          </div>
+          <div class="menu-list">
+            <a class="menu-entry menu-login" href="login.html"><span class="menu-index">01</span><span data-i18n="menuLogin">Вход в StructOS</span><span class="menu-arrow">→</span></a>
+            <a class="menu-entry" href="features.html"><span class="menu-index">02</span><span data-i18n="menuFeatures">Возможности</span><span class="menu-arrow">→</span></a>
+            <a class="menu-entry" href="pricing.html"><span class="menu-index">03</span><span data-i18n="menuPricing">Тарифы</span><span class="menu-arrow">→</span></a>
+            <a class="menu-entry" href="video.html"><span class="menu-index">04</span><span data-i18n="menuVideo">Видео презентация</span><span class="menu-arrow">→</span></a>
+            <a class="menu-entry" href="demo.html"><span class="menu-index">05</span><span data-i18n="menuDemo">Демо версия</span><span class="menu-arrow">→</span></a>
+          </div>
+        </nav>
       </header>
 
       <div id="landing-view">
