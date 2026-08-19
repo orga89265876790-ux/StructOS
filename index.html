@@ -7,194 +7,111 @@
     <meta name="description" content="StructOS — единый строительный интеллект России. Анализ проектов, смет и договоров в один клик." />
     <meta property="og:title" content="StructOS — единый строительный интеллект" />
     <meta property="og:description" content="Операционная система для запуска объекта в один клик." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="StructOS" />
     <title>StructOS — единый строительный интеллект</title>
     <link rel="icon" href="assets/structos-mark.jpg" />
+    <link rel="apple-touch-icon" href="assets/structos-mark.jpg" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="site-shell">
+    <main class="site-shell" id="app-shell">
       <header class="topbar" aria-label="Основная навигация">
         <a class="brand" href="#top" aria-label="StructOS — на главную">
-          <span class="brand-mark" aria-hidden="true">
-            <img src="assets/structos-mark.jpg" alt="" />
-          </span>
-          <span class="brand-copy">
-            <span class="brand-name">Struct<span class="brand-os">OS</span></span>
-            <span class="brand-tagline">ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ</span>
-          </span>
+          <span class="brand-mark" aria-hidden="true"><img src="assets/structos-mark.jpg" alt="" /></span>
+          <span class="brand-copy"><span class="brand-name">Struct<span class="brand-os">OS</span></span><span class="brand-tagline" data-i18n="tagline">ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ</span></span>
         </a>
 
         <div class="header-actions">
-          <div class="language-wrap">
-            <button class="language-button" type="button" aria-expanded="false" aria-controls="language-menu">
-              <span id="current-language">RU</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" /></svg>
-            </button>
-            <div class="language-menu" id="language-menu" role="menu" hidden>
-              <button type="button" data-language="RU">RU</button>
-              <button type="button" data-language="EN">EN</button>
-              <button type="button" data-language="KG">KG</button>
-              <button type="button" data-language="TJ">TJ</button>
-            </div>
+          <div class="auth-actions auth-actions-desktop">
+            <button class="login-link" type="button" data-i18n="login">Войти</button>
+            <button class="register-button" type="button" data-i18n="register">Регистрация</button>
           </div>
-
-          <button class="theme-switch" type="button" aria-label="Включить тёмную тему" aria-pressed="false">
-            <span class="theme-icon sun" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
-            </span>
-            <span class="theme-icon moon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z"/></svg>
-            </span>
-          </button>
-
-          <button class="menu-button" type="button" aria-label="Открыть меню" aria-pressed="false">
-            <span></span><span></span><span></span>
-          </button>
+          <div class="language-wrap">
+            <button class="language-button" type="button" aria-expanded="false" aria-controls="language-menu"><span id="current-language">RU</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" /></svg></button>
+            <div class="language-menu" id="language-menu" role="menu" hidden><button type="button" data-language="RU">RU</button><button type="button" data-language="EN">EN</button><button type="button" data-language="TJ">TJ</button><button type="button" data-language="KG">KG</button><button type="button" data-language="TR">TR</button></div>
+          </div>
+          <button class="theme-switch" type="button" aria-label="Включить тёмную тему" aria-pressed="false"><span class="theme-icon sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></span><span class="theme-icon moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z"/></svg></span></button>
+          <button class="account-button" type="button" aria-label="Войти в личный кабинет"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c.6-4.5 3.1-7 7.5-7s6.9 2.5 7.5 7"/></svg></button>
+          <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button>
         </div>
+        <nav class="main-menu" id="main-menu" hidden><button type="button" class="menu-login"><span data-i18n="login">Войти</span><span>→</span></button><button type="button" class="menu-register"><span data-i18n="register">Регистрация</span><span>→</span></button><button type="button" class="menu-install"><span data-i18n="installPhone">Установить на телефон</span><span>↓</span></button></nav>
       </header>
 
-      <section class="hero" id="top">
-        <div class="building-visual" aria-hidden="true">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="assets/building-desktop.webp" />
-            <source media="(min-width: 768px)" srcset="assets/building-tablet.webp" />
-            <img src="assets/structos-building.jpg" alt="" />
-          </picture>
-          <span class="building-scan"></span>
-          <span class="foundation-glow"></span>
+      <div id="landing-view">
+        <section class="hero" id="top">
+          <div class="building-visual" aria-hidden="true"><picture><source media="(min-width: 1200px)" srcset="assets/building-desktop.webp" /><source media="(min-width: 768px)" srcset="assets/building-tablet.webp" /><img src="assets/structos-building.jpg" alt="" /></picture><span class="building-scan"></span><span class="foundation-glow"></span></div>
+          <div class="hero-content">
+            <h1><span data-i18n="hero1">Единый</span><br /><span class="hero-black" data-i18n="hero2">строительный</span><br /><span data-i18n="hero3">интеллект России</span></h1>
+            <p class="hero-subtitle"><span data-i18n="subtitle1">Операционная система для запуска</span><br /><span data-i18n="subtitle2">объекта</span> <strong data-i18n="subtitle3">в один клик.</strong></p>
+            <ul class="benefits" aria-label="Преимущества StructOS">
+              <li><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3.5 27 8v8c0 6.3-4.1 10.5-11 13-6.9-2.5-11-6.7-11-13V8l11-4.5Z"/><path d="m11.5 16 3 3 6-7"/></svg></span><span data-i18n="benefit1">Анализирует проект,<br />смету, договор</span></li>
+              <li><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M10 5H6v4M22 5h4v4M10 27H6v-4M22 27h4v-4"/><circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="2"/></svg></span><span data-i18n="benefit2">Находит ошибки и риски<br />до начала работ</span></li>
+              <li><span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M16 9v8l5 3"/></svg></span><span data-i18n="benefit3">Экономит время,<br />деньги и ресурсы</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="start-card" id="start" tabindex="0" role="button" aria-label="Перейти к загрузке документов"><span class="one" aria-hidden="true">1</span><div class="start-copy"><h2><span data-i18n="click">КЛИК</span><br /><span data-i18n="easyStart">ДЛЯ ЛЁГКОГО СТАРТА</span></h2><p data-i18n="startDescription">Загрузите проект, смету<br />или договор и получите<br />результат за минуты</p></div><div class="cursor-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path class="rays" d="M32 3v9M11.5 11.5l6.4 6.4M3 32h9M52 32h9M46.1 17.9l6.4-6.4"/><path class="cursor" d="m27 22 21 21-10 1 5 11-7 3-5-11-8 7 4-32Z"/></svg></div><span class="chevron" aria-hidden="true">›</span></section>
+
+        <section class="uploads" id="uploads" aria-label="Загрузка документов">
+          <article class="upload-card project" data-kind="project" tabindex="0"><div class="doc-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M13 6h15l8 8v28H13z"/><path d="M28 6v9h8M18 25h13M18 31h9"/></svg></div><div class="upload-copy"><h3 data-i18n="project">ПРОЕКТ</h3><p data-i18n="projectFormats">PDF, DWG, RVT, изображения<br />до 500 МБ</p><span class="file-name" aria-live="polite"></span></div><button class="upload-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg><span data-i18n="upload">Загрузить</span></button><span class="chevron" aria-hidden="true">›</span></article>
+          <article class="upload-card contract" data-kind="contract" tabindex="0"><div class="doc-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M13 6h15l8 8v28H13z"/><path d="M28 6v9h8M18 25h13M18 31h13"/></svg></div><div class="upload-copy"><h3 data-i18n="contract">ДОГОВОР</h3><p data-i18n="contractFormats">PDF, DOCX, DOC, изображения<br />до 100 МБ</p><span class="file-name" aria-live="polite"></span></div><button class="upload-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg><span data-i18n="upload">Загрузить</span></button><span class="chevron" aria-hidden="true">›</span></article>
+          <article class="upload-card estimate" data-kind="estimate" tabindex="0"><div class="doc-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="12" y="6" width="24" height="36" rx="2"/><path d="M17 13h14M18 21h4M26 21h4M18 27h4M26 27h4M18 33h4M26 33h4"/></svg></div><div class="upload-copy"><h3 data-i18n="estimate">СМЕТА</h3><p data-i18n="estimateFormats">XLSX, CSV, PDF, изображения<br />до 100 МБ</p><span class="file-name" aria-live="polite"></span></div><button class="upload-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg><span data-i18n="upload">Загрузить</span></button><span class="chevron" aria-hidden="true">›</span></article>
+        </section>
+
+        <section class="stats" aria-label="StructOS в цифрах">
+          <article class="stat-card"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="14" r="7"/><circle cx="10" cy="19" r="5"/><circle cx="38" cy="19" r="5"/><path d="M12 40v-5c0-7 5-11 12-11s12 4 12 11v5M2 39v-4c0-5 3-8 8-8M46 39v-4c0-5-3-8-8-8"/></svg></span><div><strong>1 250+</strong><p data-i18n="companies">компаний<br />уже с нами</p></div></article>
+          <article class="stat-card"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 13h14l4 5h20v24H5z"/><path d="M5 18V9h13l4 4h10"/></svg></span><div><strong>85 000+</strong><p data-i18n="projectsAnalyzed">проектов<br />проанализировано</p></div></article>
+          <article class="stat-card"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M18 13h9c8 0 8 12 0 12h-9M18 19h12M18 25v12M18 31h11"/></svg></span><div><strong>2,7 млрд ₽</strong><p data-i18n="saved">сэкономлено<br />нашим клиентам</p></div></article>
+          <article class="stat-card"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="21" cy="27" r="16"/><circle cx="21" cy="27" r="9"/><circle cx="21" cy="27" r="3"/><path d="m27 21 13-13M32 8h8v8"/></svg></span><div><strong>98%</strong><p data-i18n="accuracy">точность<br />анализа</p></div></article>
+        </section>
+
+        <section class="trust" aria-label="Нам доверяют лидеры строительной отрасли"><div class="trust-title-viewport"><div class="trust-title-track" aria-hidden="true"><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span></div></div><div class="trust-logos-viewport" aria-label="ПИК, SetlGroup, GloraX, DOGMA, Инград и ЛСР"><div class="trust-logos-track"><span class="logo-raster"><img src="assets/trusted-companies.jpg" alt="" /></span><span class="logo-raster"><img src="assets/trusted-companies.jpg" alt="" /></span></div></div></section>
+
+        <button class="primary-cta" type="button"><span data-i18n="startAnalysis">Начать анализ</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5" /></svg></button>
+        <button class="install-app-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="3"/><path d="M12 6v8M8.5 10.5 12 14l3.5-3.5M10 18h4"/></svg><span data-i18n="installPhone">Установить StructOS на телефон</span></button>
+      </div>
+
+      <section class="result-screen" id="result-screen" hidden aria-label="Результат анализа">
+        <div class="result-topline"><button class="result-back" type="button" aria-label="Вернуться на главную">←</button><div><span data-i18n="objects">Объекты</span><strong class="result-object-name">Объект StructOS</strong></div></div><h1 data-i18n="analysisResult">Результат анализа</h1><p class="result-subtitle result-object-name">Объект StructOS</p>
+        <article class="readiness-card"><div class="readiness-ring"><strong>67<span>%</span></strong></div><div><h2 data-i18n="launchReadiness">Готовность к запуску</h2><span class="status-danger" data-i18n="needsFixes">Требуются исправления</span><p data-i18n="readinessCopy">Объект готов к запуску с условием устранения выявленных проблем.</p></div></article>
+        <div class="result-metrics"><article class="result-metric danger"><strong>7</strong><span data-i18n="criticalRisks">Критических<br />рисков</span></article><article class="result-metric"><strong>24</strong><span data-i18n="mismatches">Несоответствия</span></article><article class="result-metric warning"><strong>1,24 <small>млн ₽</small></strong><span data-i18n="moneyAtRisk">Под риском</span></article><article class="result-metric"><strong>18</strong><span data-i18n="missingItems">Отсутствующих<br />позиций</span></article></div>
+        <article class="result-summary"><h2 data-i18n="mainConclusion">Главный вывод StructOS</h2><p data-i18n="conclusionCopy">Объект условно готов к запуску. До начала работ устраните 4 критических несоответствия.</p></article>
+        <div class="document-results">
+          <article class="document-result project" data-result-kind="project"><header><span class="mini-doc">▤</span><h2 data-i18n="project">ПРОЕКТ</h2><span class="remarks">✓ 5 <span data-i18n="remarks">замечаний</span></span><span>›</span></header><button type="button" data-i18n="readyDetails">Готов к детальному просмотру</button><dl><div><dt data-i18n="system">Система:</dt><dd>Электроснабжение</dd></div><div><dt data-i18n="sections">Разделы:</dt><dd>ЭОМ, ЭС, ЭН</dd></div><div><dt data-i18n="specification">Спецификация:</dt><dd>248 позиций</dd></div><div><dt data-i18n="extrasFound">Найдено допов:</dt><dd>17</dd></div><div><dt data-i18n="commercialOffer">Ком. предложение:</dt><dd data-i18n="created">создано ✓</dd></div></dl></article>
+          <article class="document-result contract" data-result-kind="contract"><header><span class="mini-doc">▤</span><h2 data-i18n="contract">ДОГОВОР</h2><span class="remarks">✓ 3 <span data-i18n="remarksContract">замечания</span></span><span>›</span></header><button type="button" data-i18n="readyDetails">Готов к детальному просмотру</button><dl><div><dt data-i18n="sectionsFound">Найдено разделов:</dt><dd>12</dd></div><div><dt data-i18n="remarksLabel">Замечаний:</dt><dd>3</dd></div><div><dt data-i18n="attentionClauses">Внимание к пунктам:</dt><dd>7</dd></div><div><dt data-i18n="notIncluded">Не учтено:</dt><dd>4</dd></div><div><dt data-i18n="risks">Риски:</dt><dd>5</dd></div></dl></article>
+          <article class="document-result estimate" data-result-kind="estimate"><header><span class="mini-doc">▤</span><h2 data-i18n="estimate">СМЕТА</h2><span class="remarks">✓ 8 <span data-i18n="remarks">замечаний</span></span><span>›</span></header><button type="button" data-i18n="readyDetails">Готов к детальному просмотру</button><dl><div><dt data-i18n="totalItems">Всего позиций:</dt><dd>486</dd></div><div><dt data-i18n="needClarification">Требует уточнений:</dt><dd>21</dd></div><div><dt data-i18n="possiblyMissed">Возможно пропустили:</dt><dd>18</dd></div><div><dt data-i18n="commercialOffer">Ком. предложение:</dt><dd data-i18n="created">создано ✓</dd></div></dl></article>
         </div>
-
-        <div class="hero-content">
-          <h1>Единый<br />строительный<br /><span>интеллект России</span></h1>
-          <p class="hero-subtitle">Операционная система для запуска<br />объекта <strong>в один клик.</strong></p>
-
-          <ul class="benefits" aria-label="Преимущества StructOS">
-            <li>
-              <span class="benefit-icon" aria-hidden="true">
-                <svg viewBox="0 0 32 32"><path d="M16 3.5 27 8v8c0 6.3-4.1 10.5-11 13-6.9-2.5-11-6.7-11-13V8l11-4.5Z"/><path d="m11.5 16 3 3 6-7"/></svg>
-              </span>
-              <span>Анализирует проект,<br />смету, договор</span>
-            </li>
-            <li>
-              <span class="benefit-icon" aria-hidden="true">
-                <svg viewBox="0 0 32 32"><path d="M10 5H6v4M22 5h4v4M10 27H6v-4M22 27h4v-4"/><circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="2"/></svg>
-              </span>
-              <span>Находит ошибки и риски<br />до начала работ</span>
-            </li>
-            <li>
-              <span class="benefit-icon" aria-hidden="true">
-                <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M16 9v8l5 3"/></svg>
-              </span>
-              <span>Экономит время,<br />деньги и ресурсы</span>
-            </li>
-          </ul>
-        </div>
+        <article class="comparison-card"><h2 data-i18n="documentMismatches">Несоответствия документов</h2><div><span><span data-i18n="project">Проект</span> ↔ <span data-i18n="estimate">Смета</span></span><strong>12 ›</strong></div><div><span><span data-i18n="project">Проект</span> ↔ <span data-i18n="contract">Договор</span></span><strong>7 ›</strong></div><div><span><span data-i18n="contract">Договор</span> ↔ <span data-i18n="estimate">Смета</span></span><strong>5 ›</strong></div></article>
+        <article class="actions-card"><h2 data-i18n="doNow">Что сделать сейчас</h2><ol><li><span>1</span><p data-i18n="action1">Устраните 4 критических несоответствия</p><small class="high" data-i18n="highPriority">Высокий приоритет</small></li><li><span>2</span><p data-i18n="action2">Проверьте 24 несоответствия</p><small class="medium" data-i18n="mediumPriority">Средний приоритет</small></li><li><span>3</span><p data-i18n="action3">Добавьте 18 отсутствующих позиций</p><small data-i18n="lowPriority">Низкий приоритет</small></li></ol></article>
+        <button class="primary-cta report-button" type="button"><span data-i18n="fullReport">Сформировать полный отчёт</span><span>→</span></button><p class="result-languages">◎ <span data-i18n="resultsLanguages">Результаты: RU + выбранный язык</span></p>
       </section>
 
-      <section class="start-card" id="start" tabindex="0" role="button" aria-label="Перейти к загрузке документов">
-        <span class="one" aria-hidden="true">1</span>
-        <div class="start-copy">
-          <h2><span>КЛИК</span><br />ДЛЯ ЛЁГКОГО СТАРТА</h2>
-          <p>Загрузите проект, смету<br />или договор и получите<br />результат за минуты</p>
-        </div>
-        <div class="cursor-icon" aria-hidden="true">
-          <svg viewBox="0 0 64 64"><path class="rays" d="M32 3v9M11.5 11.5l6.4 6.4M3 32h9M52 32h9M46.1 17.9l6.4-6.4"/><path class="cursor" d="m27 22 21 21-10 1 5 11-7 3-5-11-8 7 4-32Z"/></svg>
-        </div>
-        <span class="chevron" aria-hidden="true">›</span>
-      </section>
-
-      <section class="uploads" id="uploads" aria-label="Загрузка документов">
-        <article class="upload-card project" data-kind="project">
-          <div class="doc-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M13 6h15l8 8v28H13z"/><path d="M28 6v9h8M18 25h13M18 31h9"/></svg>
-          </div>
-          <div class="upload-copy">
-            <h3>ПРОЕКТ</h3>
-            <p>PDF, DWG, RVT и др.<br />до 500 МБ</p>
-            <span class="file-name" aria-live="polite"></span>
-          </div>
-          <label class="upload-button">
-            <input type="file" accept=".pdf,.dwg,.rvt" />
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg>
-            <span>Загрузить</span>
-          </label>
-          <span class="chevron" aria-hidden="true">›</span>
-        </article>
-
-        <article class="upload-card contract" data-kind="contract">
-          <div class="doc-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M13 6h15l8 8v28H13z"/><path d="M28 6v9h8M18 25h13M18 31h13"/></svg>
-          </div>
-          <div class="upload-copy">
-            <h3>ДОГОВОР</h3>
-            <p>PDF, DOCX, DOC и др.<br />до 100 МБ</p>
-            <span class="file-name" aria-live="polite"></span>
-          </div>
-          <label class="upload-button">
-            <input type="file" accept=".pdf,.docx,.doc" />
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg>
-            <span>Загрузить</span>
-          </label>
-          <span class="chevron" aria-hidden="true">›</span>
-        </article>
-
-        <article class="upload-card estimate" data-kind="estimate">
-          <div class="doc-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><rect x="12" y="6" width="24" height="36" rx="2"/><path d="M17 13h14M18 21h4M26 21h4M18 27h4M26 27h4M18 33h4M26 33h4"/></svg>
-          </div>
-          <div class="upload-copy">
-            <h3>СМЕТА</h3>
-            <p>XLSX, CSV, PDF и др.<br />до 100 МБ</p>
-            <span class="file-name" aria-live="polite"></span>
-          </div>
-          <label class="upload-button">
-            <input type="file" accept=".xlsx,.csv,.pdf" />
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg>
-            <span>Загрузить</span>
-          </label>
-          <span class="chevron" aria-hidden="true">›</span>
-        </article>
-      </section>
-
-      <section class="stats" aria-label="StructOS в цифрах">
-        <article class="stat-card">
-          <span class="stat-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><circle cx="24" cy="14" r="7"/><circle cx="10" cy="19" r="5"/><circle cx="38" cy="19" r="5"/><path d="M12 40v-5c0-7 5-11 12-11s12 4 12 11v5M2 39v-4c0-5 3-8 8-8M46 39v-4c0-5-3-8-8-8"/></svg>
-          </span>
-          <div><strong>1 250+</strong><p>компаний<br />уже с нами</p></div>
-        </article>
-        <article class="stat-card">
-          <span class="stat-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M5 13h14l4 5h20v24H5z"/><path d="M5 18V9h13l4 4h10"/></svg>
-          </span>
-          <div><strong>85 000+</strong><p>проектов<br />проанализировано</p></div>
-        </article>
-        <article class="stat-card">
-          <span class="stat-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M18 13h9c8 0 8 12 0 12h-9M18 19h12M18 25v12M18 31h11"/></svg>
-          </span>
-          <div><strong>2,7 млрд ₽</strong><p>сэкономлено<br />нашим клиентам</p></div>
-        </article>
-        <article class="stat-card">
-          <span class="stat-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><circle cx="21" cy="27" r="16"/><circle cx="21" cy="27" r="9"/><circle cx="21" cy="27" r="3"/><path d="m27 21 13-13M32 8h8v8"/></svg>
-          </span>
-          <div><strong>98%</strong><p>точность<br />анализа</p></div>
-        </article>
-      </section>
-
-      <section class="trust" aria-label="Нам доверяют лидеры строительной отрасли">
-        <img src="assets/trusted-companies.jpg" alt="Нам доверяют лидеры строительной отрасли: ПИК, SetlGroup, GloraX, DOGMA, Инград и ЛСР" />
-      </section>
-
-      <button class="primary-cta" type="button">
-        <span>Смотреть результат</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5" /></svg>
-      </button>
-
-      <div class="toast" role="status" aria-live="polite" hidden></div>
+      <div class="analysis-dock" role="button" tabindex="0" hidden><span class="dock-spinner"></span><div><strong data-i18n="analysisContinues">Анализ продолжается</strong><span class="dock-progress">0%</span></div><span>⌃</span></div><div class="toast" role="status" aria-live="polite" hidden></div>
     </main>
 
+    <dialog class="app-dialog upload-dialog" id="upload-dialog">
+      <div class="dialog-card">
+        <header><div><span class="dialog-eyebrow" data-i18n="oneFilePerCategory">Один файл в каждой категории</span><h2 id="upload-dialog-title">Загрузить проект</h2></div><button class="dialog-close upload-close" type="button" aria-label="Закрыть">×</button></header>
+        <label class="object-name-field"><span data-i18n="objectName">Название объекта</span><input id="object-name" type="text" maxlength="100" placeholder="Например, ЖК Северный" autocomplete="organization" /><small data-i18n="objectNameHint">Объединим проект, договор и смету в одном объекте</small></label>
+        <div class="dropzone" tabindex="0"><input id="modal-file-input" type="file" /><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg><strong data-i18n="selectFile">Выберите файл</strong><span data-i18n="dropFile">или перетащите его сюда</span><small class="dropzone-formats"></small></div>
+        <div class="selected-file" hidden><span class="selected-file-icon">▤</span><div><strong></strong><small></small></div><button type="button" class="replace-file" data-i18n="replace">Заменить</button><button type="button" class="delete-file" aria-label="Удалить файл">×</button></div>
+        <div class="device-file-actions"><button type="button" class="choose-device" data-i18n="deviceFile">Файл с устройства</button><button type="button" class="choose-photo" data-i18n="photoOrCamera">Фото / камера</button></div>
+        <div class="upload-slots" aria-label="Выбранные файлы"><button type="button" data-slot="project"><span>●</span><strong data-i18n="project">Проект</strong><small data-i18n="notSelected">не выбран</small></button><button type="button" data-slot="contract"><span>●</span><strong data-i18n="contract">Договор</strong><small data-i18n="notSelected">не выбран</small></button><button type="button" data-slot="estimate"><span>●</span><strong data-i18n="estimate">Смета</strong><small data-i18n="notSelectedFemale">не выбрана</small></button></div>
+        <button type="button" class="modal-analysis-button" data-i18n="startAnalysis">Начать анализ</button>
+      </div>
+    </dialog>
+
+    <dialog class="app-dialog analysis-dialog" id="analysis-dialog">
+      <div class="dialog-card"><header><div><span class="dialog-eyebrow" data-i18n="structosProcessing">StructOS обрабатывает документы</span><h2 data-i18n="analysisInProgress">Идёт анализ</h2></div><button class="minimize-analysis" type="button" aria-label="Свернуть">—</button></header><div class="overall-progress"><div><strong data-i18n="overallProgress">Общий прогресс</strong><span>0%</span></div><progress value="0" max="100"></progress></div><div class="analysis-files"></div><p class="analysis-note" data-i18n="analysisBackground">Можно свернуть окно — анализ продолжится в фоне.</p><button class="view-results-button" type="button" disabled><span data-i18n="viewResult">Смотреть результат</span> →</button></div>
+    </dialog>
+
+    <dialog class="app-dialog install-dialog" id="install-dialog">
+      <div class="dialog-card install-card"><header><div><span class="dialog-eyebrow">PWA</span><h2 data-i18n="installTitle">Установить StructOS</h2></div><button class="dialog-close install-close" type="button" aria-label="Закрыть">×</button></header><div class="install-hero"><img src="assets/structos-mark.jpg" alt="" /><div><strong>StructOS</strong><span data-i18n="appLike">Открывается как обычное приложение</span></div></div><div class="browser-tabs" role="tablist"><button type="button" data-browser="safari">Safari</button><button type="button" data-browser="chrome">Google</button><button type="button" data-browser="yandex">Яндекс</button></div><div class="browser-instruction" data-panel="safari"><ol><li data-i18n="safariStep1">Нажмите «Поделиться» в Safari.</li><li data-i18n="safariStep2">Выберите «На экран Домой».</li><li data-i18n="safariStep3">Включите «Открывать как веб-приложение».</li><li data-i18n="safariStep4">Нажмите «Добавить».</li></ol></div><div class="browser-instruction" data-panel="chrome" hidden><ol><li data-i18n="chromeStep1">Откройте меню ⋮.</li><li data-i18n="chromeStep2">Выберите «Установить приложение» или «Добавить на главный экран».</li><li data-i18n="chromeStep3">Подтвердите установку.</li></ol></div><div class="browser-instruction" data-panel="yandex" hidden><ol><li data-i18n="yandexStep1">Откройте меню Яндекс Браузера.</li><li data-i18n="yandexStep2">Выберите «Добавить ярлык».</li><li data-i18n="yandexStep3">Нажмите «Добавить».</li></ol><small data-i18n="yandexNote">Ярлык будет открывать StructOS через Яндекс Браузер.</small></div><p class="install-device-note"></p><button class="native-install-button" type="button" hidden data-i18n="installApp">Установить приложение</button></div>
+    </dialog>
     <script type="module" src="script.js"></script>
   </body>
 </html>
