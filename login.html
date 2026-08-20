@@ -64,7 +64,7 @@
               <label class="auth-field"><span data-auth-i18n="phone">Телефон</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 999 000-00-00" /></label>
               <label class="auth-field"><span data-auth-i18n="city">Город</span><input name="city" type="text" autocomplete="address-level2" maxlength="60" placeholder="Москва" required /></label>
               <label class="auth-field"><span data-auth-i18n="role">Основная роль</span><select name="role" required><option value="" data-auth-i18n="chooseRole">Выберите роль</option><option value="Пользователь" data-auth-i18n="roleUser">Пользователь</option><option value="Исполнитель" data-auth-i18n="roleExecutor">Исполнитель</option><option value="Поставщик" data-auth-i18n="roleSupplier">Поставщик</option><option value="Агрегатор" data-auth-i18n="roleAggregator">Агрегатор</option></select></label>
-              <label class="auth-field register-wide profession-field"><span data-auth-i18n="profession">Основная профессия</span><input class="profession-input" name="professionDisplay" type="search" autocomplete="off" aria-autocomplete="list" aria-controls="profession-options" aria-expanded="false" placeholder="Начните вводить профессию" required /><input name="profession" type="hidden" /><span class="profession-hint" data-auth-i18n="professionHint">Введите название и выберите профессию из списка</span><div class="profession-options" id="profession-options" role="listbox" hidden></div></label>
+              <div class="auth-field register-wide profession-field"><label for="profession-input" data-auth-i18n="profession">Основная профессия</label><input class="profession-input" id="profession-input" name="professionDisplay" type="search" autocomplete="off" aria-autocomplete="list" aria-controls="profession-options" aria-expanded="false" placeholder="Начните вводить профессию" required /><input name="profession" type="hidden" /><span class="profession-hint" data-auth-i18n="professionHint">Введите название и выберите профессию из списка</span><div class="profession-options" id="profession-options" role="listbox" hidden></div></div>
               <label class="auth-field"><span data-auth-i18n="createPassword">Придумайте пароль</span><span class="password-wrap"><input name="password" type="password" autocomplete="new-password" minlength="8" placeholder="Минимум 8 символов" required /><button class="password-toggle" type="button" aria-label="Показать пароль"><span aria-hidden="true">◉</span></button></span></label>
               <label class="auth-field"><span data-auth-i18n="repeatPassword">Повторите пароль</span><span class="password-wrap"><input name="passwordConfirm" type="password" autocomplete="new-password" minlength="8" placeholder="Повторите пароль" required /><button class="password-toggle" type="button" aria-label="Показать пароль"><span aria-hidden="true">◉</span></button></span></label>
             </div>
@@ -91,6 +91,6 @@
         </section>
       </section>
     </main>
-    <script type="module" src="auth.js?v=12"></script>
+    <script type="module" src="auth.js?v=13"></script>
   </body>
 </html>
