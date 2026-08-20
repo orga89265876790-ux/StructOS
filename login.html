@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="page.css?v=7" />
+    <link rel="stylesheet" href="page.css?v=9" />
   </head>
   <body class="auth-page" data-page="login">
     <main class="page-shell auth-shell">
@@ -20,6 +20,7 @@
           <span class="page-brand-copy"><span class="page-brand-name">Struct<strong>OS</strong></span><span class="page-tagline" data-auth-i18n="tagline">ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ</span></span>
         </span>
         <div class="auth-header-actions">
+          <a class="auth-home" href="index.html" data-auth-i18n="home">На главную</a>
           <label class="auth-language-label"><span class="sr-only" data-auth-i18n="language">Язык</span><select class="auth-language" aria-label="Язык"><option value="RU">RU</option><option value="EN">EN</option><option value="TJ">TJ</option><option value="KG">KG</option><option value="TR">TR</option></select></label>
           <button class="auth-theme" type="button" aria-label="Переключить тему"><span class="auth-sun">☼</span><span class="auth-moon">☾</span></button>
           <span class="page-number">01</span>
@@ -55,12 +56,15 @@
           </form>
 
           <form class="auth-form register-form" data-auth-form="register" hidden novalidate>
+            <p class="builder-passport-callout" data-auth-i18n="getPassport">Получи Паспорт Строителя</p>
+            <p class="registration-language-note" data-auth-i18n="languageNote">Заполняйте на удобном языке — в профиле данные сохранятся на русском</p>
             <div class="register-grid">
               <label class="auth-field register-wide"><span data-auth-i18n="fullName">Имя и фамилия</span><input name="fullName" type="text" autocomplete="name" maxlength="80" placeholder="Иван Иванов" required /></label>
               <label class="auth-field"><span data-auth-i18n="registerEmail">Электронная почта</span><input name="email" type="email" autocomplete="email" inputmode="email" placeholder="name@company.ru" required /></label>
               <label class="auth-field"><span data-auth-i18n="phone">Телефон</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 999 000-00-00" /></label>
               <label class="auth-field"><span data-auth-i18n="city">Город</span><input name="city" type="text" autocomplete="address-level2" maxlength="60" placeholder="Москва" required /></label>
-              <label class="auth-field"><span data-auth-i18n="role">Основная роль</span><select name="role" required><option value="" data-auth-i18n="chooseRole">Выберите роль</option><option value="user" data-auth-i18n="roleUser">Пользователь</option><option value="worker" data-auth-i18n="roleWorker">Работник</option><option value="foreman" data-auth-i18n="roleForeman">Прораб / бригадир</option><option value="engineer" data-auth-i18n="roleEngineer">Инженер / ПТО</option><option value="contractor" data-auth-i18n="roleContractor">Подрядчик</option><option value="customer" data-auth-i18n="roleCustomer">Заказчик</option><option value="supplier" data-auth-i18n="roleSupplier">Поставщик</option><option value="other" data-auth-i18n="roleOther">Другая роль</option></select></label>
+              <label class="auth-field"><span data-auth-i18n="role">Основная роль</span><select name="role" required><option value="" data-auth-i18n="chooseRole">Выберите роль</option><option value="Пользователь" data-auth-i18n="roleUser">Пользователь</option><option value="Исполнитель" data-auth-i18n="roleExecutor">Исполнитель</option><option value="Поставщик" data-auth-i18n="roleSupplier">Поставщик</option><option value="Агрегатор" data-auth-i18n="roleAggregator">Агрегатор</option></select></label>
+              <label class="auth-field register-wide profession-field"><span data-auth-i18n="profession">Основная профессия</span><input class="profession-input" name="professionDisplay" type="search" autocomplete="off" aria-autocomplete="list" aria-controls="profession-options" aria-expanded="false" placeholder="Начните вводить профессию" required /><input name="profession" type="hidden" /><span class="profession-hint" data-auth-i18n="professionHint">Введите название и выберите профессию из списка</span><div class="profession-options" id="profession-options" role="listbox" hidden></div></label>
               <label class="auth-field"><span data-auth-i18n="createPassword">Придумайте пароль</span><span class="password-wrap"><input name="password" type="password" autocomplete="new-password" minlength="8" placeholder="Минимум 8 символов" required /><button class="password-toggle" type="button" aria-label="Показать пароль"><span aria-hidden="true">◉</span></button></span></label>
               <label class="auth-field"><span data-auth-i18n="repeatPassword">Повторите пароль</span><span class="password-wrap"><input name="passwordConfirm" type="password" autocomplete="new-password" minlength="8" placeholder="Повторите пароль" required /><button class="password-toggle" type="button" aria-label="Показать пароль"><span aria-hidden="true">◉</span></button></span></label>
             </div>
@@ -87,6 +91,6 @@
         </section>
       </section>
     </main>
-    <script type="module" src="auth.js?v=8"></script>
+    <script type="module" src="auth.js?v=10"></script>
   </body>
 </html>

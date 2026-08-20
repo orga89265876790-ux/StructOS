@@ -1269,6 +1269,18 @@ html[data-theme="dark"] .trust {
   gap: 8px;
 }
 
+.auth-actions-desktop {
+  min-height: 38px;
+  padding: 3px 5px;
+  gap: 2px;
+  border: 1px solid rgba(0, 96, 235, 0.16);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 5px 14px rgba(16, 76, 156, 0.07);
+}
+
+.auth-slash { color: rgba(26, 69, 130, 0.38); font-size: 13px; font-weight: 650; }
+
 .login-link,
 .register-button,
 .account-button {
@@ -1278,18 +1290,18 @@ html[data-theme="dark"] .trust {
 }
 
 .login-link {
-  padding: 0 10px;
+  padding: 0 7px;
   border: 0;
   color: var(--text);
   background: transparent;
 }
 
 .register-button {
-  padding: 0 14px;
-  border: 1px solid rgba(0, 96, 235, 0.14);
-  color: #fff;
-  background: linear-gradient(100deg, #0966f6, #0048e6);
-  box-shadow: 0 6px 15px rgba(0, 79, 230, 0.18);
+  padding: 0 8px;
+  border: 0;
+  color: var(--blue);
+  background: transparent;
+  box-shadow: none;
 }
 
 .account-button {
@@ -1767,6 +1779,7 @@ progress::-moz-progress-bar { border-radius: 10px; background: linear-gradient(9
 
 .result-topline { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 9px; }
 .result-topline button { width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 12px; color: var(--blue); background: var(--surface); cursor: pointer; }
+.result-topline .result-back { width: 44px; height: 44px; flex: 0 0 44px; border-color: rgba(0, 96, 235, 0.24); font-size: 24px; font-weight: 850; box-shadow: 0 8px 20px rgba(0, 82, 210, 0.13); }
 .result-topline div { display: flex; flex-wrap: wrap; gap: 5px; }
 .result-topline strong { color: var(--blue); }
 .result-screen > h1 { margin: 15px 0 2px; font-size: 28px; letter-spacing: -1.1px; }
@@ -2097,10 +2110,10 @@ html[data-theme="dark"] .finale-brand p { color: #a8b8cd; }
 
 /* Approved result access, authentication controls and refined construction motion */
 .login-link {
-  border: 1px solid rgba(0, 96, 235, 0.18);
+  border: 0;
   color: var(--blue);
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 5px 14px rgba(16, 76, 156, 0.07);
+  background: transparent;
+  box-shadow: none;
   font-weight: 680;
 }
 
@@ -2109,9 +2122,11 @@ html[data-theme="dark"] .finale-brand p { color: #a8b8cd; }
 }
 
 html[data-theme="dark"] .login-link {
-  border-color: rgba(83, 164, 255, 0.24);
-  background: rgba(12, 29, 51, 0.84);
+  border-color: transparent;
+  background: transparent;
 }
+
+html[data-theme="dark"] .auth-actions-desktop { border-color: rgba(83, 164, 255, 0.24); background: rgba(12, 29, 51, 0.84); }
 
 .landing-analysis-button.result-ready {
   background: linear-gradient(100deg, #0788ff, #0045dd);
@@ -2374,8 +2389,8 @@ html[data-theme="dark"] .finale-base { color: #c3d8f2; }
     right: 0;
     bottom: 0;
     left: 0;
-    display: grid;
-    grid-template-columns: 0.82fr 1.18fr;
+    display: flex;
+    justify-content: center;
     gap: 7px;
   }
 
@@ -2384,6 +2399,9 @@ html[data-theme="dark"] .finale-base { color: #c3d8f2; }
     min-height: 37px;
     font-size: 10.5px;
   }
+
+  .auth-actions-desktop .login-link { flex: 0 1 auto; }
+  .auth-actions-desktop .register-button { flex: 0 1 auto; }
 
   .analysis-dock {
     right: 10px;

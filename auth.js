@@ -1,4 +1,5 @@
 import { supabaseConfig } from './auth-config.js';
+import { professions } from './professions.js';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -8,7 +9,7 @@ const ru = {
   tagline: 'ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ', language: 'Язык', storyKicker: 'ВАШЕ ПРОСТРАНСТВО STRUCTOS', storyTitle: 'Строительный интеллект всегда рядом', storyCopy: 'Сохраняйте объекты, результаты анализа и документы в едином защищённом пространстве.',
   benefitOne: 'Все объекты в одном месте', benefitOneCopy: 'Проекты, договоры и сметы связаны между собой', benefitTwo: 'История анализа', benefitTwoCopy: 'Возвращайтесь к замечаниям и результатам в любое время', benefitThree: 'Паспорт строителя', benefitThreeCopy: 'Персональный 7-значный ID и доступ к полным отчётам', passportLabel: 'ПАСПОРТ СТРОИТЕЛЯ', secureAccess: 'ЗАЩИЩЁННЫЙ ДОСТУП',
   login: 'Войти', register: 'Регистрация', loginHeading: 'Вход в StructOS', loginSubheading: 'Продолжите работу с вашими объектами', registerHeading: 'Регистрация в StructOS', registerSubheading: 'Создайте единое пространство для строительных задач', email: 'Электронная почта', registerEmail: 'Электронная почта', password: 'Пароль', remember: 'Запомнить меня', forgot: 'Забыли пароль?', loginButton: 'Войти в StructOS', noAccount: 'Нет аккаунта?', createAccount: 'Создать аккаунт',
-  fullName: 'Имя и фамилия', phone: 'Телефон', city: 'Город', role: 'Основная роль', chooseRole: 'Выберите роль', roleUser: 'Пользователь', roleWorker: 'Работник', roleForeman: 'Прораб / бригадир', roleEngineer: 'Инженер / ПТО', roleContractor: 'Подрядчик', roleCustomer: 'Заказчик', roleSupplier: 'Поставщик', roleOther: 'Другая роль', createPassword: 'Придумайте пароль', repeatPassword: 'Повторите пароль', passwordHint: 'Не менее 8 символов, буквы и цифры', agreement: 'Принимаю Пользовательское соглашение и Политику конфиденциальности', registerButton: 'Создать аккаунт', hasAccount: 'Уже есть аккаунт?', goLogin: 'Войти',
+  home: 'На главную', getPassport: 'Получи Паспорт Строителя', languageNote: 'Заполняйте на удобном языке — в профиле данные сохранятся на русском', fullName: 'Имя и фамилия', phone: 'Телефон', city: 'Город', role: 'Основная роль', chooseRole: 'Выберите роль', roleUser: 'Пользователь', roleExecutor: 'Исполнитель', roleSupplier: 'Поставщик', roleAggregator: 'Агрегатор', profession: 'Основная профессия', professionHint: 'Введите название и выберите профессию из списка', professionPlaceholder: 'Начните вводить профессию', professionInvalid: 'Выберите профессию из предложенного списка.', createPassword: 'Придумайте пароль', repeatPassword: 'Повторите пароль', passwordHint: 'Не менее 8 символов, буквы и цифры', agreement: 'Принимаю Пользовательское соглашение и Политику конфиденциальности', registerButton: 'Создать аккаунт', hasAccount: 'Уже есть аккаунт?', goLogin: 'Войти',
   recoveryTitle: 'Восстановление доступа', recoveryCopy: 'Укажите электронную почту — мы отправим ссылку для создания нового пароля.', sendLink: 'Отправить ссылку', backLogin: 'Вернуться ко входу', newPasswordTitle: 'Новый пароль', newPasswordCopy: 'Придумайте новый пароль для аккаунта StructOS.', savePassword: 'Сохранить пароль', securityCopy: 'Пароль передаётся только защищённому сервису авторизации и не хранится на сайте', showPassword: 'Показать пароль', hidePassword: 'Скрыть пароль',
   required: 'Заполните обязательные поля.', passwordsMismatch: 'Пароли не совпадают.', weakPassword: 'Пароль должен содержать не менее 8 символов, буквы и цифры.', backendPending: 'Защищённая регистрация готова к подключению. Данные не отправлены — сначала необходимо создать отдельный сервер StructOS.', loginSuccess: 'Вход выполнен. Аккаунт StructOS подтверждён.', registerSuccess: 'Аккаунт создан. Проверьте почту и подтвердите регистрацию.', resetSuccess: 'Ссылка для восстановления отправлена на указанную почту.', passwordSaved: 'Новый пароль сохранён.', genericError: 'Не удалось выполнить действие. Проверьте данные и попробуйте ещё раз.', working: 'Проверяем…', emailPlaceholder: 'name@company.ru', passwordPlaceholder: 'Минимум 8 символов', fullNamePlaceholder: 'Иван Иванов', cityPlaceholder: 'Москва', repeatPlaceholder: 'Повторите пароль'
 };
@@ -20,6 +21,11 @@ const copy = {
   KG: { ...ru, tagline: 'БИРДИКТҮҮ КУРУЛУШ ИНТЕЛЛЕКТИ', language: 'Тил', storyKicker: 'СИЗДИН STRUCTOS МЕЙКИНДИГИҢИЗ', storyTitle: 'Курулуш интеллекти ар дайым жаныңызда', storyCopy: 'Объекттерди, талдоо жыйынтыктарын жана документтерди бир корголгон мейкиндикте сактаңыз.', benefitOne: 'Бардык объекттер бир жерде', benefitOneCopy: 'Долбоорлор, келишимдер жана сметалар өз ара байланышта', benefitTwo: 'Талдоо тарыхы', benefitTwoCopy: 'Эскертүүлөргө жана жыйынтыктарга каалаган убакта кайтыңыз', benefitThree: 'Куруучунун паспорту', benefitThreeCopy: 'Жеке 7 орундуу ID жана толук отчетторго жетүү', passportLabel: 'КУРУУЧУНУН ПАСПОРТУ', secureAccess: 'КОРГОЛГОН КИРҮҮ', login: 'Кирүү', register: 'Катталуу', loginHeading: 'StructOSко кирүү', loginSubheading: 'Объекттериңиз менен иштөөнү улантыңыз', registerHeading: 'StructOSто катталуу', registerSubheading: 'Курулуш милдеттери үчүн бирдиктүү мейкиндик түзүңүз', email: 'Электрондук почта', registerEmail: 'Электрондук почта', password: 'Сырсөз', remember: 'Мени эстеп калуу', forgot: 'Сырсөздү унуттуңузбу?', loginButton: 'StructOSко кирүү', noAccount: 'Аккаунтуңуз жокпу?', createAccount: 'Аккаунт түзүү', fullName: 'Аты-жөнү', phone: 'Телефон', city: 'Шаар', role: 'Негизги роль', chooseRole: 'Ролду тандаңыз', roleUser: 'Колдонуучу', roleWorker: 'Жумушчу', roleForeman: 'Прораб / бригадир', roleEngineer: 'Инженер / ПТО', roleContractor: 'Подрядчы', roleCustomer: 'Заказчы', roleSupplier: 'Жеткирүүчү', roleOther: 'Башка роль', createPassword: 'Сырсөз түзүңүз', repeatPassword: 'Сырсөздү кайталаңыз', passwordHint: 'Кеминде 8 белги, тамгалар жана сандар', agreement: 'Колдонуу шарттарын жана купуялык саясатын кабыл алам', registerButton: 'Аккаунт түзүү', hasAccount: 'Аккаунтуңуз барбы?', goLogin: 'Кирүү', recoveryTitle: 'Кирүүнү калыбына келтирүү', recoveryCopy: 'Электрондук почтаңызды жазыңыз — жаңы сырсөз үчүн шилтеме жөнөтөбүз.', sendLink: 'Шилтемени жөнөтүү', backLogin: 'Кирүүгө кайтуу', newPasswordTitle: 'Жаңы сырсөз', newPasswordCopy: 'StructOS аккаунту үчүн жаңы сырсөз түзүңүз.', savePassword: 'Сырсөздү сактоо', securityCopy: 'Сырсөз корголгон авторизация кызматына гана берилет жана сайтта сакталбайт', showPassword: 'Сырсөздү көрсөтүү', hidePassword: 'Сырсөздү жашыруу', required: 'Милдеттүү талааларды толтуруңуз.', passwordsMismatch: 'Сырсөздөр дал келбейт.', weakPassword: 'Сырсөз кеминде 8 белги, тамга жана сан камтышы керек.', backendPending: 'Коопсуз авторизация туташтырууга даяр. Маалымат жөнөтүлгөн жок — алгач StructOS үчүн өзүнчө сервер түзүү керек.', loginSuccess: 'Кирүү аткарылды.', registerSuccess: 'Аккаунт түзүлдү. Почтаңызды текшериңиз.', resetSuccess: 'Калыбына келтирүү шилтемеси почтага жөнөтүлдү.', passwordSaved: 'Жаңы сырсөз сакталды.', genericError: 'Аракет аткарылган жок. Маалыматты текшериңиз.', working: 'Текшерүү…', fullNamePlaceholder: 'Аты-жөнү', cityPlaceholder: 'Бишкек' },
   TR: { ...ru, tagline: 'BİRLEŞİK İNŞAAT ZEKÂSI', language: 'Dil', storyKicker: 'STRUCTOS ÇALIŞMA ALANINIZ', storyTitle: 'İnşaat zekâsı her zaman yanınızda', storyCopy: 'Projeleri, analiz sonuçlarını ve belgeleri tek bir güvenli alanda saklayın.', benefitOne: 'Tüm projeler tek yerde', benefitOneCopy: 'Projeler, sözleşmeler ve keşifler birbiriyle bağlantılı', benefitTwo: 'Analiz geçmişi', benefitTwoCopy: 'Bulgulara ve sonuçlara istediğiniz zaman dönün', benefitThree: 'İnşaatçı Pasaportu', benefitThreeCopy: 'Kişisel 7 haneli kimlik ve tam raporlara erişim', passportLabel: 'İNŞAATÇI PASAPORTU', secureAccess: 'GÜVENLİ ERİŞİM', login: 'Giriş', register: 'Kayıt', loginHeading: "StructOS'a giriş", loginSubheading: 'Projelerinizle çalışmaya devam edin', registerHeading: "StructOS'a kayıt", registerSubheading: 'İnşaat görevleriniz için tek bir alan oluşturun', email: 'E-posta', registerEmail: 'E-posta', password: 'Şifre', remember: 'Beni hatırla', forgot: 'Şifrenizi mi unuttunuz?', loginButton: "StructOS'a giriş", noAccount: 'Hesabınız yok mu?', createAccount: 'Hesap oluştur', fullName: 'Ad soyad', phone: 'Telefon', city: 'Şehir', role: 'Ana rol', chooseRole: 'Rol seçin', roleUser: 'Kullanıcı', roleWorker: 'Çalışan', roleForeman: 'Şantiye şefi / ekip lideri', roleEngineer: 'Mühendis / teknik ofis', roleContractor: 'Yüklenici', roleCustomer: 'Müşteri', roleSupplier: 'Tedarikçi', roleOther: 'Diğer rol', createPassword: 'Şifre oluşturun', repeatPassword: 'Şifreyi tekrarlayın', passwordHint: 'En az 8 karakter, harf ve rakam', agreement: 'Kullanım Koşullarını ve Gizlilik Politikasını kabul ediyorum', registerButton: 'Hesap oluştur', hasAccount: 'Zaten hesabınız var mı?', goLogin: 'Giriş', recoveryTitle: 'Erişimi kurtar', recoveryCopy: 'E-postanızı girin; yeni şifre oluşturma bağlantısı gönderelim.', sendLink: 'Bağlantıyı gönder', backLogin: 'Girişe dön', newPasswordTitle: 'Yeni şifre', newPasswordCopy: 'StructOS hesabınız için yeni bir şifre oluşturun.', savePassword: 'Şifreyi kaydet', securityCopy: 'Şifreniz yalnızca güvenli kimlik doğrulama hizmetine gönderilir ve sitede saklanmaz', showPassword: 'Şifreyi göster', hidePassword: 'Şifreyi gizle', required: 'Zorunlu alanları doldurun.', passwordsMismatch: 'Şifreler eşleşmiyor.', weakPassword: 'Şifre en az 8 karakter, harf ve rakam içermelidir.', backendPending: 'Güvenli kimlik doğrulama bağlantıya hazır. Veri gönderilmedi; önce ayrı bir StructOS sunucusu oluşturulmalıdır.', loginSuccess: 'Giriş başarılı.', registerSuccess: 'Hesap oluşturuldu. E-postanızı kontrol edin.', resetSuccess: 'Kurtarma bağlantısı e-postanıza gönderildi.', passwordSaved: 'Yeni şifreniz kaydedildi.', genericError: 'İşlem tamamlanamadı. Bilgileri kontrol edin.', working: 'Kontrol ediliyor…', fullNamePlaceholder: 'Ad Soyad', cityPlaceholder: 'İstanbul' }
 };
+
+Object.assign(copy.EN, { home: 'Home', getPassport: 'Get your Builder Passport', languageNote: 'Fill in the form in any language — profile data will be stored in Russian', role: 'Primary role', chooseRole: 'Choose a role', roleUser: 'User', roleExecutor: 'Contractor / worker', roleSupplier: 'Supplier', roleAggregator: 'Aggregator', profession: 'Primary profession', professionHint: 'Type a profession and select it from the list', professionPlaceholder: 'Start typing a profession', professionInvalid: 'Select a profession from the suggested list.' });
+Object.assign(copy.TJ, { home: 'Ба саҳифаи асосӣ', getPassport: 'Шиносномаи сохтмончиро гиред', languageNote: 'Бо забони бароҳат пур кунед — маълумот дар профил ба русӣ нигоҳ дошта мешавад', role: 'Нақши асосӣ', chooseRole: 'Нақшро интихоб кунед', roleUser: 'Истифодабаранда', roleExecutor: 'Иҷрокунанда', roleSupplier: 'Таъминкунанда', roleAggregator: 'Агрегатор', profession: 'Касби асосӣ', professionHint: 'Номи касбро ворид карда, аз рӯйхат интихоб кунед', professionPlaceholder: 'Навиштани касбро оғоз кунед', professionInvalid: 'Касбро аз рӯйхати пешниҳодшуда интихоб кунед.' });
+Object.assign(copy.KG, { home: 'Башкы бетке', getPassport: 'Куруучунун паспортун алыңыз', languageNote: 'Ыңгайлуу тилде толтуруңуз — профилдеги маалымат орус тилинде сакталат', role: 'Негизги роль', chooseRole: 'Ролду тандаңыз', roleUser: 'Колдонуучу', roleExecutor: 'Аткаруучу', roleSupplier: 'Жеткирүүчү', roleAggregator: 'Агрегатор', profession: 'Негизги кесип', professionHint: 'Кесипти жаза баштап, тизмеден тандаңыз', professionPlaceholder: 'Кесипти жаза баштаңыз', professionInvalid: 'Кесипти сунушталган тизмеден тандаңыз.' });
+Object.assign(copy.TR, { home: 'Ana sayfa', getPassport: 'İnşaatçı Pasaportunuzu alın', languageNote: 'Formu istediğiniz dilde doldurun — profil verileri Rusça kaydedilir', role: 'Ana rol', chooseRole: 'Rol seçin', roleUser: 'Kullanıcı', roleExecutor: 'Uygulayıcı', roleSupplier: 'Tedarikçi', roleAggregator: 'Aracı', profession: 'Ana meslek', professionHint: 'Mesleği yazmaya başlayın ve listeden seçin', professionPlaceholder: 'Mesleği yazmaya başlayın', professionInvalid: 'Önerilen listeden bir meslek seçin.' });
 
 const supabaseUrl = supabaseConfig.url || import.meta.env?.VITE_SUPABASE_URL;
 const supabaseKey = supabaseConfig.publishableKey || import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env?.VITE_SUPABASE_ANON_KEY;
@@ -34,6 +40,7 @@ if (supabaseUrl && supabaseKey) {
 }
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let mode = 'login';
+let professionActiveIndex = -1;
 
 function tr(key) { return copy[language]?.[key] ?? ru[key] ?? key; }
 
@@ -50,11 +57,56 @@ function applyLanguage(nextLanguage) {
   register.elements.fullName.placeholder = tr('fullNamePlaceholder');
   register.elements.email.placeholder = tr('emailPlaceholder');
   register.elements.city.placeholder = tr('cityPlaceholder');
+  register.elements.professionDisplay.placeholder = tr('professionPlaceholder');
   register.elements.password.placeholder = tr('passwordPlaceholder');
   register.elements.passwordConfirm.placeholder = tr('repeatPlaceholder');
   $$('.password-toggle').forEach((button) => { const input = $('input', button.parentElement); button.setAttribute('aria-label', tr(input.type === 'password' ? 'showPassword' : 'hidePassword')); });
   updateHeading();
+  if (!$('.profession-options').hidden) renderProfessionOptions(register.elements.professionDisplay.value);
   document.title = `${mode === 'register' ? tr('registerHeading') : tr('loginHeading')} — StructOS`;
+}
+
+function normalizeProfession(value) {
+  return value.toLocaleLowerCase().replace(/ё/g, 'е').replace(/[^a-zа-я0-9]+/gi, ' ').trim();
+}
+
+function professionMatches(query) {
+  const normalized = normalizeProfession(query);
+  if (!normalized) return professions.slice(0, 12);
+  return professions.filter(({ ru, aliases }) => normalizeProfession(`${ru} ${aliases}`).includes(normalized)).slice(0, 12);
+}
+
+function closeProfessionOptions() {
+  const options = $('.profession-options');
+  options.hidden = true;
+  $('.profession-input').setAttribute('aria-expanded', 'false');
+  professionActiveIndex = -1;
+}
+
+function chooseProfession(profession) {
+  const register = $('[data-auth-form="register"]');
+  register.elements.professionDisplay.value = profession.ru;
+  register.elements.profession.value = profession.ru;
+  register.elements.professionDisplay.setCustomValidity('');
+  closeProfessionOptions();
+}
+
+function renderProfessionOptions(query = '') {
+  const options = $('.profession-options');
+  const matches = professionMatches(query);
+  options.replaceChildren(...matches.map((profession, index) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.role = 'option';
+    button.dataset.profession = profession.ru;
+    button.setAttribute('aria-selected', String(index === professionActiveIndex));
+    button.innerHTML = `<strong>${profession.ru}</strong><small>${tr('profession')}</small>`;
+    button.addEventListener('mousedown', (event) => event.preventDefault());
+    button.addEventListener('click', () => chooseProfession(profession));
+    return button;
+  }));
+  options.hidden = matches.length === 0;
+  $('.profession-input').setAttribute('aria-expanded', String(matches.length > 0));
 }
 
 function applyTheme(theme) {
@@ -98,6 +150,9 @@ function setBusy(form, busy) {
 }
 
 function validate(form) {
+  if (form.dataset.authForm === 'register' && !form.elements.profession.value) {
+    form.elements.professionDisplay.setCustomValidity(tr('professionInvalid'));
+  }
   if (!form.checkValidity()) { form.reportValidity(); setFeedback(tr('required'), 'error'); return false; }
   const password = form.elements.password?.value || '';
   const confirm = form.elements.passwordConfirm?.value;
@@ -129,7 +184,7 @@ async function submitRegister(form) {
   const { error } = await authClient.auth.signUp({
     email: form.elements.email.value.trim(),
     password: form.elements.password.value,
-    options: { emailRedirectTo: redirect, data: { full_name: form.elements.fullName.value.trim(), phone: form.elements.phone.value.trim(), city: form.elements.city.value.trim(), profession_role: form.elements.role.value } }
+    options: { emailRedirectTo: redirect, data: { full_name: form.elements.fullName.value.trim(), phone: form.elements.phone.value.trim(), city: form.elements.city.value.trim(), primary_role: form.elements.role.value, primary_profession: form.elements.profession.value } }
   });
   setBusy(form, false);
   if (error) setFeedback(friendlyError(error), 'error'); else { setFeedback(tr('registerSuccess'), 'success'); form.reset(); updateStrength(''); }
@@ -170,6 +225,34 @@ $('.auth-language').addEventListener('change', (event) => applyLanguage(event.ta
 $('.auth-theme').addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
 $$('.password-toggle').forEach((button) => button.addEventListener('click', () => { const input = $('input', button.parentElement); input.type = input.type === 'password' ? 'text' : 'password'; button.classList.toggle('is-visible', input.type === 'text'); button.setAttribute('aria-label', tr(input.type === 'password' ? 'showPassword' : 'hidePassword')); }));
 $('[data-auth-form="register"] input[name="password"]').addEventListener('input', (event) => updateStrength(event.target.value));
+const professionInput = $('.profession-input');
+professionInput.addEventListener('focus', () => renderProfessionOptions(professionInput.value));
+professionInput.addEventListener('input', () => {
+  $('[data-auth-form="register"]').elements.profession.value = '';
+  professionInput.setCustomValidity(tr('professionInvalid'));
+  professionActiveIndex = -1;
+  renderProfessionOptions(professionInput.value);
+});
+professionInput.addEventListener('keydown', (event) => {
+  const choices = $$('.profession-options button');
+  if (!choices.length) return;
+  if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+    event.preventDefault();
+    professionActiveIndex = event.key === 'ArrowDown' ? Math.min(professionActiveIndex + 1, choices.length - 1) : Math.max(professionActiveIndex - 1, 0);
+    choices.forEach((choice, index) => choice.setAttribute('aria-selected', String(index === professionActiveIndex)));
+    choices[professionActiveIndex]?.scrollIntoView({ block: 'nearest' });
+  }
+  if (event.key === 'Enter' && professionActiveIndex >= 0) {
+    event.preventDefault();
+    const profession = professions.find(({ ru: name }) => name === choices[professionActiveIndex].dataset.profession);
+    if (profession) chooseProfession(profession);
+  }
+  if (event.key === 'Escape') closeProfessionOptions();
+});
+professionInput.addEventListener('blur', () => setTimeout(() => {
+  closeProfessionOptions();
+  if (!$('[data-auth-form="register"]').elements.profession.value) professionInput.setCustomValidity(tr('professionInvalid'));
+}, 120));
 $$('[data-auth-form]').forEach((form) => form.addEventListener('submit', (event) => { event.preventDefault(); if (form.dataset.authForm === 'login') submitLogin(form); if (form.dataset.authForm === 'register') submitRegister(form); if (form.dataset.authForm === 'recovery') submitRecovery(form); if (form.dataset.authForm === 'newPassword') submitNewPassword(form); }));
 window.addEventListener('hashchange', () => { if (location.hash === '#register') setMode('register', false); if (location.hash === '#login') setMode('login', false); });
 
