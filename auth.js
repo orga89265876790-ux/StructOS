@@ -86,6 +86,7 @@ function closeProfessionOptions() {
 function chooseProfession(profession) {
   const register = $('[data-auth-form="register"]');
   register.elements.professionDisplay.value = profession.ru;
+  register.elements.professionDisplay.dataset.profession = profession.ru;
   $('input[name="profession"]', register).value = profession.ru;
   register.elements.professionDisplay.setCustomValidity('');
   closeProfessionOptions();
@@ -150,7 +151,7 @@ function setBusy(form, busy) {
 }
 
 function validate(form) {
-  if (form.dataset.authForm === 'register' && !$('input[name="profession"]', form).value) {
+  if (form.dataset.authForm === 'register' && !form.elements.professionDisplay.dataset.profession) {
     form.elements.professionDisplay.setCustomValidity(tr('professionInvalid'));
   }
   if (!form.checkValidity()) { form.reportValidity(); setFeedback(tr('required'), 'error'); return false; }
@@ -184,7 +185,7 @@ async function submitRegister(form) {
   const { error } = await authClient.auth.signUp({
     email: form.elements.email.value.trim(),
     password: form.elements.password.value,
-    options: { emailRedirectTo: redirect, data: { full_name: form.elements.fullName.value.trim(), phone: form.elements.phone.value.trim(), city: form.elements.city.value.trim(), primary_role: form.elements.role.value, primary_profession: $('input[name="profession"]', form).value } }
+    options: { emailRedirectTo: redirect, data: { full_name: form.elements.fullName.value.trim(), phone: form.elements.phone.value.trim(), city: form.elements.city.value.trim(), primary_role: form.elements.role.value, primary_profession: form.elements.professionDisplay.dataset.profession } }
   });
   setBusy(form, false);
   if (error) setFeedback(friendlyError(error), 'error'); else { setFeedback(tr('registerSuccess'), 'success'); form.reset(); updateStrength(''); }
@@ -229,6 +230,7 @@ const professionInput = $('.profession-input');
 professionInput.addEventListener('focus', () => renderProfessionOptions(professionInput.value));
 professionInput.addEventListener('input', () => {
   $('input[name="profession"]', $('[data-auth-form="register"]')).value = '';
+  delete professionInput.dataset.profession;
   professionInput.setCustomValidity(tr('professionInvalid'));
   professionActiveIndex = -1;
   renderProfessionOptions(professionInput.value);
@@ -251,7 +253,7 @@ professionInput.addEventListener('keydown', (event) => {
 });
 professionInput.addEventListener('blur', () => setTimeout(() => {
   closeProfessionOptions();
-  if (!$('input[name="profession"]', $('[data-auth-form="register"]')).value) professionInput.setCustomValidity(tr('professionInvalid'));
+  if (!professionInput.dataset.profession) professionInput.setCustomValidity(tr('professionInvalid'));
 }, 120));
 $$('[data-auth-form]').forEach((form) => form.addEventListener('submit', (event) => { event.preventDefault(); if (form.dataset.authForm === 'login') submitLogin(form); if (form.dataset.authForm === 'register') submitRegister(form); if (form.dataset.authForm === 'recovery') submitRecovery(form); if (form.dataset.authForm === 'newPassword') submitNewPassword(form); }));
 window.addEventListener('hashchange', () => { if (location.hash === '#register') setMode('register', false); if (location.hash === '#login') setMode('login', false); });
