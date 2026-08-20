@@ -1022,6 +1022,7 @@ html[data-theme="dark"] .module-icon { background: linear-gradient(145deg, #102b
   .ecosystem-head p { font-size: 13px; }
   .ecosystem-map { width: min(100%, 1000px); height: 650px; margin: 0 auto; display: block; }
   .ecosystem-links { position: absolute; inset: 0; width: 100%; height: 100%; display: block; fill: none; stroke: rgba(0, 111, 255, 0.48); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .eco-link-bases { stroke: rgba(0, 91, 211, 0.17); stroke-width: 1; }
   .eco-link { stroke-dasharray: 12 220; animation: eco-link-pulse 14s linear infinite; }
   .link-1 { animation-delay: 0s; }.link-3 { animation-delay: 2s; }.link-5 { animation-delay: 4s; }.link-7 { animation-delay: 6s; }.link-6 { animation-delay: 8s; }.link-4 { animation-delay: 10s; }.link-2 { animation-delay: 12s; }
   .ecosystem-core { position: absolute; top: 50%; left: 50%; width: 240px; height: 240px; margin: 0; transform: translate(-50%, -50%); animation: eco-core-pulse-desktop 4s ease-in-out infinite; }
