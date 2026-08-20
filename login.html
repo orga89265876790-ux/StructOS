@@ -4,16 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#f4f9ff" />
+    <meta name="description" content="Вход и регистрация в StructOS — едином строительном интеллекте." />
     <title>Вход в StructOS</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="page.css" />
   </head>
-  <body data-page="login">
-    <main class="page-shell">
-      <header class="page-topbar"><span class="page-brand"><span class="page-brand-mark"><img src="assets/structos-mark.jpg" alt="" /></span><span class="page-brand-copy"><span class="page-brand-name">Struct<strong>OS</strong></span><span class="page-tagline" data-page-tagline>ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ</span></span></span><span class="page-number">01</span></header>
-      <section class="empty-stage"><div class="empty-content"><div class="page-construction" aria-hidden="true"><span class="scan"></span><span class="column left"></span><span class="column right"></span><span class="floor one"></span><span class="floor two"></span><span class="floor three"></span><span class="floor four"></span></div><p class="empty-kicker" data-page-kicker>Раздел StructOS</p><h1 data-page-title>Вход в StructOS</h1><p class="empty-message" data-page-message>Страница входа будет подключена позже.</p></div></section>
+  <body class="auth-page" data-page="login">
+    <main class="page-shell auth-shell">
+      <header class="page-topbar auth-topbar">
+        <span class="page-brand" aria-label="StructOS">
+          <span class="page-brand-mark"><img src="assets/structos-building-mark.svg" alt="" /></span>
+          <span class="page-brand-copy"><span class="page-brand-name">Struct<strong>OS</strong></span><span class="page-tagline" data-auth-i18n="tagline">ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ</span></span>
+        </span>
+        <div class="auth-header-actions">
+          <label class="auth-language-label"><span class="sr-only" data-auth-i18n="language">Язык</span><select class="auth-language" aria-label="Язык"><option value="RU">RU</option><option value="EN">EN</option><option value="TJ">TJ</option><option value="KG">KG</option><option value="TR">TR</option></select></label>
+          <button class="auth-theme" type="button" aria-label="Переключить тему"><span class="auth-sun">☼</span><span class="auth-moon">☾</span></button>
+          <span class="page-number">01</span>
+        </div>
+      </header>
+
+      <section class="auth-stage">
+        <aside class="auth-story" aria-label="Преимущества аккаунта StructOS">
+          <div class="story-grid" aria-hidden="true"></div>
+          <div class="story-building" aria-hidden="true"><span class="story-ground"></span><span class="story-column left"></span><span class="story-column right"></span><span class="story-floor one"></span><span class="story-floor two"></span><span class="story-floor three"></span><span class="story-beacon"></span></div>
+          <p class="story-kicker" data-auth-i18n="storyKicker">ВАШЕ ПРОСТРАНСТВО STRUCTOS</p>
+          <h1 data-auth-i18n="storyTitle">Строительный интеллект всегда рядом</h1>
+          <p class="story-copy" data-auth-i18n="storyCopy">Сохраняйте объекты, результаты анализа и документы в едином защищённом пространстве.</p>
+          <ul class="story-benefits">
+            <li><span>01</span><div><strong data-auth-i18n="benefitOne">Все объекты в одном месте</strong><small data-auth-i18n="benefitOneCopy">Проекты, договоры и сметы связаны между собой</small></div></li>
+            <li><span>02</span><div><strong data-auth-i18n="benefitTwo">История анализа</strong><small data-auth-i18n="benefitTwoCopy">Возвращайтесь к замечаниям и результатам в любое время</small></div></li>
+            <li><span>03</span><div><strong data-auth-i18n="benefitThree">Паспорт строителя</strong><small data-auth-i18n="benefitThreeCopy">Персональный 7-значный ID и доступ к полным отчётам</small></div></li>
+          </ul>
+          <div class="passport-preview"><span class="passport-logo"><img src="assets/structos-building-mark.svg" alt="" /></span><div><small data-auth-i18n="passportLabel">ПАСПОРТ СТРОИТЕЛЯ</small><strong>Struct<span>OS</span> ID</strong><p>№ ••• ••••</p></div><span class="passport-status">✓</span></div>
+        </aside>
+
+        <section class="auth-panel" aria-live="polite">
+          <div class="auth-panel-head"><p class="auth-eyebrow" data-auth-i18n="secureAccess">ЗАЩИЩЁННЫЙ ДОСТУП</p><h2 data-auth-heading>Вход в StructOS</h2><p data-auth-subheading>Продолжите работу с вашими объектами</p></div>
+          <div class="auth-tabs" role="tablist" aria-label="Вход или регистрация"><button type="button" role="tab" aria-selected="true" data-auth-tab="login" data-auth-i18n="login">Войти</button><button type="button" role="tab" aria-selected="false" data-auth-tab="register" data-auth-i18n="register">Регистрация</button><span class="auth-tab-indicator" aria-hidden="true"></span></div>
+          <div class="auth-feedback" role="status" hidden></div>
+
+          <form class="auth-form login-form" data-auth-form="login" novalidate>
+            <label class="auth-field"><span data-auth-i18n="email">Электронная почта</span><input name="email" type="email" autocomplete="email" inputmode="email" placeholder="name@company.ru" required /></label>
+            <label class="auth-field"><span data-auth-i18n="password">Пароль</span><span class="password-wrap"><input name="password" type="password" autocomplete="current-password" minlength="8" placeholder="Минимум 8 символов" required /><button class="password-toggle" type="button" aria-label="Показать пароль"><span aria-hidden="true">◉</span></button></span></label>
+            <div class="auth-form-row"><label class="auth-check"><input name="remember" type="checkbox" checked /><span data-auth-i18n="remember">Запомнить меня</span></label><button class="auth-text-button" type="button" data-open-recovery data-auth-i18n="forgot">Забыли пароль?</button></div>
+            <button class="auth-submit" type="submit"><span data-auth-i18n="loginButton">Войти в StructOS</span><span>→</span></button>
+            <p class="auth-switch-copy"><span data-auth-i18n="noAccount">Нет аккаунта?</span> <button type="button" data-switch-auth="register" data-auth-i18n="createAccount">Создать аккаунт</button></p>
+          </form>
+
+          <form class="auth-form register-form" data-auth-form="register" hidden novalidate>
+            <div class="register-grid">
+              <label class="auth-field register-wide"><span data-auth-i18n="fullName">Имя и фамилия</span><input name="fullName" type="text" autocomplete="name" maxlength="80" placeholder="Иван Иванов" required /></label>
+              <label class="auth-field"><span data-auth-i18n="registerEmail">Электронная почта</span><input name="email" type="email" autocomplete="email" inputmode="email" placeholder="name@company.ru" required /></label>
+              <label class="auth-field"><span data-auth-i18n="phone">Телефон</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 999 000-00-00" /></label>
+              <label class="auth-field"><span data-auth-i18n="city">Город</span><input name="city" type="text" autocomplete="address-level2" maxlength="60" placeholder="Москва" required /></label>
+              <label class="auth-field"><span data-auth-i18n="role">Основная роль</span><select name="role" required><option value="" data-auth-i18n="chooseRole">Выберите роль</option><option value="user" data-auth-i18n="roleUser">Пользователь</option><option value="worker" data-auth-i18n="roleWorker">Работник</option><option value="foreman" data-auth-i18n="roleForeman">Прораб / бригадир</option><option value="engineer" data-auth-i18n="roleEngineer">Инженер / ПТО</option><option value="contractor" data-auth-i18n="roleContractor">Подрядчик</option><option value="customer" data-auth-i18n="roleCustomer">Заказчик</option><option value="supplier" data-auth-i18n="roleSupplier">Поставщик</option><option value="other" data-auth-i18n="roleOther">Другая роль</option></select></label>
+              <label class="auth-field"><span data-auth-i18n="createPassword">Придумайте пароль</span><span class="password-wrap"><input name="password" type="password" autocomplete="new-password" minlength="8" placeholder="Минимум 8 символов" required /><button class="password-toggle" type="button" aria-label="Показать пароль"><span aria-hidden="true">◉</span></button></span></label>
+              <label class="auth-field"><span data-auth-i18n="repeatPassword">Повторите пароль</span><span class="password-wrap"><input name="passwordConfirm" type="password" autocomplete="new-password" minlength="8" placeholder="Повторите пароль" required /><button class="password-toggle" type="button" aria-label="Показать пароль"><span aria-hidden="true">◉</span></button></span></label>
+            </div>
+            <div class="password-strength"><span></span><span></span><span></span><span></span><small data-auth-i18n="passwordHint">Не менее 8 символов, буквы и цифры</small></div>
+            <label class="auth-check agreement-check"><input name="agreement" type="checkbox" required /><span data-auth-i18n="agreement">Принимаю Пользовательское соглашение и Политику конфиденциальности</span></label>
+            <button class="auth-submit" type="submit"><span data-auth-i18n="registerButton">Создать аккаунт</span><span>→</span></button>
+            <p class="auth-switch-copy"><span data-auth-i18n="hasAccount">Уже есть аккаунт?</span> <button type="button" data-switch-auth="login" data-auth-i18n="goLogin">Войти</button></p>
+          </form>
+
+          <form class="auth-form recovery-form" data-auth-form="recovery" hidden novalidate>
+            <div class="recovery-icon" aria-hidden="true">↺</div><h3 data-auth-i18n="recoveryTitle">Восстановление доступа</h3><p data-auth-i18n="recoveryCopy">Укажите электронную почту — мы отправим ссылку для создания нового пароля.</p>
+            <label class="auth-field"><span data-auth-i18n="email">Электронная почта</span><input name="email" type="email" autocomplete="email" inputmode="email" placeholder="name@company.ru" required /></label>
+            <button class="auth-submit" type="submit"><span data-auth-i18n="sendLink">Отправить ссылку</span><span>→</span></button><button class="auth-back-button" type="button" data-switch-auth="login"><span>←</span> <span data-auth-i18n="backLogin">Вернуться ко входу</span></button>
+          </form>
+
+          <form class="auth-form new-password-form" data-auth-form="newPassword" hidden novalidate>
+            <div class="recovery-icon" aria-hidden="true">✓</div><h3 data-auth-i18n="newPasswordTitle">Новый пароль</h3><p data-auth-i18n="newPasswordCopy">Придумайте новый пароль для аккаунта StructOS.</p>
+            <label class="auth-field"><span data-auth-i18n="createPassword">Придумайте пароль</span><span class="password-wrap"><input name="password" type="password" autocomplete="new-password" minlength="8" required /><button class="password-toggle" type="button" aria-label="Показать пароль"><span aria-hidden="true">◉</span></button></span></label>
+            <label class="auth-field"><span data-auth-i18n="repeatPassword">Повторите пароль</span><span class="password-wrap"><input name="passwordConfirm" type="password" autocomplete="new-password" minlength="8" required /><button class="password-toggle" type="button" aria-label="Показать пароль"><span aria-hidden="true">◉</span></button></span></label>
+            <button class="auth-submit" type="submit"><span data-auth-i18n="savePassword">Сохранить пароль</span><span>→</span></button>
+          </form>
+
+          <p class="auth-security"><span aria-hidden="true">◇</span><span data-auth-i18n="securityCopy">Пароль передаётся только защищённому сервису авторизации и не хранится на сайте</span></p>
+        </section>
+      </section>
     </main>
-    <script type="module" src="placeholder.js"></script>
+    <script type="module" src="auth.js"></script>
   </body>
 </html>
