@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=8" />
   </head>
   <body>
     <main class="site-shell" id="app-shell">
@@ -89,6 +89,29 @@
           <article class="stat-card"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="21" cy="27" r="16"/><circle cx="21" cy="27" r="9"/><circle cx="21" cy="27" r="3"/><path d="m27 21 13-13M32 8h8v8"/></svg></span><div><strong>98%</strong><p data-i18n="accuracy">точность<br />анализа</p></div></article>
         </section>
 
+        <section class="ecosystem" aria-labelledby="ecosystem-title">
+          <header class="ecosystem-head">
+            <span class="ecosystem-kicker" data-i18n="ecoKicker">ЭКОСИСТЕМА STRUCTOS</span>
+            <h2 id="ecosystem-title" data-i18n="ecoTitle">Все процессы строительства связаны в едином интеллекте</h2>
+            <p data-i18n="ecoIntro">От чертежей и смет до исполнителей, снабжения и аналитики объекта.</p>
+          </header>
+          <div class="ecosystem-map">
+            <svg class="ecosystem-links" viewBox="0 0 1000 650" aria-hidden="true">
+              <path class="eco-link link-1" d="M500 260V150"/><path class="eco-link link-2" d="M410 275 330 205 255 205"/><path class="eco-link link-3" d="M590 275 670 205 745 205"/><path class="eco-link link-4" d="M380 325H250"/><path class="eco-link link-5" d="M620 325H750"/><path class="eco-link link-6" d="M415 410 345 500 285 500"/><path class="eco-link link-7" d="M585 410 655 500 715 500"/>
+            </svg>
+            <div class="ecosystem-core" aria-label="StructOS Core"><span class="core-orbit"></span><span class="core-grid"></span><img src="assets/structos-building-mark.svg" alt="" /><strong>StructOS Core</strong><small data-i18n="ecoCore">единый центр объекта</small></div>
+
+            <button class="ecosystem-module module-design" type="button" aria-expanded="false"><span class="module-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 25h20M9 25V8l7-4 7 4v17M13 10h6M13 15h6M13 20h6"/></svg></span><span class="module-copy"><strong>StructOS Design</strong><small data-i18n="ecoDesign">чертежи и BIM</small><em data-i18n="ecoDesignDetail">Распознавание, сравнение и цифровая структура чертежей.</em></span></button>
+            <button class="ecosystem-module module-estimate" type="button" aria-expanded="false"><span class="module-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="4" width="18" height="24" rx="2"/><path d="M11 10h10M11 16h3M18 16h3M11 21h3M18 21h3"/></svg></span><span class="module-copy"><strong>StructOS Estimate</strong><small data-i18n="ecoEstimate">анализ смет</small><em data-i18n="ecoEstimateDetail">Проверка объёмов, цен, пропусков и несоответствий проекту.</em></span></button>
+            <button class="ecosystem-module module-contract" type="button" aria-expanded="false"><span class="module-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 4h12l5 5v19H8zM20 4v6h5M12 15h9M12 20h7"/></svg></span><span class="module-copy"><strong>StructOS Contract</strong><small data-i18n="ecoContract">анализ договоров</small><em data-i18n="ecoContractDetail">Риски, обязательства и пункты, требующие внимания.</em></span></button>
+            <button class="ecosystem-module module-radar" type="button" aria-expanded="false"><span class="module-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="10" r="5"/><path d="M7 27v-4c0-6 4-9 9-9s9 3 9 9v4M4 27h24"/></svg></span><span class="module-copy"><strong>StructOS Radar Job</strong><small data-i18n="ecoRadar">исполнители и работа</small><em data-i18n="ecoRadarDetail">Поиск специалистов, формирование бригад и распределение задач.</em></span></button>
+            <button class="ecosystem-module module-snab" type="button" aria-expanded="false"><span class="module-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m5 10 11-6 11 6-11 6zM5 10v13l11 6 11-6V10M16 16v13"/></svg></span><span class="module-copy"><strong>StructOS Snab</strong><small data-i18n="ecoSnab">материалы и поставщики</small><em data-i18n="ecoSnabDetail">Заявки, сравнение прайсов и подбор предложений поставщиков.</em></span></button>
+            <button class="ecosystem-module module-center" type="button" aria-expanded="false"><span class="module-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 9h10l3 3h11v15H4zM7 6h9l3 3"/></svg></span><span class="module-copy"><strong>StructOS Center</strong><small data-i18n="ecoCenter">документы и взаимодействие</small><em data-i18n="ecoCenterDetail">Единое пространство документов, событий и совместной работы.</em></span></button>
+            <button class="ecosystem-module module-analytics" type="button" aria-expanded="false"><span class="module-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27h23M8 24v-7h4v7M15 24V11h4v13M22 24V5h4v19"/></svg></span><span class="module-copy"><strong>StructOS Analytics</strong><small data-i18n="ecoAnalytics">показатели, риски и экономика</small><em data-i18n="ecoAnalyticsDetail">Готовность объекта, риски, затраты и ключевые показатели.</em></span></button>
+          </div>
+          <a class="ecosystem-cta" href="features.html"><span data-i18n="ecoCta">Изучить все возможности</span><span aria-hidden="true">→</span></a>
+        </section>
+
         <section class="trust" aria-label="Нам доверяют лидеры строительной отрасли"><div class="trust-title-viewport"><div class="trust-title-track" aria-hidden="true"><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span><span data-i18n="trustTitle">Нам доверяют лидеры строительной отрасли</span></div></div><div class="trust-logos-viewport" aria-label="ПИК, SetlGroup, GloraX, DOGMA, Инград и ЛСР"><div class="trust-logos-track"><span class="logo-raster"><img src="assets/trusted-companies.jpg" alt="" /></span><span class="logo-raster"><img src="assets/trusted-companies.jpg" alt="" /></span></div></div></section>
 
         <button class="install-app-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="3"/><path d="M12 6v8M8.5 10.5 12 14l3.5-3.5M10 18h4"/></svg><span data-i18n="installPhone">Установить StructOS на телефон</span></button>
@@ -154,6 +177,6 @@
     <dialog class="app-dialog install-dialog" id="install-dialog">
       <div class="dialog-card install-card"><header><div><span class="dialog-eyebrow">PWA</span><h2 data-i18n="installTitle">Установить StructOS</h2></div><button class="dialog-close install-close" type="button" aria-label="Закрыть">×</button></header><div class="install-hero"><img src="assets/structos-mark.jpg" alt="" /><div><strong>StructOS</strong><span data-i18n="appLike">Открывается как обычное приложение</span></div></div><div class="browser-tabs" role="tablist"><button type="button" data-browser="safari">Safari</button><button type="button" data-browser="chrome">Google</button><button type="button" data-browser="yandex">Яндекс</button></div><div class="browser-instruction" data-panel="safari"><ol><li data-i18n="safariStep1">Нажмите «Поделиться» в Safari.</li><li data-i18n="safariStep2">Выберите «На экран Домой».</li><li data-i18n="safariStep3">Включите «Открывать как веб-приложение».</li><li data-i18n="safariStep4">Нажмите «Добавить».</li></ol></div><div class="browser-instruction" data-panel="chrome" hidden><ol><li data-i18n="chromeStep1">Откройте меню ⋮.</li><li data-i18n="chromeStep2">Выберите «Установить приложение» или «Добавить на главный экран».</li><li data-i18n="chromeStep3">Подтвердите установку.</li></ol></div><div class="browser-instruction" data-panel="yandex" hidden><ol><li data-i18n="yandexStep1">Откройте меню Яндекс Браузера.</li><li data-i18n="yandexStep2">Выберите «Добавить ярлык».</li><li data-i18n="yandexStep3">Нажмите «Добавить».</li></ol><small data-i18n="yandexNote">Ярлык будет открывать StructOS через Яндекс Браузер.</small></div><p class="install-device-note"></p><button class="native-install-button" type="button" hidden data-i18n="installApp">Установить приложение</button></div>
     </dialog>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="script.js?v=8"></script>
   </body>
 </html>

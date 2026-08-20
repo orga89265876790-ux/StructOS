@@ -157,6 +157,71 @@ Object.assign(translations.TR, {
   reportRegister: 'Kayıt ol'
 });
 
+Object.assign(translations.RU, {
+  ecoKicker: 'ЭКОСИСТЕМА STRUCTOS', ecoTitle: 'Все процессы строительства связаны в едином интеллекте',
+  ecoIntro: 'От чертежей и смет до исполнителей, снабжения и аналитики объекта.', ecoCore: 'единый центр объекта',
+  ecoDesign: 'чертежи и BIM', ecoDesignDetail: 'Распознавание, сравнение и цифровая структура чертежей.',
+  ecoEstimate: 'анализ смет', ecoEstimateDetail: 'Проверка объёмов, цен, пропусков и несоответствий проекту.',
+  ecoContract: 'анализ договоров', ecoContractDetail: 'Риски, обязательства и пункты, требующие внимания.',
+  ecoRadar: 'исполнители и работа', ecoRadarDetail: 'Поиск специалистов, формирование бригад и распределение задач.',
+  ecoSnab: 'материалы и поставщики', ecoSnabDetail: 'Заявки, сравнение прайсов и подбор предложений поставщиков.',
+  ecoCenter: 'документы и взаимодействие', ecoCenterDetail: 'Единое пространство документов, событий и совместной работы.',
+  ecoAnalytics: 'показатели, риски и экономика', ecoAnalyticsDetail: 'Готовность объекта, риски, затраты и ключевые показатели.',
+  ecoCta: 'Изучить все возможности'
+});
+
+Object.assign(translations.EN, {
+  ecoKicker: 'STRUCTOS ECOSYSTEM', ecoTitle: 'Every construction process connected in one intelligence',
+  ecoIntro: 'From drawings and estimates to workers, procurement and project analytics.', ecoCore: 'unified project hub',
+  ecoDesign: 'drawings and BIM', ecoDesignDetail: 'Drawing recognition, comparison and digital structuring.',
+  ecoEstimate: 'estimate analysis', ecoEstimateDetail: 'Checking quantities, prices, omissions and project mismatches.',
+  ecoContract: 'contract analysis', ecoContractDetail: 'Risks, obligations and clauses requiring attention.',
+  ecoRadar: 'workers and jobs', ecoRadarDetail: 'Finding specialists, building teams and assigning tasks.',
+  ecoSnab: 'materials and suppliers', ecoSnabDetail: 'Requests, price-list comparison and supplier selection.',
+  ecoCenter: 'documents and collaboration', ecoCenterDetail: 'One workspace for documents, events and teamwork.',
+  ecoAnalytics: 'metrics, risks and economics', ecoAnalyticsDetail: 'Project readiness, risks, costs and key metrics.',
+  ecoCta: 'Explore all features'
+});
+
+Object.assign(translations.TJ, {
+  ecoKicker: 'ЭКОСИСТЕМАИ STRUCTOS', ecoTitle: 'Ҳамаи равандҳои сохтмон дар як зеҳн пайвастанд',
+  ecoIntro: 'Аз нақша ва смета то иҷрокунандагон, таъминот ва таҳлили объект.', ecoCore: 'маркази ягонаи объект',
+  ecoDesign: 'нақшаҳо ва BIM', ecoDesignDetail: 'Шинохтан, муқоиса ва сохторбандии рақамии нақшаҳо.',
+  ecoEstimate: 'таҳлили сметаҳо', ecoEstimateDetail: 'Санҷиши ҳаҷм, нарх, камбудӣ ва номувофиқатӣ бо лоиҳа.',
+  ecoContract: 'таҳлили шартномаҳо', ecoContractDetail: 'Хатарҳо, ӯҳдадориҳо ва бандҳои муҳими шартнома.',
+  ecoRadar: 'иҷрокунандагон ва кор', ecoRadarDetail: 'Ҷустуҷӯи мутахассисон, ташкили гурӯҳҳо ва тақсими вазифаҳо.',
+  ecoSnab: 'мавод ва таъминкунандагон', ecoSnabDetail: 'Дархостҳо, муқоисаи нархҳо ва интихоби пешниҳодҳо.',
+  ecoCenter: 'ҳуҷҷатҳо ва ҳамкорӣ', ecoCenterDetail: 'Фазои ягона барои ҳуҷҷатҳо, рӯйдодҳо ва кори муштарак.',
+  ecoAnalytics: 'нишондиҳандаҳо, хатарҳо ва иқтисод', ecoAnalyticsDetail: 'Омодагии объект, хатарҳо, хароҷот ва нишондиҳандаҳои асосӣ.',
+  ecoCta: 'Ҳамаи имкониятҳоро бинед'
+});
+
+Object.assign(translations.KG, {
+  ecoKicker: 'STRUCTOS ЭКОСИСТЕМАСЫ', ecoTitle: 'Курулуштун бардык процесстери бир интеллектке байланышкан',
+  ecoIntro: 'Чиймелерден жана сметалардан аткаруучуларга, жабдууга жана объект аналитикасына чейин.', ecoCore: 'объекттин бирдиктүү борбору',
+  ecoDesign: 'чиймелер жана BIM', ecoDesignDetail: 'Чиймелерди таануу, салыштыруу жана санариптик түзүмгө келтирүү.',
+  ecoEstimate: 'сметаларды талдоо', ecoEstimateDetail: 'Көлөмдөрдү, бааларды, өткөрүп кетүүлөрдү жана долбоорго дал келбестиктерди текшерүү.',
+  ecoContract: 'келишимдерди талдоо', ecoContractDetail: 'Тобокелдиктер, милдеттенмелер жана көңүл буруучу пункттар.',
+  ecoRadar: 'аткаруучулар жана жумуш', ecoRadarDetail: 'Адистерди табуу, бригадаларды түзүү жана тапшырмаларды бөлүштүрүү.',
+  ecoSnab: 'материалдар жана жеткирүүчүлөр', ecoSnabDetail: 'Өтүнмөлөр, бааларды салыштыруу жана жеткирүүчүлөрдү тандоо.',
+  ecoCenter: 'документтер жана өз ара аракет', ecoCenterDetail: 'Документтер, окуялар жана биргелешкен иш үчүн бирдиктүү мейкиндик.',
+  ecoAnalytics: 'көрсөткүчтөр, тобокелдиктер жана экономика', ecoAnalyticsDetail: 'Объекттин даярдыгы, тобокелдиктер, чыгымдар жана негизги көрсөткүчтөр.',
+  ecoCta: 'Бардык мүмкүнчүлүктөрдү көрүү'
+});
+
+Object.assign(translations.TR, {
+  ecoKicker: 'STRUCTOS EKOSİSTEMİ', ecoTitle: 'Tüm inşaat süreçleri tek bir zekâda birleşir',
+  ecoIntro: 'Çizim ve keşiflerden ekiplere, tedarike ve proje analitiğine kadar.', ecoCore: 'birleşik proje merkezi',
+  ecoDesign: 'çizimler ve BIM', ecoDesignDetail: 'Çizimleri tanıma, karşılaştırma ve dijital olarak yapılandırma.',
+  ecoEstimate: 'keşif analizi', ecoEstimateDetail: 'Miktar, fiyat, eksik ve proje uyumsuzluklarını kontrol etme.',
+  ecoContract: 'sözleşme analizi', ecoContractDetail: 'Riskler, yükümlülükler ve dikkat gerektiren maddeler.',
+  ecoRadar: 'ekipler ve işler', ecoRadarDetail: 'Uzman bulma, ekip oluşturma ve görev dağıtma.',
+  ecoSnab: 'malzemeler ve tedarikçiler', ecoSnabDetail: 'Talepler, fiyat listesi karşılaştırması ve tedarikçi seçimi.',
+  ecoCenter: 'belgeler ve iş birliği', ecoCenterDetail: 'Belgeler, olaylar ve ekip çalışması için ortak alan.',
+  ecoAnalytics: 'göstergeler, riskler ve ekonomi', ecoAnalyticsDetail: 'Proje hazırlığı, riskler, maliyetler ve temel göstergeler.',
+  ecoCta: 'Tüm özellikleri keşfet'
+});
+
 const themeButton = $('.theme-switch');
 const themeMeta = $('meta[name="theme-color"]');
 const languageButton = $('.language-button');
@@ -470,6 +535,13 @@ document.addEventListener('click', (event) => { if (!event.target.closest('.lang
 function goToUploads() { $('#uploads').scrollIntoView({ behavior: 'smooth', block: 'center' }); }
 $('#start').addEventListener('click', goToUploads);
 $('#start').addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); goToUploads(); } });
+$$('.ecosystem-module').forEach((moduleButton) => {
+  moduleButton.addEventListener('click', () => {
+    const shouldOpen = moduleButton.getAttribute('aria-expanded') !== 'true';
+    $$('.ecosystem-module').forEach((button) => button.setAttribute('aria-expanded', 'false'));
+    moduleButton.setAttribute('aria-expanded', String(shouldOpen));
+  });
+});
 $$('.upload-card').forEach((card) => { card.addEventListener('click', () => openUpload(card.dataset.kind)); card.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') openUpload(card.dataset.kind); }); });
 modalInput.addEventListener('change', () => setFile(modalInput.files?.[0]));
 objectNameInput.addEventListener('input', () => { setObjectNameError(false); updateUploadButton(); });

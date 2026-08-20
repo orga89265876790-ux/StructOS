@@ -1,4 +1,4 @@
-const CACHE_NAME = 'structos-shell-v6';
+const CACHE_NAME = 'structos-shell-v8';
 const APP_SHELL = ['./'];
 
 self.addEventListener('install', (event) => {
