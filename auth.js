@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
+import { supabaseConfig } from './auth-config.js';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -21,9 +21,17 @@ const copy = {
   TR: { ...ru, tagline: 'BİRLEŞİK İNŞAAT ZEKÂSI', language: 'Dil', storyKicker: 'STRUCTOS ÇALIŞMA ALANINIZ', storyTitle: 'İnşaat zekâsı her zaman yanınızda', storyCopy: 'Projeleri, analiz sonuçlarını ve belgeleri tek bir güvenli alanda saklayın.', benefitOne: 'Tüm projeler tek yerde', benefitOneCopy: 'Projeler, sözleşmeler ve keşifler birbiriyle bağlantılı', benefitTwo: 'Analiz geçmişi', benefitTwoCopy: 'Bulgulara ve sonuçlara istediğiniz zaman dönün', benefitThree: 'İnşaatçı Pasaportu', benefitThreeCopy: 'Kişisel 7 haneli kimlik ve tam raporlara erişim', passportLabel: 'İNŞAATÇI PASAPORTU', secureAccess: 'GÜVENLİ ERİŞİM', login: 'Giriş', register: 'Kayıt', loginHeading: "StructOS'a giriş", loginSubheading: 'Projelerinizle çalışmaya devam edin', registerHeading: "StructOS'a kayıt", registerSubheading: 'İnşaat görevleriniz için tek bir alan oluşturun', email: 'E-posta', registerEmail: 'E-posta', password: 'Şifre', remember: 'Beni hatırla', forgot: 'Şifrenizi mi unuttunuz?', loginButton: "StructOS'a giriş", noAccount: 'Hesabınız yok mu?', createAccount: 'Hesap oluştur', fullName: 'Ad soyad', phone: 'Telefon', city: 'Şehir', role: 'Ana rol', chooseRole: 'Rol seçin', roleUser: 'Kullanıcı', roleWorker: 'Çalışan', roleForeman: 'Şantiye şefi / ekip lideri', roleEngineer: 'Mühendis / teknik ofis', roleContractor: 'Yüklenici', roleCustomer: 'Müşteri', roleSupplier: 'Tedarikçi', roleOther: 'Diğer rol', createPassword: 'Şifre oluşturun', repeatPassword: 'Şifreyi tekrarlayın', passwordHint: 'En az 8 karakter, harf ve rakam', agreement: 'Kullanım Koşullarını ve Gizlilik Politikasını kabul ediyorum', registerButton: 'Hesap oluştur', hasAccount: 'Zaten hesabınız var mı?', goLogin: 'Giriş', recoveryTitle: 'Erişimi kurtar', recoveryCopy: 'E-postanızı girin; yeni şifre oluşturma bağlantısı gönderelim.', sendLink: 'Bağlantıyı gönder', backLogin: 'Girişe dön', newPasswordTitle: 'Yeni şifre', newPasswordCopy: 'StructOS hesabınız için yeni bir şifre oluşturun.', savePassword: 'Şifreyi kaydet', securityCopy: 'Şifreniz yalnızca güvenli kimlik doğrulama hizmetine gönderilir ve sitede saklanmaz', showPassword: 'Şifreyi göster', hidePassword: 'Şifreyi gizle', required: 'Zorunlu alanları doldurun.', passwordsMismatch: 'Şifreler eşleşmiyor.', weakPassword: 'Şifre en az 8 karakter, harf ve rakam içermelidir.', backendPending: 'Güvenli kimlik doğrulama bağlantıya hazır. Veri gönderilmedi; önce ayrı bir StructOS sunucusu oluşturulmalıdır.', loginSuccess: 'Giriş başarılı.', registerSuccess: 'Hesap oluşturuldu. E-postanızı kontrol edin.', resetSuccess: 'Kurtarma bağlantısı e-postanıza gönderildi.', passwordSaved: 'Yeni şifreniz kaydedildi.', genericError: 'İşlem tamamlanamadı. Bilgileri kontrol edin.', working: 'Kontrol ediliyor…', fullNamePlaceholder: 'Ad Soyad', cityPlaceholder: 'İstanbul' }
 };
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY;
-const authClient = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }) : null;
+const supabaseUrl = supabaseConfig.url || import.meta.env?.VITE_SUPABASE_URL;
+const supabaseKey = supabaseConfig.publishableKey || import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env?.VITE_SUPABASE_ANON_KEY;
+let authClient = null;
+if (supabaseUrl && supabaseKey) {
+  try {
+    const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.112.3/+esm');
+    authClient = createClient(supabaseUrl, supabaseKey, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
+  } catch {
+    authClient = null;
+  }
+}
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let mode = 'login';
 
