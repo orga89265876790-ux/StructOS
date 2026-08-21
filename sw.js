@@ -1,4 +1,4 @@
-const CACHE_NAME = 'structos-shell-v10';
+const CACHE_NAME = 'structos-shell-v11';
 const APP_SHELL = ['./'];
 
 self.addEventListener('install', (event) => {
@@ -16,6 +16,7 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+  if (event.request.destination === 'video' || event.request.headers.has('range')) return;
   event.respondWith(
     fetch(event.request)
       .then((response) => {
