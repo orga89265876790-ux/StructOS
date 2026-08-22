@@ -30,6 +30,9 @@ Object.assign(copy.TR, { home: 'Ana sayfa', getPassport: 'İnşaatçı Pasaportu
 const supabaseUrl = supabaseConfig.url || import.meta.env?.VITE_SUPABASE_URL;
 const supabaseKey = supabaseConfig.publishableKey || import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env?.VITE_SUPABASE_ANON_KEY;
 let authClient = null;
+const DEMO_SESSION_KEY = 'structos-demo-session';
+const DEMO_EMAIL = 'str@str.com';
+const DEMO_PASSWORD = 'str';
 
 async function initAuthClient() {
   if (!supabaseUrl || !supabaseKey) return;
@@ -172,10 +175,18 @@ function friendlyError(error) {
 }
 
 async function submitLogin(form) {
+  const email = form.elements.email.value.trim().toLowerCase();
+  const password = form.elements.password.value;
+  if (email === DEMO_EMAIL && password === DEMO_PASSWORD) {
+    localStorage.setItem(DEMO_SESSION_KEY, JSON.stringify({ email: DEMO_EMAIL, name: 'StructOS', role: 'Пользователь', id: '4 820 197' }));
+    setFeedback(tr('loginSuccess'), 'success');
+    setTimeout(() => window.location.assign('dashboard.html'), 350);
+    return;
+  }
   if (!validate(form)) return;
   if (!authClient) { setFeedback(tr('backendPending'), 'info'); return; }
   setBusy(form, true);
-  const { error } = await authClient.auth.signInWithPassword({ email: form.elements.email.value.trim(), password: form.elements.password.value });
+  const { error } = await authClient.auth.signInWithPassword({ email, password });
   setBusy(form, false);
   if (error) setFeedback(friendlyError(error), 'error'); else { setFeedback(tr('loginSuccess'), 'success'); setTimeout(() => window.location.assign('dashboard.html'), 450); }
 }
