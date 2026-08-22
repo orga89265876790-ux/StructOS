@@ -330,10 +330,16 @@ async function initAuth() {
 
 function setPanel(name) {
   const next = ['home', 'space', 'objects', 'profile'].includes(name) ? name : 'home';
+  $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
+  if (next !== 'space') {
+    $('[data-space-toolbar]').hidden = true;
+    $('[data-space-settings]').setAttribute('aria-expanded', 'false');
+  }
   $$('[data-panel]').forEach((panel) => { panel.hidden = panel.dataset.panel !== next; panel.classList.toggle('is-active', panel.dataset.panel === next); });
   $$('[data-tab]').forEach((button) => { button.classList.toggle('is-active', button.dataset.tab === next); });
   history.replaceState(null, '', `#${next}`);
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (next === 'space') requestAnimationFrame(renderWidgets);
   closeMenu();
 }
 
@@ -396,7 +402,8 @@ function enableWidgetDrag(card, canvas) {
     if (!card.hasPointerCapture(event.pointerId)) return;
     const dx = event.clientX - startX, dy = event.clientY - startY; moved ||= Math.abs(dx) + Math.abs(dy) > 5;
     const x = Math.max(0, Math.min(canvas.clientWidth - card.offsetWidth, originX + dx));
-    const y = Math.max(0, Math.min(canvas.clientHeight - card.offsetHeight - 28, originY + dy));
+    const bottomClearance = $('[data-dashboard]').classList.contains('is-space-mode') ? 96 : 28;
+    const y = Math.max(0, Math.min(canvas.clientHeight - card.offsetHeight - bottomClearance, originY + dy));
     card.style.left = `${x}px`; card.style.top = `${y}px`;
   });
   card.addEventListener('pointerup', (event) => {
@@ -917,8 +924,12 @@ $('[data-run-analysis]').addEventListener('click', runAnalysis);
 $$('[data-add-object]').forEach((button) => button.addEventListener('click', openObjectDialog));
 $('[data-profile-menu]').addEventListener('click', () => $('.drawer-group').classList.toggle('is-open'));
 $('[data-logout]').addEventListener('click', logout);
-$('[data-space-settings]').addEventListener('click', () => { $('[data-space-toolbar]').hidden = false; });
-$('[data-space-done]').addEventListener('click', () => { $('[data-space-toolbar]').hidden = true; });
+$('[data-space-settings]').addEventListener('click', () => {
+  const toolbar = $('[data-space-toolbar]');
+  toolbar.hidden = !toolbar.hidden;
+  $('[data-space-settings]').setAttribute('aria-expanded', String(!toolbar.hidden));
+});
+$('[data-space-done]').addEventListener('click', () => { $('[data-space-toolbar]').hidden = true; $('[data-space-settings]').setAttribute('aria-expanded', 'false'); });
 $('[data-edit-profile]').addEventListener('click', () => showDialog(tr('edit'), tr('comingSoon')));
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
 window.addEventListener('resize', () => { renderWidgets(); });
