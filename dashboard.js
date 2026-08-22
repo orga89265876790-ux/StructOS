@@ -24,14 +24,56 @@ Object.assign(copy.EN, { shareEarn: 'Share — get +200 bonuses for registration
 Object.assign(copy.KY, { shareEarn: 'Бөлүшүңүз — катталуу үчүн +200 бонус', share: 'Бөлүшүү', referralCopied: 'Шилтеме көчүрүлдү', passportFirstRewardShort: 'Биринчи толтурууга +200', passportFullRewardShort: '100% үчүн +500', topUp: 'Толуктоо', topUpAmount: 'Толуктоо суммасы', topUpHint: 'Ар бир толукталган рубль үчүн 10% бонус берилет', balanceHistory: 'Толуктоолор тарыхы', bonusHistory: 'Бонустар тарыхы', noOperations: 'Азырынча операция жок', balanceTopUp: 'Балансты толуктоо', topUpBonus: 'Толуктоо үчүн 10% бонус', passportFirstReward: 'Куруучунун паспортун биринчи толтуруу', passportFullReward: 'Куруучунун паспорту толук толтурулду', referralReward: 'Сиздин шилтеме аркылуу катталуу', bonusRules: 'Бонустар кантип берилет', analyze: 'Талдоо', analysisStarted: 'StructOS жүктөлгөн маалыматтарды текшерип жатат.', analysisComplete: 'Талдоо аяктады', analysisCompleteCopy: 'Натыйжа сакталды. Кийинки аракетти тандаңыз.', viewReport: 'Отчётту көрүү', startObject: 'Объектти ишке киргизүү', report: 'Отчёт', invalidAmount: 'Нөлдөн чоң сумманы жазыңыз', credited: 'Баланс толукталды, бонустар берилди' });
 Object.assign(copy.TJ, { shareEarn: 'Мубодила кунед — барои бақайдгирӣ +200 бонус', share: 'Мубодила', referralCopied: 'Пайванди даъват нусха шуд', passportFirstRewardShort: '+200 барои пуркунии аввал', passportFullRewardShort: '+500 барои 100%', topUp: 'Пур кардан', topUpAmount: 'Маблағи пуркунӣ', topUpHint: 'Барои ҳар рубли пуршуда 10% бонус дода мешавад', balanceHistory: 'Таърихи пуркунӣ', bonusHistory: 'Таърихи бонусҳо', noOperations: 'Ҳоло амалиёт нест', balanceTopUp: 'Пуркунии тавозун', topUpBonus: '10% бонус барои пуркунӣ', passportFirstReward: 'Пуркунии аввали шиносномаи сохтмончӣ', passportFullReward: 'Шиносномаи сохтмончӣ пурра пур шуд', referralReward: 'Бақайдгирӣ тавассути пайванди шумо', bonusRules: 'Бонусҳо чӣ гуна дода мешаванд', analyze: 'Таҳлил кардан', analysisStarted: 'StructOS маълумоти боршударо месанҷад ва натиҷаро омода мекунад.', analysisComplete: 'Таҳлил анҷом ёфт', analysisCompleteCopy: 'Натиҷа нигоҳ дошта шуд. Амали навбатиро интихоб кунед.', viewReport: 'Дидани ҳисобот', startObject: 'Оғози объект', report: 'Ҳисобот', invalidAmount: 'Маблағи аз сифр зиёдро ворид кунед', credited: 'Тавозун пур ва бонусҳо дода шуданд' });
 
+Object.assign(copy.RU, {
+  upload: 'Загрузить', uploadProject: 'Загрузить проект', uploadContract: 'Загрузить договор', uploadEstimate: 'Загрузить смету',
+  oneFilePerCategory: 'Один файл в каждой категории', objectNameHint: 'Объединим проект, договор и смету в одном объекте', objectRequired: 'Укажите название объекта',
+  selectFile: 'Выберите файл', dropFile: 'или перетащите его сюда', deviceFile: 'Файл с устройства', photoOrCamera: 'Фото / камера', replace: 'Заменить', deleteFile: 'Удалить файл',
+  allowedFormats: 'Форматы', maxFileSize: 'Максимальный размер', userUploadPlan: 'Тариф «Пользователь»: 1 файл в категории · хранилище 1 ГБ',
+  onlyOneFile: 'В категорию можно добавить только один файл', fileTooLarge: 'Файл превышает допустимый размер', unsupportedFormat: 'Этот формат файла не поддерживается', fileSelected: 'Файл выбран', fileDeleted: 'Файл удалён', uploadComplete: 'Файл добавлен в личный кабинет', uploadFirst: 'Сначала загрузите проект, договор или смету',
+  filesReady: 'Файлы готовы к анализу', analysisFilesCount: 'файл(а)'
+});
+Object.assign(copy.EN, {
+  upload: 'Upload', uploadProject: 'Upload project', uploadContract: 'Upload contract', uploadEstimate: 'Upload estimate',
+  oneFilePerCategory: 'One file in each category', objectNameHint: 'We will combine the project, contract, and estimate in one object', objectRequired: 'Enter the object name',
+  selectFile: 'Choose a file', dropFile: 'or drag it here', deviceFile: 'File from device', photoOrCamera: 'Photo / camera', replace: 'Replace', deleteFile: 'Delete file',
+  allowedFormats: 'Formats', maxFileSize: 'Maximum size', userUploadPlan: 'User plan: 1 file per category · 1 GB storage',
+  onlyOneFile: 'Only one file can be added to this category', fileTooLarge: 'The file exceeds the allowed size', unsupportedFormat: 'This file format is not supported', fileSelected: 'File selected', fileDeleted: 'File deleted', uploadComplete: 'File added to your account', uploadFirst: 'Upload a project, contract, or estimate first',
+  filesReady: 'Files are ready for analysis', analysisFilesCount: 'file(s)'
+});
+Object.assign(copy.KY, {
+  upload: 'Жүктөө', uploadProject: 'Долбоорду жүктөө', uploadContract: 'Келишимди жүктөө', uploadEstimate: 'Сметаны жүктөө',
+  oneFilePerCategory: 'Ар бир категорияда бир файл', objectNameHint: 'Долбоор, келишим жана смета бир объектке бириктирилет', objectRequired: 'Объекттин атын жазыңыз',
+  selectFile: 'Файлды тандаңыз', dropFile: 'же бул жерге сүйрөңүз', deviceFile: 'Түзмөктөн файл', photoOrCamera: 'Сүрөт / камера', replace: 'Алмаштыруу', deleteFile: 'Файлды өчүрүү',
+  allowedFormats: 'Форматтар', maxFileSize: 'Эң чоң өлчөм', userUploadPlan: '«Колдонуучу» тарифи: категорияга 1 файл · 1 ГБ сактагыч',
+  onlyOneFile: 'Категорияга бир гана файл кошууга болот', fileTooLarge: 'Файлдын өлчөмү чектен ашты', unsupportedFormat: 'Бул файл форматы колдоого алынбайт', fileSelected: 'Файл тандалды', fileDeleted: 'Файл өчүрүлдү', uploadComplete: 'Файл жеке кабинетке кошулду', uploadFirst: 'Адегенде долбоор, келишим же смета жүктөңүз',
+  filesReady: 'Файлдар талдоого даяр', analysisFilesCount: 'файл'
+});
+Object.assign(copy.TJ, {
+  upload: 'Бор кардан', uploadProject: 'Бор кардани лоиҳа', uploadContract: 'Бор кардани шартнома', uploadEstimate: 'Бор кардани смета',
+  oneFilePerCategory: 'Дар ҳар гурӯҳ як файл', objectNameHint: 'Лоиҳа, шартнома ва смета дар як объект муттаҳид мешаванд', objectRequired: 'Номи объектро ворид кунед',
+  selectFile: 'Файлро интихоб кунед', dropFile: 'ё онро ба ин ҷо кашед', deviceFile: 'Файл аз дастгоҳ', photoOrCamera: 'Акс / камера', replace: 'Иваз кардан', deleteFile: 'Нест кардани файл',
+  allowedFormats: 'Форматҳо', maxFileSize: 'Андозаи ҳадди аксар', userUploadPlan: 'Тарифи «Истифодабаранда»: 1 файл дар гурӯҳ · 1 ГБ ҷой',
+  onlyOneFile: 'Дар гурӯҳ танҳо як файл илова мешавад', fileTooLarge: 'Андозаи файл аз ҳад зиёд аст', unsupportedFormat: 'Ин формати файл дастгирӣ намешавад', fileSelected: 'Файл интихоб шуд', fileDeleted: 'Файл нест шуд', uploadComplete: 'Файл ба кабинети шахсӣ илова шуд', uploadFirst: 'Аввал лоиҳа, шартнома ё сметаро бор кунед',
+  filesReady: 'Файлҳо барои таҳлил омодаанд', analysisFilesCount: 'файл'
+});
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
 let toastTimer;
 const DEMO_SESSION_KEY = 'structos-demo-session';
 const FINANCE_KEY = 'structos-finance-v1';
+const UPLOADS_KEY = 'structos-analysis-uploads-v1';
+const OBJECT_NAME_KEY = 'structos-analysis-object-name';
+const uploadRules = {
+  project: { accept: '.pdf,.dwg,.rvt,.jpg,.jpeg,.png,.webp,.heic,image/*', extensions: ['pdf', 'dwg', 'rvt', 'jpg', 'jpeg', 'png', 'webp', 'heic'], formats: 'PDF, DWG, RVT, JPG, PNG, WEBP, HEIC', maxMb: 500 },
+  contract: { accept: '.pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.heic,image/*', extensions: ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png', 'webp', 'heic'], formats: 'PDF, DOC, DOCX, JPG, PNG, WEBP, HEIC', maxMb: 100 },
+  estimate: { accept: '.xlsx,.xls,.csv,.pdf,.jpg,.jpeg,.png,.webp,.heic,image/*', extensions: ['xlsx', 'xls', 'csv', 'pdf', 'jpg', 'jpeg', 'png', 'webp', 'heic'], formats: 'XLSX, XLS, CSV, PDF, JPG, PNG, WEBP, HEIC', maxMb: 100 }
+};
 let selectedAnalysis = 'project';
 let analysisTimer;
+let activeUploadKind = 'project';
+let pendingFile = null;
 
 function loadFinance() {
   try {
@@ -49,6 +91,22 @@ function loadFinance() {
 
 const finance = loadFinance();
 
+function loadUploads() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(UPLOADS_KEY) || 'null');
+    if (saved && typeof saved === 'object') {
+      return {
+        project: saved.project?.name ? saved.project : null,
+        contract: saved.contract?.name ? saved.contract : null,
+        estimate: saved.estimate?.name ? saved.estimate : null
+      };
+    }
+  } catch {}
+  return { project: null, contract: null, estimate: null };
+}
+
+const selectedFiles = loadUploads();
+
 function tr(key) { return copy[language]?.[key] ?? copy.RU[key] ?? key; }
 
 function applyLanguage(next) {
@@ -59,6 +117,7 @@ function applyLanguage(next) {
   $$('[data-i18n]').forEach((element) => { element.textContent = tr(element.dataset.i18n); });
   renderFinance();
   renderReferral();
+  renderAnalysisCards();
   renderWidgets();
   renderWidgetPicker();
 }
@@ -313,6 +372,181 @@ function openBonusDialog() {
   showDialog(tr('bonuses'), tr('bonusRules'), `${rules}<section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section>`);
 }
 
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
+}
+
+function fileSize(bytes) {
+  const value = Number(bytes) || 0;
+  if (value < 1024 * 1024) return `${Math.max(1, Math.round(value / 1024))} КБ`;
+  return `${(value / 1024 / 1024).toFixed(1)} МБ`;
+}
+
+function uploadTitle(kind) {
+  return tr({ project: 'uploadProject', contract: 'uploadContract', estimate: 'uploadEstimate' }[kind]);
+}
+
+function saveUploads() {
+  localStorage.setItem(UPLOADS_KEY, JSON.stringify(selectedFiles));
+}
+
+function renderAnalysisCards() {
+  Object.keys(uploadRules).forEach((kind) => {
+    const file = selectedFiles[kind];
+    const card = $(`[data-analysis-type="${kind}"]`);
+    const status = $(`[data-analysis-status="${kind}"]`);
+    const fileName = $(`[data-analysis-file="${kind}"]`);
+    if (!card || !status || !fileName) return;
+    card.classList.toggle('has-file', Boolean(file));
+    status.textContent = `${file ? 1 : 0} ${tr('of')} 1`;
+    fileName.hidden = !file;
+    fileName.textContent = file?.name || '';
+    card.setAttribute('aria-label', `${tr(kind)}. ${file ? file.name : `0 ${tr('of')} 1`}`);
+  });
+}
+
+function isAllowedFile(file, rule) {
+  const extension = String(file.name || '').split('.').pop()?.toLowerCase();
+  return rule.extensions.includes(extension) || String(file.type || '').startsWith('image/');
+}
+
+function fileMetadata(file) {
+  return {
+    name: String(file.name || tr('selectFile')),
+    size: Number(file.size) || 0,
+    type: String(file.type || ''),
+    lastModified: Number(file.lastModified) || Date.now(),
+    addedAt: new Date().toISOString()
+  };
+}
+
+function renderUploadFile() {
+  const selected = $('[data-upload-selected]');
+  const dropzone = $('[data-upload-dropzone]');
+  const actions = $('[data-upload-device-actions]');
+  if (!selected || !dropzone || !actions) return;
+  selected.hidden = !pendingFile;
+  dropzone.hidden = Boolean(pendingFile);
+  actions.hidden = Boolean(pendingFile);
+  if (pendingFile) {
+    $('[data-upload-file-name]').textContent = pendingFile.name;
+    $('[data-upload-file-meta]').textContent = `${pendingFile.type || 'Файл'} · ${fileSize(pendingFile.size)}`;
+  }
+  const objectName = $('[data-analysis-object-name]');
+  const confirm = $('[data-confirm-upload]');
+  if (confirm) confirm.disabled = !(pendingFile && objectName?.value.trim());
+}
+
+function chooseUploadFile(file) {
+  if (!file) return;
+  const rule = uploadRules[activeUploadKind];
+  if (file.size > rule.maxMb * 1024 * 1024) {
+    showToast(`${tr('fileTooLarge')}: ${rule.maxMb} МБ`);
+    return;
+  }
+  if (!isAllowedFile(file, rule)) {
+    showToast(`${tr('unsupportedFormat')}: ${rule.formats}`);
+    return;
+  }
+  pendingFile = fileMetadata(file);
+  renderUploadFile();
+  showToast(`${tr('fileSelected')}: ${file.name}`);
+}
+
+function removeUploadFile() {
+  pendingFile = null;
+  if (selectedFiles[activeUploadKind]) {
+    selectedFiles[activeUploadKind] = null;
+    saveUploads();
+    renderAnalysisCards();
+    showToast(tr('fileDeleted'));
+  }
+  renderUploadFile();
+}
+
+function confirmUpload() {
+  const objectNameInput = $('[data-analysis-object-name]');
+  const objectName = objectNameInput?.value.trim();
+  if (!objectName) {
+    objectNameInput?.classList.add('field-error');
+    objectNameInput?.focus();
+    showToast(tr('objectRequired'));
+    return;
+  }
+  if (!pendingFile) {
+    showToast(tr('selectFile'));
+    return;
+  }
+  objectNameInput.classList.remove('field-error');
+  localStorage.setItem(OBJECT_NAME_KEY, objectName);
+  selectedFiles[activeUploadKind] = { ...pendingFile, addedAt: new Date().toISOString() };
+  saveUploads();
+  renderAnalysisCards();
+  $('[data-dialog]').close();
+  showToast(tr('uploadComplete'));
+}
+
+function openUploadDialog(kind) {
+  activeUploadKind = uploadRules[kind] ? kind : 'project';
+  selectAnalysis(activeUploadKind);
+  pendingFile = selectedFiles[activeUploadKind] ? { ...selectedFiles[activeUploadKind] } : null;
+  const rule = uploadRules[activeUploadKind];
+  const objectName = localStorage.getItem(OBJECT_NAME_KEY) || '';
+  const markup = `
+    <div class="upload-limits" aria-label="${escapeHtml(tr('userUploadPlan'))}">
+      <span><b>${escapeHtml(tr('maxFileSize'))}</b>${rule.maxMb} МБ</span>
+      <span><b>${escapeHtml(tr('allowedFormats'))}</b>${rule.formats}</span>
+      <small>${escapeHtml(tr('userUploadPlan'))}</small>
+    </div>
+    <label class="upload-object-field">
+      <span>${escapeHtml(tr('objectName'))} <em>*</em></span>
+      <input data-analysis-object-name maxlength="100" autocomplete="organization" placeholder="${escapeHtml(tr('objectPlaceholder'))}" value="${escapeHtml(objectName)}" />
+      <small>${escapeHtml(tr('objectNameHint'))}</small>
+    </label>
+    <div class="analysis-dropzone" data-upload-dropzone role="button" tabindex="0">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg>
+      <strong>${escapeHtml(tr('selectFile'))}</strong>
+      <span>${escapeHtml(tr('dropFile'))}</span>
+      <small>${rule.formats} · ${rule.maxMb} МБ</small>
+    </div>
+    <input class="hidden-file-input" data-upload-file-input type="file" accept="${rule.accept}" />
+    <input class="hidden-file-input" data-upload-photo-input type="file" accept="image/*" capture="environment" />
+    <div class="upload-device-actions" data-upload-device-actions>
+      <button type="button" data-choose-device>${escapeHtml(tr('deviceFile'))}</button>
+      <button type="button" data-choose-photo>${escapeHtml(tr('photoOrCamera'))}</button>
+    </div>
+    <div class="dashboard-selected-file" data-upload-selected hidden>
+      <span class="dashboard-file-icon">▤</span>
+      <div><strong data-upload-file-name></strong><small data-upload-file-meta></small></div>
+      <button type="button" data-replace-file>${escapeHtml(tr('replace'))}</button>
+      <button class="dashboard-delete-file" type="button" data-delete-file aria-label="${escapeHtml(tr('deleteFile'))}">×</button>
+    </div>
+    <button class="primary-button dashboard-upload-confirm" type="button" data-confirm-upload>${escapeHtml(tr('upload'))}</button>`;
+  showDialog(uploadTitle(activeUploadKind), tr('oneFilePerCategory'), markup);
+
+  const fileInput = $('[data-upload-file-input]');
+  const photoInput = $('[data-upload-photo-input]');
+  const dropzone = $('[data-upload-dropzone]');
+  const objectNameInput = $('[data-analysis-object-name]');
+  fileInput.addEventListener('change', () => chooseUploadFile(fileInput.files?.[0]));
+  photoInput.addEventListener('change', () => chooseUploadFile(photoInput.files?.[0]));
+  $('[data-choose-device]').addEventListener('click', () => fileInput.click());
+  $('[data-choose-photo]').addEventListener('click', () => photoInput.click());
+  $('[data-replace-file]').addEventListener('click', () => fileInput.click());
+  $('[data-delete-file]').addEventListener('click', removeUploadFile);
+  $('[data-confirm-upload]').addEventListener('click', confirmUpload);
+  objectNameInput.addEventListener('input', () => { objectNameInput.classList.remove('field-error'); renderUploadFile(); });
+  dropzone.addEventListener('click', () => fileInput.click());
+  dropzone.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); fileInput.click(); } });
+  ['dragenter', 'dragover'].forEach((type) => dropzone.addEventListener(type, (event) => { event.preventDefault(); dropzone.classList.add('is-dragging'); }));
+  ['dragleave', 'drop'].forEach((type) => dropzone.addEventListener(type, (event) => { event.preventDefault(); dropzone.classList.remove('is-dragging'); }));
+  dropzone.addEventListener('drop', (event) => {
+    if (event.dataTransfer.files.length > 1) showToast(tr('onlyOneFile'));
+    chooseUploadFile(event.dataTransfer.files?.[0]);
+  });
+  renderUploadFile();
+}
+
 function selectAnalysis(type) {
   selectedAnalysis = ['project', 'contract', 'estimate'].includes(type) ? type : 'project';
   $$('[data-analysis-type]').forEach((card) => {
@@ -323,9 +557,17 @@ function selectAnalysis(type) {
 }
 
 function runAnalysis() {
-  const title = tr(selectedAnalysis);
+  const readyFiles = Object.entries(selectedFiles).filter(([, file]) => file);
+  if (!readyFiles.length) {
+    showToast(tr('uploadFirst'));
+    openUploadDialog(selectedAnalysis);
+    return;
+  }
+  const objectName = localStorage.getItem(OBJECT_NAME_KEY) || tr('analysis');
+  const title = escapeHtml(objectName);
+  const filesMarkup = `<div class="analysis-ready-files">${readyFiles.map(([kind, file]) => `<div><span>✓</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file.name)}</small></div>`).join('')}</div>`;
   clearTimeout(analysisTimer);
-  showDialog(`${tr('analysis')}: ${title}`, tr('analysisStarted'), '<div class="analysis-loader"><span></span><span></span><span></span></div>');
+  showDialog(`${tr('analysis')}: ${title}`, `${tr('filesReady')}: ${readyFiles.length} ${tr('analysisFilesCount')}`, `${filesMarkup}<div class="analysis-loader"><span></span><span></span><span></span></div>`);
   analysisTimer = setTimeout(() => {
     if (!$('[data-dialog]').open) return;
     showDialog(tr('analysisComplete'), tr('analysisCompleteCopy'), `<div class="result-actions"><button class="outline-button" type="button" data-view-report>${tr('viewReport')}</button><button class="primary-button" type="button" data-start-object>${tr('startObject')}</button></div>`);
@@ -338,8 +580,8 @@ function openView(view) {
   if (view === 'profile') { setPanel('profile'); return; }
   if (view === 'objects') { setPanel('objects'); return; }
   if (view === 'project' || view === 'contract' || view === 'estimate' || view === 'analysis') {
-    const title = view === 'contract' ? tr('contract') : view === 'estimate' ? tr('estimate') : view === 'analysis' ? tr('analysis') : tr('project');
-    showDialog(title, tr('comingSoon'), `<div class="dialog-options"><a class="primary-button dialog-option" href="index.html">${tr('goAnalysis')}<span>→</span></a></div>`); return;
+    openUploadDialog(view === 'analysis' ? 'project' : view);
+    return;
   }
   if (view === 'balance') { openBalanceDialog(); return; }
   if (view === 'bonuses') { openBonusDialog(); return; }
@@ -370,7 +612,7 @@ $$('[data-tab]').forEach((button) => button.addEventListener('click', () => setP
 $$('[data-open-panel]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.openPanel)));
 $$('[data-open-view]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.openView)));
 $$('[data-action]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.action)));
-$$('[data-analysis-type]').forEach((button) => button.addEventListener('click', () => selectAnalysis(button.dataset.analysisType)));
+$$('[data-analysis-type]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.analysisType)));
 $('[data-run-analysis]').addEventListener('click', runAnalysis);
 $$('[data-add-object]').forEach((button) => button.addEventListener('click', openObjectDialog));
 $('[data-profile-menu]').addEventListener('click', () => $('.drawer-group').classList.toggle('is-open'));
@@ -387,6 +629,7 @@ applyLanguage(language);
 renderWidgetPicker();
 renderWidgets();
 selectAnalysis(selectedAnalysis);
+renderAnalysisCards();
 setPanel(location.hash.slice(1) || 'home');
 await initAuth();
 
