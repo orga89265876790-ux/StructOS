@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=6" />
+    <link rel="stylesheet" href="dashboard.css?v=7" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -133,6 +133,7 @@
 
         <section class="tab-panel objects-panel" data-panel="objects" aria-label="Объекты" hidden>
           <div class="page-title"><div><span class="eyebrow">STRUCTOS CORE</span><h1 data-i18n="activeObjects">Объекты действующие</h1><p><span data-i18n="available">Доступно</span>: <span data-active-available>1</span></p></div><button class="primary-button" type="button" data-add-object data-i18n="addObject">Добавить объект</button></div>
+          <section class="objects-panel-group uploaded-objects-group"><header><h2 data-i18n="uploadedObjects">Загруженные объекты</h2><strong data-uploaded-count>0</strong></header><div class="panel-object-list" data-uploaded-objects-list></div><div class="object-list-empty" data-uploaded-empty><span>▤</span><p data-i18n="noUploadedObjects">Загруженных объектов пока нет</p></div></section>
           <div class="panel-object-list" data-active-objects-list></div>
           <div class="empty-state" data-active-empty><div class="empty-building" aria-hidden="true"><span></span><span></span><span></span></div><h2 data-i18n="noActiveObjects">Действующих объектов пока нет</h2><p data-i18n="noActiveObjectsCopy">Проанализируйте проект и запустите его из блока готовых объектов.</p><button class="primary-button" type="button" data-open-view="project" data-i18n="goAnalysis">Перейти к анализу</button></div>
         </section>
@@ -179,6 +180,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=8"></script>
+    <script type="module" src="dashboard.js?v=9"></script>
   </body>
 </html>

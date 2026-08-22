@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="styles.css?v=10" />
+    <link rel="stylesheet" href="styles.css?v=11" />
   </head>
   <body>
     <main class="site-shell" id="app-shell">
@@ -159,13 +159,13 @@
         <header><div><span class="dialog-eyebrow" data-i18n="builderPassport">Паспорт строителя</span><h2 data-i18n="reportGateTitle">Полный отчёт доступен после регистрации</h2></div><button class="dialog-close report-close" type="button" aria-label="Закрыть">×</button></header>
         <div class="report-passport-visual" aria-hidden="true"><span class="passport-building"><img src="assets/structos-building-mark.svg" alt="" /></span><span class="passport-line one"></span><span class="passport-line two"></span><span class="passport-line three"></span><span class="passport-check">✓</span></div>
         <p data-i18n="reportGateCopy">После регистрации и присвоения вам Паспорта строителя вы сможете посмотреть и скачать полный отчёт StructOS.</p>
-        <button class="report-register-button" type="button" data-i18n="reportRegister">Зарегистрироваться</button>
+        <div class="report-auth-actions"><button class="report-register-button" type="button" data-i18n="reportRegister">Зарегистрироваться</button><button class="report-login-button" type="button" data-i18n="reportLogin">Войти</button></div>
       </div>
     </dialog>
 
     <dialog class="app-dialog install-dialog" id="install-dialog">
       <div class="dialog-card install-card"><header><div><span class="dialog-eyebrow">PWA</span><h2 data-i18n="installTitle">Установить StructOS</h2></div><button class="dialog-close install-close" type="button" aria-label="Закрыть">×</button></header><div class="install-hero"><img src="assets/structos-mark.jpg" alt="" /><div><strong>StructOS</strong><span data-i18n="appLike">Открывается как обычное приложение</span></div></div><div class="browser-tabs" role="tablist"><button type="button" data-browser="safari">Safari</button><button type="button" data-browser="chrome">Google</button><button type="button" data-browser="yandex">Яндекс</button></div><div class="browser-instruction" data-panel="safari"><ol><li data-i18n="safariStep1">Нажмите «Поделиться» в Safari.</li><li data-i18n="safariStep2">Выберите «На экран Домой».</li><li data-i18n="safariStep3">Включите «Открывать как веб-приложение».</li><li data-i18n="safariStep4">Нажмите «Добавить».</li></ol></div><div class="browser-instruction" data-panel="chrome" hidden><ol><li data-i18n="chromeStep1">Откройте меню ⋮.</li><li data-i18n="chromeStep2">Выберите «Установить приложение» или «Добавить на главный экран».</li><li data-i18n="chromeStep3">Подтвердите установку.</li></ol></div><div class="browser-instruction" data-panel="yandex" hidden><ol><li data-i18n="yandexStep1">Откройте меню Яндекс Браузера.</li><li data-i18n="yandexStep2">Выберите «Добавить ярлык».</li><li data-i18n="yandexStep3">Нажмите «Добавить».</li></ol><small data-i18n="yandexNote">Ярлык будет открывать StructOS через Яндекс Браузер.</small></div><p class="install-device-note"></p><button class="native-install-button" type="button" hidden data-i18n="installApp">Установить приложение</button></div>
     </dialog>
-    <script type="module" src="script.js?v=10"></script>
+    <script type="module" src="script.js?v=11"></script>
   </body>
 </html>

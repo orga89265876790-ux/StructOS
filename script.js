@@ -114,7 +114,8 @@ Object.assign(translations.RU, {
   builderPassport: 'Паспорт строителя',
   reportGateTitle: 'Полный отчёт доступен после регистрации',
   reportGateCopy: 'После регистрации и присвоения вам Паспорта строителя вы сможете посмотреть и скачать полный отчёт StructOS.',
-  reportRegister: 'Зарегистрироваться'
+  reportRegister: 'Зарегистрироваться',
+  reportLogin: 'Войти'
 });
 
 Object.assign(translations.EN, {
@@ -124,7 +125,8 @@ Object.assign(translations.EN, {
   builderPassport: 'Builder Passport',
   reportGateTitle: 'The full report is available after registration',
   reportGateCopy: 'After registration and receiving your Builder Passport, you will be able to view and download the full StructOS report.',
-  reportRegister: 'Register'
+  reportRegister: 'Register',
+  reportLogin: 'Sign in'
 });
 
 Object.assign(translations.TJ, {
@@ -134,7 +136,8 @@ Object.assign(translations.TJ, {
   builderPassport: 'Шиносномаи сохтмончӣ',
   reportGateTitle: 'Ҳисоботи пурра пас аз бақайдгирӣ дастрас аст',
   reportGateCopy: 'Пас аз бақайдгирӣ ва гирифтани Шиносномаи сохтмончӣ шумо метавонед ҳисоботи пурраи StructOS-ро бинед ва зеркашӣ кунед.',
-  reportRegister: 'Бақайдгирӣ'
+  reportRegister: 'Бақайдгирӣ',
+  reportLogin: 'Ворид шудан'
 });
 
 Object.assign(translations.KG, {
@@ -144,7 +147,8 @@ Object.assign(translations.KG, {
   builderPassport: 'Куруучунун паспорту',
   reportGateTitle: 'Толук отчет катталгандан кийин жеткиликтүү',
   reportGateCopy: 'Катталгандан жана Куруучунун паспорту берилгенден кийин StructOS толук отчетун көрүп жана жүктөп ала аласыз.',
-  reportRegister: 'Катталуу'
+  reportRegister: 'Катталуу',
+  reportLogin: 'Кирүү'
 });
 
 Object.assign(translations.TR, {
@@ -154,7 +158,8 @@ Object.assign(translations.TR, {
   builderPassport: 'İnşaatçı Pasaportu',
   reportGateTitle: 'Tam rapor kayıt sonrasında kullanılabilir',
   reportGateCopy: 'Kayıt olup İnşaatçı Pasaportunuzu aldıktan sonra StructOS tam raporunu görüntüleyebilir ve indirebilirsiniz.',
-  reportRegister: 'Kayıt ol'
+  reportRegister: 'Kayıt ol',
+  reportLogin: 'Giriş'
 });
 
 Object.assign(translations.RU, {
@@ -236,6 +241,7 @@ const installDialog = $('#install-dialog');
 const modalInput = $('#modal-file-input');
 const objectNameInput = $('#object-name');
 const selectedFiles = { project: null, contract: null, estimate: null };
+const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
 let pendingFile = null;
 const acceptMap = {
   project: '.pdf,.dwg,.rvt,.jpg,.jpeg,.png,.webp,.heic,image/*',
@@ -295,6 +301,24 @@ function closeMenu() {
 function fileSize(file) {
   if (file.size < 1024 * 1024) return `${Math.max(1, Math.round(file.size / 1024))} КБ`;
   return `${(file.size / 1024 / 1024).toFixed(1)} МБ`;
+}
+
+function transferFileMetadata(file) {
+  return {
+    name: String(file?.name || ''),
+    size: Number(file?.size) || 0,
+    type: String(file?.type || ''),
+    lastModified: Number(file?.lastModified) || Date.now(),
+    addedAt: new Date().toISOString()
+  };
+}
+
+function persistDashboardTransfer() {
+  const objectName = objectNameInput.value.trim();
+  const files = Object.fromEntries(Object.entries(selectedFiles).filter(([, file]) => file).map(([kind, file]) => [kind, transferFileMetadata(file)]));
+  if (!objectName || !Object.keys(files).length) return false;
+  localStorage.setItem(PENDING_TRANSFER_KEY, JSON.stringify({ objectName, files, analysisComplete, updatedAt: new Date().toISOString() }));
+  return true;
 }
 
 function escapeHtml(value) {
@@ -366,6 +390,7 @@ function confirmUpload() {
   }
   setObjectNameError(false);
   selectedFiles[activeKind] = pendingFile;
+  persistDashboardTransfer();
   analysisComplete = false;
   analysisDockDismissed = true;
   $('.analysis-dock').hidden = true;
@@ -448,6 +473,7 @@ function startAnalysis() {
     if (overall >= 100) {
       clearInterval(analysisTimer);
       analysisComplete = true;
+      persistDashboardTransfer();
       analysisDockDismissed = false;
       $('.view-results-button').disabled = false;
       $('.analysis-dialog h2').textContent = t('analysisComplete');
@@ -544,7 +570,7 @@ $$('.ecosystem-module').forEach((moduleButton) => {
 });
 $$('.upload-card').forEach((card) => { card.addEventListener('click', () => openUpload(card.dataset.kind)); card.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') openUpload(card.dataset.kind); }); });
 modalInput.addEventListener('change', () => setFile(modalInput.files?.[0]));
-objectNameInput.addEventListener('input', () => { setObjectNameError(false); updateUploadButton(); });
+objectNameInput.addEventListener('input', () => { setObjectNameError(false); updateUploadButton(); if (Object.values(selectedFiles).some(Boolean)) persistDashboardTransfer(); });
 objectNameInput.addEventListener('blur', () => { if (!objectNameInput.value.trim()) setObjectNameError(true); });
 $('.choose-device').addEventListener('click', () => { modalInput.removeAttribute('capture'); modalInput.accept = acceptMap[activeKind]; modalInput.click(); });
 $('.choose-photo').addEventListener('click', () => { modalInput.accept = 'image/*'; modalInput.setAttribute('capture', 'environment'); modalInput.click(); });
@@ -564,11 +590,12 @@ $('.dock-action').addEventListener('click', () => { if (analysisComplete) showRe
 $('.dock-dismiss').addEventListener('click', () => { analysisDockDismissed = true; $('.analysis-dock').hidden = true; });
 $('.view-results-button').addEventListener('click', showResults);
 $('.result-back').addEventListener('click', () => { $('#result-screen').hidden = true; $('#landing-view').hidden = false; if (analysisComplete && !analysisDockDismissed) openAnalysisDock(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
-$('.report-button').addEventListener('click', () => reportDialog.showModal());
+$('.report-button').addEventListener('click', () => { persistDashboardTransfer(); reportDialog.showModal(); });
 $('.report-close').addEventListener('click', () => reportDialog.close());
 $$('.login-link').forEach((button) => button.addEventListener('click', () => { window.location.href = 'login.html#login'; }));
 $$('.register-button').forEach((button) => button.addEventListener('click', () => { window.location.href = 'login.html#register'; }));
-$('.report-register-button').addEventListener('click', () => { window.location.href = 'login.html#register'; });
+$('.report-register-button').addEventListener('click', () => { persistDashboardTransfer(); window.location.href = 'login.html#register'; });
+$('.report-login-button').addEventListener('click', () => { persistDashboardTransfer(); window.location.href = 'login.html#login'; });
 $$('.document-result > button').forEach((button) => button.addEventListener('click', () => showToast('Детальный просмотр подключим на следующем этапе')));
 $$('.install-app-button').forEach((button) => button.addEventListener('click', openInstall));
 $('.install-close').addEventListener('click', () => installDialog.close());

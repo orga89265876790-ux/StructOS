@@ -62,6 +62,11 @@ Object.assign(copy.EN, { refreshPage: 'Refresh page', memoryUsed: 'Storage', pro
 Object.assign(copy.KY, { refreshPage: 'Баракты жаңыртуу', memoryUsed: 'Эстутум', profileFullReward: 'Профиль 100% толтурулду', storageB: 'Б', storageKb: 'КБ', storageMb: 'МБ', storageGb: 'ГБ' });
 Object.assign(copy.TJ, { refreshPage: 'Нав кардани саҳифа', memoryUsed: 'Хотира', profileFullReward: 'Профил 100% пур шуд', storageB: 'Б', storageKb: 'КБ', storageMb: 'МБ', storageGb: 'ГБ' });
 
+Object.assign(copy.RU, { uploadedObjects: 'Загруженные объекты', noUploadedObjects: 'Загруженных объектов пока нет', uploaded: 'Загружен', uploadedAt: 'Загружен', readyStatus: 'Готов к запуску', addToObject: 'Добавить в объект', newObject: 'Создать новый объект', chooseObjectDocument: 'Выберите раздел объекта', notUploaded: 'Не загружено', openObject: 'Открыть карточку объекта', analyzeObject: 'Анализировать объект' });
+Object.assign(copy.EN, { uploadedObjects: 'Uploaded objects', noUploadedObjects: 'No uploaded objects yet', uploaded: 'Uploaded', uploadedAt: 'Uploaded', readyStatus: 'Ready to launch', addToObject: 'Add to object', newObject: 'Create a new object', chooseObjectDocument: 'Choose an object section', notUploaded: 'Not uploaded', openObject: 'Open object card', analyzeObject: 'Analyze object' });
+Object.assign(copy.KY, { uploadedObjects: 'Жүктөлгөн объекттер', noUploadedObjects: 'Азырынча жүктөлгөн объект жок', uploaded: 'Жүктөлдү', uploadedAt: 'Жүктөлдү', readyStatus: 'Ишке даяр', addToObject: 'Объектке кошуу', newObject: 'Жаңы объект түзүү', chooseObjectDocument: 'Объекттин бөлүмүн тандаңыз', notUploaded: 'Жүктөлгөн жок', openObject: 'Объекттин картасын ачуу', analyzeObject: 'Объектти талдоо' });
+Object.assign(copy.TJ, { uploadedObjects: 'Объектҳои боршуда', noUploadedObjects: 'Ҳоло объекти боршуда нест', uploaded: 'Бор шуд', uploadedAt: 'Бор шуд', readyStatus: 'Омода ба оғоз', addToObject: 'Ба объект илова кардан', newObject: 'Объекти нав сохтан', chooseObjectDocument: 'Бахши объектро интихоб кунед', notUploaded: 'Бор нашудааст', openObject: 'Кушодани корти объект', analyzeObject: 'Таҳлили объект' });
+
 Object.assign(copy.RU, {
   readyObjects: 'Готовые к запуску объекты', activeObjects: 'Объекты действующие', noReadyObjects: 'После анализа проекты появятся здесь', noActiveObjects: 'Действующих объектов пока нет', noActiveObjectsCopy: 'Проанализируйте проект и запустите его из блока готовых объектов.',
   analyzed: 'Проанализирован', started: 'Запущен', inWork: 'В работе', start: 'Запустить', deleteObject: 'Удалить объект', attachedDocuments: 'документа(ов)', objectReady: 'Объект добавлен в готовые к запуску', objectStarted: 'Объект запущен и перенесён в действующие', objectDeleted: 'Объект удалён из готовых',
@@ -93,6 +98,7 @@ const UPLOADS_KEY = 'structos-analysis-uploads-v1';
 const OBJECT_NAME_KEY = 'structos-analysis-object-name';
 const OBJECTS_KEY = 'structos-objects-v1';
 const PROFILE_COMPLETION_KEY = 'structos-profile-completion';
+const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
 const ACTIVE_OBJECT_LIMIT = 1;
 const uploadRules = {
   project: { accept: '.pdf,.dwg,.rvt,.jpg,.jpeg,.png,.webp,.heic,image/*', extensions: ['pdf', 'dwg', 'rvt', 'jpg', 'jpeg', 'png', 'webp', 'heic'], formats: 'PDF, DWG, RVT, JPG, PNG, WEBP, HEIC', maxMb: 500 },
@@ -103,6 +109,8 @@ let selectedAnalysis = 'project';
 let analysisTimer;
 let activeUploadKind = 'project';
 let pendingFile = null;
+let activeUploadObjectId = null;
+let newObjectNameDraft = '';
 
 function loadFinance() {
   try {
@@ -147,12 +155,13 @@ function loadObjectRegistry() {
     const saved = JSON.parse(localStorage.getItem(OBJECTS_KEY) || '[]');
     if (Array.isArray(saved)) {
       return saved
-        .filter((object) => object && typeof object.name === 'string' && ['ready', 'active'].includes(object.status))
+        .filter((object) => object && typeof object.name === 'string' && ['uploaded', 'ready', 'active'].includes(object.status))
         .map((object) => ({
           id: String(object.id || `object-${Date.now()}-${Math.random().toString(16).slice(2)}`),
           name: object.name.trim().slice(0, 100) || 'Объект',
           status: object.status,
           analyzedAt: object.analyzedAt || new Date().toISOString(),
+          uploadedAt: object.uploadedAt || object.analyzedAt || new Date().toISOString(),
           startedAt: object.startedAt || null,
           files: Array.isArray(object.files) ? object.files.slice(0, 3) : []
         }));
@@ -479,6 +488,41 @@ function saveObjects() {
   localStorage.setItem(OBJECTS_KEY, JSON.stringify(objectRegistry));
 }
 
+function objectFile(object, kind) {
+  return (object?.files || []).find((file) => file.kind === kind) || null;
+}
+
+function selectObjectForAnalysis(object) {
+  Object.keys(uploadRules).forEach((kind) => { selectedFiles[kind] = objectFile(object, kind); });
+  localStorage.setItem(OBJECT_NAME_KEY, object.name);
+  saveUploads();
+  renderAnalysisCards();
+}
+
+function importPendingTransfer() {
+  try {
+    const pending = JSON.parse(localStorage.getItem(PENDING_TRANSFER_KEY) || 'null');
+    const objectName = String(pending?.objectName || '').trim();
+    const files = Object.entries(pending?.files || {})
+      .filter(([kind, file]) => uploadRules[kind] && file?.name)
+      .map(([kind, file]) => ({ kind, name: String(file.name), size: Number(file.size) || 0, type: String(file.type || ''), lastModified: Number(file.lastModified) || Date.now(), addedAt: file.addedAt || new Date().toISOString() }));
+    if (!objectName || !files.length) return;
+    let object = objectRegistry.find((item) => item.name.trim().toLocaleLowerCase() === objectName.toLocaleLowerCase());
+    if (!object) {
+      object = { id: createObjectId(), name: objectName, status: pending.analysisComplete ? 'ready' : 'uploaded', uploadedAt: pending.updatedAt || new Date().toISOString(), analyzedAt: pending.analysisComplete ? (pending.updatedAt || new Date().toISOString()) : null, startedAt: null, files: [] };
+      objectRegistry.unshift(object);
+    } else if (pending.analysisComplete && object.status === 'uploaded') {
+      object.status = 'ready';
+      object.analyzedAt = pending.updatedAt || new Date().toISOString();
+    }
+    files.forEach((file) => { object.files = [...(object.files || []).filter((item) => item.kind !== file.kind), file]; });
+    object.uploadedAt ||= pending.updatedAt || new Date().toISOString();
+    selectObjectForAnalysis(object);
+    saveObjects();
+    localStorage.removeItem(PENDING_TRANSFER_KEY);
+  } catch {}
+}
+
 function createObjectId() {
   return globalThis.crypto?.randomUUID?.() || `object-${Date.now()}-${Math.random().toString(16).slice(2)}`;
 }
@@ -499,29 +543,53 @@ function formatStorage(bytes) {
 
 function objectRowMarkup(object) {
   const isReady = object.status === 'ready';
+  const isActive = object.status === 'active';
   const fileCount = Array.isArray(object.files) ? object.files.length : 0;
   const storage = formatStorage((object.files || []).reduce((total, file) => total + (Number(file.size) || 0), 0));
   const meta = isReady
     ? `${tr('analyzed')}: ${formatObjectDate(object.analyzedAt)} · ${fileCount} ${tr('attachedDocuments')} · ${tr('memoryUsed')}: ${storage}`
-    : `${tr('started')}: ${formatObjectDate(object.startedAt || object.analyzedAt)} · ${tr('memoryUsed')}: ${storage}`;
+    : isActive
+      ? `${tr('started')}: ${formatObjectDate(object.startedAt || object.analyzedAt)} · ${fileCount} ${tr('attachedDocuments')} · ${tr('memoryUsed')}: ${storage}`
+      : `${tr('uploadedAt')}: ${formatObjectDate(object.uploadedAt || object.analyzedAt)} · ${fileCount} ${tr('attachedDocuments')} · ${tr('memoryUsed')}: ${storage}`;
   const actions = isReady
     ? `<div class="object-row-actions"><button class="object-start-button" type="button" data-start-ready="${escapeHtml(object.id)}">${escapeHtml(tr('start'))}</button><button class="object-delete-button" type="button" data-delete-ready="${escapeHtml(object.id)}" aria-label="${escapeHtml(tr('deleteObject'))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></button></div>`
-    : `<span class="object-status-chip">${escapeHtml(tr('inWork'))}</span>`;
-  return `<article class="status-object-row ${isReady ? 'is-ready' : 'is-active'}"><span class="object-row-icon" aria-hidden="true">${isReady ? '◇' : '⌂'}</span><div class="object-row-copy"><strong>${escapeHtml(object.name)}</strong><small>${escapeHtml(meta)}</small></div>${actions}</article>`;
+    : `<span class="object-status-chip ${isActive ? '' : 'is-uploaded'}">${escapeHtml(tr(isActive ? 'inWork' : 'uploaded'))}</span>`;
+  return `<article class="status-object-row ${isReady ? 'is-ready' : isActive ? 'is-active' : 'is-uploaded'}"><span class="object-row-icon" aria-hidden="true">${isReady ? '◇' : isActive ? '⌂' : '▤'}</span><div class="object-row-copy"><button class="object-open-button" type="button" data-open-object="${escapeHtml(object.id)}" aria-label="${escapeHtml(`${tr('openObject')}: ${object.name}`)}">${escapeHtml(object.name)}</button><small>${escapeHtml(meta)}</small></div>${actions}</article>`;
 }
 
 function renderObjects() {
+  const uploaded = objectRegistry.filter((object) => object.status === 'uploaded');
   const ready = objectRegistry.filter((object) => object.status === 'ready');
   const active = objectRegistry.filter((object) => object.status === 'active');
+  $$('[data-uploaded-objects-list]').forEach((list) => { list.innerHTML = uploaded.map(objectRowMarkup).join(''); });
   $$('[data-ready-objects-list]').forEach((list) => { list.innerHTML = ready.map(objectRowMarkup).join(''); });
   $$('[data-active-objects-list]').forEach((list) => { list.innerHTML = active.map(objectRowMarkup).join(''); });
+  $$('[data-uploaded-count]').forEach((count) => { count.textContent = String(uploaded.length); });
   $$('[data-ready-count]').forEach((count) => { count.textContent = String(ready.length); });
   $$('[data-active-count]').forEach((count) => { count.textContent = String(active.length); });
   $$('[data-active-available]').forEach((count) => { count.textContent = String(Math.max(0, ACTIVE_OBJECT_LIMIT - active.length)); });
+  $$('[data-uploaded-empty]').forEach((empty) => { empty.hidden = uploaded.length > 0; });
   $$('[data-ready-empty]').forEach((empty) => { empty.hidden = ready.length > 0; });
   $$('[data-active-empty]').forEach((empty) => { empty.hidden = active.length > 0; });
   $$('[data-start-ready]').forEach((button) => button.addEventListener('click', () => startReadyObject(button.dataset.startReady)));
   $$('[data-delete-ready]').forEach((button) => button.addEventListener('click', () => deleteReadyObject(button.dataset.deleteReady)));
+  $$('[data-open-object]').forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openObject)));
+}
+
+function openObjectCard(id) {
+  const object = objectRegistry.find((item) => item.id === id);
+  if (!object) return;
+  const documentChoices = Object.keys(uploadRules).map((kind) => {
+    const file = objectFile(object, kind);
+    return `<button class="object-document-choice ${file ? 'has-file' : ''}" type="button" data-object-document="${kind}"><span>${file ? '✓' : '+'}</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file?.name || tr('notUploaded'))}</small></button>`;
+  }).join('');
+  showDialog(escapeHtml(object.name), tr('chooseObjectDocument'), `<div class="object-document-chooser">${documentChoices}</div><button class="primary-button object-analyze-button" type="button" data-analyze-object>${escapeHtml(tr('analyzeObject'))}</button>`);
+  $$('[data-object-document]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.objectDocument, object.id)));
+  $('[data-analyze-object]')?.addEventListener('click', () => {
+    selectObjectForAnalysis(object);
+    $('[data-dialog]').close();
+    runAnalysis();
+  });
 }
 
 function registerAnalyzedObject(name, readyFiles) {
@@ -539,7 +607,8 @@ function registerAnalyzedObject(name, readyFiles) {
     renderWidgets();
     return existing;
   }
-  const object = { id: createObjectId(), name: String(name).trim(), status: 'ready', analyzedAt: new Date().toISOString(), startedAt: null, files };
+  const now = new Date().toISOString();
+  const object = { id: createObjectId(), name: String(name).trim(), status: 'ready', uploadedAt: now, analyzedAt: now, startedAt: null, files };
   objectRegistry.unshift(object);
   saveObjects();
   renderObjects();
@@ -639,12 +708,20 @@ function removeUploadFile() {
     renderAnalysisCards();
     showToast(tr('fileDeleted'));
   }
+  const object = objectRegistry.find((item) => item.id === activeUploadObjectId);
+  if (object && objectFile(object, activeUploadKind)) {
+    object.files = object.files.filter((file) => file.kind !== activeUploadKind);
+    saveObjects();
+    renderObjects();
+  }
   renderUploadFile();
 }
 
 function confirmUpload() {
   const objectNameInput = $('[data-analysis-object-name]');
-  const objectName = objectNameInput?.value.trim();
+  const selectedTargetId = $('[data-upload-object-target]')?.value || activeUploadObjectId;
+  let destination = objectRegistry.find((object) => object.id === selectedTargetId);
+  const objectName = destination?.name || objectNameInput?.value.trim();
   if (!objectName) {
     objectNameInput?.classList.add('field-error');
     objectNameInput?.focus();
@@ -656,29 +733,46 @@ function confirmUpload() {
     return;
   }
   objectNameInput.classList.remove('field-error');
-  localStorage.setItem(OBJECT_NAME_KEY, objectName);
-  selectedFiles[activeUploadKind] = { ...pendingFile, addedAt: new Date().toISOString() };
-  saveUploads();
+  const uploadedFile = { ...pendingFile, kind: activeUploadKind, addedAt: new Date().toISOString() };
+  if (!destination) destination = objectRegistry.find((object) => object.name.trim().toLocaleLowerCase() === objectName.toLocaleLowerCase());
+  if (!destination) {
+    destination = { id: createObjectId(), name: objectName, status: 'uploaded', uploadedAt: new Date().toISOString(), analyzedAt: null, startedAt: null, files: [] };
+    objectRegistry.unshift(destination);
+  }
+  destination.files = [...(destination.files || []).filter((file) => file.kind !== activeUploadKind), uploadedFile];
+  destination.uploadedAt ||= new Date().toISOString();
+  activeUploadObjectId = destination.id;
+  selectObjectForAnalysis(destination);
+  saveObjects();
   renderAnalysisCards();
+  renderObjects();
+  renderWidgets();
   $('[data-dialog]').close();
   showToast(tr('uploadComplete'));
 }
 
-function openUploadDialog(kind) {
+function openUploadDialog(kind, objectId = null) {
   activeUploadKind = uploadRules[kind] ? kind : 'project';
   selectAnalysis(activeUploadKind);
-  pendingFile = selectedFiles[activeUploadKind] ? { ...selectedFiles[activeUploadKind] } : null;
+  activeUploadObjectId = objectRegistry.some((object) => object.id === objectId) ? objectId : null;
+  const selectedObject = objectRegistry.find((object) => object.id === activeUploadObjectId);
+  pendingFile = selectedObject ? (objectFile(selectedObject, activeUploadKind) ? { ...objectFile(selectedObject, activeUploadKind) } : null) : (selectedFiles[activeUploadKind] ? { ...selectedFiles[activeUploadKind] } : null);
   const rule = uploadRules[activeUploadKind];
-  const objectName = localStorage.getItem(OBJECT_NAME_KEY) || '';
+  newObjectNameDraft = selectedObject ? '' : (localStorage.getItem(OBJECT_NAME_KEY) || '');
+  const targetOptions = objectRegistry.map((object) => `<option value="${escapeHtml(object.id)}" ${object.id === activeUploadObjectId ? 'selected' : ''}>${escapeHtml(object.name)} · ${escapeHtml(tr(object.status === 'active' ? 'inWork' : object.status === 'ready' ? 'readyStatus' : 'uploaded'))}</option>`).join('');
   const markup = `
     <div class="upload-limits" aria-label="${escapeHtml(tr('userUploadPlan'))}">
       <span><b>${escapeHtml(tr('maxFileSize'))}</b>${rule.maxMb} МБ</span>
       <span><b>${escapeHtml(tr('allowedFormats'))}</b>${rule.formats}</span>
       <small>${escapeHtml(tr('userUploadPlan'))}</small>
     </div>
+    <label class="upload-target-field">
+      <span>${escapeHtml(tr('addToObject'))}</span>
+      <select data-upload-object-target><option value="">${escapeHtml(tr('newObject'))}</option>${targetOptions}</select>
+    </label>
     <label class="upload-object-field">
       <span>${escapeHtml(tr('objectName'))} <em>*</em></span>
-      <input data-analysis-object-name maxlength="100" autocomplete="organization" placeholder="${escapeHtml(tr('objectPlaceholder'))}" value="${escapeHtml(objectName)}" />
+      <input data-analysis-object-name maxlength="100" autocomplete="organization" placeholder="${escapeHtml(tr('objectPlaceholder'))}" value="${escapeHtml(selectedObject?.name || newObjectNameDraft)}" ${selectedObject ? 'readonly' : ''} />
       <small>${escapeHtml(tr('objectNameHint'))}</small>
     </label>
     <div class="analysis-dropzone" data-upload-dropzone role="button" tabindex="0">
@@ -706,6 +800,7 @@ function openUploadDialog(kind) {
   const photoInput = $('[data-upload-photo-input]');
   const dropzone = $('[data-upload-dropzone]');
   const objectNameInput = $('[data-analysis-object-name]');
+  const targetSelect = $('[data-upload-object-target]');
   fileInput.addEventListener('change', () => chooseUploadFile(fileInput.files?.[0]));
   photoInput.addEventListener('change', () => chooseUploadFile(photoInput.files?.[0]));
   $('[data-choose-device]').addEventListener('click', () => fileInput.click());
@@ -713,7 +808,15 @@ function openUploadDialog(kind) {
   $('[data-replace-file]').addEventListener('click', () => fileInput.click());
   $('[data-delete-file]').addEventListener('click', removeUploadFile);
   $('[data-confirm-upload]').addEventListener('click', confirmUpload);
-  objectNameInput.addEventListener('input', () => { objectNameInput.classList.remove('field-error'); renderUploadFile(); });
+  objectNameInput.addEventListener('input', () => { objectNameInput.classList.remove('field-error'); newObjectNameDraft = objectNameInput.value; renderUploadFile(); });
+  targetSelect.addEventListener('change', () => {
+    const target = objectRegistry.find((object) => object.id === targetSelect.value);
+    activeUploadObjectId = target?.id || null;
+    objectNameInput.readOnly = Boolean(target);
+    objectNameInput.value = target?.name || newObjectNameDraft;
+    pendingFile = target && objectFile(target, activeUploadKind) ? { ...objectFile(target, activeUploadKind) } : null;
+    renderUploadFile();
+  });
   dropzone.addEventListener('click', () => fileInput.click());
   dropzone.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); fileInput.click(); } });
   ['dragenter', 'dragover'].forEach((type) => dropzone.addEventListener(type, (event) => { event.preventDefault(); dropzone.classList.add('is-dragging'); }));
@@ -779,7 +882,7 @@ function openObjectDialog() {
     const name = $('[data-object-name]').value.trim();
     if (!name) { $('[data-object-name]').focus(); return; }
     const now = new Date().toISOString();
-    objectRegistry.unshift({ id: createObjectId(), name, status: 'active', analyzedAt: now, startedAt: now, files: [] });
+    objectRegistry.unshift({ id: createObjectId(), name, status: 'active', uploadedAt: now, analyzedAt: now, startedAt: now, files: [] });
     saveObjects();
     renderObjects();
     renderWidgets();
@@ -820,6 +923,7 @@ $('[data-edit-profile]').addEventListener('click', () => showDialog(tr('edit'), 
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
 window.addEventListener('resize', () => { renderWidgets(); });
 
+importPendingTransfer();
 applyPassportRewards(40);
 const savedProfileCompletion = localStorage.getItem(PROFILE_COMPLETION_KEY);
 const profileCompletion = savedProfileCompletion === null || !Number.isFinite(Number(savedProfileCompletion)) ? 40 : Math.min(100, Math.max(0, Number(savedProfileCompletion)));
