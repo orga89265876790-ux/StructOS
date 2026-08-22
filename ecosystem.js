@@ -1,13 +1,8 @@
+import './ecosystem.css';
+
 const videoFrame = document.querySelector('.video-frame--main');
 
 if (videoFrame && !document.querySelector('.ecosystem-section')) {
-  if (!document.querySelector('link[href="ecosystem.css"]')) {
-    const stylesheet = document.createElement('link');
-    stylesheet.rel = 'stylesheet';
-    stylesheet.href = 'ecosystem.css';
-    document.head.append(stylesheet);
-  }
-
   const icons = {
     design: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 25h18M10 25V9l6-4 6 4v16M13 12h2m2 0h2m-6 4h2m2 0h2m-6 4h2m2 0h2M6 25l4-4m16 4-4-4"/></svg>',
     contract: '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 4h10l5 5v17H9zM19 4v6h5M13 14h7m-7 4h5m-5 4h4M21 23l5-5 2 2-5 5-3 1z"/></svg>',
