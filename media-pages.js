@@ -52,3 +52,9 @@ if ('IntersectionObserver' in window) {
     element.classList.add('is-visible');
   });
 }
+
+if (document.body.dataset.page === 'video') {
+  import('./ecosystem.js').catch((error) => {
+    console.warn('StructOS ecosystem block failed to load', error);
+  });
+}
