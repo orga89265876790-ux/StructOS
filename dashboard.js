@@ -103,6 +103,25 @@ function saveFinance() {
   localStorage.setItem(FINANCE_KEY, JSON.stringify(finance));
 }
 
+function applyPassportRewards(progress) {
+  finance.rewards ||= { passportFirst: false, passportFull: false };
+  const now = new Date().toISOString();
+  let changed = false;
+  if (progress > 0 && !finance.rewards.passportFirst) {
+    finance.rewards.passportFirst = true;
+    finance.bonuses += 200;
+    finance.bonusHistory.unshift({ key: 'passportFirstReward', amount: 200, date: now });
+    changed = true;
+  }
+  if (progress >= 100 && !finance.rewards.passportFull) {
+    finance.rewards.passportFull = true;
+    finance.bonuses += 500;
+    finance.bonusHistory.unshift({ key: 'passportFullReward', amount: 500, date: now });
+    changed = true;
+  }
+  if (changed) saveFinance();
+}
+
 function formatMoney(value) {
   return `${new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(value)} ₽`;
 }
@@ -362,6 +381,7 @@ $('[data-edit-profile]').addEventListener('click', () => showDialog(tr('edit'), 
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
 window.addEventListener('resize', () => { renderWidgets(); });
 
+applyPassportRewards(40);
 applyTheme(localStorage.getItem('structos-theme') === 'light' ? 'light' : 'dark');
 applyLanguage(language);
 renderWidgetPicker();
