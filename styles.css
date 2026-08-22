@@ -2380,17 +2380,22 @@ html[data-theme="dark"] .auth-actions-desktop { border-color: rgba(83, 164, 255,
 .passport-line.three { top: 77px; width: 48%; }
 .passport-check { position: absolute; right: 18px; bottom: 17px; width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; color: #fff; background: #0aae6c; box-shadow: 0 7px 17px rgba(4, 156, 94, 0.22); font-weight: 800; }
 
-.report-register-button {
+.report-auth-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.report-register-button,
+.report-login-button {
   width: 100%;
   min-height: 50px;
-  border: 0;
+  border: 1px solid #0878ff;
   border-radius: 14px;
-  color: #fff;
-  background: linear-gradient(100deg, #0878ff, #0049e8);
-  box-shadow: 0 10px 26px rgba(0, 79, 230, 0.24);
   font-weight: 750;
   cursor: pointer;
 }
+.report-register-button {
+  color: #fff;
+  background: linear-gradient(100deg, #0878ff, #0049e8);
+  box-shadow: 0 10px 26px rgba(0, 79, 230, 0.24);
+}
+.report-login-button { color: var(--blue); background: var(--surface-soft); }
 
 html[data-theme="dark"] .report-passport-visual {
   background: linear-gradient(135deg, rgba(13, 34, 59, 0.96), rgba(9, 27, 49, 0.86));
