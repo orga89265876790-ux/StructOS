@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=1" />
+    <link rel="stylesheet" href="dashboard.css?v=2" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -47,15 +47,21 @@
           <div class="balance-grid">
             <button class="metric-card" type="button" data-open-view="balance">
               <span class="metric-label" data-i18n="balance">Баланс</span>
-              <strong>0 ₽</strong>
+              <strong data-balance-value>0 ₽</strong>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5h15a3 3 0 0 1 3 3V19H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12v4.5"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4Z"/></svg>
             </button>
-            <button class="metric-card" type="button" data-open-view="balance">
+            <button class="metric-card" type="button" data-open-view="bonuses">
               <span class="metric-label" data-i18n="bonuses">Бонусы</span>
-              <strong>0</strong>
+              <strong data-bonus-value>200</strong>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 2.8Z"/></svg>
             </button>
           </div>
+
+          <section class="referral-card">
+            <div class="referral-icon" aria-hidden="true">+</div>
+            <div class="referral-copy"><strong data-i18n="shareEarn">Поделись — за регистрацию +200 бонусов</strong><button type="button" data-copy-referral><span data-referral-short>StructOS · r/4820197</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button></div>
+            <button class="referral-share" type="button" data-share-referral data-i18n="share">Поделиться</button>
+          </section>
 
           <section class="welcome-block">
             <p data-i18n="hello">Здравствуйте,</p>
@@ -73,24 +79,26 @@
               <button type="button" data-open-view="profile"><span data-i18n="complete">Заполнить</span><span>›</span></button>
             </div>
             <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"><span style="--progress:40%"></span></div>
+            <div class="passport-rewards"><span data-i18n="passportFirstRewardShort">+200 за первое заполнение</span><span data-i18n="passportFullRewardShort">+500 за 100%</span></div>
           </section>
 
           <section class="section-block">
             <div class="section-heading"><div><span class="eyebrow" data-i18n="quickStart">БЫСТРЫЙ СТАРТ</span><h2 data-i18n="analysis">Анализ</h2></div><button class="text-action" type="button" data-open-panel="space" data-i18n="configure">Настроить</button></div>
             <div class="analysis-grid">
-              <button class="analysis-card" type="button" data-action="project">
+              <button class="analysis-card is-selected" type="button" data-analysis-type="project" aria-pressed="true">
                 <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 39h36M10 39V18h25v21M15 18V9h17v9M18 26h4M27 26h4M18 32h4M27 32h4"/><path d="m9 13 7-5 7 5 7-5 7 5"/></svg>
                 <span data-i18n="project">Проект</span><small>1 <span data-i18n="of">из</span> 1</small>
               </button>
-              <button class="analysis-card" type="button" data-action="contract">
+              <button class="analysis-card" type="button" data-analysis-type="contract" aria-pressed="false">
                 <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 5h20l5 6v19L24 43H12V5Z"/><path d="M32 5v7h6M17 18h15M17 24h12M17 30h7M27 35l9-9 4 4-9 9-5 1 1-5Z"/></svg>
                 <span data-i18n="contract">Договор</span><small>1 <span data-i18n="of">из</span> 1</small>
               </button>
-              <button class="analysis-card" type="button" data-action="estimate">
+              <button class="analysis-card" type="button" data-analysis-type="estimate" aria-pressed="false">
                 <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="5" width="28" height="38" rx="3"/><path d="M16 11h16v7H16zM16 24h4M24 24h4M32 24h1M16 30h4M24 30h4M32 30h1M16 36h4M24 36h4M32 36h1"/></svg>
                 <span data-i18n="estimate">Смета</span><small>1 <span data-i18n="of">из</span> 1</small>
               </button>
             </div>
+            <button class="analyze-button primary-button" type="button" data-run-analysis><span data-i18n="analyze">Анализировать</span><span>→</span></button>
           </section>
 
           <section class="objects-summary">
@@ -124,7 +132,7 @@
           <div class="profile-layout">
             <section class="profile-identity"><div class="profile-avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><h2 data-user-name>Александр</h2><button class="user-id" type="button" data-copy-id><span>ID <span data-user-id>4 820 197</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button></div></section>
             <button class="profile-row" type="button"><span data-i18n="tariffSubscription">Тарифы и подписка</span><strong data-i18n="userTariff">Пользователь</strong><i>›</i></button>
-            <button class="profile-row" type="button" data-open-view="balance"><span data-i18n="balanceBonuses">Баланс и бонусы</span><strong>0 ₽ · 0</strong><i>›</i></button>
+            <button class="profile-row" type="button" data-open-view="balance"><span data-i18n="balanceBonuses">Баланс и бонусы</span><strong data-finance-summary>0 ₽ · 200</strong><i>›</i></button>
             <button class="profile-row" type="button" data-open-view="connections"><span data-i18n="connections">Связи и контакты</span><strong>MAX · Telegram · Email</strong><i>›</i></button>
           </div>
         </section>
@@ -161,6 +169,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=2"></script>
+    <script type="module" src="dashboard.js?v=3"></script>
   </body>
 </html>

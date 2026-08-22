@@ -91,6 +91,10 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .metric-card .metric-label { display: block; color: var(--muted); font-size: 12px; margin-bottom: 7px; }
 .metric-card strong { display: block; font-size: 22px; font-weight: 500; }
 .metric-card svg { position: absolute; width: 25px; height: 25px; right: 14px; top: 29px; fill: none; stroke: currentColor; stroke-width: 1.5; color: var(--muted); }
+.referral-card { margin-top: 10px; min-height: 82px; padding: 13px 13px 13px 14px; display: grid; grid-template-columns: 38px 1fr auto; align-items: center; gap: 11px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(115deg, color-mix(in srgb, var(--surface) 93%, #0b63d8), var(--surface)); box-shadow: var(--shadow); }
+.referral-icon { width: 38px; height: 38px; display: grid; place-items: center; color: var(--cyan); font-size: 25px; border: 1px solid var(--line-strong); border-radius: 12px; box-shadow: 0 0 18px var(--glow); }
+.referral-copy { min-width: 0; }.referral-copy strong { display: block; margin-bottom: 5px; font-size: 12px; font-weight: 600; }.referral-copy button { max-width: 100%; padding: 0; border: 0; background: transparent; color: var(--muted); display: flex; align-items: center; gap: 6px; cursor: pointer; }.referral-copy button span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }.referral-copy svg { width: 16px; height: 16px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.6; }
+.referral-share { min-height: 38px; padding: 0 11px; border: 1px solid var(--line-strong); border-radius: 11px; color: var(--blue); background: var(--surface-soft); font-size: 11px; cursor: pointer; }
 .welcome-block { padding: 28px 5px 18px; }
 .welcome-block p { margin: 0 0 3px; color: var(--muted); }
 .welcome-block h1 { margin: 0 0 8px; font-size: clamp(30px, 8vw, 47px); line-height: 1; letter-spacing: -.045em; }
@@ -106,6 +110,7 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .passport-head button span:last-child { font-size: 27px; }
 .progress { position: relative; z-index: 2; height: 7px; border-radius: 20px; background: color-mix(in srgb, var(--muted) 30%, transparent); overflow: hidden; }
 .progress span, .progress i { display: block; width: var(--progress); height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--blue), #139cff); box-shadow: 0 0 12px var(--glow); }
+.passport-rewards { position: relative; z-index: 2; margin-top: 12px; display: flex; flex-wrap: wrap; gap: 7px; }.passport-rewards span { padding: 5px 8px; color: var(--cyan); font-size: 10px; border: 1px solid var(--line); border-radius: 999px; background: rgba(10, 91, 181, .12); }
 .passport-blueprint { position: absolute; inset: 0 0 0 45%; opacity: .15; transform: skewY(-4deg); }
 .passport-blueprint span { position: absolute; bottom: 0; width: 22%; border: 1px solid var(--cyan); border-bottom: 0; }
 .passport-blueprint span:nth-child(1){height:35%;left:0}.passport-blueprint span:nth-child(2){height:60%;left:22%}.passport-blueprint span:nth-child(3){height:82%;left:44%}.passport-blueprint span:nth-child(4){height:52%;left:66%}
@@ -119,9 +124,11 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .analysis-card { min-height: 135px; padding: 15px 8px 13px; display: grid; place-items: center; gap: 7px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); cursor: pointer; transition: transform .2s, border-color .2s, box-shadow .2s; }
 .analysis-card:active { transform: scale(.97); }
 .analysis-card:hover { border-color: var(--line-strong); box-shadow: var(--shadow), 0 0 25px var(--glow); }
+.analysis-card.is-selected { border-color: var(--blue); background: color-mix(in srgb, var(--surface) 88%, #0b67df); box-shadow: var(--shadow), 0 0 24px var(--glow), inset 0 0 25px rgba(13, 111, 255, .08); }.analysis-card.is-selected svg { stroke: var(--cyan); }
 .analysis-card svg { width: 48px; height: 48px; fill: none; stroke: var(--muted); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
 .analysis-card > span { font-size: 13px; }
 .analysis-card small { color: var(--muted); }
+.analyze-button { width: 100%; min-height: 52px; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 15px; font-weight: 650; }
 .objects-summary { position: relative; margin-top: 12px; min-height: 135px; padding: 19px; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; box-shadow: var(--shadow); }
 .objects-summary h2 { margin: 0 0 10px; font-size: 22px; }
 .objects-summary p { margin: 0; color: var(--muted); }.objects-summary p strong { color: var(--text); font-size: 20px; }
@@ -164,6 +171,13 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 
 .app-dialog { width: min(92vw, 510px); padding: 0; color: var(--text); border: 1px solid var(--line-strong); border-radius: 22px; background: var(--surface-strong); box-shadow: 0 35px 100px rgba(0,0,0,.48); }.app-dialog::backdrop { background: rgba(0,7,21,.68); backdrop-filter: blur(4px); }.app-dialog form { position: relative; padding: 25px; }.dialog-close { position: absolute; z-index: 2; right: 12px; top: 10px; width: 38px; height: 38px; border: 0; background: transparent; color: var(--muted); font-size: 30px; cursor: pointer; }.dialog-content h2 { margin: 0 35px 9px 0; }.dialog-content p { color: var(--muted); }.dialog-options { display: grid; gap: 9px; margin-top: 18px; }.dialog-option { min-height: 52px; padding: 0 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft); color: var(--text); display: flex; align-items: center; justify-content: space-between; }.object-form { display: grid; gap: 12px; margin-top: 18px; }.object-form input { min-height: 50px; padding: 0 14px; color: var(--text); border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft); }.toast { position: fixed; z-index: 100; left: 50%; bottom: calc(var(--nav-h) + 18px + env(safe-area-inset-bottom)); transform: translateX(-50%); padding: 11px 16px; color: #dffcff; white-space: nowrap; border: 1px solid rgba(47,220,255,.45); border-radius: 12px; background: #051a38; box-shadow: 0 16px 35px rgba(0,0,0,.35),0 0 25px rgba(0,154,255,.2); animation: toastIn .2s ease both; }
 
+.topup-form { margin-top: 18px; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 10px; }.topup-form label span { display: block; margin-bottom: 6px; color: var(--muted); font-size: 12px; }.topup-form input { width: 100%; min-height: 48px; padding: 0 13px; color: var(--text); border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft); }.topup-form button { min-height: 48px; }
+.history-section { margin-top: 22px; }.history-section h3 { margin: 0 0 10px; font-size: 14px; }.transaction-list { display: grid; gap: 8px; }.transaction-row { min-height: 59px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft); }.transaction-row strong, .transaction-row small { display: block; }.transaction-row strong { font-size: 12px; }.transaction-row small { margin-top: 4px; color: var(--muted); font-size: 10px; }.transaction-row b { color: var(--cyan); font-size: 13px; white-space: nowrap; }.history-empty { padding: 20px; color: var(--muted); text-align: center; border: 1px dashed var(--line); border-radius: 12px; }
+.bonus-rules { margin-top: 17px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }.bonus-rules div { min-height: 78px; padding: 11px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft); }.bonus-rules b { display: block; margin-bottom: 7px; color: var(--cyan); font-size: 18px; }.bonus-rules span { color: var(--muted); font-size: 10px; line-height: 1.35; }
+.analysis-loader { height: 70px; display: flex; align-items: center; justify-content: center; gap: 8px; }.analysis-loader span { width: 9px; height: 9px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 13px var(--glow); animation: analysisPulse .9s ease-in-out infinite; }.analysis-loader span:nth-child(2) { animation-delay: .15s; }.analysis-loader span:nth-child(3) { animation-delay: .3s; }.result-actions { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }.result-actions button { min-height: 50px; }
+
+@media (max-width: 480px) { .referral-card { grid-template-columns: 34px 1fr; }.referral-share { grid-column: 2; justify-self: start; }.result-actions { grid-template-columns: 1fr; } }
+
 @media (min-width: 700px) {
   :root { --header-h: 84px; --nav-h: 74px; }
   .app-header { padding-left: 26px; padding-right: 26px; }.brand-mark { width: 44px; height: 44px; }.brand-name { font-size: 20px; }
@@ -174,7 +188,7 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 @media (min-width: 1024px) {
   :root { --header-h: 90px; }.app-header { padding-left: max(34px, calc((100vw - 1180px)/2)); padding-right: max(34px, calc((100vw - 1180px)/2)); }
   .app-main { width: min(1180px,100%); padding: 36px 32px 125px; }.balance-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }.welcome-block { padding: 34px 6px 24px; }.passport-card { min-height: 200px; }.passport-head p { font-size: 22px; }.passport-head strong { font-size: 44px; }.analysis-grid { gap: 14px; }.analysis-card { min-height: 175px; }.objects-summary { min-height: 165px; }.attention-card { min-height: 100px; }.bottom-nav { width: min(820px, calc(100% - 60px)); }
-  .tab-panel[data-panel="home"] { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }.tab-panel[data-panel="home"] .balance-grid, .tab-panel[data-panel="home"] .welcome-block, .tab-panel[data-panel="home"] .passport-card, .tab-panel[data-panel="home"] .section-block { grid-column: 1/-1; }.tab-panel[data-panel="home"] .objects-summary { margin-top: 16px; }.tab-panel[data-panel="home"] .attention-card { margin-top: 16px; }
+  .tab-panel[data-panel="home"] { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }.tab-panel[data-panel="home"] .balance-grid, .tab-panel[data-panel="home"] .referral-card, .tab-panel[data-panel="home"] .welcome-block, .tab-panel[data-panel="home"] .passport-card, .tab-panel[data-panel="home"] .section-block { grid-column: 1/-1; }.tab-panel[data-panel="home"] .objects-summary { margin-top: 16px; }.tab-panel[data-panel="home"] .attention-card { margin-top: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -188,3 +202,4 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 @keyframes cardSweep { 0%,60% { left: -35%; } 86%,100% { left: 120%; } }
 @keyframes panelIn { from { opacity: 0; transform: translateY(8px); } }
 @keyframes toastIn { from { opacity: 0; transform: translate(-50%,10px); } }
+@keyframes analysisPulse { 0%,100% { transform: translateY(0); opacity: .35; } 50% { transform: translateY(-7px); opacity: 1; } }
