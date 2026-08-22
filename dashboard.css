@@ -58,6 +58,9 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
   background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
   background-size: 46px 46px; mask-image: linear-gradient(to bottom, transparent, #000 25%, transparent 82%);
 }
+.dashboard-app.is-space-mode { height: 100dvh; overflow: hidden; }
+.dashboard-app.is-space-mode .app-header { display: none; }
+.dashboard-app.is-space-mode .app-main { width: 100%; height: 100dvh; margin: 0; padding: 0; }
 
 .app-header {
   position: sticky; top: 0; z-index: 30; height: calc(var(--header-h) + env(safe-area-inset-top));
@@ -180,12 +183,16 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .attention-card h2 { margin: 0 0 4px; font-size: 16px; }.attention-card p { margin: 0; color: var(--muted); font-size: 13px; }
 
 .page-title { align-items: center; margin: 8px 2px 22px; }.page-title h1 { font-size: clamp(28px, 7vw, 44px); }.page-title p { margin: 6px 0 0; color: var(--muted); }
-.space-toolbar { padding: 16px; margin-bottom: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.space-panel { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.space-settings-button { position: absolute; z-index: 8; top: calc(14px + env(safe-area-inset-top)); right: 14px; width: 48px; height: 48px; padding: 0; display: grid; place-items: center; color: var(--cyan); border: 1px solid var(--line-strong); border-radius: 15px; background: color-mix(in srgb, var(--surface-strong) 88%, transparent); box-shadow: 0 12px 30px rgba(0, 8, 26, .28), 0 0 22px var(--glow); backdrop-filter: blur(18px); cursor: pointer; }
+.space-settings-button svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s ease; }
+.space-settings-button:hover svg { transform: rotate(30deg); }
+.space-toolbar { position: absolute; z-index: 7; top: calc(74px + env(safe-area-inset-top)); left: 14px; width: min(460px, calc(100% - 28px)); padding: 16px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: color-mix(in srgb, var(--surface-strong) 93%, transparent); box-shadow: var(--shadow); backdrop-filter: blur(22px); }
 .space-toolbar p { margin: 0 0 12px; }.space-toolbar [data-widget-picker] { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .widget-choice { padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface-soft); color: var(--text); cursor: pointer; }.widget-choice.is-selected { border-color: var(--blue); color: var(--blue); box-shadow: 0 0 17px var(--glow); }
-.space-canvas { position: relative; min-height: min(68vh, 670px); border: 1px solid var(--line-strong); border-radius: 24px; background: radial-gradient(circle at center, var(--surface-soft), transparent 72%), var(--surface); overflow: hidden; touch-action: none; box-shadow: inset 0 0 55px rgba(10, 108, 255, .06), var(--shadow); }
+.space-canvas { position: relative; width: 100%; height: 100%; min-height: 100dvh; border: 0; border-radius: 0; background: radial-gradient(circle at center, var(--surface-soft), transparent 72%), var(--surface); overflow: hidden; touch-action: none; box-shadow: inset 0 0 55px rgba(10, 108, 255, .06); }
 .space-grid { position: absolute; inset: 0; opacity: .42; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg,var(--line) 1px,transparent 1px), radial-gradient(circle, var(--blue) 1px, transparent 1.5px); background-size: 42px 42px,42px 42px,84px 84px; }
-.space-hint { position: absolute; bottom: 12px; left: 0; right: 0; margin: 0; text-align: center; color: var(--muted); font-size: 12px; pointer-events: none; }
+.space-hint { position: absolute; bottom: calc(var(--nav-h) + 14px + env(safe-area-inset-bottom)); left: 0; right: 0; margin: 0; text-align: center; color: var(--muted); font-size: 12px; pointer-events: none; }
 .space-widget { position: absolute; z-index: 2; width: 138px; min-height: 96px; padding: 14px; border: 1px solid var(--line); border-radius: 17px; background: color-mix(in srgb, var(--surface-strong) 92%, transparent); box-shadow: var(--shadow); cursor: grab; user-select: none; touch-action: none; transition: border-color .2s, box-shadow .2s; }
 .space-widget:active { cursor: grabbing; }.space-widget.is-dragging { border-color: var(--cyan); box-shadow: 0 0 28px var(--glow); }
 .space-widget span { display: grid; place-items: center; width: 34px; height: 34px; margin-bottom: 9px; color: var(--blue); border: 1px solid var(--line-strong); border-radius: 11px; }.space-widget strong { display: block; font-size: 13px; }.space-widget small { color: var(--muted); }
