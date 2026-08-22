@@ -57,6 +57,11 @@ Object.assign(copy.TJ, {
   filesReady: 'Файлҳо барои таҳлил омодаанд', analysisFilesCount: 'файл'
 });
 
+Object.assign(copy.RU, { refreshPage: 'Обновить страницу', memoryUsed: 'Память', profileFullReward: 'Профиль заполнен на 100%', storageB: 'Б', storageKb: 'КБ', storageMb: 'МБ', storageGb: 'ГБ' });
+Object.assign(copy.EN, { refreshPage: 'Refresh page', memoryUsed: 'Storage', profileFullReward: 'Profile completed to 100%', storageB: 'B', storageKb: 'KB', storageMb: 'MB', storageGb: 'GB' });
+Object.assign(copy.KY, { refreshPage: 'Баракты жаңыртуу', memoryUsed: 'Эстутум', profileFullReward: 'Профиль 100% толтурулду', storageB: 'Б', storageKb: 'КБ', storageMb: 'МБ', storageGb: 'ГБ' });
+Object.assign(copy.TJ, { refreshPage: 'Нав кардани саҳифа', memoryUsed: 'Хотира', profileFullReward: 'Профил 100% пур шуд', storageB: 'Б', storageKb: 'КБ', storageMb: 'МБ', storageGb: 'ГБ' });
+
 Object.assign(copy.RU, {
   readyObjects: 'Готовые к запуску объекты', activeObjects: 'Объекты действующие', noReadyObjects: 'После анализа проекты появятся здесь', noActiveObjects: 'Действующих объектов пока нет', noActiveObjectsCopy: 'Проанализируйте проект и запустите его из блока готовых объектов.',
   analyzed: 'Проанализирован', started: 'Запущен', inWork: 'В работе', start: 'Запустить', deleteObject: 'Удалить объект', attachedDocuments: 'документа(ов)', objectReady: 'Объект добавлен в готовые к запуску', objectStarted: 'Объект запущен и перенесён в действующие', objectDeleted: 'Объект удалён из готовых',
@@ -87,6 +92,7 @@ const FINANCE_KEY = 'structos-finance-v1';
 const UPLOADS_KEY = 'structos-analysis-uploads-v1';
 const OBJECT_NAME_KEY = 'structos-analysis-object-name';
 const OBJECTS_KEY = 'structos-objects-v1';
+const PROFILE_COMPLETION_KEY = 'structos-profile-completion';
 const ACTIVE_OBJECT_LIMIT = 1;
 const uploadRules = {
   project: { accept: '.pdf,.dwg,.rvt,.jpg,.jpeg,.png,.webp,.heic,image/*', extensions: ['pdf', 'dwg', 'rvt', 'jpg', 'jpeg', 'png', 'webp', 'heic'], formats: 'PDF, DWG, RVT, JPG, PNG, WEBP, HEIC', maxMb: 500 },
@@ -105,6 +111,7 @@ function loadFinance() {
       saved.rewards ||= {};
       saved.rewards.passportFirst = Boolean(saved.rewards.passportFirst);
       saved.rewards.passport65 = Boolean(saved.rewards.passport65 || saved.rewards.passportFull);
+      saved.rewards.profileFull = Boolean(saved.rewards.profileFull);
       return saved;
     }
   } catch {}
@@ -113,7 +120,7 @@ function loadFinance() {
     bonuses: 200,
     balanceHistory: [],
     bonusHistory: [{ key: 'passportFirstReward', amount: 200, date: new Date().toISOString() }],
-    rewards: { passportFirst: true, passport65: false }
+    rewards: { passportFirst: true, passport65: false, profileFull: false }
   };
 }
 
@@ -163,6 +170,7 @@ function applyLanguage(next) {
   localStorage.setItem('structos-language', language);
   root.lang = { RU: 'ru', KY: 'ky', TJ: 'tg', EN: 'en' }[language];
   $('[data-language]').value = language;
+  $('[data-refresh-page]')?.setAttribute('aria-label', tr('refreshPage'));
   $$('[data-i18n]').forEach((element) => { element.textContent = tr(element.dataset.i18n); });
   renderFinance();
   renderReferral();
@@ -230,6 +238,16 @@ function applyPassportRewards(progress) {
     changed = true;
   }
   if (changed) saveFinance();
+}
+
+function applyProfileReward(progress) {
+  finance.rewards ||= {};
+  finance.rewards.profileFull = Boolean(finance.rewards.profileFull);
+  if (progress < 100 || finance.rewards.profileFull) return;
+  finance.rewards.profileFull = true;
+  finance.bonuses += 500;
+  finance.bonusHistory.unshift({ key: 'profileFullReward', amount: 500, date: new Date().toISOString() });
+  saveFinance();
 }
 
 function formatMoney(value) {
@@ -420,7 +438,7 @@ function openBalanceDialog() {
 }
 
 function openBonusDialog() {
-  const rules = `<div class="bonus-rules"><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+200</b><span>${tr('referralReward')}</span></div></div>`;
+  const rules = `<div class="bonus-rules"><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+200</b><span>${tr('referralReward')}</span></div><div><b>+500</b><span>${tr('profileFullReward')}</span></div></div>`;
   showDialog(tr('bonuses'), tr('bonusRules'), `${rules}<section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section>`);
 }
 
@@ -471,12 +489,21 @@ function formatObjectDate(value) {
   return new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric' }).format(date);
 }
 
+function formatStorage(bytes) {
+  const value = Math.max(0, Number(bytes) || 0);
+  if (value < 1024) return `${Math.round(value)} ${tr('storageB')}`;
+  if (value < 1024 * 1024) return `${(value / 1024).toFixed(value < 10 * 1024 ? 1 : 0)} ${tr('storageKb')}`;
+  if (value < 1024 * 1024 * 1024) return `${(value / 1024 / 1024).toFixed(value < 10 * 1024 * 1024 ? 1 : 0)} ${tr('storageMb')}`;
+  return `${(value / 1024 / 1024 / 1024).toFixed(2)} ${tr('storageGb')}`;
+}
+
 function objectRowMarkup(object) {
   const isReady = object.status === 'ready';
   const fileCount = Array.isArray(object.files) ? object.files.length : 0;
+  const storage = formatStorage((object.files || []).reduce((total, file) => total + (Number(file.size) || 0), 0));
   const meta = isReady
-    ? `${tr('analyzed')}: ${formatObjectDate(object.analyzedAt)} · ${fileCount} ${tr('attachedDocuments')}`
-    : `${tr('started')}: ${formatObjectDate(object.startedAt || object.analyzedAt)}`;
+    ? `${tr('analyzed')}: ${formatObjectDate(object.analyzedAt)} · ${fileCount} ${tr('attachedDocuments')} · ${tr('memoryUsed')}: ${storage}`
+    : `${tr('started')}: ${formatObjectDate(object.startedAt || object.analyzedAt)} · ${tr('memoryUsed')}: ${storage}`;
   const actions = isReady
     ? `<div class="object-row-actions"><button class="object-start-button" type="button" data-start-ready="${escapeHtml(object.id)}">${escapeHtml(tr('start'))}</button><button class="object-delete-button" type="button" data-delete-ready="${escapeHtml(object.id)}" aria-label="${escapeHtml(tr('deleteObject'))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></button></div>`
     : `<span class="object-status-chip">${escapeHtml(tr('inWork'))}</span>`;
@@ -768,6 +795,10 @@ async function logout() {
 }
 
 $('[data-language]').addEventListener('change', (event) => applyLanguage(event.target.value));
+$('[data-refresh-page]').addEventListener('click', (event) => {
+  event.currentTarget.classList.add('is-refreshing');
+  setTimeout(() => window.location.reload(), 180);
+});
 $('[data-theme-toggle]').addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
 $('[data-menu-open]').addEventListener('click', openMenu);
 $$('[data-menu-close]').forEach((button) => button.addEventListener('click', closeMenu));
@@ -790,6 +821,9 @@ document.addEventListener('keydown', (event) => { if (event.key === 'Escape') cl
 window.addEventListener('resize', () => { renderWidgets(); });
 
 applyPassportRewards(40);
+const savedProfileCompletion = localStorage.getItem(PROFILE_COMPLETION_KEY);
+const profileCompletion = savedProfileCompletion === null || !Number.isFinite(Number(savedProfileCompletion)) ? 40 : Math.min(100, Math.max(0, Number(savedProfileCompletion)));
+applyProfileReward(profileCompletion);
 applyTheme(localStorage.getItem('structos-theme') === 'light' ? 'light' : 'dark');
 applyLanguage(language);
 renderWidgetPicker();
