@@ -30,10 +30,13 @@ Object.assign(copy.TR, { home: 'Ana sayfa', getPassport: 'İnşaatçı Pasaportu
 const supabaseUrl = supabaseConfig.url || import.meta.env?.VITE_SUPABASE_URL;
 const supabaseKey = supabaseConfig.publishableKey || import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env?.VITE_SUPABASE_ANON_KEY;
 let authClient = null;
-if (supabaseUrl && supabaseKey) {
+
+async function initAuthClient() {
+  if (!supabaseUrl || !supabaseKey) return;
   try {
     const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.112.3/+esm');
     authClient = createClient(supabaseUrl, supabaseKey, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
+    authClient.auth.onAuthStateChange((event) => { if (event === 'PASSWORD_RECOVERY') setMode('newPassword', false); });
   } catch {
     authClient = null;
   }
@@ -134,7 +137,7 @@ function setMode(nextMode, updateHash = true) {
   $('.auth-feedback').hidden = true;
   updateHeading();
   document.title = `${mode === 'register' ? tr('registerHeading') : tr('loginHeading')} — StructOS`;
-  if (updateHash && (mode === 'login' || mode === 'register')) history.replaceState(null, '', `#${mode}`);
+  if (updateHash && (mode === 'login' || mode === 'register' || mode === 'recovery')) history.replaceState(null, '', `#${mode}`);
 }
 
 function setFeedback(message, type = 'info') {
@@ -221,7 +224,7 @@ function updateStrength(password) {
 
 $$('[data-auth-tab]').forEach((tab) => tab.addEventListener('click', () => setMode(tab.dataset.authTab)));
 $$('[data-switch-auth]').forEach((button) => button.addEventListener('click', () => setMode(button.dataset.switchAuth)));
-$('[data-open-recovery]').addEventListener('click', () => setMode('recovery', false));
+$('[data-open-recovery]').addEventListener('click', () => setMode('recovery'));
 $('.auth-language').addEventListener('change', (event) => applyLanguage(event.target.value));
 $('.auth-theme').addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
 $$('.password-toggle').forEach((button) => button.addEventListener('click', () => { const input = $('input', button.parentElement); input.type = input.type === 'password' ? 'text' : 'password'; button.classList.toggle('is-visible', input.type === 'text'); button.setAttribute('aria-label', tr(input.type === 'password' ? 'showPassword' : 'hidePassword')); }));
@@ -256,10 +259,13 @@ professionInput.addEventListener('blur', () => setTimeout(() => {
   if (!professionInput.dataset.profession) professionInput.setCustomValidity(tr('professionInvalid'));
 }, 120));
 $$('[data-auth-form]').forEach((form) => form.addEventListener('submit', (event) => { event.preventDefault(); if (form.dataset.authForm === 'login') submitLogin(form); if (form.dataset.authForm === 'register') submitRegister(form); if (form.dataset.authForm === 'recovery') submitRecovery(form); if (form.dataset.authForm === 'newPassword') submitNewPassword(form); }));
-window.addEventListener('hashchange', () => { if (location.hash === '#register') setMode('register', false); if (location.hash === '#login') setMode('login', false); });
+window.addEventListener('hashchange', () => {
+  if (location.hash === '#register') setMode('register', false);
+  if (location.hash === '#login') setMode('login', false);
+  if (location.hash === '#recovery') setMode('recovery', false);
+});
 
 applyTheme(localStorage.getItem('structos-theme') === 'dark' ? 'dark' : 'light');
-setMode(location.hash === '#register' ? 'register' : 'login', false);
+setMode(location.hash === '#register' ? 'register' : location.hash === '#recovery' ? 'recovery' : 'login', false);
 applyLanguage(language);
-
-if (authClient) authClient.auth.onAuthStateChange((event) => { if (event === 'PASSWORD_RECOVERY') setMode('newPassword', false); });
+void initAuthClient();
