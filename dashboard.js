@@ -19,11 +19,35 @@ const copy = {
   }
 };
 
+Object.assign(copy.RU, { shareEarn: 'Поделись — за регистрацию +200 бонусов', share: 'Поделиться', referralCopied: 'Реферальная ссылка скопирована', passportFirstRewardShort: '+200 за первое заполнение', passportFullRewardShort: '+500 за 100%', topUp: 'Пополнить', topUpAmount: 'Сумма пополнения', topUpHint: 'За каждый пополненный рубль начисляется 10% бонусами', balanceHistory: 'История пополнений', bonusHistory: 'История начислений', noOperations: 'Операций пока нет', balanceTopUp: 'Пополнение баланса', topUpBonus: 'Бонус 10% за пополнение', passportFirstReward: 'Первое заполнение Паспорта строителя', passportFullReward: 'Полностью заполненный Паспорт строителя', referralReward: 'Регистрация по вашей ссылке', bonusRules: 'Как начисляются бонусы', analyze: 'Анализировать', analysisStarted: 'StructOS проверяет загруженные данные и формирует результат.', analysisComplete: 'Анализ завершён', analysisCompleteCopy: 'Результат сохранён. Выберите следующее действие.', viewReport: 'Посмотреть отчёт', startObject: 'Запустить объект', report: 'Отчёт', invalidAmount: 'Введите сумму больше нуля', credited: 'Баланс пополнен, бонусы начислены' });
+Object.assign(copy.EN, { shareEarn: 'Share — get +200 bonuses for registration', share: 'Share', referralCopied: 'Referral link copied', passportFirstRewardShort: '+200 for first completion', passportFullRewardShort: '+500 for 100%', topUp: 'Top up', topUpAmount: 'Top-up amount', topUpHint: 'Every deposited ruble earns 10% in bonuses', balanceHistory: 'Top-up history', bonusHistory: 'Bonus history', noOperations: 'No transactions yet', balanceTopUp: 'Balance top-up', topUpBonus: '10% top-up bonus', passportFirstReward: 'First Builder Passport completion', passportFullReward: 'Completed Builder Passport', referralReward: 'Registration through your link', bonusRules: 'How bonuses are earned', analyze: 'Analyze', analysisStarted: 'StructOS is checking the uploaded data and preparing the result.', analysisComplete: 'Analysis complete', analysisCompleteCopy: 'The result has been saved. Choose the next action.', viewReport: 'View report', startObject: 'Start object', report: 'Report', invalidAmount: 'Enter an amount greater than zero', credited: 'Balance topped up and bonuses credited' });
+Object.assign(copy.KY, { shareEarn: 'Бөлүшүңүз — катталуу үчүн +200 бонус', share: 'Бөлүшүү', referralCopied: 'Шилтеме көчүрүлдү', passportFirstRewardShort: 'Биринчи толтурууга +200', passportFullRewardShort: '100% үчүн +500', topUp: 'Толуктоо', topUpAmount: 'Толуктоо суммасы', topUpHint: 'Ар бир толукталган рубль үчүн 10% бонус берилет', balanceHistory: 'Толуктоолор тарыхы', bonusHistory: 'Бонустар тарыхы', noOperations: 'Азырынча операция жок', balanceTopUp: 'Балансты толуктоо', topUpBonus: 'Толуктоо үчүн 10% бонус', passportFirstReward: 'Куруучунун паспортун биринчи толтуруу', passportFullReward: 'Куруучунун паспорту толук толтурулду', referralReward: 'Сиздин шилтеме аркылуу катталуу', bonusRules: 'Бонустар кантип берилет', analyze: 'Талдоо', analysisStarted: 'StructOS жүктөлгөн маалыматтарды текшерип жатат.', analysisComplete: 'Талдоо аяктады', analysisCompleteCopy: 'Натыйжа сакталды. Кийинки аракетти тандаңыз.', viewReport: 'Отчётту көрүү', startObject: 'Объектти ишке киргизүү', report: 'Отчёт', invalidAmount: 'Нөлдөн чоң сумманы жазыңыз', credited: 'Баланс толукталды, бонустар берилди' });
+Object.assign(copy.TJ, { shareEarn: 'Мубодила кунед — барои бақайдгирӣ +200 бонус', share: 'Мубодила', referralCopied: 'Пайванди даъват нусха шуд', passportFirstRewardShort: '+200 барои пуркунии аввал', passportFullRewardShort: '+500 барои 100%', topUp: 'Пур кардан', topUpAmount: 'Маблағи пуркунӣ', topUpHint: 'Барои ҳар рубли пуршуда 10% бонус дода мешавад', balanceHistory: 'Таърихи пуркунӣ', bonusHistory: 'Таърихи бонусҳо', noOperations: 'Ҳоло амалиёт нест', balanceTopUp: 'Пуркунии тавозун', topUpBonus: '10% бонус барои пуркунӣ', passportFirstReward: 'Пуркунии аввали шиносномаи сохтмончӣ', passportFullReward: 'Шиносномаи сохтмончӣ пурра пур шуд', referralReward: 'Бақайдгирӣ тавассути пайванди шумо', bonusRules: 'Бонусҳо чӣ гуна дода мешаванд', analyze: 'Таҳлил кардан', analysisStarted: 'StructOS маълумоти боршударо месанҷад ва натиҷаро омода мекунад.', analysisComplete: 'Таҳлил анҷом ёфт', analysisCompleteCopy: 'Натиҷа нигоҳ дошта шуд. Амали навбатиро интихоб кунед.', viewReport: 'Дидани ҳисобот', startObject: 'Оғози объект', report: 'Ҳисобот', invalidAmount: 'Маблағи аз сифр зиёдро ворид кунед', credited: 'Тавозун пур ва бонусҳо дода шуданд' });
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
 let toastTimer;
 const DEMO_SESSION_KEY = 'structos-demo-session';
+const FINANCE_KEY = 'structos-finance-v1';
+let selectedAnalysis = 'project';
+let analysisTimer;
+
+function loadFinance() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(FINANCE_KEY) || 'null');
+    if (saved && Number.isFinite(saved.balance) && Number.isFinite(saved.bonuses)) return saved;
+  } catch {}
+  return {
+    balance: 0,
+    bonuses: 200,
+    balanceHistory: [],
+    bonusHistory: [{ key: 'passportFirstReward', amount: 200, date: new Date().toISOString() }],
+    rewards: { passportFirst: true, passportFull: false }
+  };
+}
+
+const finance = loadFinance();
 
 function tr(key) { return copy[language]?.[key] ?? copy.RU[key] ?? key; }
 
@@ -33,6 +57,8 @@ function applyLanguage(next) {
   root.lang = { RU: 'ru', KY: 'ky', TJ: 'tg', EN: 'en' }[language];
   $('[data-language]').value = language;
   $$('[data-i18n]').forEach((element) => { element.textContent = tr(element.dataset.i18n); });
+  renderFinance();
+  renderReferral();
   renderWidgets();
   renderWidgetPicker();
 }
@@ -73,6 +99,47 @@ async function copyId() {
   showToast(tr('copied'));
 }
 
+function saveFinance() {
+  localStorage.setItem(FINANCE_KEY, JSON.stringify(finance));
+}
+
+function formatMoney(value) {
+  return `${new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(value)} ₽`;
+}
+
+function renderFinance() {
+  $$('[data-balance-value]').forEach((item) => { item.textContent = formatMoney(finance.balance); });
+  $$('[data-bonus-value]').forEach((item) => { item.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(finance.bonuses); });
+  $$('[data-finance-summary]').forEach((item) => { item.textContent = `${formatMoney(finance.balance)} · ${finance.bonuses}`; });
+}
+
+function referralUrl() {
+  const url = new URL('./', window.location.href);
+  url.searchParams.set('r', currentId.replaceAll(' ', ''));
+  url.hash = '';
+  return url.href;
+}
+
+function renderReferral() {
+  $$('[data-referral-short]').forEach((item) => { item.textContent = `StructOS · r/${currentId.replaceAll(' ', '')}`; });
+}
+
+async function copyReferral() {
+  try { await navigator.clipboard.writeText(referralUrl()); }
+  catch {
+    const input = document.createElement('input'); input.value = referralUrl(); document.body.append(input); input.select(); document.execCommand('copy'); input.remove();
+  }
+  showToast(tr('referralCopied'));
+}
+
+async function shareReferral() {
+  if (navigator.share) {
+    try { await navigator.share({ title: 'StructOS', text: tr('shareEarn'), url: referralUrl() }); return; }
+    catch (error) { if (error?.name === 'AbortError') return; }
+  }
+  await copyReferral();
+}
+
 async function initAuth() {
   const demoSession = JSON.parse(localStorage.getItem(DEMO_SESSION_KEY) || 'null');
   if (demoSession?.email === 'str@str.com') {
@@ -80,6 +147,7 @@ async function initAuth() {
     $$('[data-user-name]').forEach((item) => { item.textContent = demoSession.name || 'StructOS'; });
     $$('[data-user-role]').forEach((item) => { item.textContent = demoSession.role || tr('userTariff'); });
     $$('[data-user-id]').forEach((item) => { item.textContent = currentId; });
+    renderReferral();
     return;
   }
   const supabaseUrl = supabaseConfig.url || import.meta.env?.VITE_SUPABASE_URL;
@@ -98,6 +166,7 @@ async function initAuth() {
     $$('[data-user-name]').forEach((item) => { item.textContent = fullName; });
     $$('[data-user-role]').forEach((item) => { item.textContent = role; });
     $$('[data-user-id]').forEach((item) => { item.textContent = currentId; });
+    renderReferral();
   } catch (error) {
     console.warn('StructOS auth is unavailable:', error);
   }
@@ -194,7 +263,56 @@ function renderWidgetPicker() {
 function showDialog(title, copyText, extra = '') {
   const dialog = $('[data-dialog]');
   $('[data-dialog-content]').innerHTML = `<div class="dialog-content"><h2>${title}</h2><p>${copyText}</p>${extra}</div>`;
-  dialog.showModal();
+  if (!dialog.open) dialog.showModal();
+}
+
+function historyMarkup(items, bonus = false) {
+  if (!items.length) return `<div class="history-empty">${tr('noOperations')}</div>`;
+  const formatter = new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric' });
+  return `<div class="transaction-list">${items.map((item) => `<div class="transaction-row"><span><strong>${tr(item.key)}</strong><small>${formatter.format(new Date(item.date))}</small></span><b>+${bonus ? item.amount : formatMoney(item.amount)}</b></div>`).join('')}</div>`;
+}
+
+function openBalanceDialog() {
+  showDialog(tr('balance'), tr('topUpHint'), `<div class="topup-form"><label><span>${tr('topUpAmount')}</span><input data-topup-amount type="number" inputmode="decimal" min="1" step="1" placeholder="1000" /></label><button class="primary-button" type="button" data-topup>${tr('topUp')}</button></div><section class="history-section"><h3>${tr('balanceHistory')}</h3>${historyMarkup(finance.balanceHistory)}</section>`);
+  $('[data-topup]')?.addEventListener('click', () => {
+    const input = $('[data-topup-amount]');
+    const amount = Math.round(Number(input.value) * 100) / 100;
+    if (!Number.isFinite(amount) || amount <= 0) { input.focus(); showToast(tr('invalidAmount')); return; }
+    const bonus = Math.round(amount * 10) / 100;
+    const date = new Date().toISOString();
+    finance.balance += amount;
+    finance.bonuses = Math.round((finance.bonuses + bonus) * 100) / 100;
+    finance.balanceHistory.unshift({ key: 'balanceTopUp', amount, date });
+    finance.bonusHistory.unshift({ key: 'topUpBonus', amount: bonus, date });
+    saveFinance(); renderFinance();
+    $('[data-dialog]').close(); showToast(tr('credited')); openBalanceDialog();
+  });
+}
+
+function openBonusDialog() {
+  const rules = `<div class="bonus-rules"><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+500</b><span>${tr('passportFullReward')}</span></div><div><b>+200</b><span>${tr('referralReward')}</span></div></div>`;
+  showDialog(tr('bonuses'), tr('bonusRules'), `${rules}<section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section>`);
+}
+
+function selectAnalysis(type) {
+  selectedAnalysis = ['project', 'contract', 'estimate'].includes(type) ? type : 'project';
+  $$('[data-analysis-type]').forEach((card) => {
+    const selected = card.dataset.analysisType === selectedAnalysis;
+    card.classList.toggle('is-selected', selected);
+    card.setAttribute('aria-pressed', String(selected));
+  });
+}
+
+function runAnalysis() {
+  const title = tr(selectedAnalysis);
+  clearTimeout(analysisTimer);
+  showDialog(`${tr('analysis')}: ${title}`, tr('analysisStarted'), '<div class="analysis-loader"><span></span><span></span><span></span></div>');
+  analysisTimer = setTimeout(() => {
+    if (!$('[data-dialog]').open) return;
+    showDialog(tr('analysisComplete'), tr('analysisCompleteCopy'), `<div class="result-actions"><button class="outline-button" type="button" data-view-report>${tr('viewReport')}</button><button class="primary-button" type="button" data-start-object>${tr('startObject')}</button></div>`);
+    $('[data-view-report]')?.addEventListener('click', () => showDialog(`${tr('report')}: ${title}`, tr('comingSoon'), `<div class="dialog-options"><div class="dialog-option"><span>StructOS ${title}</span><span>→</span></div></div>`));
+    $('[data-start-object]')?.addEventListener('click', () => { $('[data-dialog]').close(); openObjectDialog(); });
+  }, 1100);
 }
 
 function openView(view) {
@@ -204,7 +322,9 @@ function openView(view) {
     const title = view === 'contract' ? tr('contract') : view === 'estimate' ? tr('estimate') : view === 'analysis' ? tr('analysis') : tr('project');
     showDialog(title, tr('comingSoon'), `<div class="dialog-options"><a class="primary-button dialog-option" href="index.html">${tr('goAnalysis')}<span>→</span></a></div>`); return;
   }
-  const labels = { balance: 'balanceBonuses', subscription: 'tariffSubscription', invitations: 'invitations', invite: 'invite', notifications: 'notifications', documents: 'documents', connections: 'connections', settings: 'settings', acts: 'widgetActs', attention: 'attention', passport: 'builderPassport' };
+  if (view === 'balance') { openBalanceDialog(); return; }
+  if (view === 'bonuses') { openBonusDialog(); return; }
+  const labels = { subscription: 'tariffSubscription', invitations: 'invitations', invite: 'invite', notifications: 'notifications', documents: 'documents', connections: 'connections', settings: 'settings', acts: 'widgetActs', attention: 'attention', passport: 'builderPassport' };
   showDialog(tr(labels[view] || 'settings'), tr('comingSoon'), `<div class="dialog-options"><div class="dialog-option"><span>StructOS</span><span>→</span></div></div>`);
 }
 
@@ -225,10 +345,14 @@ $('[data-theme-toggle]').addEventListener('click', () => applyTheme(root.dataset
 $('[data-menu-open]').addEventListener('click', openMenu);
 $$('[data-menu-close]').forEach((button) => button.addEventListener('click', closeMenu));
 $$('[data-copy-id]').forEach((button) => button.addEventListener('click', copyId));
+$$('[data-copy-referral]').forEach((button) => button.addEventListener('click', copyReferral));
+$$('[data-share-referral]').forEach((button) => button.addEventListener('click', shareReferral));
 $$('[data-tab]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.tab)));
 $$('[data-open-panel]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.openPanel)));
 $$('[data-open-view]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.openView)));
 $$('[data-action]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.action)));
+$$('[data-analysis-type]').forEach((button) => button.addEventListener('click', () => selectAnalysis(button.dataset.analysisType)));
+$('[data-run-analysis]').addEventListener('click', runAnalysis);
 $$('[data-add-object]').forEach((button) => button.addEventListener('click', openObjectDialog));
 $('[data-profile-menu]').addEventListener('click', () => $('.drawer-group').classList.toggle('is-open'));
 $('[data-logout]').addEventListener('click', logout);
@@ -242,6 +366,7 @@ applyTheme(localStorage.getItem('structos-theme') === 'light' ? 'light' : 'dark'
 applyLanguage(language);
 renderWidgetPicker();
 renderWidgets();
+selectAnalysis(selectedAnalysis);
 setPanel(location.hash.slice(1) || 'home');
 await initAuth();
 
