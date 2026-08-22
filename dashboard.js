@@ -23,6 +23,7 @@ let language = copy[localStorage.getItem('structos-language')] ? localStorage.ge
 let currentId = '4 820 197';
 let authClient = null;
 let toastTimer;
+const DEMO_SESSION_KEY = 'structos-demo-session';
 
 function tr(key) { return copy[language]?.[key] ?? copy.RU[key] ?? key; }
 
@@ -73,9 +74,17 @@ async function copyId() {
 }
 
 async function initAuth() {
+  const demoSession = JSON.parse(localStorage.getItem(DEMO_SESSION_KEY) || 'null');
+  if (demoSession?.email === 'str@str.com') {
+    currentId = formattedId(demoSession.id || '4820197');
+    $$('[data-user-name]').forEach((item) => { item.textContent = demoSession.name || 'StructOS'; });
+    $$('[data-user-role]').forEach((item) => { item.textContent = demoSession.role || tr('userTariff'); });
+    $$('[data-user-id]').forEach((item) => { item.textContent = currentId; });
+    return;
+  }
   const supabaseUrl = supabaseConfig.url || import.meta.env?.VITE_SUPABASE_URL;
   const supabaseKey = supabaseConfig.publishableKey || import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env?.VITE_SUPABASE_ANON_KEY;
-  if (!supabaseUrl || !supabaseKey) return;
+  if (!supabaseUrl || !supabaseKey) { window.location.replace('login.html#login'); return; }
   try {
     const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.112.3/+esm');
     authClient = createClient(supabaseUrl, supabaseKey, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
@@ -206,6 +215,7 @@ function openObjectDialog() {
 }
 
 async function logout() {
+  localStorage.removeItem(DEMO_SESSION_KEY);
   if (authClient) await authClient.auth.signOut();
   window.location.replace('login.html#login');
 }
