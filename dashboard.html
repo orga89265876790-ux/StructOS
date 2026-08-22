@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=9" />
+    <link rel="stylesheet" href="dashboard.css?v=10" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -123,11 +123,15 @@
         </section>
 
         <section class="tab-panel space-panel" data-panel="space" aria-label="Пространство" hidden>
+          <button class="space-force-refresh" type="button" data-force-refresh aria-label="Принудительно обновить" title="Принудительно обновить">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 8A7 7 0 0 1 18 6l2 6M17.9 16A7 7 0 0 1 6 18l-2-6"/></svg>
+            <span class="sr-only" data-i18n="forceRefresh">Принудительно обновить</span>
+          </button>
           <button class="space-settings-button" type="button" data-space-settings aria-label="Настройка" title="Настройка" aria-expanded="false">
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.6v-.2h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"/></svg>
             <span class="sr-only" data-i18n="settings">Настройка</span>
           </button>
-          <div class="space-toolbar" hidden data-space-toolbar><p data-i18n="chooseWidgets">Выберите быстрые функции</p><div data-widget-picker></div><button type="button" class="primary-button" data-space-done data-i18n="done">Готово</button></div>
+          <div class="space-toolbar" hidden data-space-toolbar><p data-i18n="chooseWidgets">Выберите быстрые функции</p><small class="space-toolbar-hint" data-i18n="resizeHint">Размер: двумя пальцами или потяните за угол</small><div data-widget-picker></div><button type="button" class="primary-button" data-space-done data-i18n="done">Готово</button></div>
           <div class="space-canvas" data-space-canvas aria-label="Интерактивное поле">
             <div class="space-grid" aria-hidden="true"></div>
             <div class="space-watermark" aria-hidden="true">
@@ -188,6 +192,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=10"></script>
+    <script type="module" src="dashboard.js?v=11"></script>
   </body>
 </html>
