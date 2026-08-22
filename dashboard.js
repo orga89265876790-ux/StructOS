@@ -67,6 +67,11 @@ Object.assign(copy.EN, { uploadedObjects: 'Uploaded objects', noUploadedObjects:
 Object.assign(copy.KY, { uploadedObjects: 'Жүктөлгөн объекттер', noUploadedObjects: 'Азырынча жүктөлгөн объект жок', uploaded: 'Жүктөлдү', uploadedAt: 'Жүктөлдү', readyStatus: 'Ишке даяр', addToObject: 'Объектке кошуу', newObject: 'Жаңы объект түзүү', chooseObjectDocument: 'Объекттин бөлүмүн тандаңыз', notUploaded: 'Жүктөлгөн жок', openObject: 'Объекттин картасын ачуу', analyzeObject: 'Объектти талдоо' });
 Object.assign(copy.TJ, { uploadedObjects: 'Объектҳои боршуда', noUploadedObjects: 'Ҳоло объекти боршуда нест', uploaded: 'Бор шуд', uploadedAt: 'Бор шуд', readyStatus: 'Омода ба оғоз', addToObject: 'Ба объект илова кардан', newObject: 'Объекти нав сохтан', chooseObjectDocument: 'Бахши объектро интихоб кунед', notUploaded: 'Бор нашудааст', openObject: 'Кушодани корти объект', analyzeObject: 'Таҳлили объект' });
 
+Object.assign(copy.RU, { forceRefresh: 'Принудительно обновить', resizeHint: 'Размер: двумя пальцами или потяните за угол', onField: 'Уже на поле', addToField: 'Добавить на поле', widgetTasks: 'Задачи', widgetTeam: 'Команда', widgetFinance: 'Финансы' });
+Object.assign(copy.EN, { forceRefresh: 'Force refresh', resizeHint: 'Resize with two fingers or drag the corner', onField: 'Already on the field', addToField: 'Add to the field', widgetTasks: 'Tasks', widgetTeam: 'Team', widgetFinance: 'Finance' });
+Object.assign(copy.KY, { forceRefresh: 'Мажбурлап жаңыртуу', resizeHint: 'Эки манжа менен же бурчун тартып өлчөмүн өзгөртүңүз', onField: 'Талаада бар', addToField: 'Талаага кошуу', widgetTasks: 'Тапшырмалар', widgetTeam: 'Команда', widgetFinance: 'Каржы' });
+Object.assign(copy.TJ, { forceRefresh: 'Навсозии маҷбурӣ', resizeHint: 'Бо ду ангушт ё кашидани кунҷ андозаро иваз кунед', onField: 'Дар майдон аст', addToField: 'Ба майдон илова кардан', widgetTasks: 'Вазифаҳо', widgetTeam: 'Даста', widgetFinance: 'Молия' });
+
 Object.assign(copy.RU, {
   readyObjects: 'Готовые к запуску объекты', activeObjects: 'Объекты действующие', noReadyObjects: 'После анализа проекты появятся здесь', noActiveObjects: 'Действующих объектов пока нет', noActiveObjectsCopy: 'Проанализируйте проект и запустите его из блока готовых объектов.',
   analyzed: 'Проанализирован', started: 'Запущен', inWork: 'В работе', start: 'Запустить', deleteObject: 'Удалить объект', attachedDocuments: 'документа(ов)', objectReady: 'Объект добавлен в готовые к запуску', objectStarted: 'Объект запущен и перенесён в действующие', objectDeleted: 'Объект удалён из готовых',
@@ -180,6 +185,8 @@ function applyLanguage(next) {
   root.lang = { RU: 'ru', KY: 'ky', TJ: 'tg', EN: 'en' }[language];
   $('[data-language]').value = language;
   $('[data-refresh-page]')?.setAttribute('aria-label', tr('refreshPage'));
+  $('[data-force-refresh]')?.setAttribute('aria-label', tr('forceRefresh'));
+  $('[data-force-refresh]')?.setAttribute('title', tr('forceRefresh'));
   $$('[data-i18n]').forEach((element) => { element.textContent = tr(element.dataset.i18n); });
   renderFinance();
   renderReferral();
@@ -364,15 +371,61 @@ const widgetDefinitions = {
   documents: { label: 'widgetDocuments', icon: '▤', hint: '0' },
   acts: { label: 'widgetActs', icon: '✓', hint: '∞' },
   attention: { label: 'widgetAttention', icon: '!', hint: '0' },
-  passport: { label: 'widgetPassport', icon: '◇', hint: '40%' }
+  passport: { label: 'widgetPassport', icon: '◇', hint: '40%' },
+  project: { label: 'project', icon: '▱', hint: '1' },
+  contract: { label: 'contract', icon: '§', hint: '1' },
+  estimate: { label: 'estimate', icon: '₽', hint: '1' },
+  tasks: { label: 'widgetTasks', icon: '☑', hint: '0' },
+  team: { label: 'widgetTeam', icon: '◎', hint: '0' },
+  finance: { label: 'widgetFinance', icon: '₽', hint: '0 ₽' }
 };
-const defaultWidgets = ['analysis', 'objects', 'documents', 'passport'];
-let selectedWidgets = JSON.parse(localStorage.getItem('structos-space-widgets') || 'null') || defaultWidgets;
-let widgetPositions = JSON.parse(localStorage.getItem('structos-space-positions') || '{}');
+const defaultWidgets = Object.keys(widgetDefinitions);
+const WIDGETS_VERSION_KEY = 'structos-space-widgets-version';
+
+function readStoredJSON(key, fallback) {
+  try { return JSON.parse(localStorage.getItem(key) || 'null') ?? fallback; }
+  catch { return fallback; }
+}
+
+const storedWidgets = readStoredJSON('structos-space-widgets', defaultWidgets);
+let selectedWidgets = (Array.isArray(storedWidgets) ? storedWidgets : defaultWidgets).filter((id) => widgetDefinitions[id]);
+if (localStorage.getItem(WIDGETS_VERSION_KEY) !== '2') {
+  selectedWidgets = [...defaultWidgets];
+  localStorage.setItem('structos-space-widgets', JSON.stringify(selectedWidgets));
+  localStorage.setItem(WIDGETS_VERSION_KEY, '2');
+}
+let widgetPositions = readStoredJSON('structos-space-positions', {});
+let widgetSizes = readStoredJSON('structos-space-sizes', {});
 
 function defaultPosition(index) {
   const cols = window.innerWidth >= 900 ? 4 : window.innerWidth >= 620 ? 3 : 2;
-  return { x: 16 + (index % cols) * (window.innerWidth >= 620 ? 160 : 148), y: 58 + Math.floor(index / cols) * 120 };
+  return { x: 16 + (index % cols) * (window.innerWidth >= 620 ? 160 : 148), y: 70 + Math.floor(index / cols) * 108 };
+}
+
+function constrainedWidgetSize(width, height, canvas) {
+  const maxWidth = Math.max(108, Math.min(320, canvas.clientWidth - 16));
+  const maxHeight = Math.max(82, Math.min(260, canvas.clientHeight - 110));
+  return {
+    width: Math.max(108, Math.min(maxWidth, Number(width) || 138)),
+    height: Math.max(82, Math.min(maxHeight, Number(height) || 96))
+  };
+}
+
+function applyWidgetDimensions(card, width, height, canvas) {
+  const size = constrainedWidgetSize(width, height, canvas);
+  const scale = Math.max(.72, Math.min(1.7, Math.min(size.width / 138, size.height / 96)));
+  card.style.width = `${size.width}px`;
+  card.style.height = `${size.height}px`;
+  card.style.setProperty('--widget-scale', scale.toFixed(3));
+  return size;
+}
+
+function keepWidgetInsideCanvas(card, canvas) {
+  const bottomClearance = $('[data-dashboard]').classList.contains('is-space-mode') ? 96 : 28;
+  const x = Math.max(0, Math.min(canvas.clientWidth - card.offsetWidth, card.offsetLeft));
+  const y = Math.max(0, Math.min(canvas.clientHeight - card.offsetHeight - bottomClearance, card.offsetTop));
+  card.style.left = `${x}px`;
+  card.style.top = `${y}px`;
 }
 
 function renderWidgets() {
@@ -385,40 +438,110 @@ function renderWidgets() {
     const card = document.createElement('button');
     card.type = 'button'; card.className = 'space-widget'; card.dataset.widget = id;
     card.style.left = `${position.x}px`; card.style.top = `${position.y}px`;
+    const size = widgetSizes[id] || { width: 138, height: 96 };
+    applyWidgetDimensions(card, size.width, size.height, canvas);
     const hint = id === 'objects' ? `${objectRegistry.filter((object) => object.status === 'active').length} / ${ACTIVE_OBJECT_LIMIT}` : definition.hint;
-    card.innerHTML = `<span>${definition.icon}</span><strong>${tr(definition.label)}</strong><small>${hint} · ${tr('quickFunction')}</small>`;
-    card.addEventListener('click', () => { if (!card.dataset.moved) openView(id === 'analysis' ? 'project' : id); });
-    enableWidgetDrag(card, canvas);
+    card.innerHTML = `<span class="space-widget-icon">${definition.icon}</span><strong>${tr(definition.label)}</strong><small>${hint} · ${tr('quickFunction')}</small><i class="widget-resize-handle" aria-hidden="true"></i>`;
+    card.addEventListener('click', (event) => {
+      if (Date.now() < Number(card.dataset.suppressClickUntil || 0) || event.target.closest('.widget-resize-handle')) return;
+      openView(id === 'analysis' ? 'project' : id);
+    });
+    enableWidgetInteraction(card, canvas);
     canvas.append(card);
+    keepWidgetInsideCanvas(card, canvas);
   });
 }
 
-function enableWidgetDrag(card, canvas) {
-  let startX = 0, startY = 0, originX = 0, originY = 0, moved = false;
+function enableWidgetInteraction(card, canvas) {
+  const pointers = new Map();
+  let mode = 'idle';
+  let startX = 0, startY = 0, originX = 0, originY = 0;
+  let startWidth = 0, startHeight = 0, pinchDistance = 1;
+  let moved = false;
+
+  const beginPinch = () => {
+    const points = [...pointers.values()];
+    if (points.length < 2) return;
+    mode = 'pinch';
+    pinchDistance = Math.max(1, Math.hypot(points[0].x - points[1].x, points[0].y - points[1].y));
+    startWidth = card.offsetWidth;
+    startHeight = card.offsetHeight;
+    moved = true;
+    card.classList.remove('is-dragging');
+    card.classList.add('is-resizing');
+  };
+
   card.addEventListener('pointerdown', (event) => {
-    card.setPointerCapture(event.pointerId); startX = event.clientX; startY = event.clientY; originX = card.offsetLeft; originY = card.offsetTop; moved = false; card.classList.add('is-dragging');
+    event.preventDefault();
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    card.setPointerCapture(event.pointerId);
+    if (pointers.size >= 2) { beginPinch(); return; }
+    startX = event.clientX; startY = event.clientY;
+    startWidth = card.offsetWidth; startHeight = card.offsetHeight;
+    moved = false;
+    if (event.target.closest('.widget-resize-handle')) {
+      mode = 'resize';
+      card.classList.add('is-resizing');
+    } else {
+      mode = 'drag';
+      originX = card.offsetLeft; originY = card.offsetTop;
+      card.classList.add('is-dragging');
+    }
   });
+
   card.addEventListener('pointermove', (event) => {
-    if (!card.hasPointerCapture(event.pointerId)) return;
-    const dx = event.clientX - startX, dy = event.clientY - startY; moved ||= Math.abs(dx) + Math.abs(dy) > 5;
-    const x = Math.max(0, Math.min(canvas.clientWidth - card.offsetWidth, originX + dx));
-    const bottomClearance = $('[data-dashboard]').classList.contains('is-space-mode') ? 96 : 28;
-    const y = Math.max(0, Math.min(canvas.clientHeight - card.offsetHeight - bottomClearance, originY + dy));
-    card.style.left = `${x}px`; card.style.top = `${y}px`;
+    if (!pointers.has(event.pointerId)) return;
+    event.preventDefault();
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    if (pointers.size >= 2) {
+      if (mode !== 'pinch') beginPinch();
+      const points = [...pointers.values()];
+      const distance = Math.max(1, Math.hypot(points[0].x - points[1].x, points[0].y - points[1].y));
+      const scale = distance / pinchDistance;
+      applyWidgetDimensions(card, startWidth * scale, startHeight * scale, canvas);
+      keepWidgetInsideCanvas(card, canvas);
+      return;
+    }
+    const dx = event.clientX - startX, dy = event.clientY - startY;
+    moved ||= Math.abs(dx) + Math.abs(dy) > 5;
+    if (mode === 'resize') {
+      applyWidgetDimensions(card, startWidth + dx, startHeight + dy, canvas);
+      keepWidgetInsideCanvas(card, canvas);
+      return;
+    }
+    if (mode === 'drag') {
+      card.style.left = `${originX + dx}px`;
+      card.style.top = `${originY + dy}px`;
+      keepWidgetInsideCanvas(card, canvas);
+    }
   });
-  card.addEventListener('pointerup', (event) => {
+
+  const finishPointer = (event) => {
+    pointers.delete(event.pointerId);
     if (card.hasPointerCapture(event.pointerId)) card.releasePointerCapture(event.pointerId);
+    if (pointers.size) { mode = 'idle'; return; }
     card.classList.remove('is-dragging'); card.dataset.moved = moved ? 'true' : '';
+    card.classList.remove('is-resizing');
+    if (moved) card.dataset.suppressClickUntil = String(Date.now() + 450);
     widgetPositions[card.dataset.widget] = { x: card.offsetLeft, y: card.offsetTop };
+    widgetSizes[card.dataset.widget] = { width: card.offsetWidth, height: card.offsetHeight };
     localStorage.setItem('structos-space-positions', JSON.stringify(widgetPositions));
+    localStorage.setItem('structos-space-sizes', JSON.stringify(widgetSizes));
+    mode = 'idle';
     setTimeout(() => { delete card.dataset.moved; }, 0);
-  });
+  };
+  card.addEventListener('pointerup', finishPointer);
+  card.addEventListener('pointercancel', finishPointer);
 }
 
 function renderWidgetPicker() {
   const picker = $('[data-widget-picker]'); if (!picker) return;
   picker.replaceChildren(...Object.entries(widgetDefinitions).map(([id, definition]) => {
-    const button = document.createElement('button'); button.type = 'button'; button.className = `widget-choice${selectedWidgets.includes(id) ? ' is-selected' : ''}`; button.textContent = tr(definition.label);
+    const selected = selectedWidgets.includes(id);
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `widget-choice${selected ? ' is-selected' : ''}`;
+    button.innerHTML = `<span class="widget-choice-icon">${definition.icon}</span><span class="widget-choice-copy"><strong>${tr(definition.label)}</strong><small>${tr(selected ? 'onField' : 'addToField')}</small></span><b class="widget-choice-state">${selected ? '✓' : '+'}</b>`;
     button.addEventListener('click', () => { selectedWidgets = selectedWidgets.includes(id) ? selectedWidgets.filter((item) => item !== id) : [...selectedWidgets, id]; localStorage.setItem('structos-space-widgets', JSON.stringify(selectedWidgets)); renderWidgetPicker(); renderWidgets(); });
     return button;
   }));
@@ -873,8 +996,9 @@ function openView(view) {
     return;
   }
   if (view === 'balance') { openBalanceDialog(); return; }
+  if (view === 'finance') { openBalanceDialog(); return; }
   if (view === 'bonuses') { openBonusDialog(); return; }
-  const labels = { subscription: 'tariffSubscription', invitations: 'invitations', invite: 'invite', notifications: 'notifications', documents: 'documents', connections: 'connections', settings: 'settings', acts: 'widgetActs', attention: 'attention', passport: 'builderPassport' };
+  const labels = { subscription: 'tariffSubscription', invitations: 'invitations', invite: 'invite', notifications: 'notifications', documents: 'documents', connections: 'connections', settings: 'settings', acts: 'widgetActs', attention: 'attention', passport: 'builderPassport', tasks: 'widgetTasks', team: 'widgetTeam' };
   showDialog(tr(labels[view] || 'settings'), tr('comingSoon'), `<div class="dialog-options"><div class="dialog-option"><span>StructOS</span><span>→</span></div></div>`);
 }
 
@@ -904,11 +1028,32 @@ async function logout() {
   window.location.replace('login.html#login');
 }
 
+async function forceRefresh() {
+  const button = $('[data-force-refresh]');
+  button.classList.add('is-refreshing');
+  button.disabled = true;
+  try {
+    if ('caches' in window) {
+      const keys = await caches.keys();
+      await Promise.all(keys.filter((key) => key.startsWith('structos-')).map((key) => caches.delete(key)));
+    }
+    if ('serviceWorker' in navigator) {
+      const registration = await navigator.serviceWorker.getRegistration();
+      await registration?.update();
+    }
+  } catch {}
+  const url = new URL(window.location.href);
+  url.searchParams.set('refresh', Date.now().toString());
+  url.hash = 'space';
+  window.location.replace(url);
+}
+
 $('[data-language]').addEventListener('change', (event) => applyLanguage(event.target.value));
 $('[data-refresh-page]').addEventListener('click', (event) => {
   event.currentTarget.classList.add('is-refreshing');
   setTimeout(() => window.location.reload(), 180);
 });
+$('[data-force-refresh]').addEventListener('click', forceRefresh);
 $('[data-theme-toggle]').addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
 $('[data-menu-open]').addEventListener('click', openMenu);
 $$('[data-menu-close]').forEach((button) => button.addEventListener('click', closeMenu));
