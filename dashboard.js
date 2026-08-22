@@ -57,6 +57,27 @@ Object.assign(copy.TJ, {
   filesReady: 'Файлҳо барои таҳлил омодаанд', analysisFilesCount: 'файл'
 });
 
+Object.assign(copy.RU, {
+  readyObjects: 'Готовые к запуску объекты', activeObjects: 'Объекты действующие', noReadyObjects: 'После анализа проекты появятся здесь', noActiveObjects: 'Действующих объектов пока нет', noActiveObjectsCopy: 'Проанализируйте проект и запустите его из блока готовых объектов.',
+  analyzed: 'Проанализирован', started: 'Запущен', inWork: 'В работе', start: 'Запустить', deleteObject: 'Удалить объект', attachedDocuments: 'документа(ов)', objectReady: 'Объект добавлен в готовые к запуску', objectStarted: 'Объект запущен и перенесён в действующие', objectDeleted: 'Объект удалён из готовых',
+  activeLimitTitle: 'Лимит действующих объектов', activeLimitCopy: 'На тарифе «Пользователь» доступен 1 действующий объект. Дополнительный объект можно подключить за 199 ₽.'
+});
+Object.assign(copy.EN, {
+  readyObjects: 'Objects ready to launch', activeObjects: 'Active objects', noReadyObjects: 'Analyzed projects will appear here', noActiveObjects: 'No active objects yet', noActiveObjectsCopy: 'Analyze a project and launch it from the ready objects section.',
+  analyzed: 'Analyzed', started: 'Started', inWork: 'In progress', start: 'Launch', deleteObject: 'Delete object', attachedDocuments: 'document(s)', objectReady: 'Object added to ready-to-launch', objectStarted: 'Object launched and moved to active', objectDeleted: 'Object removed from ready list',
+  activeLimitTitle: 'Active object limit', activeLimitCopy: 'The User plan includes 1 active object. An additional object can be added for 199 ₽.'
+});
+Object.assign(copy.KY, {
+  readyObjects: 'Ишке киргизүүгө даяр объекттер', activeObjects: 'Иштеп жаткан объекттер', noReadyObjects: 'Талданган долбоорлор бул жерде көрүнөт', noActiveObjects: 'Иштеп жаткан объекттер азырынча жок', noActiveObjectsCopy: 'Долбоорду талдап, даяр объекттер бөлүмүнөн ишке киргизиңиз.',
+  analyzed: 'Талданды', started: 'Ишке кирди', inWork: 'Иш жүрүп жатат', start: 'Ишке киргизүү', deleteObject: 'Объектти өчүрүү', attachedDocuments: 'документ', objectReady: 'Объект ишке киргизүүгө даяр тизмеге кошулду', objectStarted: 'Объект ишке кирип, иштеп жаткандарга өттү', objectDeleted: 'Объект даяр тизмеден өчүрүлдү',
+  activeLimitTitle: 'Иштеп жаткан объекттердин чеги', activeLimitCopy: '«Колдонуучу» тарифинде 1 иштеп жаткан объект бар. Кошумча объектти 199 ₽ үчүн кошсо болот.'
+});
+Object.assign(copy.TJ, {
+  readyObjects: 'Объектҳои омода ба оғоз', activeObjects: 'Объектҳои фаъол', noReadyObjects: 'Лоиҳаҳои таҳлилшуда дар ин ҷо пайдо мешаванд', noActiveObjects: 'Ҳоло объекти фаъол нест', noActiveObjectsCopy: 'Лоиҳаро таҳлил карда, аз бахши объектҳои омода оғоз кунед.',
+  analyzed: 'Таҳлил шуд', started: 'Оғоз шуд', inWork: 'Дар кор', start: 'Оғоз кардан', deleteObject: 'Нест кардани объект', attachedDocuments: 'ҳуҷҷат', objectReady: 'Объект ба рӯйхати омода илова шуд', objectStarted: 'Объект оғоз ва ба фаъол гузаронида шуд', objectDeleted: 'Объект аз рӯйхати омода нест шуд',
+  activeLimitTitle: 'Маҳдудияти объектҳои фаъол', activeLimitCopy: 'Дар тарифи «Истифодабаранда» 1 объекти фаъол дастрас аст. Объекти иловагӣ 199 ₽ арзиш дорад.'
+});
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -65,6 +86,8 @@ const DEMO_SESSION_KEY = 'structos-demo-session';
 const FINANCE_KEY = 'structos-finance-v1';
 const UPLOADS_KEY = 'structos-analysis-uploads-v1';
 const OBJECT_NAME_KEY = 'structos-analysis-object-name';
+const OBJECTS_KEY = 'structos-objects-v1';
+const ACTIVE_OBJECT_LIMIT = 1;
 const uploadRules = {
   project: { accept: '.pdf,.dwg,.rvt,.jpg,.jpeg,.png,.webp,.heic,image/*', extensions: ['pdf', 'dwg', 'rvt', 'jpg', 'jpeg', 'png', 'webp', 'heic'], formats: 'PDF, DWG, RVT, JPG, PNG, WEBP, HEIC', maxMb: 500 },
   contract: { accept: '.pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.heic,image/*', extensions: ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png', 'webp', 'heic'], formats: 'PDF, DOC, DOCX, JPG, PNG, WEBP, HEIC', maxMb: 100 },
@@ -112,6 +135,27 @@ function loadUploads() {
 
 const selectedFiles = loadUploads();
 
+function loadObjectRegistry() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(OBJECTS_KEY) || '[]');
+    if (Array.isArray(saved)) {
+      return saved
+        .filter((object) => object && typeof object.name === 'string' && ['ready', 'active'].includes(object.status))
+        .map((object) => ({
+          id: String(object.id || `object-${Date.now()}-${Math.random().toString(16).slice(2)}`),
+          name: object.name.trim().slice(0, 100) || 'Объект',
+          status: object.status,
+          analyzedAt: object.analyzedAt || new Date().toISOString(),
+          startedAt: object.startedAt || null,
+          files: Array.isArray(object.files) ? object.files.slice(0, 3) : []
+        }));
+    }
+  } catch {}
+  return [];
+}
+
+let objectRegistry = loadObjectRegistry();
+
 function tr(key) { return copy[language]?.[key] ?? copy.RU[key] ?? key; }
 
 function applyLanguage(next) {
@@ -123,6 +167,7 @@ function applyLanguage(next) {
   renderFinance();
   renderReferral();
   renderAnalysisCards();
+  renderObjects();
   renderWidgets();
   renderWidgetPicker();
 }
@@ -307,7 +352,8 @@ function renderWidgets() {
     const card = document.createElement('button');
     card.type = 'button'; card.className = 'space-widget'; card.dataset.widget = id;
     card.style.left = `${position.x}px`; card.style.top = `${position.y}px`;
-    card.innerHTML = `<span>${definition.icon}</span><strong>${tr(definition.label)}</strong><small>${definition.hint} · ${tr('quickFunction')}</small>`;
+    const hint = id === 'objects' ? `${objectRegistry.filter((object) => object.status === 'active').length} / ${ACTIVE_OBJECT_LIMIT}` : definition.hint;
+    card.innerHTML = `<span>${definition.icon}</span><strong>${tr(definition.label)}</strong><small>${hint} · ${tr('quickFunction')}</small>`;
     card.addEventListener('click', () => { if (!card.dataset.moved) openView(id === 'analysis' ? 'project' : id); });
     enableWidgetDrag(card, canvas);
     canvas.append(card);
@@ -409,6 +455,105 @@ function renderAnalysisCards() {
     fileName.textContent = file?.name || '';
     card.setAttribute('aria-label', `${tr(kind)}. ${file ? file.name : `0 ${tr('of')} 1`}`);
   });
+}
+
+function saveObjects() {
+  localStorage.setItem(OBJECTS_KEY, JSON.stringify(objectRegistry));
+}
+
+function createObjectId() {
+  return globalThis.crypto?.randomUUID?.() || `object-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+}
+
+function formatObjectDate(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return '';
+  return new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric' }).format(date);
+}
+
+function objectRowMarkup(object) {
+  const isReady = object.status === 'ready';
+  const fileCount = Array.isArray(object.files) ? object.files.length : 0;
+  const meta = isReady
+    ? `${tr('analyzed')}: ${formatObjectDate(object.analyzedAt)} · ${fileCount} ${tr('attachedDocuments')}`
+    : `${tr('started')}: ${formatObjectDate(object.startedAt || object.analyzedAt)}`;
+  const actions = isReady
+    ? `<div class="object-row-actions"><button class="object-start-button" type="button" data-start-ready="${escapeHtml(object.id)}">${escapeHtml(tr('start'))}</button><button class="object-delete-button" type="button" data-delete-ready="${escapeHtml(object.id)}" aria-label="${escapeHtml(tr('deleteObject'))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></button></div>`
+    : `<span class="object-status-chip">${escapeHtml(tr('inWork'))}</span>`;
+  return `<article class="status-object-row ${isReady ? 'is-ready' : 'is-active'}"><span class="object-row-icon" aria-hidden="true">${isReady ? '◇' : '⌂'}</span><div class="object-row-copy"><strong>${escapeHtml(object.name)}</strong><small>${escapeHtml(meta)}</small></div>${actions}</article>`;
+}
+
+function renderObjects() {
+  const ready = objectRegistry.filter((object) => object.status === 'ready');
+  const active = objectRegistry.filter((object) => object.status === 'active');
+  $$('[data-ready-objects-list]').forEach((list) => { list.innerHTML = ready.map(objectRowMarkup).join(''); });
+  $$('[data-active-objects-list]').forEach((list) => { list.innerHTML = active.map(objectRowMarkup).join(''); });
+  $$('[data-ready-count]').forEach((count) => { count.textContent = String(ready.length); });
+  $$('[data-active-count]').forEach((count) => { count.textContent = String(active.length); });
+  $$('[data-active-available]').forEach((count) => { count.textContent = String(Math.max(0, ACTIVE_OBJECT_LIMIT - active.length)); });
+  $$('[data-ready-empty]').forEach((empty) => { empty.hidden = ready.length > 0; });
+  $$('[data-active-empty]').forEach((empty) => { empty.hidden = active.length > 0; });
+  $$('[data-start-ready]').forEach((button) => button.addEventListener('click', () => startReadyObject(button.dataset.startReady)));
+  $$('[data-delete-ready]').forEach((button) => button.addEventListener('click', () => deleteReadyObject(button.dataset.deleteReady)));
+}
+
+function registerAnalyzedObject(name, readyFiles) {
+  const normalizedName = String(name).trim().toLocaleLowerCase();
+  const existing = objectRegistry.find((object) => object.name.trim().toLocaleLowerCase() === normalizedName);
+  if (existing?.status === 'active') return existing;
+  const files = readyFiles.map(([kind, file]) => ({ kind, name: file.name, size: file.size || 0 }));
+  if (existing) {
+    existing.analyzedAt = new Date().toISOString();
+    existing.files = files;
+    existing.status = 'ready';
+    existing.startedAt = null;
+    saveObjects();
+    renderObjects();
+    renderWidgets();
+    return existing;
+  }
+  const object = { id: createObjectId(), name: String(name).trim(), status: 'ready', analyzedAt: new Date().toISOString(), startedAt: null, files };
+  objectRegistry.unshift(object);
+  saveObjects();
+  renderObjects();
+  renderWidgets();
+  return object;
+}
+
+function showActiveLimit() {
+  showDialog(tr('activeLimitTitle'), tr('activeLimitCopy'));
+}
+
+function startReadyObject(id) {
+  const object = objectRegistry.find((item) => item.id === id);
+  if (!object) return;
+  if (object.status === 'active') {
+    $('[data-dialog]')?.close();
+    setPanel('objects');
+    return;
+  }
+  const activeCount = objectRegistry.filter((item) => item.status === 'active').length;
+  if (activeCount >= ACTIVE_OBJECT_LIMIT) {
+    showActiveLimit();
+    return;
+  }
+  object.status = 'active';
+  object.startedAt = new Date().toISOString();
+  saveObjects();
+  renderObjects();
+  renderWidgets();
+  $('[data-dialog]')?.close();
+  showToast(tr('objectStarted'));
+}
+
+function deleteReadyObject(id) {
+  const nextRegistry = objectRegistry.filter((object) => object.id !== id || object.status !== 'ready');
+  if (nextRegistry.length === objectRegistry.length) return;
+  objectRegistry = nextRegistry;
+  saveObjects();
+  renderObjects();
+  renderWidgets();
+  showToast(tr('objectDeleted'));
 }
 
 function isAllowedFile(file, rule) {
@@ -576,9 +721,10 @@ function runAnalysis() {
   showDialog(`${tr('analysis')}: ${title}`, `${tr('filesReady')}: ${readyFiles.length} ${tr('analysisFilesCount')}`, `${filesMarkup}<div class="analysis-loader"><span></span><span></span><span></span></div>`);
   analysisTimer = setTimeout(() => {
     if (!$('[data-dialog]').open) return;
+    const analyzedObject = registerAnalyzedObject(objectName, readyFiles);
     showDialog(tr('analysisComplete'), tr('analysisCompleteCopy'), `<div class="result-actions"><button class="outline-button" type="button" data-view-report>${tr('viewReport')}</button><button class="primary-button" type="button" data-start-object>${tr('startObject')}</button></div>`);
     $('[data-view-report]')?.addEventListener('click', () => showDialog(`${tr('report')}: ${title}`, tr('comingSoon'), `<div class="dialog-options"><div class="dialog-option"><span>StructOS ${title}</span><span>→</span></div></div>`));
-    $('[data-start-object]')?.addEventListener('click', () => { $('[data-dialog]').close(); openObjectDialog(); });
+    $('[data-start-object]')?.addEventListener('click', () => startReadyObject(analyzedObject.id));
   }, 1100);
 }
 
@@ -596,9 +742,23 @@ function openView(view) {
 }
 
 function openObjectDialog() {
+  if (objectRegistry.filter((object) => object.status === 'active').length >= ACTIVE_OBJECT_LIMIT) {
+    showActiveLimit();
+    return;
+  }
   showDialog(tr('addObject'), tr('noObjectsCopy'), `<div class="object-form"><label><span class="sr-only">${tr('objectName')}</span><input data-object-name maxlength="80" placeholder="${tr('objectPlaceholder')}" /></label><button class="primary-button" type="button" data-create-object>${tr('create')}</button></div>`);
   setTimeout(() => $('[data-object-name]')?.focus(), 40);
-  $('[data-create-object]')?.addEventListener('click', () => { const name = $('[data-object-name]').value.trim(); if (!name) { $('[data-object-name]').focus(); return; } $('[data-dialog]').close(); showToast(tr('objectCreated')); });
+  $('[data-create-object]')?.addEventListener('click', () => {
+    const name = $('[data-object-name]').value.trim();
+    if (!name) { $('[data-object-name]').focus(); return; }
+    const now = new Date().toISOString();
+    objectRegistry.unshift({ id: createObjectId(), name, status: 'active', analyzedAt: now, startedAt: now, files: [] });
+    saveObjects();
+    renderObjects();
+    renderWidgets();
+    $('[data-dialog]').close();
+    showToast(tr('objectCreated'));
+  });
 }
 
 async function logout() {
@@ -636,6 +796,7 @@ renderWidgetPicker();
 renderWidgets();
 selectAnalysis(selectedAnalysis);
 renderAnalysisCards();
+renderObjects();
 setPanel(location.hash.slice(1) || 'home');
 await initAuth();
 
