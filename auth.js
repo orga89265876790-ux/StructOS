@@ -24,7 +24,7 @@ const copy = {
 
 Object.assign(copy.EN, { home: 'Home', getPassport: 'Get your Builder Passport', languageNote: 'Fill in the form in any language — profile data will be stored in Russian', role: 'Primary role', chooseRole: 'Choose a role', roleUser: 'User', roleExecutor: 'Contractor / worker', roleSupplier: 'Supplier', roleAggregator: 'Aggregator', profession: 'Primary profession', professionHint: 'Type a profession and select it from the list', professionPlaceholder: 'Start typing a profession', professionInvalid: 'Select a profession from the suggested list.' });
 Object.assign(copy.TJ, { home: 'Ба саҳифаи асосӣ', getPassport: 'Шиносномаи сохтмончиро гиред', languageNote: 'Бо забони бароҳат пур кунед — маълумот дар профил ба русӣ нигоҳ дошта мешавад', role: 'Нақши асосӣ', chooseRole: 'Нақшро интихоб кунед', roleUser: 'Истифодабаранда', roleExecutor: 'Иҷрокунанда', roleSupplier: 'Таъминкунанда', roleAggregator: 'Агрегатор', profession: 'Касби асосӣ', professionHint: 'Номи касбро ворид карда, аз рӯйхат интихоб кунед', professionPlaceholder: 'Навиштани касбро оғоз кунед', professionInvalid: 'Касбро аз рӯйхати пешниҳодшуда интихоб кунед.' });
-Object.assign(copy.KG, { home: 'Башкы бетке', getPassport: 'Куруучунун паспортун алыңыз', languageNote: 'Ыңгайлуу тилде толтуруңуз — профилдеги маалымат орус тилинде сакталат', role: 'Негизги роль', chooseRole: 'Ролду тандаңыз', roleUser: 'Колдонуучу', roleExecutor: 'Аткаруучу', roleSupplier: 'Жеткирүүчү', roleAggregator: 'Агрегатор', profession: 'Негизги кесип', professionHint: 'Кесипти жаза баштап, тизмеден тандаңыз', professionPlaceholder: 'Кесипти жаза баштаңыз', professionInvalid: 'Кесипти сунушталган тизмеден тандаңыз.' });
+Object.assign(copy.KY, { home: 'Башкы бетке', getPassport: 'Куруучунун паспортун алыңыз', languageNote: 'Ыңгайлуу тилде толтуруңуз — профилдеги маалымат орус тилинде сакталат', role: 'Негизги роль', chooseRole: 'Ролду тандаңыз', roleUser: 'Колдонуучу', roleExecutor: 'Аткаруучу', roleSupplier: 'Жеткирүүчү', roleAggregator: 'Агрегатор', profession: 'Негизги кесип', professionHint: 'Кесипти жаза баштап, тизмеден тандаңыз', professionPlaceholder: 'Кесипти жаза баштаңыз', professionInvalid: 'Кесипти сунушталган тизмеден тандаңыз.' });
 Object.assign(copy.TR, { home: 'Ana sayfa', getPassport: 'İnşaatçı Pasaportunuzu alın', languageNote: 'Formu istediğiniz dilde doldurun — profil verileri Rusça kaydedilir', role: 'Ana rol', chooseRole: 'Rol seçin', roleUser: 'Kullanıcı', roleExecutor: 'Uygulayıcı', roleSupplier: 'Tedarikçi', roleAggregator: 'Aracı', profession: 'Ana meslek', professionHint: 'Mesleği yazmaya başlayın ve listeden seçin', professionPlaceholder: 'Mesleği yazmaya başlayın', professionInvalid: 'Önerilen listeden bir meslek seçin.' });
 
 const supabaseUrl = supabaseConfig.url || import.meta.env?.VITE_SUPABASE_URL;
@@ -47,7 +47,7 @@ function tr(key) { return copy[language]?.[key] ?? ru[key] ?? key; }
 function applyLanguage(nextLanguage) {
   language = copy[nextLanguage] ? nextLanguage : 'RU';
   localStorage.setItem('structos-language', language);
-  root.lang = { RU: 'ru', EN: 'en', TJ: 'tg', KG: 'ky', TR: 'tr' }[language];
+  root.lang = { RU: 'ru', EN: 'en', TJ: 'tg', KY: 'ky', TR: 'tr' }[language];
   $('.auth-language').value = language;
   $$('[data-auth-i18n]').forEach((element) => { element.textContent = tr(element.dataset.authI18n); });
   const login = $('[data-auth-form="login"]');
@@ -174,7 +174,7 @@ async function submitLogin(form) {
   setBusy(form, true);
   const { error } = await authClient.auth.signInWithPassword({ email: form.elements.email.value.trim(), password: form.elements.password.value });
   setBusy(form, false);
-  if (error) setFeedback(friendlyError(error), 'error'); else setFeedback(tr('loginSuccess'), 'success');
+  if (error) setFeedback(friendlyError(error), 'error'); else { setFeedback(tr('loginSuccess'), 'success'); setTimeout(() => window.location.assign('dashboard.html'), 450); }
 }
 
 async function submitRegister(form) {
@@ -182,13 +182,13 @@ async function submitRegister(form) {
   if (!authClient) { setFeedback(tr('backendPending'), 'info'); return; }
   setBusy(form, true);
   const redirect = new URL('login.html#login', window.location.href).href;
-  const { error } = await authClient.auth.signUp({
+  const { data, error } = await authClient.auth.signUp({
     email: form.elements.email.value.trim(),
     password: form.elements.password.value,
     options: { emailRedirectTo: redirect, data: { full_name: form.elements.fullName.value.trim(), phone: form.elements.phone.value.trim(), city: form.elements.city.value.trim(), primary_role: form.elements.role.value, primary_profession: form.elements.professionDisplay.dataset.profession } }
   });
   setBusy(form, false);
-  if (error) setFeedback(friendlyError(error), 'error'); else { setFeedback(tr('registerSuccess'), 'success'); form.reset(); updateStrength(''); }
+  if (error) setFeedback(friendlyError(error), 'error'); else { setFeedback(tr('registerSuccess'), 'success'); form.reset(); updateStrength(''); if (data?.session) setTimeout(() => window.location.assign('dashboard.html'), 450); }
 }
 
 async function submitRecovery(form) {

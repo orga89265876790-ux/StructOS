@@ -11,7 +11,8 @@ export default defineConfig({
         features: resolve(process.cwd(), 'features.html'),
         pricing: resolve(process.cwd(), 'pricing.html'),
         video: resolve(process.cwd(), 'video.html'),
-        demo: resolve(process.cwd(), 'demo.html')
+        demo: resolve(process.cwd(), 'demo.html'),
+        dashboard: resolve(process.cwd(), 'dashboard.html')
       }
     }
   }

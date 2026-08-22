@@ -1,5 +1,5 @@
-const CACHE_NAME = 'structos-shell-v11';
-const APP_SHELL = ['./'];
+const CACHE_NAME = 'structos-shell-v12';
+const APP_SHELL = ['./', './dashboard.html'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
