@@ -73,6 +73,35 @@ Object.assign(copy.KY, { forceRefresh: 'Мажбурлап жаңыртуу', re
 Object.assign(copy.TJ, { forceRefresh: 'Навсозии маҷбурӣ', resizeHint: 'Бо ду ангушт ё кашидани кунҷ андозаро иваз кунед', onField: 'Дар майдон аст', addToField: 'Ба майдон илова кардан', widgetTasks: 'Вазифаҳо', widgetTeam: 'Даста', widgetFinance: 'Молия' });
 
 Object.assign(copy.RU, {
+  money: 'Деньги', quickCashflow: 'Быстрые доходы/расходы', cashflowDescription: 'Короткий финансовый учёт по каждому объекту', noCashObjects: 'Объектов для учёта пока нет', noCashObjectsCopy: 'Добавьте объект, укажите его стоимость и ведите полученные суммы и расходы.',
+  objectCost: 'Стоимость объекта', workByFact: 'Работаю от факта выполнения', paymentByFact: 'Оплата по факту', received: 'Получено', expense: 'Расход', totalReceived: 'Итого получено', totalExpense: 'Итого расход', remainingFromCost: 'Осталось от стоимости объекта', income: 'Доход', balanceResult: 'Баланс: доход − расход', comment: 'Комментарий', addIncome: 'Добавить доход', addExpense: 'Добавить расход', createCashObject: 'Создать финансовый объект', cashObjectCreated: 'Объект добавлен в быстрый учёт', amountRequired: 'Укажите сумму и комментарий', noEntries: 'Записей пока нет',
+  widgetAppearance: 'Оформление блока', doubleTapHint: 'Двойное касание открывает оформление', blockColor: 'Внутренний цвет', pulseBlock: 'Пульсация блока',
+  widgetDrawing: 'Рисование', drawing: 'Рисование', lineColor: 'Цвет', lineWidth: 'Толщина', undo: 'Отменить', clearDrawing: 'Очистить', stylusHint: 'Рисуйте пальцем, стилусом или Apple Pencil', uploadBackground: 'Загрузить файл', save: 'Сохранить', viewSaved: 'Сохранённое', format: 'Формат', shareDrawing: 'Отправить', savedDrawings: 'Сохранённые рисунки', noSavedDrawings: 'Сохранённых рисунков пока нет', loadDrawing: 'Открыть', drawingSaved: 'Рисунок сохранён', backgroundLoaded: 'Страница загружена для рисования', drawingShareReady: 'Файл подготовлен', newSketch: 'Новый эскиз',
+  todoEmpty: 'Добавьте первое дело — выполненные пункты останутся в списке', newTask: 'Новое дело', addTask: 'Добавить', taskAdded: 'Дело добавлено'
+});
+Object.assign(copy.EN, {
+  money: 'Money', quickCashflow: 'Quick income/expenses', cashflowDescription: 'Simple financial tracking for each object', noCashObjects: 'No tracked objects yet', noCashObjectsCopy: 'Add an object, set its value, and record received amounts and expenses.',
+  objectCost: 'Object value', workByFact: 'Work by actual completion', paymentByFact: 'Payment by actual completion', received: 'Received', expense: 'Expense', totalReceived: 'Total received', totalExpense: 'Total expense', remainingFromCost: 'Remaining from object value', income: 'Income', balanceResult: 'Balance: income − expense', comment: 'Comment', addIncome: 'Add income', addExpense: 'Add expense', createCashObject: 'Create financial object', cashObjectCreated: 'Object added to quick tracking', amountRequired: 'Enter an amount and comment', noEntries: 'No entries yet',
+  widgetAppearance: 'Block appearance', doubleTapHint: 'Double tap opens appearance settings', blockColor: 'Inner color', pulseBlock: 'Pulse block',
+  widgetDrawing: 'Drawing', drawing: 'Drawing', lineColor: 'Color', lineWidth: 'Width', undo: 'Undo', clearDrawing: 'Clear', stylusHint: 'Draw with a finger, stylus, or Apple Pencil', uploadBackground: 'Upload file', save: 'Save', viewSaved: 'Saved', format: 'Format', shareDrawing: 'Share', savedDrawings: 'Saved drawings', noSavedDrawings: 'No saved drawings yet', loadDrawing: 'Open', drawingSaved: 'Drawing saved', backgroundLoaded: 'Page loaded for drawing', drawingShareReady: 'File prepared', newSketch: 'New sketch',
+  todoEmpty: 'Add your first task — completed items stay in the list', newTask: 'New task', addTask: 'Add', taskAdded: 'Task added'
+});
+Object.assign(copy.KY, {
+  money: 'Акча', quickCashflow: 'Тез киреше/чыгаша', cashflowDescription: 'Ар бир объект боюнча кыска каржы эсеби', noCashObjects: 'Эсеп үчүн объект жок', noCashObjectsCopy: 'Объект кошуп, баасын, түшкөн акчаны жана чыгашаны жазыңыз.',
+  objectCost: 'Объекттин баасы', workByFact: 'Аткарылган иш боюнча иштейм', paymentByFact: 'Факт боюнча төлөм', received: 'Алынды', expense: 'Чыгаша', totalReceived: 'Бардыгы алынды', totalExpense: 'Бардык чыгаша', remainingFromCost: 'Объекттин баасынан калды', income: 'Киреше', balanceResult: 'Баланс: киреше − чыгаша', comment: 'Комментарий', addIncome: 'Киреше кошуу', addExpense: 'Чыгаша кошуу', createCashObject: 'Каржы объектисин түзүү', cashObjectCreated: 'Объект тез эсепке кошулду', amountRequired: 'Сумманы жана комментарийди жазыңыз', noEntries: 'Жазуу жок',
+  widgetAppearance: 'Блоктун көрүнүшү', doubleTapHint: 'Эки жолу тийүү көрүнүштү ачат', blockColor: 'Ички түс', pulseBlock: 'Блоктун пульсациясы',
+  widgetDrawing: 'Сүрөт тартуу', drawing: 'Сүрөт тартуу', lineColor: 'Түс', lineWidth: 'Калыңдык', undo: 'Артка кайтаруу', clearDrawing: 'Тазалоо', stylusHint: 'Манжа, стилус же Apple Pencil менен тартыңыз', uploadBackground: 'Файл жүктөө', save: 'Сактоо', viewSaved: 'Сакталгандар', format: 'Формат', shareDrawing: 'Жөнөтүү', savedDrawings: 'Сакталган сүрөттөр', noSavedDrawings: 'Сүрөттөр жок', loadDrawing: 'Ачуу', drawingSaved: 'Сүрөт сакталды', backgroundLoaded: 'Барак сүрөт тартууга жүктөлдү', drawingShareReady: 'Файл даяр', newSketch: 'Жаңы эскиз',
+  todoEmpty: 'Биринчи ишти кошуңуз — аткарылган пункттар тизмеде калат', newTask: 'Жаңы иш', addTask: 'Кошуу', taskAdded: 'Иш кошулду'
+});
+Object.assign(copy.TJ, {
+  money: 'Пул', quickCashflow: 'Даромад/хароҷоти зуд', cashflowDescription: 'Ҳисоби кӯтоҳи молиявӣ барои ҳар объект', noCashObjects: 'Объект барои ҳисоб нест', noCashObjectsCopy: 'Объектро илова карда, арзиш, маблағи гирифташуда ва хароҷотро ворид кунед.',
+  objectCost: 'Арзиши объект', workByFact: 'Аз рӯи иҷрои воқеӣ кор мекунам', paymentByFact: 'Пардохт аз рӯи факт', received: 'Гирифта шуд', expense: 'Хароҷот', totalReceived: 'Ҳамагӣ гирифта шуд', totalExpense: 'Ҳамагӣ хароҷот', remainingFromCost: 'Аз арзиши объект монд', income: 'Даромад', balanceResult: 'Тавозун: даромад − хароҷот', comment: 'Шарҳ', addIncome: 'Иловаи даромад', addExpense: 'Иловаи хароҷот', createCashObject: 'Сохтани объекти молиявӣ', cashObjectCreated: 'Объект ба ҳисоби зуд илова шуд', amountRequired: 'Маблағ ва шарҳро ворид кунед', noEntries: 'Сабт нест',
+  widgetAppearance: 'Намуди блок', doubleTapHint: 'Ду бор ламс намудро мекушояд', blockColor: 'Ранги дохилӣ', pulseBlock: 'Набзи блок',
+  widgetDrawing: 'Расмкашӣ', drawing: 'Расмкашӣ', lineColor: 'Ранг', lineWidth: 'Ғафсӣ', undo: 'Бекор кардан', clearDrawing: 'Тоза кардан', stylusHint: 'Бо ангушт, стилус ё Apple Pencil кашед', uploadBackground: 'Бор кардани файл', save: 'Нигоҳ доштан', viewSaved: 'Нигоҳшудаҳо', format: 'Формат', shareDrawing: 'Фиристодан', savedDrawings: 'Расмҳои нигоҳшуда', noSavedDrawings: 'Расм нест', loadDrawing: 'Кушодан', drawingSaved: 'Расм нигоҳ дошта шуд', backgroundLoaded: 'Саҳифа барои расмкашӣ бор шуд', drawingShareReady: 'Файл омода шуд', newSketch: 'Эскизи нав',
+  todoEmpty: 'Кори аввалро илова кунед — пунктҳои иҷрошуда дар рӯйхат мемонанд', newTask: 'Кори нав', addTask: 'Илова', taskAdded: 'Кор илова шуд'
+});
+
+Object.assign(copy.RU, {
   readyObjects: 'Готовые к запуску объекты', activeObjects: 'Объекты действующие', noReadyObjects: 'После анализа проекты появятся здесь', noActiveObjects: 'Действующих объектов пока нет', noActiveObjectsCopy: 'Проанализируйте проект и запустите его из блока готовых объектов.',
   analyzed: 'Проанализирован', started: 'Запущен', inWork: 'В работе', start: 'Запустить', deleteObject: 'Удалить объект', attachedDocuments: 'документа(ов)', objectReady: 'Объект добавлен в готовые к запуску', objectStarted: 'Объект запущен и перенесён в действующие', objectDeleted: 'Объект удалён из готовых',
   activeLimitTitle: 'Лимит действующих объектов', activeLimitCopy: 'На тарифе «Пользователь» доступен 1 действующий объект. Дополнительный объект можно подключить за 199 ₽.'
@@ -104,6 +133,9 @@ const OBJECT_NAME_KEY = 'structos-analysis-object-name';
 const OBJECTS_KEY = 'structos-objects-v1';
 const PROFILE_COMPLETION_KEY = 'structos-profile-completion';
 const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
+const WIDGET_STYLES_KEY = 'structos-space-widget-styles-v1';
+const TODO_KEY = 'structos-space-todo-v1';
+const CASHFLOW_KEY = 'structos-cashflow-v1';
 const ACTIVE_OBJECT_LIMIT = 1;
 const uploadRules = {
   project: { accept: '.pdf,.dwg,.rvt,.jpg,.jpeg,.png,.webp,.heic,image/*', extensions: ['pdf', 'dwg', 'rvt', 'jpg', 'jpeg', 'png', 'webp', 'heic'], formats: 'PDF, DWG, RVT, JPG, PNG, WEBP, HEIC', maxMb: 500 },
@@ -116,6 +148,7 @@ let activeUploadKind = 'project';
 let pendingFile = null;
 let activeUploadObjectId = null;
 let newObjectNameDraft = '';
+const widgetColors = ['#0b63ce', '#00a9df', '#04a77b', '#41a447', '#d5a800', '#e87919', '#d64254', '#7957d5', '#c04ea3', '#44546a'];
 
 function loadFinance() {
   try {
@@ -194,6 +227,7 @@ function applyLanguage(next) {
   renderObjects();
   renderWidgets();
   renderWidgetPicker();
+  renderCashflow();
 }
 
 function applyTheme(next) {
@@ -336,7 +370,7 @@ async function initAuth() {
 }
 
 function setPanel(name) {
-  const next = ['home', 'space', 'objects', 'profile'].includes(name) ? name : 'home';
+  const next = ['home', 'space', 'objects', 'cashflow', 'profile'].includes(name) ? name : 'home';
   $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
   if (next !== 'space') {
     $('[data-space-toolbar]').hidden = true;
@@ -347,6 +381,7 @@ function setPanel(name) {
   history.replaceState(null, '', `#${next}`);
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (next === 'space') requestAnimationFrame(renderWidgets);
+  if (next === 'cashflow') renderCashflow();
   closeMenu();
 }
 
@@ -377,7 +412,8 @@ const widgetDefinitions = {
   estimate: { label: 'estimate', icon: '₽', hint: '1' },
   tasks: { label: 'widgetTasks', icon: '☑', hint: '0' },
   team: { label: 'widgetTeam', icon: '◎', hint: '0' },
-  finance: { label: 'widgetFinance', icon: '₽', hint: '0 ₽' }
+  finance: { label: 'widgetFinance', icon: '₽', hint: '0 ₽' },
+  drawing: { label: 'widgetDrawing', icon: '✎', hint: '∞' }
 };
 const defaultWidgets = Object.keys(widgetDefinitions);
 const WIDGETS_VERSION_KEY = 'structos-space-widgets-version';
@@ -389,13 +425,19 @@ function readStoredJSON(key, fallback) {
 
 const storedWidgets = readStoredJSON('structos-space-widgets', defaultWidgets);
 let selectedWidgets = (Array.isArray(storedWidgets) ? storedWidgets : defaultWidgets).filter((id) => widgetDefinitions[id]);
-if (localStorage.getItem(WIDGETS_VERSION_KEY) !== '2') {
+if (localStorage.getItem(WIDGETS_VERSION_KEY) !== '3') {
   selectedWidgets = [...defaultWidgets];
   localStorage.setItem('structos-space-widgets', JSON.stringify(selectedWidgets));
-  localStorage.setItem(WIDGETS_VERSION_KEY, '2');
+  localStorage.setItem(WIDGETS_VERSION_KEY, '3');
 }
 let widgetPositions = readStoredJSON('structos-space-positions', {});
 let widgetSizes = readStoredJSON('structos-space-sizes', {});
+let widgetStyles = readStoredJSON(WIDGET_STYLES_KEY, {});
+let todoItems = readStoredJSON(TODO_KEY, []);
+if (!todoItems || !Array.isArray(todoItems)) todoItems = [];
+todoItems = todoItems
+  .filter((item) => item && typeof item.text === 'string')
+  .map((item) => ({ id: String(item.id || `task-${Date.now()}-${Math.random().toString(16).slice(2)}`), text: item.text.slice(0, 160), done: Boolean(item.done), createdAt: item.createdAt || new Date().toISOString() }));
 
 function defaultPosition(index) {
   const cols = window.innerWidth >= 900 ? 4 : window.innerWidth >= 620 ? 3 : 2;
@@ -438,13 +480,32 @@ function renderWidgets() {
     const card = document.createElement('button');
     card.type = 'button'; card.className = 'space-widget'; card.dataset.widget = id;
     card.style.left = `${position.x}px`; card.style.top = `${position.y}px`;
+    const style = widgetStyles[id] || {};
+    if (widgetColors.includes(style.color)) card.style.setProperty('--widget-color', style.color);
+    card.classList.toggle('is-pulsing', Boolean(style.pulse));
     const size = widgetSizes[id] || { width: 138, height: 96 };
     applyWidgetDimensions(card, size.width, size.height, canvas);
-    const hint = id === 'objects' ? `${objectRegistry.filter((object) => object.status === 'active').length} / ${ACTIVE_OBJECT_LIMIT}` : definition.hint;
+    const hint = id === 'objects'
+      ? `${objectRegistry.filter((object) => object.status === 'active').length} / ${ACTIVE_OBJECT_LIMIT}`
+      : id === 'tasks' ? `${todoItems.filter((item) => !item.done).length} / ${todoItems.length}`
+        : id === 'finance' ? `${cashflowObjects.length}` : definition.hint;
     card.innerHTML = `<span class="space-widget-icon">${definition.icon}</span><strong>${tr(definition.label)}</strong><small>${hint} · ${tr('quickFunction')}</small><i class="widget-resize-handle" aria-hidden="true"></i>`;
+    let tapTimer = 0;
+    let lastTap = 0;
     card.addEventListener('click', (event) => {
       if (Date.now() < Number(card.dataset.suppressClickUntil || 0) || event.target.closest('.widget-resize-handle')) return;
-      openView(id === 'analysis' ? 'project' : id);
+      const now = Date.now();
+      if (now - lastTap < 330) {
+        clearTimeout(tapTimer);
+        lastTap = 0;
+        openWidgetAppearance(id);
+        return;
+      }
+      lastTap = now;
+      tapTimer = window.setTimeout(() => {
+        lastTap = 0;
+        openView(id === 'analysis' ? 'project' : id);
+      }, 330);
     });
     enableWidgetInteraction(card, canvas);
     canvas.append(card);
@@ -547,6 +608,75 @@ function renderWidgetPicker() {
   }));
 }
 
+function saveWidgetStyles() {
+  localStorage.setItem(WIDGET_STYLES_KEY, JSON.stringify(widgetStyles));
+}
+
+function openWidgetAppearance(id) {
+  const definition = widgetDefinitions[id];
+  if (!definition) return;
+  const current = widgetStyles[id] || {};
+  const colors = widgetColors.map((color, index) => `<button class="widget-color-swatch${current.color === color ? ' is-selected' : ''}" type="button" data-widget-color="${color}" style="--swatch:${color}" aria-label="${tr('blockColor')} ${index + 1}"></button>`).join('');
+  showDialog(tr('widgetAppearance'), tr('doubleTapHint'), `<section class="widget-appearance"><h3>${tr(definition.label)} · ${tr('blockColor')}</h3><div class="widget-color-grid">${colors}</div><button class="widget-pulse-toggle${current.pulse ? ' is-on' : ''}" type="button" data-widget-pulse aria-pressed="${Boolean(current.pulse)}"><span>${tr('pulseBlock')}</span><i aria-hidden="true"></i></button></section>`);
+
+  $$('[data-widget-color]', $('[data-dialog-content]')).forEach((button) => button.addEventListener('click', () => {
+    widgetStyles[id] = { ...(widgetStyles[id] || {}), color: button.dataset.widgetColor };
+    saveWidgetStyles();
+    $$('[data-widget-color]', $('[data-dialog-content]')).forEach((swatch) => swatch.classList.toggle('is-selected', swatch === button));
+    const card = $(`.space-widget[data-widget="${id}"]`);
+    card?.style.setProperty('--widget-color', button.dataset.widgetColor);
+  }));
+  $('[data-widget-pulse]', $('[data-dialog-content]'))?.addEventListener('click', (event) => {
+    const pulse = !Boolean(widgetStyles[id]?.pulse);
+    widgetStyles[id] = { ...(widgetStyles[id] || {}), pulse };
+    saveWidgetStyles();
+    event.currentTarget.classList.toggle('is-on', pulse);
+    event.currentTarget.setAttribute('aria-pressed', String(pulse));
+    $(`.space-widget[data-widget="${id}"]`)?.classList.toggle('is-pulsing', pulse);
+  });
+}
+
+function saveTodoItems() {
+  localStorage.setItem(TODO_KEY, JSON.stringify(todoItems));
+}
+
+function renderTodoList() {
+  const list = $('[data-todo-list]', $('[data-dialog-content]'));
+  if (!list) return;
+  if (!todoItems.length) {
+    list.innerHTML = `<div class="todo-empty">${tr('todoEmpty')}</div>`;
+    return;
+  }
+  list.innerHTML = todoItems.map((item) => `<label class="todo-row${item.done ? ' is-done' : ''}"><input type="checkbox" data-todo-id="${escapeHtml(item.id)}"${item.done ? ' checked' : ''} /><span>${escapeHtml(item.text)}</span></label>`).join('');
+  $$('[data-todo-id]', list).forEach((checkbox) => checkbox.addEventListener('change', () => {
+    const task = todoItems.find((item) => item.id === checkbox.dataset.todoId);
+    if (!task) return;
+    task.done = checkbox.checked;
+    saveTodoItems();
+    checkbox.closest('.todo-row').classList.toggle('is-done', task.done);
+    renderWidgets();
+  }));
+}
+
+function openTodoDialog() {
+  showDialog(tr('widgetTasks'), tr('todoEmpty'), `<div class="todo-create"><input data-todo-input maxlength="160" placeholder="${tr('newTask')}" /><button class="primary-button" type="button" data-todo-add>${tr('addTask')}</button></div><div class="todo-list" data-todo-list></div>`);
+  renderTodoList();
+  const input = $('[data-todo-input]', $('[data-dialog-content]'));
+  const addTask = () => {
+    const text = input.value.trim();
+    if (!text) { input.focus(); return; }
+    todoItems.unshift({ id: `task-${Date.now()}-${Math.random().toString(16).slice(2)}`, text: text.slice(0, 160), done: false, createdAt: new Date().toISOString() });
+    saveTodoItems();
+    input.value = '';
+    renderTodoList();
+    renderWidgets();
+    showToast(tr('taskAdded'));
+  };
+  $('[data-todo-add]', $('[data-dialog-content]'))?.addEventListener('click', addTask);
+  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); addTask(); } });
+  setTimeout(() => input?.focus(), 40);
+}
+
 function showDialog(title, copyText, extra = '') {
   const dialog = $('[data-dialog]');
   $('[data-dialog-content]').innerHTML = `<div class="dialog-content"><h2>${title}</h2><p>${copyText}</p>${extra}</div>`;
@@ -583,6 +713,431 @@ function openBonusDialog() {
 
 function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
+}
+
+function normalizeCashEntries(value) {
+  if (!Array.isArray(value)) return [];
+  return value
+    .filter((entry) => entry && Number.isFinite(Number(entry.amount)) && Number(entry.amount) > 0)
+    .map((entry) => ({
+      id: String(entry.id || `entry-${Date.now()}-${Math.random().toString(16).slice(2)}`),
+      amount: Math.round(Number(entry.amount) * 100) / 100,
+      comment: String(entry.comment || '').slice(0, 240),
+      date: entry.date || new Date().toISOString()
+    }));
+}
+
+function loadCashflow() {
+  const saved = readStoredJSON(CASHFLOW_KEY, []);
+  if (!Array.isArray(saved)) return [];
+  return saved
+    .filter((object) => object && typeof object.name === 'string')
+    .map((object) => ({
+      id: String(object.id || `cash-${Date.now()}-${Math.random().toString(16).slice(2)}`),
+      name: object.name.trim().slice(0, 100) || tr('objects'),
+      cost: Math.max(0, Number(object.cost) || 0),
+      factMode: Boolean(object.factMode),
+      createdAt: object.createdAt || new Date().toISOString(),
+      received: normalizeCashEntries(object.received),
+      expenses: normalizeCashEntries(object.expenses),
+      factIncome: normalizeCashEntries(object.factIncome),
+      factExpenses: normalizeCashEntries(object.factExpenses)
+    }));
+}
+
+let cashflowObjects = loadCashflow();
+
+function saveCashflow() {
+  localStorage.setItem(CASHFLOW_KEY, JSON.stringify(cashflowObjects));
+}
+
+function cashTotal(entries) {
+  return Math.round(entries.reduce((sum, entry) => sum + entry.amount, 0) * 100) / 100;
+}
+
+function cashDate(value) {
+  try { return new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(value)); }
+  catch { return ''; }
+}
+
+function cashHistoryMarkup(entries, labelKey) {
+  const total = cashTotal(entries);
+  const rows = entries.length
+    ? entries.map((entry) => `<div class="cash-history-row"><span>${escapeHtml(entry.comment)}<small>${cashDate(entry.date)}</small></span><b>${formatMoney(entry.amount)}</b></div>`).join('')
+    : `<div class="cash-history-empty">${tr('noEntries')}</div>`;
+  return `<details class="cash-history"><summary><span>${tr(labelKey)}</span><b>${formatMoney(total)}</b></summary><div class="cash-history-list">${rows}</div></details>`;
+}
+
+function cashEntryForm(kind, titleKey, buttonKey) {
+  return `<section class="cash-entry-form" data-cash-entry="${kind}"><h3>${tr(titleKey)}</h3><input type="number" min="0.01" step="0.01" inputmode="decimal" data-cash-amount placeholder="0 ₽" /><input maxlength="240" data-cash-comment placeholder="${tr('comment')}" /><button class="primary-button" type="button" data-cash-submit>${tr(buttonKey)} · ${tr(titleKey)}</button></section>`;
+}
+
+function addCashEntry(objectId, kind, form) {
+  const object = cashflowObjects.find((item) => item.id === objectId);
+  const amountInput = $('[data-cash-amount]', form);
+  const commentInput = $('[data-cash-comment]', form);
+  const amount = Math.round(Number(amountInput?.value) * 100) / 100;
+  const comment = commentInput?.value.trim() || '';
+  if (!object || !Number.isFinite(amount) || amount <= 0 || !comment) {
+    showToast(tr('amountRequired'));
+    (!Number.isFinite(amount) || amount <= 0 ? amountInput : commentInput)?.focus();
+    return;
+  }
+  const target = { received: object.received, expenses: object.expenses, factIncome: object.factIncome, factExpenses: object.factExpenses }[kind];
+  if (!target) return;
+  target.unshift({ id: `entry-${Date.now()}-${Math.random().toString(16).slice(2)}`, amount, comment: comment.slice(0, 240), date: new Date().toISOString() });
+  saveCashflow();
+  renderCashflow();
+}
+
+function renderCashflow() {
+  const list = $('[data-cashflow-list]');
+  const empty = $('[data-cashflow-empty]');
+  if (!list || !empty) return;
+  empty.hidden = cashflowObjects.length > 0;
+  list.hidden = cashflowObjects.length === 0;
+  list.innerHTML = cashflowObjects.map((object) => {
+    const received = cashTotal(object.received);
+    const expenses = cashTotal(object.expenses);
+    const remaining = Math.round((object.cost - expenses - received) * 100) / 100;
+    const factIncome = cashTotal(object.factIncome);
+    const factExpenses = cashTotal(object.factExpenses);
+    const factBalance = Math.round((factIncome - factExpenses) * 100) / 100;
+    const standard = `<div class="cash-standard-table"><div class="cash-cost-row"><label class="cash-cost-field"><span>${tr('objectCost')}</span><input type="number" min="0" step="0.01" inputmode="decimal" value="${object.cost || ''}" data-cash-cost /></label><label class="cash-fact-toggle"><input type="checkbox" data-cash-fact${object.factMode ? ' checked' : ''} /><span>${tr('workByFact')}</span></label></div><div class="cash-summary"><article><span>${tr('totalReceived')}</span><strong>${formatMoney(received)}</strong></article><article><span>${tr('totalExpense')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining"><span>${tr('remainingFromCost')}</span><strong>${formatMoney(remaining)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('received', 'received', 'add')}${cashEntryForm('expenses', 'expense', 'add')}</div>${cashHistoryMarkup(object.received, 'totalReceived')}${cashHistoryMarkup(object.expenses, 'totalExpense')}</div>`;
+    const fact = object.factMode ? `<section class="cash-fact-table"><h3 class="cash-fact-title">${tr('paymentByFact')}</h3><div class="cash-entry-grid">${cashEntryForm('factIncome', 'income', 'addIncome')}${cashEntryForm('factExpenses', 'expense', 'addExpense')}</div>${cashHistoryMarkup(object.factIncome, 'income')}${cashHistoryMarkup(object.factExpenses, 'expense')}<div class="cash-balance"><span>${tr('balanceResult')}</span><strong>${formatMoney(factBalance)}</strong></div></section>` : '';
+    return `<article class="cash-object" data-cash-object="${escapeHtml(object.id)}"><header><div><h2>${escapeHtml(object.name)}</h2><small>${cashDate(object.createdAt)}</small></div></header><div class="cash-object-body">${standard}${fact}</div></article>`;
+  }).join('');
+
+  $$('[data-cash-object]', list).forEach((card) => {
+    const object = cashflowObjects.find((item) => item.id === card.dataset.cashObject);
+    if (!object) return;
+    $('[data-cash-fact]', card)?.addEventListener('change', (event) => {
+      object.factMode = event.currentTarget.checked;
+      saveCashflow();
+      renderCashflow();
+    });
+    $('[data-cash-cost]', card)?.addEventListener('change', (event) => {
+      object.cost = Math.max(0, Math.round((Number(event.currentTarget.value) || 0) * 100) / 100);
+      saveCashflow();
+      renderCashflow();
+    });
+    $$('[data-cash-entry]', card).forEach((form) => {
+      $('[data-cash-submit]', form)?.addEventListener('click', () => addCashEntry(object.id, form.dataset.cashEntry, form));
+      $$('input', form).forEach((input) => input.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') { event.preventDefault(); addCashEntry(object.id, form.dataset.cashEntry, form); }
+      }));
+    });
+  });
+}
+
+function openCashObjectDialog() {
+  showDialog(tr('createCashObject'), tr('cashflowDescription'), `<div class="cash-create-form"><label><span>${tr('objectName')}</span><input type="text" maxlength="100" data-cash-name placeholder="${tr('objectPlaceholder')}" /></label><label><span>${tr('objectCost')}</span><input type="number" min="0" step="0.01" inputmode="decimal" data-cash-new-cost placeholder="0 ₽" /></label><label class="cash-create-fact"><input type="checkbox" data-cash-new-fact /><span>${tr('workByFact')}</span></label><button class="primary-button" type="button" data-cash-create>${tr('create')}</button></div>`);
+  const nameInput = $('[data-cash-name]', $('[data-dialog-content]'));
+  const createCashObject = () => {
+    const name = nameInput.value.trim();
+    if (!name) { nameInput.focus(); return; }
+    cashflowObjects.unshift({
+      id: `cash-${Date.now()}-${Math.random().toString(16).slice(2)}`,
+      name: name.slice(0, 100),
+      cost: Math.max(0, Math.round((Number($('[data-cash-new-cost]', $('[data-dialog-content]')).value) || 0) * 100) / 100),
+      factMode: $('[data-cash-new-fact]', $('[data-dialog-content]')).checked,
+      createdAt: new Date().toISOString(),
+      received: [], expenses: [], factIncome: [], factExpenses: []
+    });
+    saveCashflow();
+    renderCashflow();
+    $('[data-dialog]').close();
+    setPanel('cashflow');
+    showToast(tr('cashObjectCreated'));
+  };
+  $('[data-cash-create]', $('[data-dialog-content]'))?.addEventListener('click', createCashObject);
+  nameInput?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); createCashObject(); } });
+  setTimeout(() => nameInput?.focus(), 40);
+}
+
+const drawingDialog = $('[data-drawing-dialog]');
+const drawingCanvas = $('[data-drawing-canvas]');
+const drawingContext = drawingCanvas?.getContext('2d', { willReadFrequently: false });
+let drawingInitialized = false;
+let drawingActive = false;
+let drawingPointerId = null;
+let drawingLastPoint = null;
+let drawingUndoStack = [];
+let drawingMinimized = false;
+let currentDrawingId = null;
+let drawingDbPromise;
+
+function clearDrawingCanvas(trackUndo = true) {
+  if (!drawingContext) return;
+  if (trackUndo) pushDrawingUndo();
+  drawingContext.save();
+  drawingContext.setTransform(1, 0, 0, 1, 0, 0);
+  drawingContext.fillStyle = '#ffffff';
+  drawingContext.fillRect(0, 0, drawingCanvas.width, drawingCanvas.height);
+  drawingContext.restore();
+}
+
+function initializeDrawingCanvas() {
+  if (drawingInitialized || !drawingContext) return;
+  clearDrawingCanvas(false);
+  drawingContext.lineCap = 'round';
+  drawingContext.lineJoin = 'round';
+  $('[data-drawing-title]').value = tr('newSketch');
+  drawingInitialized = true;
+}
+
+function pushDrawingUndo() {
+  if (!drawingCanvas || !drawingInitialized) return;
+  try {
+    drawingUndoStack.push(drawingCanvas.toDataURL('image/png'));
+    if (drawingUndoStack.length > 12) drawingUndoStack.shift();
+  } catch {}
+}
+
+function restoreDrawingImage(source, afterLoad) {
+  if (!drawingContext || !source) return;
+  const image = new Image();
+  image.onload = () => {
+    clearDrawingCanvas(false);
+    drawingContext.drawImage(image, 0, 0, drawingCanvas.width, drawingCanvas.height);
+    afterLoad?.();
+  };
+  image.src = source;
+}
+
+function undoDrawing() {
+  const snapshot = drawingUndoStack.pop();
+  if (snapshot) restoreDrawingImage(snapshot);
+}
+
+function drawingPoint(event) {
+  const rect = drawingCanvas.getBoundingClientRect();
+  return {
+    x: (event.clientX - rect.left) * drawingCanvas.width / rect.width,
+    y: (event.clientY - rect.top) * drawingCanvas.height / rect.height,
+    pressure: event.pointerType === 'pen' && event.pressure > 0 ? event.pressure : .6
+  };
+}
+
+function drawPointerSegment(event) {
+  const point = drawingPoint(event);
+  if (!drawingLastPoint) drawingLastPoint = point;
+  const baseWidth = Number($('[data-drawing-width]').value) || 5;
+  const pressureScale = event.pointerType === 'pen' ? .45 + point.pressure * 1.1 : 1;
+  drawingContext.beginPath();
+  drawingContext.moveTo(drawingLastPoint.x, drawingLastPoint.y);
+  drawingContext.lineTo(point.x, point.y);
+  drawingContext.strokeStyle = $('[data-drawing-color]').value || '#0868e8';
+  drawingContext.lineWidth = baseWidth * pressureScale;
+  drawingContext.stroke();
+  drawingLastPoint = point;
+}
+
+function openDrawingStudio() {
+  initializeDrawingCanvas();
+  drawingMinimized = false;
+  $('[data-drawing-restore]').hidden = true;
+  $('[data-drawing-gallery]').hidden = true;
+  if (!drawingDialog.open) drawingDialog.showModal();
+}
+
+function closeDrawingStudio() {
+  drawingMinimized = false;
+  $('[data-drawing-restore]').hidden = true;
+  if (drawingDialog.open) drawingDialog.close();
+}
+
+function minimizeDrawingStudio() {
+  drawingMinimized = true;
+  if (drawingDialog.open) drawingDialog.close();
+  $('[data-drawing-restore]').hidden = false;
+}
+
+function drawingDatabase() {
+  if (drawingDbPromise) return drawingDbPromise;
+  drawingDbPromise = new Promise((resolve, reject) => {
+    if (!('indexedDB' in window)) { reject(new Error('IndexedDB unavailable')); return; }
+    const request = indexedDB.open('structos-drawings-db', 1);
+    request.onupgradeneeded = () => {
+      if (!request.result.objectStoreNames.contains('drawings')) request.result.createObjectStore('drawings', { keyPath: 'id' });
+    };
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(request.error);
+  });
+  return drawingDbPromise;
+}
+
+async function saveDrawingRecord() {
+  initializeDrawingCanvas();
+  const id = currentDrawingId || `drawing-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  const record = {
+    id,
+    title: ($('[data-drawing-title]').value.trim() || tr('newSketch')).slice(0, 80),
+    dataUrl: drawingCanvas.toDataURL('image/png'),
+    updatedAt: new Date().toISOString()
+  };
+  try {
+    const database = await drawingDatabase();
+    await new Promise((resolve, reject) => {
+      const transaction = database.transaction('drawings', 'readwrite');
+      transaction.objectStore('drawings').put(record);
+      transaction.oncomplete = resolve;
+      transaction.onerror = () => reject(transaction.error);
+    });
+    currentDrawingId = id;
+    showToast(tr('drawingSaved'));
+    return record;
+  } catch (error) {
+    console.warn('StructOS drawing could not be saved:', error);
+    showToast(tr('comingSoon'));
+    return null;
+  }
+}
+
+async function getSavedDrawings() {
+  try {
+    const database = await drawingDatabase();
+    const records = await new Promise((resolve, reject) => {
+      const request = database.transaction('drawings', 'readonly').objectStore('drawings').getAll();
+      request.onsuccess = () => resolve(request.result || []);
+      request.onerror = () => reject(request.error);
+    });
+    return records.sort((a, b) => String(b.updatedAt).localeCompare(String(a.updatedAt)));
+  } catch { return []; }
+}
+
+async function renderDrawingGallery() {
+  const gallery = $('[data-drawing-gallery]');
+  const list = $('[data-drawing-saved-list]');
+  gallery.hidden = false;
+  const records = await getSavedDrawings();
+  list.innerHTML = records.length ? records.map((record) => `<article class="saved-drawing-card"><img src="${record.dataUrl}" alt="" /><strong>${escapeHtml(record.title)}</strong><small>${cashDate(record.updatedAt)}</small><button type="button" data-load-drawing="${escapeHtml(record.id)}">${tr('loadDrawing')}</button></article>`).join('') : `<div class="todo-empty">${tr('noSavedDrawings')}</div>`;
+  $$('[data-load-drawing]', list).forEach((button) => button.addEventListener('click', () => {
+    const record = records.find((item) => item.id === button.dataset.loadDrawing);
+    if (!record) return;
+    pushDrawingUndo();
+    restoreDrawingImage(record.dataUrl, () => {
+      currentDrawingId = record.id;
+      $('[data-drawing-title]').value = record.title;
+      gallery.hidden = true;
+    });
+  }));
+}
+
+function loadDrawingBackground(file) {
+  if (!file || !file.type.startsWith('image/')) { showToast(tr('unsupportedFormat')); return; }
+  initializeDrawingCanvas();
+  pushDrawingUndo();
+  const objectUrl = URL.createObjectURL(file);
+  const image = new Image();
+  image.onload = () => {
+    clearDrawingCanvas(false);
+    const scale = Math.min(drawingCanvas.width / image.naturalWidth, drawingCanvas.height / image.naturalHeight);
+    const width = image.naturalWidth * scale;
+    const height = image.naturalHeight * scale;
+    drawingContext.drawImage(image, (drawingCanvas.width - width) / 2, (drawingCanvas.height - height) / 2, width, height);
+    URL.revokeObjectURL(objectUrl);
+    currentDrawingId = null;
+    $('[data-drawing-title]').value = file.name.replace(/\.[^.]+$/, '').slice(0, 80) || tr('newSketch');
+    showToast(tr('backgroundLoaded'));
+  };
+  image.onerror = () => { URL.revokeObjectURL(objectUrl); showToast(tr('unsupportedFormat')); };
+  image.src = objectUrl;
+}
+
+function drawingCanvasBlob(type, quality) {
+  return new Promise((resolve, reject) => drawingCanvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error('Canvas export failed')), type, quality));
+}
+
+function createPdfBlob(jpegBytes) {
+  const encoder = new TextEncoder();
+  const chunks = [];
+  const offsets = [0];
+  let length = 0;
+  const append = (value) => {
+    const bytes = typeof value === 'string' ? encoder.encode(value) : value;
+    chunks.push(bytes);
+    length += bytes.length;
+  };
+  append('%PDF-1.4\n%StructOS\n');
+  offsets[1] = length; append('1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n');
+  offsets[2] = length; append('2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n');
+  offsets[3] = length; append(`3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${drawingCanvas.width} ${drawingCanvas.height}] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>\nendobj\n`);
+  offsets[4] = length; append(`4 0 obj\n<< /Type /XObject /Subtype /Image /Width ${drawingCanvas.width} /Height ${drawingCanvas.height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpegBytes.length} >>\nstream\n`); append(jpegBytes); append('\nendstream\nendobj\n');
+  const content = `q\n${drawingCanvas.width} 0 0 ${drawingCanvas.height} 0 0 cm\n/Im0 Do\nQ\n`;
+  offsets[5] = length; append(`5 0 obj\n<< /Length ${encoder.encode(content).length} >>\nstream\n${content}endstream\nendobj\n`);
+  const xrefOffset = length;
+  append(`xref\n0 6\n0000000000 65535 f \n${offsets.slice(1).map((offset) => `${String(offset).padStart(10, '0')} 00000 n \n`).join('')}trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF`);
+  return new Blob(chunks, { type: 'application/pdf' });
+}
+
+async function createDrawingFile(format) {
+  initializeDrawingCanvas();
+  const safeTitle = ($('[data-drawing-title]').value.trim() || 'structos-sketch').replace(/[^\p{L}\p{N}_-]+/gu, '-').replace(/^-+|-+$/g, '') || 'structos-sketch';
+  if (format === 'pdf') {
+    const jpeg = await drawingCanvasBlob('image/jpeg', .92);
+    const blob = createPdfBlob(new Uint8Array(await jpeg.arrayBuffer()));
+    return new File([blob], `${safeTitle}.pdf`, { type: 'application/pdf' });
+  }
+  const isJpeg = format === 'jpg';
+  const blob = await drawingCanvasBlob(isJpeg ? 'image/jpeg' : 'image/png', isJpeg ? .92 : undefined);
+  return new File([blob], `${safeTitle}.${isJpeg ? 'jpg' : 'png'}`, { type: blob.type });
+}
+
+function downloadDrawingFile(file) {
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(file);
+  link.download = file.name;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(link.href), 1500);
+}
+
+async function shareDrawingFile() {
+  const format = $('[data-drawing-format]').value || 'png';
+  try {
+    const file = await createDrawingFile(format);
+    const data = { title: $('[data-drawing-title]').value.trim() || 'StructOS', files: [file] };
+    if (navigator.share && (!navigator.canShare || navigator.canShare(data))) {
+      try { await navigator.share(data); showToast(tr('drawingShareReady')); return; }
+      catch (error) { if (error?.name === 'AbortError') return; }
+    }
+    downloadDrawingFile(file);
+    showToast(tr('drawingShareReady'));
+  } catch (error) {
+    console.warn('StructOS drawing export failed:', error);
+    showToast(tr('comingSoon'));
+  }
+}
+
+if (drawingCanvas) {
+  drawingCanvas.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'mouse' && event.button !== 0) return;
+    event.preventDefault();
+    initializeDrawingCanvas();
+    pushDrawingUndo();
+    drawingActive = true;
+    drawingPointerId = event.pointerId;
+    drawingLastPoint = drawingPoint(event);
+    drawingCanvas.setPointerCapture(event.pointerId);
+    drawPointerSegment(event);
+  });
+  drawingCanvas.addEventListener('pointermove', (event) => {
+    if (!drawingActive || event.pointerId !== drawingPointerId) return;
+    event.preventDefault();
+    const events = event.getCoalescedEvents?.() || [event];
+    events.forEach(drawPointerSegment);
+  });
+  const finishDrawingPointer = (event) => {
+    if (event.pointerId !== drawingPointerId) return;
+    drawingActive = false;
+    drawingPointerId = null;
+    drawingLastPoint = null;
+    if (drawingCanvas.hasPointerCapture(event.pointerId)) drawingCanvas.releasePointerCapture(event.pointerId);
+  };
+  drawingCanvas.addEventListener('pointerup', finishDrawingPointer);
+  drawingCanvas.addEventListener('pointercancel', finishDrawingPointer);
 }
 
 function fileSize(bytes) {
@@ -991,12 +1546,14 @@ function runAnalysis() {
 function openView(view) {
   if (view === 'profile') { setPanel('profile'); return; }
   if (view === 'objects') { setPanel('objects'); return; }
+  if (view === 'tasks') { openTodoDialog(); return; }
+  if (view === 'drawing') { openDrawingStudio(); return; }
   if (view === 'project' || view === 'contract' || view === 'estimate' || view === 'analysis') {
     openUploadDialog(view === 'analysis' ? 'project' : view);
     return;
   }
   if (view === 'balance') { openBalanceDialog(); return; }
-  if (view === 'finance') { openBalanceDialog(); return; }
+  if (view === 'finance') { setPanel('cashflow'); return; }
   if (view === 'bonuses') { openBonusDialog(); return; }
   const labels = { subscription: 'tariffSubscription', invitations: 'invitations', invite: 'invite', notifications: 'notifications', documents: 'documents', connections: 'connections', settings: 'settings', acts: 'widgetActs', attention: 'attention', passport: 'builderPassport', tasks: 'widgetTasks', team: 'widgetTeam' };
   showDialog(tr(labels[view] || 'settings'), tr('comingSoon'), `<div class="dialog-options"><div class="dialog-option"><span>StructOS</span><span>→</span></div></div>`);
@@ -1067,6 +1624,7 @@ $$('[data-action]').forEach((button) => button.addEventListener('click', () => o
 $$('[data-analysis-type]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.analysisType)));
 $('[data-run-analysis]').addEventListener('click', runAnalysis);
 $$('[data-add-object]').forEach((button) => button.addEventListener('click', openObjectDialog));
+$$('[data-add-cash-object]').forEach((button) => button.addEventListener('click', openCashObjectDialog));
 $('[data-profile-menu]').addEventListener('click', () => $('.drawer-group').classList.toggle('is-open'));
 $('[data-logout]').addEventListener('click', logout);
 $('[data-space-settings]').addEventListener('click', () => {
@@ -1076,6 +1634,27 @@ $('[data-space-settings]').addEventListener('click', () => {
 });
 $('[data-space-done]').addEventListener('click', () => { $('[data-space-toolbar]').hidden = true; $('[data-space-settings]').setAttribute('aria-expanded', 'false'); });
 $('[data-edit-profile]').addEventListener('click', () => showDialog(tr('edit'), tr('comingSoon')));
+$('[data-drawing-close]')?.addEventListener('click', closeDrawingStudio);
+$('[data-drawing-minimize]')?.addEventListener('click', minimizeDrawingStudio);
+$('[data-drawing-restore]')?.addEventListener('click', openDrawingStudio);
+$('[data-drawing-undo]')?.addEventListener('click', undoDrawing);
+$('[data-drawing-clear]')?.addEventListener('click', () => { clearDrawingCanvas(); currentDrawingId = null; });
+$('[data-drawing-upload]')?.addEventListener('click', () => $('[data-drawing-file]').click());
+$('[data-drawing-file]')?.addEventListener('change', (event) => {
+  loadDrawingBackground(event.currentTarget.files?.[0]);
+  event.currentTarget.value = '';
+});
+$('[data-drawing-save]')?.addEventListener('click', saveDrawingRecord);
+$('[data-drawing-saved]')?.addEventListener('click', renderDrawingGallery);
+$('[data-drawing-gallery-close]')?.addEventListener('click', () => { $('[data-drawing-gallery]').hidden = true; });
+$('[data-drawing-share]')?.addEventListener('click', shareDrawingFile);
+drawingDialog?.addEventListener('cancel', () => {
+  drawingMinimized = false;
+  $('[data-drawing-restore]').hidden = true;
+});
+drawingDialog?.addEventListener('close', () => {
+  if (!drawingMinimized) $('[data-drawing-restore]').hidden = true;
+});
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
 window.addEventListener('resize', () => { renderWidgets(); });
 
@@ -1091,6 +1670,7 @@ renderWidgets();
 selectAnalysis(selectedAnalysis);
 renderAnalysisCards();
 renderObjects();
+renderCashflow();
 setPanel(location.hash.slice(1) || 'home');
 await initAuth();
 
