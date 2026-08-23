@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=10" />
+    <link rel="stylesheet" href="dashboard.css?v=11" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -131,7 +131,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.6v-.2h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"/></svg>
             <span class="sr-only" data-i18n="settings">Настройка</span>
           </button>
-          <div class="space-toolbar" hidden data-space-toolbar><p data-i18n="chooseWidgets">Выберите быстрые функции</p><small class="space-toolbar-hint" data-i18n="resizeHint">Размер: двумя пальцами или потяните за угол</small><div data-widget-picker></div><button type="button" class="primary-button" data-space-done data-i18n="done">Готово</button></div>
+          <div class="space-toolbar" hidden data-space-toolbar><p data-i18n="chooseWidgets">Выберите быстрые функции</p><small class="space-toolbar-hint" data-i18n="resizeHint">Размер: двумя пальцами или потяните за угол</small><small class="space-toolbar-hint" data-i18n="doubleTapHint">Двойное касание открывает оформление</small><div data-widget-picker></div><button type="button" class="primary-button" data-space-done data-i18n="done">Готово</button></div>
           <div class="space-canvas" data-space-canvas aria-label="Интерактивное поле">
             <div class="space-grid" aria-hidden="true"></div>
             <div class="space-watermark" aria-hidden="true">
@@ -150,6 +150,12 @@
           <div class="empty-state" data-active-empty><div class="empty-building" aria-hidden="true"><span></span><span></span><span></span></div><h2 data-i18n="noActiveObjects">Действующих объектов пока нет</h2><p data-i18n="noActiveObjectsCopy">Проанализируйте проект и запустите его из блока готовых объектов.</p><button class="primary-button" type="button" data-open-view="project" data-i18n="goAnalysis">Перейти к анализу</button></div>
         </section>
 
+        <section class="tab-panel cashflow-panel" data-panel="cashflow" aria-label="Быстрые доходы и расходы" hidden>
+          <div class="page-title"><div><span class="eyebrow">STRUCTOS MONEY</span><h1 data-i18n="quickCashflow">Быстрые доходы/расходы</h1><p data-i18n="cashflowDescription">Короткий финансовый учёт по каждому объекту</p></div><button class="primary-button" type="button" data-add-cash-object data-i18n="addObject">Добавить объект</button></div>
+          <div class="cashflow-list" data-cashflow-list></div>
+          <div class="cashflow-empty" data-cashflow-empty><span>+₽−</span><h2 data-i18n="noCashObjects">Объектов для учёта пока нет</h2><p data-i18n="noCashObjectsCopy">Добавьте объект, укажите его стоимость и ведите полученные суммы и расходы.</p><button class="primary-button" type="button" data-add-cash-object data-i18n="addObject">Добавить объект</button></div>
+        </section>
+
         <section class="tab-panel profile-panel" data-panel="profile" aria-label="Профиль" hidden>
           <div class="page-title"><div><span class="eyebrow">STRUCTOS ID</span><h1 data-i18n="myProfile">Мой профиль</h1><p data-user-role>Пользователь</p></div><button class="outline-button" type="button" data-edit-profile data-i18n="edit">Редактировать</button></div>
           <div class="profile-layout">
@@ -165,6 +171,7 @@
         <button class="is-active" type="button" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v10h-6v-6H9v6H3V11Z"/></svg><span data-i18n="home">Главная</span></button>
         <button type="button" data-tab="space"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span data-i18n="space">Пространство</span></button>
         <button type="button" data-tab="objects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h2M14 10h2"/></svg><span data-i18n="objects">Объекты</span></button>
+        <button type="button" data-tab="cashflow"><span class="cashflow-nav-icon" aria-hidden="true">+₽−</span><span data-i18n="money">Деньги</span></button>
         <button type="button" data-tab="profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="profile">Профиль</span></button>
       </nav>
 
@@ -187,11 +194,37 @@
         </div>
       </aside>
 
+      <dialog class="drawing-dialog" data-drawing-dialog>
+        <section class="drawing-window">
+          <header class="drawing-head">
+            <div><span class="eyebrow">STRUCTOS SKETCH</span><input data-drawing-title maxlength="80" value="Новый эскиз" aria-label="Название эскиза" /></div>
+            <div class="drawing-window-actions"><button type="button" data-drawing-minimize aria-label="Свернуть">—</button><button type="button" data-drawing-close aria-label="Закрыть">×</button></div>
+          </header>
+          <div class="drawing-tools">
+            <label><span data-i18n="lineColor">Цвет</span><input type="color" value="#0868e8" data-drawing-color /></label>
+            <label><span data-i18n="lineWidth">Толщина</span><input type="range" min="1" max="28" value="5" data-drawing-width /></label>
+            <button type="button" data-drawing-undo data-i18n="undo">Отменить</button>
+            <button type="button" data-drawing-clear data-i18n="clearDrawing">Очистить</button>
+          </div>
+          <div class="drawing-stage"><canvas width="1200" height="800" data-drawing-canvas></canvas><small data-i18n="stylusHint">Рисуйте пальцем, стилусом или Apple Pencil</small></div>
+          <div class="drawing-footer">
+            <input class="hidden-file-input" type="file" accept="image/png,image/jpeg,image/webp" data-drawing-file />
+            <button type="button" class="outline-button" data-drawing-upload data-i18n="uploadBackground">Загрузить файл</button>
+            <button type="button" class="primary-button" data-drawing-save data-i18n="save">Сохранить</button>
+            <button type="button" class="outline-button" data-drawing-saved data-i18n="viewSaved">Сохранённое</button>
+            <label class="drawing-format"><span data-i18n="format">Формат</span><select data-drawing-format><option value="png">PNG</option><option value="jpg">JPG</option><option value="pdf">PDF</option></select></label>
+            <button type="button" class="primary-button" data-drawing-share data-i18n="shareDrawing">Отправить</button>
+          </div>
+          <section class="drawing-gallery" data-drawing-gallery hidden><header><strong data-i18n="savedDrawings">Сохранённые рисунки</strong><button type="button" data-drawing-gallery-close>×</button></header><div data-drawing-saved-list></div></section>
+        </section>
+      </dialog>
+      <button class="drawing-dock" type="button" data-drawing-restore hidden><span>✎</span><strong data-i18n="drawing">Рисование</strong></button>
+
       <dialog class="app-dialog" data-dialog>
         <form method="dialog"><button class="dialog-close" value="cancel" aria-label="Закрыть">×</button><div data-dialog-content></div></form>
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=11"></script>
+    <script type="module" src="dashboard.js?v=12"></script>
   </body>
 </html>
