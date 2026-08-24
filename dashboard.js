@@ -153,6 +153,23 @@ Object.assign(copy.TJ, {
   activeLimitTitle: 'Маҳдудияти объектҳои фаъол', activeLimitCopy: 'Дар тарифи «Истифодабаранда» 1 объекти фаъол дастрас аст. Объекти иловагӣ 199 ₽ арзиш дорад.'
 });
 
+Object.assign(copy.RU, {
+  newDrawing: 'Новый рисунок', drawingUnsavedTitle: 'Текущий рисунок не сохранён', drawingUnsavedCopy: 'Сохранить текущий рисунок перед созданием нового?', saveCurrentDrawing: 'Сохранить текущий', discardCurrentDrawing: 'Сбросить текущий', nameDrawing: 'Название рисунка', drawingNameRequired: 'Введите название рисунка', newDrawingReady: 'Новый рисунок готов', noColor: 'Без цвета',
+  allObjects: 'Все действующие объекты', activeObjectsCount: 'Активных', fullCycleObject: 'Полный цикл', quickObject: 'Быстрый', completedListObject: 'Завершён', reorderObjectsHint: 'Активные объекты можно менять местами перетаскиванием', dragObject: 'Изменить порядок объекта', orderSaved: 'Порядок объектов сохранён', openObjectAction: 'Войти в объект', rename: 'Переименовать', renameObject: 'Изменить название объекта', renameSection: 'Изменить название раздела', enterNewName: 'Введите новое название', nameUpdated: 'Название изменено'
+});
+Object.assign(copy.EN, {
+  newDrawing: 'New drawing', drawingUnsavedTitle: 'The current drawing is not saved', drawingUnsavedCopy: 'Save the current drawing before starting a new one?', saveCurrentDrawing: 'Save current', discardCurrentDrawing: 'Discard current', nameDrawing: 'Drawing name', drawingNameRequired: 'Enter a drawing name', newDrawingReady: 'New drawing ready', noColor: 'No color',
+  allObjects: 'All active objects', activeObjectsCount: 'Active', fullCycleObject: 'Full cycle', quickObject: 'Quick', completedListObject: 'Completed', reorderObjectsHint: 'Drag active objects to change their order', dragObject: 'Change object order', orderSaved: 'Object order saved', openObjectAction: 'Open object', rename: 'Rename', renameObject: 'Change object name', renameSection: 'Change section name', enterNewName: 'Enter a new name', nameUpdated: 'Name updated'
+});
+Object.assign(copy.KY, {
+  newDrawing: 'Жаңы сүрөт', drawingUnsavedTitle: 'Учурдагы сүрөт сакталган жок', drawingUnsavedCopy: 'Жаңы сүрөттү баштоодон мурун учурдагыны сактайсызбы?', saveCurrentDrawing: 'Учурдагыны сактоо', discardCurrentDrawing: 'Учурдагыны өчүрүү', nameDrawing: 'Сүрөттүн аталышы', drawingNameRequired: 'Сүрөттүн аталышын жазыңыз', newDrawingReady: 'Жаңы сүрөт даяр', noColor: 'Түссүз',
+  allObjects: 'Бардык иштеп жаткан объекттер', activeObjectsCount: 'Активдүү', fullCycleObject: 'Толук цикл', quickObject: 'Тез', completedListObject: 'Аяктады', reorderObjectsHint: 'Активдүү объекттерди сүйрөп иреттеңиз', dragObject: 'Объекттин тартибин өзгөртүү', orderSaved: 'Объекттердин тартиби сакталды', openObjectAction: 'Объектке кирүү', rename: 'Атын өзгөртүү', renameObject: 'Объекттин атын өзгөртүү', renameSection: 'Бөлүмдүн атын өзгөртүү', enterNewName: 'Жаңы аталышты жазыңыз', nameUpdated: 'Аталышы өзгөртүлдү'
+});
+Object.assign(copy.TJ, {
+  newDrawing: 'Расми нав', drawingUnsavedTitle: 'Расми ҷорӣ нигоҳ дошта нашудааст', drawingUnsavedCopy: 'Пеш аз расми нав расми ҷориро нигоҳ дорем?', saveCurrentDrawing: 'Нигоҳ доштани ҷорӣ', discardCurrentDrawing: 'Партофтани ҷорӣ', nameDrawing: 'Номи расм', drawingNameRequired: 'Номи расмро ворид кунед', newDrawingReady: 'Расми нав омода аст', noColor: 'Бе ранг',
+  allObjects: 'Ҳамаи объектҳои фаъол', activeObjectsCount: 'Фаъол', fullCycleObject: 'Давраи пурра', quickObject: 'Зуд', completedListObject: 'Анҷом ёфт', reorderObjectsHint: 'Объектҳои фаъолро кашида тартиб диҳед', dragObject: 'Тағйири тартиби объект', orderSaved: 'Тартиби объектҳо нигоҳ дошта шуд', openObjectAction: 'Кушодани объект', rename: 'Иваз кардани ном', renameObject: 'Иваз кардани номи объект', renameSection: 'Иваз кардани номи бахш', enterNewName: 'Номи навро ворид кунед', nameUpdated: 'Ном иваз шуд'
+});
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -162,6 +179,7 @@ const FINANCE_KEY = 'structos-finance-v1';
 const UPLOADS_KEY = 'structos-analysis-uploads-v1';
 const OBJECT_NAME_KEY = 'structos-analysis-object-name';
 const OBJECTS_KEY = 'structos-objects-v1';
+const OBJECT_ORDER_KEY = 'structos-object-order-v1';
 const PROFILE_COMPLETION_KEY = 'structos-profile-completion';
 const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
 const WIDGET_STYLES_KEY = 'structos-space-widget-styles-v1';
@@ -224,7 +242,7 @@ function loadObjectRegistry() {
     const saved = JSON.parse(localStorage.getItem(OBJECTS_KEY) || '[]');
     if (Array.isArray(saved)) {
       return saved
-        .filter((object) => object && typeof object.name === 'string' && ['uploaded', 'ready', 'active'].includes(object.status))
+        .filter((object) => object && typeof object.name === 'string' && ['uploaded', 'ready', 'active', 'completed'].includes(object.status))
         .map((object) => ({
           id: String(object.id || `object-${Date.now()}-${Math.random().toString(16).slice(2)}`),
           name: object.name.trim().slice(0, 100) || 'Объект',
@@ -232,6 +250,7 @@ function loadObjectRegistry() {
           analyzedAt: object.analyzedAt || new Date().toISOString(),
           uploadedAt: object.uploadedAt || object.analyzedAt || new Date().toISOString(),
           startedAt: object.startedAt || null,
+          completedAt: object.completedAt || null,
           files: Array.isArray(object.files) ? object.files.slice(0, 3) : []
         }));
     }
@@ -412,6 +431,7 @@ function setPanel(name) {
   history.replaceState(null, '', `#${next}`);
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (next === 'space') requestAnimationFrame(renderWidgets);
+  if (next === 'objects') renderObjects();
   if (next === 'cashflow') renderCashflow();
   closeMenu();
 }
@@ -541,7 +561,7 @@ function renderWidgets() {
     const size = widgetSizes[id] || { width: 138, height: 96 };
     applyWidgetDimensions(card, size.width, size.height, canvas);
     const hint = id === 'objects'
-      ? `${objectRegistry.filter((object) => object.status === 'active').length} / ${ACTIVE_OBJECT_LIMIT}`
+      ? `${combinedManagedObjects().filter((object) => !object.completed).length}`
       : id === 'tasks' ? `${todoItems.filter((item) => !item.done).length} / ${todoItems.length}`
         : id === 'finance' ? `${cashflowObjects.length}` : definition.hint;
     card.innerHTML = `<span class="space-widget-icon">${definition.icon}</span><strong>${tr(definition.label)}</strong><small>${hint} · ${tr('quickFunction')}</small><i class="widget-resize-handle" aria-hidden="true"></i>`;
@@ -671,16 +691,25 @@ function openWidgetAppearance(id) {
   const definition = widgetDefinitions[id];
   if (!definition) return;
   const current = widgetStyles[id] || {};
+  const hasColor = widgetColors.includes(current.color);
   const colors = widgetColors.map((color, index) => `<button class="widget-color-swatch${current.color === color ? ' is-selected' : ''}" type="button" data-widget-color="${color}" style="--swatch:${color}" aria-label="${tr('blockColor')} ${index + 1}"></button>`).join('');
-  showDialog(tr('widgetAppearance'), tr('doubleTapHint'), `<section class="widget-appearance"><h3>${tr(definition.label)} · ${tr('blockColor')}</h3><div class="widget-color-grid">${colors}</div><button class="widget-pulse-toggle${current.pulse ? ' is-on' : ''}" type="button" data-widget-pulse aria-pressed="${Boolean(current.pulse)}"><span>${tr('pulseBlock')}</span><i aria-hidden="true"></i></button></section>`);
+  const noColor = `<button class="widget-color-swatch is-none${hasColor ? '' : ' is-selected'}" type="button" data-widget-no-color aria-label="${tr('noColor')}" title="${tr('noColor')}"><span>${tr('noColor')}</span></button>`;
+  showDialog(tr('widgetAppearance'), tr('doubleTapHint'), `<section class="widget-appearance"><h3>${tr(definition.label)} · ${tr('blockColor')}</h3><div class="widget-color-grid">${noColor}${colors}</div><button class="widget-pulse-toggle${current.pulse ? ' is-on' : ''}" type="button" data-widget-pulse aria-pressed="${Boolean(current.pulse)}"><span>${tr('pulseBlock')}</span><i aria-hidden="true"></i></button></section>`);
 
   $$('[data-widget-color]', $('[data-dialog-content]')).forEach((button) => button.addEventListener('click', () => {
     widgetStyles[id] = { ...(widgetStyles[id] || {}), color: button.dataset.widgetColor };
     saveWidgetStyles();
-    $$('[data-widget-color]', $('[data-dialog-content]')).forEach((swatch) => swatch.classList.toggle('is-selected', swatch === button));
+    $$('.widget-color-swatch', $('[data-dialog-content]')).forEach((swatch) => swatch.classList.toggle('is-selected', swatch === button));
     const card = $(`.space-widget[data-widget="${id}"]`);
     card?.style.setProperty('--widget-color', button.dataset.widgetColor);
   }));
+  $('[data-widget-no-color]', $('[data-dialog-content]'))?.addEventListener('click', (event) => {
+    widgetStyles[id] = { ...(widgetStyles[id] || {}) };
+    delete widgetStyles[id].color;
+    saveWidgetStyles();
+    $$('.widget-color-swatch', $('[data-dialog-content]')).forEach((swatch) => swatch.classList.toggle('is-selected', swatch === event.currentTarget));
+    $(`.space-widget[data-widget="${id}"]`)?.style.removeProperty('--widget-color');
+  });
   $('[data-widget-pulse]', $('[data-dialog-content]'))?.addEventListener('click', (event) => {
     const pulse = !Boolean(widgetStyles[id]?.pulse);
     widgetStyles[id] = { ...(widgetStyles[id] || {}), pulse };
@@ -813,6 +842,22 @@ function escapeHtml(value) {
   return String(value ?? '').replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
 }
 
+function openRenameDialog(title, currentName, maxLength, onSave) {
+  showDialog(title, tr('enterNewName'), `<div class="object-form"><label><span class="sr-only">${escapeHtml(title)}</span><input data-rename-input maxlength="${maxLength}" value="${escapeHtml(currentName)}" /></label><button class="primary-button" type="button" data-confirm-rename>${tr('save')}</button></div>`);
+  const scope = $('[data-dialog-content]');
+  const input = $('[data-rename-input]', scope);
+  const saveName = () => {
+    const name = input?.value.trim().slice(0, maxLength) || '';
+    if (!name) { input?.focus(); return; }
+    onSave(name);
+    $('[data-dialog]')?.close();
+    showToast(tr('nameUpdated'));
+  };
+  $('[data-confirm-rename]', scope)?.addEventListener('click', saveName);
+  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); saveName(); } });
+  setTimeout(() => { input?.focus(); input?.select(); }, 40);
+}
+
 function normalizeCashEntries(value) {
   if (!Array.isArray(value)) return [];
   return value
@@ -919,6 +964,9 @@ function loadCashflow() {
 }
 
 let cashflowObjects = loadCashflow();
+let unifiedObjectOrder = readStoredJSON(OBJECT_ORDER_KEY, []);
+if (!Array.isArray(unifiedObjectOrder)) unifiedObjectOrder = [];
+unifiedObjectOrder = unifiedObjectOrder.filter((key) => typeof key === 'string');
 let activeCashObjectId = null;
 const expandedCashSections = new Set();
 const expandedCashReportHistory = new Set();
@@ -926,10 +974,24 @@ let reportLogoDataUrl = '';
 
 function saveCashflow() {
   localStorage.setItem(CASHFLOW_KEY, JSON.stringify(cashflowObjects));
+  renderObjects();
+  renderWidgets();
 }
 
 function cashTotal(entries) {
   return Math.round(entries.reduce((sum, entry) => sum + entry.amount, 0) * 100) / 100;
+}
+
+function cashBalanceClass(value) {
+  return value < 0 ? 'is-negative' : value > 0 ? 'is-positive' : 'is-zero';
+}
+
+function cashReportSummary(label, value, colored = false) {
+  return { text: `${label}: ${formatMoney(value)}`, tone: colored ? cashBalanceClass(value) : '' };
+}
+
+function cashReportSummaryText(summary) {
+  return typeof summary === 'string' ? summary : String(summary?.text || '');
 }
 
 function cashDate(value) {
@@ -952,6 +1014,26 @@ function cashEntryForm(kind, titleKey, buttonKey) {
 function findCashSection(objectId, sectionId) {
   const object = cashflowObjects.find((item) => item.id === objectId);
   return { object, section: object?.sections.find((item) => item.id === sectionId) };
+}
+
+function renameCashObject(objectId) {
+  const object = cashflowObjects.find((item) => item.id === objectId);
+  if (!object) return;
+  openRenameDialog(tr('renameObject'), object.name, 100, (name) => {
+    object.name = name;
+    saveCashflow();
+    renderCashflow();
+  });
+}
+
+function renameCashSection(objectId, sectionId) {
+  const { section } = findCashSection(objectId, sectionId);
+  if (!section) return;
+  openRenameDialog(tr('renameSection'), section.name, 120, (name) => {
+    section.name = name;
+    saveCashflow();
+    renderCashflow();
+  });
 }
 
 function addCashEntry(objectId, sectionId, kind, form) {
@@ -992,12 +1074,12 @@ function cashSectionMarkup(object, section) {
   const factBalance = Math.round((factIncome - factExpenses) * 100) / 100;
   const isOpen = expandedCashSections.has(section.id);
   const modeBadges = `${section.contractMode ? `<span>${tr('workByContract')}</span>` : ''}${section.factMode ? `<span>${tr('actualAccounting')}</span>` : ''}`;
-  const contractMarkup = section.contractMode ? `<section class="cash-accounting-block cash-contract-accounting"><h4>${tr('contractAccounting')}</h4><div class="cash-contract-head"><article><span>${tr('contractAmount')}</span><strong>${formatMoney(section.contractAmount)}</strong></article><article><span>${tr('receivedAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article><span>${tr('remainingContract')}</span><strong>${formatMoney(remainingContract)}</strong></article></div><div class="cash-summary"><article><span>${tr('totalAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article><span>${tr('totalExpenses')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining"><span>${tr('advanceBalance')}</span><strong>${formatMoney(advanceBalance)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('advances', 'received', 'addAdvance')}${cashEntryForm('expenses', 'expense', 'add')}</div>${cashHistoryMarkup(section.advances, 'totalAdvances')}${cashHistoryMarkup(section.expenses, 'totalExpenses')}<section class="cash-own-funds"><h4>${tr('ownFundsAccounting')}</h4><div class="cash-own-summary"><article><span>${tr('totalOwnInvested')}</span><strong>${formatMoney(ownInvested)}</strong></article><article><span>${tr('totalOwnReturned')}</span><strong>${formatMoney(ownReturned)}</strong></article><article><span>${tr('ownFundsRemaining')}</span><strong>${formatMoney(ownRemaining)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('ownInvestments', 'ownInvested', 'addOwnFunds')}${cashEntryForm('ownReturns', 'returnedFromAdvance', 'addOwnReturn')}</div>${cashHistoryMarkup(section.ownInvestments, 'ownInvested')}${cashHistoryMarkup(section.ownReturns, 'returnedFromAdvance')}</section></section>` : '';
-  const factMarkup = section.factMode ? `<section class="cash-fact-table cash-accounting-block"><h4 class="cash-fact-title">${tr('actualAccounting')}</h4><div class="cash-entry-grid">${cashEntryForm('factIncome', 'income', 'addIncome')}${cashEntryForm('factExpenses', 'expense', 'addExpense')}</div>${cashHistoryMarkup(section.factIncome, 'income')}${cashHistoryMarkup(section.factExpenses, 'expense')}<div class="cash-balance"><span>${tr('balanceResult')}</span><strong>${formatMoney(factBalance)}</strong></div></section>` : '';
+  const contractMarkup = section.contractMode ? `<section class="cash-accounting-block cash-contract-accounting"><h4>${tr('contractAccounting')}</h4><div class="cash-contract-head"><article><span>${tr('contractAmount')}</span><strong>${formatMoney(section.contractAmount)}</strong></article><article><span>${tr('receivedAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article class="${cashBalanceClass(remainingContract)}"><span>${tr('remainingContract')}</span><strong>${formatMoney(remainingContract)}</strong></article></div><div class="cash-summary"><article><span>${tr('totalAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article><span>${tr('totalExpenses')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining ${cashBalanceClass(advanceBalance)}"><span>${tr('advanceBalance')}</span><strong>${formatMoney(advanceBalance)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('advances', 'received', 'addAdvance')}${cashEntryForm('expenses', 'expense', 'add')}</div>${cashHistoryMarkup(section.advances, 'totalAdvances')}${cashHistoryMarkup(section.expenses, 'totalExpenses')}<section class="cash-own-funds"><h4>${tr('ownFundsAccounting')}</h4><div class="cash-own-summary"><article><span>${tr('totalOwnInvested')}</span><strong>${formatMoney(ownInvested)}</strong></article><article><span>${tr('totalOwnReturned')}</span><strong>${formatMoney(ownReturned)}</strong></article><article class="${cashBalanceClass(ownRemaining)}"><span>${tr('ownFundsRemaining')}</span><strong>${formatMoney(ownRemaining)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('ownInvestments', 'ownInvested', 'addOwnFunds')}${cashEntryForm('ownReturns', 'returnedFromAdvance', 'addOwnReturn')}</div>${cashHistoryMarkup(section.ownInvestments, 'ownInvested')}${cashHistoryMarkup(section.ownReturns, 'returnedFromAdvance')}</section></section>` : '';
+  const factMarkup = section.factMode ? `<section class="cash-fact-table cash-accounting-block"><h4 class="cash-fact-title">${tr('actualAccounting')}</h4><div class="cash-entry-grid">${cashEntryForm('factIncome', 'income', 'addIncome')}${cashEntryForm('factExpenses', 'expense', 'addExpense')}</div>${cashHistoryMarkup(section.factIncome, 'income')}${cashHistoryMarkup(section.factExpenses, 'expense')}<div class="cash-balance ${cashBalanceClass(factBalance)}"><span>${tr('balanceResult')}</span><strong>${formatMoney(factBalance)}</strong></div></section>` : '';
   return `<section class="cash-section" data-cash-section="${escapeHtml(section.id)}">
     <header class="cash-section-head">
       <button class="cash-section-toggle" type="button" data-cash-section-toggle aria-expanded="${isOpen}"><span>${isOpen ? '⌄' : '›'}</span><strong>${escapeHtml(section.name)}</strong><i>${modeBadges}</i></button>
-      <button class="cash-mini-button is-danger" type="button" data-delete-cash-section>${tr('deleteSection')}</button>
+      <div class="cash-section-head-actions"><button class="cash-mini-button" type="button" data-rename-cash-section>${tr('rename')}</button><button class="cash-mini-button is-danger" type="button" data-delete-cash-section>${tr('deleteSection')}</button></div>
     </header>
     <div class="cash-section-body"${isOpen ? '' : ' hidden'}>
       <div class="cash-section-document-actions"><button type="button" data-open-cash-document="statement">${tr('workStatement')}</button><button type="button" data-open-cash-document="act">${tr('workAct')}</button><button type="button" data-export-section>${tr('sectionReport')}</button><button type="button" data-toggle-report-history>${tr('reportHistory')} · ${section.reportHistory.length}</button></div>${cashReportHistoryMarkup(section)}${contractMarkup}${factMarkup}
@@ -1019,12 +1101,13 @@ function renderCashflow() {
   empty.hidden = cashflowObjects.length > 0;
   list.hidden = cashflowObjects.length === 0;
   const orderedObjects = [...cashflowObjects].sort((a, b) => Number(a.completed) - Number(b.completed) || new Date(b.createdAt) - new Date(a.createdAt));
-  list.innerHTML = orderedObjects.map((object) => `<article class="cash-object${object.completed ? ' is-completed' : ''}" data-cash-object="${escapeHtml(object.id)}"><header><div class="cash-object-heading"><h2>${escapeHtml(object.name)}</h2><small>${cashDate(object.createdAt)} · ${object.sections.length} ${tr('sectionCalculations')}${object.completed ? ` · ${tr('completedObject')}` : ''}</small><div class="cash-object-actions"><button class="cash-mini-button cash-open-object" type="button" data-open-cash-object>${tr('openMoneyObject')}</button><button class="cash-mini-button is-danger" type="button" data-delete-cash-object>${tr('deleteObject')}</button><label class="cash-mini-button is-complete"><input type="checkbox" data-complete-cash-object${object.completed ? ' checked' : ''} /><span>${object.completed ? tr('reopenObject') : tr('finishObject')}</span></label></div></div></header></article>`).join('');
+  list.innerHTML = orderedObjects.map((object) => `<article class="cash-object${object.completed ? ' is-completed' : ''}" data-cash-object="${escapeHtml(object.id)}"><header><div class="cash-object-heading"><h2>${escapeHtml(object.name)}</h2><small>${cashDate(object.createdAt)} · ${object.sections.length} ${tr('sectionCalculations')}${object.completed ? ` · ${tr('completedObject')}` : ''}</small><div class="cash-object-actions"><button class="cash-mini-button cash-open-object" type="button" data-open-cash-object>${tr('openMoneyObject')}</button><button class="cash-mini-button" type="button" data-rename-cash-object>${tr('rename')}</button><button class="cash-mini-button is-danger" type="button" data-delete-cash-object>${tr('deleteObject')}</button><label class="cash-mini-button is-complete"><input type="checkbox" data-complete-cash-object${object.completed ? ' checked' : ''} /><span>${object.completed ? tr('reopenObject') : tr('finishObject')}</span></label></div></div></header></article>`).join('');
 
   $$('[data-cash-object]', list).forEach((card) => {
     const object = cashflowObjects.find((item) => item.id === card.dataset.cashObject);
     if (!object) return;
     $('[data-open-cash-object]', card)?.addEventListener('click', () => { activeCashObjectId = object.id; renderCashflow(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    $('[data-rename-cash-object]', card)?.addEventListener('click', () => renameCashObject(object.id));
     $('[data-delete-cash-object]', card)?.addEventListener('click', () => {
       if (!window.confirm(tr('deleteCashObjectConfirm'))) return;
       cashflowObjects = cashflowObjects.filter((item) => item.id !== object.id);
@@ -1048,6 +1131,7 @@ function bindCashSectionEvents(object, scope) {
         if (expandedCashSections.has(section.id)) expandedCashSections.delete(section.id); else expandedCashSections.add(section.id);
         renderCashflow();
       });
+      $('[data-rename-cash-section]', sectionCard)?.addEventListener('click', () => renameCashSection(object.id, section.id));
       $('[data-delete-cash-section]', sectionCard)?.addEventListener('click', () => {
         if (!window.confirm(tr('deleteSectionConfirm'))) return;
         object.sections = object.sections.filter((item) => item.id !== section.id);
@@ -1076,8 +1160,9 @@ function bindCashSectionEvents(object, scope) {
 }
 
 function renderCashObjectDetail(object, detail) {
-  detail.innerHTML = `<div class="cash-object-detail-head"><button class="outline-button" type="button" data-close-cash-object>‹ ${tr('backToMoneyObjects')}</button><div><span class="eyebrow">STRUCTOS MONEY</span><h1>${escapeHtml(object.name)}</h1><p>${object.completed ? tr('completedObject') : tr('objectSections')}</p></div><button class="primary-button" type="button" data-add-cash-section><span>＋</span>${tr('addSection')}</button></div>${object.sections.length ? `<div class="cash-sections">${object.sections.map((section) => cashSectionMarkup(object, section)).join('')}</div>` : `<div class="cash-sections-empty"><span>＋</span><h2>${tr('noSections')}</h2><p>${tr('noSectionsCopy')}</p><button class="primary-button" type="button" data-add-cash-section>${tr('addSection')}</button></div>`}`;
+  detail.innerHTML = `<div class="cash-object-detail-head"><button class="outline-button" type="button" data-close-cash-object>‹ ${tr('backToMoneyObjects')}</button><div><span class="eyebrow">STRUCTOS MONEY</span><div class="cash-object-title-line"><h1>${escapeHtml(object.name)}</h1><button type="button" data-rename-cash-object aria-label="${escapeHtml(tr('renameObject'))}" title="${escapeHtml(tr('renameObject'))}">✎</button></div><p>${object.completed ? tr('completedObject') : tr('objectSections')}</p></div><button class="primary-button" type="button" data-add-cash-section><span>＋</span>${tr('addSection')}</button></div>${object.sections.length ? `<div class="cash-sections">${object.sections.map((section) => cashSectionMarkup(object, section)).join('')}</div>` : `<div class="cash-sections-empty"><span>＋</span><h2>${tr('noSections')}</h2><p>${tr('noSectionsCopy')}</p><button class="primary-button" type="button" data-add-cash-section>${tr('addSection')}</button></div>`}`;
   $('[data-close-cash-object]', detail)?.addEventListener('click', () => { activeCashObjectId = null; renderCashflow(); });
+  $('[data-rename-cash-object]', detail)?.addEventListener('click', () => renameCashObject(object.id));
   $$('[data-add-cash-section]', detail).forEach((button) => button.addEventListener('click', () => openCashSectionDialog(object.id)));
   bindCashSectionEvents(object, detail);
 }
@@ -1199,12 +1284,13 @@ function sectionFinanceReport(object, section) {
   const tables = [];
   if (section.contractMode) {
     const advances = cashTotal(section.advances); const expenses = cashTotal(section.expenses);
-    tables.push({ title: tr('contractAccounting'), columns, rows: rowsFor(section.advances, section.expenses, tr('advance')), summaries: [`${tr('contractAmount')}: ${formatMoney(section.contractAmount)}`, `${tr('totalAdvances')}: ${formatMoney(advances)}`, `${tr('remainingContract')}: ${formatMoney(section.contractAmount - advances)}`, `${tr('totalExpenses')}: ${formatMoney(expenses)}`, `${tr('advanceBalance')}: ${formatMoney(advances - expenses)}`] });
+    tables.push({ title: tr('contractAccounting'), columns, rows: rowsFor(section.advances, section.expenses, tr('advance')), summaries: [cashReportSummary(tr('contractAmount'), section.contractAmount), cashReportSummary(tr('totalAdvances'), advances), cashReportSummary(tr('remainingContract'), section.contractAmount - advances, true), cashReportSummary(tr('totalExpenses'), expenses), cashReportSummary(tr('advanceBalance'), advances - expenses, true)] });
     const ownInvested = cashTotal(section.ownInvestments); const ownReturned = cashTotal(section.ownReturns);
-    tables.push({ title: tr('ownFundsAccounting'), columns, rows: rowsFor(section.ownInvestments, section.ownReturns, tr('ownFundsEntry')).map((row) => ({ ...row, type: row.type === tr('reportExpense') ? tr('ownReturnEntry') : row.type })), summaries: [`${tr('totalOwnInvested')}: ${formatMoney(ownInvested)}`, `${tr('totalOwnReturned')}: ${formatMoney(ownReturned)}`, `${tr('ownFundsRemaining')}: ${formatMoney(ownInvested - ownReturned)}`] });
+    tables.push({ title: tr('ownFundsAccounting'), columns, rows: rowsFor(section.ownInvestments, section.ownReturns, tr('ownFundsEntry')).map((row) => ({ ...row, type: row.type === tr('reportExpense') ? tr('ownReturnEntry') : row.type })), summaries: [cashReportSummary(tr('totalOwnInvested'), ownInvested), cashReportSummary(tr('totalOwnReturned'), ownReturned), cashReportSummary(tr('ownFundsRemaining'), ownInvested - ownReturned, true)] });
   }
   if (section.factMode) {
-    tables.push({ title: tr('actualAccounting'), columns, rows: rowsFor(section.factIncome, section.factExpenses, tr('income')), summaries: [`${tr('income')}: ${formatMoney(cashTotal(section.factIncome))}`, `${tr('totalExpense')}: ${formatMoney(cashTotal(section.factExpenses))}`, `${tr('balanceResult')}: ${formatMoney(cashTotal(section.factIncome) - cashTotal(section.factExpenses))}`] });
+    const factIncome = cashTotal(section.factIncome); const factExpenses = cashTotal(section.factExpenses);
+    tables.push({ title: tr('actualAccounting'), columns, rows: rowsFor(section.factIncome, section.factExpenses, tr('income')), summaries: [cashReportSummary(tr('income'), factIncome), cashReportSummary(tr('totalExpense'), factExpenses), cashReportSummary(tr('balanceResult'), factIncome - factExpenses, true)] });
   }
   return {
     title: tr('sectionFinanceReport'), objectName: object.name, sectionName: section.name,
@@ -1252,7 +1338,7 @@ async function createPdfReport(report) {
     const body = [table.columns.map((column) => ({ text: column.label, style: 'tableHeader' })), ...(table.rows.length ? table.rows.map((row) => table.columns.map((column) => ({ text: reportCellValue(column, row), alignment: column.number || column.money ? 'right' : 'left' }))) : [[{ text: tr('noEntries'), colSpan: table.columns.length, alignment: 'center', color: '#64748b', margin: [0, 8] }, ...Array.from({ length: table.columns.length - 1 }, () => ({}))]])];
     content.push({ text: table.title, style: 'sectionTitle', margin: [0, 10, 0, 6] }, { table: { headerRows: 1, widths: table.columns.map((column) => column.width), body }, layout: { fillColor: (rowIndex) => rowIndex === 0 ? '#eaf3ff' : null, hLineColor: '#b8c9dc', vLineColor: '#b8c9dc' }, fontSize: 8 });
     if (Number.isFinite(table.total)) content.push({ text: `${tr('rowTotal')}: ${formatMoney(table.total)}`, bold: true, alignment: 'right', margin: [0, 7, 0, 4] });
-    if (table.summaries?.length) content.push({ ul: table.summaries, margin: [10, 7, 0, 5], fontSize: 9 });
+    if (table.summaries?.length) content.push({ ul: table.summaries.map((summary) => ({ text: cashReportSummaryText(summary), bold: Boolean(summary?.tone), color: summary?.tone === 'is-negative' ? '#d9384b' : summary?.tone === 'is-positive' ? '#138a5b' : '#14213d' })), margin: [10, 7, 0, 5], fontSize: 9 });
   });
   if (report.parties) {
     const partyRows = [['', tr('fullName'), tr('signature')], [tr('preparedBy'), report.parties.prepared.name, report.parties.prepared.signature], [tr('performedBy'), report.parties.performed.name, report.parties.performed.signature], [tr('acceptedBy'), report.parties.accepted.name, report.parties.accepted.signature]];
@@ -1285,7 +1371,13 @@ async function createExcelReport(report) {
     const rows = table.rows.length ? table.rows : [{ [table.columns[0].key]: tr('noEntries') }];
     rows.forEach((row) => { const excelRow = worksheet.getRow(cursor); table.columns.forEach((column, index) => { const cell = excelRow.getCell(index + 1); cell.value = column.number || column.money ? (Number(row[column.key]) || 0) : String(row[column.key] ?? ''); if (column.money) cell.numFmt = '#,##0.00 "₽"'; cell.alignment = { vertical: 'top', wrapText: true, horizontal: column.number || column.money ? 'right' : 'left' }; cell.border = { top: { style: 'thin', color: { argb: 'FFD4DFEB' } }, left: { style: 'thin', color: { argb: 'FFD4DFEB' } }, bottom: { style: 'thin', color: { argb: 'FFD4DFEB' } }, right: { style: 'thin', color: { argb: 'FFD4DFEB' } } }; }); cursor += 1; });
     if (Number.isFinite(table.total)) { worksheet.mergeCells(cursor, 1, cursor, maxColumns - 1); worksheet.getCell(cursor, 1).value = tr('rowTotal'); worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, maxColumns).value = table.total; worksheet.getCell(cursor, maxColumns).numFmt = '#,##0.00 "₽"'; worksheet.getCell(cursor, maxColumns).font = { bold: true }; cursor += 1; }
-    (table.summaries || []).forEach((summary) => { worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = summary; worksheet.getCell(cursor, 1).font = { bold: true }; cursor += 1; });
+    (table.summaries || []).forEach((summary) => {
+      worksheet.mergeCells(cursor, 1, cursor, maxColumns);
+      const cell = worksheet.getCell(cursor, 1);
+      cell.value = cashReportSummaryText(summary);
+      cell.font = { bold: true, ...(summary?.tone === 'is-negative' ? { color: { argb: 'FFD9384B' } } : summary?.tone === 'is-positive' ? { color: { argb: 'FF138A5B' } } : {}) };
+      cursor += 1;
+    });
     cursor += 2;
   });
   if (report.parties) {
@@ -1404,6 +1496,7 @@ let drawingLastPoint = null;
 let drawingUndoStack = [];
 let drawingMinimized = false;
 let currentDrawingId = null;
+let drawingDirty = false;
 let drawingDbPromise;
 
 function clearDrawingCanvas(trackUndo = true) {
@@ -1446,7 +1539,7 @@ function restoreDrawingImage(source, afterLoad) {
 
 function undoDrawing() {
   const snapshot = drawingUndoStack.pop();
-  if (snapshot) restoreDrawingImage(snapshot);
+  if (snapshot) restoreDrawingImage(snapshot, () => { drawingDirty = true; });
 }
 
 function drawingPoint(event) {
@@ -1506,12 +1599,17 @@ function drawingDatabase() {
   return drawingDbPromise;
 }
 
-async function saveDrawingRecord() {
+async function saveDrawingRecord(options = {}) {
   initializeDrawingCanvas();
+  const requestedTitle = String(options.title ?? $('[data-drawing-title]').value).trim();
+  if (options.requireTitle && !requestedTitle) {
+    showToast(tr('drawingNameRequired'));
+    return null;
+  }
   const id = currentDrawingId || `drawing-${Date.now()}-${Math.random().toString(16).slice(2)}`;
   const record = {
     id,
-    title: ($('[data-drawing-title]').value.trim() || tr('newSketch')).slice(0, 80),
+    title: (requestedTitle || tr('newSketch')).slice(0, 80),
     dataUrl: drawingCanvas.toDataURL('image/png'),
     updatedAt: new Date().toISOString()
   };
@@ -1524,6 +1622,8 @@ async function saveDrawingRecord() {
       transaction.onerror = () => reject(transaction.error);
     });
     currentDrawingId = id;
+    drawingDirty = false;
+    $('[data-drawing-title]').value = record.title;
     showToast(tr('drawingSaved'));
     return record;
   } catch (error) {
@@ -1558,6 +1658,7 @@ async function renderDrawingGallery() {
     restoreDrawingImage(record.dataUrl, () => {
       currentDrawingId = record.id;
       $('[data-drawing-title]').value = record.title;
+      drawingDirty = false;
       gallery.hidden = true;
     });
   }));
@@ -1577,11 +1678,55 @@ function loadDrawingBackground(file) {
     drawingContext.drawImage(image, (drawingCanvas.width - width) / 2, (drawingCanvas.height - height) / 2, width, height);
     URL.revokeObjectURL(objectUrl);
     currentDrawingId = null;
+    drawingDirty = true;
     $('[data-drawing-title]').value = file.name.replace(/\.[^.]+$/, '').slice(0, 80) || tr('newSketch');
     showToast(tr('backgroundLoaded'));
   };
   image.onerror = () => { URL.revokeObjectURL(objectUrl); showToast(tr('unsupportedFormat')); };
   image.src = objectUrl;
+}
+
+function resetDrawingCanvas() {
+  initializeDrawingCanvas();
+  clearDrawingCanvas(false);
+  drawingUndoStack = [];
+  currentDrawingId = null;
+  drawingDirty = false;
+  $('[data-drawing-title]').value = tr('newSketch');
+  $('[data-drawing-gallery]').hidden = true;
+}
+
+function startFreshDrawing() {
+  resetDrawingCanvas();
+  $('[data-dialog]')?.close();
+  if (!drawingDialog.open) drawingDialog.showModal();
+  showToast(tr('newDrawingReady'));
+}
+
+function askDrawingNameBeforeReset() {
+  const suggestedTitle = ($('[data-drawing-title]').value.trim() || '').slice(0, 80);
+  showDialog(tr('nameDrawing'), tr('drawingUnsavedCopy'), `<div class="object-form"><label><span class="sr-only">${tr('nameDrawing')}</span><input data-new-drawing-name maxlength="80" value="${escapeHtml(suggestedTitle)}" placeholder="${tr('nameDrawing')}" /></label><button class="primary-button" type="button" data-save-before-new>${tr('saveCurrentDrawing')}</button></div>`);
+  const input = $('[data-new-drawing-name]', $('[data-dialog-content]'));
+  const saveAndReset = async () => {
+    const title = input?.value.trim() || '';
+    if (!title) { showToast(tr('drawingNameRequired')); input?.focus(); return; }
+    const button = $('[data-save-before-new]', $('[data-dialog-content]'));
+    if (button) button.disabled = true;
+    const record = await saveDrawingRecord({ title, requireTitle: true });
+    if (record) startFreshDrawing();
+    else if (button) button.disabled = false;
+  };
+  $('[data-save-before-new]', $('[data-dialog-content]'))?.addEventListener('click', saveAndReset);
+  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); saveAndReset(); } });
+  setTimeout(() => { input?.focus(); input?.select(); }, 40);
+}
+
+function newDrawingFlow() {
+  initializeDrawingCanvas();
+  if (!drawingDirty && !currentDrawingId) { startFreshDrawing(); return; }
+  showDialog(tr('drawingUnsavedTitle'), tr('drawingUnsavedCopy'), `<div class="result-actions drawing-new-actions"><button class="primary-button" type="button" data-drawing-save-current>${tr('saveCurrentDrawing')}</button><button class="outline-button" type="button" data-drawing-discard-current>${tr('discardCurrentDrawing')}</button></div>`);
+  $('[data-drawing-save-current]', $('[data-dialog-content]'))?.addEventListener('click', askDrawingNameBeforeReset);
+  $('[data-drawing-discard-current]', $('[data-dialog-content]'))?.addEventListener('click', startFreshDrawing);
 }
 
 function drawingCanvasBlob(type, quality) {
@@ -1657,6 +1802,7 @@ if (drawingCanvas) {
     initializeDrawingCanvas();
     pushDrawingUndo();
     drawingActive = true;
+    drawingDirty = true;
     drawingPointerId = event.pointerId;
     drawingLastPoint = drawingPoint(event);
     drawingCanvas.setPointerCapture(event.pointerId);
@@ -1781,20 +1927,143 @@ function objectRowMarkup(object) {
   return `<article class="status-object-row ${isReady ? 'is-ready' : isActive ? 'is-active' : 'is-uploaded'}"><span class="object-row-icon" aria-hidden="true">${isReady ? '◇' : isActive ? '⌂' : '▤'}</span><div class="object-row-copy"><button class="object-open-button" type="button" data-open-object="${escapeHtml(object.id)}" aria-label="${escapeHtml(`${tr('openObject')}: ${object.name}`)}">${escapeHtml(object.name)}</button><small>${escapeHtml(meta)}</small></div>${actions}</article>`;
 }
 
+function combinedManagedObjects() {
+  const coreObjects = objectRegistry
+    .filter((object) => object.status === 'active' || object.status === 'completed')
+    .map((object) => ({
+      key: `core:${object.id}`,
+      id: object.id,
+      source: 'core',
+      name: object.name,
+      typeLabel: tr('fullCycleObject'),
+      completed: object.status === 'completed',
+      date: object.startedAt || object.analyzedAt || object.uploadedAt,
+      completedAt: object.completedAt || null,
+      details: `${(object.files || []).length} ${tr('attachedDocuments')} · ${tr('memoryUsed')}: ${formatStorage((object.files || []).reduce((total, file) => total + (Number(file.size) || 0), 0))}`
+    }));
+  const quickObjects = cashflowObjects.map((object) => ({
+    key: `quick:${object.id}`,
+    id: object.id,
+    source: 'quick',
+    name: object.name,
+    typeLabel: tr('quickObject'),
+    completed: Boolean(object.completed),
+    date: object.createdAt,
+    completedAt: object.completedAt || null,
+    details: `${object.sections.length} ${tr('sectionCalculations')}`
+  }));
+  const objects = [...coreObjects, ...quickObjects];
+  const orderIndex = new Map(unifiedObjectOrder.map((key, index) => [key, index]));
+  const active = objects.filter((object) => !object.completed).sort((a, b) => {
+    const aOrder = orderIndex.get(a.key);
+    const bOrder = orderIndex.get(b.key);
+    if (aOrder !== undefined && bOrder !== undefined) return aOrder - bOrder;
+    if (aOrder !== undefined) return 1;
+    if (bOrder !== undefined) return -1;
+    return new Date(b.date || 0) - new Date(a.date || 0);
+  });
+  const completed = objects.filter((object) => object.completed).sort((a, b) => new Date(b.completedAt || b.date || 0) - new Date(a.completedAt || a.date || 0));
+  return [...active, ...completed];
+}
+
+function unifiedObjectRowMarkup(object) {
+  const dateValue = object.completed ? object.completedAt || object.date : object.date;
+  const status = tr(object.completed ? 'completedListObject' : 'inWork');
+  const meta = `${status}: ${formatObjectDate(dateValue)} · ${object.details}`;
+  const handle = object.completed
+    ? '<span class="unified-drag-placeholder" aria-hidden="true">✓</span>'
+    : `<button class="unified-drag-handle" type="button" data-unified-drag aria-label="${escapeHtml(`${tr('dragObject')}: ${object.name}`)}" title="${escapeHtml(tr('dragObject'))}"><span></span><span></span><span></span></button>`;
+  return `<article class="unified-object-row${object.completed ? ' is-completed' : ''}" data-unified-object="${escapeHtml(object.key)}">${handle}<button class="unified-object-open" type="button" data-open-unified="${escapeHtml(object.key)}" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}"><span class="unified-object-icon" aria-hidden="true">${object.source === 'quick' ? '+₽−' : '⌂'}</span><span class="unified-object-copy"><strong>${escapeHtml(object.name)}</strong><span class="unified-object-badges"><b class="is-${object.source}">${escapeHtml(object.typeLabel)}</b><b class="is-status">${escapeHtml(status)}</b></span><small>${escapeHtml(meta)}</small></span><span class="unified-object-arrow" aria-hidden="true">›</span></button></article>`;
+}
+
+function openUnifiedObject(key) {
+  if (key.startsWith('quick:')) {
+    const id = key.slice('quick:'.length);
+    if (!cashflowObjects.some((object) => object.id === id)) return;
+    activeCashObjectId = id;
+    setPanel('cashflow');
+    return;
+  }
+  if (key.startsWith('core:')) openObjectCard(key.slice('core:'.length));
+}
+
+function persistUnifiedObjectOrder(list) {
+  unifiedObjectOrder = $$('[data-unified-object]:not(.is-completed)', list).map((card) => card.dataset.unifiedObject);
+  localStorage.setItem(OBJECT_ORDER_KEY, JSON.stringify(unifiedObjectOrder));
+}
+
+function enableUnifiedObjectSorting(handle, card, list) {
+  let pointerId = null;
+  let moved = false;
+  let startY = 0;
+  const moveCard = (direction) => {
+    const activeCards = $$('[data-unified-object]:not(.is-completed)', list);
+    const index = activeCards.indexOf(card);
+    const nextIndex = Math.max(0, Math.min(activeCards.length - 1, index + direction));
+    const target = activeCards[nextIndex];
+    if (!target || target === card) return;
+    if (direction < 0) list.insertBefore(card, target);
+    else list.insertBefore(card, target.nextSibling);
+    persistUnifiedObjectOrder(list);
+    showToast(tr('orderSaved'));
+  };
+  handle.addEventListener('keydown', (event) => {
+    if (!['ArrowUp', 'ArrowDown'].includes(event.key)) return;
+    event.preventDefault();
+    moveCard(event.key === 'ArrowUp' ? -1 : 1);
+  });
+  handle.addEventListener('pointerdown', (event) => {
+    event.preventDefault();
+    pointerId = event.pointerId;
+    startY = event.clientY;
+    moved = false;
+    card.classList.add('is-dragging');
+    handle.setPointerCapture(event.pointerId);
+  });
+  handle.addEventListener('pointermove', (event) => {
+    if (event.pointerId !== pointerId) return;
+    event.preventDefault();
+    moved ||= Math.abs(event.clientY - startY) > 5;
+    const activeCards = $$('[data-unified-object]:not(.is-completed)', list).filter((item) => item !== card);
+    const next = activeCards.find((item) => event.clientY < item.getBoundingClientRect().top + item.offsetHeight / 2);
+    const firstCompleted = $('[data-unified-object].is-completed', list);
+    if (next) list.insertBefore(card, next);
+    else if (firstCompleted) list.insertBefore(card, firstCompleted);
+    else list.append(card);
+  });
+  const finish = (event) => {
+    if (event.pointerId !== pointerId) return;
+    if (handle.hasPointerCapture(event.pointerId)) handle.releasePointerCapture(event.pointerId);
+    pointerId = null;
+    card.classList.remove('is-dragging');
+    if (moved) { persistUnifiedObjectOrder(list); showToast(tr('orderSaved')); }
+  };
+  handle.addEventListener('pointerup', finish);
+  handle.addEventListener('pointercancel', finish);
+}
+
 function renderObjects() {
   const uploaded = objectRegistry.filter((object) => object.status === 'uploaded');
   const ready = objectRegistry.filter((object) => object.status === 'ready');
   const active = objectRegistry.filter((object) => object.status === 'active');
+  const combined = combinedManagedObjects();
   $$('[data-uploaded-objects-list]').forEach((list) => { list.innerHTML = uploaded.map(objectRowMarkup).join(''); });
   $$('[data-ready-objects-list]').forEach((list) => { list.innerHTML = ready.map(objectRowMarkup).join(''); });
   $$('[data-active-objects-list]').forEach((list) => { list.innerHTML = active.map(objectRowMarkup).join(''); });
+  $$('[data-all-objects-list]').forEach((list) => {
+    list.innerHTML = combined.map(unifiedObjectRowMarkup).join('');
+    $$('[data-open-unified]', list).forEach((button) => button.addEventListener('click', () => openUnifiedObject(button.dataset.openUnified)));
+    $$('[data-unified-drag]', list).forEach((handle) => enableUnifiedObjectSorting(handle, handle.closest('[data-unified-object]'), list));
+  });
   $$('[data-uploaded-count]').forEach((count) => { count.textContent = String(uploaded.length); });
   $$('[data-ready-count]').forEach((count) => { count.textContent = String(ready.length); });
   $$('[data-active-count]').forEach((count) => { count.textContent = String(active.length); });
+  $$('[data-all-active-count]').forEach((count) => { count.textContent = String(combined.filter((object) => !object.completed).length); });
   $$('[data-active-available]').forEach((count) => { count.textContent = String(Math.max(0, ACTIVE_OBJECT_LIMIT - active.length)); });
   $$('[data-uploaded-empty]').forEach((empty) => { empty.hidden = uploaded.length > 0; });
   $$('[data-ready-empty]').forEach((empty) => { empty.hidden = ready.length > 0; });
   $$('[data-active-empty]').forEach((empty) => { empty.hidden = active.length > 0; });
+  $$('[data-all-objects-empty]').forEach((empty) => { empty.hidden = combined.length > 0; });
   $$('[data-start-ready]').forEach((button) => button.addEventListener('click', () => startReadyObject(button.dataset.startReady)));
   $$('[data-delete-ready]').forEach((button) => button.addEventListener('click', () => deleteReadyObject(button.dataset.deleteReady)));
   $$('[data-open-object]').forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openObject)));
@@ -1807,13 +2076,51 @@ function openObjectCard(id) {
     const file = objectFile(object, kind);
     return `<button class="object-document-choice ${file ? 'has-file' : ''}" type="button" data-object-document="${kind}"><span>${file ? '✓' : '+'}</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file?.name || tr('notUploaded'))}</small></button>`;
   }).join('');
-  showDialog(escapeHtml(object.name), tr('chooseObjectDocument'), `<div class="object-document-chooser">${documentChoices}</div><button class="primary-button object-analyze-button" type="button" data-analyze-object>${escapeHtml(tr('analyzeObject'))}</button>`);
+  const lifecycleAction = ['active', 'completed'].includes(object.status)
+    ? `<button class="outline-button object-lifecycle-button${object.status === 'active' ? ' is-danger' : ''}" type="button" data-toggle-core-object>${escapeHtml(tr(object.status === 'active' ? 'finishObject' : 'reopenObject'))}</button>`
+    : '';
+  showDialog(escapeHtml(object.name), tr('chooseObjectDocument'), `<div class="object-document-chooser">${documentChoices}</div><div class="object-card-actions"><button class="primary-button object-analyze-button" type="button" data-analyze-object>${escapeHtml(tr('analyzeObject'))}</button><button class="outline-button object-rename-button" type="button" data-rename-core-object>${escapeHtml(tr('rename'))}</button>${lifecycleAction}</div>`);
   $$('[data-object-document]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.objectDocument, object.id)));
   $('[data-analyze-object]')?.addEventListener('click', () => {
     selectObjectForAnalysis(object);
     $('[data-dialog]').close();
     runAnalysis();
   });
+  $('[data-rename-core-object]')?.addEventListener('click', () => renameCoreObject(object.id));
+  $('[data-toggle-core-object]')?.addEventListener('click', () => toggleCoreObjectCompletion(object.id));
+}
+
+function renameCoreObject(id) {
+  const object = objectRegistry.find((item) => item.id === id);
+  if (!object) return;
+  const previousName = object.name;
+  openRenameDialog(tr('renameObject'), object.name, 100, (name) => {
+    object.name = name;
+    if (localStorage.getItem(OBJECT_NAME_KEY) === previousName) localStorage.setItem(OBJECT_NAME_KEY, name);
+    saveObjects();
+    renderObjects();
+    renderWidgets();
+  });
+}
+
+function toggleCoreObjectCompletion(id) {
+  const object = objectRegistry.find((item) => item.id === id);
+  if (!object || !['active', 'completed'].includes(object.status)) return;
+  if (object.status === 'completed') {
+    if (objectRegistry.filter((item) => item.status === 'active').length >= ACTIVE_OBJECT_LIMIT) { showActiveLimit(); return; }
+    object.status = 'active';
+    object.completedAt = null;
+    object.startedAt ||= new Date().toISOString();
+    showToast(tr('objectReopened'));
+  } else {
+    object.status = 'completed';
+    object.completedAt = new Date().toISOString();
+    showToast(tr('completedObject'));
+  }
+  saveObjects();
+  renderObjects();
+  renderWidgets();
+  $('[data-dialog]')?.close();
 }
 
 function registerAnalyzedObject(name, readyFiles) {
@@ -1826,6 +2133,7 @@ function registerAnalyzedObject(name, readyFiles) {
     existing.files = files;
     existing.status = 'ready';
     existing.startedAt = null;
+    existing.completedAt = null;
     saveObjects();
     renderObjects();
     renderWidgets();
@@ -1859,6 +2167,7 @@ function startReadyObject(id) {
   }
   object.status = 'active';
   object.startedAt = new Date().toISOString();
+  object.completedAt = null;
   saveObjects();
   renderObjects();
   renderWidgets();
@@ -2109,7 +2418,7 @@ function openObjectDialog() {
     const name = $('[data-object-name]').value.trim();
     if (!name) { $('[data-object-name]').focus(); return; }
     const now = new Date().toISOString();
-    objectRegistry.unshift({ id: createObjectId(), name, status: 'active', uploadedAt: now, analyzedAt: now, startedAt: now, files: [] });
+    objectRegistry.unshift({ id: createObjectId(), name, status: 'active', uploadedAt: now, analyzedAt: now, startedAt: now, completedAt: null, files: [] });
     saveObjects();
     renderObjects();
     renderWidgets();
@@ -2176,8 +2485,10 @@ $('[data-edit-profile]').addEventListener('click', () => showDialog(tr('edit'), 
 $('[data-drawing-close]')?.addEventListener('click', closeDrawingStudio);
 $('[data-drawing-minimize]')?.addEventListener('click', minimizeDrawingStudio);
 $('[data-drawing-restore]')?.addEventListener('click', openDrawingStudio);
+$('[data-drawing-new]')?.addEventListener('click', newDrawingFlow);
 $('[data-drawing-undo]')?.addEventListener('click', undoDrawing);
-$('[data-drawing-clear]')?.addEventListener('click', () => { clearDrawingCanvas(); currentDrawingId = null; });
+$('[data-drawing-clear]')?.addEventListener('click', () => { clearDrawingCanvas(); currentDrawingId = null; drawingDirty = true; });
+$('[data-drawing-title]')?.addEventListener('input', () => { if (drawingInitialized) drawingDirty = true; });
 $('[data-drawing-upload]')?.addEventListener('click', () => $('[data-drawing-file]').click());
 $('[data-drawing-file]')?.addEventListener('change', (event) => {
   loadDrawingBackground(event.currentTarget.files?.[0]);
