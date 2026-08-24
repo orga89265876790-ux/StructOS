@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=12" />
+    <link rel="stylesheet" href="dashboard.css?v=13" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -110,12 +110,6 @@
             <div class="object-list-empty" data-ready-empty><span>◇</span><p data-i18n="noReadyObjects">После анализа проекты появятся здесь</p></div>
           </section>
 
-          <section class="object-status-block active-objects-block">
-            <header><div><span class="eyebrow" data-i18n="workSpace">РАБОЧЕЕ ПРОСТРАНСТВО</span><h2 data-i18n="activeObjects">Объекты действующие</h2><p><strong data-active-count>0</strong> <span data-i18n="of">из</span> 1</p></div><button class="primary-button compact-add" type="button" data-add-object data-i18n="add">Добавить</button></header>
-            <div class="status-object-list" data-active-objects-list></div>
-            <div class="object-list-empty" data-active-empty><span>⌂</span><p data-i18n="noActiveObjects">Действующих объектов пока нет</p></div>
-          </section>
-
           <section class="attention-card">
             <div class="attention-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></div>
             <div><h2 data-i18n="attention">Требует внимания</h2><p data-i18n="allGood">Всё в порядке</p></div>
@@ -144,10 +138,10 @@
         </section>
 
         <section class="tab-panel objects-panel" data-panel="objects" aria-label="Объекты" hidden>
-          <div class="page-title"><div><span class="eyebrow">STRUCTOS CORE</span><h1 data-i18n="activeObjects">Объекты действующие</h1><p><span data-i18n="available">Доступно</span>: <span data-active-available>1</span></p></div><button class="primary-button" type="button" data-add-object data-i18n="addObject">Добавить объект</button></div>
-          <section class="objects-panel-group uploaded-objects-group"><header><h2 data-i18n="uploadedObjects">Загруженные объекты</h2><strong data-uploaded-count>0</strong></header><div class="panel-object-list" data-uploaded-objects-list></div><div class="object-list-empty" data-uploaded-empty><span>▤</span><p data-i18n="noUploadedObjects">Загруженных объектов пока нет</p></div></section>
-          <div class="panel-object-list" data-active-objects-list></div>
-          <div class="empty-state" data-active-empty><div class="empty-building" aria-hidden="true"><span></span><span></span><span></span></div><h2 data-i18n="noActiveObjects">Действующих объектов пока нет</h2><p data-i18n="noActiveObjectsCopy">Проанализируйте проект и запустите его из блока готовых объектов.</p><button class="primary-button" type="button" data-open-view="project" data-i18n="goAnalysis">Перейти к анализу</button></div>
+          <div class="page-title"><div><span class="eyebrow">STRUCTOS OBJECTS</span><h1 data-i18n="allObjects">Все действующие объекты</h1><p><span data-i18n="activeObjectsCount">Активных</span>: <span data-all-active-count>0</span></p></div><button class="primary-button" type="button" data-add-object data-i18n="addObject">Добавить объект</button></div>
+          <p class="objects-reorder-hint" data-i18n="reorderObjectsHint">Активные объекты можно менять местами перетаскиванием</p>
+          <div class="unified-object-list" data-all-objects-list></div>
+          <div class="empty-state" data-all-objects-empty><div class="empty-building" aria-hidden="true"><span></span><span></span><span></span></div><h2 data-i18n="noActiveObjects">Действующих объектов пока нет</h2><p data-i18n="noActiveObjectsCopy">Проанализируйте проект и запустите его из блока готовых объектов.</p><button class="primary-button" type="button" data-open-view="project" data-i18n="goAnalysis">Перейти к анализу</button></div>
         </section>
 
         <section class="tab-panel cashflow-panel" data-panel="cashflow" aria-label="Быстрые доходы и расходы" hidden>
@@ -206,6 +200,7 @@
           <div class="drawing-tools">
             <label><span data-i18n="lineColor">Цвет</span><input type="color" value="#0868e8" data-drawing-color /></label>
             <label><span data-i18n="lineWidth">Толщина</span><input type="range" min="1" max="28" value="5" data-drawing-width /></label>
+            <button type="button" data-drawing-new data-i18n="newDrawing">Новый рисунок</button>
             <button type="button" data-drawing-undo data-i18n="undo">Отменить</button>
             <button type="button" data-drawing-clear data-i18n="clearDrawing">Очистить</button>
           </div>
@@ -228,6 +223,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=13"></script>
+    <script type="module" src="dashboard.js?v=14"></script>
   </body>
 </html>
