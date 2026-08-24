@@ -102,6 +102,19 @@ Object.assign(copy.TJ, {
 });
 
 Object.assign(copy.RU, {
+  expandObject: 'Развернуть', collapseObject: 'Свернуть', finishObject: 'Завершить объект', reopenObject: 'Вернуть в работу', completedObject: 'Объект завершён', objectReopened: 'Объект возвращён в работу', deleteCashObjectConfirm: 'Удалить финансовый объект со всеми разделами и документами?', cashObjectDeleted: 'Объект удалён', saveCost: 'Сохранить стоимость', costSaved: 'Стоимость объекта сохранена', addSection: 'Добавить раздел', createSection: 'Новый раздел объекта', sectionName: 'Название раздела', sectionPlaceholder: 'Например, Электромонтажные работы', sectionCreated: 'Раздел добавлен', sectionDeleted: 'Раздел удалён', deleteSection: 'Удалить раздел', deleteSectionConfirm: 'Удалить раздел со всеми расчётами и документами?', mainSection: 'Основной раздел', sectionCalculations: 'Расчёты раздела', incomeExpenseTable: 'Доходы и расходы', sectionReport: 'Скачать расчёты', workStatement: 'Ведомость выполненных работ', workAct: 'Акт выполненных работ', recordNumber: '№ записи', workName: 'Наименование работ', unit: 'Ед. измерения', quantity: 'Количество', price: 'Цена', rowTotal: 'Итого', addRow: 'Добавить строку', removeRow: 'Удалить строку', preparedBy: 'Составлен', performedBy: 'Выполнено', acceptedBy: 'Принято', fullName: 'ФИО', signature: 'Роспись', fillDate: 'Дата заполнения', documentSaved: 'Документ сохранён в разделе', saveInSection: 'Сохранить в разделе', downloadPdf: 'Скачать PDF', downloadExcel: 'Скачать Excel', sharePdf: 'Отправить PDF', shareExcel: 'Отправить Excel', reportReady: 'Файл подготовлен', shareUnavailable: 'Отправка недоступна — файл скачан', madeInStructos: 'Сделано в Структос', website: 'www.structOS.ru', regularAccounting: 'Основной расчёт', actualAccounting: 'Оплата по факту', entryType: 'Тип записи', date: 'Дата', amount: 'Сумма', reportIncome: 'Получено / доход', reportExpense: 'Расход', sectionFinanceReport: 'Доходы и расходы раздела', objectSummary: 'Итоги по объекту', saved: 'Сохранено'
+});
+Object.assign(copy.EN, {
+  expandObject: 'Expand', collapseObject: 'Collapse', finishObject: 'Complete object', reopenObject: 'Return to work', completedObject: 'Object completed', objectReopened: 'Object returned to work', deleteCashObjectConfirm: 'Delete this financial object with all sections and documents?', cashObjectDeleted: 'Object deleted', saveCost: 'Save value', costSaved: 'Object value saved', addSection: 'Add section', createSection: 'New object section', sectionName: 'Section name', sectionPlaceholder: 'For example, Electrical works', sectionCreated: 'Section added', sectionDeleted: 'Section deleted', deleteSection: 'Delete section', deleteSectionConfirm: 'Delete this section with all calculations and documents?', mainSection: 'Main section', sectionCalculations: 'Section calculations', incomeExpenseTable: 'Income and expenses', sectionReport: 'Download calculations', workStatement: 'Completed works statement', workAct: 'Completed works act', recordNumber: 'Record No.', workName: 'Work name', unit: 'Unit', quantity: 'Quantity', price: 'Price', rowTotal: 'Total', addRow: 'Add row', removeRow: 'Remove row', preparedBy: 'Prepared by', performedBy: 'Performed by', acceptedBy: 'Accepted by', fullName: 'Full name', signature: 'Signature', fillDate: 'Date completed', documentSaved: 'Document saved in the section', saveInSection: 'Save in section', downloadPdf: 'Download PDF', downloadExcel: 'Download Excel', sharePdf: 'Share PDF', shareExcel: 'Share Excel', reportReady: 'File prepared', shareUnavailable: 'Sharing unavailable — file downloaded', madeInStructos: 'Made in StructOS', website: 'www.structOS.ru', regularAccounting: 'Main calculation', actualAccounting: 'Payment by actual completion', entryType: 'Entry type', date: 'Date', amount: 'Amount', reportIncome: 'Received / income', reportExpense: 'Expense', sectionFinanceReport: 'Section income and expenses', objectSummary: 'Object summary', saved: 'Saved'
+});
+Object.assign(copy.KY, {
+  expandObject: 'Жайып көрсөтүү', collapseObject: 'Жыйноо', finishObject: 'Объектти бүтүрүү', reopenObject: 'Ишке кайтаруу', completedObject: 'Объект бүттү', objectReopened: 'Объект ишке кайтарылды', deleteCashObjectConfirm: 'Объектти бардык бөлүмдөрү жана документтери менен өчүрөсүзбү?', cashObjectDeleted: 'Объект өчүрүлдү', saveCost: 'Бааны сактоо', costSaved: 'Объекттин баасы сакталды', addSection: 'Бөлүм кошуу', createSection: 'Жаңы бөлүм', sectionName: 'Бөлүмдүн аталышы', sectionPlaceholder: 'Мисалы, Электромонтаж иштери', sectionCreated: 'Бөлүм кошулду', sectionDeleted: 'Бөлүм өчүрүлдү', deleteSection: 'Бөлүмдү өчүрүү', deleteSectionConfirm: 'Бөлүмдү бардык эсептери жана документтери менен өчүрөсүзбү?', mainSection: 'Негизги бөлүм', sectionCalculations: 'Бөлүмдүн эсептери', incomeExpenseTable: 'Киреше жана чыгаша', sectionReport: 'Эсептерди жүктөө', workStatement: 'Аткарылган иштердин ведомосту', workAct: 'Аткарылган иштердин актысы', recordNumber: 'Жазуу №', workName: 'Иштин аталышы', unit: 'Өлчөө бирдиги', quantity: 'Саны', price: 'Баасы', rowTotal: 'Жыйынтык', addRow: 'Сап кошуу', removeRow: 'Сапты өчүрүү', preparedBy: 'Түзгөн', performedBy: 'Аткарган', acceptedBy: 'Кабыл алган', fullName: 'Аты-жөнү', signature: 'Колу', fillDate: 'Толтурулган күнү', documentSaved: 'Документ бөлүмдө сакталды', saveInSection: 'Бөлүмдө сактоо', downloadPdf: 'PDF жүктөө', downloadExcel: 'Excel жүктөө', sharePdf: 'PDF жөнөтүү', shareExcel: 'Excel жөнөтүү', reportReady: 'Файл даяр', shareUnavailable: 'Жөнөтүү жеткиликсиз — файл жүктөлдү', madeInStructos: 'StructOS ичинде жасалды', website: 'www.structOS.ru', regularAccounting: 'Негизги эсеп', actualAccounting: 'Факт боюнча төлөм', entryType: 'Жазуунун түрү', date: 'Күнү', amount: 'Суммасы', reportIncome: 'Алынды / киреше', reportExpense: 'Чыгаша', sectionFinanceReport: 'Бөлүмдүн кирешеси жана чыгашасы', objectSummary: 'Объект боюнча жыйынтык', saved: 'Сакталды'
+});
+Object.assign(copy.TJ, {
+  expandObject: 'Кушодан', collapseObject: 'Пӯшидан', finishObject: 'Анҷоми объект', reopenObject: 'Ба кор баргардондан', completedObject: 'Объект анҷом ёфт', objectReopened: 'Объект ба кор баргашт', deleteCashObjectConfirm: 'Объект бо ҳамаи бахшҳо ва ҳуҷҷатҳо нест карда шавад?', cashObjectDeleted: 'Объект нест шуд', saveCost: 'Нигоҳ доштани арзиш', costSaved: 'Арзиши объект нигоҳ дошта шуд', addSection: 'Иловаи бахш', createSection: 'Бахши нави объект', sectionName: 'Номи бахш', sectionPlaceholder: 'Масалан, Корҳои барқӣ', sectionCreated: 'Бахш илова шуд', sectionDeleted: 'Бахш нест шуд', deleteSection: 'Нест кардани бахш', deleteSectionConfirm: 'Бахш бо ҳамаи ҳисобҳо ва ҳуҷҷатҳо нест карда шавад?', mainSection: 'Бахши асосӣ', sectionCalculations: 'Ҳисобҳои бахш', incomeExpenseTable: 'Даромад ва хароҷот', sectionReport: 'Бор кардани ҳисобҳо', workStatement: 'Ведомости корҳои иҷрошуда', workAct: 'Санади корҳои иҷрошуда', recordNumber: '№ сабт', workName: 'Номи кор', unit: 'Воҳиди ченак', quantity: 'Миқдор', price: 'Нарх', rowTotal: 'Ҳамагӣ', addRow: 'Иловаи сатр', removeRow: 'Нест кардани сатр', preparedBy: 'Тартиб дод', performedBy: 'Иҷро кард', acceptedBy: 'Қабул кард', fullName: 'Ному насаб', signature: 'Имзо', fillDate: 'Санаи пуркунӣ', documentSaved: 'Ҳуҷҷат дар бахш нигоҳ дошта шуд', saveInSection: 'Дар бахш нигоҳ доштан', downloadPdf: 'Бор кардани PDF', downloadExcel: 'Бор кардани Excel', sharePdf: 'Фиристодани PDF', shareExcel: 'Фиристодани Excel', reportReady: 'Файл омода шуд', shareUnavailable: 'Фиристодан дастнорас — файл бор шуд', madeInStructos: 'Дар StructOS сохта шуд', website: 'www.structOS.ru', regularAccounting: 'Ҳисоби асосӣ', actualAccounting: 'Пардохт аз рӯи факт', entryType: 'Навъи сабт', date: 'Сана', amount: 'Маблағ', reportIncome: 'Гирифта шуд / даромад', reportExpense: 'Хароҷот', sectionFinanceReport: 'Даромад ва хароҷоти бахш', objectSummary: 'Ҷамъбасти объект', saved: 'Нигоҳ шуд'
+});
+
+Object.assign(copy.RU, {
   readyObjects: 'Готовые к запуску объекты', activeObjects: 'Объекты действующие', noReadyObjects: 'После анализа проекты появятся здесь', noActiveObjects: 'Действующих объектов пока нет', noActiveObjectsCopy: 'Проанализируйте проект и запустите его из блока готовых объектов.',
   analyzed: 'Проанализирован', started: 'Запущен', inWork: 'В работе', start: 'Запустить', deleteObject: 'Удалить объект', attachedDocuments: 'документа(ов)', objectReady: 'Объект добавлен в готовые к запуску', objectStarted: 'Объект запущен и перенесён в действующие', objectDeleted: 'Объект удалён из готовых',
   activeLimitTitle: 'Лимит действующих объектов', activeLimitCopy: 'На тарифе «Пользователь» доступен 1 действующий объект. Дополнительный объект можно подключить за 199 ₽.'
@@ -745,6 +758,7 @@ function openTodoDialog() {
 
 function showDialog(title, copyText, extra = '') {
   const dialog = $('[data-dialog]');
+  dialog.classList.remove('cash-document-dialog', 'cash-export-dialog');
   $('[data-dialog-content]').innerHTML = `<div class="dialog-content"><h2>${title}</h2><p>${copyText}</p>${extra}</div>`;
   if (!dialog.open) dialog.showModal();
 }
@@ -793,6 +807,46 @@ function normalizeCashEntries(value) {
     }));
 }
 
+function cashDocumentParties(value) {
+  const normalizeParty = (party) => ({ name: String(party?.name || '').slice(0, 160), signature: String(party?.signature || '').slice(0, 160) });
+  return {
+    prepared: normalizeParty(value?.prepared),
+    performed: normalizeParty(value?.performed),
+    accepted: normalizeParty(value?.accepted),
+    date: /^\d{4}-\d{2}-\d{2}$/.test(value?.date || '') ? value.date : localDateKey()
+  };
+}
+
+function normalizeCashWorkRows(value, priced = false) {
+  const rows = Array.isArray(value) ? value : [];
+  const normalized = rows.map((row) => ({
+    id: String(row?.id || `work-${Date.now()}-${Math.random().toString(16).slice(2)}`),
+    name: String(row?.name || '').slice(0, 240),
+    unit: String(row?.unit || '').slice(0, 40),
+    quantity: Math.max(0, Number(row?.quantity) || 0),
+    ...(priced ? { price: Math.max(0, Number(row?.price) || 0) } : {})
+  }));
+  return normalized.length ? normalized : [{ id: `work-${Date.now()}-${Math.random().toString(16).slice(2)}`, name: '', unit: '', quantity: 0, ...(priced ? { price: 0 } : {}) }];
+}
+
+function normalizeCashDocument(value, priced = false) {
+  return { rows: normalizeCashWorkRows(value?.rows, priced), parties: cashDocumentParties(value?.parties), updatedAt: value?.updatedAt || null };
+}
+
+function normalizeCashSection(section, fallbackName = '') {
+  return {
+    id: String(section?.id || `section-${Date.now()}-${Math.random().toString(16).slice(2)}`),
+    name: String(section?.name || fallbackName || tr('mainSection')).trim().slice(0, 120) || tr('mainSection'),
+    createdAt: section?.createdAt || new Date().toISOString(),
+    received: normalizeCashEntries(section?.received),
+    expenses: normalizeCashEntries(section?.expenses),
+    factIncome: normalizeCashEntries(section?.factIncome),
+    factExpenses: normalizeCashEntries(section?.factExpenses),
+    statement: normalizeCashDocument(section?.statement, false),
+    act: normalizeCashDocument(section?.act, true)
+  };
+}
+
 function loadCashflow() {
   const saved = readStoredJSON(CASHFLOW_KEY, []);
   if (!Array.isArray(saved)) return [];
@@ -804,14 +858,25 @@ function loadCashflow() {
       cost: Math.max(0, Number(object.cost) || 0),
       factMode: Boolean(object.factMode),
       createdAt: object.createdAt || new Date().toISOString(),
-      received: normalizeCashEntries(object.received),
-      expenses: normalizeCashEntries(object.expenses),
-      factIncome: normalizeCashEntries(object.factIncome),
-      factExpenses: normalizeCashEntries(object.factExpenses)
+      costSavedAt: object.costSavedAt || null,
+      completed: Boolean(object.completed),
+      completedAt: object.completedAt || null,
+      sections: Array.isArray(object.sections) && object.sections.length
+        ? object.sections.map((section) => normalizeCashSection(section))
+        : [normalizeCashSection({
+          name: tr('mainSection'),
+          received: object.received,
+          expenses: object.expenses,
+          factIncome: object.factIncome,
+          factExpenses: object.factExpenses
+        })]
     }));
 }
 
 let cashflowObjects = loadCashflow();
+const expandedCashObjects = new Set();
+const expandedCashSections = new Set();
+let reportLogoDataUrl = '';
 
 function saveCashflow() {
   localStorage.setItem(CASHFLOW_KEY, JSON.stringify(cashflowObjects));
@@ -838,22 +903,50 @@ function cashEntryForm(kind, titleKey, buttonKey) {
   return `<section class="cash-entry-form" data-cash-entry="${kind}"><h3>${tr(titleKey)}</h3><input type="number" min="0.01" step="0.01" inputmode="decimal" data-cash-amount placeholder="0 ₽" /><input maxlength="240" data-cash-comment placeholder="${tr('comment')}" /><button class="primary-button" type="button" data-cash-submit>${tr(buttonKey)} · ${tr(titleKey)}</button></section>`;
 }
 
-function addCashEntry(objectId, kind, form) {
+function findCashSection(objectId, sectionId) {
   const object = cashflowObjects.find((item) => item.id === objectId);
+  return { object, section: object?.sections.find((item) => item.id === sectionId) };
+}
+
+function addCashEntry(objectId, sectionId, kind, form) {
+  const object = cashflowObjects.find((item) => item.id === objectId);
+  const section = object?.sections.find((item) => item.id === sectionId);
   const amountInput = $('[data-cash-amount]', form);
   const commentInput = $('[data-cash-comment]', form);
   const amount = Math.round(Number(amountInput?.value) * 100) / 100;
   const comment = commentInput?.value.trim() || '';
-  if (!object || !Number.isFinite(amount) || amount <= 0 || !comment) {
+  if (!object || !section || !Number.isFinite(amount) || amount <= 0 || !comment) {
     showToast(tr('amountRequired'));
     (!Number.isFinite(amount) || amount <= 0 ? amountInput : commentInput)?.focus();
     return;
   }
-  const target = { received: object.received, expenses: object.expenses, factIncome: object.factIncome, factExpenses: object.factExpenses }[kind];
+  const target = { received: section.received, expenses: section.expenses, factIncome: section.factIncome, factExpenses: section.factExpenses }[kind];
   if (!target) return;
   target.unshift({ id: `entry-${Date.now()}-${Math.random().toString(16).slice(2)}`, amount, comment: comment.slice(0, 240), date: new Date().toISOString() });
   saveCashflow();
   renderCashflow();
+}
+
+function cashSectionMarkup(object, section) {
+  const received = cashTotal(section.received);
+  const expenses = cashTotal(section.expenses);
+  const remaining = Math.round((object.cost - expenses - received) * 100) / 100;
+  const factIncome = cashTotal(section.factIncome);
+  const factExpenses = cashTotal(section.factExpenses);
+  const factBalance = Math.round((factIncome - factExpenses) * 100) / 100;
+  const isOpen = expandedCashSections.has(section.id);
+  const factMarkup = object.factMode ? `<section class="cash-fact-table cash-accounting-block"><h4 class="cash-fact-title">${tr('actualAccounting')}</h4><div class="cash-entry-grid">${cashEntryForm('factIncome', 'income', 'addIncome')}${cashEntryForm('factExpenses', 'expense', 'addExpense')}</div>${cashHistoryMarkup(section.factIncome, 'income')}${cashHistoryMarkup(section.factExpenses, 'expense')}<div class="cash-balance"><span>${tr('balanceResult')}</span><strong>${formatMoney(factBalance)}</strong></div></section>` : '';
+  return `<section class="cash-section" data-cash-section="${escapeHtml(section.id)}">
+    <header class="cash-section-head">
+      <button class="cash-section-toggle" type="button" data-cash-section-toggle aria-expanded="${isOpen}"><span>${isOpen ? '⌄' : '›'}</span><strong>${escapeHtml(section.name)}</strong></button>
+      <button class="cash-mini-button is-danger" type="button" data-delete-cash-section>${tr('deleteSection')}</button>
+    </header>
+    <div class="cash-section-body"${isOpen ? '' : ' hidden'}>
+      <div class="cash-section-document-actions"><button type="button" data-open-cash-document="statement">${tr('workStatement')}</button><button type="button" data-open-cash-document="act">${tr('workAct')}</button><button type="button" data-export-section>${tr('sectionReport')}</button></div>
+      <section class="cash-accounting-block"><h4>${tr('regularAccounting')}</h4><div class="cash-summary"><article><span>${tr('totalReceived')}</span><strong>${formatMoney(received)}</strong></article><article><span>${tr('totalExpense')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining"><span>${tr('remainingFromCost')}</span><strong>${formatMoney(remaining)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('received', 'received', 'add')}${cashEntryForm('expenses', 'expense', 'add')}</div>${cashHistoryMarkup(section.received, 'totalReceived')}${cashHistoryMarkup(section.expenses, 'totalExpense')}</section>
+      ${factMarkup}
+    </div>
+  </section>`;
 }
 
 function renderCashflow() {
@@ -862,38 +955,91 @@ function renderCashflow() {
   if (!list || !empty) return;
   empty.hidden = cashflowObjects.length > 0;
   list.hidden = cashflowObjects.length === 0;
-  list.innerHTML = cashflowObjects.map((object) => {
-    const received = cashTotal(object.received);
-    const expenses = cashTotal(object.expenses);
+  const orderedObjects = [...cashflowObjects].sort((a, b) => Number(a.completed) - Number(b.completed) || new Date(b.createdAt) - new Date(a.createdAt));
+  list.innerHTML = orderedObjects.map((object) => {
+    const received = cashTotal(object.sections.flatMap((section) => section.received));
+    const expenses = cashTotal(object.sections.flatMap((section) => section.expenses));
     const remaining = Math.round((object.cost - expenses - received) * 100) / 100;
-    const factIncome = cashTotal(object.factIncome);
-    const factExpenses = cashTotal(object.factExpenses);
+    const factIncome = cashTotal(object.sections.flatMap((section) => section.factIncome));
+    const factExpenses = cashTotal(object.sections.flatMap((section) => section.factExpenses));
     const factBalance = Math.round((factIncome - factExpenses) * 100) / 100;
-    const standard = `<div class="cash-standard-table"><div class="cash-cost-row"><label class="cash-cost-field"><span>${tr('objectCost')}</span><input type="number" min="0" step="0.01" inputmode="decimal" value="${object.cost || ''}" data-cash-cost /></label><label class="cash-fact-toggle"><input type="checkbox" data-cash-fact${object.factMode ? ' checked' : ''} /><span>${tr('workByFact')}</span></label></div><div class="cash-summary"><article><span>${tr('totalReceived')}</span><strong>${formatMoney(received)}</strong></article><article><span>${tr('totalExpense')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining"><span>${tr('remainingFromCost')}</span><strong>${formatMoney(remaining)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('received', 'received', 'add')}${cashEntryForm('expenses', 'expense', 'add')}</div>${cashHistoryMarkup(object.received, 'totalReceived')}${cashHistoryMarkup(object.expenses, 'totalExpense')}</div>`;
-    const fact = object.factMode ? `<section class="cash-fact-table"><h3 class="cash-fact-title">${tr('paymentByFact')}</h3><div class="cash-entry-grid">${cashEntryForm('factIncome', 'income', 'addIncome')}${cashEntryForm('factExpenses', 'expense', 'addExpense')}</div>${cashHistoryMarkup(object.factIncome, 'income')}${cashHistoryMarkup(object.factExpenses, 'expense')}<div class="cash-balance"><span>${tr('balanceResult')}</span><strong>${formatMoney(factBalance)}</strong></div></section>` : '';
-    return `<article class="cash-object" data-cash-object="${escapeHtml(object.id)}"><header><div><h2>${escapeHtml(object.name)}</h2><small>${cashDate(object.createdAt)}</small></div></header><div class="cash-object-body">${standard}${fact}</div></article>`;
+    const isExpanded = expandedCashObjects.has(object.id);
+    return `<article class="cash-object${object.completed ? ' is-completed' : ''}" data-cash-object="${escapeHtml(object.id)}"><header><div class="cash-object-heading"><h2>${escapeHtml(object.name)}</h2><small>${cashDate(object.createdAt)}${object.completed ? ` · ${tr('completedObject')}` : ''}</small><div class="cash-object-actions"><label class="cash-mini-button"><input type="checkbox" data-cash-expand${isExpanded ? ' checked' : ''} /><span>${isExpanded ? tr('collapseObject') : tr('expandObject')}</span></label><button class="cash-mini-button is-danger" type="button" data-delete-cash-object>${tr('deleteObject')}</button><label class="cash-mini-button is-complete"><input type="checkbox" data-complete-cash-object${object.completed ? ' checked' : ''} /><span>${object.completed ? tr('reopenObject') : tr('finishObject')}</span></label></div></div></header><div class="cash-object-body"${isExpanded ? '' : ' hidden'}><div class="cash-cost-row"><label class="cash-cost-field"><span>${tr('objectCost')}</span><input type="number" min="0" step="0.01" inputmode="decimal" value="${object.cost || ''}" data-cash-cost /></label><label class="cash-fact-toggle"><input type="checkbox" data-cash-fact${object.factMode ? ' checked' : ''} /><span>${tr('workByFact')}</span></label><button class="primary-button cash-save-cost" type="button" data-save-cash-cost>${tr('saveCost')}</button></div><div class="cash-object-overview"><article><span>${tr('totalReceived')}</span><strong>${formatMoney(received)}</strong></article><article><span>${tr('totalExpense')}</span><strong>${formatMoney(expenses)}</strong></article><article><span>${tr('remainingFromCost')}</span><strong>${formatMoney(remaining)}</strong></article>${object.factMode ? `<article><span>${tr('balanceResult')}</span><strong>${formatMoney(factBalance)}</strong></article>` : ''}</div><div class="cash-sections-title"><div><span class="eyebrow">${tr('sectionCalculations')}</span><strong>${object.sections.length}</strong></div><button class="primary-button" type="button" data-add-cash-section><span>＋</span>${tr('addSection')}</button></div><div class="cash-sections">${object.sections.map((section) => cashSectionMarkup(object, section)).join('')}</div></div></article>`;
   }).join('');
 
   $$('[data-cash-object]', list).forEach((card) => {
     const object = cashflowObjects.find((item) => item.id === card.dataset.cashObject);
     if (!object) return;
+    $('[data-cash-expand]', card)?.addEventListener('change', (event) => {
+      if (event.currentTarget.checked) expandedCashObjects.add(object.id); else expandedCashObjects.delete(object.id);
+      renderCashflow();
+    });
+    $('[data-delete-cash-object]', card)?.addEventListener('click', () => {
+      if (!window.confirm(tr('deleteCashObjectConfirm'))) return;
+      cashflowObjects = cashflowObjects.filter((item) => item.id !== object.id);
+      expandedCashObjects.delete(object.id);
+      saveCashflow();
+      renderCashflow();
+      showToast(tr('cashObjectDeleted'));
+    });
+    $('[data-complete-cash-object]', card)?.addEventListener('change', (event) => {
+      object.completed = event.currentTarget.checked;
+      object.completedAt = object.completed ? new Date().toISOString() : null;
+      if (object.completed) expandedCashObjects.delete(object.id);
+      saveCashflow(); renderCashflow(); showToast(tr(object.completed ? 'completedObject' : 'objectReopened'));
+    });
+    $('[data-save-cash-cost]', card)?.addEventListener('click', () => {
+      const input = $('[data-cash-cost]', card);
+      object.cost = Math.max(0, Math.round((Number(input?.value) || 0) * 100) / 100);
+      object.costSavedAt = new Date().toISOString();
+      saveCashflow(); renderCashflow(); showToast(tr('costSaved'));
+    });
     $('[data-cash-fact]', card)?.addEventListener('change', (event) => {
       object.factMode = event.currentTarget.checked;
-      saveCashflow();
-      renderCashflow();
+      saveCashflow(); renderCashflow();
     });
-    $('[data-cash-cost]', card)?.addEventListener('change', (event) => {
-      object.cost = Math.max(0, Math.round((Number(event.currentTarget.value) || 0) * 100) / 100);
-      saveCashflow();
-      renderCashflow();
-    });
-    $$('[data-cash-entry]', card).forEach((form) => {
-      $('[data-cash-submit]', form)?.addEventListener('click', () => addCashEntry(object.id, form.dataset.cashEntry, form));
-      $$('input', form).forEach((input) => input.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') { event.preventDefault(); addCashEntry(object.id, form.dataset.cashEntry, form); }
-      }));
+    $('[data-add-cash-section]', card)?.addEventListener('click', () => openCashSectionDialog(object.id));
+    $$('[data-cash-section]', card).forEach((sectionCard) => {
+      const section = object.sections.find((item) => item.id === sectionCard.dataset.cashSection);
+      if (!section) return;
+      $('[data-cash-section-toggle]', sectionCard)?.addEventListener('click', () => {
+        if (expandedCashSections.has(section.id)) expandedCashSections.delete(section.id); else expandedCashSections.add(section.id);
+        renderCashflow();
+      });
+      $('[data-delete-cash-section]', sectionCard)?.addEventListener('click', () => {
+        if (!window.confirm(tr('deleteSectionConfirm'))) return;
+        object.sections = object.sections.filter((item) => item.id !== section.id);
+        expandedCashSections.delete(section.id);
+        saveCashflow(); renderCashflow(); showToast(tr('sectionDeleted'));
+      });
+      $$('[data-cash-entry]', sectionCard).forEach((form) => {
+        $('[data-cash-submit]', form)?.addEventListener('click', () => addCashEntry(object.id, section.id, form.dataset.cashEntry, form));
+        $$('input', form).forEach((input) => input.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter') { event.preventDefault(); addCashEntry(object.id, section.id, form.dataset.cashEntry, form); }
+        }));
+      });
+      $$('[data-open-cash-document]', sectionCard).forEach((button) => button.addEventListener('click', () => openCashDocumentDialog(object.id, section.id, button.dataset.openCashDocument)));
+      $('[data-export-section]', sectionCard)?.addEventListener('click', () => openSectionExportDialog(object.id, section.id));
     });
   });
+}
+
+function openCashSectionDialog(objectId) {
+  const object = cashflowObjects.find((item) => item.id === objectId);
+  if (!object) return;
+  showDialog(tr('createSection'), object.name, `<div class="cash-create-form"><label><span>${tr('sectionName')}</span><input type="text" maxlength="120" data-cash-section-name placeholder="${tr('sectionPlaceholder')}" /></label><button class="primary-button" type="button" data-create-cash-section>${tr('create')}</button></div>`);
+  const input = $('[data-cash-section-name]', $('[data-dialog-content]'));
+  const createSection = () => {
+    const name = input?.value.trim();
+    if (!name) { input?.focus(); return; }
+    const section = normalizeCashSection({ name, createdAt: new Date().toISOString() });
+    object.sections.push(section);
+    expandedCashObjects.add(object.id); expandedCashSections.add(section.id);
+    saveCashflow(); renderCashflow(); $('[data-dialog]').close(); showToast(tr('sectionCreated'));
+  };
+  $('[data-create-cash-section]')?.addEventListener('click', createSection);
+  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); createSection(); } });
+  setTimeout(() => input?.focus(), 40);
 }
 
 function openCashObjectDialog() {
@@ -908,7 +1054,8 @@ function openCashObjectDialog() {
       cost: Math.max(0, Math.round((Number($('[data-cash-new-cost]', $('[data-dialog-content]')).value) || 0) * 100) / 100),
       factMode: $('[data-cash-new-fact]', $('[data-dialog-content]')).checked,
       createdAt: new Date().toISOString(),
-      received: [], expenses: [], factIncome: [], factExpenses: []
+      completed: false, completedAt: null, costSavedAt: null,
+      sections: [normalizeCashSection({ name: tr('mainSection') })]
     });
     saveCashflow();
     renderCashflow();
@@ -919,6 +1066,205 @@ function openCashObjectDialog() {
   $('[data-cash-create]', $('[data-dialog-content]'))?.addEventListener('click', createCashObject);
   nameInput?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); createCashObject(); } });
   setTimeout(() => nameInput?.focus(), 40);
+}
+
+function cashWorkRowsMarkup(rows, priced) {
+  return rows.map((row, index) => `<tr data-cash-work-row="${escapeHtml(row.id)}"><td>${index + 1}</td><td><input data-work-field="name" maxlength="240" value="${escapeHtml(row.name)}" placeholder="${tr('workName')}" /></td><td><input data-work-field="unit" maxlength="40" value="${escapeHtml(row.unit)}" placeholder="${tr('unit')}" /></td><td><input data-work-field="quantity" type="number" min="0" step="0.001" inputmode="decimal" value="${row.quantity || ''}" placeholder="0" /></td>${priced ? `<td><input data-work-field="price" type="number" min="0" step="0.01" inputmode="decimal" value="${row.price || ''}" placeholder="0 ₽" /></td><td data-work-total>${formatMoney(row.quantity * row.price)}</td>` : ''}<td><button type="button" data-remove-work-row aria-label="${tr('removeRow')}">×</button></td></tr>`).join('');
+}
+
+function cashPartyMarkup(key, label, party) {
+  return `<div class="cash-party-row"><strong>${label}</strong><label><span>${tr('fullName')}</span><input data-party="${key}" data-party-field="name" maxlength="160" value="${escapeHtml(party.name)}" /></label><label><span>${tr('signature')}</span><input data-party="${key}" data-party-field="signature" maxlength="160" value="${escapeHtml(party.signature)}" /></label></div>`;
+}
+
+function updateCashDocumentTotal(scope, draft, priced) {
+  if (!priced) return;
+  $$('[data-cash-work-row]', scope).forEach((rowElement, index) => {
+    const row = draft.rows[index];
+    $('[data-work-total]', rowElement).textContent = formatMoney((row?.quantity || 0) * (row?.price || 0));
+  });
+  const total = draft.rows.reduce((sum, row) => sum + row.quantity * row.price, 0);
+  $('[data-document-grand-total]', scope).textContent = formatMoney(total);
+}
+
+function bindCashDocumentRows(scope, draft, priced) {
+  const body = $('[data-cash-work-rows]', scope);
+  body.innerHTML = cashWorkRowsMarkup(draft.rows, priced);
+  $$('[data-cash-work-row]', body).forEach((rowElement, index) => {
+    const row = draft.rows[index];
+    $$('[data-work-field]', rowElement).forEach((input) => input.addEventListener('input', () => {
+      const field = input.dataset.workField;
+      row[field] = ['quantity', 'price'].includes(field) ? Math.max(0, Number(input.value) || 0) : input.value.slice(0, field === 'name' ? 240 : 40);
+      updateCashDocumentTotal(scope, draft, priced);
+    }));
+    $('[data-remove-work-row]', rowElement)?.addEventListener('click', () => {
+      draft.rows.splice(index, 1);
+      if (!draft.rows.length) draft.rows.push(...normalizeCashWorkRows([], priced));
+      bindCashDocumentRows(scope, draft, priced);
+      updateCashDocumentTotal(scope, draft, priced);
+    });
+  });
+  updateCashDocumentTotal(scope, draft, priced);
+}
+
+function cashDocumentReport(object, section, kind, documentData) {
+  const priced = kind === 'act';
+  const columns = [
+    { label: tr('recordNumber'), key: 'number', width: 42 },
+    { label: tr('workName'), key: 'name', width: '*' },
+    { label: tr('unit'), key: 'unit', width: 62 },
+    { label: tr('quantity'), key: 'quantity', width: 64, number: true },
+    ...(priced ? [{ label: tr('price'), key: 'price', width: 72, money: true }, { label: tr('rowTotal'), key: 'total', width: 78, money: true }] : [])
+  ];
+  return {
+    title: tr(priced ? 'workAct' : 'workStatement'), objectName: object.name, sectionName: section.name,
+    tables: [{ title: tr(priced ? 'workAct' : 'workStatement'), columns, rows: documentData.rows.map((row, index) => ({ number: index + 1, name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { price: row.price, total: Math.round(row.quantity * row.price * 100) / 100 } : {}) })), ...(priced ? { total: documentData.rows.reduce((sum, row) => sum + row.quantity * row.price, 0) } : {}) }],
+    parties: documentData.parties
+  };
+}
+
+function sectionFinanceReport(object, section) {
+  const rowsFor = (incomeEntries, expenseEntries, incomeLabel = tr('reportIncome')) => [
+    ...incomeEntries.map((entry, index) => ({ number: index + 1, type: incomeLabel, comment: entry.comment, date: cashDate(entry.date), amount: entry.amount })),
+    ...expenseEntries.map((entry, index) => ({ number: incomeEntries.length + index + 1, type: tr('reportExpense'), comment: entry.comment, date: cashDate(entry.date), amount: entry.amount }))
+  ];
+  const columns = [{ label: tr('recordNumber'), key: 'number', width: 42 }, { label: tr('entryType'), key: 'type', width: 88 }, { label: tr('comment'), key: 'comment', width: '*' }, { label: tr('date'), key: 'date', width: 100 }, { label: tr('amount'), key: 'amount', width: 76, money: true }];
+  return {
+    title: tr('sectionFinanceReport'), objectName: object.name, sectionName: section.name,
+    tables: [
+      { title: tr('regularAccounting'), columns, rows: rowsFor(section.received, section.expenses), summaries: [`${tr('totalReceived')}: ${formatMoney(cashTotal(section.received))}`, `${tr('totalExpense')}: ${formatMoney(cashTotal(section.expenses))}`, `${tr('remainingFromCost')}: ${formatMoney(object.cost - cashTotal(section.received) - cashTotal(section.expenses))}`] },
+      { title: tr('actualAccounting'), columns, rows: rowsFor(section.factIncome, section.factExpenses, tr('income')), summaries: [`${tr('income')}: ${formatMoney(cashTotal(section.factIncome))}`, `${tr('totalExpense')}: ${formatMoney(cashTotal(section.factExpenses))}`, `${tr('balanceResult')}: ${formatMoney(cashTotal(section.factIncome) - cashTotal(section.factExpenses))}`] }
+    ], parties: cashDocumentParties(section.statement?.parties)
+  };
+}
+
+async function loadReportLogo() {
+  if (reportLogoDataUrl) return reportLogoDataUrl;
+  const response = await fetch(new URL('./assets/favicon-192.png', import.meta.url));
+  const blob = await response.blob();
+  reportLogoDataUrl = await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = reject; reader.readAsDataURL(blob); });
+  return reportLogoDataUrl;
+}
+
+function reportCellValue(column, row) {
+  const value = row[column.key];
+  if (column.money) return formatMoney(Number(value) || 0);
+  return String(value ?? '');
+}
+
+async function createPdfReport(report) {
+  const [{ default: pdfMake }, { default: pdfFonts }] = await Promise.all([import('pdfmake/build/pdfmake.js'), import('pdfmake/build/vfs_fonts.js')]);
+  const logo = await loadReportLogo();
+  pdfMake.vfs = pdfFonts?.pdfMake?.vfs || pdfFonts?.vfs || pdfFonts;
+  const content = [
+    { text: report.title, style: 'title' },
+    { text: `${tr('objects')}: ${report.objectName}`, style: 'meta' },
+    { text: `${tr('sectionName')}: ${report.sectionName}`, style: 'meta', margin: [0, 0, 0, 14] }
+  ];
+  report.tables.forEach((table) => {
+    const body = [table.columns.map((column) => ({ text: column.label, style: 'tableHeader' })), ...(table.rows.length ? table.rows.map((row) => table.columns.map((column) => ({ text: reportCellValue(column, row), alignment: column.number || column.money ? 'right' : 'left' }))) : [[{ text: tr('noEntries'), colSpan: table.columns.length, alignment: 'center', color: '#64748b', margin: [0, 8] }, ...Array.from({ length: table.columns.length - 1 }, () => ({}))]])];
+    content.push({ text: table.title, style: 'sectionTitle', margin: [0, 10, 0, 6] }, { table: { headerRows: 1, widths: table.columns.map((column) => column.width), body }, layout: { fillColor: (rowIndex) => rowIndex === 0 ? '#eaf3ff' : null, hLineColor: '#b8c9dc', vLineColor: '#b8c9dc' }, fontSize: 8 });
+    if (Number.isFinite(table.total)) content.push({ text: `${tr('rowTotal')}: ${formatMoney(table.total)}`, bold: true, alignment: 'right', margin: [0, 7, 0, 4] });
+    if (table.summaries?.length) content.push({ ul: table.summaries, margin: [10, 7, 0, 5], fontSize: 9 });
+  });
+  if (report.parties) {
+    const partyRows = [['', tr('fullName'), tr('signature')], [tr('preparedBy'), report.parties.prepared.name, report.parties.prepared.signature], [tr('performedBy'), report.parties.performed.name, report.parties.performed.signature], [tr('acceptedBy'), report.parties.accepted.name, report.parties.accepted.signature]];
+    content.push({ text: tr('fillDate'), style: 'sectionTitle', margin: [0, 16, 0, 6] }, { text: report.parties.date || localDateKey(), margin: [0, 0, 0, 8] }, { table: { widths: [90, '*', '*'], body: partyRows }, layout: 'lightHorizontalLines', fontSize: 9 });
+  }
+  const definition = {
+    pageSize: 'A4', pageMargins: [34, 38, 34, 88], defaultStyle: { font: 'Roboto', fontSize: 9, color: '#14213d' },
+    styles: { title: { fontSize: 18, bold: true, color: '#075cd3', margin: [0, 0, 0, 10] }, meta: { fontSize: 10, color: '#43546a', margin: [0, 0, 0, 3] }, sectionTitle: { fontSize: 12, bold: true, color: '#075cd3' }, tableHeader: { bold: true, color: '#0b2e59', fontSize: 8 } },
+    content,
+    footer: () => ({ columns: [{ text: '' }, { width: 155, stack: [{ image: logo, width: 30, alignment: 'right' }, { text: 'StructOS', bold: true, fontSize: 11, color: '#075cd3', alignment: 'right' }, { text: `${tr('madeInStructos')} · ${tr('website')}`, fontSize: 7, color: '#64748b', alignment: 'right' }] }], margin: [34, 8, 34, 18] })
+  };
+  return new Promise((resolve) => pdfMake.createPdf(definition).getBlob(resolve));
+}
+
+async function createExcelReport(report) {
+  const { default: ExcelJS } = await import('exceljs');
+  const workbook = new ExcelJS.Workbook();
+  workbook.creator = 'StructOS'; workbook.created = new Date();
+  const worksheet = workbook.addWorksheet(report.sectionName.slice(0, 31) || 'StructOS', { pageSetup: { orientation: 'landscape', fitToPage: true, fitToWidth: 1, fitToHeight: 0, margins: { left: 0.3, right: 0.3, top: 0.5, bottom: 0.8, header: 0.2, footer: 0.2 } } });
+  const maxColumns = Math.max(6, ...report.tables.map((table) => table.columns.length));
+  worksheet.mergeCells(1, 1, 1, maxColumns); worksheet.getCell(1, 1).value = report.title; worksheet.getCell(1, 1).font = { size: 17, bold: true, color: { argb: 'FF075CD3' } };
+  worksheet.mergeCells(2, 1, 2, maxColumns); worksheet.getCell(2, 1).value = `${tr('objects')}: ${report.objectName}`;
+  worksheet.mergeCells(3, 1, 3, maxColumns); worksheet.getCell(3, 1).value = `${tr('sectionName')}: ${report.sectionName}`;
+  let cursor = 5;
+  report.tables.forEach((table) => {
+    worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = table.title; worksheet.getCell(cursor, 1).font = { bold: true, size: 12, color: { argb: 'FF075CD3' } }; cursor += 1;
+    const header = worksheet.getRow(cursor); table.columns.forEach((column, index) => { const cell = header.getCell(index + 1); cell.value = column.label; cell.font = { bold: true, color: { argb: 'FFFFFFFF' } }; cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF075CD3' } }; cell.alignment = { vertical: 'middle', wrapText: true }; cell.border = { top: { style: 'thin', color: { argb: 'FF9EB6D0' } }, left: { style: 'thin', color: { argb: 'FF9EB6D0' } }, bottom: { style: 'thin', color: { argb: 'FF9EB6D0' } }, right: { style: 'thin', color: { argb: 'FF9EB6D0' } } }; }); header.height = 28; cursor += 1;
+    const rows = table.rows.length ? table.rows : [{ [table.columns[0].key]: tr('noEntries') }];
+    rows.forEach((row) => { const excelRow = worksheet.getRow(cursor); table.columns.forEach((column, index) => { const cell = excelRow.getCell(index + 1); cell.value = column.number || column.money ? (Number(row[column.key]) || 0) : String(row[column.key] ?? ''); if (column.money) cell.numFmt = '#,##0.00 "₽"'; cell.alignment = { vertical: 'top', wrapText: true, horizontal: column.number || column.money ? 'right' : 'left' }; cell.border = { top: { style: 'thin', color: { argb: 'FFD4DFEB' } }, left: { style: 'thin', color: { argb: 'FFD4DFEB' } }, bottom: { style: 'thin', color: { argb: 'FFD4DFEB' } }, right: { style: 'thin', color: { argb: 'FFD4DFEB' } } }; }); cursor += 1; });
+    if (Number.isFinite(table.total)) { worksheet.mergeCells(cursor, 1, cursor, maxColumns - 1); worksheet.getCell(cursor, 1).value = tr('rowTotal'); worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, maxColumns).value = table.total; worksheet.getCell(cursor, maxColumns).numFmt = '#,##0.00 "₽"'; worksheet.getCell(cursor, maxColumns).font = { bold: true }; cursor += 1; }
+    (table.summaries || []).forEach((summary) => { worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = summary; worksheet.getCell(cursor, 1).font = { bold: true }; cursor += 1; });
+    cursor += 2;
+  });
+  if (report.parties) {
+    worksheet.getCell(cursor, 1).value = tr('fillDate'); worksheet.getCell(cursor, 2).value = report.parties.date || localDateKey(); cursor += 2;
+    [[tr('preparedBy'), report.parties.prepared], [tr('performedBy'), report.parties.performed], [tr('acceptedBy'), report.parties.accepted]].forEach(([label, party]) => { worksheet.getCell(cursor, 1).value = label; worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, 2).value = `${tr('fullName')}: ${party.name}`; worksheet.getCell(cursor, 4).value = `${tr('signature')}: ${party.signature}`; cursor += 1; }); cursor += 2;
+  }
+  const logo = await loadReportLogo();
+  const imageId = workbook.addImage({ base64: logo, extension: 'png' });
+  worksheet.addImage(imageId, { tl: { col: maxColumns - 3, row: cursor - 1 }, ext: { width: 46, height: 46 } });
+  worksheet.mergeCells(cursor, maxColumns - 2, cursor + 1, maxColumns); const brandCell = worksheet.getCell(cursor, maxColumns - 2); brandCell.value = `StructOS\n${tr('madeInStructos')}\n${tr('website')}`; brandCell.font = { bold: true, color: { argb: 'FF075CD3' }, size: 10 }; brandCell.alignment = { horizontal: 'right', vertical: 'middle', wrapText: true }; worksheet.getRow(cursor).height = 32; worksheet.getRow(cursor + 1).height = 20;
+  const widths = [12, 36, 18, 22, 18, 18]; for (let index = 1; index <= maxColumns; index += 1) worksheet.getColumn(index).width = widths[index - 1] || 18;
+  worksheet.views = [{ state: 'frozen', ySplit: 5 }];
+  const buffer = await workbook.xlsx.writeBuffer();
+  return new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+}
+
+function reportFileName(report, extension) {
+  const safe = `${report.title}_${report.objectName}_${report.sectionName}`.replace(/[\\/:*?"<>|]+/g, '_').replace(/\s+/g, '_').slice(0, 110);
+  return `${safe || 'StructOS'}.${extension}`;
+}
+
+function downloadReportBlob(blob, filename) {
+  const link = document.createElement('a'); const url = URL.createObjectURL(blob); link.href = url; link.download = filename; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1500);
+}
+
+async function deliverCashReport(report, format, share = false) {
+  const isPdf = format === 'pdf';
+  const blob = isPdf ? await createPdfReport(report) : await createExcelReport(report);
+  const file = new File([blob], reportFileName(report, isPdf ? 'pdf' : 'xlsx'), { type: blob.type });
+  if (share && navigator.share && (!navigator.canShare || navigator.canShare({ files: [file] }))) {
+    await navigator.share({ title: report.title, text: `${report.objectName} · ${report.sectionName}`, files: [file] });
+    return;
+  }
+  downloadReportBlob(blob, file.name);
+  showToast(tr(share ? 'shareUnavailable' : 'reportReady'));
+}
+
+function cashReportActionsMarkup() {
+  return `<div class="cash-report-actions"><button class="primary-button" type="button" data-report-format="pdf">${tr('downloadPdf')}</button><button class="primary-button" type="button" data-report-format="xlsx">${tr('downloadExcel')}</button><button class="outline-button" type="button" data-report-share="pdf">${tr('sharePdf')}</button><button class="outline-button" type="button" data-report-share="xlsx">${tr('shareExcel')}</button></div>`;
+}
+
+function bindCashReportActions(scope, getReport) {
+  $$('[data-report-format]', scope).forEach((button) => button.addEventListener('click', async () => { button.disabled = true; try { await deliverCashReport(getReport(), button.dataset.reportFormat, false); } catch (error) { console.error(error); showToast(tr('comingSoon')); } finally { button.disabled = false; } }));
+  $$('[data-report-share]', scope).forEach((button) => button.addEventListener('click', async () => { button.disabled = true; try { await deliverCashReport(getReport(), button.dataset.reportShare, true); } catch (error) { if (error?.name !== 'AbortError') { console.error(error); showToast(tr('comingSoon')); } } finally { button.disabled = false; } }));
+}
+
+function openCashDocumentDialog(objectId, sectionId, kind) {
+  const { object, section } = findCashSection(objectId, sectionId);
+  if (!object || !section) return;
+  const priced = kind === 'act';
+  const draft = normalizeCashDocument(JSON.parse(JSON.stringify(section[priced ? 'act' : 'statement'])), priced);
+  const headCells = `<th>${tr('recordNumber')}</th><th>${tr('workName')}</th><th>${tr('unit')}</th><th>${tr('quantity')}</th>${priced ? `<th>${tr('price')}</th><th>${tr('rowTotal')}</th>` : ''}<th></th>`;
+  showDialog(tr(priced ? 'workAct' : 'workStatement'), `${object.name} · ${section.name}`, `<div class="cash-document-editor"><div class="cash-work-table-wrap"><table class="cash-work-table"><thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="${priced ? 5 : 3}">${tr('rowTotal')}</td><td data-document-grand-total>0 ₽</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>＋ ${tr('addRow')}</button><div class="cash-parties">${cashPartyMarkup('prepared', tr('preparedBy'), draft.parties.prepared)}${cashPartyMarkup('performed', tr('performedBy'), draft.parties.performed)}${cashPartyMarkup('accepted', tr('acceptedBy'), draft.parties.accepted)}<label class="cash-document-date"><span>${tr('fillDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button></div>${cashReportActionsMarkup()}</div>`);
+  const dialog = $('[data-dialog]'); dialog.classList.add('cash-document-dialog');
+  const scope = $('[data-dialog-content]'); bindCashDocumentRows(scope, draft, priced);
+  $('[data-add-work-row]', scope)?.addEventListener('click', () => { draft.rows.push(...normalizeCashWorkRows([], priced)); bindCashDocumentRows(scope, draft, priced); });
+  $$('[data-party-field]', scope).forEach((input) => input.addEventListener('input', () => { draft.parties[input.dataset.party][input.dataset.partyField] = input.value.slice(0, 160); }));
+  $('[data-document-date]', scope)?.addEventListener('change', (event) => { draft.parties.date = event.currentTarget.value || localDateKey(); });
+  const saveDocument = () => { draft.updatedAt = new Date().toISOString(); section[priced ? 'act' : 'statement'] = normalizeCashDocument(draft, priced); saveCashflow(); showToast(tr('documentSaved')); };
+  $('[data-save-cash-document]', scope)?.addEventListener('click', saveDocument);
+  bindCashReportActions(scope, () => { saveDocument(); return cashDocumentReport(object, section, kind, draft); });
+}
+
+function openSectionExportDialog(objectId, sectionId) {
+  const { object, section } = findCashSection(objectId, sectionId);
+  if (!object || !section) return;
+  showDialog(tr('sectionFinanceReport'), `${object.name} · ${section.name}`, cashReportActionsMarkup());
+  const dialog = $('[data-dialog]'); dialog.classList.add('cash-export-dialog');
+  bindCashReportActions($('[data-dialog-content]'), () => sectionFinanceReport(object, section));
 }
 
 const drawingDialog = $('[data-drawing-dialog]');
