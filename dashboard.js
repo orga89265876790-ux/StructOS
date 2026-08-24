@@ -172,19 +172,23 @@ Object.assign(copy.TJ, {
 
 Object.assign(copy.RU, {
   money: 'Быстрый объект', ownInvested: 'Вложены собственные средства', returnedFromAdvance: 'Закрыто из оплаты', ownFundsRemaining: 'Осталось (разница)', totalOwnInvested: 'Вложены собственные средства', totalOwnReturned: 'Закрыто из оплаты', addOwnFunds: 'Добавить собственные средства', addOwnReturn: 'Добавить закрытие из оплаты', ownFundsEntry: 'Вложены собственные средства', ownReturnEntry: 'Закрыто из оплаты',
-  peopleAssigned: 'Выставил(а) людей', overallSectionsBalance: 'Общий баланс разделов', contractBalancesTotal: 'Баланс по договору', factBalancesTotal: 'Баланс по факту', downloadOverallReport: 'Скачать общий подробный отчёт', overallDetailedReport: 'Общий подробный отчёт', allObjectSections: 'Все разделы объекта', sectionBalance: 'Баланс раздела'
+  peopleAssigned: 'Выставил(а) людей', overallSectionsBalance: 'Общий баланс разделов', contractBalancesTotal: 'Баланс по договору', factBalancesTotal: 'Баланс по факту', downloadOverallReport: 'Скачать общий подробный отчёт', overallDetailedReport: 'Общий подробный отчёт', allObjectSections: 'Все разделы объекта', sectionBalance: 'Баланс раздела',
+  editCashEntry: 'Корректировать запись', saveChanges: 'Сохранить изменения', entryUpdated: 'Запись и все итоги обновлены', entryFieldsRequired: 'Укажите сумму, дату и комментарий'
 });
 Object.assign(copy.EN, {
   money: 'Quick object', ownInvested: 'Own funds invested', returnedFromAdvance: 'Covered from payment', ownFundsRemaining: 'Remaining (difference)', totalOwnInvested: 'Own funds invested', totalOwnReturned: 'Covered from payment', addOwnFunds: 'Add own funds', addOwnReturn: 'Add payment coverage', ownFundsEntry: 'Own funds invested', ownReturnEntry: 'Covered from payment',
-  peopleAssigned: 'People assigned', overallSectionsBalance: 'Overall sections balance', contractBalancesTotal: 'Contract balance', factBalancesTotal: 'Actual-payment balance', downloadOverallReport: 'Download full overall report', overallDetailedReport: 'Full overall report', allObjectSections: 'All object sections', sectionBalance: 'Section balance'
+  peopleAssigned: 'People assigned', overallSectionsBalance: 'Overall sections balance', contractBalancesTotal: 'Contract balance', factBalancesTotal: 'Actual-payment balance', downloadOverallReport: 'Download full overall report', overallDetailedReport: 'Full overall report', allObjectSections: 'All object sections', sectionBalance: 'Section balance',
+  editCashEntry: 'Edit entry', saveChanges: 'Save changes', entryUpdated: 'Entry and all totals updated', entryFieldsRequired: 'Enter an amount, date, and comment'
 });
 Object.assign(copy.KY, {
   money: 'Тез объект', ownInvested: 'Өз каражаты салынды', returnedFromAdvance: 'Төлөмдөн жабылды', ownFundsRemaining: 'Калды (айырма)', totalOwnInvested: 'Өз каражаты салынды', totalOwnReturned: 'Төлөмдөн жабылды', addOwnFunds: 'Өз каражатын кошуу', addOwnReturn: 'Төлөмдөн жабууну кошуу', ownFundsEntry: 'Өз каражаты салынды', ownReturnEntry: 'Төлөмдөн жабылды',
-  peopleAssigned: 'Адамдарды чыгардым', overallSectionsBalance: 'Бөлүмдөрдүн жалпы балансы', contractBalancesTotal: 'Келишим боюнча баланс', factBalancesTotal: 'Факт боюнча баланс', downloadOverallReport: 'Жалпы толук отчётту жүктөө', overallDetailedReport: 'Жалпы толук отчёт', allObjectSections: 'Объекттин бардык бөлүмдөрү', sectionBalance: 'Бөлүмдүн балансы'
+  peopleAssigned: 'Адамдарды чыгардым', overallSectionsBalance: 'Бөлүмдөрдүн жалпы балансы', contractBalancesTotal: 'Келишим боюнча баланс', factBalancesTotal: 'Факт боюнча баланс', downloadOverallReport: 'Жалпы толук отчётту жүктөө', overallDetailedReport: 'Жалпы толук отчёт', allObjectSections: 'Объекттин бардык бөлүмдөрү', sectionBalance: 'Бөлүмдүн балансы',
+  editCashEntry: 'Жазууну түзөтүү', saveChanges: 'Өзгөртүүлөрдү сактоо', entryUpdated: 'Жазуу жана бардык жыйынтыктар жаңырды', entryFieldsRequired: 'Сумманы, күндү жана комментарийди жазыңыз'
 });
 Object.assign(copy.TJ, {
   money: 'Объекти зуд', ownInvested: 'Маблағи шахсӣ гузошта шуд', returnedFromAdvance: 'Аз пардохт пӯшида шуд', ownFundsRemaining: 'Монд (фарқият)', totalOwnInvested: 'Маблағи шахсӣ гузошта шуд', totalOwnReturned: 'Аз пардохт пӯшида шуд', addOwnFunds: 'Иловаи маблағи шахсӣ', addOwnReturn: 'Иловаи пӯшиш аз пардохт', ownFundsEntry: 'Маблағи шахсӣ гузошта шуд', ownReturnEntry: 'Аз пардохт пӯшида шуд',
-  peopleAssigned: 'Одамонро фиристодам', overallSectionsBalance: 'Тавозуни умумии бахшҳо', contractBalancesTotal: 'Тавозун аз рӯи шартнома', factBalancesTotal: 'Тавозун аз рӯи факт', downloadOverallReport: 'Бор кардани ҳисоботи умумии муфассал', overallDetailedReport: 'Ҳисоботи умумии муфассал', allObjectSections: 'Ҳамаи бахшҳои объект', sectionBalance: 'Тавозуни бахш'
+  peopleAssigned: 'Одамонро фиристодам', overallSectionsBalance: 'Тавозуни умумии бахшҳо', contractBalancesTotal: 'Тавозун аз рӯи шартнома', factBalancesTotal: 'Тавозун аз рӯи факт', downloadOverallReport: 'Бор кардани ҳисоботи умумии муфассал', overallDetailedReport: 'Ҳисоботи умумии муфассал', allObjectSections: 'Ҳамаи бахшҳои объект', sectionBalance: 'Тавозуни бахш',
+  editCashEntry: 'Таҳрири сабт', saveChanges: 'Нигоҳ доштани тағйирот', entryUpdated: 'Сабт ва ҳамаи натиҷаҳо нав шуданд', entryFieldsRequired: 'Маблағ, сана ва шарҳро ворид кунед'
 });
 
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
@@ -990,6 +994,7 @@ unifiedObjectOrder = unifiedObjectOrder.filter((key) => typeof key === 'string')
 let activeCashObjectId = null;
 const expandedCashSections = new Set();
 const expandedCashReportHistory = new Set();
+const expandedCashEntryHistories = new Set();
 let reportLogoDataUrl = '';
 
 function saveCashflow() {
@@ -1046,12 +1051,39 @@ function cashDate(value) {
   catch { return ''; }
 }
 
-function cashHistoryMarkup(entries, labelKey) {
+function cashDateInputValue(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return localDateKey();
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function cashEntryDateWithNewDay(currentValue, dayValue) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(dayValue || '')) return null;
+  const [year, month, day] = dayValue.split('-').map(Number);
+  const current = new Date(currentValue);
+  const hours = Number.isNaN(current.getTime()) ? 12 : current.getHours();
+  const minutes = Number.isNaN(current.getTime()) ? 0 : current.getMinutes();
+  const seconds = Number.isNaN(current.getTime()) ? 0 : current.getSeconds();
+  const milliseconds = Number.isNaN(current.getTime()) ? 0 : current.getMilliseconds();
+  const next = new Date(year, month - 1, day, hours, minutes, seconds, milliseconds);
+  if (next.getFullYear() !== year || next.getMonth() !== month - 1 || next.getDate() !== day) return null;
+  return next.toISOString();
+}
+
+function cashEntryCollection(section, kind) {
+  return { advances: section.advances, expenses: section.expenses, ownInvestments: section.ownInvestments, ownReturns: section.ownReturns, factIncome: section.factIncome, factExpenses: section.factExpenses, factOwnInvestments: section.factOwnInvestments, factOwnReturns: section.factOwnReturns }[kind];
+}
+
+function cashHistoryMarkup(entries, labelKey, kind, sectionId) {
   const total = cashTotal(entries);
+  const historyKey = `${sectionId}:${kind}`;
   const rows = entries.length
-    ? entries.map((entry) => `<div class="cash-history-row"><span>${escapeHtml(entry.comment)}<small>${cashDate(entry.date)}</small></span><b>${formatMoney(entry.amount)}</b></div>`).join('')
+    ? entries.map((entry) => `<div class="cash-history-row" data-cash-history-entry="${escapeHtml(entry.id)}"><span>${escapeHtml(entry.comment)}<small>${cashDate(entry.date)}</small></span><b>${formatMoney(entry.amount)}</b><button type="button" data-edit-cash-entry="${escapeHtml(entry.id)}" data-cash-entry-kind="${escapeHtml(kind)}" aria-label="${escapeHtml(tr('editCashEntry'))}" title="${escapeHtml(tr('editCashEntry'))}">✎ <em>${tr('edit')}</em></button></div>`).join('')
     : `<div class="cash-history-empty">${tr('noEntries')}</div>`;
-  return `<details class="cash-history"><summary><span>${tr(labelKey)}</span><b>${formatMoney(total)}</b></summary><div class="cash-history-list">${rows}</div></details>`;
+  return `<details class="cash-history" data-cash-history="${escapeHtml(historyKey)}"${expandedCashEntryHistories.has(historyKey) ? ' open' : ''}><summary><span>${tr(labelKey)}</span><b>${formatMoney(total)}</b></summary><div class="cash-history-list">${rows}</div></details>`;
 }
 
 function cashEntryForm(kind, titleKey, buttonKey) {
@@ -1095,11 +1127,47 @@ function addCashEntry(objectId, sectionId, kind, form) {
     (!Number.isFinite(amount) || amount <= 0 ? amountInput : commentInput)?.focus();
     return;
   }
-  const target = { advances: section.advances, expenses: section.expenses, ownInvestments: section.ownInvestments, ownReturns: section.ownReturns, factIncome: section.factIncome, factExpenses: section.factExpenses, factOwnInvestments: section.factOwnInvestments, factOwnReturns: section.factOwnReturns }[kind];
+  const target = cashEntryCollection(section, kind);
   if (!target) return;
   target.unshift({ id: `entry-${Date.now()}-${Math.random().toString(16).slice(2)}`, amount, comment: comment.slice(0, 240), date: new Date().toISOString() });
   saveCashflow();
   renderCashflow();
+}
+
+function openCashEntryEditDialog(objectId, sectionId, kind, entryId) {
+  const { object, section } = findCashSection(objectId, sectionId);
+  const target = section && cashEntryCollection(section, kind);
+  const entry = target?.find((item) => item.id === entryId);
+  if (!object || !section || !entry) return;
+  expandedCashEntryHistories.add(`${section.id}:${kind}`);
+  showDialog(tr('editCashEntry'), `${object.name} · ${section.name}`, `<div class="cash-edit-form"><label><span>${tr('amount')}</span><input type="number" min="0.01" step="0.01" inputmode="decimal" data-edit-cash-amount value="${entry.amount}" /></label><label><span>${tr('date')}</span><input type="date" data-edit-cash-date value="${cashDateInputValue(entry.date)}" /></label><label><span>${tr('comment')}</span><input maxlength="240" data-edit-cash-comment value="${escapeHtml(entry.comment)}" /></label><button class="primary-button" type="button" data-save-cash-entry>${tr('saveChanges')}</button></div>`);
+  const scope = $('[data-dialog-content]');
+  const amountInput = $('[data-edit-cash-amount]', scope);
+  const dateInput = $('[data-edit-cash-date]', scope);
+  const commentInput = $('[data-edit-cash-comment]', scope);
+  const saveEntry = () => {
+    const amount = Math.round(Number(amountInput?.value) * 100) / 100;
+    const comment = commentInput?.value.trim() || '';
+    const date = cashEntryDateWithNewDay(entry.date, dateInput?.value || '');
+    if (!Number.isFinite(amount) || amount <= 0 || !comment || !date) {
+      showToast(tr('entryFieldsRequired'));
+      (!Number.isFinite(amount) || amount <= 0 ? amountInput : !date ? dateInput : commentInput)?.focus();
+      return;
+    }
+    entry.amount = amount;
+    entry.comment = comment.slice(0, 240);
+    entry.date = date;
+    target.sort((a, b) => new Date(b.date) - new Date(a.date));
+    saveCashflow();
+    renderCashflow();
+    $('[data-dialog]')?.close();
+    showToast(tr('entryUpdated'));
+  };
+  $('[data-save-cash-entry]', scope)?.addEventListener('click', saveEntry);
+  $$('input', scope).forEach((input) => input.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') { event.preventDefault(); saveEntry(); }
+  }));
+  setTimeout(() => { amountInput?.focus(); amountInput?.select(); }, 40);
 }
 
 function cashReportHistoryMarkup(section) {
@@ -1108,11 +1176,11 @@ function cashReportHistoryMarkup(section) {
   return `<div class="cash-report-history"${isOpen ? '' : ' hidden'}><div class="cash-report-history-list">${rows}</div></div>`;
 }
 
-function cashOwnFundsMarkup(investments, returns, investmentKind, returnKind) {
+function cashOwnFundsMarkup(section, investments, returns, investmentKind, returnKind) {
   const invested = cashTotal(investments);
   const closed = cashTotal(returns);
   const remaining = Math.round((invested - closed) * 100) / 100;
-  return `<section class="cash-own-funds"><h4>${tr('ownFundsAccounting')}</h4><div class="cash-own-summary"><article><span>${tr('totalOwnInvested')}</span><strong>${formatMoney(invested)}</strong></article><article><span>${tr('totalOwnReturned')}</span><strong>${formatMoney(closed)}</strong></article><article class="${cashBalanceClass(remaining)}"><span>${tr('ownFundsRemaining')}</span><strong>${formatSignedMoney(remaining)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm(investmentKind, 'ownInvested', 'addOwnFunds')}${cashEntryForm(returnKind, 'returnedFromAdvance', 'addOwnReturn')}</div>${cashHistoryMarkup(investments, 'ownInvested')}${cashHistoryMarkup(returns, 'returnedFromAdvance')}</section>`;
+  return `<section class="cash-own-funds"><h4>${tr('ownFundsAccounting')}</h4><div class="cash-own-summary"><article><span>${tr('totalOwnInvested')}</span><strong>${formatMoney(invested)}</strong></article><article><span>${tr('totalOwnReturned')}</span><strong>${formatMoney(closed)}</strong></article><article class="${cashBalanceClass(remaining)}"><span>${tr('ownFundsRemaining')}</span><strong>${formatSignedMoney(remaining)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm(investmentKind, 'ownInvested', 'addOwnFunds')}${cashEntryForm(returnKind, 'returnedFromAdvance', 'addOwnReturn')}</div>${cashHistoryMarkup(investments, 'ownInvested', investmentKind, section.id)}${cashHistoryMarkup(returns, 'returnedFromAdvance', returnKind, section.id)}</section>`;
 }
 
 function cashSectionMarkup(object, section) {
@@ -1125,8 +1193,8 @@ function cashSectionMarkup(object, section) {
   const factBalance = Math.round((factIncome - factExpenses) * 100) / 100;
   const isOpen = expandedCashSections.has(section.id);
   const modeBadges = `${section.contractMode ? `<span>${tr('workByContract')}</span>` : ''}${section.factMode ? `<span>${tr('actualAccounting')}</span>` : ''}${section.staffingMode ? `<span>${tr('peopleAssigned')}</span>` : ''}`;
-  const contractMarkup = section.contractMode ? `<section class="cash-accounting-block cash-contract-accounting"><h4>${tr('contractAccounting')}</h4><div class="cash-contract-head"><article><span>${tr('contractAmount')}</span><strong>${formatMoney(section.contractAmount)}</strong></article><article><span>${tr('receivedAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article class="${cashBalanceClass(remainingContract)}"><span>${tr('remainingContract')}</span><strong>${formatSignedMoney(remainingContract)}</strong></article></div><div class="cash-summary"><article><span>${tr('totalAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article><span>${tr('totalExpenses')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining ${cashBalanceClass(advanceBalance)}"><span>${tr('advanceBalance')}</span><strong>${formatSignedMoney(advanceBalance)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('advances', 'received', 'addAdvance')}${cashEntryForm('expenses', 'expense', 'add')}</div>${cashHistoryMarkup(section.advances, 'totalAdvances')}${cashHistoryMarkup(section.expenses, 'totalExpenses')}${cashOwnFundsMarkup(section.ownInvestments, section.ownReturns, 'ownInvestments', 'ownReturns')}</section>` : '';
-  const factMarkup = section.factMode ? `<section class="cash-fact-table cash-accounting-block"><h4 class="cash-fact-title">${tr('actualAccounting')}</h4><div class="cash-entry-grid">${cashEntryForm('factIncome', 'income', 'addIncome')}${cashEntryForm('factExpenses', 'expense', 'addExpense')}</div>${cashHistoryMarkup(section.factIncome, 'income')}${cashHistoryMarkup(section.factExpenses, 'expense')}<div class="cash-balance ${cashBalanceClass(factBalance)}"><span>${tr('balanceResult')}</span><strong>${formatSignedMoney(factBalance)}</strong></div>${cashOwnFundsMarkup(section.factOwnInvestments, section.factOwnReturns, 'factOwnInvestments', 'factOwnReturns')}</section>` : '';
+  const contractMarkup = section.contractMode ? `<section class="cash-accounting-block cash-contract-accounting"><h4>${tr('contractAccounting')}</h4><div class="cash-contract-head"><article><span>${tr('contractAmount')}</span><strong>${formatMoney(section.contractAmount)}</strong></article><article><span>${tr('receivedAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article class="${cashBalanceClass(remainingContract)}"><span>${tr('remainingContract')}</span><strong>${formatSignedMoney(remainingContract)}</strong></article></div><div class="cash-summary"><article><span>${tr('totalAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article><span>${tr('totalExpenses')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining ${cashBalanceClass(advanceBalance)}"><span>${tr('advanceBalance')}</span><strong>${formatSignedMoney(advanceBalance)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('advances', 'received', 'addAdvance')}${cashEntryForm('expenses', 'expense', 'add')}</div>${cashHistoryMarkup(section.advances, 'totalAdvances', 'advances', section.id)}${cashHistoryMarkup(section.expenses, 'totalExpenses', 'expenses', section.id)}${cashOwnFundsMarkup(section, section.ownInvestments, section.ownReturns, 'ownInvestments', 'ownReturns')}</section>` : '';
+  const factMarkup = section.factMode ? `<section class="cash-fact-table cash-accounting-block"><h4 class="cash-fact-title">${tr('actualAccounting')}</h4><div class="cash-entry-grid">${cashEntryForm('factIncome', 'income', 'addIncome')}${cashEntryForm('factExpenses', 'expense', 'addExpense')}</div>${cashHistoryMarkup(section.factIncome, 'income', 'factIncome', section.id)}${cashHistoryMarkup(section.factExpenses, 'expense', 'factExpenses', section.id)}<div class="cash-balance ${cashBalanceClass(factBalance)}"><span>${tr('balanceResult')}</span><strong>${formatSignedMoney(factBalance)}</strong></div>${cashOwnFundsMarkup(section, section.factOwnInvestments, section.factOwnReturns, 'factOwnInvestments', 'factOwnReturns')}</section>` : '';
   const staffingMarkup = section.staffingMode ? `<section class="cash-staffing-block"><header><h4>${tr('peopleAssigned')}</h4><span>${tr('settings')}</span></header><div aria-hidden="true"></div></section>` : '';
   return `<section class="cash-section" data-cash-section="${escapeHtml(section.id)}">
     <header class="cash-section-head">
@@ -1205,6 +1273,10 @@ function bindCashSectionEvents(object, scope) {
           if (event.key === 'Enter') { event.preventDefault(); addCashEntry(object.id, section.id, form.dataset.cashEntry, form); }
         }));
       });
+      $$('[data-cash-history]', sectionCard).forEach((history) => history.addEventListener('toggle', () => {
+        if (history.open) expandedCashEntryHistories.add(history.dataset.cashHistory); else expandedCashEntryHistories.delete(history.dataset.cashHistory);
+      }));
+      $$('[data-edit-cash-entry]', sectionCard).forEach((button) => button.addEventListener('click', () => openCashEntryEditDialog(object.id, section.id, button.dataset.cashEntryKind, button.dataset.editCashEntry)));
       $$('[data-open-cash-document]', sectionCard).forEach((button) => button.addEventListener('click', () => openCashDocumentDialog(object.id, section.id, button.dataset.openCashDocument)));
       $('[data-export-section]', sectionCard)?.addEventListener('click', () => openSectionExportDialog(object.id, section.id));
       $$('[data-report-history-id]', sectionCard).forEach((historyRow) => {
