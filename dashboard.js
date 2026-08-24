@@ -127,6 +127,11 @@ Object.assign(copy.TJ, {
   openMoneyObject: 'Кушодан', backToMoneyObjects: 'Ба объектҳо', noSections: 'Ҳоло бахш нест', noSectionsCopy: '«Иловаи бахш»-ро пахш карда, тарзи ҳисобро интихоб кунед.', workByContract: 'Кор аз рӯи шартнома', workByFact: 'Пардохт аз рӯи иҷрои воқеӣ', contractAmount: 'Маблағи шартнома', enterContractAmount: 'Маблағи шартномаро ворид кунед', chooseSectionMode: 'Ақаллан як тарзи ҳисобро интихоб кунед', contractAccounting: 'Ҳисоб аз рӯи шартнома', receivedAdvances: 'Пешпардохтҳои гирифташуда', remainingContract: 'Аз шартнома монд', totalAdvances: 'Ҳамаи пешпардохтҳо', totalExpenses: 'Ҳамаи хароҷот', advanceBalance: 'Бақияи пешпардохт', addAdvance: 'Иловаи пешпардохт', ownFundsAccounting: 'Маблағи шахсӣ', ownInvested: 'Маблағи шахсӣ гузоштам', returnedFromAdvance: 'Аз пешпардохт баргардонд', ownFundsRemaining: 'Баргардонидани маблағи шахсӣ монд', totalOwnInvested: 'Ҳамагӣ маблағи шахсӣ', totalOwnReturned: 'Ҳамагӣ баргардонда шуд', addOwnFunds: 'Иловаи маблағи шахсӣ', addOwnReturn: 'Иловаи баргардонӣ', reportHistory: 'Таърихи ҳисоботҳо', noReports: 'Ҳоло ҳисоботи нигоҳшуда нест', reportSavedToHistory: 'Ҳисобот дар таърих нигоҳ шуд', repeatDownload: 'Боз бор кардан', repeatShare: 'Боз фиристодан', reportType: 'Навъи ҳисобот', objectSections: 'Бахшҳои объект', sectionMode: 'Тарзи ҳисоб', advance: 'Пешпардохт', ownFundsEntry: 'Маблағи шахсӣ', ownReturnEntry: 'Баргардонии маблағи шахсӣ', noCashObjectsCopy: 'Объект илова карда, бахшҳои молиявии онро идора кунед.'
 });
 
+Object.assign(copy.RU, { documentName: 'Название документа', documentNumber: 'Номер документа', statementName: 'Название ведомости', statementNumber: 'Номер ведомости', actName: 'Название акта', actNumber: 'Номер акта' });
+Object.assign(copy.EN, { documentName: 'Document name', documentNumber: 'Document number', statementName: 'Statement name', statementNumber: 'Statement number', actName: 'Act name', actNumber: 'Act number' });
+Object.assign(copy.KY, { documentName: 'Документтин аталышы', documentNumber: 'Документтин номери', statementName: 'Ведомосттун аталышы', statementNumber: 'Ведомосттун номери', actName: 'Актынын аталышы', actNumber: 'Актынын номери' });
+Object.assign(copy.TJ, { documentName: 'Номи ҳуҷҷат', documentNumber: 'Рақами ҳуҷҷат', statementName: 'Номи ведомост', statementNumber: 'Рақами ведомост', actName: 'Номи санад', actNumber: 'Рақами санад' });
+
 Object.assign(copy.RU, {
   readyObjects: 'Готовые к запуску объекты', activeObjects: 'Объекты действующие', noReadyObjects: 'После анализа проекты появятся здесь', noActiveObjects: 'Действующих объектов пока нет', noActiveObjectsCopy: 'Проанализируйте проект и запустите его из блока готовых объектов.',
   analyzed: 'Проанализирован', started: 'Запущен', inWork: 'В работе', start: 'Запустить', deleteObject: 'Удалить объект', attachedDocuments: 'документа(ов)', objectReady: 'Объект добавлен в готовые к запуску', objectStarted: 'Объект запущен и перенесён в действующие', objectDeleted: 'Объект удалён из готовых',
@@ -842,8 +847,14 @@ function normalizeCashWorkRows(value, priced = false) {
   return normalized.length ? normalized : [{ id: `work-${Date.now()}-${Math.random().toString(16).slice(2)}`, name: '', unit: '', quantity: 0, ...(priced ? { price: 0 } : {}) }];
 }
 
-function normalizeCashDocument(value, priced = false) {
-  return { rows: normalizeCashWorkRows(value?.rows, priced), parties: cashDocumentParties(value?.parties), updatedAt: value?.updatedAt || null };
+function normalizeCashDocument(value, priced = false, defaultTitle = '') {
+  return {
+    title: String(value?.title || defaultTitle).trim().slice(0, 160),
+    number: String(value?.number || '').trim().slice(0, 80),
+    rows: normalizeCashWorkRows(value?.rows, priced),
+    parties: cashDocumentParties(value?.parties),
+    updatedAt: value?.updatedAt || null
+  };
 }
 
 function normalizeCashReportHistory(value) {
@@ -879,8 +890,8 @@ function normalizeCashSection(section, legacyObject = {}) {
     ownReturns: normalizeCashEntries(section?.ownReturns),
     factIncome: normalizeCashEntries(section?.factIncome),
     factExpenses: normalizeCashEntries(section?.factExpenses),
-    statement: normalizeCashDocument(section?.statement, false),
-    act: normalizeCashDocument(section?.act, true),
+    statement: normalizeCashDocument(section?.statement, false, tr('workStatement')),
+    act: normalizeCashDocument(section?.act, true, tr('workAct')),
     reportHistory: normalizeCashReportHistory(section?.reportHistory)
   };
   return normalized;
@@ -1162,6 +1173,9 @@ function bindCashDocumentRows(scope, draft, priced) {
 
 function cashDocumentReport(object, section, kind, documentData) {
   const priced = kind === 'act';
+  const defaultTitle = tr(priced ? 'workAct' : 'workStatement');
+  const documentTitle = String(documentData.title || defaultTitle).trim().slice(0, 160) || defaultTitle;
+  const documentNumber = String(documentData.number || '').trim().slice(0, 80);
   const columns = [
     { label: tr('recordNumber'), key: 'number', width: 42 },
     { label: tr('workName'), key: 'name', width: '*' },
@@ -1170,8 +1184,8 @@ function cashDocumentReport(object, section, kind, documentData) {
     ...(priced ? [{ label: tr('price'), key: 'price', width: 72, money: true }, { label: tr('rowTotal'), key: 'total', width: 78, money: true }] : [])
   ];
   return {
-    title: tr(priced ? 'workAct' : 'workStatement'), objectName: object.name, sectionName: section.name,
-    tables: [{ title: tr(priced ? 'workAct' : 'workStatement'), columns, rows: documentData.rows.map((row, index) => ({ number: index + 1, name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { price: row.price, total: Math.round(row.quantity * row.price * 100) / 100 } : {}) })), ...(priced ? { total: documentData.rows.reduce((sum, row) => sum + row.quantity * row.price, 0) } : {}) }],
+    title: documentTitle, documentNumber, numberLabel: tr(priced ? 'actNumber' : 'statementNumber'), objectName: object.name, sectionName: section.name,
+    tables: [{ title: documentTitle, columns, rows: documentData.rows.map((row, index) => ({ number: index + 1, name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { price: row.price, total: Math.round(row.quantity * row.price * 100) / 100 } : {}) })), ...(priced ? { total: documentData.rows.reduce((sum, row) => sum + row.quantity * row.price, 0) } : {}) }],
     parties: documentData.parties
   };
 }
@@ -1202,7 +1216,8 @@ function saveCashReportHistory(section, type, report) {
   const snapshot = JSON.parse(JSON.stringify(report));
   const latest = section.reportHistory[0];
   if (latest?.type === type && JSON.stringify(latest.report) === JSON.stringify(snapshot)) return latest;
-  const item = { id: `report-${Date.now()}-${Math.random().toString(16).slice(2)}`, type, title: snapshot.title, createdAt: new Date().toISOString(), report: snapshot };
+  const historyTitle = snapshot.documentNumber ? `${snapshot.title} · № ${snapshot.documentNumber.replace(/^№\s*/u, '')}` : snapshot.title;
+  const item = { id: `report-${Date.now()}-${Math.random().toString(16).slice(2)}`, type, title: historyTitle, createdAt: new Date().toISOString(), report: snapshot };
   section.reportHistory.unshift(item);
   section.reportHistory = section.reportHistory.slice(0, 50);
   saveCashflow();
@@ -1229,6 +1244,7 @@ async function createPdfReport(report) {
   pdfMake.vfs = pdfFonts?.pdfMake?.vfs || pdfFonts?.vfs || pdfFonts;
   const content = [
     { text: report.title, style: 'title' },
+    ...(report.documentNumber ? [{ text: `${report.numberLabel || tr('documentNumber')}: ${report.documentNumber}`, style: 'meta' }] : []),
     { text: `${tr('objects')}: ${report.objectName}`, style: 'meta' },
     { text: `${tr('sectionName')}: ${report.sectionName}`, style: 'meta', margin: [0, 0, 0, 14] }
   ];
@@ -1258,9 +1274,11 @@ async function createExcelReport(report) {
   const worksheet = workbook.addWorksheet(report.sectionName.slice(0, 31) || 'StructOS', { pageSetup: { orientation: 'landscape', fitToPage: true, fitToWidth: 1, fitToHeight: 0, margins: { left: 0.3, right: 0.3, top: 0.5, bottom: 0.8, header: 0.2, footer: 0.2 } } });
   const maxColumns = Math.max(6, ...report.tables.map((table) => table.columns.length));
   worksheet.mergeCells(1, 1, 1, maxColumns); worksheet.getCell(1, 1).value = report.title; worksheet.getCell(1, 1).font = { size: 17, bold: true, color: { argb: 'FF075CD3' } };
-  worksheet.mergeCells(2, 1, 2, maxColumns); worksheet.getCell(2, 1).value = `${tr('objects')}: ${report.objectName}`;
-  worksheet.mergeCells(3, 1, 3, maxColumns); worksheet.getCell(3, 1).value = `${tr('sectionName')}: ${report.sectionName}`;
-  let cursor = 5;
+  let metaRow = 2;
+  if (report.documentNumber) { worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${report.numberLabel || tr('documentNumber')}: ${report.documentNumber}`; metaRow += 1; }
+  worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${tr('objects')}: ${report.objectName}`; metaRow += 1;
+  worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${tr('sectionName')}: ${report.sectionName}`;
+  let cursor = metaRow + 2;
   report.tables.forEach((table) => {
     worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = table.title; worksheet.getCell(cursor, 1).font = { bold: true, size: 12, color: { argb: 'FF075CD3' } }; cursor += 1;
     const header = worksheet.getRow(cursor); table.columns.forEach((column, index) => { const cell = header.getCell(index + 1); cell.value = column.label; cell.font = { bold: true, color: { argb: 'FFFFFFFF' } }; cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF075CD3' } }; cell.alignment = { vertical: 'middle', wrapText: true }; cell.border = { top: { style: 'thin', color: { argb: 'FF9EB6D0' } }, left: { style: 'thin', color: { argb: 'FF9EB6D0' } }, bottom: { style: 'thin', color: { argb: 'FF9EB6D0' } }, right: { style: 'thin', color: { argb: 'FF9EB6D0' } } }; }); header.height = 28; cursor += 1;
@@ -1279,13 +1297,13 @@ async function createExcelReport(report) {
   worksheet.addImage(imageId, { tl: { col: maxColumns - 3, row: cursor - 1 }, ext: { width: 46, height: 46 } });
   worksheet.mergeCells(cursor, maxColumns - 2, cursor + 1, maxColumns); const brandCell = worksheet.getCell(cursor, maxColumns - 2); brandCell.value = `StructOS\n${tr('madeInStructos')}\n${tr('website')}`; brandCell.font = { bold: true, color: { argb: 'FF075CD3' }, size: 10 }; brandCell.alignment = { horizontal: 'right', vertical: 'middle', wrapText: true }; worksheet.getRow(cursor).height = 32; worksheet.getRow(cursor + 1).height = 20;
   const widths = [12, 36, 18, 22, 18, 18]; for (let index = 1; index <= maxColumns; index += 1) worksheet.getColumn(index).width = widths[index - 1] || 18;
-  worksheet.views = [{ state: 'frozen', ySplit: 5 }];
+  worksheet.views = [{ state: 'frozen', ySplit: metaRow + 2 }];
   const buffer = await workbook.xlsx.writeBuffer();
   return new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
 }
 
 function reportFileName(report, extension) {
-  const safe = `${report.title}_${report.objectName}_${report.sectionName}`.replace(/[\\/:*?"<>|]+/g, '_').replace(/\s+/g, '_').slice(0, 110);
+  const safe = `${report.title}${report.documentNumber ? `_№_${report.documentNumber.replace(/^№\s*/u, '')}` : ''}_${report.objectName}_${report.sectionName}`.replace(/[\\/:*?"<>|]+/g, '_').replace(/\s+/g, '_').slice(0, 110);
   return `${safe || 'StructOS'}.${extension}`;
 }
 
@@ -1334,17 +1352,22 @@ function openCashDocumentDialog(objectId, sectionId, kind) {
   const { object, section } = findCashSection(objectId, sectionId);
   if (!object || !section) return;
   const priced = kind === 'act';
-  const draft = normalizeCashDocument(JSON.parse(JSON.stringify(section[priced ? 'act' : 'statement'])), priced);
+  const defaultTitle = tr(priced ? 'workAct' : 'workStatement');
+  const draft = normalizeCashDocument(JSON.parse(JSON.stringify(section[priced ? 'act' : 'statement'])), priced, defaultTitle);
   const headCells = `<th>${tr('recordNumber')}</th><th>${tr('workName')}</th><th>${tr('unit')}</th><th>${tr('quantity')}</th>${priced ? `<th>${tr('price')}</th><th>${tr('rowTotal')}</th>` : ''}<th></th>`;
-  showDialog(tr(priced ? 'workAct' : 'workStatement'), `${object.name} · ${section.name}`, `<div class="cash-document-editor"><div class="cash-work-table-wrap"><table class="cash-work-table"><thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="${priced ? 5 : 3}">${tr('rowTotal')}</td><td data-document-grand-total>0 ₽</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>＋ ${tr('addRow')}</button><div class="cash-parties">${cashPartyMarkup('prepared', tr('preparedBy'), draft.parties.prepared)}${cashPartyMarkup('performed', tr('performedBy'), draft.parties.performed)}${cashPartyMarkup('accepted', tr('acceptedBy'), draft.parties.accepted)}<label class="cash-document-date"><span>${tr('fillDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button></div>${cashReportActionsMarkup()}</div>`);
+  showDialog(defaultTitle, `${object.name} · ${section.name}`, `<div class="cash-document-editor"><div class="cash-document-meta"><label><span>${tr(priced ? 'actName' : 'statementName')}</span><input type="text" maxlength="160" data-document-title value="${escapeHtml(draft.title)}" /></label><label><span>${tr(priced ? 'actNumber' : 'statementNumber')}</span><input type="text" maxlength="80" data-document-number value="${escapeHtml(draft.number)}" placeholder="1" /></label></div><div class="cash-work-table-wrap"><table class="cash-work-table"><thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="${priced ? 5 : 3}">${tr('rowTotal')}</td><td data-document-grand-total>0 ₽</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>＋ ${tr('addRow')}</button><div class="cash-parties">${cashPartyMarkup('prepared', tr('preparedBy'), draft.parties.prepared)}${cashPartyMarkup('performed', tr('performedBy'), draft.parties.performed)}${cashPartyMarkup('accepted', tr('acceptedBy'), draft.parties.accepted)}<label class="cash-document-date"><span>${tr('fillDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button></div>${cashReportActionsMarkup()}</div>`);
   const dialog = $('[data-dialog]'); dialog.classList.add('cash-document-dialog');
   const scope = $('[data-dialog-content]'); bindCashDocumentRows(scope, draft, priced);
+  $('[data-document-title]', scope)?.addEventListener('input', (event) => { draft.title = event.currentTarget.value.slice(0, 160); });
+  $('[data-document-number]', scope)?.addEventListener('input', (event) => { draft.number = event.currentTarget.value.slice(0, 80); });
   $('[data-add-work-row]', scope)?.addEventListener('click', () => { draft.rows.push(...normalizeCashWorkRows([], priced)); bindCashDocumentRows(scope, draft, priced); });
   $$('[data-party-field]', scope).forEach((input) => input.addEventListener('input', () => { draft.parties[input.dataset.party][input.dataset.partyField] = input.value.slice(0, 160); }));
   $('[data-document-date]', scope)?.addEventListener('change', (event) => { draft.parties.date = event.currentTarget.value || localDateKey(); });
   const persistDocument = () => {
+    draft.title = draft.title.trim() || defaultTitle;
+    draft.number = draft.number.trim();
     draft.updatedAt = new Date().toISOString();
-    section[priced ? 'act' : 'statement'] = normalizeCashDocument(draft, priced);
+    section[priced ? 'act' : 'statement'] = normalizeCashDocument(draft, priced, defaultTitle);
     saveCashflow();
     return cashDocumentReport(object, section, kind, draft);
   };
