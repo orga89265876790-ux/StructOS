@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=19" />
+    <link rel="stylesheet" href="dashboard.css?v=20" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -172,13 +172,19 @@
         </section>
       </main>
 
-      <nav class="bottom-nav" aria-label="Основная навигация">
-        <button class="is-active" type="button" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v10h-6v-6H9v6H3V11Z"/></svg><span data-i18n="home">Главная</span></button>
-        <button type="button" data-tab="space"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span data-i18n="space">Пространство</span></button>
-        <button type="button" data-tab="objects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h2M14 10h2"/></svg><span data-i18n="objects">Объекты</span></button>
-        <button type="button" data-tab="cashflow"><span class="cashflow-nav-icon" aria-hidden="true">+₽−</span><span data-i18n="money">Быстрый объект</span></button>
-        <button type="button" data-tab="profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="profile">Профиль</span></button>
-      </nav>
+      <div class="bottom-menu" data-bottom-menu>
+        <nav class="bottom-nav" aria-label="Основная навигация" data-bottom-nav hidden>
+          <button class="bottom-nav-collapse" type="button" data-bottom-menu-close><span class="bottom-nav-mini-brand"><img src="assets/structos-building-mark.svg" alt="" />StructOS</span><span data-i18n="collapseMenu">Свернуть меню</span><i>⌄</i></button>
+          <div class="bottom-nav-items">
+            <button class="is-active" type="button" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v10h-6v-6H9v6H3V11Z"/></svg><span data-i18n="home">Главная</span></button>
+            <button type="button" data-tab="space"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span data-i18n="space">Пространство</span></button>
+            <button type="button" data-tab="objects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h2M14 10h2"/></svg><span data-i18n="objects">Объекты</span></button>
+            <button type="button" data-tab="cashflow"><span class="cashflow-nav-icon" aria-hidden="true">+₽−</span><span data-i18n="money">Быстрый объект</span></button>
+            <button type="button" data-tab="profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="profile">Профиль</span></button>
+          </div>
+        </nav>
+        <button class="bottom-menu-toggle" type="button" data-bottom-menu-toggle aria-expanded="false"><img src="assets/structos-building-mark.svg" alt="" /><span class="brand-name">Struct<span>OS</span></span><strong data-i18n="menu">Меню</strong><i aria-hidden="true">⌃</i></button>
+      </div>
 
       <div class="drawer-backdrop" data-menu-close hidden></div>
       <aside class="side-drawer" id="side-drawer" aria-label="Меню" aria-hidden="true">
@@ -239,6 +245,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=19"></script>
+    <script type="module" src="dashboard.js?v=20"></script>
   </body>
 </html>

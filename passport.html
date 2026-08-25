@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#04112a" />
+    <meta name="description" content="Публичный Паспорт строителя StructOS" />
+    <title>Паспорт строителя — StructOS</title>
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="passport-public.css?v=1" />
+  </head>
+  <body>
+    <main class="public-passport" data-public-passport>
+      <header class="public-head"><span><img src="assets/structos-building-mark.svg" alt="" /><strong>Struct<span>OS</span></strong></span><small>ПАСПОРТ СТРОИТЕЛЯ</small></header>
+      <section class="public-card" data-passport-card hidden>
+        <div class="public-person"><div class="public-photo" data-passport-photo><img src="assets/structos-building-mark.svg" alt="" /></div><div><small>STRUCTOS IDENTITY</small><h1 data-passport-name></h1><button type="button" data-copy-public-id><span>StructOS ID</span><strong data-passport-id></strong><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button></div></div>
+        <div class="public-fields" data-passport-fields></div>
+        <footer><img src="assets/structos-building-mark.svg" alt="" /><div><strong>Сделано на StructOS</strong><span>www.structOS.ru</span><span>Единый Строительный Интеллект в России №1</span></div></footer>
+      </section>
+      <section class="public-error" data-passport-error hidden><img src="assets/structos-building-mark.svg" alt="" /><h1>Паспорт недоступен</h1><p>Ссылка повреждена или владелец не открыл данные для просмотра.</p><a href="index.html">Перейти на StructOS</a></section>
+      <div class="public-toast" data-public-toast hidden>✓ ID скопирован</div>
+    </main>
+    <script type="module" src="passport-public.js?v=1"></script>
+  </body>
+</html>
