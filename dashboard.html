@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=25" />
+    <link rel="stylesheet" href="dashboard.css?v=26" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -165,10 +165,10 @@
         </section>
 
         <section class="tab-panel projects-panel" data-panel="projects" aria-label="Мои проекты" hidden>
-          <div class="page-title"><div><span class="eyebrow">STRUCTOS PROJECTS</span><h1 data-i18n="myProjects">Мои проекты</h1><p data-i18n="myProjectsDescription">Все загруженные проекты и их путь до завершения</p></div><button class="primary-button" type="button" data-open-view="project" data-i18n="uploadProject">Загрузить проект</button></div>
+          <div class="page-title my-projects-page-title"><div><span class="eyebrow">STRUCTOS PROJECTS</span><h1 data-i18n="myProjects">Мои проекты</h1><p data-i18n="myProjectsDescription">Все загруженные проекты и их путь до завершения</p></div><div class="my-project-upload-actions"><button class="primary-button" type="button" data-open-view="project" data-i18n="uploadProject">Загрузить проект</button><button class="outline-button" type="button" data-open-view="contract" data-i18n="uploadContract">Загрузить договор</button><button class="outline-button" type="button" data-open-view="estimate" data-i18n="uploadEstimate">Загрузить смету</button></div></div>
           <section class="my-projects-summary"><span>▰</span><div><small data-i18n="projectPackages">Проектов</small><strong data-my-projects-count>0</strong></div><p data-i18n="projectDocuments">Документы проекта</p></section>
           <div class="my-projects-list" data-my-projects-list></div>
-          <div class="empty-state" data-my-projects-empty><div class="empty-building" aria-hidden="true"><span></span><span></span><span></span></div><h2 data-i18n="noMyProjects">Проектов пока нет</h2><p data-i18n="noMyProjectsCopy">Загрузите проект, договор или смету — карточка проекта появится здесь автоматически.</p><button class="primary-button" type="button" data-open-view="project" data-i18n="uploadProject">Загрузить проект</button></div>
+          <div class="empty-state" data-my-projects-empty><div class="empty-building" aria-hidden="true"><span></span><span></span><span></span></div><h2 data-i18n="noMyProjects">Проектов пока нет</h2><p data-i18n="noMyProjectsCopy">Загрузите проект, договор или смету — карточка проекта появится здесь автоматически.</p><div class="my-project-upload-actions is-empty"><button class="primary-button" type="button" data-open-view="project" data-i18n="uploadProject">Загрузить проект</button><button class="outline-button" type="button" data-open-view="contract" data-i18n="uploadContract">Загрузить договор</button><button class="outline-button" type="button" data-open-view="estimate" data-i18n="uploadEstimate">Загрузить смету</button></div></div>
         </section>
 
         <section class="tab-panel analysis-detail-panel" data-panel="analysis-detail" aria-label="Детальный анализ" hidden>
@@ -282,6 +282,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=25"></script>
+    <script type="module" src="dashboard.js?v=26"></script>
   </body>
 </html>
