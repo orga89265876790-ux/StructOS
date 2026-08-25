@@ -191,6 +191,27 @@ Object.assign(copy.TJ, {
   editCashEntry: 'Таҳрири сабт', saveChanges: 'Нигоҳ доштани тағйирот', entryUpdated: 'Сабт ва ҳамаи натиҷаҳо нав шуданд', entryFieldsRequired: 'Маблағ, сана ва шарҳро ворид кунед'
 });
 
+Object.assign(copy.RU, {
+  reportPreviewTitle: 'Предпросмотр отчёта', reportPreviewHint: 'Проверьте содержание и оформление перед скачиванием или отправкой.', closePreview: 'Закрыть просмотр',
+  widgetCalendar: 'Календарь', calendar: 'Календарь', calendarHint: 'Дела и даты в одном месте', previousMonth: 'Предыдущий месяц', nextMonth: 'Следующий месяц', today: 'Сегодня', selectedDate: 'Выбранная дата', noCalendarEvents: 'На эту дату дел нет', addTaskForDate: 'Добавить дело на эту дату',
+  invitedObject: 'По приглашению', demoInvitedObjectName: 'Демо-объект «Северный квартал»', invitedToObject: 'Вы приглашены работать на этом объекте', invitedRole: 'Ваша роль', invitedBy: 'Пригласил', invitedAt: 'Дата приглашения', objectParticipant: 'Участник объекта', invitedDocumentsHint: 'Документы и доступы будут появляться здесь по мере предоставления владельцем объекта.', ownerWillShare: 'Файл пока не предоставлен владельцем объекта'
+});
+Object.assign(copy.EN, {
+  reportPreviewTitle: 'Report preview', reportPreviewHint: 'Review the content and layout before downloading or sharing.', closePreview: 'Close preview',
+  widgetCalendar: 'Calendar', calendar: 'Calendar', calendarHint: 'Tasks and dates in one place', previousMonth: 'Previous month', nextMonth: 'Next month', today: 'Today', selectedDate: 'Selected date', noCalendarEvents: 'No tasks for this date', addTaskForDate: 'Add a task for this date',
+  invitedObject: 'By invitation', demoInvitedObjectName: 'Demo object “Northern Quarter”', invitedToObject: 'You have been invited to work on this object', invitedRole: 'Your role', invitedBy: 'Invited by', invitedAt: 'Invitation date', objectParticipant: 'Object participant', invitedDocumentsHint: 'Documents and permissions will appear here when the object owner provides them.', ownerWillShare: 'The object owner has not provided this file yet'
+});
+Object.assign(copy.KY, {
+  reportPreviewTitle: 'Отчётту алдын ала көрүү', reportPreviewHint: 'Жүктөөдөн же жөнөтүүдөн мурун мазмунун жана көрүнүшүн текшериңиз.', closePreview: 'Көрүүнү жабуу',
+  widgetCalendar: 'Календарь', calendar: 'Календарь', calendarHint: 'Иштер жана күндөр бир жерде', previousMonth: 'Мурунку ай', nextMonth: 'Кийинки ай', today: 'Бүгүн', selectedDate: 'Тандалган күн', noCalendarEvents: 'Бул күнгө иштер жок', addTaskForDate: 'Бул күнгө иш кошуу',
+  invitedObject: 'Чакыруу боюнча', demoInvitedObjectName: 'Демо-объект «Түндүк квартал»', invitedToObject: 'Сиз бул объектте иштөөгө чакырылдыңыз', invitedRole: 'Сиздин ролуңуз', invitedBy: 'Чакырган', invitedAt: 'Чакыруу күнү', objectParticipant: 'Объекттин катышуучусу', invitedDocumentsHint: 'Объекттин ээси берген сайын документтер жана укуктар бул жерде пайда болот.', ownerWillShare: 'Объекттин ээси файлды азырынча берген жок'
+});
+Object.assign(copy.TJ, {
+  reportPreviewTitle: 'Пешнамоиши ҳисобот', reportPreviewHint: 'Пеш аз боргирӣ ё фиристодан муҳтаво ва намуди онро санҷед.', closePreview: 'Пӯшидани пешнамоиш',
+  widgetCalendar: 'Тақвим', calendar: 'Тақвим', calendarHint: 'Корҳо ва санаҳо дар як ҷо', previousMonth: 'Моҳи гузашта', nextMonth: 'Моҳи оянда', today: 'Имрӯз', selectedDate: 'Санаи интихобшуда', noCalendarEvents: 'Барои ин сана кор нест', addTaskForDate: 'Иловаи кор барои ин сана',
+  invitedObject: 'Бо даъват', demoInvitedObjectName: 'Демо-объекти «Маҳаллаи шимолӣ»', invitedToObject: 'Шумо барои кор дар ин объект даъват шудаед', invitedRole: 'Нақши шумо', invitedBy: 'Даъваткунанда', invitedAt: 'Санаи даъват', objectParticipant: 'Иштирокчии объект', invitedDocumentsHint: 'Ҳуҷҷатҳо ва дастрасӣ баъди пешниҳоди соҳиби объект дар ин ҷо пайдо мешаванд.', ownerWillShare: 'Соҳиби объект ҳоло ин файлро пешниҳод накардааст'
+});
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -201,6 +222,7 @@ const UPLOADS_KEY = 'structos-analysis-uploads-v1';
 const OBJECT_NAME_KEY = 'structos-analysis-object-name';
 const OBJECTS_KEY = 'structos-objects-v1';
 const OBJECT_ORDER_KEY = 'structos-object-order-v1';
+const INVITED_OBJECTS_KEY = 'structos-invited-objects-v1';
 const PROFILE_COMPLETION_KEY = 'structos-profile-completion';
 const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
 const WIDGET_STYLES_KEY = 'structos-space-widget-styles-v1';
@@ -280,6 +302,45 @@ function loadObjectRegistry() {
 }
 
 let objectRegistry = loadObjectRegistry();
+
+function demoInvitedObject() {
+  return {
+    id: 'demo-invited-severny-kvartal',
+    nameKey: 'demoInvitedObjectName',
+    name: '',
+    status: 'active',
+    invitedAt: '2026-08-25T06:45:00.000Z',
+    completedAt: null,
+    invitedBy: 'StructOS Demo',
+    roleKey: 'objectParticipant',
+    files: []
+  };
+}
+
+function loadInvitedObjects() {
+  const stored = readStoredJSON(INVITED_OBJECTS_KEY, []);
+  const objects = Array.isArray(stored) ? stored.filter((object) => object && object.id).map((object) => ({
+    id: String(object.id),
+    nameKey: String(object.nameKey || ''),
+    name: String(object.name || '').trim().slice(0, 120),
+    status: object.status === 'completed' ? 'completed' : 'active',
+    invitedAt: object.invitedAt || new Date().toISOString(),
+    completedAt: object.completedAt || null,
+    invitedBy: String(object.invitedBy || 'StructOS').slice(0, 120),
+    roleKey: String(object.roleKey || 'objectParticipant'),
+    files: Array.isArray(object.files) ? object.files.slice(0, 3) : []
+  })) : [];
+  const demo = demoInvitedObject();
+  if (!objects.some((object) => object.id === demo.id)) objects.unshift(demo);
+  localStorage.setItem(INVITED_OBJECTS_KEY, JSON.stringify(objects));
+  return objects;
+}
+
+let invitedObjects = loadInvitedObjects();
+
+function invitedObjectName(object) {
+  return object.nameKey ? tr(object.nameKey) : object.name || tr('invitedObject');
+}
 
 function tr(key) { return copy[language]?.[key] ?? copy.RU[key] ?? key; }
 
@@ -485,7 +546,8 @@ const widgetDefinitions = {
   tasks: { label: 'widgetTasks', icon: '☑', hint: '0' },
   team: { label: 'widgetTeam', icon: '◎', hint: '0' },
   finance: { label: 'widgetFinance', icon: '₽', hint: '0 ₽' },
-  drawing: { label: 'widgetDrawing', icon: '✎', hint: '∞' }
+  drawing: { label: 'widgetDrawing', icon: '✎', hint: '∞' },
+  calendar: { label: 'widgetCalendar', icon: '▦', hint: '' }
 };
 const defaultWidgets = Object.keys(widgetDefinitions);
 const WIDGETS_VERSION_KEY = 'structos-space-widgets-version';
@@ -510,10 +572,10 @@ function validTodoDate(value, fallback = localDateKey()) {
 
 const storedWidgets = readStoredJSON('structos-space-widgets', defaultWidgets);
 let selectedWidgets = (Array.isArray(storedWidgets) ? storedWidgets : defaultWidgets).filter((id) => widgetDefinitions[id]);
-if (localStorage.getItem(WIDGETS_VERSION_KEY) !== '3') {
-  selectedWidgets = [...defaultWidgets];
+if (localStorage.getItem(WIDGETS_VERSION_KEY) !== '4') {
+  if (!selectedWidgets.includes('calendar')) selectedWidgets.push('calendar');
   localStorage.setItem('structos-space-widgets', JSON.stringify(selectedWidgets));
-  localStorage.setItem(WIDGETS_VERSION_KEY, '3');
+  localStorage.setItem(WIDGETS_VERSION_KEY, '4');
 }
 let widgetPositions = readStoredJSON('structos-space-positions', {});
 let widgetSizes = readStoredJSON('structos-space-sizes', {});
@@ -584,7 +646,8 @@ function renderWidgets() {
     const hint = id === 'objects'
       ? `${combinedManagedObjects().filter((object) => !object.completed).length}`
       : id === 'tasks' ? `${todoItems.filter((item) => !item.done).length} / ${todoItems.length}`
-        : id === 'finance' ? `${cashflowObjects.length}` : definition.hint;
+        : id === 'finance' ? `${cashflowObjects.length}`
+          : id === 'calendar' ? new Intl.DateTimeFormat(root.lang || 'ru', { day: 'numeric', month: 'short' }).format(new Date()) : definition.hint;
     card.innerHTML = `<span class="space-widget-icon">${definition.icon}</span><strong>${tr(definition.label)}</strong><small>${hint} · ${tr('quickFunction')}</small><i class="widget-resize-handle" aria-hidden="true"></i>`;
     let tapTimer = 0;
     let lastTap = 0;
@@ -824,9 +887,88 @@ function openTodoDialog() {
   setTimeout(() => input?.focus(), 40);
 }
 
+let selectedCalendarDate = localDateKey();
+let calendarMonthCursor = new Date(`${selectedCalendarDate}T12:00:00`);
+
+function calendarMonthTitle(date) {
+  return new Intl.DateTimeFormat(root.lang || 'ru', { month: 'long', year: 'numeric' }).format(date);
+}
+
+function calendarWeekdays() {
+  const monday = new Date(2026, 0, 5, 12);
+  return Array.from({ length: 7 }, (_, index) => new Intl.DateTimeFormat(root.lang || 'ru', { weekday: 'short' }).format(new Date(2026, 0, 5 + index, 12)).replace('.', ''));
+}
+
+function calendarDayTasks(dateKey) {
+  return todoItems.filter((item) => item.dueDate === dateKey);
+}
+
+function calendarGridMarkup() {
+  const year = calendarMonthCursor.getFullYear();
+  const month = calendarMonthCursor.getMonth();
+  const firstDay = new Date(year, month, 1, 12);
+  const offset = (firstDay.getDay() + 6) % 7;
+  const start = new Date(year, month, 1 - offset, 12);
+  const today = localDateKey();
+  return Array.from({ length: 42 }, (_, index) => {
+    const date = new Date(start.getFullYear(), start.getMonth(), start.getDate() + index, 12);
+    const dateKey = localDateKey(date);
+    const tasks = calendarDayTasks(dateKey);
+    const activeCount = tasks.filter((item) => !item.done).length;
+    const completedCount = tasks.length - activeCount;
+    const classes = [date.getMonth() !== month ? 'is-outside' : '', dateKey === today ? 'is-today' : '', dateKey === selectedCalendarDate ? 'is-selected' : '', tasks.length ? 'has-tasks' : ''].filter(Boolean).join(' ');
+    return `<button class="calendar-day ${classes}" type="button" data-calendar-date="${dateKey}" aria-label="${escapeHtml(todoDateLabel(dateKey))}"><span>${date.getDate()}</span>${tasks.length ? `<i aria-hidden="true">${activeCount ? `<b>${activeCount}</b>` : ''}${completedCount ? '<em></em>' : ''}</i>` : ''}</button>`;
+  }).join('');
+}
+
+function calendarTasksMarkup() {
+  const items = calendarDayTasks(selectedCalendarDate).sort((left, right) => Number(left.done) - Number(right.done) || String(left.createdAt).localeCompare(String(right.createdAt)));
+  if (!items.length) return `<div class="calendar-empty">${tr('noCalendarEvents')}</div>`;
+  return items.map((item) => `<label class="calendar-task${item.done ? ' is-done' : ''}"><input type="checkbox" data-calendar-task="${escapeHtml(item.id)}"${item.done ? ' checked' : ''} /><span>${escapeHtml(item.text)}</span></label>`).join('');
+}
+
+function renderCalendarDialog() {
+  const rootElement = $('[data-calendar-root]', $('[data-dialog-content]'));
+  if (!rootElement) return;
+  rootElement.innerHTML = `<div class="calendar-toolbar"><button type="button" data-calendar-previous aria-label="${tr('previousMonth')}">‹</button><strong>${escapeHtml(calendarMonthTitle(calendarMonthCursor))}</strong><button type="button" data-calendar-next aria-label="${tr('nextMonth')}">›</button></div><button class="calendar-today" type="button" data-calendar-today>${tr('today')}</button><div class="calendar-weekdays">${calendarWeekdays().map((day) => `<span>${escapeHtml(day)}</span>`).join('')}</div><div class="calendar-grid">${calendarGridMarkup()}</div><section class="calendar-selected"><header><span>${tr('selectedDate')}</span><strong>${escapeHtml(todoDateLabel(selectedCalendarDate))}</strong></header><div class="calendar-task-list">${calendarTasksMarkup()}</div><div class="calendar-add"><input type="text" maxlength="160" data-calendar-task-input placeholder="${tr('addTaskForDate')}" /><button class="primary-button" type="button" data-calendar-task-add aria-label="${tr('addTask')}">+</button></div></section>`;
+  $('[data-calendar-previous]', rootElement)?.addEventListener('click', () => { calendarMonthCursor = new Date(calendarMonthCursor.getFullYear(), calendarMonthCursor.getMonth() - 1, 1, 12); renderCalendarDialog(); });
+  $('[data-calendar-next]', rootElement)?.addEventListener('click', () => { calendarMonthCursor = new Date(calendarMonthCursor.getFullYear(), calendarMonthCursor.getMonth() + 1, 1, 12); renderCalendarDialog(); });
+  $('[data-calendar-today]', rootElement)?.addEventListener('click', () => { selectedCalendarDate = localDateKey(); calendarMonthCursor = new Date(`${selectedCalendarDate}T12:00:00`); renderCalendarDialog(); });
+  $$('[data-calendar-date]', rootElement).forEach((button) => button.addEventListener('click', () => {
+    selectedCalendarDate = button.dataset.calendarDate;
+    const selected = new Date(`${selectedCalendarDate}T12:00:00`);
+    if (selected.getMonth() !== calendarMonthCursor.getMonth() || selected.getFullYear() !== calendarMonthCursor.getFullYear()) calendarMonthCursor = new Date(selected.getFullYear(), selected.getMonth(), 1, 12);
+    renderCalendarDialog();
+  }));
+  $$('[data-calendar-task]', rootElement).forEach((checkbox) => checkbox.addEventListener('change', () => {
+    const task = todoItems.find((item) => item.id === checkbox.dataset.calendarTask);
+    if (!task) return;
+    task.done = checkbox.checked;
+    task.completedAt = task.done ? new Date().toISOString() : null;
+    saveTodoItems(); renderCalendarDialog(); renderWidgets();
+  }));
+  const input = $('[data-calendar-task-input]', rootElement);
+  const addTask = () => {
+    const text = input?.value.trim();
+    if (!text) { input?.focus(); return; }
+    todoItems.unshift({ id: `task-${Date.now()}-${Math.random().toString(16).slice(2)}`, text: text.slice(0, 160), done: false, dueDate: selectedCalendarDate, createdAt: new Date().toISOString(), completedAt: null });
+    saveTodoItems(); renderCalendarDialog(); renderWidgets(); showToast(tr('taskAdded'));
+  };
+  $('[data-calendar-task-add]', rootElement)?.addEventListener('click', addTask);
+  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); addTask(); } });
+}
+
+function openCalendarDialog() {
+  const selected = new Date(`${selectedCalendarDate}T12:00:00`);
+  calendarMonthCursor = new Date(selected.getFullYear(), selected.getMonth(), 1, 12);
+  showDialog(tr('calendar'), tr('calendarHint'), '<div data-calendar-root></div>');
+  $('[data-dialog]')?.classList.add('calendar-dialog');
+  renderCalendarDialog();
+}
+
 function showDialog(title, copyText, extra = '') {
   const dialog = $('[data-dialog]');
-  dialog.classList.remove('cash-document-dialog', 'cash-export-dialog');
+  dialog.classList.remove('cash-document-dialog', 'cash-export-dialog', 'calendar-dialog', 'invited-object-dialog');
   $('[data-dialog-content]').innerHTML = `<div class="dialog-content"><h2>${title}</h2><p>${copyText}</p>${extra}</div>`;
   if (!dialog.open) dialog.showModal();
 }
@@ -996,6 +1138,7 @@ const expandedCashSections = new Set();
 const expandedCashReportHistory = new Set();
 const expandedCashEntryHistories = new Set();
 let reportLogoDataUrl = '';
+const reportPreviewLogoUrl = new URL('./assets/favicon-192.png', import.meta.url).href;
 
 function saveCashflow() {
   localStorage.setItem(CASHFLOW_KEY, JSON.stringify(cashflowObjects));
@@ -1172,7 +1315,7 @@ function openCashEntryEditDialog(objectId, sectionId, kind, entryId) {
 
 function cashReportHistoryMarkup(section) {
   const isOpen = expandedCashReportHistory.has(section.id);
-  const rows = section.reportHistory.length ? section.reportHistory.map((item) => `<article class="cash-report-history-row" data-report-history-id="${escapeHtml(item.id)}"><span><strong>${escapeHtml(item.title)}</strong><small>${cashDate(item.createdAt)}</small></span><div><button type="button" data-history-download="pdf">PDF</button><button type="button" data-history-download="xlsx">Excel</button><button type="button" data-history-share="pdf">↗ PDF</button><button type="button" data-history-share="xlsx">↗ Excel</button></div></article>`).join('') : `<div class="cash-history-empty">${tr('noReports')}</div>`;
+  const rows = section.reportHistory.length ? section.reportHistory.map((item) => `<article class="cash-report-history-row" data-report-history-id="${escapeHtml(item.id)}"><span><strong>${escapeHtml(item.title)}</strong><small>${cashDate(item.createdAt)}</small></span><div><button type="button" data-history-preview aria-label="${escapeHtml(tr('viewReport'))}" title="${escapeHtml(tr('viewReport'))}">◉</button><button type="button" data-history-download="pdf">PDF</button><button type="button" data-history-download="xlsx">Excel</button><button type="button" data-history-share="pdf">↗ PDF</button><button type="button" data-history-share="xlsx">↗ Excel</button></div></article>`).join('') : `<div class="cash-history-empty">${tr('noReports')}</div>`;
   return `<div class="cash-report-history"${isOpen ? '' : ' hidden'}><div class="cash-report-history-list">${rows}</div></div>`;
 }
 
@@ -1282,6 +1425,7 @@ function bindCashSectionEvents(object, scope) {
       $$('[data-report-history-id]', sectionCard).forEach((historyRow) => {
         const item = section.reportHistory.find((record) => record.id === historyRow.dataset.reportHistoryId);
         if (!item) return;
+        $('[data-history-preview]', historyRow)?.addEventListener('click', () => openCashReportPreview(item.report, () => item.report));
         $$('[data-history-download]', historyRow).forEach((button) => button.addEventListener('click', () => deliverCashReport(item.report, button.dataset.historyDownload, false).catch((error) => { console.error(error); showToast(tr('comingSoon')); })));
         $$('[data-history-share]', historyRow).forEach((button) => button.addEventListener('click', () => deliverCashReport(item.report, button.dataset.historyShare, true).catch((error) => { if (error?.name !== 'AbortError') { console.error(error); showToast(tr('comingSoon')); } })));
       });
@@ -1486,6 +1630,39 @@ function reportCellValue(column, row) {
   return String(value ?? '');
 }
 
+function reportPreviewTableMarkup(table) {
+  const headers = table.columns.map((column) => `<th>${escapeHtml(column.label)}</th>`).join('');
+  const rows = table.rows.length ? table.rows.map((row) => `<tr>${table.columns.map((column) => {
+    const tone = column.tone ? cashBalanceClass(Number(row[column.key]) || 0) : '';
+    return `<td class="${column.number || column.money ? 'is-number ' : ''}${tone}">${escapeHtml(reportCellValue(column, row))}</td>`;
+  }).join('')}</tr>`).join('') : `<tr><td class="report-preview-empty" colspan="${table.columns.length}">${tr('noEntries')}</td></tr>`;
+  const total = Number.isFinite(table.total) ? `<div class="report-preview-total"><span>${tr('rowTotal')}</span><strong>${formatMoney(table.total)}</strong></div>` : '';
+  const summaries = table.summaries?.length ? `<div class="report-preview-summaries">${table.summaries.map((summary) => `<div class="${escapeHtml(summary?.tone || '')}"><strong>${escapeHtml(cashReportSummaryText(summary))}</strong></div>`).join('')}</div>` : '';
+  return `<section class="report-preview-section"><h3>${escapeHtml(table.title)}</h3><div class="report-preview-table-wrap"><table><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div>${total}${summaries}</section>`;
+}
+
+function reportPreviewPartiesMarkup(parties) {
+  if (!parties) return '';
+  const rows = [[tr('preparedBy'), parties.prepared], [tr('performedBy'), parties.performed], [tr('acceptedBy'), parties.accepted]];
+  return `<section class="report-preview-parties"><h3>${tr('fillDate')}: ${escapeHtml(parties.date || localDateKey())}</h3><div>${rows.map(([label, party]) => `<article><strong>${escapeHtml(label)}</strong><span>${tr('fullName')}: ${escapeHtml(party?.name || '—')}</span><span>${tr('signature')}: ${escapeHtml(party?.signature || '—')}</span></article>`).join('')}</div></section>`;
+}
+
+function reportPreviewMarkup(report) {
+  return `<article class="report-preview-sheet"><header><div><span>STRUCTOS REPORT</span><h2>${escapeHtml(report.title)}</h2>${report.documentNumber ? `<p>${escapeHtml(report.numberLabel || tr('documentNumber'))}: ${escapeHtml(report.documentNumber)}</p>` : ''}</div><img src="${reportPreviewLogoUrl}" alt="StructOS" /></header><div class="report-preview-meta"><p><strong>${tr('objects')}:</strong> ${escapeHtml(report.objectName)}</p><p><strong>${tr('sectionName')}:</strong> ${escapeHtml(report.sectionName)}</p></div>${report.tables.map(reportPreviewTableMarkup).join('')}${reportPreviewPartiesMarkup(report.parties)}<footer><img src="${reportPreviewLogoUrl}" alt="" /><div><strong>StructOS</strong><span>${tr('madeInStructos')}</span><span>${tr('website')}</span></div></footer></article>`;
+}
+
+function openCashReportPreview(report, getDeliveryReport = () => report, onSuccess = null) {
+  const dialog = $('[data-report-preview-dialog]');
+  if (!dialog) return;
+  $('[data-report-preview-title]', dialog).textContent = tr('reportPreviewTitle');
+  $('[data-report-preview-hint]', dialog).textContent = tr('reportPreviewHint');
+  $('[data-report-preview-content]', dialog).innerHTML = reportPreviewMarkup(report);
+  const actions = $('[data-report-preview-actions]', dialog);
+  actions.innerHTML = cashDeliveryActionsMarkup();
+  bindCashDeliveryActions(actions, getDeliveryReport, onSuccess);
+  if (!dialog.open) dialog.showModal();
+}
+
 async function createPdfReport(report) {
   const [{ default: pdfMake }, { default: pdfFonts }] = await Promise.all([import('pdfmake/build/pdfmake.js'), import('pdfmake/build/vfs_fonts.js')]);
   const logo = await loadReportLogo();
@@ -1580,11 +1757,15 @@ async function deliverCashReport(report, format, share = false) {
   showToast(tr(share ? 'shareUnavailable' : 'reportReady'));
 }
 
-function cashReportActionsMarkup() {
+function cashDeliveryActionsMarkup() {
   return `<div class="cash-report-actions"><button class="primary-button" type="button" data-report-format="pdf">${tr('downloadPdf')}</button><button class="primary-button" type="button" data-report-format="xlsx">${tr('downloadExcel')}</button><button class="outline-button" type="button" data-report-share="pdf">${tr('sharePdf')}</button><button class="outline-button" type="button" data-report-share="xlsx">${tr('shareExcel')}</button></div>`;
 }
 
-function bindCashReportActions(scope, getReport, onSuccess = null) {
+function cashReportActionsMarkup() {
+  return `<div class="cash-report-preview-start"><button class="outline-button" type="button" data-report-preview><span aria-hidden="true">◉</span>${tr('viewReport')}</button><small>${tr('reportPreviewHint')}</small></div>${cashDeliveryActionsMarkup()}`;
+}
+
+function bindCashDeliveryActions(scope, getReport, onSuccess = null) {
   $$('[data-report-format]', scope).forEach((button) => button.addEventListener('click', async () => {
     button.disabled = true;
     try {
@@ -1605,6 +1786,14 @@ function bindCashReportActions(scope, getReport, onSuccess = null) {
   }));
 }
 
+function bindCashReportActions(scope, getReport, onSuccess = null, getPreviewReport = getReport) {
+  $('[data-report-preview]', scope)?.addEventListener('click', () => {
+    try { openCashReportPreview(getPreviewReport(), getReport, onSuccess); }
+    catch (error) { console.error(error); showToast(tr('comingSoon')); }
+  });
+  bindCashDeliveryActions(scope, getReport, onSuccess);
+}
+
 function openCashDocumentDialog(objectId, sectionId, kind) {
   const { object, section } = findCashSection(objectId, sectionId);
   if (!object || !section) return;
@@ -1620,6 +1809,7 @@ function openCashDocumentDialog(objectId, sectionId, kind) {
   $('[data-add-work-row]', scope)?.addEventListener('click', () => { draft.rows.push(...normalizeCashWorkRows([], priced)); bindCashDocumentRows(scope, draft, priced); });
   $$('[data-party-field]', scope).forEach((input) => input.addEventListener('input', () => { draft.parties[input.dataset.party][input.dataset.partyField] = input.value.slice(0, 160); }));
   $('[data-document-date]', scope)?.addEventListener('change', (event) => { draft.parties.date = event.currentTarget.value || localDateKey(); });
+  const previewDocument = () => cashDocumentReport(object, section, kind, { ...draft, title: draft.title.trim() || defaultTitle, number: draft.number.trim() });
   const persistDocument = () => {
     draft.title = draft.title.trim() || defaultTitle;
     draft.number = draft.number.trim();
@@ -1637,7 +1827,7 @@ function openCashDocumentDialog(objectId, sectionId, kind) {
   bindCashReportActions(scope, persistDocument, (report) => {
     saveCashReportHistory(section, kind, report);
     renderCashflow();
-  });
+  }, previewDocument);
 }
 
 function openSectionExportDialog(objectId, sectionId) {
@@ -2125,7 +2315,18 @@ function combinedManagedObjects() {
     completedAt: object.completedAt || null,
     details: `${object.sections.length} ${tr('sectionCalculations')}`
   }));
-  const objects = [...coreObjects, ...quickObjects];
+  const invitedManagedObjects = invitedObjects.map((object) => ({
+    key: `invited:${object.id}`,
+    id: object.id,
+    source: 'invited',
+    name: invitedObjectName(object),
+    typeLabel: tr('invitedObject'),
+    completed: object.status === 'completed',
+    date: object.invitedAt,
+    completedAt: object.completedAt || null,
+    details: `${tr('invitedRole')}: ${tr(object.roleKey || 'objectParticipant')} · ${tr('invitedBy')}: ${object.invitedBy}`
+  }));
+  const objects = [...coreObjects, ...quickObjects, ...invitedManagedObjects];
   const orderIndex = new Map(unifiedObjectOrder.map((key, index) => [key, index]));
   const active = objects.filter((object) => !object.completed).sort((a, b) => {
     const aOrder = orderIndex.get(a.key);
@@ -2146,7 +2347,7 @@ function unifiedObjectRowMarkup(object) {
   const handle = object.completed
     ? '<span class="unified-drag-placeholder" aria-hidden="true">✓</span>'
     : `<button class="unified-drag-handle" type="button" data-unified-drag aria-label="${escapeHtml(`${tr('dragObject')}: ${object.name}`)}" title="${escapeHtml(tr('dragObject'))}"><span></span><span></span><span></span></button>`;
-  return `<article class="unified-object-row${object.completed ? ' is-completed' : ''}" data-unified-object="${escapeHtml(object.key)}" data-open-unified="${escapeHtml(object.key)}" role="button" tabindex="0" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}">${handle}<div class="unified-object-open"><span class="unified-object-icon" aria-hidden="true">${object.source === 'quick' ? '+₽−' : '⌂'}</span><span class="unified-object-copy"><strong>${escapeHtml(object.name)}</strong><span class="unified-object-badges"><b class="is-${object.source}">${escapeHtml(object.typeLabel)}</b><b class="is-status">${escapeHtml(status)}</b></span><small>${escapeHtml(meta)}</small></span><span class="unified-object-arrow" aria-hidden="true">›</span></div></article>`;
+  return `<article class="unified-object-row is-${object.source}${object.completed ? ' is-completed' : ''}" data-unified-object="${escapeHtml(object.key)}" data-open-unified="${escapeHtml(object.key)}" role="button" tabindex="0" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}">${handle}<div class="unified-object-open"><span class="unified-object-icon" aria-hidden="true">${object.source === 'quick' ? '+₽−' : object.source === 'invited' ? '↗' : '⌂'}</span><span class="unified-object-copy"><strong>${escapeHtml(object.name)}</strong><span class="unified-object-badges"><b class="is-${object.source}">${escapeHtml(object.typeLabel)}</b><b class="is-status">${escapeHtml(status)}</b></span><small>${escapeHtml(meta)}</small></span><span class="unified-object-arrow" aria-hidden="true">›</span></div></article>`;
 }
 
 function openUnifiedObject(key) {
@@ -2157,7 +2358,21 @@ function openUnifiedObject(key) {
     setPanel('cashflow');
     return;
   }
+  if (key.startsWith('invited:')) { openInvitedObjectCard(key.slice('invited:'.length)); return; }
   if (key.startsWith('core:')) openObjectCard(key.slice('core:'.length));
+}
+
+function openInvitedObjectCard(id) {
+  const object = invitedObjects.find((item) => item.id === id);
+  if (!object) return;
+  const name = invitedObjectName(object);
+  const documents = Object.keys(uploadRules).map((kind) => {
+    const file = object.files.find((item) => item.kind === kind);
+    return `<button class="object-document-choice${file ? ' has-file' : ''}" type="button" data-invited-document><span>${file ? '✓' : '+'}</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file?.name || tr('ownerWillShare'))}</small></button>`;
+  }).join('');
+  showDialog(escapeHtml(name), tr('invitedToObject'), `<section class="invited-object-card"><div class="invited-object-status"><span>↗</span><div><b>${tr('invitedObject')}</b><small>${tr('inWork')}</small></div></div><dl><div><dt>${tr('invitedRole')}</dt><dd>${tr(object.roleKey || 'objectParticipant')}</dd></div><div><dt>${tr('invitedBy')}</dt><dd>${escapeHtml(object.invitedBy)}</dd></div><div><dt>${tr('invitedAt')}</dt><dd>${escapeHtml(formatObjectDate(object.invitedAt))}</dd></div></dl><p>${tr('invitedDocumentsHint')}</p><div class="object-document-chooser">${documents}</div></section>`);
+  $('[data-dialog]')?.classList.add('invited-object-dialog');
+  $$('[data-invited-document]', $('[data-dialog-content]')).forEach((button) => button.addEventListener('click', () => showToast(tr('ownerWillShare'))));
 }
 
 function persistUnifiedObjectOrder(list) {
@@ -2571,6 +2786,7 @@ function openView(view) {
   if (view === 'profile') { setPanel('profile'); return; }
   if (view === 'objects') { setPanel('objects'); return; }
   if (view === 'tasks') { openTodoDialog(); return; }
+  if (view === 'calendar') { openCalendarDialog(); return; }
   if (view === 'drawing') { openDrawingStudio(); return; }
   if (view === 'project' || view === 'contract' || view === 'estimate' || view === 'analysis') {
     openUploadDialog(view === 'analysis' ? 'project' : view);
@@ -2674,6 +2890,13 @@ $('[data-drawing-save]')?.addEventListener('click', saveDrawingRecord);
 $('[data-drawing-saved]')?.addEventListener('click', renderDrawingGallery);
 $('[data-drawing-gallery-close]')?.addEventListener('click', () => { $('[data-drawing-gallery]').hidden = true; });
 $('[data-drawing-share]')?.addEventListener('click', shareDrawingFile);
+$$('[data-report-preview-close]').forEach((button) => button.addEventListener('click', () => $('[data-report-preview-dialog]')?.close()));
+$('[data-report-preview-dialog]')?.addEventListener('close', () => {
+  const content = $('[data-report-preview-content]');
+  const actions = $('[data-report-preview-actions]');
+  if (content) content.innerHTML = '';
+  if (actions) actions.innerHTML = '';
+});
 drawingDialog?.addEventListener('cancel', () => {
   drawingMinimized = false;
   $('[data-drawing-restore]').hidden = true;

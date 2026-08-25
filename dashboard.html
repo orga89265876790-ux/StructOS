@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=16" />
+    <link rel="stylesheet" href="dashboard.css?v=17" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -218,11 +218,19 @@
       </dialog>
       <button class="drawing-dock" type="button" data-drawing-restore hidden><span>✎</span><strong data-i18n="drawing">Рисование</strong></button>
 
+      <dialog class="report-preview-dialog" data-report-preview-dialog>
+        <section class="report-preview-window">
+          <header class="report-preview-head"><div><span class="eyebrow">STRUCTOS PREVIEW</span><h2 data-report-preview-title>Предпросмотр отчёта</h2><p data-report-preview-hint>Проверьте содержание и оформление перед скачиванием или отправкой.</p></div><button type="button" data-report-preview-close aria-label="Закрыть">×</button></header>
+          <div class="report-preview-scroll" data-report-preview-content></div>
+          <footer class="report-preview-actions" data-report-preview-actions></footer>
+        </section>
+      </dialog>
+
       <dialog class="app-dialog" data-dialog>
         <form method="dialog"><button class="dialog-close" value="cancel" aria-label="Закрыть">×</button><div data-dialog-content></div></form>
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=16"></script>
+    <script type="module" src="dashboard.js?v=17"></script>
   </body>
 </html>
