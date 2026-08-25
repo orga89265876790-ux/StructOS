@@ -253,6 +253,7 @@ const PERSON_DATA_KEY = 'structos-person-data-v1';
 const PROFILE_DATA_KEY = 'structos-profile-data-v1';
 const BUILDER_PASSPORT_KEY = 'structos-builder-passport-v1';
 const STRUCTOS_DOCUMENT_BRAND = Object.freeze({ made: 'Сделано на StructOS', site: 'www.structOS.ru', slogan: 'Единый Строительный Интеллект в России №1' });
+const BOTTOM_MENU_POSITION_KEY = 'structos-bottom-menu-position-v1';
 const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
 const WIDGET_STYLES_KEY = 'structos-space-widget-styles-v1';
 const TODO_KEY = 'structos-space-todo-v1';
@@ -874,6 +875,61 @@ function setPanel(name) {
   closeMenu();
 }
 
+let bottomMenuPosition = null;
+let bottomMenuDrag = null;
+let bottomMenuSuppressClick = false;
+
+function bottomMenuViewport() {
+  const viewport = window.visualViewport;
+  return { left: viewport?.offsetLeft || 0, top: viewport?.offsetTop || 0, width: viewport?.width || window.innerWidth, height: viewport?.height || window.innerHeight };
+}
+
+function placeBottomMenu(x, y, persist = false) {
+  const menu = $('[data-bottom-menu]');
+  const toggle = $('[data-bottom-menu-toggle]');
+  if (!menu || !toggle) return;
+  const viewport = bottomMenuViewport();
+  const width = toggle.offsetWidth || 190;
+  const height = toggle.offsetHeight || 54;
+  const margin = 8;
+  const left = Math.max(viewport.left + margin, Math.min(viewport.left + viewport.width - width - margin, Number(x) || 0));
+  const top = Math.max(viewport.top + margin, Math.min(viewport.top + viewport.height - height - margin, Number(y) || 0));
+  bottomMenuPosition = { x: Math.round(left), y: Math.round(top) };
+  menu.style.left = `${bottomMenuPosition.x}px`;
+  menu.style.top = `${bottomMenuPosition.y}px`;
+  menu.style.right = 'auto'; menu.style.bottom = 'auto'; menu.style.transform = 'none';
+  if (persist) localStorage.setItem(BOTTOM_MENU_POSITION_KEY, JSON.stringify(bottomMenuPosition));
+  if (menu.classList.contains('is-open')) updateBottomMenuDirection();
+}
+
+function restoreBottomMenuPosition() {
+  const toggle = $('[data-bottom-menu-toggle]');
+  if (!toggle) return;
+  const saved = readStoredJSON(BOTTOM_MENU_POSITION_KEY, null);
+  const viewport = bottomMenuViewport();
+  const width = toggle.offsetWidth || 190;
+  const height = toggle.offsetHeight || 54;
+  const x = Number.isFinite(saved?.x) ? saved.x : viewport.left + (viewport.width - width) / 2;
+  const y = Number.isFinite(saved?.y) ? saved.y : viewport.top + viewport.height - height - 8;
+  placeBottomMenu(x, y);
+}
+
+function updateBottomMenuDirection() {
+  const menu = $('[data-bottom-menu]');
+  const nav = $('[data-bottom-nav]');
+  const toggle = $('[data-bottom-menu-toggle]');
+  if (!menu || !nav || !toggle || nav.hidden) return;
+  const viewport = bottomMenuViewport();
+  const rect = toggle.getBoundingClientRect();
+  const spaceAbove = Math.max(0, rect.top - viewport.top - 10);
+  const spaceBelow = Math.max(0, viewport.top + viewport.height - rect.bottom - 10);
+  const opensUp = spaceAbove >= spaceBelow;
+  menu.classList.toggle('opens-up', opensUp);
+  menu.classList.toggle('opens-down', !opensUp);
+  menu.classList.toggle('menu-align-right', rect.left + 260 > viewport.left + viewport.width - 8);
+  nav.style.setProperty('--bottom-menu-max-height', `${Math.max(150, Math.floor(opensUp ? spaceAbove : spaceBelow))}px`);
+}
+
 function setBottomMenu(open) {
   const menu = $('[data-bottom-menu]');
   const nav = $('[data-bottom-nav]');
@@ -882,6 +938,42 @@ function setBottomMenu(open) {
   menu.classList.toggle('is-open', open);
   nav.hidden = !open;
   toggle.setAttribute('aria-expanded', String(open));
+  if (open) requestAnimationFrame(updateBottomMenuDirection);
+}
+
+function startBottomMenuDrag(event) {
+  if (event.pointerType === 'mouse' && event.button !== 0) return;
+  const menu = $('[data-bottom-menu]');
+  const toggle = $('[data-bottom-menu-toggle]');
+  if (!menu || !toggle) return;
+  const rect = toggle.getBoundingClientRect();
+  bottomMenuDrag = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, originX: rect.left, originY: rect.top, moved: false };
+  toggle.setPointerCapture?.(event.pointerId);
+}
+
+function moveBottomMenu(event) {
+  if (!bottomMenuDrag || event.pointerId !== bottomMenuDrag.pointerId) return;
+  const dx = event.clientX - bottomMenuDrag.startX;
+  const dy = event.clientY - bottomMenuDrag.startY;
+  if (!bottomMenuDrag.moved && Math.hypot(dx, dy) < 6) return;
+  if (!bottomMenuDrag.moved) {
+    bottomMenuDrag.moved = true;
+    setBottomMenu(false);
+    $('[data-bottom-menu]')?.classList.add('is-dragging');
+  }
+  event.preventDefault();
+  placeBottomMenu(bottomMenuDrag.originX + dx, bottomMenuDrag.originY + dy);
+}
+
+function finishBottomMenuDrag(event) {
+  if (!bottomMenuDrag || event.pointerId !== bottomMenuDrag.pointerId) return;
+  const moved = bottomMenuDrag.moved;
+  bottomMenuDrag = null;
+  $('[data-bottom-menu]')?.classList.remove('is-dragging');
+  if (!moved) return;
+  if (bottomMenuPosition) localStorage.setItem(BOTTOM_MENU_POSITION_KEY, JSON.stringify(bottomMenuPosition));
+  bottomMenuSuppressClick = true;
+  setTimeout(() => { bottomMenuSuppressClick = false; }, 0);
 }
 
 function openMenu() {
@@ -3348,7 +3440,15 @@ $$('[data-menu-close]').forEach((button) => button.addEventListener('click', clo
 $$('[data-copy-id]').forEach((button) => button.addEventListener('click', copyId));
 $$('[data-copy-referral]').forEach((button) => button.addEventListener('click', copyReferral));
 $$('[data-share-referral]').forEach((button) => button.addEventListener('click', shareReferral));
-$('[data-bottom-menu-toggle]')?.addEventListener('click', () => setBottomMenu(!$('[data-bottom-menu]').classList.contains('is-open')));
+const bottomMenuToggle = $('[data-bottom-menu-toggle]');
+bottomMenuToggle?.addEventListener('click', (event) => {
+  if (bottomMenuSuppressClick) { event.preventDefault(); return; }
+  setBottomMenu(!$('[data-bottom-menu]').classList.contains('is-open'));
+});
+bottomMenuToggle?.addEventListener('pointerdown', startBottomMenuDrag);
+bottomMenuToggle?.addEventListener('pointermove', moveBottomMenu);
+bottomMenuToggle?.addEventListener('pointerup', finishBottomMenuDrag);
+bottomMenuToggle?.addEventListener('pointercancel', finishBottomMenuDrag);
 $('[data-bottom-menu-close]')?.addEventListener('click', () => setBottomMenu(false));
 $$('[data-tab]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.tab)));
 $$('[data-open-panel]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.openPanel)));
@@ -3398,7 +3498,8 @@ drawingDialog?.addEventListener('close', () => {
   if (!drawingMinimized) $('[data-drawing-restore]').hidden = true;
 });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
-window.addEventListener('resize', () => { renderWidgets(); });
+window.addEventListener('resize', () => { renderWidgets(); if (bottomMenuPosition) placeBottomMenu(bottomMenuPosition.x, bottomMenuPosition.y); else restoreBottomMenuPosition(); });
+window.visualViewport?.addEventListener('resize', () => { if (bottomMenuPosition) placeBottomMenu(bottomMenuPosition.x, bottomMenuPosition.y); });
 
 importPendingTransfer();
 applyPassportRewards(passportCompletion());
@@ -3412,6 +3513,7 @@ renderAnalysisCards();
 renderObjects();
 renderCashflow();
 setPanel(location.hash.slice(1) || 'home');
+requestAnimationFrame(restoreBottomMenuPosition);
 await initAuth();
 
 if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
