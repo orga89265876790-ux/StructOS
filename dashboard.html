@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=24" />
+    <link rel="stylesheet" href="dashboard.css?v=25" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -111,6 +111,30 @@
             <header><div><span class="eyebrow">STRUCTOS READY</span><h2 data-i18n="readyObjects">Готовые к запуску объекты</h2></div><strong class="object-count" data-ready-count>0</strong></header>
             <div class="status-object-list" data-ready-objects-list></div>
             <div class="object-list-empty" data-ready-empty><span>◇</span><p data-i18n="noReadyObjects">После анализа проекты появятся здесь</p></div>
+          </section>
+
+          <section class="construction-activity-card" data-construction-activity>
+            <header>
+              <div><span class="eyebrow">STRUCTOS ACTIVITY</span><h2 data-i18n="constructionActivityBlock">Блок строительной активности</h2></div>
+              <span class="construction-activity-period" data-i18n="last30Days">За последние 30 дней</span>
+            </header>
+            <p class="construction-activity-intro" data-i18n="constructionActivityIntro">Все ваши действия в StructOS формируют деловую активность. Чем она выше, тем раньше вы получите подходящие предложения.</p>
+            <div class="construction-activity-main">
+              <div class="construction-activity-score">
+                <span data-i18n="businessActivity">Деловая активность</span>
+                <strong data-business-activity>0%</strong>
+                <i data-activity-progress role="progressbar" aria-label="Деловая активность" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></i>
+              </div>
+              <dl class="construction-activity-breakdown">
+                <div><dt data-i18n="cabinetWork">Работа с личным кабинетом</dt><dd data-cabinet-activity>0 действий</dd></div>
+                <div><dt data-i18n="projectWork">Работа с проектом</dt><dd data-project-activity>0 действий</dd></div>
+              </dl>
+            </div>
+            <dl class="construction-activity-summary">
+              <div><dt data-i18n="activityTotal">Всего</dt><dd data-activity-total>0</dd></div>
+              <div><dt data-i18n="daysWithStructos">Дней со StructOS</dt><dd data-activity-days>1</dd></div>
+              <div><dt data-i18n="invitedToStructos">Приглашено в StructOS</dt><dd data-activity-invited>0</dd></div>
+            </dl>
           </section>
 
           <section class="attention-card">
@@ -258,6 +282,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=24"></script>
+    <script type="module" src="dashboard.js?v=25"></script>
   </body>
 </html>
