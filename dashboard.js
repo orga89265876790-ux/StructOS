@@ -242,6 +242,11 @@ Object.assign(copy.EN, { selectNationality: 'Start typing a nationality', select
 Object.assign(copy.KY, { selectNationality: 'Улутту жаза баштаңыз', selectCountry: 'Өлкөнү жаза баштаңыз', enterCity: 'Шаарды жаза баштаңыз', chooseFromList: 'Тизмеден вариантты тандаңыз', noMatches: 'Дал келген вариант жок', selectCountryFirst: 'Адегенде өлкөнү тандаңыз' });
 Object.assign(copy.TJ, { selectNationality: 'Навиштани миллатро оғоз кунед', selectCountry: 'Навиштани кишварро оғоз кунед', enterCity: 'Навиштани шаҳрро оғоз кунед', chooseFromList: 'Аз рӯйхат интихоб кунед', noMatches: 'Мувофиқат ёфт нашуд', selectCountryFirst: 'Аввал кишварро интихоб кунед' });
 
+Object.assign(copy.RU, { myProjects: 'Мои проекты', myProjectsDescription: 'Все загруженные проекты и их путь до завершения', projectPackages: 'Проектов', uploadProject: 'Загрузить проект', noMyProjects: 'Проектов пока нет', noMyProjectsCopy: 'Загрузите проект, договор или смету — карточка проекта появится здесь автоматически.', projectDocuments: 'Документы проекта', lastProjectUpdate: 'Обновлён' });
+Object.assign(copy.EN, { myProjects: 'My projects', myProjectsDescription: 'All uploaded projects from upload to completion', projectPackages: 'Projects', uploadProject: 'Upload project', noMyProjects: 'No projects yet', noMyProjectsCopy: 'Upload a project, contract, or estimate and its project card will appear here automatically.', projectDocuments: 'Project documents', lastProjectUpdate: 'Updated' });
+Object.assign(copy.KY, { myProjects: 'Менин долбоорлорум', myProjectsDescription: 'Жүктөөдөн аяктаганга чейинки бардык долбоорлор', projectPackages: 'Долбоорлор', uploadProject: 'Долбоор жүктөө', noMyProjects: 'Азырынча долбоор жок', noMyProjectsCopy: 'Долбоорду, келишимди же сметаны жүктөңүз — долбоор картасы бул жерде автоматтык пайда болот.', projectDocuments: 'Долбоордун документтери', lastProjectUpdate: 'Жаңыртылды' });
+Object.assign(copy.TJ, { myProjects: 'Лоиҳаҳои ман', myProjectsDescription: 'Ҳамаи лоиҳаҳо аз боркунӣ то анҷом', projectPackages: 'Лоиҳаҳо', uploadProject: 'Бор кардани лоиҳа', noMyProjects: 'Ҳоло лоиҳа нест', noMyProjectsCopy: 'Лоиҳа, шартнома ё сметаро бор кунед — корти лоиҳа худкор дар ин ҷо пайдо мешавад.', projectDocuments: 'Ҳуҷҷатҳои лоиҳа', lastProjectUpdate: 'Нав шуд' });
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -990,7 +995,7 @@ async function initAuth() {
 }
 
 function setPanel(name) {
-  const next = ['home', 'space', 'objects', 'cashflow', 'profile', 'passport'].includes(name) ? name : 'home';
+  const next = ['home', 'projects', 'space', 'objects', 'cashflow', 'profile', 'passport'].includes(name) ? name : 'home';
   $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
   if (next !== 'space') {
     $('[data-space-toolbar]').hidden = true;
@@ -1001,6 +1006,7 @@ function setPanel(name) {
   history.replaceState(null, '', `#${next}`);
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (next === 'space') requestAnimationFrame(renderWidgets);
+  if (next === 'projects') renderMyProjects();
   if (next === 'objects') renderObjects();
   if (next === 'cashflow') renderCashflow();
   if (next === 'passport') renderPassportEditor();
@@ -3061,6 +3067,49 @@ function objectRowMarkup(object) {
   return `<article class="status-object-row ${isReady ? 'is-ready' : isActive ? 'is-active' : 'is-uploaded'}"><span class="object-row-icon" aria-hidden="true">${isReady ? '◇' : isActive ? '⌂' : '▤'}</span><div class="object-row-copy"><button class="object-open-button" type="button" data-open-object="${escapeHtml(object.id)}" aria-label="${escapeHtml(`${tr('openObject')}: ${object.name}`)}">${escapeHtml(object.name)}</button><small>${escapeHtml(meta)}</small></div>${actions}</article>`;
 }
 
+function myProjectObjects() {
+  const projects = objectRegistry.filter((object) => Array.isArray(object.files) && object.files.length > 0);
+  return projects.sort((a, b) => {
+    if (a.status === 'completed' && b.status !== 'completed') return 1;
+    if (a.status !== 'completed' && b.status === 'completed') return -1;
+    const aDate = a.completedAt || a.startedAt || a.analyzedAt || a.uploadedAt || 0;
+    const bDate = b.completedAt || b.startedAt || b.analyzedAt || b.uploadedAt || 0;
+    return new Date(bDate) - new Date(aDate);
+  });
+}
+
+function myProjectStatusKey(object) {
+  if (object.status === 'ready') return 'readyStatus';
+  if (object.status === 'active') return 'inWork';
+  if (object.status === 'completed') return 'completedListObject';
+  return 'uploaded';
+}
+
+function myProjectMarkup(object) {
+  const usedBytes = (object.files || []).reduce((total, file) => total + (Number(file.size) || 0), 0);
+  const updatedAt = object.completedAt || object.startedAt || object.analyzedAt || object.uploadedAt;
+  const statusKey = myProjectStatusKey(object);
+  const documents = Object.keys(uploadRules).map((kind) => {
+    const file = objectFile(object, kind);
+    return `<span class="my-project-document${file ? ' has-file' : ''}"><i>${file ? '✓' : '+'}</i><b>${escapeHtml(tr(kind))}</b><small>${escapeHtml(file?.name || tr('notUploaded'))}</small></span>`;
+  }).join('');
+  return `<article class="my-project-card is-${escapeHtml(object.status)}" data-my-project="${escapeHtml(object.id)}" role="button" tabindex="0" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}"><header><span class="my-project-mark" aria-hidden="true">▰</span><div><small>STRUCTOS PROJECT</small><h2>${escapeHtml(object.name)}</h2><span class="my-project-badges"><b>${escapeHtml(tr('fullCycleObject'))}</b><b class="is-${escapeHtml(object.status)}">${escapeHtml(tr(statusKey))}</b></span></div><i aria-hidden="true">›</i></header><div class="my-project-documents">${documents}</div><footer><span>${escapeHtml(tr('lastProjectUpdate'))}: ${escapeHtml(formatObjectDate(updatedAt))}</span><span>${escapeHtml(tr('memoryUsed'))}: ${escapeHtml(formatStorage(usedBytes))}</span></footer></article>`;
+}
+
+function renderMyProjects() {
+  const projects = myProjectObjects();
+  $$('[data-my-projects-list]').forEach((list) => {
+    list.innerHTML = projects.map(myProjectMarkup).join('');
+    $$('[data-my-project]', list).forEach((card) => {
+      const open = () => openObjectCard(card.dataset.myProject);
+      card.addEventListener('click', open);
+      card.addEventListener('keydown', (event) => { if (!['Enter', ' '].includes(event.key)) return; event.preventDefault(); open(); });
+    });
+  });
+  $$('[data-my-projects-count]').forEach((count) => { count.textContent = String(projects.length); });
+  $$('[data-my-projects-empty]').forEach((empty) => { empty.hidden = projects.length > 0; });
+}
+
 function combinedManagedObjects() {
   const coreObjects = objectRegistry
     .filter((object) => object.status === 'active' || object.status === 'completed')
@@ -3229,6 +3278,7 @@ function renderObjects() {
   $$('[data-start-ready]').forEach((button) => button.addEventListener('click', () => startReadyObject(button.dataset.startReady)));
   $$('[data-delete-ready]').forEach((button) => button.addEventListener('click', () => deleteReadyObject(button.dataset.deleteReady)));
   $$('[data-open-object]').forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openObject)));
+  renderMyProjects();
 }
 
 function openObjectCard(id) {
@@ -3240,7 +3290,9 @@ function openObjectCard(id) {
   }).join('');
   const lifecycleAction = ['active', 'completed'].includes(object.status)
     ? `<button class="outline-button object-lifecycle-button${object.status === 'active' ? ' is-danger' : ''}" type="button" data-toggle-core-object>${escapeHtml(tr(object.status === 'active' ? 'finishObject' : 'reopenObject'))}</button>`
-    : '';
+    : object.status === 'ready'
+      ? `<button class="outline-button object-start-project" type="button" data-start-core-object>${escapeHtml(tr('startObject'))}</button>`
+      : '';
   showDialog(escapeHtml(object.name), tr('chooseObjectDocument'), `<div class="object-document-chooser">${documentChoices}</div><div class="object-card-actions"><button class="primary-button object-analyze-button" type="button" data-analyze-object>${escapeHtml(tr('analyzeObject'))}</button><button class="outline-button object-rename-button" type="button" data-rename-core-object>${escapeHtml(tr('rename'))}</button>${lifecycleAction}</div>`);
   $$('[data-object-document]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.objectDocument, object.id)));
   $('[data-analyze-object]')?.addEventListener('click', () => {
@@ -3249,6 +3301,7 @@ function openObjectCard(id) {
     runAnalysis();
   });
   $('[data-rename-core-object]')?.addEventListener('click', () => renameCoreObject(object.id));
+  $('[data-start-core-object]')?.addEventListener('click', () => startReadyObject(object.id));
   $('[data-toggle-core-object]')?.addEventListener('click', () => toggleCoreObjectCompletion(object.id));
 }
 
@@ -3556,6 +3609,7 @@ function runAnalysis() {
 function openView(view) {
   if (view === 'profile') { setPanel('profile'); return; }
   if (view === 'passport') { setPanel('passport'); return; }
+  if (view === 'projects') { setPanel('projects'); return; }
   if (view === 'objects') { setPanel('objects'); return; }
   if (view === 'tasks') { openTodoDialog(); return; }
   if (view === 'calendar') { openCalendarDialog(); return; }

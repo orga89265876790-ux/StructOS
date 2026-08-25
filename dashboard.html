@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=22" />
+    <link rel="stylesheet" href="dashboard.css?v=23" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -140,6 +140,13 @@
           </div>
         </section>
 
+        <section class="tab-panel projects-panel" data-panel="projects" aria-label="Мои проекты" hidden>
+          <div class="page-title"><div><span class="eyebrow">STRUCTOS PROJECTS</span><h1 data-i18n="myProjects">Мои проекты</h1><p data-i18n="myProjectsDescription">Все загруженные проекты и их путь до завершения</p></div><button class="primary-button" type="button" data-open-view="project" data-i18n="uploadProject">Загрузить проект</button></div>
+          <section class="my-projects-summary"><span>▰</span><div><small data-i18n="projectPackages">Проектов</small><strong data-my-projects-count>0</strong></div><p data-i18n="projectDocuments">Документы проекта</p></section>
+          <div class="my-projects-list" data-my-projects-list></div>
+          <div class="empty-state" data-my-projects-empty><div class="empty-building" aria-hidden="true"><span></span><span></span><span></span></div><h2 data-i18n="noMyProjects">Проектов пока нет</h2><p data-i18n="noMyProjectsCopy">Загрузите проект, договор или смету — карточка проекта появится здесь автоматически.</p><button class="primary-button" type="button" data-open-view="project" data-i18n="uploadProject">Загрузить проект</button></div>
+        </section>
+
         <section class="tab-panel objects-panel" data-panel="objects" aria-label="Объекты" hidden>
           <div class="page-title"><div><span class="eyebrow">STRUCTOS OBJECTS</span><h1 data-i18n="allObjects">Все действующие объекты</h1><p><span data-i18n="activeObjectsCount">Активных</span>: <span data-all-active-count>0</span></p></div><button class="primary-button" type="button" data-add-object data-i18n="addObject">Добавить объект</button></div>
           <p class="objects-reorder-hint" data-i18n="reorderObjectsHint">Активные объекты можно менять местами перетаскиванием</p>
@@ -177,6 +184,7 @@
           <button class="bottom-nav-collapse" type="button" data-bottom-menu-close><span class="bottom-nav-mini-brand"><img src="assets/structos-building-mark.svg" alt="" />StructOS</span><span data-i18n="collapseMenu">Свернуть меню</span><i>⌄</i></button>
           <div class="bottom-nav-items">
             <button class="is-active" type="button" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v10h-6v-6H9v6H3V11Z"/></svg><span data-i18n="home">Главная</span></button>
+            <button type="button" data-tab="projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h7l2 2h9v11H3zM3 7V4h7l2 3"/></svg><span data-i18n="myProjects">Мои проекты</span></button>
             <button type="button" data-tab="space"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span data-i18n="space">Пространство</span></button>
             <button type="button" data-tab="objects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h2M14 10h2"/></svg><span data-i18n="objects">Объекты</span></button>
             <button type="button" data-tab="cashflow"><span class="cashflow-nav-icon" aria-hidden="true">+₽−</span><span data-i18n="money">Быстрый объект</span></button>
@@ -193,6 +201,7 @@
           <section class="drawer-user"><div class="drawer-avatar" data-person-avatar><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><strong data-user-name>Александр</strong><button class="user-id" type="button" data-copy-id><span>ID <span data-user-id>4 820 197</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button><small data-user-role>Пользователь</small></div></section>
           <button class="drawer-passport" type="button" data-open-view="passport"><span><b data-i18n="builderPassport">Паспорт строителя</b><strong data-passport-progress>0%</strong></span><span data-i18n="complete">Заполнить</span><i class="progress" data-passport-progressbar aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i style="--progress:0%"></i></i></button>
           <nav class="drawer-nav">
+            <button type="button" data-open-view="projects"><svg viewBox="0 0 24 24"><path d="M3 7h7l2 2h9v11H3zM3 7V4h7l2 3"/></svg><span data-i18n="myProjects">Мои проекты</span></button>
             <div class="drawer-group is-open"><button type="button" data-profile-menu><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="myProfile">Мой профиль</span><i>⌃</i></button><div class="drawer-submenu"><button type="button" data-open-view="profile"><span class="submenu-dot"></span><span data-i18n="myProfile">Мой профиль</span></button><button type="button" data-open-view="subscription"><span class="submenu-dot"></span><span data-i18n="tariffSubscription">Тарифы и подписка</span></button><button type="button" data-open-view="balance"><span class="submenu-dot"></span><span data-i18n="balanceBonuses">Баланс и бонусы</span></button></div></div>
             <button type="button" data-open-view="invitations"><svg viewBox="0 0 24 24"><path d="M3 6h18v14H3zM3 7l9 7 9-7"/></svg><span data-i18n="invitations">Приглашения</span></button>
             <button type="button" data-open-view="invite"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M19 9v6M16 12h6"/></svg><span data-i18n="invite">Пригласить</span></button>
@@ -245,6 +254,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=22"></script>
+    <script type="module" src="dashboard.js?v=23"></script>
   </body>
 </html>
