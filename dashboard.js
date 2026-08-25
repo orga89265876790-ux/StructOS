@@ -247,6 +247,11 @@ Object.assign(copy.EN, { myProjects: 'My projects', myProjectsDescription: 'All 
 Object.assign(copy.KY, { myProjects: 'Менин долбоорлорум', myProjectsDescription: 'Жүктөөдөн аяктаганга чейинки бардык долбоорлор', projectPackages: 'Долбоорлор', uploadProject: 'Долбоор жүктөө', noMyProjects: 'Азырынча долбоор жок', noMyProjectsCopy: 'Долбоорду, келишимди же сметаны жүктөңүз — долбоор картасы бул жерде автоматтык пайда болот.', projectDocuments: 'Долбоордун документтери', lastProjectUpdate: 'Жаңыртылды' });
 Object.assign(copy.TJ, { myProjects: 'Лоиҳаҳои ман', myProjectsDescription: 'Ҳамаи лоиҳаҳо аз боркунӣ то анҷом', projectPackages: 'Лоиҳаҳо', uploadProject: 'Бор кардани лоиҳа', noMyProjects: 'Ҳоло лоиҳа нест', noMyProjectsCopy: 'Лоиҳа, шартнома ё сметаро бор кунед — корти лоиҳа худкор дар ин ҷо пайдо мешавад.', projectDocuments: 'Ҳуҷҷатҳои лоиҳа', lastProjectUpdate: 'Нав шуд' });
 
+Object.assign(copy.RU, { newVersion: 'Новая версия', uploadChanges: 'Подгрузить изменения', uploadAndCompare: 'Загрузить и сравнить', revisionUploadHint: 'Старый файл останется в истории. После загрузки StructOS сразу сравнит предыдущую и новую версии.', currentStoredVersion: 'Текущая сохранённая версия', versionHistory: 'История версий', versionNumber: 'Версия', versions: 'версии', versionComparison: 'Сравнение версий', comparisonInProgress: 'Сравниваем версии', comparisonInProgressCopy: 'Проверяем предыдущий и новый файл и сохраняем найденные изменения.', comparisonComplete: 'Сравнение завершено', comparisonCompleteCopy: 'Новая версия сохранена. Ниже показано, что изменилось по доступным данным файлов.', viewComparison: 'Посмотреть сравнение', previousVersion: 'Предыдущая версия', currentVersion: 'Новая версия', fileNameLabel: 'Название файла', fileSizeLabel: 'Размер файла', fileFormatLabel: 'Формат файла', fileModifiedLabel: 'Изменён на устройстве', uploadDate: 'Дата загрузки', before: 'Было', after: 'Стало', changed: 'Изменено', unchanged: 'Без изменений', metadataDifferences: 'Найденные различия', contentDifferences: 'Содержимое документа', contentComparisonPending: 'Ожидает серверного разбора', contentComparisonPendingCopy: 'Названия, форматы, размеры и даты изменения уже сопоставлены. Отличия по листам, строкам и содержимому появятся после подключения серверного извлечения — StructOS не придумывает отсутствующие данные.', changesFound: 'изменений найдено', sameFileSelected: 'Выбран тот же файл. Для новой версии укажите изменённый файл.', versionSaved: 'Новая версия сохранена и сравнена' });
+Object.assign(copy.EN, { newVersion: 'New version', uploadChanges: 'Upload changes', uploadAndCompare: 'Upload and compare', revisionUploadHint: 'The previous file stays in history. StructOS will compare the old and new versions immediately after upload.', currentStoredVersion: 'Current saved version', versionHistory: 'Version history', versionNumber: 'Version', versions: 'versions', versionComparison: 'Version comparison', comparisonInProgress: 'Comparing versions', comparisonInProgressCopy: 'Checking the previous and new file and saving the detected changes.', comparisonComplete: 'Comparison complete', comparisonCompleteCopy: 'The new version is saved. The available file-level changes are shown below.', viewComparison: 'View comparison', previousVersion: 'Previous version', currentVersion: 'New version', fileNameLabel: 'File name', fileSizeLabel: 'File size', fileFormatLabel: 'File format', fileModifiedLabel: 'Modified on device', uploadDate: 'Upload date', before: 'Before', after: 'After', changed: 'Changed', unchanged: 'Unchanged', metadataDifferences: 'Detected differences', contentDifferences: 'Document content', contentComparisonPending: 'Awaiting server extraction', contentComparisonPendingCopy: 'Names, formats, sizes, and modification dates have been compared. Sheet, row, and content differences will appear after server extraction is connected; StructOS does not invent missing data.', changesFound: 'changes found', sameFileSelected: 'This is the same file. Choose a changed file for a new version.', versionSaved: 'New version saved and compared' });
+Object.assign(copy.KY, { newVersion: 'Жаңы версия', uploadChanges: 'Өзгөртүүлөрдү жүктөө', uploadAndCompare: 'Жүктөп салыштыруу', revisionUploadHint: 'Мурунку файл тарыхта калат. Жүктөлгөндөн кийин StructOS эски жана жаңы версияны дароо салыштырат.', currentStoredVersion: 'Учурдагы сакталган версия', versionHistory: 'Версиялар тарыхы', versionNumber: 'Версия', versions: 'версия', versionComparison: 'Версияларды салыштыруу', comparisonInProgress: 'Версиялар салыштырылууда', comparisonInProgressCopy: 'Мурунку жана жаңы файл текшерилип, табылган өзгөрүүлөр сакталууда.', comparisonComplete: 'Салыштыруу аяктады', comparisonCompleteCopy: 'Жаңы версия сакталды. Файл боюнча жеткиликтүү өзгөрүүлөр төмөндө көрсөтүлдү.', viewComparison: 'Салыштырууну көрүү', previousVersion: 'Мурунку версия', currentVersion: 'Жаңы версия', fileNameLabel: 'Файлдын аты', fileSizeLabel: 'Файлдын өлчөмү', fileFormatLabel: 'Файлдын форматы', fileModifiedLabel: 'Түзмөктө өзгөртүлгөн', uploadDate: 'Жүктөлгөн күнү', before: 'Болгон', after: 'Болду', changed: 'Өзгөрдү', unchanged: 'Өзгөргөн жок', metadataDifferences: 'Табылган айырмалар', contentDifferences: 'Документтин мазмуну', contentComparisonPending: 'Сервердик талдоону күтүп жатат', contentComparisonPendingCopy: 'Аталыштар, форматтар, өлчөмдөр жана өзгөртүү даталары салыштырылды. Барактар, саптар жана мазмун боюнча айырмалар сервердик талдоо кошулганда чыгат; StructOS жок маалыматты ойлоп таппайт.', changesFound: 'өзгөрүү табылды', sameFileSelected: 'Ошол эле файл тандалды. Жаңы версия үчүн өзгөртүлгөн файлды тандаңыз.', versionSaved: 'Жаңы версия сакталды жана салыштырылды' });
+Object.assign(copy.TJ, { newVersion: 'Версияи нав', uploadChanges: 'Бор кардани тағйирот', uploadAndCompare: 'Бор кардан ва муқоиса намудан', revisionUploadHint: 'Файли пешина дар таърих мемонад. Баъди боркунӣ StructOS версияи кӯҳна ва навро фавран муқоиса мекунад.', currentStoredVersion: 'Версияи ҷории захирашуда', versionHistory: 'Таърихи версияҳо', versionNumber: 'Версия', versions: 'версия', versionComparison: 'Муқоисаи версияҳо', comparisonInProgress: 'Версияҳо муқоиса мешаванд', comparisonInProgressCopy: 'Файли пешина ва нав санҷида шуда, тағйироти ёфтшуда нигоҳ дошта мешаванд.', comparisonComplete: 'Муқоиса анҷом ёфт', comparisonCompleteCopy: 'Версияи нав нигоҳ дошта шуд. Тағйироти дастрас дар поён нишон дода шудааст.', viewComparison: 'Дидани муқоиса', previousVersion: 'Версияи пешина', currentVersion: 'Версияи нав', fileNameLabel: 'Номи файл', fileSizeLabel: 'Андозаи файл', fileFormatLabel: 'Формати файл', fileModifiedLabel: 'Дар дастгоҳ тағйир ёфт', uploadDate: 'Санаи боркунӣ', before: 'Буд', after: 'Шуд', changed: 'Тағйир ёфт', unchanged: 'Бетағйир', metadataDifferences: 'Фарқиятҳои ёфтшуда', contentDifferences: 'Мазмуни ҳуҷҷат', contentComparisonPending: 'Интизори таҳлили серверӣ', contentComparisonPendingCopy: 'Ном, формат, андоза ва санаи тағйир муқоиса шуданд. Фарқияти варақҳо, сатрҳо ва мазмун пас аз пайвасти таҳлили серверӣ пайдо мешавад; StructOS маълумоти набударо намесозад.', changesFound: 'тағйирот ёфт шуд', sameFileSelected: 'Ҳамин файл интихоб шуд. Барои версияи нав файли тағйирёфтаро интихоб кунед.', versionSaved: 'Версияи нав нигоҳ дошта ва муқоиса шуд' });
+
 Object.assign(copy.RU, { openDocument: 'Открыть', replaceDocument: 'Заменить', chooseReportDocument: 'Что открыть?', chooseReportDocumentHint: 'Выберите результат по одному из загруженных документов.', analysisNotReady: 'Документ ещё не проанализирован', analysisNotReadyHint: 'Сначала запустите анализ этого объекта, после чего откроется детальная страница.', runAnalysisNow: 'Анализировать сейчас', projectAnalysis: 'Детальный анализ проекта', backToProjects: 'К моим проектам', sourceFile: 'Источник', analyzedDataOnly: 'StructOS показывает только данные, извлечённые из загруженного файла. Недостающие значения не додумываются.', commercialProposal: 'Коммерческое предложение', projectBySheets: 'Проект по листам', projectBySystems: 'Проект по системам', projectMaterials: 'Материалы проекта', billOfQuantities: 'Ведомость объёмов работ', section: 'Раздел', sheetNumber: 'Лист', sheetName: 'Наименование листа', system: 'Система', sheets: 'Листы', materials: 'Материалы', materialName: 'Наименование материала', works: 'Работы', markType: 'Марка / тип', source: 'Источник', statusLabel: 'Статус', extractionPending: 'Данные ожидают извлечения', extractionPendingCopy: 'Структура вкладки подготовлена. Строки появятся после подключения серверного анализа файла.', analyzedDocumentPage: 'Страница анализа подготовлена', analyzedDocumentPageCopy: 'Файл сохранён и выбран. Детальную структуру этого документа разберём следующим этапом.' });
 Object.assign(copy.EN, { openDocument: 'Open', replaceDocument: 'Replace', chooseReportDocument: 'What would you like to open?', chooseReportDocumentHint: 'Choose a result for one of the uploaded documents.', analysisNotReady: 'Document has not been analyzed yet', analysisNotReadyHint: 'Run the object analysis first to unlock its detailed page.', runAnalysisNow: 'Analyze now', projectAnalysis: 'Detailed project analysis', backToProjects: 'Back to my projects', sourceFile: 'Source', analyzedDataOnly: 'StructOS shows only data extracted from the uploaded file. Missing values are not invented.', commercialProposal: 'Commercial proposal', projectBySheets: 'Project by sheets', projectBySystems: 'Project by systems', projectMaterials: 'Project materials', billOfQuantities: 'Bill of quantities', section: 'Section', sheetNumber: 'Sheet', sheetName: 'Sheet name', system: 'System', sheets: 'Sheets', materials: 'Materials', materialName: 'Material name', works: 'Works', markType: 'Mark / type', source: 'Source', statusLabel: 'Status', extractionPending: 'Data extraction pending', extractionPendingCopy: 'The tab structure is ready. Rows will appear after server-side file analysis is connected.', analyzedDocumentPage: 'Analysis page is ready', analyzedDocumentPageCopy: 'The file is saved and selected. We will define this document’s detailed structure next.' });
 Object.assign(copy.KY, { openDocument: 'Ачуу', replaceDocument: 'Алмаштыруу', chooseReportDocument: 'Эмнени ачуу керек?', chooseReportDocumentHint: 'Жүктөлгөн документтердин биринин жыйынтыгын тандаңыз.', analysisNotReady: 'Документ али талдана элек', analysisNotReadyHint: 'Деталдуу баракты ачуу үчүн адегенде объектти талдаңыз.', runAnalysisNow: 'Азыр талдоо', projectAnalysis: 'Долбоорду деталдуу талдоо', backToProjects: 'Менин долбоорлорума', sourceFile: 'Булак', analyzedDataOnly: 'StructOS жүктөлгөн файлдан алынган маалыматты гана көрсөтөт. Жетишпеген маанилер ойлоп табылбайт.', commercialProposal: 'Коммерциялык сунуш', projectBySheets: 'Долбоор барактар боюнча', projectBySystems: 'Долбоор системалар боюнча', projectMaterials: 'Долбоордун материалдары', billOfQuantities: 'Иш көлөмдөрүнүн ведомосту', section: 'Бөлүм', sheetNumber: 'Барак', sheetName: 'Барактын аталышы', system: 'Система', sheets: 'Барактар', materials: 'Материалдар', materialName: 'Материалдын аталышы', works: 'Иштер', markType: 'Марка / түрү', source: 'Булак', statusLabel: 'Статус', extractionPending: 'Маалымат чыгарылышын күтүп жатат', extractionPendingCopy: 'Бөлүмдүн түзүмү даяр. Сервердик талдоо кошулгандан кийин саптар пайда болот.', analyzedDocumentPage: 'Талдоо барагы даяр', analyzedDocumentPageCopy: 'Файл сакталды жана тандалды. Бул документтин деталдуу түзүмүн кийинки этапта талкуулайбыз.' });
@@ -289,9 +294,12 @@ const uploadRules = {
 let selectedAnalysis = 'project';
 let analysisTimer;
 let activeUploadKind = 'project';
+let activeUploadMode = 'standard';
 let pendingFile = null;
 let activeUploadObjectId = null;
 let newObjectNameDraft = '';
+let revisionAnalysisTimer;
+let activeRevisionComparisonId = null;
 let activeAnalysisDocument = { objectId: null, kind: 'project' };
 let activeProjectAnalysisTab = 'proposal';
 const widgetColors = ['#0b63ce', '#00a9df', '#04a77b', '#41a447', '#d5a800', '#e87919', '#d64254', '#7957d5', '#c04ea3', '#44546a'];
@@ -405,14 +413,79 @@ function trackConstructionActivity(event) {
   if (activity) recordActivity(activity.type, activity.action);
 }
 
+function fileVersionSnapshot(file) {
+  const addedAt = file?.addedAt || new Date().toISOString();
+  const name = String(file?.name || tr('selectFile'));
+  const size = Number(file?.size) || 0;
+  const lastModified = Number(file?.lastModified) || Number(new Date(addedAt)) || Date.now();
+  return {
+    id: String(file?.versionId || file?.id || `version-${lastModified}-${size}-${name}`),
+    name,
+    size,
+    type: String(file?.type || ''),
+    lastModified,
+    addedAt,
+    analyzedAt: file?.analyzedAt || null
+  };
+}
+
+function sameFileMetadata(first, second) {
+  if (!first || !second) return false;
+  return String(first.name || '') === String(second.name || '')
+    && Number(first.size || 0) === Number(second.size || 0)
+    && Number(first.lastModified || 0) === Number(second.lastModified || 0);
+}
+
+function fileVersions(file) {
+  const saved = Array.isArray(file?.versions) ? file.versions.filter((version) => version?.name).map(fileVersionSnapshot) : [];
+  const current = fileVersionSnapshot(file);
+  if (!saved.length) return [current];
+  if (!sameFileMetadata(saved[saved.length - 1], current)) saved.push(current);
+  return saved;
+}
+
+function normalizeFileRecord(file) {
+  if (!file?.name) return file;
+  const current = fileVersionSnapshot(file);
+  let comparison = file.comparison?.previous && file.comparison?.current ? {
+    ...file.comparison,
+    previous: fileVersionSnapshot(file.comparison.previous),
+    current: fileVersionSnapshot(file.comparison.current)
+  } : null;
+  const recoveredComparison = comparison?.status === 'pending';
+  if (recoveredComparison) {
+    const analyzedAt = comparison.analyzedAt || new Date().toISOString();
+    comparison = { ...comparison, status: 'ready', analyzedAt, current: { ...comparison.current, analyzedAt } };
+  }
+  return { ...file, ...current, kind: file.kind, versions: fileVersions(file), comparison, analysisPending: recoveredComparison ? false : file.analysisPending, analyzedAt: recoveredComparison ? comparison.analyzedAt : file.analyzedAt };
+}
+
+function fileVersionCount(file) {
+  return file ? fileVersions(file).length : 0;
+}
+
+function fileFormatLabel(file) {
+  const extension = String(file?.name || '').split('.').pop()?.toUpperCase();
+  return extension && extension !== String(file?.name || '').toUpperCase() ? extension : (String(file?.type || '').split('/').pop()?.toUpperCase() || '—');
+}
+
+function versionComparisonChanges(previous, current) {
+  return [
+    { key: 'fileNameLabel', before: previous.name, after: current.name, changed: previous.name !== current.name },
+    { key: 'fileSizeLabel', before: formatStorage(previous.size), after: formatStorage(current.size), changed: Number(previous.size) !== Number(current.size) },
+    { key: 'fileFormatLabel', before: fileFormatLabel(previous), after: fileFormatLabel(current), changed: fileFormatLabel(previous) !== fileFormatLabel(current) },
+    { key: 'fileModifiedLabel', before: formatObjectDateTime(previous.lastModified), after: formatObjectDateTime(current.lastModified), changed: Number(previous.lastModified) !== Number(current.lastModified) }
+  ];
+}
+
 function loadUploads() {
   try {
     const saved = JSON.parse(localStorage.getItem(UPLOADS_KEY) || 'null');
     if (saved && typeof saved === 'object') {
       return {
-        project: saved.project?.name ? saved.project : null,
-        contract: saved.contract?.name ? saved.contract : null,
-        estimate: saved.estimate?.name ? saved.estimate : null
+        project: saved.project?.name ? normalizeFileRecord(saved.project) : null,
+        contract: saved.contract?.name ? normalizeFileRecord(saved.contract) : null,
+        estimate: saved.estimate?.name ? normalizeFileRecord(saved.estimate) : null
       };
     }
   } catch {}
@@ -435,7 +508,7 @@ function loadObjectRegistry() {
           uploadedAt: object.uploadedAt || object.analyzedAt || new Date().toISOString(),
           startedAt: object.startedAt || null,
           completedAt: object.completedAt || null,
-          files: Array.isArray(object.files) ? object.files.slice(0, 3) : []
+          files: Array.isArray(object.files) ? object.files.slice(0, 3).map(normalizeFileRecord) : []
         }));
     }
   } catch {}
@@ -3173,6 +3246,12 @@ function formatObjectDate(value) {
   return new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric' }).format(date);
 }
 
+function formatObjectDateTime(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return '—';
+  return new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }).format(date);
+}
+
 function formatStorage(bytes) {
   const value = Math.max(0, Number(bytes) || 0);
   if (value < 1024) return `${Math.round(value)} ${tr('storageB')}`;
@@ -3221,7 +3300,9 @@ function myProjectMarkup(object) {
   const statusKey = myProjectStatusKey(object);
   const documents = Object.keys(uploadRules).map((kind) => {
     const file = objectFile(object, kind);
-    return `<span class="my-project-document${file ? ' has-file' : ''}"><i>${file ? '✓' : '+'}</i><b>${escapeHtml(tr(kind))}</b><small>${escapeHtml(file?.name || tr('notUploaded'))}</small></span>`;
+    const versionCount = fileVersionCount(file);
+    const actionLabel = file ? `${tr('newVersion')}: ${tr(kind)}` : `${tr('upload')}: ${tr(kind)}`;
+    return `<div class="my-project-document${file ? ' has-file' : ''}"><i>${file ? '✓' : '+'}</i><span class="my-project-document-copy"><b>${escapeHtml(tr(kind))}</b><small>${escapeHtml(file?.name || tr('notUploaded'))}</small>${file ? `<em>v${versionCount} · ${versionCount} ${escapeHtml(tr('versions'))}</em>` : ''}</span><button type="button" data-my-project-file-action="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}" data-version-mode="${file ? 'revision' : 'standard'}" aria-label="${escapeHtml(actionLabel)}" title="${escapeHtml(actionLabel)}">+</button></div>`;
   }).join('');
   return `<article class="my-project-card is-${escapeHtml(object.status)}" data-my-project="${escapeHtml(object.id)}" role="button" tabindex="0" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}"><header><span class="my-project-mark" aria-hidden="true">▰</span><div><small>STRUCTOS PROJECT</small><h2>${escapeHtml(object.name)}</h2><span class="my-project-badges"><b>${escapeHtml(tr('fullCycleObject'))}</b><b class="is-${escapeHtml(object.status)}">${escapeHtml(tr(statusKey))}</b></span></div><i aria-hidden="true">›</i></header><div class="my-project-documents">${documents}</div><footer><span>${escapeHtml(tr('lastProjectUpdate'))}: ${escapeHtml(formatObjectDate(updatedAt))}</span><span>${escapeHtml(tr('memoryUsed'))}: ${escapeHtml(formatStorage(usedBytes))}</span></footer></article>`;
 }
@@ -3233,7 +3314,14 @@ function renderMyProjects() {
     $$('[data-my-project]', list).forEach((card) => {
       const open = () => openObjectCard(card.dataset.myProject);
       card.addEventListener('click', open);
-      card.addEventListener('keydown', (event) => { if (!['Enter', ' '].includes(event.key)) return; event.preventDefault(); open(); });
+      card.addEventListener('keydown', (event) => { if (event.target !== card || !['Enter', ' '].includes(event.key)) return; event.preventDefault(); open(); });
+      $$('[data-my-project-file-action]', card).forEach((button) => {
+        button.addEventListener('click', (event) => {
+          event.stopPropagation();
+          openUploadDialog(button.dataset.myProjectFileAction, button.dataset.objectId, button.dataset.versionMode);
+        });
+        button.addEventListener('keydown', (event) => event.stopPropagation());
+      });
     });
   });
   $$('[data-my-projects-count]').forEach((count) => { count.textContent = String(projects.length); });
@@ -3265,9 +3353,26 @@ function projectAnalysisTabContent(tab) {
   return analysisEmptyTable(['recordNumber', 'workName', 'unit', 'quantity', 'source']);
 }
 
+function revisionComparisonMarkup(file) {
+  const versions = fileVersions(file);
+  if (versions.length < 2) return '';
+  const comparison = file.comparison || {};
+  const previous = comparison.previous ? fileVersionSnapshot(comparison.previous) : versions[versions.length - 2];
+  const current = comparison.current ? fileVersionSnapshot(comparison.current) : versions[versions.length - 1];
+  const changes = versionComparisonChanges(previous, current);
+  const changedCount = changes.filter((item) => item.changed).length;
+  const isPending = comparison.status === 'pending';
+  const rows = changes.map((item) => `<tr><th>${escapeHtml(tr(item.key))}</th><td>${escapeHtml(item.before)}</td><td>${escapeHtml(item.after)}</td><td><span class="revision-change-status ${item.changed ? 'is-changed' : 'is-unchanged'}">${escapeHtml(tr(item.changed ? 'changed' : 'unchanged'))}</span></td></tr>`).join('');
+  const history = versions.slice().reverse().map((version, reverseIndex) => {
+    const number = versions.length - reverseIndex;
+    return `<li><b>v${number}</b><span><strong>${escapeHtml(version.name)}</strong><small>${escapeHtml(formatStorage(version.size))} · ${escapeHtml(formatObjectDate(version.addedAt))}</small></span></li>`;
+  }).join('');
+  return `<section class="revision-comparison ${isPending ? 'is-pending' : 'is-ready'}"><header><div><span class="eyebrow">STRUCTOS VERSION CONTROL</span><h2>${escapeHtml(tr('versionComparison'))}</h2><p>${changedCount} ${escapeHtml(tr('changesFound'))}</p></div><span class="revision-comparison-chip">${escapeHtml(tr(isPending ? 'comparisonInProgress' : 'comparisonComplete'))}</span></header><div class="revision-version-pair"><article><small>${escapeHtml(tr('previousVersion'))}</small><b>${escapeHtml(previous.name)}</b><span>${escapeHtml(formatStorage(previous.size))} · ${escapeHtml(formatObjectDate(previous.addedAt))}</span></article><i aria-hidden="true">→</i><article><small>${escapeHtml(tr('currentVersion'))}</small><b>${escapeHtml(current.name)}</b><span>${escapeHtml(formatStorage(current.size))} · ${escapeHtml(formatObjectDate(current.addedAt))}</span></article></div><section class="revision-differences"><h3>${escapeHtml(tr('metadataDifferences'))}</h3><div class="revision-difference-scroll"><table><thead><tr><th></th><th>${escapeHtml(tr('before'))}</th><th>${escapeHtml(tr('after'))}</th><th>${escapeHtml(tr('statusLabel'))}</th></tr></thead><tbody>${rows}</tbody></table></div></section><section class="revision-content-status"><span>◇</span><div><strong>${escapeHtml(tr('contentDifferences'))}: ${escapeHtml(tr('contentComparisonPending'))}</strong><p>${escapeHtml(tr('contentComparisonPendingCopy'))}</p></div></section><details class="revision-history"><summary>${escapeHtml(tr('versionHistory'))} · ${versions.length}</summary><ol>${history}</ol></details></section>`;
+}
+
 function analysisDetailHeader(object, kind, file) {
   const typeLabel = kind === 'project' ? tr('projectAnalysis') : tr(kind);
-  return `<header class="analysis-detail-head"><button class="outline-button" type="button" data-analysis-back>← ${escapeHtml(tr('backToProjects'))}</button><div><span class="eyebrow">STRUCTOS ANALYTICS</span><h1>${escapeHtml(typeLabel)}</h1><p>${escapeHtml(object.name)}</p></div><span class="analysis-detail-status">${escapeHtml(tr('analyzed'))}</span></header><section class="analysis-detail-source"><span>${kind === 'project' ? '▤' : kind === 'contract' ? '≡' : '₽'}</span><div><small>${escapeHtml(tr('sourceFile'))}</small><strong>${escapeHtml(file.name)}</strong><em>${escapeHtml(formatStorage(file.size))}</em></div><button class="outline-button" type="button" data-analysis-replace="${escapeHtml(kind)}">${escapeHtml(tr('replaceDocument'))}</button></section>`;
+  return `<header class="analysis-detail-head"><button class="outline-button" type="button" data-analysis-back>← ${escapeHtml(tr('backToProjects'))}</button><div><span class="eyebrow">STRUCTOS ANALYTICS</span><h1>${escapeHtml(typeLabel)}</h1><p>${escapeHtml(object.name)}</p></div><span class="analysis-detail-status">${escapeHtml(tr('analyzed'))}</span></header><section class="analysis-detail-source"><span>${kind === 'project' ? '▤' : kind === 'contract' ? '≡' : '₽'}</span><div><small>${escapeHtml(tr('sourceFile'))}</small><strong>${escapeHtml(file.name)}</strong><em>v${fileVersionCount(file)} · ${escapeHtml(formatStorage(file.size))}</em></div><button class="outline-button" type="button" data-analysis-revision="${escapeHtml(kind)}">+ ${escapeHtml(tr('newVersion'))}</button></section>`;
 }
 
 function renderAnalysisDetail() {
@@ -3280,12 +3385,12 @@ function renderAnalysisDetail() {
     rootElement.innerHTML = `<div class="empty-state"><h2>${escapeHtml(tr('noMyProjects'))}</h2><button class="primary-button" type="button" data-analysis-back>${escapeHtml(tr('backToProjects'))}</button></div>`;
   } else if (kind === 'project') {
     const tabs = projectAnalysisTabs.map((tab) => `<button class="${tab.id === activeProjectAnalysisTab ? 'is-active' : ''}" type="button" data-project-analysis-tab="${tab.id}" aria-selected="${tab.id === activeProjectAnalysisTab}"><span>${tab.icon}</span><strong>${escapeHtml(tr(tab.label))}</strong></button>`).join('');
-    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><nav class="project-analysis-tabs" aria-label="${escapeHtml(tr('projectAnalysis'))}">${tabs}</nav><section class="project-analysis-content"><header><span class="eyebrow">STRUCTOS DETAIL</span><h2>${escapeHtml(tr(projectAnalysisTabs.find((tab) => tab.id === activeProjectAnalysisTab)?.label || 'commercialProposal'))}</h2></header>${projectAnalysisTabContent(activeProjectAnalysisTab)}</section>`;
+    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section>${revisionComparisonMarkup(file)}<nav class="project-analysis-tabs" aria-label="${escapeHtml(tr('projectAnalysis'))}">${tabs}</nav><section class="project-analysis-content"><header><span class="eyebrow">STRUCTOS DETAIL</span><h2>${escapeHtml(tr(projectAnalysisTabs.find((tab) => tab.id === activeProjectAnalysisTab)?.label || 'commercialProposal'))}</h2></header>${projectAnalysisTabContent(activeProjectAnalysisTab)}</section>`;
   } else {
-    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><section class="analysis-document-placeholder"><span>${kind === 'contract' ? '≡' : '₽'}</span><h2>${escapeHtml(tr('analyzedDocumentPage'))}</h2><p>${escapeHtml(tr('analyzedDocumentPageCopy'))}</p></section>`;
+    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section>${revisionComparisonMarkup(file)}<section class="analysis-document-placeholder"><span>${kind === 'contract' ? '≡' : '₽'}</span><h2>${escapeHtml(tr('analyzedDocumentPage'))}</h2><p>${escapeHtml(tr('analyzedDocumentPageCopy'))}</p></section>`;
   }
   $$('[data-analysis-back]', rootElement).forEach((button) => button.addEventListener('click', () => setPanel('projects')));
-  $('[data-analysis-replace]', rootElement)?.addEventListener('click', (event) => openUploadDialog(event.currentTarget.dataset.analysisReplace, object?.id));
+  $('[data-analysis-revision]', rootElement)?.addEventListener('click', (event) => openUploadDialog(event.currentTarget.dataset.analysisRevision, object?.id, 'revision'));
   $$('[data-project-analysis-tab]', rootElement).forEach((button) => button.addEventListener('click', () => { activeProjectAnalysisTab = button.dataset.projectAnalysisTab; renderAnalysisDetail(); }));
 }
 
@@ -3496,9 +3601,9 @@ function openObjectCard(id) {
   const documentChoices = Object.keys(uploadRules).map((kind) => {
     const file = objectFile(object, kind);
     const actions = file
-      ? `<button class="primary-button" type="button" data-open-object-analysis="${kind}">${escapeHtml(tr('openDocument'))}</button><button class="outline-button" type="button" data-object-upload="${kind}">${escapeHtml(tr('replaceDocument'))}</button>`
+      ? `<button class="primary-button" type="button" data-open-object-analysis="${kind}">${escapeHtml(tr('openDocument'))}</button><button class="outline-button" type="button" data-object-revision="${kind}">+ ${escapeHtml(tr('newVersion'))}</button>`
       : `<button class="outline-button" type="button" data-object-upload="${kind}">${escapeHtml(tr('upload'))}</button>`;
-    return `<article class="object-document-choice ${file ? 'has-file' : ''}"><span>${file ? '✓' : '+'}</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file?.name || tr('notUploaded'))}</small><div class="object-document-choice-actions">${actions}</div></article>`;
+    return `<article class="object-document-choice ${file ? 'has-file' : ''}"><span>${file ? '✓' : '+'}</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file?.name || tr('notUploaded'))}${file ? ` · v${fileVersionCount(file)}` : ''}</small><div class="object-document-choice-actions">${actions}</div></article>`;
   }).join('');
   const lifecycleAction = ['active', 'completed'].includes(object.status)
     ? `<button class="outline-button object-lifecycle-button${object.status === 'active' ? ' is-danger' : ''}" type="button" data-toggle-core-object>${escapeHtml(tr(object.status === 'active' ? 'finishObject' : 'reopenObject'))}</button>`
@@ -3508,6 +3613,7 @@ function openObjectCard(id) {
   const reportAction = object.files?.length ? `<button class="outline-button object-view-report" type="button" data-view-object-report>${escapeHtml(tr('viewReport'))}</button>` : '';
   showDialog(escapeHtml(object.name), tr('chooseObjectDocument'), `<div class="object-document-chooser">${documentChoices}</div><div class="object-card-actions"><button class="primary-button object-analyze-button" type="button" data-analyze-object>${escapeHtml(tr('analyzeObject'))}</button>${reportAction}<button class="outline-button object-rename-button" type="button" data-rename-core-object>${escapeHtml(tr('rename'))}</button>${lifecycleAction}</div>`);
   $$('[data-object-upload]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.objectUpload, object.id)));
+  $$('[data-object-revision]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.objectRevision, object.id, 'revision')));
   $$('[data-open-object-analysis]').forEach((button) => button.addEventListener('click', () => openAnalyzedDocument(object.id, button.dataset.openObjectAnalysis)));
   $('[data-analyze-object]')?.addEventListener('click', () => {
     selectObjectForAnalysis(object);
@@ -3666,6 +3772,10 @@ function chooseUploadFile(file) {
 
 function removeUploadFile() {
   pendingFile = null;
+  if (activeUploadMode === 'revision') {
+    renderUploadFile();
+    return;
+  }
   if (selectedFiles[activeUploadKind]) {
     selectedFiles[activeUploadKind] = null;
     saveUploads();
@@ -3679,6 +3789,49 @@ function removeUploadFile() {
     renderObjects();
   }
   renderUploadFile();
+}
+
+function openVersionComparison(objectId, kind) {
+  const object = objectRegistry.find((item) => item.id === objectId);
+  const file = objectFile(object, kind);
+  if (!object || !file) return;
+  activeAnalysisDocument = { objectId, kind };
+  activeProjectAnalysisTab = 'proposal';
+  $('[data-dialog]')?.close();
+  setPanel('analysis-detail');
+}
+
+function startRevisionComparison(objectId, kind, comparisonId) {
+  const object = objectRegistry.find((item) => item.id === objectId);
+  const file = objectFile(object, kind);
+  if (!object || !file || file.comparison?.id !== comparisonId) return;
+  activeRevisionComparisonId = comparisonId;
+  showDialog(tr('comparisonInProgress'), tr('comparisonInProgressCopy'), `<div data-revision-analysis="${escapeHtml(comparisonId)}">${revisionComparisonMarkup(file)}<div class="analysis-loader"><span></span><span></span><span></span></div></div>`);
+  revisionAnalysisTimer = setTimeout(() => {
+    const currentObject = objectRegistry.find((item) => item.id === objectId);
+    const currentFile = objectFile(currentObject, kind);
+    if (!currentObject || !currentFile || currentFile.comparison?.id !== comparisonId) return;
+    const analyzedAt = new Date().toISOString();
+    currentFile.comparison.status = 'ready';
+    currentFile.comparison.analyzedAt = analyzedAt;
+    currentFile.comparison.current.analyzedAt = analyzedAt;
+    currentFile.analysisPending = false;
+    currentFile.analyzedAt = analyzedAt;
+    currentFile.versions = fileVersions(currentFile).map((version, index, versions) => index === versions.length - 1 ? { ...version, analyzedAt } : version);
+    currentObject.analyzedAt = analyzedAt;
+    if (currentObject.status === 'uploaded') currentObject.status = 'ready';
+    selectObjectForAnalysis(currentObject);
+    saveObjects();
+    saveUploads();
+    renderObjects();
+    renderWidgets();
+    if (activeRevisionComparisonId === comparisonId && $('[data-dialog]')?.open && $(`[data-revision-analysis="${comparisonId}"]`)) {
+      showDialog(tr('comparisonComplete'), tr('comparisonCompleteCopy'), `${revisionComparisonMarkup(currentFile)}<div class="result-actions"><button class="primary-button" type="button" data-view-version-comparison>${escapeHtml(tr('viewComparison'))}</button></div>`);
+      $('[data-view-version-comparison]')?.addEventListener('click', () => openVersionComparison(objectId, kind));
+    } else {
+      showToast(tr('versionSaved'));
+    }
+  }, 1100);
 }
 
 function confirmUpload() {
@@ -3697,14 +3850,45 @@ function confirmUpload() {
     return;
   }
   objectNameInput.classList.remove('field-error');
-  const uploadedFile = { ...pendingFile, kind: activeUploadKind, addedAt: new Date().toISOString(), analysisPending: true, analyzedAt: null };
+  const uploadedAt = new Date().toISOString();
   if (!destination) destination = objectRegistry.find((object) => object.name.trim().toLocaleLowerCase() === objectName.toLocaleLowerCase());
+  const previousFile = objectFile(destination, activeUploadKind);
+  if (activeUploadMode === 'revision' && !previousFile) {
+    showToast(tr('uploadFirst'));
+    return;
+  }
+  if (previousFile && sameFileMetadata(previousFile, pendingFile)) {
+    if (activeUploadMode === 'revision') {
+      showToast(tr('sameFileSelected'));
+      return;
+    }
+    $('[data-dialog]').close();
+    showToast(tr('uploadComplete'));
+    return;
+  }
+  let uploadedFile = { ...pendingFile, kind: activeUploadKind, addedAt: uploadedAt, analysisPending: true, analyzedAt: null };
   if (!destination) {
-    destination = { id: createObjectId(), name: objectName, status: 'uploaded', uploadedAt: new Date().toISOString(), analyzedAt: null, startedAt: null, files: [] };
+    destination = { id: createObjectId(), name: objectName, status: 'uploaded', uploadedAt, analyzedAt: null, startedAt: null, files: [] };
     objectRegistry.unshift(destination);
   }
+  let comparisonId = null;
+  if (previousFile) {
+    const normalizedPrevious = normalizeFileRecord(previousFile);
+    const previous = fileVersionSnapshot(normalizedPrevious);
+    const current = fileVersionSnapshot(uploadedFile);
+    const versions = fileVersions(normalizedPrevious);
+    if (!sameFileMetadata(versions[versions.length - 1], current)) versions.push(current);
+    comparisonId = createObjectId();
+    uploadedFile = {
+      ...uploadedFile,
+      versions,
+      comparison: { id: comparisonId, status: 'pending', createdAt: uploadedAt, analyzedAt: null, previous, current }
+    };
+  } else {
+    uploadedFile = { ...uploadedFile, versions: [fileVersionSnapshot(uploadedFile)], comparison: null };
+  }
   destination.files = [...(destination.files || []).filter((file) => file.kind !== activeUploadKind), uploadedFile];
-  destination.uploadedAt ||= new Date().toISOString();
+  destination.uploadedAt = uploadedAt;
   activeUploadObjectId = destination.id;
   selectObjectForAnalysis(destination);
   saveObjects();
@@ -3712,33 +3896,39 @@ function confirmUpload() {
   renderObjects();
   renderWidgets();
   $('[data-dialog]').close();
-  showToast(tr('uploadComplete'));
+  if (comparisonId) startRevisionComparison(destination.id, activeUploadKind, comparisonId);
+  else showToast(tr('uploadComplete'));
 }
 
-function openUploadDialog(kind, objectId = null) {
+function openUploadDialog(kind, objectId = null, mode = 'standard') {
   activeUploadKind = uploadRules[kind] ? kind : 'project';
+  activeUploadMode = mode === 'revision' ? 'revision' : 'standard';
   selectAnalysis(activeUploadKind);
   activeUploadObjectId = objectRegistry.some((object) => object.id === objectId) ? objectId : null;
   const selectedObject = objectRegistry.find((object) => object.id === activeUploadObjectId);
-  pendingFile = selectedObject ? (objectFile(selectedObject, activeUploadKind) ? { ...objectFile(selectedObject, activeUploadKind) } : null) : (selectedFiles[activeUploadKind] ? { ...selectedFiles[activeUploadKind] } : null);
+  const storedFile = objectFile(selectedObject, activeUploadKind);
+  if (activeUploadMode === 'revision' && !storedFile) activeUploadMode = 'standard';
+  pendingFile = activeUploadMode === 'revision' ? null : (selectedObject ? (storedFile ? { ...storedFile } : null) : (selectedFiles[activeUploadKind] ? { ...selectedFiles[activeUploadKind] } : null));
   const rule = uploadRules[activeUploadKind];
   newObjectNameDraft = selectedObject ? '' : (localStorage.getItem(OBJECT_NAME_KEY) || '');
   const targetOptions = objectRegistry.map((object) => `<option value="${escapeHtml(object.id)}" ${object.id === activeUploadObjectId ? 'selected' : ''}>${escapeHtml(object.name)} · ${escapeHtml(tr(object.status === 'active' ? 'inWork' : object.status === 'ready' ? 'readyStatus' : 'uploaded'))}</option>`).join('');
+  const revisionSource = activeUploadMode === 'revision' && storedFile ? `<section class="revision-upload-source"><span>v${fileVersionCount(storedFile)}</span><div><small>${escapeHtml(tr('currentStoredVersion'))}</small><strong>${escapeHtml(storedFile.name)}</strong><em>${escapeHtml(formatStorage(storedFile.size))} · ${escapeHtml(formatObjectDate(storedFile.addedAt))}</em></div></section>` : '';
   const markup = `
     <div class="upload-limits" aria-label="${escapeHtml(tr('userUploadPlan'))}">
       <span><b>${escapeHtml(tr('maxFileSize'))}</b>${rule.maxMb} МБ</span>
       <span><b>${escapeHtml(tr('allowedFormats'))}</b>${rule.formats}</span>
       <small>${escapeHtml(tr('userUploadPlan'))}</small>
     </div>
-    <label class="upload-target-field">
+    <label class="upload-target-field${activeUploadMode === 'revision' ? ' is-fixed' : ''}">
       <span>${escapeHtml(tr('addToObject'))}</span>
-      <select data-upload-object-target><option value="">${escapeHtml(tr('newObject'))}</option>${targetOptions}</select>
+      <select data-upload-object-target ${activeUploadMode === 'revision' ? 'disabled' : ''}><option value="">${escapeHtml(tr('newObject'))}</option>${targetOptions}</select>
     </label>
     <label class="upload-object-field">
       <span>${escapeHtml(tr('objectName'))} <em>*</em></span>
       <input data-analysis-object-name maxlength="100" autocomplete="organization" placeholder="${escapeHtml(tr('objectPlaceholder'))}" value="${escapeHtml(selectedObject?.name || newObjectNameDraft)}" ${selectedObject ? 'readonly' : ''} />
       <small>${escapeHtml(tr('objectNameHint'))}</small>
     </label>
+    ${revisionSource}
     <div class="analysis-dropzone" data-upload-dropzone role="button" tabindex="0">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg>
       <strong>${escapeHtml(tr('selectFile'))}</strong>
@@ -3757,8 +3947,8 @@ function openUploadDialog(kind, objectId = null) {
       <button type="button" data-replace-file>${escapeHtml(tr('replace'))}</button>
       <button class="dashboard-delete-file" type="button" data-delete-file aria-label="${escapeHtml(tr('deleteFile'))}">×</button>
     </div>
-    <button class="primary-button dashboard-upload-confirm" type="button" data-confirm-upload>${escapeHtml(tr('upload'))}</button>`;
-  showDialog(uploadTitle(activeUploadKind), tr('oneFilePerCategory'), markup);
+    <button class="primary-button dashboard-upload-confirm" type="button" data-confirm-upload>${escapeHtml(tr(activeUploadMode === 'revision' ? 'uploadAndCompare' : 'upload'))}</button>`;
+  showDialog(activeUploadMode === 'revision' ? `${escapeHtml(tr('newVersion'))}: ${escapeHtml(tr(activeUploadKind))}` : uploadTitle(activeUploadKind), tr(activeUploadMode === 'revision' ? 'revisionUploadHint' : 'oneFilePerCategory'), markup);
 
   const fileInput = $('[data-upload-file-input]');
   const photoInput = $('[data-upload-photo-input]');
@@ -3774,6 +3964,7 @@ function openUploadDialog(kind, objectId = null) {
   $('[data-confirm-upload]').addEventListener('click', confirmUpload);
   objectNameInput.addEventListener('input', () => { objectNameInput.classList.remove('field-error'); newObjectNameDraft = objectNameInput.value; renderUploadFile(); });
   targetSelect.addEventListener('change', () => {
+    if (activeUploadMode === 'revision') return;
     const target = objectRegistry.find((object) => object.id === targetSelect.value);
     activeUploadObjectId = target?.id || null;
     objectNameInput.readOnly = Boolean(target);
