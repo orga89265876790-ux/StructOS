@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=17" />
+    <link rel="stylesheet" href="dashboard.css?v=18" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -69,19 +69,22 @@
           <section class="welcome-block">
             <p data-i18n="hello">Здравствуйте,</p>
             <h1 data-user-name>Александр</h1>
-            <button class="user-id" type="button" data-copy-id aria-label="Скопировать ID">
-              <span>ID <span data-user-id>4 820 197</span></span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg>
-            </button>
+            <div class="identity-links">
+              <button class="user-id" type="button" data-copy-id aria-label="Скопировать ID">
+                <span>ID <span data-user-id>4 820 197</span></span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg>
+              </button>
+              <button class="passport-inline-link" type="button" data-open-view="passport"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"/></svg><span data-i18n="passportLink">Паспорт</span></button>
+            </div>
           </section>
 
           <section class="passport-card">
             <div class="passport-blueprint" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
             <div class="passport-head">
-              <div><p data-i18n="builderPassport">Паспорт строителя</p><strong>40%</strong></div>
-              <button type="button" data-open-view="profile"><span data-i18n="complete">Заполнить</span><span>›</span></button>
+              <div><p data-i18n="builderPassport">Паспорт строителя</p><strong data-passport-progress>0%</strong></div>
+              <button type="button" data-open-view="passport"><span data-i18n="complete">Заполнить</span><span>›</span></button>
             </div>
-            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"><span style="--progress:40%"></span></div>
+            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-passport-progressbar><span style="--progress:0%"></span></div>
             <div class="passport-rewards"><span data-i18n="passportFirstRewardShort">+200 за первое заполнение</span><span data-i18n="passport65RewardShort">+300 при заполнении свыше 65%</span></div>
           </section>
 
@@ -153,10 +156,15 @@
           <div class="cashflow-detail" data-cashflow-detail hidden></div>
         </section>
 
+        <section class="tab-panel builder-passport-panel" data-panel="passport" aria-label="Паспорт строителя" hidden>
+          <div class="page-title passport-page-title"><div><span class="eyebrow">STRUCTOS PASSPORT</span><h1 data-i18n="builderPassport">Паспорт строителя</h1><p data-i18n="builderPassportDescription">Отдельный профессиональный паспорт с управлением доступом к каждому полю</p></div><button class="outline-button" type="button" data-open-panel="profile" data-i18n="myProfile">Мой профиль</button></div>
+          <div data-passport-editor></div>
+        </section>
+
         <section class="tab-panel profile-panel" data-panel="profile" aria-label="Профиль" hidden>
           <div class="page-title"><div><span class="eyebrow">STRUCTOS ID</span><h1 data-i18n="myProfile">Мой профиль</h1><p data-user-role>Пользователь</p></div><button class="outline-button" type="button" data-edit-profile data-i18n="edit">Редактировать</button></div>
           <div class="profile-layout">
-            <section class="profile-identity"><div class="profile-avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><h2 data-user-name>Александр</h2><button class="user-id" type="button" data-copy-id><span>ID <span data-user-id>4 820 197</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button></div></section>
+            <section class="profile-identity"><div class="profile-avatar" data-person-avatar><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><h2 data-user-name>Александр</h2><div class="identity-links"><button class="user-id" type="button" data-copy-id><span>ID <span data-user-id>4 820 197</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button><button class="passport-inline-link" type="button" data-open-view="passport"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"/></svg><span data-i18n="passportLink">Паспорт</span></button></div></div></section>
             <button class="profile-row" type="button"><span data-i18n="tariffSubscription">Тарифы и подписка</span><strong data-i18n="userTariff">Пользователь</strong><i>›</i></button>
             <button class="profile-row" type="button" data-open-view="balance"><span data-i18n="balanceBonuses">Баланс и бонусы</span><strong data-finance-summary>0 ₽ · 200</strong><i>›</i></button>
             <button class="profile-row" type="button" data-open-view="connections"><span data-i18n="connections">Связи и контакты</span><strong>MAX · Telegram · Email</strong><i>›</i></button>
@@ -176,8 +184,8 @@
       <aside class="side-drawer" id="side-drawer" aria-label="Меню" aria-hidden="true">
         <div class="drawer-head"><span class="brand"><span class="brand-mark"><img src="assets/structos-building-mark.svg" alt="" /></span><span class="brand-name">Struct<span>OS</span></span></span><button type="button" data-menu-close aria-label="Закрыть меню">×</button></div>
         <div class="drawer-scroll">
-          <section class="drawer-user"><div class="drawer-avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><strong data-user-name>Александр</strong><button class="user-id" type="button" data-copy-id><span>ID <span data-user-id>4 820 197</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button><small data-user-role>Пользователь</small></div></section>
-          <button class="drawer-passport" type="button" data-open-view="profile"><span><b data-i18n="builderPassport">Паспорт строителя</b><strong>40%</strong></span><span data-i18n="complete">Заполнить</span><i class="progress"><i style="--progress:40%"></i></i></button>
+          <section class="drawer-user"><div class="drawer-avatar" data-person-avatar><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><strong data-user-name>Александр</strong><button class="user-id" type="button" data-copy-id><span>ID <span data-user-id>4 820 197</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button><small data-user-role>Пользователь</small></div></section>
+          <button class="drawer-passport" type="button" data-open-view="passport"><span><b data-i18n="builderPassport">Паспорт строителя</b><strong data-passport-progress>0%</strong></span><span data-i18n="complete">Заполнить</span><i class="progress" data-passport-progressbar aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i style="--progress:0%"></i></i></button>
           <nav class="drawer-nav">
             <div class="drawer-group is-open"><button type="button" data-profile-menu><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="myProfile">Мой профиль</span><i>⌃</i></button><div class="drawer-submenu"><button type="button" data-open-view="profile"><span class="submenu-dot"></span><span data-i18n="myProfile">Мой профиль</span></button><button type="button" data-open-view="subscription"><span class="submenu-dot"></span><span data-i18n="tariffSubscription">Тарифы и подписка</span></button><button type="button" data-open-view="balance"><span class="submenu-dot"></span><span data-i18n="balanceBonuses">Баланс и бонусы</span></button></div></div>
             <button type="button" data-open-view="invitations"><svg viewBox="0 0 24 24"><path d="M3 6h18v14H3zM3 7l9 7 9-7"/></svg><span data-i18n="invitations">Приглашения</span></button>
@@ -231,6 +239,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=17"></script>
+    <script type="module" src="dashboard.js?v=18"></script>
   </body>
 </html>

@@ -212,6 +212,19 @@ Object.assign(copy.TJ, {
   invitedObject: 'Бо даъват', demoInvitedObjectName: 'Демо-объекти «Маҳаллаи шимолӣ»', invitedToObject: 'Шумо барои кор дар ин объект даъват шудаед', invitedRole: 'Нақши шумо', invitedBy: 'Даъваткунанда', invitedAt: 'Санаи даъват', objectParticipant: 'Иштирокчии объект', invitedDocumentsHint: 'Ҳуҷҷатҳо ва дастрасӣ баъди пешниҳоди соҳиби объект дар ин ҷо пайдо мешаванд.', ownerWillShare: 'Соҳиби объект ҳоло ин файлро пешниҳод накардааст'
 });
 
+Object.assign(copy.RU, {
+  passportLink: 'Паспорт', builderPassportDescription: 'Отдельный профессиональный паспорт с управлением доступом к каждому полю', sharedDataHint: 'Совпадающие данные синхронизируются с профилем автоматически в обе стороны.', personalData: 'Личные данные', photo: 'Фото', addPhoto: 'Добавить фото', changePhoto: 'Изменить фото', removePhoto: 'Удалить фото', structosId: 'StructOS ID', surname: 'Фамилия', givenName: 'Имя', patronymic: 'Отчество', birthDate: 'Дата рождения', maritalStatus: 'Семейное положение', selectStatus: 'Выберите статус', singleStatus: 'Не женат / не замужем', marriedStatus: 'Женат / замужем', divorcedStatus: 'Разведён(а)', widowedStatus: 'Вдовец / вдова', nationality: 'Национальность', citizenship: 'Гражданство', permanentResidence: 'Страна постоянного проживания', foreignDocuments: 'Документы для работы не в своей стране', patentAvailable: 'Патент есть', workPermitAvailable: 'Разрешение на работу есть', workGeography: 'Где можно предлагать работу', workGeographyHint: 'Выберите страну и город. Можно добавить несколько направлений.', workCountry: 'Страна', workCity: 'Город', addCountryCity: 'Добавить страну и город', removeLocation: 'Удалить направление', openAccess: 'В открытом доступе', shareByLink: 'Делиться данными по ссылке', privacyHint: 'Для каждого поля обе галочки включены по умолчанию.', searchSettings: 'Участие и предложения', participateSearch: 'Участвовать в поиске', receiveJobOffers: 'Получать предложения по работе', receiveVolumeOffers: 'Получать предложения на объёмы работ', passportAvailable: 'Сделать доступным Паспорт строителя', savePassport: 'Сохранить паспорт', passportSaved: 'Паспорт строителя сохранён', photoError: 'Выберите изображение размером до 8 МБ', profileEditorTitle: 'Редактирование профиля', profileEditorHint: 'Профиль остаётся отдельным. Совпадающие поля сразу обновят Паспорт строителя.', profileOnlyFields: 'Данные только профиля', phone: 'Телефон', profileCity: 'Город профиля', profession: 'Профессия', selectCountry: 'Выберите или введите страну', enterCity: 'Выберите или введите город'
+});
+Object.assign(copy.EN, {
+  passportLink: 'Passport', builderPassportDescription: 'A separate professional passport with access controls for every field', sharedDataHint: 'Matching information syncs with your profile automatically in both directions.', personalData: 'Personal information', photo: 'Photo', addPhoto: 'Add photo', changePhoto: 'Change photo', removePhoto: 'Remove photo', structosId: 'StructOS ID', surname: 'Last name', givenName: 'First name', patronymic: 'Patronymic', birthDate: 'Date of birth', maritalStatus: 'Marital status', selectStatus: 'Select status', singleStatus: 'Single', marriedStatus: 'Married', divorcedStatus: 'Divorced', widowedStatus: 'Widowed', nationality: 'Nationality', citizenship: 'Citizenship', permanentResidence: 'Country of permanent residence', foreignDocuments: 'Documents for working abroad', patentAvailable: 'Work patent available', workPermitAvailable: 'Work permit available', workGeography: 'Where work may be offered', workGeographyHint: 'Choose a country and city. You can add several locations.', workCountry: 'Country', workCity: 'City', addCountryCity: 'Add country and city', removeLocation: 'Remove location', openAccess: 'Publicly visible', shareByLink: 'Share this data by link', privacyHint: 'Both options are enabled by default for every field.', searchSettings: 'Search and offers', participateSearch: 'Participate in search', receiveJobOffers: 'Receive job offers', receiveVolumeOffers: 'Receive work-volume offers', passportAvailable: 'Make Builder Passport available', savePassport: 'Save passport', passportSaved: 'Builder Passport saved', photoError: 'Choose an image up to 8 MB', profileEditorTitle: 'Edit profile', profileEditorHint: 'Your profile stays separate. Matching fields will immediately update the Builder Passport.', profileOnlyFields: 'Profile-only information', phone: 'Phone', profileCity: 'Profile city', profession: 'Profession', selectCountry: 'Select or enter a country', enterCity: 'Select or enter a city'
+});
+Object.assign(copy.KY, {
+  passportLink: 'Паспорт', builderPassportDescription: 'Ар бир талаага жеткиликтүүлүк жөндөөсү бар өзүнчө кесиптик паспорт', sharedDataHint: 'Дал келген маалыматтар профиль менен эки тарапка автоматтык шайкештешет.', personalData: 'Жеке маалыматтар', photo: 'Сүрөт', addPhoto: 'Сүрөт кошуу', changePhoto: 'Сүрөттү өзгөртүү', removePhoto: 'Сүрөттү өчүрүү', structosId: 'StructOS ID', surname: 'Фамилия', givenName: 'Аты', patronymic: 'Атасынын аты', birthDate: 'Туулган күнү', maritalStatus: 'Үй-бүлөлүк абалы', selectStatus: 'Абалды тандаңыз', singleStatus: 'Бойдок', marriedStatus: 'Үй-бүлөлүү', divorcedStatus: 'Ажырашкан', widowedStatus: 'Жесир', nationality: 'Улуту', citizenship: 'Жарандыгы', permanentResidence: 'Туруктуу жашаган өлкө', foreignDocuments: 'Чет өлкөдө иштөө документтери', patentAvailable: 'Патент бар', workPermitAvailable: 'Иштөөгө уруксат бар', workGeography: 'Кайсы жерде иш сунушталсын', workGeographyHint: 'Өлкө жана шаар тандаңыз. Бир нече багыт кошууга болот.', workCountry: 'Өлкө', workCity: 'Шаар', addCountryCity: 'Өлкө жана шаар кошуу', removeLocation: 'Багытты өчүрүү', openAccess: 'Ачык жеткиликтүү', shareByLink: 'Шилтеме аркылуу бөлүшүү', privacyHint: 'Ар бир талаада эки белги тең демейки боюнча күйгүзүлгөн.', searchSettings: 'Издөө жана сунуштар', participateSearch: 'Издөөгө катышуу', receiveJobOffers: 'Жумуш сунуштарын алуу', receiveVolumeOffers: 'Иш көлөмдөрү боюнча сунуштарды алуу', passportAvailable: 'Куруучунун паспортун жеткиликтүү кылуу', savePassport: 'Паспортту сактоо', passportSaved: 'Куруучунун паспорту сакталды', photoError: '8 МБга чейинки сүрөт тандаңыз', profileEditorTitle: 'Профилди түзөтүү', profileEditorHint: 'Профиль өзүнчө бойдон калат. Дал келген талаалар паспортту дароо жаңыртат.', profileOnlyFields: 'Профилге гана тиешелүү маалыматтар', phone: 'Телефон', profileCity: 'Профилдеги шаар', profession: 'Кесип', selectCountry: 'Өлкөнү тандаңыз же жазыңыз', enterCity: 'Шаарды тандаңыз же жазыңыз'
+});
+Object.assign(copy.TJ, {
+  passportLink: 'Шиноснома', builderPassportDescription: 'Шиносномаи касбии алоҳида бо идораи дастрасӣ барои ҳар майдон', sharedDataHint: 'Маълумоти якхела бо профил ба ҳар ду самт худкор ҳамоҳанг мешавад.', personalData: 'Маълумоти шахсӣ', photo: 'Акс', addPhoto: 'Иловаи акс', changePhoto: 'Иваз кардани акс', removePhoto: 'Нест кардани акс', structosId: 'StructOS ID', surname: 'Насаб', givenName: 'Ном', patronymic: 'Номи падар', birthDate: 'Санаи таваллуд', maritalStatus: 'Вазъи оилавӣ', selectStatus: 'Вазъро интихоб кунед', singleStatus: 'Муҷаррад', marriedStatus: 'Оиладор', divorcedStatus: 'Ҷудошуда', widowedStatus: 'Бева', nationality: 'Миллат', citizenship: 'Шаҳрвандӣ', permanentResidence: 'Кишвари истиқомати доимӣ', foreignDocuments: 'Ҳуҷҷатҳои кор дар кишвари дигар', patentAvailable: 'Патент ҳаст', workPermitAvailable: 'Иҷозаи кор ҳаст', workGeography: 'Дар куҷо кор пешниҳод шавад', workGeographyHint: 'Кишвар ва шаҳрро интихоб кунед. Якчанд самт илова кардан мумкин.', workCountry: 'Кишвар', workCity: 'Шаҳр', addCountryCity: 'Иловаи кишвар ва шаҳр', removeLocation: 'Нест кардани самт', openAccess: 'Дар дастрасии кушода', shareByLink: 'Бо пайванд мубодила кардан', privacyHint: 'Ҳар ду интихоб барои ҳар майдон аз аввал фаъол аст.', searchSettings: 'Ҷустуҷӯ ва пешниҳодҳо', participateSearch: 'Дар ҷустуҷӯ иштирок кардан', receiveJobOffers: 'Пешниҳоди кор гирифтан', receiveVolumeOffers: 'Пешниҳоди ҳаҷми кор гирифтан', passportAvailable: 'Шиносномаи сохтмончиро дастрас кардан', savePassport: 'Нигоҳ доштани шиноснома', passportSaved: 'Шиносномаи сохтмончӣ нигоҳ дошта шуд', photoError: 'Акси то 8 МБ интихоб кунед', profileEditorTitle: 'Таҳрири профил', profileEditorHint: 'Профил алоҳида мемонад. Майдонҳои якхела шиносномаро фавран нав мекунанд.', profileOnlyFields: 'Маълумоти танҳо барои профил', phone: 'Телефон', profileCity: 'Шаҳри профил', profession: 'Касб', selectCountry: 'Кишварро интихоб ё ворид кунед', enterCity: 'Шаҳрро интихоб ё ворид кунед'
+});
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -224,6 +237,9 @@ const OBJECTS_KEY = 'structos-objects-v1';
 const OBJECT_ORDER_KEY = 'structos-object-order-v1';
 const INVITED_OBJECTS_KEY = 'structos-invited-objects-v1';
 const PROFILE_COMPLETION_KEY = 'structos-profile-completion';
+const PERSON_DATA_KEY = 'structos-person-data-v1';
+const PROFILE_DATA_KEY = 'structos-profile-data-v1';
+const BUILDER_PASSPORT_KEY = 'structos-builder-passport-v1';
 const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
 const WIDGET_STYLES_KEY = 'structos-space-widget-styles-v1';
 const TODO_KEY = 'structos-space-todo-v1';
@@ -360,6 +376,9 @@ function applyLanguage(next) {
   renderWidgets();
   renderWidgetPicker();
   renderCashflow();
+  renderPersonIdentity();
+  renderPassportEditor();
+  renderPassportProgress();
 }
 
 function applyTheme(next) {
@@ -432,6 +451,192 @@ function applyProfileReward(progress) {
   saveFinance();
 }
 
+function splitAuthName(fullName) {
+  const parts = String(fullName || '').trim().split(/\s+/).filter(Boolean).slice(0, 3);
+  if (parts.length >= 3) return { lastName: parts[0], firstName: parts[1], patronymic: parts.slice(2).join(' ') };
+  if (parts.length === 2) return { firstName: parts[0], lastName: parts[1], patronymic: '' };
+  return { firstName: parts[0] || '', lastName: '', patronymic: '' };
+}
+
+function seedIdentityFromAuth(fullName, metadata = {}) {
+  authSeedName = String(fullName || '').trim();
+  if (!personData.firstName && !personData.lastName && authSeedName) Object.assign(personData, splitAuthName(authSeedName));
+  if (!profileData.phone && metadata.phone) profileData.phone = String(metadata.phone).slice(0, 60);
+  if (!profileData.email && metadata.email) profileData.email = String(metadata.email).slice(0, 120);
+  if (!profileData.city && metadata.city) profileData.city = String(metadata.city).slice(0, 100);
+  if (!profileData.profession && metadata.primary_profession) profileData.profession = String(metadata.primary_profession).slice(0, 140);
+  saveIdentityState(false);
+  renderPassportEditor();
+}
+
+function saveIdentityState(syncRemote = true) {
+  localStorage.setItem(PERSON_DATA_KEY, JSON.stringify(personData));
+  localStorage.setItem(PROFILE_DATA_KEY, JSON.stringify(profileData));
+  localStorage.setItem(BUILDER_PASSPORT_KEY, JSON.stringify(builderPassport));
+  const passportProgress = passportCompletion();
+  const profileProgress = calculatedProfileCompletion();
+  localStorage.setItem(PROFILE_COMPLETION_KEY, String(profileProgress));
+  applyPassportRewards(passportProgress);
+  applyProfileReward(profileProgress);
+  renderPersonIdentity();
+  renderPassportProgress();
+  renderWidgets();
+  if (syncRemote) syncIdentityToAccount();
+}
+
+async function syncIdentityToAccount() {
+  const demoSession = readStoredJSON(DEMO_SESSION_KEY, null);
+  if (demoSession?.email === 'str@str.com') {
+    demoSession.name = personFullName();
+    localStorage.setItem(DEMO_SESSION_KEY, JSON.stringify(demoSession));
+  }
+  if (!authClient) return;
+  const data = { full_name: personFullName() };
+  if (profileData.phone) data.phone = profileData.phone;
+  if (profileData.city) data.city = profileData.city;
+  if (profileData.profession) data.primary_profession = profileData.profession;
+  try { await authClient.auth.updateUser({ data }); }
+  catch (error) { console.warn('StructOS profile sync is unavailable:', error); }
+}
+
+function renderPersonIdentity() {
+  const name = personFullName();
+  $$('[data-user-name]').forEach((item) => { item.textContent = name; });
+  $$('[data-person-avatar]').forEach((avatar) => {
+    avatar.innerHTML = personData.photo
+      ? `<img src="${escapeHtml(personData.photo)}" alt="${escapeHtml(name)}" />`
+      : '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>';
+  });
+}
+
+function renderPassportProgress() {
+  const progress = passportCompletion();
+  $$('[data-passport-progress]').forEach((item) => { item.textContent = `${progress}%`; });
+  $$('[data-passport-progressbar]').forEach((bar) => {
+    bar.setAttribute('aria-valuenow', String(progress));
+    const fill = bar.querySelector('span, i');
+    if (fill) fill.style.setProperty('--progress', `${progress}%`);
+  });
+}
+
+function privacyControlsMarkup(key) {
+  const setting = builderPassport.privacy[key] || { public: true, link: true };
+  return `<div class="passport-field-privacy"><label><input type="checkbox" data-passport-privacy="${key}" data-privacy-kind="public"${setting.public ? ' checked' : ''} /><span>${tr('openAccess')}</span></label><label><input type="checkbox" data-passport-privacy="${key}" data-privacy-kind="link"${setting.link ? ' checked' : ''} /><span>${tr('shareByLink')}</span></label></div>`;
+}
+
+function passportCountryOptionsMarkup() {
+  return passportCountryDirectory.map((country) => `<option value="${escapeHtml(localizedCountryName(country))}"></option>`).join('');
+}
+
+function passportPhotoMarkup(includePrivacy = true) {
+  const picture = personData.photo ? `<img src="${escapeHtml(personData.photo)}" alt="${escapeHtml(personFullName())}" />` : '<span aria-hidden="true">＋</span>';
+  return `<section class="passport-photo-card"><div class="passport-photo-preview" data-passport-photo-preview>${picture}</div><div class="passport-photo-copy"><span class="passport-field-label">${tr('photo')}</span><div><button class="outline-button" type="button" data-person-photo-select>${tr(personData.photo ? 'changePhoto' : 'addPhoto')}</button>${personData.photo ? `<button class="passport-remove-photo" type="button" data-person-photo-remove>${tr('removePhoto')}</button>` : ''}</div><input type="file" accept="image/*" data-person-photo-input hidden /></div>${includePrivacy ? privacyControlsMarkup('photo') : ''}</section>`;
+}
+
+function passportInputCard(key, label, inputMarkup) {
+  return `<section class="passport-field-card"><label><span class="passport-field-label">${label}</span>${inputMarkup}</label>${privacyControlsMarkup(key)}</section>`;
+}
+
+function maritalOptionsMarkup() {
+  return `<option value="">${tr('selectStatus')}</option>${['single', 'married', 'divorced', 'widowed'].map((value) => `<option value="${value}"${personData.maritalStatus === value ? ' selected' : ''}>${tr(`${value}Status`)}</option>`).join('')}`;
+}
+
+function passportLocationMarkup(item, index) {
+  const citiesId = `passport-cities-${escapeHtml(item.id)}`;
+  const country = countryByValue(item.country);
+  const cities = country?.cities || passportCountryDirectory.flatMap((entry) => entry.cities);
+  return `<article class="passport-location-row" data-passport-location="${escapeHtml(item.id)}"><span>${index + 1}</span><label><small>${tr('workCountry')}</small><input type="text" maxlength="100" list="passport-country-options" data-location-field="country" value="${escapeHtml(item.country)}" placeholder="${escapeHtml(tr('selectCountry'))}" /></label><label><small>${tr('workCity')}</small><input type="text" maxlength="100" list="${citiesId}" data-location-field="city" value="${escapeHtml(item.city)}" placeholder="${escapeHtml(tr('enterCity'))}" /><datalist id="${citiesId}">${cities.map((city) => `<option value="${escapeHtml(city)}"></option>`).join('')}</datalist></label><button type="button" data-remove-location aria-label="${escapeHtml(tr('removeLocation'))}" title="${escapeHtml(tr('removeLocation'))}">×</button></article>`;
+}
+
+function passportPreferencesMarkup() {
+  return Object.entries({ participateSearch: 'participateSearch', receiveJobOffers: 'receiveJobOffers', receiveVolumeOffers: 'receiveVolumeOffers', passportAvailable: 'passportAvailable' }).map(([key, label]) => `<label class="passport-preference"><input type="checkbox" data-passport-preference="${key}"${builderPassport.preferences[key] ? ' checked' : ''} /><span><strong>${tr(label)}</strong></span><i aria-hidden="true"></i></label>`).join('');
+}
+
+function passportEditorMarkup() {
+  const foreign = isForeignCitizen();
+  return `<form class="builder-passport-form" data-passport-form><section class="passport-sync-note"><span>↔</span><p>${tr('sharedDataHint')}</p></section><section class="passport-form-section"><header><div><span class="eyebrow">STRUCTOS IDENTITY</span><h2>${tr('personalData')}</h2></div><small>${tr('privacyHint')}</small></header>${passportPhotoMarkup()}<div class="passport-fields-grid">${passportInputCard('id', tr('structosId'), `<input type="text" value="${escapeHtml(currentId)}" readonly />`)}${passportInputCard('lastName', tr('surname'), `<input type="text" maxlength="80" autocomplete="family-name" data-person-field="lastName" value="${escapeHtml(personData.lastName)}" />`)}${passportInputCard('firstName', tr('givenName'), `<input type="text" maxlength="80" autocomplete="given-name" data-person-field="firstName" value="${escapeHtml(personData.firstName)}" />`)}${passportInputCard('patronymic', tr('patronymic'), `<input type="text" maxlength="80" data-person-field="patronymic" value="${escapeHtml(personData.patronymic)}" />`)}${passportInputCard('birthDate', tr('birthDate'), `<input type="date" max="${localDateKey()}" autocomplete="bday" data-person-field="birthDate" value="${escapeHtml(personData.birthDate)}" />`)}${passportInputCard('maritalStatus', tr('maritalStatus'), `<select data-person-field="maritalStatus">${maritalOptionsMarkup()}</select>`)}${passportInputCard('nationality', tr('nationality'), `<input type="text" maxlength="100" data-person-field="nationality" value="${escapeHtml(personData.nationality)}" />`)}${passportInputCard('citizenship', tr('citizenship'), `<input type="text" maxlength="100" list="passport-country-options" data-person-field="citizenship" value="${escapeHtml(personData.citizenship)}" placeholder="${escapeHtml(tr('selectCountry'))}" />`)}${passportInputCard('residenceCountry', tr('permanentResidence'), `<input type="text" maxlength="100" list="passport-country-options" data-person-field="residenceCountry" value="${escapeHtml(personData.residenceCountry)}" placeholder="${escapeHtml(tr('selectCountry'))}" />`)}<datalist id="passport-country-options">${passportCountryOptionsMarkup()}</datalist></div><section class="passport-foreign-documents" data-foreign-documents${foreign ? '' : ' hidden'}><h3>${tr('foreignDocuments')}</h3><div>${passportInputCard('patent', tr('patentAvailable'), `<span class="passport-document-check"><input type="checkbox" data-passport-field="patent"${builderPassport.patent ? ' checked' : ''} /><span>✓</span></span>`)}${passportInputCard('workPermit', tr('workPermitAvailable'), `<span class="passport-document-check"><input type="checkbox" data-passport-field="workPermit"${builderPassport.workPermit ? ' checked' : ''} /><span>✓</span></span>`)}</div></section></section><section class="passport-form-section passport-geography-section"><header><div><span class="eyebrow">STRUCTOS GEO</span><h2>${tr('workGeography')}</h2><p>${tr('workGeographyHint')}</p></div>${privacyControlsMarkup('workLocations')}</header><div class="passport-locations" data-passport-locations>${builderPassport.workLocations.map(passportLocationMarkup).join('')}</div><button class="outline-button passport-add-location" type="button" data-add-passport-location>＋ ${tr('addCountryCity')}</button></section><section class="passport-form-section"><header><div><span class="eyebrow">STRUCTOS SEARCH</span><h2>${tr('searchSettings')}</h2></div></header><div class="passport-preferences">${passportPreferencesMarkup()}</div></section><button class="primary-button passport-save-button" type="submit">${tr('savePassport')}</button></form>`;
+}
+
+function updateForeignDocumentVisibility(scope) {
+  const block = $('[data-foreign-documents]', scope);
+  if (block) block.hidden = !isForeignCitizen();
+}
+
+async function resizePersonPhoto(file) {
+  if (!file?.type.startsWith('image/') || file.size > 8 * 1024 * 1024) throw new Error('invalid-photo');
+  const source = await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = reject; reader.readAsDataURL(file); });
+  const image = await new Promise((resolve, reject) => { const value = new Image(); value.onload = () => resolve(value); value.onerror = reject; value.src = source; });
+  const size = Math.min(720, Math.max(image.naturalWidth, image.naturalHeight));
+  const scale = Math.min(1, size / Math.max(image.naturalWidth, image.naturalHeight));
+  const canvas = document.createElement('canvas'); canvas.width = Math.max(1, Math.round(image.naturalWidth * scale)); canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+  canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
+  return canvas.toDataURL('image/jpeg', .84);
+}
+
+function bindPersonPhotoControls(scope, onUpdate) {
+  const input = $('[data-person-photo-input]', scope);
+  $('[data-person-photo-select]', scope)?.addEventListener('click', () => input?.click());
+  input?.addEventListener('change', async () => {
+    try { personData.photo = await resizePersonPhoto(input.files?.[0]); saveIdentityState(); onUpdate?.(); }
+    catch { showToast(tr('photoError')); }
+    input.value = '';
+  });
+  $('[data-person-photo-remove]', scope)?.addEventListener('click', () => { personData.photo = ''; saveIdentityState(); onUpdate?.(); });
+}
+
+function renderPassportEditor() {
+  const rootElement = $('[data-passport-editor]');
+  if (!rootElement) return;
+  rootElement.innerHTML = passportEditorMarkup();
+  const form = $('[data-passport-form]', rootElement);
+  $$('[data-person-field]', form).forEach((input) => input.addEventListener('input', () => {
+    personData[input.dataset.personField] = input.value.slice(0, 100);
+    if (input.dataset.personField === 'citizenship') updateForeignDocumentVisibility(form);
+  }));
+  $$('[data-passport-field]', form).forEach((input) => input.addEventListener('change', () => { builderPassport[input.dataset.passportField] = input.checked; }));
+  $$('[data-passport-privacy]', form).forEach((input) => input.addEventListener('change', () => { builderPassport.privacy[input.dataset.passportPrivacy][input.dataset.privacyKind] = input.checked; }));
+  $$('[data-passport-preference]', form).forEach((input) => input.addEventListener('change', () => { builderPassport.preferences[input.dataset.passportPreference] = input.checked; }));
+  $$('[data-passport-location]', form).forEach((row) => {
+    const item = builderPassport.workLocations.find((entry) => entry.id === row.dataset.passportLocation);
+    if (!item) return;
+    $$('[data-location-field]', row).forEach((input) => input.addEventListener('input', () => {
+      item[input.dataset.locationField] = input.value.slice(0, 100);
+      if (input.dataset.locationField === 'country') {
+        const country = countryByValue(input.value);
+        const datalist = $('datalist', row);
+        const cities = country?.cities || passportCountryDirectory.flatMap((entry) => entry.cities);
+        if (datalist) datalist.innerHTML = cities.map((city) => `<option value="${escapeHtml(city)}"></option>`).join('');
+      }
+    }));
+    $('[data-remove-location]', row)?.addEventListener('click', () => {
+      builderPassport.workLocations = builderPassport.workLocations.filter((entry) => entry.id !== item.id);
+      if (!builderPassport.workLocations.length) builderPassport.workLocations.push({ id: `place-${Date.now()}`, country: '', city: '' });
+      renderPassportEditor();
+    });
+  });
+  $('[data-add-passport-location]', form)?.addEventListener('click', () => {
+    if (builderPassport.workLocations.length >= 12) return;
+    builderPassport.workLocations.push({ id: `place-${Date.now()}-${Math.random().toString(16).slice(2)}`, country: '', city: '' });
+    renderPassportEditor();
+  });
+  bindPersonPhotoControls(form, renderPassportEditor);
+  form.addEventListener('submit', (event) => { event.preventDefault(); saveIdentityState(); renderPassportEditor(); showToast(tr('passportSaved')); });
+  renderPassportProgress();
+}
+
+function profileEditorMarkup() {
+  return `<div class="profile-edit-form" data-profile-edit-form>${passportPhotoMarkup(false)}<section><h3>${tr('personalData')}</h3><p>${tr('sharedDataHint')}</p><div class="profile-edit-grid"><label><span>${tr('surname')}</span><input type="text" maxlength="80" data-person-field="lastName" value="${escapeHtml(personData.lastName)}" /></label><label><span>${tr('givenName')}</span><input type="text" maxlength="80" data-person-field="firstName" value="${escapeHtml(personData.firstName)}" /></label><label><span>${tr('patronymic')}</span><input type="text" maxlength="80" data-person-field="patronymic" value="${escapeHtml(personData.patronymic)}" /></label><label><span>${tr('birthDate')}</span><input type="date" max="${localDateKey()}" data-person-field="birthDate" value="${escapeHtml(personData.birthDate)}" /></label><label><span>${tr('nationality')}</span><input type="text" maxlength="100" data-person-field="nationality" value="${escapeHtml(personData.nationality)}" /></label><label><span>${tr('citizenship')}</span><input type="text" maxlength="100" list="profile-country-options" data-person-field="citizenship" value="${escapeHtml(personData.citizenship)}" /></label><label><span>${tr('permanentResidence')}</span><input type="text" maxlength="100" list="profile-country-options" data-person-field="residenceCountry" value="${escapeHtml(personData.residenceCountry)}" /></label><label><span>${tr('maritalStatus')}</span><select data-person-field="maritalStatus">${maritalOptionsMarkup()}</select></label><datalist id="profile-country-options">${passportCountryOptionsMarkup()}</datalist></div></section><section><h3>${tr('profileOnlyFields')}</h3><div class="profile-edit-grid"><label><span>${tr('phone')}</span><input type="tel" maxlength="60" data-profile-field="phone" value="${escapeHtml(profileData.phone)}" /></label><label><span>Email</span><input type="email" maxlength="120" data-profile-field="email" value="${escapeHtml(profileData.email)}" /></label><label><span>${tr('profileCity')}</span><input type="text" maxlength="100" data-profile-field="city" value="${escapeHtml(profileData.city)}" /></label><label><span>${tr('profession')}</span><input type="text" maxlength="140" data-profile-field="profession" value="${escapeHtml(profileData.profession)}" /></label></div></section><button class="primary-button" type="button" data-save-profile>${tr('saveChanges')}</button></div>`;
+}
+
+function openProfileEditor() {
+  showDialog(tr('profileEditorTitle'), tr('profileEditorHint'), profileEditorMarkup());
+  const scope = $('[data-dialog-content]');
+  $$('[data-person-field]', scope).forEach((input) => input.addEventListener('input', () => { personData[input.dataset.personField] = input.value.slice(0, 100); }));
+  $$('[data-profile-field]', scope).forEach((input) => input.addEventListener('input', () => { profileData[input.dataset.profileField] = input.value.slice(0, 140); }));
+  bindPersonPhotoControls(scope, () => { $('[data-dialog]').close(); openProfileEditor(); });
+  $('[data-save-profile]', scope)?.addEventListener('click', () => { saveIdentityState(); renderPassportEditor(); $('[data-dialog]').close(); showToast(tr('profileSaved')); });
+}
+
 function formatMoney(value) {
   return `${new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(value)} ₽`;
 }
@@ -473,9 +678,9 @@ async function initAuth() {
   const demoSession = JSON.parse(localStorage.getItem(DEMO_SESSION_KEY) || 'null');
   if (demoSession?.email === 'str@str.com') {
     currentId = formattedId(demoSession.id || '4820197');
-    $$('[data-user-name]').forEach((item) => { item.textContent = demoSession.name || 'StructOS'; });
     $$('[data-user-role]').forEach((item) => { item.textContent = demoSession.role || tr('userTariff'); });
     $$('[data-user-id]').forEach((item) => { item.textContent = currentId; });
+    seedIdentityFromAuth(demoSession.name || 'StructOS', {});
     renderReferral();
     return;
   }
@@ -492,9 +697,9 @@ async function initAuth() {
     const fullName = String(meta.full_name || user.email?.split('@')[0] || 'Пользователь').trim();
     const role = String(meta.primary_role || tr('userTariff'));
     currentId = formattedId(meta.structos_id || idFromUuid(user.id));
-    $$('[data-user-name]').forEach((item) => { item.textContent = fullName; });
     $$('[data-user-role]').forEach((item) => { item.textContent = role; });
     $$('[data-user-id]').forEach((item) => { item.textContent = currentId; });
+    seedIdentityFromAuth(fullName, { ...meta, email: user.email || '' });
     renderReferral();
   } catch (error) {
     console.warn('StructOS auth is unavailable:', error);
@@ -502,19 +707,20 @@ async function initAuth() {
 }
 
 function setPanel(name) {
-  const next = ['home', 'space', 'objects', 'cashflow', 'profile'].includes(name) ? name : 'home';
+  const next = ['home', 'space', 'objects', 'cashflow', 'profile', 'passport'].includes(name) ? name : 'home';
   $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
   if (next !== 'space') {
     $('[data-space-toolbar]').hidden = true;
     $('[data-space-settings]').setAttribute('aria-expanded', 'false');
   }
   $$('[data-panel]').forEach((panel) => { panel.hidden = panel.dataset.panel !== next; panel.classList.toggle('is-active', panel.dataset.panel === next); });
-  $$('[data-tab]').forEach((button) => { button.classList.toggle('is-active', button.dataset.tab === next); });
+  $$('[data-tab]').forEach((button) => { button.classList.toggle('is-active', button.dataset.tab === next || (next === 'passport' && button.dataset.tab === 'profile')); });
   history.replaceState(null, '', `#${next}`);
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (next === 'space') requestAnimationFrame(renderWidgets);
   if (next === 'objects') renderObjects();
   if (next === 'cashflow') renderCashflow();
+  if (next === 'passport') renderPassportEditor();
   closeMenu();
 }
 
@@ -555,6 +761,105 @@ const WIDGETS_VERSION_KEY = 'structos-space-widgets-version';
 function readStoredJSON(key, fallback) {
   try { return JSON.parse(localStorage.getItem(key) || 'null') ?? fallback; }
   catch { return fallback; }
+}
+
+const passportCountryDirectory = [
+  { code: 'RU', names: { RU: 'Россия', EN: 'Russia', KY: 'Россия', TJ: 'Русия' }, cities: ['Москва', 'Санкт-Петербург', 'Казань', 'Екатеринбург', 'Новосибирск', 'Краснодар', 'Сочи', 'Тюмень', 'Владивосток'] },
+  { code: 'KG', names: { RU: 'Кыргызстан', EN: 'Kyrgyzstan', KY: 'Кыргызстан', TJ: 'Қирғизистон' }, cities: ['Бишкек', 'Ош', 'Джалал-Абад', 'Каракол'] },
+  { code: 'TJ', names: { RU: 'Таджикистан', EN: 'Tajikistan', KY: 'Тажикстан', TJ: 'Тоҷикистон' }, cities: ['Душанбе', 'Худжанд', 'Бохтар', 'Куляб'] },
+  { code: 'UZ', names: { RU: 'Узбекистан', EN: 'Uzbekistan', KY: 'Өзбекстан', TJ: 'Ӯзбекистон' }, cities: ['Ташкент', 'Самарканд', 'Бухара', 'Наманган', 'Андижан'] },
+  { code: 'KZ', names: { RU: 'Казахстан', EN: 'Kazakhstan', KY: 'Казакстан', TJ: 'Қазоқистон' }, cities: ['Астана', 'Алматы', 'Шымкент', 'Караганда', 'Атырау'] },
+  { code: 'BY', names: { RU: 'Беларусь', EN: 'Belarus', KY: 'Беларусь', TJ: 'Беларус' }, cities: ['Минск', 'Брест', 'Гомель', 'Гродно'] },
+  { code: 'AM', names: { RU: 'Армения', EN: 'Armenia', KY: 'Армения', TJ: 'Арманистон' }, cities: ['Ереван', 'Гюмри', 'Ванадзор'] },
+  { code: 'AZ', names: { RU: 'Азербайджан', EN: 'Azerbaijan', KY: 'Азербайжан', TJ: 'Озарбойҷон' }, cities: ['Баку', 'Гянджа', 'Сумгаит'] },
+  { code: 'GE', names: { RU: 'Грузия', EN: 'Georgia', KY: 'Грузия', TJ: 'Гурҷистон' }, cities: ['Тбилиси', 'Батуми', 'Кутаиси'] },
+  { code: 'MD', names: { RU: 'Молдова', EN: 'Moldova', KY: 'Молдова', TJ: 'Молдова' }, cities: ['Кишинёв', 'Бельцы', 'Тирасполь'] },
+  { code: 'TM', names: { RU: 'Туркменистан', EN: 'Turkmenistan', KY: 'Түркмөнстан', TJ: 'Туркманистон' }, cities: ['Ашхабад', 'Туркменабад', 'Дашогуз'] },
+  { code: 'TR', names: { RU: 'Турция', EN: 'Türkiye', KY: 'Түркия', TJ: 'Туркия' }, cities: ['Стамбул', 'Анкара', 'Анталья', 'Измир'] },
+  { code: 'NL', names: { RU: 'Нидерланды', EN: 'Netherlands', KY: 'Нидерланддар', TJ: 'Нидерланд' }, cities: ['Амстердам', 'Роттердам', 'Гаага', 'Утрехт'] },
+  { code: 'DE', names: { RU: 'Германия', EN: 'Germany', KY: 'Германия', TJ: 'Олмон' }, cities: ['Берлин', 'Мюнхен', 'Гамбург', 'Франкфурт'] }
+];
+
+const passportPrivacyKeys = ['photo', 'id', 'lastName', 'firstName', 'patronymic', 'birthDate', 'maritalStatus', 'nationality', 'citizenship', 'patent', 'workPermit', 'residenceCountry', 'workLocations'];
+
+function defaultPassportPrivacy() {
+  return Object.fromEntries(passportPrivacyKeys.map((key) => [key, { public: true, link: true }]));
+}
+
+function loadPersonData() {
+  const saved = readStoredJSON(PERSON_DATA_KEY, {});
+  return {
+    photo: typeof saved.photo === 'string' ? saved.photo : '',
+    lastName: String(saved.lastName || '').slice(0, 80),
+    firstName: String(saved.firstName || '').slice(0, 80),
+    patronymic: String(saved.patronymic || '').slice(0, 80),
+    birthDate: /^\d{4}-\d{2}-\d{2}$/.test(String(saved.birthDate || '')) ? saved.birthDate : '',
+    maritalStatus: ['single', 'married', 'divorced', 'widowed'].includes(saved.maritalStatus) ? saved.maritalStatus : '',
+    nationality: String(saved.nationality || '').slice(0, 100),
+    citizenship: String(saved.citizenship || '').slice(0, 100),
+    residenceCountry: String(saved.residenceCountry || '').slice(0, 100)
+  };
+}
+
+function loadProfileData() {
+  const saved = readStoredJSON(PROFILE_DATA_KEY, {});
+  return { phone: String(saved.phone || '').slice(0, 60), email: String(saved.email || '').slice(0, 120), city: String(saved.city || '').slice(0, 100), profession: String(saved.profession || '').slice(0, 140) };
+}
+
+function loadBuilderPassport() {
+  const saved = readStoredJSON(BUILDER_PASSPORT_KEY, {});
+  const defaults = defaultPassportPrivacy();
+  const privacy = Object.fromEntries(passportPrivacyKeys.map((key) => [key, {
+    public: saved.privacy?.[key]?.public !== false,
+    link: saved.privacy?.[key]?.link !== false
+  }]));
+  const workLocations = Array.isArray(saved.workLocations) ? saved.workLocations.filter(Boolean).slice(0, 12).map((item) => ({ id: String(item.id || `place-${Date.now()}-${Math.random().toString(16).slice(2)}`), country: String(item.country || '').slice(0, 100), city: String(item.city || '').slice(0, 100) })) : [];
+  return {
+    patent: Boolean(saved.patent),
+    workPermit: Boolean(saved.workPermit),
+    workLocations: workLocations.length ? workLocations : [{ id: `place-${Date.now()}`, country: '', city: '' }],
+    preferences: {
+      participateSearch: Boolean(saved.preferences?.participateSearch),
+      receiveJobOffers: Boolean(saved.preferences?.receiveJobOffers),
+      receiveVolumeOffers: Boolean(saved.preferences?.receiveVolumeOffers),
+      passportAvailable: Boolean(saved.preferences?.passportAvailable)
+    },
+    privacy: { ...defaults, ...privacy }
+  };
+}
+
+let personData = loadPersonData();
+let profileData = loadProfileData();
+let builderPassport = loadBuilderPassport();
+let authSeedName = '';
+
+function localizedCountryName(country) { return country.names[language] || country.names.RU; }
+
+function countryByValue(value) {
+  const normalized = String(value || '').trim().toLocaleLowerCase(root.lang || 'ru');
+  return passportCountryDirectory.find((country) => country.code.toLowerCase() === normalized || Object.values(country.names).some((name) => name.toLocaleLowerCase(root.lang || 'ru') === normalized));
+}
+
+function personFullName() {
+  return [personData.lastName, personData.firstName, personData.patronymic].filter(Boolean).join(' ').trim() || authSeedName || tr('userTariff');
+}
+
+function isForeignCitizen() {
+  const value = personData.citizenship.trim();
+  if (!value) return false;
+  const normalized = value.toLocaleLowerCase(root.lang || 'ru');
+  const russia = passportCountryDirectory.find((country) => country.code === 'RU');
+  return !['рф', 'российская федерация', 'russian federation'].includes(normalized) && !Object.values(russia.names).some((name) => name.toLocaleLowerCase(root.lang || 'ru') === normalized);
+}
+
+function passportCompletion() {
+  const values = [true, personData.photo, personData.lastName, personData.firstName, personData.patronymic, personData.birthDate, personData.maritalStatus, personData.nationality, personData.citizenship, personData.residenceCountry, builderPassport.workLocations.some((item) => item.country.trim() && item.city.trim())];
+  return Math.round(values.filter(Boolean).length / values.length * 100);
+}
+
+function calculatedProfileCompletion() {
+  const values = [personData.photo, personData.lastName, personData.firstName, personData.patronymic, personData.birthDate, personData.maritalStatus, personData.nationality, personData.citizenship, personData.residenceCountry, profileData.phone, profileData.email, profileData.city, profileData.profession];
+  return Math.round(values.filter(Boolean).length / values.length * 100);
 }
 
 function localDateKey(value = new Date()) {
@@ -647,6 +952,7 @@ function renderWidgets() {
       ? `${combinedManagedObjects().filter((object) => !object.completed).length}`
       : id === 'tasks' ? `${todoItems.filter((item) => !item.done).length} / ${todoItems.length}`
         : id === 'finance' ? `${cashflowObjects.length}`
+          : id === 'passport' ? `${passportCompletion()}%`
           : id === 'calendar' ? new Intl.DateTimeFormat(root.lang || 'ru', { day: 'numeric', month: 'short' }).format(new Date()) : definition.hint;
     card.innerHTML = `<span class="space-widget-icon">${definition.icon}</span><strong>${tr(definition.label)}</strong><small>${hint} · ${tr('quickFunction')}</small><i class="widget-resize-handle" aria-hidden="true"></i>`;
     let tapTimer = 0;
@@ -2784,6 +3090,7 @@ function runAnalysis() {
 
 function openView(view) {
   if (view === 'profile') { setPanel('profile'); return; }
+  if (view === 'passport') { setPanel('passport'); return; }
   if (view === 'objects') { setPanel('objects'); return; }
   if (view === 'tasks') { openTodoDialog(); return; }
   if (view === 'calendar') { openCalendarDialog(); return; }
@@ -2795,7 +3102,7 @@ function openView(view) {
   if (view === 'balance') { openBalanceDialog(); return; }
   if (view === 'finance') { setPanel('cashflow'); return; }
   if (view === 'bonuses') { openBonusDialog(); return; }
-  const labels = { subscription: 'tariffSubscription', invitations: 'invitations', invite: 'invite', notifications: 'notifications', documents: 'documents', connections: 'connections', settings: 'settings', acts: 'widgetActs', attention: 'attention', passport: 'builderPassport', tasks: 'widgetTasks', team: 'widgetTeam' };
+  const labels = { subscription: 'tariffSubscription', invitations: 'invitations', invite: 'invite', notifications: 'notifications', documents: 'documents', connections: 'connections', settings: 'settings', acts: 'widgetActs', attention: 'attention', tasks: 'widgetTasks', team: 'widgetTeam' };
   showDialog(tr(labels[view] || 'settings'), tr('comingSoon'), `<div class="dialog-options"><div class="dialog-option"><span>StructOS</span><span>→</span></div></div>`);
 }
 
@@ -2873,7 +3180,7 @@ $('[data-space-settings]').addEventListener('click', () => {
   $('[data-space-settings]').setAttribute('aria-expanded', String(!toolbar.hidden));
 });
 $('[data-space-done]').addEventListener('click', () => { $('[data-space-toolbar]').hidden = true; $('[data-space-settings]').setAttribute('aria-expanded', 'false'); });
-$('[data-edit-profile]').addEventListener('click', () => showDialog(tr('edit'), tr('comingSoon')));
+$('[data-edit-profile]').addEventListener('click', openProfileEditor);
 $('[data-drawing-close]')?.addEventListener('click', closeDrawingStudio);
 $('[data-drawing-minimize]')?.addEventListener('click', minimizeDrawingStudio);
 $('[data-drawing-restore]')?.addEventListener('click', openDrawingStudio);
@@ -2908,10 +3215,8 @@ document.addEventListener('keydown', (event) => { if (event.key === 'Escape') cl
 window.addEventListener('resize', () => { renderWidgets(); });
 
 importPendingTransfer();
-applyPassportRewards(40);
-const savedProfileCompletion = localStorage.getItem(PROFILE_COMPLETION_KEY);
-const profileCompletion = savedProfileCompletion === null || !Number.isFinite(Number(savedProfileCompletion)) ? 40 : Math.min(100, Math.max(0, Number(savedProfileCompletion)));
-applyProfileReward(profileCompletion);
+applyPassportRewards(passportCompletion());
+applyProfileReward(calculatedProfileCompletion());
 applyTheme(localStorage.getItem('structos-theme') === 'light' ? 'light' : 'dark');
 applyLanguage(language);
 renderWidgetPicker();
