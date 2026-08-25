@@ -237,6 +237,11 @@ Object.assign(copy.EN, { copyIdLabel: 'Copy ID', shareResume: 'Share résumé', 
 Object.assign(copy.KY, { copyIdLabel: 'ID көчүрүү', shareResume: 'Резюме бөлүшүү', sharePassport: 'Паспортту бөлүшүү', resume: 'Резюме', resumeReady: 'Резюме даяр', passportLinkCopied: 'Паспорт шилтемеси көчүрүлдү', passportAccessRequired: 'Адегенде «Жеткиликтүү кылуу» күйгүзүңүз', businessTrips: 'Иш сапарлар', menu: 'Меню', collapseMenu: 'Менюну жыйноо' });
 Object.assign(copy.TJ, { copyIdLabel: 'Нусхаи ID', shareResume: 'Мубодилаи резюме', sharePassport: 'Мубодилаи шиноснома', resume: 'Резюме', resumeReady: 'Резюме омода шуд', passportLinkCopied: 'Пайванди шиноснома нусха шуд', passportAccessRequired: 'Аввал «Дастрас кардан»-ро фаъол кунед', businessTrips: 'Сафарҳои корӣ', menu: 'Меню', collapseMenu: 'Ҷамъ кардани меню' });
 
+Object.assign(copy.RU, { selectNationality: 'Начните вводить национальность', selectCountry: 'Начните вводить страну', enterCity: 'Начните вводить город', chooseFromList: 'Выберите вариант из списка', noMatches: 'Совпадений не найдено', selectCountryFirst: 'Сначала выберите страну' });
+Object.assign(copy.EN, { selectNationality: 'Start typing a nationality', selectCountry: 'Start typing a country', enterCity: 'Start typing a city', chooseFromList: 'Choose an option from the list', noMatches: 'No matches found', selectCountryFirst: 'Choose a country first' });
+Object.assign(copy.KY, { selectNationality: 'Улутту жаза баштаңыз', selectCountry: 'Өлкөнү жаза баштаңыз', enterCity: 'Шаарды жаза баштаңыз', chooseFromList: 'Тизмеден вариантты тандаңыз', noMatches: 'Дал келген вариант жок', selectCountryFirst: 'Адегенде өлкөнү тандаңыз' });
+Object.assign(copy.TJ, { selectNationality: 'Навиштани миллатро оғоз кунед', selectCountry: 'Навиштани кишварро оғоз кунед', enterCity: 'Навиштани шаҳрро оғоз кунед', chooseFromList: 'Аз рӯйхат интихоб кунед', noMatches: 'Мувофиқат ёфт нашуд', selectCountryFirst: 'Аввал кишварро интихоб кунед' });
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -620,8 +625,133 @@ function renderPassportProgress() {
   });
 }
 
-function passportCountryOptionsMarkup() {
-  return passportCountryDirectory.map((country) => `<option value="${escapeHtml(localizedCountryName(country))}"></option>`).join('');
+let passportSmartSelectSerial = 0;
+
+function passportSmartSelectMarkup({ kind, value = '', placeholder, personField = '', locationField = '', country = '' }) {
+  passportSmartSelectSerial += 1;
+  const listId = `passport-smart-options-${passportSmartSelectSerial}`;
+  return `<div class="passport-smart-select" data-passport-smart-select data-smart-kind="${escapeHtml(kind)}" data-smart-value="${escapeHtml(value)}" data-smart-country="${escapeHtml(country)}"${personField ? ` data-smart-person-field="${escapeHtml(personField)}"` : ''}${locationField ? ` data-smart-location-field="${escapeHtml(locationField)}"` : ''}><input type="text" maxlength="100" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="${listId}" data-smart-input value="${escapeHtml(value)}" placeholder="${escapeHtml(placeholder)}" /><button type="button" data-smart-toggle tabindex="-1" aria-label="${escapeHtml(tr('chooseFromList'))}">⌄</button><div class="passport-smart-options" id="${listId}" role="listbox" data-smart-options hidden></div></div>`;
+}
+
+function smartSelectOptions(control) {
+  const kind = control.dataset.smartKind;
+  if (kind === 'country') return passportCountryDirectory.map((country) => ({ value: localizedCountryName(country), keywords: [country.code, ...Object.values(country.names)] }));
+  if (kind === 'nationality') return passportNationalityDirectory.map((nationality) => ({ value: localizedNationalityName(nationality), keywords: [nationality.code, ...Object.values(nationality.names)] }));
+  if (kind === 'city') {
+    const country = countryByValue(control.dataset.smartCountry);
+    return (country?.cities || []).map((city) => ({ value: city, keywords: [city] }));
+  }
+  return [];
+}
+
+function bindPassportSmartSelects(scope, onPersonChange = null) {
+  $$('[data-passport-smart-select]', scope).forEach((control) => {
+    const input = $('[data-smart-input]', control);
+    const optionsRoot = $('[data-smart-options]', control);
+    const toggle = $('[data-smart-toggle]', control);
+    let committedValue = control.dataset.smartValue || '';
+    let highlightedIndex = -1;
+
+    const close = (restore = false) => {
+      if (restore) {
+        committedValue = control.dataset.smartValue || '';
+        input.value = committedValue;
+      }
+      optionsRoot.hidden = true;
+      input.setAttribute('aria-expanded', 'false');
+      control.classList.remove('is-open');
+      highlightedIndex = -1;
+    };
+
+    const commit = (value) => {
+      committedValue = value;
+      control.dataset.smartValue = value;
+      input.value = value;
+      const personField = control.dataset.smartPersonField;
+      const locationField = control.dataset.smartLocationField;
+      if (personField) {
+        personData[personField] = value;
+        onPersonChange?.(personField);
+      }
+      if (locationField) {
+        const row = control.closest('[data-passport-location]');
+        const item = builderPassport.workLocations.find((entry) => entry.id === row?.dataset.passportLocation);
+        if (item) {
+          item[locationField] = value;
+          if (locationField === 'country') {
+            item.city = '';
+            const cityControl = $('[data-smart-kind="city"]', row);
+            if (cityControl) {
+              cityControl.dataset.smartCountry = value;
+              cityControl.dataset.smartValue = '';
+              const cityInput = $('[data-smart-input]', cityControl);
+              cityInput.value = '';
+              cityInput.placeholder = tr('enterCity');
+            }
+          }
+        }
+      }
+      close();
+    };
+
+    const renderOptions = (showAll = false) => {
+      const allOptions = smartSelectOptions(control);
+      const query = normalizeDirectoryValue(input.value);
+      if (!query && !showAll) { close(false); return; }
+      if (!allOptions.length) {
+        optionsRoot.innerHTML = `<p>${tr(control.dataset.smartKind === 'city' ? 'selectCountryFirst' : 'noMatches')}</p>`;
+      } else {
+        const matches = allOptions.filter((option) => showAll || option.keywords.some((keyword) => normalizeDirectoryValue(keyword).startsWith(query))).slice(0, 10);
+        optionsRoot.innerHTML = matches.length ? matches.map((option, index) => `<button type="button" role="option" data-smart-option="${escapeHtml(option.value)}" data-smart-index="${index}">${escapeHtml(option.value)}</button>`).join('') : `<p>${tr('noMatches')}</p>`;
+      }
+      optionsRoot.hidden = false;
+      input.setAttribute('aria-expanded', 'true');
+      control.classList.add('is-open');
+      highlightedIndex = -1;
+      $$('[data-smart-option]', optionsRoot).forEach((button) => {
+        button.addEventListener('pointerdown', (event) => event.preventDefault());
+        button.addEventListener('click', () => commit(button.dataset.smartOption));
+      });
+    };
+
+    const highlight = (direction) => {
+      const buttons = $$('[data-smart-option]', optionsRoot);
+      if (!buttons.length) return;
+      highlightedIndex = (highlightedIndex + direction + buttons.length) % buttons.length;
+      buttons.forEach((button, index) => button.classList.toggle('is-highlighted', index === highlightedIndex));
+      buttons[highlightedIndex].scrollIntoView({ block: 'nearest' });
+    };
+
+    input.addEventListener('input', () => renderOptions(false));
+    input.addEventListener('focus', () => { if (input.value && input.value !== committedValue) renderOptions(false); });
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowDown') { event.preventDefault(); if (optionsRoot.hidden) renderOptions(!input.value); highlight(1); }
+      if (event.key === 'ArrowUp') { event.preventDefault(); if (optionsRoot.hidden) renderOptions(!input.value); highlight(-1); }
+      if (event.key === 'Enter' && !optionsRoot.hidden) {
+        event.preventDefault();
+        const buttons = $$('[data-smart-option]', optionsRoot);
+        const exact = buttons.find((button) => normalizeDirectoryValue(button.dataset.smartOption) === normalizeDirectoryValue(input.value));
+        const selected = buttons[highlightedIndex] || exact || buttons[0];
+        if (selected) commit(selected.dataset.smartOption);
+      }
+      if (event.key === 'Escape') close(true);
+    });
+    input.addEventListener('blur', () => setTimeout(() => close(true), 120));
+    toggle?.addEventListener('click', () => {
+      if (control.classList.contains('is-open')) close(true);
+      else { input.focus(); renderOptions(true); }
+    });
+  });
+}
+
+function validatePassportSmartSelects(scope) {
+  const invalid = $$('[data-passport-smart-select]', scope).find((control) => normalizeDirectoryValue($('[data-smart-input]', control)?.value) !== normalizeDirectoryValue(control.dataset.smartValue));
+  if (!invalid) return true;
+  const input = $('[data-smart-input]', invalid);
+  showToast(tr('chooseFromList'));
+  input?.focus();
+  input?.dispatchEvent(new Event('input', { bubbles: true }));
+  return false;
 }
 
 function passportPhotoMarkup() {
@@ -646,10 +776,7 @@ function maritalOptionsMarkup() {
 }
 
 function passportLocationMarkup(item, index) {
-  const citiesId = `passport-cities-${escapeHtml(item.id)}`;
-  const country = countryByValue(item.country);
-  const cities = country?.cities || passportCountryDirectory.flatMap((entry) => entry.cities);
-  return `<article class="passport-location-row" data-passport-location="${escapeHtml(item.id)}"><span>${index + 1}</span><label><small>${tr('workCountry')}</small><input type="text" maxlength="100" list="passport-country-options" data-location-field="country" value="${escapeHtml(item.country)}" placeholder="${escapeHtml(tr('selectCountry'))}" /></label><label><small>${tr('workCity')}</small><input type="text" maxlength="100" list="${citiesId}" data-location-field="city" value="${escapeHtml(item.city)}" placeholder="${escapeHtml(tr('enterCity'))}" /><datalist id="${citiesId}">${cities.map((city) => `<option value="${escapeHtml(city)}"></option>`).join('')}</datalist></label><button type="button" data-remove-location aria-label="${escapeHtml(tr('removeLocation'))}" title="${escapeHtml(tr('removeLocation'))}">×</button></article>`;
+  return `<article class="passport-location-row" data-passport-location="${escapeHtml(item.id)}"><span>${index + 1}</span><label><small>${tr('workCountry')}</small>${passportSmartSelectMarkup({ kind: 'country', value: item.country, placeholder: tr('selectCountry'), locationField: 'country' })}</label><label><small>${tr('workCity')}</small>${passportSmartSelectMarkup({ kind: 'city', value: item.city, placeholder: countryByValue(item.country) ? tr('enterCity') : tr('selectCountryFirst'), locationField: 'city', country: item.country })}</label><button type="button" data-remove-location aria-label="${escapeHtml(tr('removeLocation'))}" title="${escapeHtml(tr('removeLocation'))}">×</button></article>`;
 }
 
 function passportYesNoMarkup(key, label) {
@@ -682,11 +809,10 @@ function passportEditorMarkup() {
         ${passportInputCard('patronymic', tr('patronymic'), `<input type="text" maxlength="80" data-person-field="patronymic" value="${escapeHtml(personData.patronymic)}" />`)}
         ${passportInputCard('birthDate', tr('birthDate'), `<input type="date" max="${localDateKey()}" autocomplete="bday" data-person-field="birthDate" value="${escapeHtml(personData.birthDate)}" />`)}
         ${passportInputCard('maritalStatus', tr('maritalStatus'), `<select data-person-field="maritalStatus">${maritalOptionsMarkup()}</select>`)}
-        ${passportInputCard('nationality', tr('nationality'), `<input type="text" maxlength="100" data-person-field="nationality" value="${escapeHtml(personData.nationality)}" />`)}
-        ${passportInputCard('citizenship', tr('citizenship'), `<input type="text" maxlength="100" list="passport-country-options" data-person-field="citizenship" value="${escapeHtml(personData.citizenship)}" placeholder="${escapeHtml(tr('selectCountry'))}" />`)}
-        ${passportInputCard('residenceCountry', tr('permanentResidence'), `<input type="text" maxlength="100" list="passport-country-options" data-person-field="residenceCountry" value="${escapeHtml(personData.residenceCountry)}" placeholder="${escapeHtml(tr('selectCountry'))}" />`)}
+        ${passportInputCard('nationality', tr('nationality'), passportSmartSelectMarkup({ kind: 'nationality', value: personData.nationality, placeholder: tr('selectNationality'), personField: 'nationality' }))}
+        ${passportInputCard('citizenship', tr('citizenship'), passportSmartSelectMarkup({ kind: 'country', value: personData.citizenship, placeholder: tr('selectCountry'), personField: 'citizenship' }))}
+        ${passportInputCard('residenceCountry', tr('permanentResidence'), passportSmartSelectMarkup({ kind: 'country', value: personData.residenceCountry, placeholder: tr('selectCountry'), personField: 'residenceCountry' }))}
         ${passportBusinessTripsMarkup()}
-        <datalist id="passport-country-options">${passportCountryOptionsMarkup()}</datalist>
       </div>
       <section class="passport-foreign-documents" data-foreign-documents${foreign ? '' : ' hidden'}><h3>${tr('foreignDocuments')}</h3><div>${passportInputCard('patent', tr('patentAvailable'), `<span class="passport-document-check"><input type="checkbox" data-passport-field="patent"${builderPassport.patent ? ' checked' : ''} /><span>✓</span></span>`)}${passportInputCard('workPermit', tr('workPermitAvailable'), `<span class="passport-document-check"><input type="checkbox" data-passport-field="workPermit"${builderPassport.workPermit ? ' checked' : ''} /><span>✓</span></span>`)}</div></section>
     </section>
@@ -731,6 +857,7 @@ function renderPassportEditor() {
     personData[input.dataset.personField] = input.value.slice(0, 100);
     if (input.dataset.personField === 'citizenship') updateForeignDocumentVisibility(form);
   }));
+  bindPassportSmartSelects(form, (field) => { if (field === 'citizenship') updateForeignDocumentVisibility(form); });
   $$('[data-passport-field]', form).forEach((input) => input.addEventListener('change', () => { builderPassport[input.dataset.passportField] = input.checked; }));
   $$('[data-passport-business-trips]', form).forEach((input) => input.addEventListener('change', () => { if (input.checked) builderPassport.businessTrips = input.value === 'yes'; }));
   $('[data-copy-passport-id]', form)?.addEventListener('click', copyId);
@@ -749,15 +876,6 @@ function renderPassportEditor() {
   $$('[data-passport-location]', form).forEach((row) => {
     const item = builderPassport.workLocations.find((entry) => entry.id === row.dataset.passportLocation);
     if (!item) return;
-    $$('[data-location-field]', row).forEach((input) => input.addEventListener('input', () => {
-      item[input.dataset.locationField] = input.value.slice(0, 100);
-      if (input.dataset.locationField === 'country') {
-        const country = countryByValue(input.value);
-        const datalist = $('datalist', row);
-        const cities = country?.cities || passportCountryDirectory.flatMap((entry) => entry.cities);
-        if (datalist) datalist.innerHTML = cities.map((city) => `<option value="${escapeHtml(city)}"></option>`).join('');
-      }
-    }));
     $('[data-remove-location]', row)?.addEventListener('click', () => {
       builderPassport.workLocations = builderPassport.workLocations.filter((entry) => entry.id !== item.id);
       if (!builderPassport.workLocations.length) builderPassport.workLocations.push({ id: `place-${Date.now()}`, country: '', city: '' });
@@ -770,21 +888,36 @@ function renderPassportEditor() {
     renderPassportEditor();
   });
   bindPersonPhotoControls(form, renderPassportEditor);
-  form.addEventListener('submit', (event) => { event.preventDefault(); saveIdentityState(); renderPassportEditor(); showToast(tr('passportSaved')); });
+  form.addEventListener('submit', (event) => { event.preventDefault(); if (!validatePassportSmartSelects(form)) return; saveIdentityState(); renderPassportEditor(); showToast(tr('passportSaved')); });
   renderPassportProgress();
 }
 
 function profileEditorMarkup() {
-  return `<div class="profile-edit-form" data-profile-edit-form>${passportPhotoMarkup(false)}<section><h3>${tr('personalData')}</h3><p>${tr('sharedDataHint')}</p><div class="profile-edit-grid"><label><span>${tr('surname')}</span><input type="text" maxlength="80" data-person-field="lastName" value="${escapeHtml(personData.lastName)}" /></label><label><span>${tr('givenName')}</span><input type="text" maxlength="80" data-person-field="firstName" value="${escapeHtml(personData.firstName)}" /></label><label><span>${tr('patronymic')}</span><input type="text" maxlength="80" data-person-field="patronymic" value="${escapeHtml(personData.patronymic)}" /></label><label><span>${tr('birthDate')}</span><input type="date" max="${localDateKey()}" data-person-field="birthDate" value="${escapeHtml(personData.birthDate)}" /></label><label><span>${tr('nationality')}</span><input type="text" maxlength="100" data-person-field="nationality" value="${escapeHtml(personData.nationality)}" /></label><label><span>${tr('citizenship')}</span><input type="text" maxlength="100" list="profile-country-options" data-person-field="citizenship" value="${escapeHtml(personData.citizenship)}" /></label><label><span>${tr('permanentResidence')}</span><input type="text" maxlength="100" list="profile-country-options" data-person-field="residenceCountry" value="${escapeHtml(personData.residenceCountry)}" /></label><label><span>${tr('maritalStatus')}</span><select data-person-field="maritalStatus">${maritalOptionsMarkup()}</select></label><datalist id="profile-country-options">${passportCountryOptionsMarkup()}</datalist></div></section><section><h3>${tr('profileOnlyFields')}</h3><div class="profile-edit-grid"><label><span>${tr('phone')}</span><input type="tel" maxlength="60" data-profile-field="phone" value="${escapeHtml(profileData.phone)}" /></label><label><span>Email</span><input type="email" maxlength="120" data-profile-field="email" value="${escapeHtml(profileData.email)}" /></label><label><span>${tr('profileCity')}</span><input type="text" maxlength="100" data-profile-field="city" value="${escapeHtml(profileData.city)}" /></label><label><span>${tr('profession')}</span><input type="text" maxlength="140" data-profile-field="profession" value="${escapeHtml(profileData.profession)}" /></label></div></section><button class="primary-button" type="button" data-save-profile>${tr('saveChanges')}</button></div>`;
+  return `<div class="profile-edit-form" data-profile-edit-form>
+    ${passportPhotoMarkup(false)}
+    <section><h3>${tr('personalData')}</h3><p>${tr('sharedDataHint')}</p><div class="profile-edit-grid">
+      <label><span>${tr('surname')}</span><input type="text" maxlength="80" data-person-field="lastName" value="${escapeHtml(personData.lastName)}" /></label>
+      <label><span>${tr('givenName')}</span><input type="text" maxlength="80" data-person-field="firstName" value="${escapeHtml(personData.firstName)}" /></label>
+      <label><span>${tr('patronymic')}</span><input type="text" maxlength="80" data-person-field="patronymic" value="${escapeHtml(personData.patronymic)}" /></label>
+      <label><span>${tr('birthDate')}</span><input type="date" max="${localDateKey()}" data-person-field="birthDate" value="${escapeHtml(personData.birthDate)}" /></label>
+      <label><span>${tr('nationality')}</span>${passportSmartSelectMarkup({ kind: 'nationality', value: personData.nationality, placeholder: tr('selectNationality'), personField: 'nationality' })}</label>
+      <label><span>${tr('citizenship')}</span>${passportSmartSelectMarkup({ kind: 'country', value: personData.citizenship, placeholder: tr('selectCountry'), personField: 'citizenship' })}</label>
+      <label><span>${tr('permanentResidence')}</span>${passportSmartSelectMarkup({ kind: 'country', value: personData.residenceCountry, placeholder: tr('selectCountry'), personField: 'residenceCountry' })}</label>
+      <label><span>${tr('maritalStatus')}</span><select data-person-field="maritalStatus">${maritalOptionsMarkup()}</select></label>
+    </div></section>
+    <section><h3>${tr('profileOnlyFields')}</h3><div class="profile-edit-grid"><label><span>${tr('phone')}</span><input type="tel" maxlength="60" data-profile-field="phone" value="${escapeHtml(profileData.phone)}" /></label><label><span>Email</span><input type="email" maxlength="120" data-profile-field="email" value="${escapeHtml(profileData.email)}" /></label><label><span>${tr('profileCity')}</span><input type="text" maxlength="100" data-profile-field="city" value="${escapeHtml(profileData.city)}" /></label><label><span>${tr('profession')}</span><input type="text" maxlength="140" data-profile-field="profession" value="${escapeHtml(profileData.profession)}" /></label></div></section>
+    <button class="primary-button" type="button" data-save-profile>${tr('saveChanges')}</button>
+  </div>`;
 }
 
 function openProfileEditor() {
   showDialog(tr('profileEditorTitle'), tr('profileEditorHint'), profileEditorMarkup());
   const scope = $('[data-dialog-content]');
   $$('[data-person-field]', scope).forEach((input) => input.addEventListener('input', () => { personData[input.dataset.personField] = input.value.slice(0, 100); }));
+  bindPassportSmartSelects(scope);
   $$('[data-profile-field]', scope).forEach((input) => input.addEventListener('input', () => { profileData[input.dataset.profileField] = input.value.slice(0, 140); }));
   bindPersonPhotoControls(scope, () => { $('[data-dialog]').close(); openProfileEditor(); });
-  $('[data-save-profile]', scope)?.addEventListener('click', () => { saveIdentityState(); renderPassportEditor(); $('[data-dialog]').close(); showToast(tr('profileSaved')); });
+  $('[data-save-profile]', scope)?.addEventListener('click', () => { if (!validatePassportSmartSelects(scope)) return; saveIdentityState(); renderPassportEditor(); $('[data-dialog]').close(); showToast(tr('profileSaved')); });
 }
 
 function formatMoney(value) {
@@ -1029,7 +1162,52 @@ const passportCountryDirectory = [
   { code: 'TM', names: { RU: 'Туркменистан', EN: 'Turkmenistan', KY: 'Түркмөнстан', TJ: 'Туркманистон' }, cities: ['Ашхабад', 'Туркменабад', 'Дашогуз'] },
   { code: 'TR', names: { RU: 'Турция', EN: 'Türkiye', KY: 'Түркия', TJ: 'Туркия' }, cities: ['Стамбул', 'Анкара', 'Анталья', 'Измир'] },
   { code: 'NL', names: { RU: 'Нидерланды', EN: 'Netherlands', KY: 'Нидерланддар', TJ: 'Нидерланд' }, cities: ['Амстердам', 'Роттердам', 'Гаага', 'Утрехт'] },
-  { code: 'DE', names: { RU: 'Германия', EN: 'Germany', KY: 'Германия', TJ: 'Олмон' }, cities: ['Берлин', 'Мюнхен', 'Гамбург', 'Франкфурт'] }
+  { code: 'DE', names: { RU: 'Германия', EN: 'Germany', KY: 'Германия', TJ: 'Олмон' }, cities: ['Берлин', 'Мюнхен', 'Гамбург', 'Франкфурт'] },
+  { code: 'UA', names: { RU: 'Украина', EN: 'Ukraine', KY: 'Украина', TJ: 'Украина' }, cities: ['Киев', 'Харьков', 'Одесса', 'Днепр', 'Львов'] },
+  { code: 'PL', names: { RU: 'Польша', EN: 'Poland', KY: 'Польша', TJ: 'Лаҳистон' }, cities: ['Варшава', 'Краков', 'Вроцлав', 'Гданьск'] },
+  { code: 'CZ', names: { RU: 'Чехия', EN: 'Czechia', KY: 'Чехия', TJ: 'Чехия' }, cities: ['Прага', 'Брно', 'Острава'] },
+  { code: 'GB', names: { RU: 'Великобритания', EN: 'United Kingdom', KY: 'Улуу Британия', TJ: 'Британияи Кабир' }, cities: ['Лондон', 'Манчестер', 'Бирмингем', 'Ливерпуль'] },
+  { code: 'FR', names: { RU: 'Франция', EN: 'France', KY: 'Франция', TJ: 'Фаронса' }, cities: ['Париж', 'Марсель', 'Лион', 'Тулуза'] },
+  { code: 'IT', names: { RU: 'Италия', EN: 'Italy', KY: 'Италия', TJ: 'Италия' }, cities: ['Рим', 'Милан', 'Неаполь', 'Турин'] },
+  { code: 'ES', names: { RU: 'Испания', EN: 'Spain', KY: 'Испания', TJ: 'Испания' }, cities: ['Мадрид', 'Барселона', 'Валенсия', 'Севилья'] },
+  { code: 'US', names: { RU: 'США', EN: 'United States', KY: 'АКШ', TJ: 'ИМА' }, cities: ['Нью-Йорк', 'Лос-Анджелес', 'Чикаго', 'Хьюстон'] },
+  { code: 'AE', names: { RU: 'ОАЭ', EN: 'United Arab Emirates', KY: 'БАЭ', TJ: 'АМА' }, cities: ['Дубай', 'Абу-Даби', 'Шарджа'] },
+  { code: 'CN', names: { RU: 'Китай', EN: 'China', KY: 'Кытай', TJ: 'Чин' }, cities: ['Пекин', 'Шанхай', 'Гуанчжоу', 'Шэньчжэнь'] },
+  { code: 'IN', names: { RU: 'Индия', EN: 'India', KY: 'Индия', TJ: 'Ҳиндустон' }, cities: ['Дели', 'Мумбаи', 'Бангалор', 'Хайдарабад'] },
+  { code: 'AF', names: { RU: 'Афганистан', EN: 'Afghanistan', KY: 'Ооганстан', TJ: 'Афғонистон' }, cities: ['Кабул', 'Герат', 'Кандагар', 'Мазари-Шариф'] },
+  { code: 'PK', names: { RU: 'Пакистан', EN: 'Pakistan', KY: 'Пакистан', TJ: 'Покистон' }, cities: ['Исламабад', 'Карачи', 'Лахор', 'Пешавар'] },
+  { code: 'MN', names: { RU: 'Монголия', EN: 'Mongolia', KY: 'Монголия', TJ: 'Муғулистон' }, cities: ['Улан-Батор', 'Эрдэнэт', 'Дархан'] }
+];
+
+const passportNationalityDirectory = [
+  { code: 'RU', names: { RU: 'Русский', EN: 'Russian', KY: 'Орус', TJ: 'Рус' } },
+  { code: 'KG', names: { RU: 'Кыргыз', EN: 'Kyrgyz', KY: 'Кыргыз', TJ: 'Қирғиз' } },
+  { code: 'TJ', names: { RU: 'Таджик', EN: 'Tajik', KY: 'Тажик', TJ: 'Тоҷик' } },
+  { code: 'UZ', names: { RU: 'Узбек', EN: 'Uzbek', KY: 'Өзбек', TJ: 'Ӯзбек' } },
+  { code: 'KZ', names: { RU: 'Казах', EN: 'Kazakh', KY: 'Казак', TJ: 'Қазоқ' } },
+  { code: 'BY', names: { RU: 'Белорус', EN: 'Belarusian', KY: 'Беларус', TJ: 'Белорус' } },
+  { code: 'AM', names: { RU: 'Армянин', EN: 'Armenian', KY: 'Армян', TJ: 'Арманӣ' } },
+  { code: 'AZ', names: { RU: 'Азербайджанец', EN: 'Azerbaijani', KY: 'Азербайжан', TJ: 'Озарбойҷонӣ' } },
+  { code: 'GE', names: { RU: 'Грузин', EN: 'Georgian', KY: 'Грузин', TJ: 'Гурҷӣ' } },
+  { code: 'MD', names: { RU: 'Молдаванин', EN: 'Moldovan', KY: 'Молдован', TJ: 'Молдаван' } },
+  { code: 'TM', names: { RU: 'Туркмен', EN: 'Turkmen', KY: 'Түркмөн', TJ: 'Туркман' } },
+  { code: 'TR', names: { RU: 'Турок', EN: 'Turkish', KY: 'Түрк', TJ: 'Турк' } },
+  { code: 'NL', names: { RU: 'Нидерландец', EN: 'Dutch', KY: 'Нидерланд', TJ: 'Нидерландӣ' } },
+  { code: 'DE', names: { RU: 'Немец', EN: 'German', KY: 'Немис', TJ: 'Олмонӣ' } },
+  { code: 'UA', names: { RU: 'Украинец', EN: 'Ukrainian', KY: 'Украин', TJ: 'Украинӣ' } },
+  { code: 'PL', names: { RU: 'Поляк', EN: 'Polish', KY: 'Поляк', TJ: 'Лаҳистонӣ' } },
+  { code: 'CZ', names: { RU: 'Чех', EN: 'Czech', KY: 'Чех', TJ: 'Чех' } },
+  { code: 'GB', names: { RU: 'Британец', EN: 'British', KY: 'Британ', TJ: 'Бритониёӣ' } },
+  { code: 'FR', names: { RU: 'Француз', EN: 'French', KY: 'Француз', TJ: 'Фаронсавӣ' } },
+  { code: 'IT', names: { RU: 'Итальянец', EN: 'Italian', KY: 'Италиялык', TJ: 'Итолиёӣ' } },
+  { code: 'ES', names: { RU: 'Испанец', EN: 'Spanish', KY: 'Испан', TJ: 'Испанӣ' } },
+  { code: 'US', names: { RU: 'Американец', EN: 'American', KY: 'Америкалык', TJ: 'Амрикоӣ' } },
+  { code: 'AE', names: { RU: 'Араб', EN: 'Arab', KY: 'Араб', TJ: 'Араб' } },
+  { code: 'CN', names: { RU: 'Китаец', EN: 'Chinese', KY: 'Кытай', TJ: 'Чинӣ' } },
+  { code: 'IN', names: { RU: 'Индиец', EN: 'Indian', KY: 'Индиялык', TJ: 'Ҳинду' } },
+  { code: 'AF', names: { RU: 'Афганец', EN: 'Afghan', KY: 'Ооган', TJ: 'Афғон' } },
+  { code: 'PK', names: { RU: 'Пакистанец', EN: 'Pakistani', KY: 'Пакистандык', TJ: 'Покистонӣ' } },
+  { code: 'MN', names: { RU: 'Монгол', EN: 'Mongolian', KY: 'Монгол', TJ: 'Муғул' } }
 ];
 
 const passportVisibilityKeys = ['photo', 'id', 'lastName', 'firstName', 'patronymic', 'birthDate', 'maritalStatus', 'nationality', 'citizenship', 'businessTrips', 'patent', 'workPermit', 'residenceCountry', 'workLocations'];
@@ -1093,9 +1271,20 @@ let passportAccessListExpanded = false;
 
 function localizedCountryName(country) { return country.names[language] || country.names.RU; }
 
+function localizedNationalityName(nationality) { return nationality.names[language] || nationality.names.RU; }
+
+function normalizeDirectoryValue(value) {
+  return String(value || '').trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase(root.lang || 'ru');
+}
+
 function countryByValue(value) {
-  const normalized = String(value || '').trim().toLocaleLowerCase(root.lang || 'ru');
-  return passportCountryDirectory.find((country) => country.code.toLowerCase() === normalized || Object.values(country.names).some((name) => name.toLocaleLowerCase(root.lang || 'ru') === normalized));
+  const normalized = normalizeDirectoryValue(value);
+  return passportCountryDirectory.find((country) => country.code.toLowerCase() === normalized || Object.values(country.names).some((name) => normalizeDirectoryValue(name) === normalized));
+}
+
+function nationalityByValue(value) {
+  const normalized = normalizeDirectoryValue(value);
+  return passportNationalityDirectory.find((nationality) => nationality.code.toLowerCase() === normalized || Object.values(nationality.names).some((name) => normalizeDirectoryValue(name) === normalized));
 }
 
 function personFullName() {
