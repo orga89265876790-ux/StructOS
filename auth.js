@@ -196,10 +196,13 @@ async function submitRegister(form) {
   if (!authClient) { setFeedback(tr('backendPending'), 'info'); return; }
   setBusy(form, true);
   const redirect = new URL('login.html#login', window.location.href).href;
+  const randomValues = new Uint32Array(1);
+  crypto.getRandomValues(randomValues);
+  const structosId = String(1000000 + (randomValues[0] % 9000000));
   const { data, error } = await authClient.auth.signUp({
     email: form.elements.email.value.trim(),
     password: form.elements.password.value,
-    options: { emailRedirectTo: redirect, data: { full_name: form.elements.fullName.value.trim(), phone: form.elements.phone.value.trim(), city: form.elements.city.value.trim(), primary_role: form.elements.role.value, primary_profession: form.elements.professionDisplay.dataset.profession } }
+    options: { emailRedirectTo: redirect, data: { structos_id: structosId, full_name: form.elements.fullName.value.trim(), phone: form.elements.phone.value.trim(), city: form.elements.city.value.trim(), primary_role: form.elements.role.value, primary_profession: form.elements.professionDisplay.dataset.profession } }
   });
   setBusy(form, false);
   if (error) setFeedback(friendlyError(error), 'error'); else { setFeedback(tr('registerSuccess'), 'success'); form.reset(); updateStrength(''); if (data?.session) setTimeout(() => window.location.assign('dashboard.html'), 450); }
