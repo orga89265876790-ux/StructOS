@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=23" />
+    <link rel="stylesheet" href="dashboard.css?v=24" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -147,6 +147,10 @@
           <div class="empty-state" data-my-projects-empty><div class="empty-building" aria-hidden="true"><span></span><span></span><span></span></div><h2 data-i18n="noMyProjects">Проектов пока нет</h2><p data-i18n="noMyProjectsCopy">Загрузите проект, договор или смету — карточка проекта появится здесь автоматически.</p><button class="primary-button" type="button" data-open-view="project" data-i18n="uploadProject">Загрузить проект</button></div>
         </section>
 
+        <section class="tab-panel analysis-detail-panel" data-panel="analysis-detail" aria-label="Детальный анализ" hidden>
+          <div data-analysis-detail></div>
+        </section>
+
         <section class="tab-panel objects-panel" data-panel="objects" aria-label="Объекты" hidden>
           <div class="page-title"><div><span class="eyebrow">STRUCTOS OBJECTS</span><h1 data-i18n="allObjects">Все действующие объекты</h1><p><span data-i18n="activeObjectsCount">Активных</span>: <span data-all-active-count>0</span></p></div><button class="primary-button" type="button" data-add-object data-i18n="addObject">Добавить объект</button></div>
           <p class="objects-reorder-hint" data-i18n="reorderObjectsHint">Активные объекты можно менять местами перетаскиванием</p>
@@ -254,6 +258,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=23"></script>
+    <script type="module" src="dashboard.js?v=24"></script>
   </body>
 </html>

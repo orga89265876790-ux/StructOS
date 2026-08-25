@@ -247,6 +247,11 @@ Object.assign(copy.EN, { myProjects: 'My projects', myProjectsDescription: 'All 
 Object.assign(copy.KY, { myProjects: 'Менин долбоорлорум', myProjectsDescription: 'Жүктөөдөн аяктаганга чейинки бардык долбоорлор', projectPackages: 'Долбоорлор', uploadProject: 'Долбоор жүктөө', noMyProjects: 'Азырынча долбоор жок', noMyProjectsCopy: 'Долбоорду, келишимди же сметаны жүктөңүз — долбоор картасы бул жерде автоматтык пайда болот.', projectDocuments: 'Долбоордун документтери', lastProjectUpdate: 'Жаңыртылды' });
 Object.assign(copy.TJ, { myProjects: 'Лоиҳаҳои ман', myProjectsDescription: 'Ҳамаи лоиҳаҳо аз боркунӣ то анҷом', projectPackages: 'Лоиҳаҳо', uploadProject: 'Бор кардани лоиҳа', noMyProjects: 'Ҳоло лоиҳа нест', noMyProjectsCopy: 'Лоиҳа, шартнома ё сметаро бор кунед — корти лоиҳа худкор дар ин ҷо пайдо мешавад.', projectDocuments: 'Ҳуҷҷатҳои лоиҳа', lastProjectUpdate: 'Нав шуд' });
 
+Object.assign(copy.RU, { openDocument: 'Открыть', replaceDocument: 'Заменить', chooseReportDocument: 'Что открыть?', chooseReportDocumentHint: 'Выберите результат по одному из загруженных документов.', analysisNotReady: 'Документ ещё не проанализирован', analysisNotReadyHint: 'Сначала запустите анализ этого объекта, после чего откроется детальная страница.', runAnalysisNow: 'Анализировать сейчас', projectAnalysis: 'Детальный анализ проекта', backToProjects: 'К моим проектам', sourceFile: 'Источник', analyzedDataOnly: 'StructOS показывает только данные, извлечённые из загруженного файла. Недостающие значения не додумываются.', commercialProposal: 'Коммерческое предложение', projectBySheets: 'Проект по листам', projectBySystems: 'Проект по системам', projectMaterials: 'Материалы проекта', billOfQuantities: 'Ведомость объёмов работ', section: 'Раздел', sheetNumber: 'Лист', sheetName: 'Наименование листа', system: 'Система', sheets: 'Листы', materials: 'Материалы', materialName: 'Наименование материала', works: 'Работы', markType: 'Марка / тип', source: 'Источник', statusLabel: 'Статус', extractionPending: 'Данные ожидают извлечения', extractionPendingCopy: 'Структура вкладки подготовлена. Строки появятся после подключения серверного анализа файла.', analyzedDocumentPage: 'Страница анализа подготовлена', analyzedDocumentPageCopy: 'Файл сохранён и выбран. Детальную структуру этого документа разберём следующим этапом.' });
+Object.assign(copy.EN, { openDocument: 'Open', replaceDocument: 'Replace', chooseReportDocument: 'What would you like to open?', chooseReportDocumentHint: 'Choose a result for one of the uploaded documents.', analysisNotReady: 'Document has not been analyzed yet', analysisNotReadyHint: 'Run the object analysis first to unlock its detailed page.', runAnalysisNow: 'Analyze now', projectAnalysis: 'Detailed project analysis', backToProjects: 'Back to my projects', sourceFile: 'Source', analyzedDataOnly: 'StructOS shows only data extracted from the uploaded file. Missing values are not invented.', commercialProposal: 'Commercial proposal', projectBySheets: 'Project by sheets', projectBySystems: 'Project by systems', projectMaterials: 'Project materials', billOfQuantities: 'Bill of quantities', section: 'Section', sheetNumber: 'Sheet', sheetName: 'Sheet name', system: 'System', sheets: 'Sheets', materials: 'Materials', materialName: 'Material name', works: 'Works', markType: 'Mark / type', source: 'Source', statusLabel: 'Status', extractionPending: 'Data extraction pending', extractionPendingCopy: 'The tab structure is ready. Rows will appear after server-side file analysis is connected.', analyzedDocumentPage: 'Analysis page is ready', analyzedDocumentPageCopy: 'The file is saved and selected. We will define this document’s detailed structure next.' });
+Object.assign(copy.KY, { openDocument: 'Ачуу', replaceDocument: 'Алмаштыруу', chooseReportDocument: 'Эмнени ачуу керек?', chooseReportDocumentHint: 'Жүктөлгөн документтердин биринин жыйынтыгын тандаңыз.', analysisNotReady: 'Документ али талдана элек', analysisNotReadyHint: 'Деталдуу баракты ачуу үчүн адегенде объектти талдаңыз.', runAnalysisNow: 'Азыр талдоо', projectAnalysis: 'Долбоорду деталдуу талдоо', backToProjects: 'Менин долбоорлорума', sourceFile: 'Булак', analyzedDataOnly: 'StructOS жүктөлгөн файлдан алынган маалыматты гана көрсөтөт. Жетишпеген маанилер ойлоп табылбайт.', commercialProposal: 'Коммерциялык сунуш', projectBySheets: 'Долбоор барактар боюнча', projectBySystems: 'Долбоор системалар боюнча', projectMaterials: 'Долбоордун материалдары', billOfQuantities: 'Иш көлөмдөрүнүн ведомосту', section: 'Бөлүм', sheetNumber: 'Барак', sheetName: 'Барактын аталышы', system: 'Система', sheets: 'Барактар', materials: 'Материалдар', materialName: 'Материалдын аталышы', works: 'Иштер', markType: 'Марка / түрү', source: 'Булак', statusLabel: 'Статус', extractionPending: 'Маалымат чыгарылышын күтүп жатат', extractionPendingCopy: 'Бөлүмдүн түзүмү даяр. Сервердик талдоо кошулгандан кийин саптар пайда болот.', analyzedDocumentPage: 'Талдоо барагы даяр', analyzedDocumentPageCopy: 'Файл сакталды жана тандалды. Бул документтин деталдуу түзүмүн кийинки этапта талкуулайбыз.' });
+Object.assign(copy.TJ, { openDocument: 'Кушодан', replaceDocument: 'Иваз кардан', chooseReportDocument: 'Чиро кушоем?', chooseReportDocumentHint: 'Натиҷаи яке аз ҳуҷҷатҳои боршударо интихоб кунед.', analysisNotReady: 'Ҳуҷҷат ҳанӯз таҳлил нашудааст', analysisNotReadyHint: 'Барои кушодани саҳифаи муфассал аввал таҳлили объектро оғоз кунед.', runAnalysisNow: 'Ҳозир таҳлил кардан', projectAnalysis: 'Таҳлили муфассали лоиҳа', backToProjects: 'Ба лоиҳаҳои ман', sourceFile: 'Манбаъ', analyzedDataOnly: 'StructOS танҳо маълумоти аз файли боршуда гирифташударо нишон медиҳад. Маълумоти набуда сохта намешавад.', commercialProposal: 'Пешниҳоди тиҷоратӣ', projectBySheets: 'Лоиҳа аз рӯи варақҳо', projectBySystems: 'Лоиҳа аз рӯи системаҳо', projectMaterials: 'Маводи лоиҳа', billOfQuantities: 'Рӯйхати ҳаҷми корҳо', section: 'Бахш', sheetNumber: 'Варақ', sheetName: 'Номи варақ', system: 'Система', sheets: 'Варақҳо', materials: 'Мавод', materialName: 'Номи мавод', works: 'Корҳо', markType: 'Тамға / навъ', source: 'Манбаъ', statusLabel: 'Ҳолат', extractionPending: 'Интизори гирифтани маълумот', extractionPendingCopy: 'Сохтори ҷадвал омода аст. Пас аз пайвасти таҳлили серверӣ сатрҳо пайдо мешаванд.', analyzedDocumentPage: 'Саҳифаи таҳлил омода аст', analyzedDocumentPageCopy: 'Файл нигоҳ дошта ва интихоб шуд. Сохтори муфассали ин ҳуҷҷатро дар марҳилаи навбатӣ муайян мекунем.' });
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -280,6 +285,8 @@ let activeUploadKind = 'project';
 let pendingFile = null;
 let activeUploadObjectId = null;
 let newObjectNameDraft = '';
+let activeAnalysisDocument = { objectId: null, kind: 'project' };
+let activeProjectAnalysisTab = 'proposal';
 const widgetColors = ['#0b63ce', '#00a9df', '#04a77b', '#41a447', '#d5a800', '#e87919', '#d64254', '#7957d5', '#c04ea3', '#44546a'];
 
 function loadFinance() {
@@ -403,6 +410,7 @@ function applyLanguage(next) {
   renderPersonIdentity();
   renderPassportEditor();
   renderPassportProgress();
+  if ($('[data-panel="analysis-detail"]')?.classList.contains('is-active')) renderAnalysisDetail();
 }
 
 function applyTheme(next) {
@@ -995,18 +1003,19 @@ async function initAuth() {
 }
 
 function setPanel(name) {
-  const next = ['home', 'projects', 'space', 'objects', 'cashflow', 'profile', 'passport'].includes(name) ? name : 'home';
+  const next = ['home', 'projects', 'analysis-detail', 'space', 'objects', 'cashflow', 'profile', 'passport'].includes(name) ? name : 'home';
   $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
   if (next !== 'space') {
     $('[data-space-toolbar]').hidden = true;
     $('[data-space-settings]').setAttribute('aria-expanded', 'false');
   }
   $$('[data-panel]').forEach((panel) => { panel.hidden = panel.dataset.panel !== next; panel.classList.toggle('is-active', panel.dataset.panel === next); });
-  $$('[data-tab]').forEach((button) => { button.classList.toggle('is-active', button.dataset.tab === next || (next === 'passport' && button.dataset.tab === 'profile')); });
+  $$('[data-tab]').forEach((button) => { button.classList.toggle('is-active', button.dataset.tab === next || (next === 'analysis-detail' && button.dataset.tab === 'projects') || (next === 'passport' && button.dataset.tab === 'profile')); });
   history.replaceState(null, '', `#${next}`);
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (next === 'space') requestAnimationFrame(renderWidgets);
   if (next === 'projects') renderMyProjects();
+  if (next === 'analysis-detail') renderAnalysisDetail();
   if (next === 'objects') renderObjects();
   if (next === 'cashflow') renderCashflow();
   if (next === 'passport') renderPassportEditor();
@@ -3015,7 +3024,7 @@ function importPendingTransfer() {
     const objectName = String(pending?.objectName || '').trim();
     const files = Object.entries(pending?.files || {})
       .filter(([kind, file]) => uploadRules[kind] && file?.name)
-      .map(([kind, file]) => ({ kind, name: String(file.name), size: Number(file.size) || 0, type: String(file.type || ''), lastModified: Number(file.lastModified) || Date.now(), addedAt: file.addedAt || new Date().toISOString() }));
+      .map(([kind, file]) => ({ kind, name: String(file.name), size: Number(file.size) || 0, type: String(file.type || ''), lastModified: Number(file.lastModified) || Date.now(), addedAt: file.addedAt || new Date().toISOString(), analysisPending: !pending.analysisComplete, analyzedAt: pending.analysisComplete ? (pending.updatedAt || new Date().toISOString()) : null }));
     if (!objectName || !files.length) return;
     let object = objectRegistry.find((item) => item.name.trim().toLocaleLowerCase() === objectName.toLocaleLowerCase());
     if (!object) {
@@ -3108,6 +3117,85 @@ function renderMyProjects() {
   });
   $$('[data-my-projects-count]').forEach((count) => { count.textContent = String(projects.length); });
   $$('[data-my-projects-empty]').forEach((empty) => { empty.hidden = projects.length > 0; });
+}
+
+const projectAnalysisTabs = [
+  { id: 'proposal', label: 'commercialProposal', icon: '₽' },
+  { id: 'sheets', label: 'projectBySheets', icon: '▤' },
+  { id: 'systems', label: 'projectBySystems', icon: '⌘' },
+  { id: 'materials', label: 'projectMaterials', icon: '◇' },
+  { id: 'boq', label: 'billOfQuantities', icon: '≡' }
+];
+
+function isObjectDocumentAnalyzed(object, file) {
+  if (!object || !file || file.analysisPending === true) return false;
+  return Boolean(file.analyzedAt || (object.analyzedAt && object.status !== 'uploaded'));
+}
+
+function analysisEmptyTable(columns) {
+  return `<div class="analysis-detail-table-scroll"><table class="analysis-detail-table"><thead><tr>${columns.map((key) => `<th>${escapeHtml(tr(key))}</th>`).join('')}</tr></thead><tbody><tr class="analysis-detail-empty-row"><td colspan="${columns.length}"><span>◇</span><strong>${escapeHtml(tr('extractionPending'))}</strong><small>${escapeHtml(tr('extractionPendingCopy'))}</small></td></tr></tbody></table></div>`;
+}
+
+function projectAnalysisTabContent(tab) {
+  if (tab === 'proposal') return analysisEmptyTable(['section', 'workName', 'unit', 'quantity', 'price', 'rowTotal']);
+  if (tab === 'sheets') return analysisEmptyTable(['sheetNumber', 'sheetName', 'system', 'statusLabel']);
+  if (tab === 'systems') return analysisEmptyTable(['system', 'sheets', 'materials', 'works', 'statusLabel']);
+  if (tab === 'materials') return analysisEmptyTable(['recordNumber', 'materialName', 'markType', 'unit', 'quantity', 'source']);
+  return analysisEmptyTable(['recordNumber', 'workName', 'unit', 'quantity', 'source']);
+}
+
+function analysisDetailHeader(object, kind, file) {
+  const typeLabel = kind === 'project' ? tr('projectAnalysis') : tr(kind);
+  return `<header class="analysis-detail-head"><button class="outline-button" type="button" data-analysis-back>← ${escapeHtml(tr('backToProjects'))}</button><div><span class="eyebrow">STRUCTOS ANALYTICS</span><h1>${escapeHtml(typeLabel)}</h1><p>${escapeHtml(object.name)}</p></div><span class="analysis-detail-status">${escapeHtml(tr('analyzed'))}</span></header><section class="analysis-detail-source"><span>${kind === 'project' ? '▤' : kind === 'contract' ? '≡' : '₽'}</span><div><small>${escapeHtml(tr('sourceFile'))}</small><strong>${escapeHtml(file.name)}</strong><em>${escapeHtml(formatStorage(file.size))}</em></div><button class="outline-button" type="button" data-analysis-replace="${escapeHtml(kind)}">${escapeHtml(tr('replaceDocument'))}</button></section>`;
+}
+
+function renderAnalysisDetail() {
+  const rootElement = $('[data-analysis-detail]');
+  if (!rootElement) return;
+  const object = objectRegistry.find((item) => item.id === activeAnalysisDocument.objectId);
+  const kind = activeAnalysisDocument.kind;
+  const file = objectFile(object, kind);
+  if (!object || !file) {
+    rootElement.innerHTML = `<div class="empty-state"><h2>${escapeHtml(tr('noMyProjects'))}</h2><button class="primary-button" type="button" data-analysis-back>${escapeHtml(tr('backToProjects'))}</button></div>`;
+  } else if (kind === 'project') {
+    const tabs = projectAnalysisTabs.map((tab) => `<button class="${tab.id === activeProjectAnalysisTab ? 'is-active' : ''}" type="button" data-project-analysis-tab="${tab.id}" aria-selected="${tab.id === activeProjectAnalysisTab}"><span>${tab.icon}</span><strong>${escapeHtml(tr(tab.label))}</strong></button>`).join('');
+    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><nav class="project-analysis-tabs" aria-label="${escapeHtml(tr('projectAnalysis'))}">${tabs}</nav><section class="project-analysis-content"><header><span class="eyebrow">STRUCTOS DETAIL</span><h2>${escapeHtml(tr(projectAnalysisTabs.find((tab) => tab.id === activeProjectAnalysisTab)?.label || 'commercialProposal'))}</h2></header>${projectAnalysisTabContent(activeProjectAnalysisTab)}</section>`;
+  } else {
+    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><section class="analysis-document-placeholder"><span>${kind === 'contract' ? '≡' : '₽'}</span><h2>${escapeHtml(tr('analyzedDocumentPage'))}</h2><p>${escapeHtml(tr('analyzedDocumentPageCopy'))}</p></section>`;
+  }
+  $$('[data-analysis-back]', rootElement).forEach((button) => button.addEventListener('click', () => setPanel('projects')));
+  $('[data-analysis-replace]', rootElement)?.addEventListener('click', (event) => openUploadDialog(event.currentTarget.dataset.analysisReplace, object?.id));
+  $$('[data-project-analysis-tab]', rootElement).forEach((button) => button.addEventListener('click', () => { activeProjectAnalysisTab = button.dataset.projectAnalysisTab; renderAnalysisDetail(); }));
+}
+
+function promptDocumentAnalysis(object) {
+  showDialog(tr('analysisNotReady'), tr('analysisNotReadyHint'), `<div class="dialog-options"><button class="primary-button" type="button" data-run-analysis-now>${escapeHtml(tr('runAnalysisNow'))}</button></div>`);
+  $('[data-run-analysis-now]')?.addEventListener('click', () => {
+    selectObjectForAnalysis(object);
+    $('[data-dialog]')?.close();
+    runAnalysis();
+  });
+}
+
+function openAnalyzedDocument(objectId, kind) {
+  const object = objectRegistry.find((item) => item.id === objectId);
+  const file = objectFile(object, kind);
+  if (!object || !file) return;
+  if (!isObjectDocumentAnalyzed(object, file)) { promptDocumentAnalysis(object); return; }
+  activeAnalysisDocument = { objectId: object.id, kind };
+  activeProjectAnalysisTab = 'proposal';
+  $('[data-dialog]')?.close();
+  setPanel('analysis-detail');
+}
+
+function openReportChooser(objectOrId) {
+  const object = typeof objectOrId === 'string' ? objectRegistry.find((item) => item.id === objectOrId) : objectOrId;
+  if (!object) return;
+  const available = Object.keys(uploadRules).map((kind) => [kind, objectFile(object, kind)]).filter(([, file]) => file);
+  if (!available.length) { showToast(tr('uploadFirst')); return; }
+  const choices = available.map(([kind, file]) => `<button class="report-document-choice" type="button" data-open-report-document="${escapeHtml(kind)}"><span>${kind === 'project' ? '▤' : kind === 'contract' ? '≡' : '₽'}</span><div><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file.name)}</small></div><i>›</i></button>`).join('');
+  showDialog(tr('chooseReportDocument'), tr('chooseReportDocumentHint'), `<div class="report-document-list">${choices}</div>`);
+  $$('[data-open-report-document]').forEach((button) => button.addEventListener('click', () => openAnalyzedDocument(object.id, button.dataset.openReportDocument)));
 }
 
 function combinedManagedObjects() {
@@ -3286,20 +3374,26 @@ function openObjectCard(id) {
   if (!object) return;
   const documentChoices = Object.keys(uploadRules).map((kind) => {
     const file = objectFile(object, kind);
-    return `<button class="object-document-choice ${file ? 'has-file' : ''}" type="button" data-object-document="${kind}"><span>${file ? '✓' : '+'}</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file?.name || tr('notUploaded'))}</small></button>`;
+    const actions = file
+      ? `<button class="primary-button" type="button" data-open-object-analysis="${kind}">${escapeHtml(tr('openDocument'))}</button><button class="outline-button" type="button" data-object-upload="${kind}">${escapeHtml(tr('replaceDocument'))}</button>`
+      : `<button class="outline-button" type="button" data-object-upload="${kind}">${escapeHtml(tr('upload'))}</button>`;
+    return `<article class="object-document-choice ${file ? 'has-file' : ''}"><span>${file ? '✓' : '+'}</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file?.name || tr('notUploaded'))}</small><div class="object-document-choice-actions">${actions}</div></article>`;
   }).join('');
   const lifecycleAction = ['active', 'completed'].includes(object.status)
     ? `<button class="outline-button object-lifecycle-button${object.status === 'active' ? ' is-danger' : ''}" type="button" data-toggle-core-object>${escapeHtml(tr(object.status === 'active' ? 'finishObject' : 'reopenObject'))}</button>`
     : object.status === 'ready'
       ? `<button class="outline-button object-start-project" type="button" data-start-core-object>${escapeHtml(tr('startObject'))}</button>`
       : '';
-  showDialog(escapeHtml(object.name), tr('chooseObjectDocument'), `<div class="object-document-chooser">${documentChoices}</div><div class="object-card-actions"><button class="primary-button object-analyze-button" type="button" data-analyze-object>${escapeHtml(tr('analyzeObject'))}</button><button class="outline-button object-rename-button" type="button" data-rename-core-object>${escapeHtml(tr('rename'))}</button>${lifecycleAction}</div>`);
-  $$('[data-object-document]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.objectDocument, object.id)));
+  const reportAction = object.files?.length ? `<button class="outline-button object-view-report" type="button" data-view-object-report>${escapeHtml(tr('viewReport'))}</button>` : '';
+  showDialog(escapeHtml(object.name), tr('chooseObjectDocument'), `<div class="object-document-chooser">${documentChoices}</div><div class="object-card-actions"><button class="primary-button object-analyze-button" type="button" data-analyze-object>${escapeHtml(tr('analyzeObject'))}</button>${reportAction}<button class="outline-button object-rename-button" type="button" data-rename-core-object>${escapeHtml(tr('rename'))}</button>${lifecycleAction}</div>`);
+  $$('[data-object-upload]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.objectUpload, object.id)));
+  $$('[data-open-object-analysis]').forEach((button) => button.addEventListener('click', () => openAnalyzedDocument(object.id, button.dataset.openObjectAnalysis)));
   $('[data-analyze-object]')?.addEventListener('click', () => {
     selectObjectForAnalysis(object);
     $('[data-dialog]').close();
     runAnalysis();
   });
+  $('[data-view-object-report]')?.addEventListener('click', () => openReportChooser(object));
   $('[data-rename-core-object]')?.addEventListener('click', () => renameCoreObject(object.id));
   $('[data-start-core-object]')?.addEventListener('click', () => startReadyObject(object.id));
   $('[data-toggle-core-object]')?.addEventListener('click', () => toggleCoreObjectCompletion(object.id));
@@ -3341,21 +3435,22 @@ function toggleCoreObjectCompletion(id) {
 function registerAnalyzedObject(name, readyFiles) {
   const normalizedName = String(name).trim().toLocaleLowerCase();
   const existing = objectRegistry.find((object) => object.name.trim().toLocaleLowerCase() === normalizedName);
-  if (existing?.status === 'active') return existing;
-  const files = readyFiles.map(([kind, file]) => ({ kind, name: file.name, size: file.size || 0 }));
+  const analyzedAt = new Date().toISOString();
+  const files = readyFiles.map(([kind, file]) => ({ ...file, kind, name: file.name, size: file.size || 0, analysisPending: false, analyzedAt }));
   if (existing) {
-    existing.analyzedAt = new Date().toISOString();
+    existing.analyzedAt = analyzedAt;
     existing.files = files;
-    existing.status = 'ready';
-    existing.startedAt = null;
-    existing.completedAt = null;
+    if (!['active', 'completed'].includes(existing.status)) {
+      existing.status = 'ready';
+      existing.startedAt = null;
+      existing.completedAt = null;
+    }
     saveObjects();
     renderObjects();
     renderWidgets();
     return existing;
   }
-  const now = new Date().toISOString();
-  const object = { id: createObjectId(), name: String(name).trim(), status: 'ready', uploadedAt: now, analyzedAt: now, startedAt: null, files };
+  const object = { id: createObjectId(), name: String(name).trim(), status: 'ready', uploadedAt: analyzedAt, analyzedAt, startedAt: null, files };
   objectRegistry.unshift(object);
   saveObjects();
   renderObjects();
@@ -3481,7 +3576,7 @@ function confirmUpload() {
     return;
   }
   objectNameInput.classList.remove('field-error');
-  const uploadedFile = { ...pendingFile, kind: activeUploadKind, addedAt: new Date().toISOString() };
+  const uploadedFile = { ...pendingFile, kind: activeUploadKind, addedAt: new Date().toISOString(), analysisPending: true, analyzedAt: null };
   if (!destination) destination = objectRegistry.find((object) => object.name.trim().toLocaleLowerCase() === objectName.toLocaleLowerCase());
   if (!destination) {
     destination = { id: createObjectId(), name: objectName, status: 'uploaded', uploadedAt: new Date().toISOString(), analyzedAt: null, startedAt: null, files: [] };
@@ -3601,7 +3696,7 @@ function runAnalysis() {
     if (!$('[data-dialog]').open) return;
     const analyzedObject = registerAnalyzedObject(objectName, readyFiles);
     showDialog(tr('analysisComplete'), tr('analysisCompleteCopy'), `<div class="result-actions"><button class="outline-button" type="button" data-view-report>${tr('viewReport')}</button><button class="primary-button" type="button" data-start-object>${tr('startObject')}</button></div>`);
-    $('[data-view-report]')?.addEventListener('click', () => showDialog(`${tr('report')}: ${title}`, tr('comingSoon'), `<div class="dialog-options"><div class="dialog-option"><span>StructOS ${title}</span><span>→</span></div></div>`));
+    $('[data-view-report]')?.addEventListener('click', () => openReportChooser(analyzedObject));
     $('[data-start-object]')?.addEventListener('click', () => startReadyObject(analyzedObject.id));
   }, 1100);
 }
