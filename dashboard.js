@@ -232,6 +232,11 @@ Object.assign(copy.TJ, {
   mostImportantPassport: 'МУҲИМТАРИН ДАР ШИНОСНОМА', mostImportantHint: 'Ҷустуҷӯ, пешниҳодҳо ва дастрасӣ ба маълумот дар як ҷо', contractorSearch: 'Ҳамчун пудратчӣ дар ҷустуҷӯ иштирок кардан', employeeSearch: 'Ҳамчун корманд дар ҷустуҷӯ иштирок кардан', tenderParticipation: 'Дар тендерҳои объект иштирок кардан', employmentOffers: 'Пешниҳодҳои шуғл гирифтан', objectOffers: 'Пешниҳодҳои объект гирифтан', makePassportAvailable: 'Дастрас кардан', chooseVisibleData: 'Интихоби маълумоти дастрас', visibleDataHint: 'Танҳо маълумоти интихобшуда намоён ва ба шиносномаи фиристодашуда дохил мешавад.', yes: 'Ҳа', no: 'Не'
 });
 
+Object.assign(copy.RU, { copyIdLabel: 'Копировать ID', shareResume: 'Поделиться резюме', sharePassport: 'Поделиться паспортом', resume: 'Резюме', resumeReady: 'Резюме подготовлено', passportLinkCopied: 'Ссылка на паспорт скопирована', passportAccessRequired: 'Сначала включите «Сделать доступным»', businessTrips: 'Командировки', menu: 'Меню', collapseMenu: 'Свернуть меню' });
+Object.assign(copy.EN, { copyIdLabel: 'Copy ID', shareResume: 'Share résumé', sharePassport: 'Share passport', resume: 'Résumé', resumeReady: 'Résumé is ready', passportLinkCopied: 'Passport link copied', passportAccessRequired: 'Enable “Make available” first', businessTrips: 'Business trips', menu: 'Menu', collapseMenu: 'Collapse menu' });
+Object.assign(copy.KY, { copyIdLabel: 'ID көчүрүү', shareResume: 'Резюме бөлүшүү', sharePassport: 'Паспортту бөлүшүү', resume: 'Резюме', resumeReady: 'Резюме даяр', passportLinkCopied: 'Паспорт шилтемеси көчүрүлдү', passportAccessRequired: 'Адегенде «Жеткиликтүү кылуу» күйгүзүңүз', businessTrips: 'Иш сапарлар', menu: 'Меню', collapseMenu: 'Менюну жыйноо' });
+Object.assign(copy.TJ, { copyIdLabel: 'Нусхаи ID', shareResume: 'Мубодилаи резюме', sharePassport: 'Мубодилаи шиноснома', resume: 'Резюме', resumeReady: 'Резюме омода шуд', passportLinkCopied: 'Пайванди шиноснома нусха шуд', passportAccessRequired: 'Аввал «Дастрас кардан»-ро фаъол кунед', businessTrips: 'Сафарҳои корӣ', menu: 'Меню', collapseMenu: 'Ҷамъ кардани меню' });
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -247,6 +252,7 @@ const PROFILE_COMPLETION_KEY = 'structos-profile-completion';
 const PERSON_DATA_KEY = 'structos-person-data-v1';
 const PROFILE_DATA_KEY = 'structos-profile-data-v1';
 const BUILDER_PASSPORT_KEY = 'structos-builder-passport-v1';
+const STRUCTOS_DOCUMENT_BRAND = Object.freeze({ made: 'Сделано на StructOS', site: 'www.structOS.ru', slogan: 'Единый Строительный Интеллект в России №1' });
 const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
 const WIDGET_STYLES_KEY = 'structos-space-widget-styles-v1';
 const TODO_KEY = 'structos-space-todo-v1';
@@ -424,6 +430,93 @@ async function copyId() {
   showToast(tr('copied'));
 }
 
+function passportPublicEntries() {
+  const locations = builderPassport.workLocations.filter((item) => item.country.trim() || item.city.trim()).map((item) => [item.country, item.city].filter(Boolean).join(', ')).join(' · ');
+  const values = {
+    id: currentId,
+    lastName: personData.lastName,
+    firstName: personData.firstName,
+    patronymic: personData.patronymic,
+    birthDate: personData.birthDate,
+    maritalStatus: personData.maritalStatus ? tr(`${personData.maritalStatus}Status`) : '',
+    nationality: personData.nationality,
+    citizenship: personData.citizenship,
+    businessTrips: typeof builderPassport.businessTrips === 'boolean' ? tr(builderPassport.businessTrips ? 'yes' : 'no') : '',
+    patent: builderPassport.patent ? tr('yes') : tr('no'),
+    workPermit: builderPassport.workPermit ? tr('yes') : tr('no'),
+    residenceCountry: personData.residenceCountry,
+    workLocations: locations
+  };
+  const labels = { id: 'structosId', lastName: 'surname', firstName: 'givenName', patronymic: 'patronymic', birthDate: 'birthDate', maritalStatus: 'maritalStatus', nationality: 'nationality', citizenship: 'citizenship', businessTrips: 'businessTrips', patent: 'patentAvailable', workPermit: 'workPermitAvailable', residenceCountry: 'permanentResidence', workLocations: 'workGeography' };
+  return Object.entries(labels).filter(([key]) => builderPassport.visibleFields[key] && values[key]).map(([key, label]) => ({ label: tr(label), value: String(values[key]) }));
+}
+
+function encodePassportPayload(payload) {
+  const bytes = new TextEncoder().encode(JSON.stringify(payload));
+  let binary = '';
+  bytes.forEach((byte) => { binary += String.fromCharCode(byte); });
+  return btoa(binary).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/g, '');
+}
+
+function publicPassportUrl() {
+  const url = new URL('./passport.html', window.location.href);
+  const compactPhoto = builderPassport.visibleFields.photo && personData.photo.length < 60000 ? personData.photo : '';
+  const payload = { version: 1, name: personFullName(), id: currentId, photo: compactPhoto, entries: passportPublicEntries(), updatedAt: new Date().toISOString() };
+  url.hash = `p=${encodePassportPayload(payload)}`;
+  return url.href;
+}
+
+async function sharePassport() {
+  if (!builderPassport.important.passportAvailable) {
+    passportImportantExpanded = true;
+    renderPassportEditor();
+    showToast(tr('passportAccessRequired'));
+    return;
+  }
+  const url = publicPassportUrl();
+  if (navigator.share) {
+    try { await navigator.share({ title: `${tr('builderPassport')} · ${personFullName()}`, text: `StructOS ID ${currentId}`, url }); return; }
+    catch (error) { if (error?.name === 'AbortError') return; }
+  }
+  try { await navigator.clipboard.writeText(url); }
+  catch { const input = document.createElement('input'); input.value = url; document.body.append(input); input.select(); document.execCommand('copy'); input.remove(); }
+  showToast(tr('passportLinkCopied'));
+}
+
+function resumeInformationRows() {
+  const rows = [[tr('structosId'), currentId], [tr('birthDate'), personData.birthDate], [tr('nationality'), personData.nationality], [tr('citizenship'), personData.citizenship], [tr('permanentResidence'), personData.residenceCountry], [tr('businessTrips'), typeof builderPassport.businessTrips === 'boolean' ? tr(builderPassport.businessTrips ? 'yes' : 'no') : '—'], [tr('profession'), profileData.profession], [tr('phone'), profileData.phone], ['Email', profileData.email], [tr('workGeography'), builderPassport.workLocations.filter((item) => item.country || item.city).map((item) => [item.country, item.city].filter(Boolean).join(', ')).join(' · ')]];
+  return rows.filter(([, value]) => value).map(([label, value]) => [{ text: label, bold: true, color: '#075cd3', margin: [0, 5] }, { text: String(value), margin: [0, 5] }]);
+}
+
+async function createResumePdf() {
+  const [{ default: pdfMake }, { default: pdfFonts }] = await Promise.all([import('pdfmake/build/pdfmake.js'), import('pdfmake/build/vfs_fonts.js')]);
+  const logo = await loadReportLogo();
+  pdfMake.vfs = pdfFonts?.pdfMake?.vfs || pdfFonts?.vfs || pdfFonts;
+  const name = personFullName();
+  const headerColumns = [{ width: 64, image: personData.photo || logo, fit: [58, 58], margin: [0, 0, 12, 0] }, { width: '*', stack: [{ text: name, fontSize: 21, bold: true, color: '#075cd3' }, { text: profileData.profession || tr('builderPassport'), fontSize: 11, color: '#43546a', margin: [0, 5, 0, 2] }, { text: `StructOS ID ${currentId}`, fontSize: 10, color: '#0b2e59' }] }];
+  const definition = {
+    pageSize: 'A4', pageMargins: [40, 42, 40, 92], defaultStyle: { font: 'Roboto', fontSize: 10, color: '#14213d' },
+    content: [{ columns: headerColumns, columnGap: 12, margin: [0, 0, 0, 20] }, { canvas: [{ type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineColor: '#75aee9', lineWidth: 1 }] }, { text: tr('personalData'), fontSize: 14, bold: true, color: '#075cd3', margin: [0, 18, 0, 8] }, { table: { widths: [170, '*'], body: resumeInformationRows() }, layout: { hLineColor: '#d7e2ef', vLineColor: '#d7e2ef', paddingLeft: () => 9, paddingRight: () => 9, paddingTop: () => 5, paddingBottom: () => 5 } }],
+    footer: () => ({ columns: [{ image: logo, width: 34 }, { width: '*', stack: [{ text: STRUCTOS_DOCUMENT_BRAND.made, bold: true, color: '#075cd3', fontSize: 9 }, { text: STRUCTOS_DOCUMENT_BRAND.site, color: '#64748b', fontSize: 7 }, { text: STRUCTOS_DOCUMENT_BRAND.slogan, color: '#64748b', fontSize: 7 }] }], columnGap: 8, margin: [40, 8, 40, 18] })
+  };
+  return new Promise((resolve) => pdfMake.createPdf(definition).getBlob(resolve));
+}
+
+async function shareResume() {
+  try {
+    const blob = await createResumePdf();
+    const safeName = personFullName().replace(/[^\p{L}\p{N}_-]+/gu, '_').slice(0, 70) || 'StructOS';
+    const file = new File([blob], `StructOS_Резюме_${safeName}.pdf`, { type: 'application/pdf' });
+    const data = { title: `${tr('resume')} · ${personFullName()}`, text: `StructOS ID ${currentId}`, files: [file] };
+    if (navigator.share && (!navigator.canShare || navigator.canShare(data))) {
+      try { await navigator.share(data); showToast(tr('resumeReady')); return; }
+      catch (error) { if (error?.name === 'AbortError') return; }
+    }
+    downloadReportBlob(blob, file.name);
+    showToast(tr('resumeReady'));
+  } catch (error) { console.warn('StructOS resume export failed:', error); showToast(tr('comingSoon')); }
+}
+
 function saveFinance() {
   localStorage.setItem(FINANCE_KEY, JSON.stringify(finance));
 }
@@ -539,6 +632,14 @@ function passportInputCard(key, label, inputMarkup) {
   return `<section class="passport-field-card"><label><span class="passport-field-label">${label}</span>${inputMarkup}</label></section>`;
 }
 
+function passportIdActionsMarkup() {
+  return `<section class="passport-id-actions" aria-label="${escapeHtml(tr('structosId'))}"><button type="button" class="passport-id-value" data-copy-passport-id title="${escapeHtml(tr('copyIdLabel'))}"><span>StructOS ID</span><strong>${escapeHtml(currentId)}</strong><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button><button type="button" data-share-resume title="${escapeHtml(tr('shareResume'))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l4 4v16H6zM14 2v5h5M9 12h6M9 16h6"/><path d="M12 5v5m0 0 2-2m-2 2-2-2"/></svg><span>${tr('shareResume')}</span></button><button type="button" data-share-passport title="${escapeHtml(tr('sharePassport'))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"/></svg><span>${tr('sharePassport')}</span></button></section>`;
+}
+
+function passportBusinessTripsMarkup() {
+  return `<section class="passport-field-card passport-business-trips"><span class="passport-field-label">${tr('businessTrips')}</span><div><label><input type="radio" name="business-trips" value="yes" data-passport-business-trips${builderPassport.businessTrips === true ? ' checked' : ''} /><span>${tr('yes')}</span></label><label><input type="radio" name="business-trips" value="no" data-passport-business-trips${builderPassport.businessTrips === false ? ' checked' : ''} /><span>${tr('no')}</span></label></div></section>`;
+}
+
 function maritalOptionsMarkup() {
   return `<option value="">${tr('selectStatus')}</option>${['single', 'married', 'divorced', 'widowed'].map((value) => `<option value="${value}"${personData.maritalStatus === value ? ' selected' : ''}>${tr(`${value}Status`)}</option>`).join('')}`;
 }
@@ -555,7 +656,7 @@ function passportYesNoMarkup(key, label) {
 }
 
 function passportVisibilityMarkup() {
-  const labels = { photo: 'photo', id: 'structosId', lastName: 'surname', firstName: 'givenName', patronymic: 'patronymic', birthDate: 'birthDate', maritalStatus: 'maritalStatus', nationality: 'nationality', citizenship: 'citizenship', patent: 'patentAvailable', workPermit: 'workPermitAvailable', residenceCountry: 'permanentResidence', workLocations: 'workGeography' };
+  const labels = { photo: 'photo', id: 'structosId', lastName: 'surname', firstName: 'givenName', patronymic: 'patronymic', birthDate: 'birthDate', maritalStatus: 'maritalStatus', nationality: 'nationality', citizenship: 'citizenship', businessTrips: 'businessTrips', patent: 'patentAvailable', workPermit: 'workPermitAvailable', residenceCountry: 'permanentResidence', workLocations: 'workGeography' };
   return passportVisibilityKeys.map((key) => `<label class="passport-visible-field"><input type="checkbox" data-passport-visible="${key}"${builderPassport.visibleFields[key] ? ' checked' : ''} /><span>✓</span><strong>${tr(labels[key])}</strong></label>`).join('');
 }
 
@@ -567,7 +668,30 @@ function passportImportantMarkup() {
 
 function passportEditorMarkup() {
   const foreign = isForeignCitizen();
-  return `<form class="builder-passport-form" data-passport-form><section class="passport-sync-note"><span>↔</span><p>${tr('sharedDataHint')}</p></section>${passportImportantMarkup()}<section class="passport-form-section"><header><div><span class="eyebrow">STRUCTOS IDENTITY</span><h2>${tr('personalData')}</h2></div></header>${passportPhotoMarkup()}<div class="passport-fields-grid">${passportInputCard('id', tr('structosId'), `<input type="text" value="${escapeHtml(currentId)}" readonly />`)}${passportInputCard('lastName', tr('surname'), `<input type="text" maxlength="80" autocomplete="family-name" data-person-field="lastName" value="${escapeHtml(personData.lastName)}" />`)}${passportInputCard('firstName', tr('givenName'), `<input type="text" maxlength="80" autocomplete="given-name" data-person-field="firstName" value="${escapeHtml(personData.firstName)}" />`)}${passportInputCard('patronymic', tr('patronymic'), `<input type="text" maxlength="80" data-person-field="patronymic" value="${escapeHtml(personData.patronymic)}" />`)}${passportInputCard('birthDate', tr('birthDate'), `<input type="date" max="${localDateKey()}" autocomplete="bday" data-person-field="birthDate" value="${escapeHtml(personData.birthDate)}" />`)}${passportInputCard('maritalStatus', tr('maritalStatus'), `<select data-person-field="maritalStatus">${maritalOptionsMarkup()}</select>`)}${passportInputCard('nationality', tr('nationality'), `<input type="text" maxlength="100" data-person-field="nationality" value="${escapeHtml(personData.nationality)}" />`)}${passportInputCard('citizenship', tr('citizenship'), `<input type="text" maxlength="100" list="passport-country-options" data-person-field="citizenship" value="${escapeHtml(personData.citizenship)}" placeholder="${escapeHtml(tr('selectCountry'))}" />`)}${passportInputCard('residenceCountry', tr('permanentResidence'), `<input type="text" maxlength="100" list="passport-country-options" data-person-field="residenceCountry" value="${escapeHtml(personData.residenceCountry)}" placeholder="${escapeHtml(tr('selectCountry'))}" />`)}<datalist id="passport-country-options">${passportCountryOptionsMarkup()}</datalist></div><section class="passport-foreign-documents" data-foreign-documents${foreign ? '' : ' hidden'}><h3>${tr('foreignDocuments')}</h3><div>${passportInputCard('patent', tr('patentAvailable'), `<span class="passport-document-check"><input type="checkbox" data-passport-field="patent"${builderPassport.patent ? ' checked' : ''} /><span>✓</span></span>`)}${passportInputCard('workPermit', tr('workPermitAvailable'), `<span class="passport-document-check"><input type="checkbox" data-passport-field="workPermit"${builderPassport.workPermit ? ' checked' : ''} /><span>✓</span></span>`)}</div></section></section><section class="passport-form-section passport-geography-section"><header><div><span class="eyebrow">STRUCTOS GEO</span><h2>${tr('workGeography')}</h2><p>${tr('workGeographyHint')}</p></div></header><div class="passport-locations" data-passport-locations>${builderPassport.workLocations.map(passportLocationMarkup).join('')}</div><button class="outline-button passport-add-location" type="button" data-add-passport-location>＋ ${tr('addCountryCity')}</button></section><button class="primary-button passport-save-button" type="submit">${tr('savePassport')}</button></form>`;
+  return `<form class="builder-passport-form" data-passport-form>
+    <section class="passport-sync-note"><span>↔</span><p>${tr('sharedDataHint')}</p></section>
+    ${passportImportantMarkup()}
+    <section class="passport-form-section">
+      <header><div><span class="eyebrow">STRUCTOS IDENTITY</span><h2>${tr('personalData')}</h2></div></header>
+      ${passportPhotoMarkup()}
+      ${passportIdActionsMarkup()}
+      <div class="passport-fields-grid">
+        ${passportInputCard('lastName', tr('surname'), `<input type="text" maxlength="80" autocomplete="family-name" data-person-field="lastName" value="${escapeHtml(personData.lastName)}" />`)}
+        ${passportInputCard('firstName', tr('givenName'), `<input type="text" maxlength="80" autocomplete="given-name" data-person-field="firstName" value="${escapeHtml(personData.firstName)}" />`)}
+        ${passportInputCard('patronymic', tr('patronymic'), `<input type="text" maxlength="80" data-person-field="patronymic" value="${escapeHtml(personData.patronymic)}" />`)}
+        ${passportInputCard('birthDate', tr('birthDate'), `<input type="date" max="${localDateKey()}" autocomplete="bday" data-person-field="birthDate" value="${escapeHtml(personData.birthDate)}" />`)}
+        ${passportInputCard('maritalStatus', tr('maritalStatus'), `<select data-person-field="maritalStatus">${maritalOptionsMarkup()}</select>`)}
+        ${passportInputCard('nationality', tr('nationality'), `<input type="text" maxlength="100" data-person-field="nationality" value="${escapeHtml(personData.nationality)}" />`)}
+        ${passportInputCard('citizenship', tr('citizenship'), `<input type="text" maxlength="100" list="passport-country-options" data-person-field="citizenship" value="${escapeHtml(personData.citizenship)}" placeholder="${escapeHtml(tr('selectCountry'))}" />`)}
+        ${passportInputCard('residenceCountry', tr('permanentResidence'), `<input type="text" maxlength="100" list="passport-country-options" data-person-field="residenceCountry" value="${escapeHtml(personData.residenceCountry)}" placeholder="${escapeHtml(tr('selectCountry'))}" />`)}
+        ${passportBusinessTripsMarkup()}
+        <datalist id="passport-country-options">${passportCountryOptionsMarkup()}</datalist>
+      </div>
+      <section class="passport-foreign-documents" data-foreign-documents${foreign ? '' : ' hidden'}><h3>${tr('foreignDocuments')}</h3><div>${passportInputCard('patent', tr('patentAvailable'), `<span class="passport-document-check"><input type="checkbox" data-passport-field="patent"${builderPassport.patent ? ' checked' : ''} /><span>✓</span></span>`)}${passportInputCard('workPermit', tr('workPermitAvailable'), `<span class="passport-document-check"><input type="checkbox" data-passport-field="workPermit"${builderPassport.workPermit ? ' checked' : ''} /><span>✓</span></span>`)}</div></section>
+    </section>
+    <section class="passport-form-section passport-geography-section"><header><div><span class="eyebrow">STRUCTOS GEO</span><h2>${tr('workGeography')}</h2><p>${tr('workGeographyHint')}</p></div></header><div class="passport-locations" data-passport-locations>${builderPassport.workLocations.map(passportLocationMarkup).join('')}</div><button class="outline-button passport-add-location" type="button" data-add-passport-location>＋ ${tr('addCountryCity')}</button></section>
+    <button class="primary-button passport-save-button" type="submit">${tr('savePassport')}</button>
+  </form>`;
 }
 
 function updateForeignDocumentVisibility(scope) {
@@ -607,6 +731,10 @@ function renderPassportEditor() {
     if (input.dataset.personField === 'citizenship') updateForeignDocumentVisibility(form);
   }));
   $$('[data-passport-field]', form).forEach((input) => input.addEventListener('change', () => { builderPassport[input.dataset.passportField] = input.checked; }));
+  $$('[data-passport-business-trips]', form).forEach((input) => input.addEventListener('change', () => { if (input.checked) builderPassport.businessTrips = input.value === 'yes'; }));
+  $('[data-copy-passport-id]', form)?.addEventListener('click', copyId);
+  $('[data-share-resume]', form)?.addEventListener('click', shareResume);
+  $('[data-share-passport]', form)?.addEventListener('click', sharePassport);
   $('[data-passport-important-toggle]', form)?.addEventListener('click', () => { passportImportantExpanded = !passportImportantExpanded; renderPassportEditor(); });
   $$('[data-passport-important]', form).forEach((input) => input.addEventListener('change', () => {
     builderPassport.important[input.dataset.passportImportant] = input.checked;
@@ -742,7 +870,18 @@ function setPanel(name) {
   if (next === 'objects') renderObjects();
   if (next === 'cashflow') renderCashflow();
   if (next === 'passport') renderPassportEditor();
+  setBottomMenu(false);
   closeMenu();
+}
+
+function setBottomMenu(open) {
+  const menu = $('[data-bottom-menu]');
+  const nav = $('[data-bottom-nav]');
+  const toggle = $('[data-bottom-menu-toggle]');
+  if (!menu || !nav || !toggle) return;
+  menu.classList.toggle('is-open', open);
+  nav.hidden = !open;
+  toggle.setAttribute('aria-expanded', String(open));
 }
 
 function openMenu() {
@@ -801,7 +940,7 @@ const passportCountryDirectory = [
   { code: 'DE', names: { RU: 'Германия', EN: 'Germany', KY: 'Германия', TJ: 'Олмон' }, cities: ['Берлин', 'Мюнхен', 'Гамбург', 'Франкфурт'] }
 ];
 
-const passportVisibilityKeys = ['photo', 'id', 'lastName', 'firstName', 'patronymic', 'birthDate', 'maritalStatus', 'nationality', 'citizenship', 'patent', 'workPermit', 'residenceCountry', 'workLocations'];
+const passportVisibilityKeys = ['photo', 'id', 'lastName', 'firstName', 'patronymic', 'birthDate', 'maritalStatus', 'nationality', 'citizenship', 'businessTrips', 'patent', 'workPermit', 'residenceCountry', 'workLocations'];
 
 function defaultPassportVisibility() {
   return Object.fromEntries(passportVisibilityKeys.map((key) => [key, true]));
@@ -839,6 +978,7 @@ function loadBuilderPassport() {
   return {
     patent: Boolean(saved.patent),
     workPermit: Boolean(saved.workPermit),
+    businessTrips: typeof saved.businessTrips === 'boolean' ? saved.businessTrips : null,
     workLocations: workLocations.length ? workLocations : [{ id: `place-${Date.now()}`, country: '', city: '' }],
     important: {
       contractorSearch: Boolean(saved.important?.contractorSearch ?? saved.preferences?.participateSearch),
@@ -879,7 +1019,7 @@ function isForeignCitizen() {
 }
 
 function passportCompletion() {
-  const values = [true, personData.photo, personData.lastName, personData.firstName, personData.patronymic, personData.birthDate, personData.maritalStatus, personData.nationality, personData.citizenship, personData.residenceCountry, builderPassport.workLocations.some((item) => item.country.trim() && item.city.trim())];
+  const values = [true, personData.photo, personData.lastName, personData.firstName, personData.patronymic, personData.birthDate, personData.maritalStatus, personData.nationality, personData.citizenship, personData.residenceCountry, typeof builderPassport.businessTrips === 'boolean', builderPassport.workLocations.some((item) => item.country.trim() && item.city.trim())];
   return Math.round(values.filter(Boolean).length / values.length * 100);
 }
 
@@ -1980,7 +2120,7 @@ function reportPreviewPartiesMarkup(parties) {
 }
 
 function reportPreviewMarkup(report) {
-  return `<article class="report-preview-sheet"><header><div><span>STRUCTOS REPORT</span><h2>${escapeHtml(report.title)}</h2>${report.documentNumber ? `<p>${escapeHtml(report.numberLabel || tr('documentNumber'))}: ${escapeHtml(report.documentNumber)}</p>` : ''}</div><img src="${reportPreviewLogoUrl}" alt="StructOS" /></header><div class="report-preview-meta"><p><strong>${tr('objects')}:</strong> ${escapeHtml(report.objectName)}</p><p><strong>${tr('sectionName')}:</strong> ${escapeHtml(report.sectionName)}</p></div>${report.tables.map(reportPreviewTableMarkup).join('')}${reportPreviewPartiesMarkup(report.parties)}<footer><img src="${reportPreviewLogoUrl}" alt="" /><div><strong>StructOS</strong><span>${tr('madeInStructos')}</span><span>${tr('website')}</span></div></footer></article>`;
+  return `<article class="report-preview-sheet"><header><div><span>STRUCTOS REPORT</span><h2>${escapeHtml(report.title)}</h2>${report.documentNumber ? `<p>${escapeHtml(report.numberLabel || tr('documentNumber'))}: ${escapeHtml(report.documentNumber)}</p>` : ''}</div><img src="${reportPreviewLogoUrl}" alt="StructOS" /></header><div class="report-preview-meta"><p><strong>${tr('objects')}:</strong> ${escapeHtml(report.objectName)}</p><p><strong>${tr('sectionName')}:</strong> ${escapeHtml(report.sectionName)}</p></div>${report.tables.map(reportPreviewTableMarkup).join('')}${reportPreviewPartiesMarkup(report.parties)}<footer><img src="${reportPreviewLogoUrl}" alt="" /><div><strong>${STRUCTOS_DOCUMENT_BRAND.made}</strong><span>${STRUCTOS_DOCUMENT_BRAND.site}</span><span>${STRUCTOS_DOCUMENT_BRAND.slogan}</span></div></footer></article>`;
 }
 
 function openCashReportPreview(report, getDeliveryReport = () => report, onSuccess = null) {
@@ -2022,7 +2162,7 @@ async function createPdfReport(report) {
     pageSize: 'A4', pageMargins: [34, 38, 34, 88], defaultStyle: { font: 'Roboto', fontSize: 9, color: '#14213d' },
     styles: { title: { fontSize: 18, bold: true, color: '#075cd3', margin: [0, 0, 0, 10] }, meta: { fontSize: 10, color: '#43546a', margin: [0, 0, 0, 3] }, sectionTitle: { fontSize: 12, bold: true, color: '#075cd3' }, tableHeader: { bold: true, color: '#0b2e59', fontSize: 8 } },
     content,
-    footer: () => ({ columns: [{ text: '' }, { width: 155, stack: [{ image: logo, width: 30, alignment: 'right' }, { text: 'StructOS', bold: true, fontSize: 11, color: '#075cd3', alignment: 'right' }, { text: `${tr('madeInStructos')} · ${tr('website')}`, fontSize: 7, color: '#64748b', alignment: 'right' }] }], margin: [34, 8, 34, 18] })
+    footer: () => ({ columns: [{ text: '' }, { width: 230, stack: [{ image: logo, width: 30, alignment: 'right' }, { text: STRUCTOS_DOCUMENT_BRAND.made, bold: true, fontSize: 9, color: '#075cd3', alignment: 'right' }, { text: STRUCTOS_DOCUMENT_BRAND.site, fontSize: 7, color: '#64748b', alignment: 'right' }, { text: STRUCTOS_DOCUMENT_BRAND.slogan, fontSize: 7, color: '#64748b', alignment: 'right' }] }], margin: [34, 6, 34, 15] })
   };
   return new Promise((resolve) => pdfMake.createPdf(definition).getBlob(resolve));
 }
@@ -2061,7 +2201,7 @@ async function createExcelReport(report) {
   const logo = await loadReportLogo();
   const imageId = workbook.addImage({ base64: logo, extension: 'png' });
   worksheet.addImage(imageId, { tl: { col: maxColumns - 3, row: cursor - 1 }, ext: { width: 46, height: 46 } });
-  worksheet.mergeCells(cursor, maxColumns - 2, cursor + 1, maxColumns); const brandCell = worksheet.getCell(cursor, maxColumns - 2); brandCell.value = `StructOS\n${tr('madeInStructos')}\n${tr('website')}`; brandCell.font = { bold: true, color: { argb: 'FF075CD3' }, size: 10 }; brandCell.alignment = { horizontal: 'right', vertical: 'middle', wrapText: true }; worksheet.getRow(cursor).height = 32; worksheet.getRow(cursor + 1).height = 20;
+  worksheet.mergeCells(cursor, maxColumns - 2, cursor + 2, maxColumns); const brandCell = worksheet.getCell(cursor, maxColumns - 2); brandCell.value = `${STRUCTOS_DOCUMENT_BRAND.made}\n${STRUCTOS_DOCUMENT_BRAND.site}\n${STRUCTOS_DOCUMENT_BRAND.slogan}`; brandCell.font = { bold: true, color: { argb: 'FF075CD3' }, size: 10 }; brandCell.alignment = { horizontal: 'right', vertical: 'middle', wrapText: true }; worksheet.getRow(cursor).height = 32; worksheet.getRow(cursor + 1).height = 20; worksheet.getRow(cursor + 2).height = 20;
   const widths = [12, 36, 18, 22, 18, 18]; for (let index = 1; index <= maxColumns; index += 1) worksheet.getColumn(index).width = widths[index - 1] || 18;
   worksheet.views = [{ state: 'frozen', ySplit: metaRow + 2 }];
   const buffer = await workbook.xlsx.writeBuffer();
@@ -2428,7 +2568,7 @@ function drawingCanvasBlob(type, quality) {
   return new Promise((resolve, reject) => drawingCanvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error('Canvas export failed')), type, quality));
 }
 
-function createPdfBlob(jpegBytes) {
+function createPdfBlob(jpegBytes, width = drawingCanvas.width, height = drawingCanvas.height) {
   const encoder = new TextEncoder();
   const chunks = [];
   const offsets = [0];
@@ -2441,21 +2581,39 @@ function createPdfBlob(jpegBytes) {
   append('%PDF-1.4\n%StructOS\n');
   offsets[1] = length; append('1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n');
   offsets[2] = length; append('2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n');
-  offsets[3] = length; append(`3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${drawingCanvas.width} ${drawingCanvas.height}] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>\nendobj\n`);
-  offsets[4] = length; append(`4 0 obj\n<< /Type /XObject /Subtype /Image /Width ${drawingCanvas.width} /Height ${drawingCanvas.height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpegBytes.length} >>\nstream\n`); append(jpegBytes); append('\nendstream\nendobj\n');
-  const content = `q\n${drawingCanvas.width} 0 0 ${drawingCanvas.height} 0 0 cm\n/Im0 Do\nQ\n`;
+  offsets[3] = length; append(`3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${width} ${height}] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>\nendobj\n`);
+  offsets[4] = length; append(`4 0 obj\n<< /Type /XObject /Subtype /Image /Width ${width} /Height ${height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpegBytes.length} >>\nstream\n`); append(jpegBytes); append('\nendstream\nendobj\n');
+  const content = `q\n${width} 0 0 ${height} 0 0 cm\n/Im0 Do\nQ\n`;
   offsets[5] = length; append(`5 0 obj\n<< /Length ${encoder.encode(content).length} >>\nstream\n${content}endstream\nendobj\n`);
   const xrefOffset = length;
   append(`xref\n0 6\n0000000000 65535 f \n${offsets.slice(1).map((offset) => `${String(offset).padStart(10, '0')} 00000 n \n`).join('')}trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF`);
   return new Blob(chunks, { type: 'application/pdf' });
 }
 
+async function brandedDrawingJpeg() {
+  const footerHeight = 112;
+  const canvas = document.createElement('canvas');
+  canvas.width = drawingCanvas.width; canvas.height = drawingCanvas.height + footerHeight;
+  const context = canvas.getContext('2d');
+  context.fillStyle = '#ffffff'; context.fillRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(drawingCanvas, 0, 0);
+  context.strokeStyle = '#b8c9dc'; context.beginPath(); context.moveTo(22, drawingCanvas.height + 12); context.lineTo(canvas.width - 22, drawingCanvas.height + 12); context.stroke();
+  const logoSource = await loadReportLogo();
+  const logo = await new Promise((resolve, reject) => { const image = new Image(); image.onload = () => resolve(image); image.onerror = reject; image.src = logoSource; });
+  context.drawImage(logo, 24, drawingCanvas.height + 27, 58, 58);
+  context.fillStyle = '#075cd3'; context.font = '700 17px Inter, Arial, sans-serif'; context.fillText(STRUCTOS_DOCUMENT_BRAND.made, 94, drawingCanvas.height + 43);
+  context.fillStyle = '#64748b'; context.font = '12px Inter, Arial, sans-serif'; context.fillText(STRUCTOS_DOCUMENT_BRAND.site, 94, drawingCanvas.height + 63);
+  context.fillText(STRUCTOS_DOCUMENT_BRAND.slogan, 94, drawingCanvas.height + 83);
+  const blob = await new Promise((resolve, reject) => canvas.toBlob((value) => value ? resolve(value) : reject(new Error('Canvas export failed')), 'image/jpeg', .92));
+  return { bytes: new Uint8Array(await blob.arrayBuffer()), width: canvas.width, height: canvas.height };
+}
+
 async function createDrawingFile(format) {
   initializeDrawingCanvas();
   const safeTitle = ($('[data-drawing-title]').value.trim() || 'structos-sketch').replace(/[^\p{L}\p{N}_-]+/gu, '-').replace(/^-+|-+$/g, '') || 'structos-sketch';
   if (format === 'pdf') {
-    const jpeg = await drawingCanvasBlob('image/jpeg', .92);
-    const blob = createPdfBlob(new Uint8Array(await jpeg.arrayBuffer()));
+    const branded = await brandedDrawingJpeg();
+    const blob = createPdfBlob(branded.bytes, branded.width, branded.height);
     return new File([blob], `${safeTitle}.pdf`, { type: 'application/pdf' });
   }
   const isJpeg = format === 'jpg';
@@ -3190,6 +3348,8 @@ $$('[data-menu-close]').forEach((button) => button.addEventListener('click', clo
 $$('[data-copy-id]').forEach((button) => button.addEventListener('click', copyId));
 $$('[data-copy-referral]').forEach((button) => button.addEventListener('click', copyReferral));
 $$('[data-share-referral]').forEach((button) => button.addEventListener('click', shareReferral));
+$('[data-bottom-menu-toggle]')?.addEventListener('click', () => setBottomMenu(!$('[data-bottom-menu]').classList.contains('is-open')));
+$('[data-bottom-menu-close]')?.addEventListener('click', () => setBottomMenu(false));
 $$('[data-tab]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.tab)));
 $$('[data-open-panel]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.openPanel)));
 $$('[data-open-view]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.openView)));
