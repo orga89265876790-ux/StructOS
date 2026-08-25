@@ -252,6 +252,11 @@ Object.assign(copy.EN, { openDocument: 'Open', replaceDocument: 'Replace', choos
 Object.assign(copy.KY, { openDocument: 'Ачуу', replaceDocument: 'Алмаштыруу', chooseReportDocument: 'Эмнени ачуу керек?', chooseReportDocumentHint: 'Жүктөлгөн документтердин биринин жыйынтыгын тандаңыз.', analysisNotReady: 'Документ али талдана элек', analysisNotReadyHint: 'Деталдуу баракты ачуу үчүн адегенде объектти талдаңыз.', runAnalysisNow: 'Азыр талдоо', projectAnalysis: 'Долбоорду деталдуу талдоо', backToProjects: 'Менин долбоорлорума', sourceFile: 'Булак', analyzedDataOnly: 'StructOS жүктөлгөн файлдан алынган маалыматты гана көрсөтөт. Жетишпеген маанилер ойлоп табылбайт.', commercialProposal: 'Коммерциялык сунуш', projectBySheets: 'Долбоор барактар боюнча', projectBySystems: 'Долбоор системалар боюнча', projectMaterials: 'Долбоордун материалдары', billOfQuantities: 'Иш көлөмдөрүнүн ведомосту', section: 'Бөлүм', sheetNumber: 'Барак', sheetName: 'Барактын аталышы', system: 'Система', sheets: 'Барактар', materials: 'Материалдар', materialName: 'Материалдын аталышы', works: 'Иштер', markType: 'Марка / түрү', source: 'Булак', statusLabel: 'Статус', extractionPending: 'Маалымат чыгарылышын күтүп жатат', extractionPendingCopy: 'Бөлүмдүн түзүмү даяр. Сервердик талдоо кошулгандан кийин саптар пайда болот.', analyzedDocumentPage: 'Талдоо барагы даяр', analyzedDocumentPageCopy: 'Файл сакталды жана тандалды. Бул документтин деталдуу түзүмүн кийинки этапта талкуулайбыз.' });
 Object.assign(copy.TJ, { openDocument: 'Кушодан', replaceDocument: 'Иваз кардан', chooseReportDocument: 'Чиро кушоем?', chooseReportDocumentHint: 'Натиҷаи яке аз ҳуҷҷатҳои боршударо интихоб кунед.', analysisNotReady: 'Ҳуҷҷат ҳанӯз таҳлил нашудааст', analysisNotReadyHint: 'Барои кушодани саҳифаи муфассал аввал таҳлили объектро оғоз кунед.', runAnalysisNow: 'Ҳозир таҳлил кардан', projectAnalysis: 'Таҳлили муфассали лоиҳа', backToProjects: 'Ба лоиҳаҳои ман', sourceFile: 'Манбаъ', analyzedDataOnly: 'StructOS танҳо маълумоти аз файли боршуда гирифташударо нишон медиҳад. Маълумоти набуда сохта намешавад.', commercialProposal: 'Пешниҳоди тиҷоратӣ', projectBySheets: 'Лоиҳа аз рӯи варақҳо', projectBySystems: 'Лоиҳа аз рӯи системаҳо', projectMaterials: 'Маводи лоиҳа', billOfQuantities: 'Рӯйхати ҳаҷми корҳо', section: 'Бахш', sheetNumber: 'Варақ', sheetName: 'Номи варақ', system: 'Система', sheets: 'Варақҳо', materials: 'Мавод', materialName: 'Номи мавод', works: 'Корҳо', markType: 'Тамға / навъ', source: 'Манбаъ', statusLabel: 'Ҳолат', extractionPending: 'Интизори гирифтани маълумот', extractionPendingCopy: 'Сохтори ҷадвал омода аст. Пас аз пайвасти таҳлили серверӣ сатрҳо пайдо мешаванд.', analyzedDocumentPage: 'Саҳифаи таҳлил омода аст', analyzedDocumentPageCopy: 'Файл нигоҳ дошта ва интихоб шуд. Сохтори муфассали ин ҳуҷҷатро дар марҳилаи навбатӣ муайян мекунем.' });
 
+Object.assign(copy.RU, { constructionActivityBlock: 'Блок строительной активности', constructionActivityIntro: 'Все ваши действия в StructOS формируют деловую активность. Чем она выше, тем раньше вы получите подходящие предложения.', last30Days: 'За последние 30 дней', businessActivity: 'Деловая активность', cabinetWork: 'Работа с личным кабинетом', projectWork: 'Работа с проектом', activityTotal: 'Всего', daysWithStructos: 'Дней со StructOS', invitedToStructos: 'Приглашено в StructOS', activityActions: 'действий' });
+Object.assign(copy.EN, { constructionActivityBlock: 'Construction activity', constructionActivityIntro: 'Every action in StructOS builds your business activity. The higher it is, the sooner suitable offers are shown to you.', last30Days: 'Last 30 days', businessActivity: 'Business activity', cabinetWork: 'Dashboard activity', projectWork: 'Project activity', activityTotal: 'Total', daysWithStructos: 'Days with StructOS', invitedToStructos: 'Invited to StructOS', activityActions: 'actions' });
+Object.assign(copy.KY, { constructionActivityBlock: 'Курулуш активдүүлүгү', constructionActivityIntro: 'StructOS ичиндеги бардык аракеттериңиз ишкердик активдүүлүктү түзөт. Ал канчалык жогору болсо, ылайыктуу сунуштарды ошончолук эрте аласыз.', last30Days: 'Акыркы 30 күндө', businessActivity: 'Ишкердик активдүүлүк', cabinetWork: 'Жеке кабинеттеги иш', projectWork: 'Долбоор менен иш', activityTotal: 'Бардыгы', daysWithStructos: 'StructOS менен күндөр', invitedToStructos: 'StructOSко чакырылды', activityActions: 'аракет' });
+Object.assign(copy.TJ, { constructionActivityBlock: 'Фаъолияти сохтмонӣ', constructionActivityIntro: 'Ҳамаи амалҳои шумо дар StructOS фаъолияти кориро ташаккул медиҳанд. Ҳар қадар он баланд бошад, пешниҳодҳои мувофиқ ҳамон қадар барвақттар нишон дода мешаванд.', last30Days: 'Дар 30 рӯзи охир', businessActivity: 'Фаъолияти корӣ', cabinetWork: 'Кор дар кабинети шахсӣ', projectWork: 'Кор бо лоиҳа', activityTotal: 'Ҳамагӣ', daysWithStructos: 'Рӯз бо StructOS', invitedToStructos: 'Ба StructOS даъват шуд', activityActions: 'амал' });
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -268,7 +273,9 @@ const PERSON_DATA_KEY = 'structos-person-data-v1';
 const PROFILE_DATA_KEY = 'structos-profile-data-v1';
 const BUILDER_PASSPORT_KEY = 'structos-builder-passport-v1';
 const STRUCTOS_DOCUMENT_BRAND = Object.freeze({ made: 'Сделано на StructOS', site: 'www.structOS.ru', slogan: 'Единый Строительный Интеллект в России №1' });
-const BOTTOM_MENU_POSITION_KEY = 'structos-bottom-menu-position-v1';
+const BOTTOM_MENU_POSITION_KEY = 'structos-bottom-menu-position-v2';
+const ACTIVITY_KEY = 'structos-construction-activity-v1';
+const FIRST_ACTIVITY_KEY = 'structos-first-activity-v1';
 const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
 const WIDGET_STYLES_KEY = 'structos-space-widget-styles-v1';
 const TODO_KEY = 'structos-space-todo-v1';
@@ -310,6 +317,93 @@ function loadFinance() {
 }
 
 const finance = loadFinance();
+
+function loadActivityLog() {
+  const stored = readStoredJSON(ACTIVITY_KEY, []);
+  if (!Array.isArray(stored)) return [];
+  return stored.filter((entry) => entry && ['cabinet', 'project'].includes(entry.type) && entry.date)
+    .map((entry) => ({ type: entry.type, action: String(entry.action || 'action').slice(0, 80), date: entry.date }))
+    .filter((entry) => Number.isFinite(new Date(entry.date).getTime()))
+    .slice(-1200);
+}
+
+let activityLog = loadActivityLog();
+
+function ensureFirstActivityDate() {
+  const saved = localStorage.getItem(FIRST_ACTIVITY_KEY);
+  if (saved && Number.isFinite(new Date(saved).getTime())) return saved;
+  const knownDates = [
+    ...(finance.balanceHistory || []).map((entry) => entry.date),
+    ...(finance.bonusHistory || []).map((entry) => entry.date),
+    ...objectRegistry.flatMap((object) => [object.uploadedAt, object.analyzedAt, object.startedAt, object.completedAt]),
+    ...activityLog.map((entry) => entry.date)
+  ].filter((value) => Number.isFinite(new Date(value).getTime()));
+  const first = knownDates.length ? knownDates.sort((a, b) => new Date(a) - new Date(b))[0] : new Date().toISOString();
+  localStorage.setItem(FIRST_ACTIVITY_KEY, first);
+  return first;
+}
+
+function recordActivity(type, action, options = {}) {
+  if (!['cabinet', 'project'].includes(type)) return;
+  const now = new Date();
+  const actionKey = String(action || 'action').slice(0, 80);
+  const sameDay = options.daily && activityLog.some((entry) => entry.type === type && entry.action === actionKey && new Date(entry.date).toDateString() === now.toDateString());
+  const recentlyRecorded = !options.daily && activityLog.some((entry) => entry.type === type && entry.action === actionKey && now - new Date(entry.date) < 60000);
+  if (sameDay || recentlyRecorded) return;
+  activityLog.push({ type, action: actionKey, date: now.toISOString() });
+  activityLog = activityLog.slice(-1200);
+  localStorage.setItem(ACTIVITY_KEY, JSON.stringify(activityLog));
+  renderConstructionActivity();
+}
+
+function constructionActivityData() {
+  const now = new Date();
+  const periodStart = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+  const recent = activityLog.filter((entry) => new Date(entry.date) >= periodStart);
+  const cabinet = recent.filter((entry) => entry.type === 'cabinet').length;
+  const project = recent.filter((entry) => entry.type === 'project').length;
+  const activeDays = new Set(recent.map((entry) => new Date(entry.date).toISOString().slice(0, 10))).size;
+  const invited = (finance.bonusHistory || []).filter((entry) => entry.key === 'referralReward').length;
+  const first = new Date(ensureFirstActivityDate());
+  const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const firstStart = new Date(first.getFullYear(), first.getMonth(), first.getDate());
+  const days = Math.max(1, Math.floor((todayStart - firstStart) / 86400000) + 1);
+  const score = Math.min(100, cabinet * 2 + project * 5 + activeDays * 3 + invited * 8);
+  return { cabinet, project, total: cabinet + project, days, invited, score };
+}
+
+function renderConstructionActivity() {
+  const card = $('[data-construction-activity]');
+  if (!card) return;
+  const data = constructionActivityData();
+  $('[data-business-activity]', card).textContent = `${data.score}%`;
+  $('[data-cabinet-activity]', card).textContent = `${data.cabinet} ${tr('activityActions')}`;
+  $('[data-project-activity]', card).textContent = `${data.project} ${tr('activityActions')}`;
+  $('[data-activity-total]', card).textContent = String(data.total);
+  $('[data-activity-days]', card).textContent = String(data.days);
+  $('[data-activity-invited]', card).textContent = String(data.invited);
+  $('[data-activity-progress]', card).style.setProperty('--activity-progress', `${data.score}%`);
+  $('[data-activity-progress]', card).setAttribute('aria-label', tr('businessActivity'));
+  $('[data-activity-progress]', card).setAttribute('aria-valuenow', String(data.score));
+}
+
+function activityActionFromElement(element) {
+  const ignored = '[data-bottom-menu-toggle],[data-bottom-menu-close],[data-tab],[data-menu-open],[data-menu-close],[data-refresh-page],[data-force-refresh],[data-theme-toggle],[data-language]';
+  if (element.matches(ignored)) return null;
+  const projectAction = element.matches('[data-analysis-type],[data-run-analysis],[data-open-object],[data-my-project],[data-open-object-analysis],[data-view-object-report],[data-object-upload],[data-start-ready],[data-open-report-document],[data-project-analysis-tab]')
+    || ['projects', 'analysis-detail', 'objects', 'cashflow'].includes(element.closest('[data-panel]')?.dataset.panel);
+  const datasetKey = Object.entries(element.dataset).find(([key]) => !['i18n'].includes(key));
+  const action = datasetKey ? `${datasetKey[0]}:${datasetKey[1] || 'click'}` : (element.getAttribute('aria-label') || element.textContent || element.tagName).trim().slice(0, 80);
+  return { type: projectAction ? 'project' : 'cabinet', action };
+}
+
+function trackConstructionActivity(event) {
+  if (!event.isTrusted) return;
+  const element = event.target.closest('button,a,select');
+  if (!element) return;
+  const activity = activityActionFromElement(element);
+  if (activity) recordActivity(activity.type, activity.action);
+}
 
 function loadUploads() {
   try {
@@ -410,6 +504,7 @@ function applyLanguage(next) {
   renderPersonIdentity();
   renderPassportEditor();
   renderPassportProgress();
+  renderConstructionActivity();
   if ($('[data-panel="analysis-detail"]')?.classList.contains('is-active')) renderAnalysisDetail();
 }
 
@@ -1028,8 +1123,12 @@ let bottomMenuDrag = null;
 let bottomMenuSuppressClick = false;
 
 function bottomMenuViewport() {
-  const viewport = window.visualViewport;
-  return { left: viewport?.offsetLeft || 0, top: viewport?.offsetTop || 0, width: viewport?.width || window.innerWidth, height: viewport?.height || window.innerHeight };
+  return {
+    left: 0,
+    top: 0,
+    width: document.documentElement.clientWidth || window.innerWidth,
+    height: document.documentElement.clientHeight || window.innerHeight
+  };
 }
 
 function placeBottomMenu(x, y, persist = false) {
@@ -1040,9 +1139,16 @@ function placeBottomMenu(x, y, persist = false) {
   const width = toggle.offsetWidth || 190;
   const height = toggle.offsetHeight || 54;
   const margin = 8;
-  const left = Math.max(viewport.left + margin, Math.min(viewport.left + viewport.width - width - margin, Number(x) || 0));
-  const top = Math.max(viewport.top + margin, Math.min(viewport.top + viewport.height - height - margin, Number(y) || 0));
-  bottomMenuPosition = { x: Math.round(left), y: Math.round(top) };
+  const safeBottom = Math.max(0, Number.parseFloat(getComputedStyle(menu).getPropertyValue('--bottom-menu-safe-area')) || 0);
+  const minLeft = viewport.left + margin;
+  const maxLeft = Math.max(minLeft, viewport.left + viewport.width - width - margin);
+  const minTop = viewport.top + margin;
+  const maxTop = Math.max(minTop, viewport.top + viewport.height - height - margin - safeBottom);
+  const left = Math.max(minLeft, Math.min(maxLeft, Number(x) || 0));
+  const top = Math.max(minTop, Math.min(maxTop, Number(y) || 0));
+  const xRatio = maxLeft > minLeft ? (left - minLeft) / (maxLeft - minLeft) : 0;
+  const yRatio = maxTop > minTop ? (top - minTop) / (maxTop - minTop) : 0;
+  bottomMenuPosition = { x: Math.round(left), y: Math.round(top), xRatio, yRatio };
   menu.style.left = `${bottomMenuPosition.x}px`;
   menu.style.top = `${bottomMenuPosition.y}px`;
   menu.style.right = 'auto'; menu.style.bottom = 'auto'; menu.style.transform = 'none';
@@ -1050,16 +1156,31 @@ function placeBottomMenu(x, y, persist = false) {
   if (menu.classList.contains('is-open')) updateBottomMenuDirection();
 }
 
+function placeBottomMenuFromRatios(position = bottomMenuPosition) {
+  const menu = $('[data-bottom-menu]');
+  const toggle = $('[data-bottom-menu-toggle]');
+  if (!menu || !toggle || !position) return;
+  const viewport = bottomMenuViewport();
+  const width = toggle.offsetWidth || 190;
+  const height = toggle.offsetHeight || 54;
+  const margin = 8;
+  const safeBottom = Math.max(0, Number.parseFloat(getComputedStyle(menu).getPropertyValue('--bottom-menu-safe-area')) || 0);
+  const availableX = Math.max(0, viewport.width - width - margin * 2);
+  const availableY = Math.max(0, viewport.height - height - margin * 2 - safeBottom);
+  const xRatio = Number.isFinite(position.xRatio) ? Math.max(0, Math.min(1, position.xRatio)) : 0.5;
+  const yRatio = Number.isFinite(position.yRatio) ? Math.max(0, Math.min(1, position.yRatio)) : 1;
+  placeBottomMenu(viewport.left + margin + availableX * xRatio, viewport.top + margin + availableY * yRatio);
+}
+
 function restoreBottomMenuPosition() {
   const toggle = $('[data-bottom-menu-toggle]');
   if (!toggle) return;
   const saved = readStoredJSON(BOTTOM_MENU_POSITION_KEY, null);
-  const viewport = bottomMenuViewport();
-  const width = toggle.offsetWidth || 190;
-  const height = toggle.offsetHeight || 54;
-  const x = Number.isFinite(saved?.x) ? saved.x : viewport.left + (viewport.width - width) / 2;
-  const y = Number.isFinite(saved?.y) ? saved.y : viewport.top + viewport.height - height - 8;
-  placeBottomMenu(x, y);
+  if (Number.isFinite(saved?.xRatio) && Number.isFinite(saved?.yRatio)) {
+    placeBottomMenuFromRatios(saved);
+    return;
+  }
+  placeBottomMenuFromRatios({ xRatio: 0.5, yRatio: 1 });
 }
 
 function updateBottomMenuDirection() {
@@ -3836,8 +3957,8 @@ drawingDialog?.addEventListener('close', () => {
   if (!drawingMinimized) $('[data-drawing-restore]').hidden = true;
 });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
-window.addEventListener('resize', () => { renderWidgets(); if (bottomMenuPosition) placeBottomMenu(bottomMenuPosition.x, bottomMenuPosition.y); else restoreBottomMenuPosition(); });
-window.visualViewport?.addEventListener('resize', () => { if (bottomMenuPosition) placeBottomMenu(bottomMenuPosition.x, bottomMenuPosition.y); });
+window.addEventListener('resize', () => { renderWidgets(); if (bottomMenuPosition) placeBottomMenuFromRatios(bottomMenuPosition); else restoreBottomMenuPosition(); });
+window.visualViewport?.addEventListener('resize', () => { if ($('[data-bottom-menu]')?.classList.contains('is-open')) requestAnimationFrame(updateBottomMenuDirection); });
 
 importPendingTransfer();
 applyPassportRewards(passportCompletion());
@@ -3850,6 +3971,8 @@ selectAnalysis(selectedAnalysis);
 renderAnalysisCards();
 renderObjects();
 renderCashflow();
+recordActivity('cabinet', 'daily-session', { daily: true });
+document.addEventListener('click', trackConstructionActivity, true);
 setPanel(location.hash.slice(1) || 'home');
 requestAnimationFrame(restoreBottomMenuPosition);
 await initAuth();
