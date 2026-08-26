@@ -70,9 +70,9 @@ export const professions = [
   ['Монтажник кабельных линий', 'cable installer'],
   ['Монтажник электрооборудования', 'electrical equipment installer'],
   ['Наладчик электрооборудования', 'electrical commissioning technician'],
-  ['Слаботочник', 'low voltage technician'],
-  ['Монтажник слаботочных систем', 'low current systems installer'],
-  ['Инженер слаботочных систем', 'low voltage systems engineer'],
+  ['Слаботочник', 'слаботочка слабый ток low voltage technician'],
+  ['Монтажник слаботочных систем', 'монтажник слаботочник слаботочка слабый ток low current systems installer'],
+  ['Инженер слаботочных систем', 'инженер слаботочник слаботочка слабый ток low voltage systems engineer'],
   ['Монтажник пожарной сигнализации', 'fire alarm installer aps'],
   ['Инженер пожарной сигнализации', 'fire alarm engineer aps'],
   ['Монтажник охранной сигнализации', 'security alarm installer'],
@@ -120,5 +120,415 @@ export const professions = [
   ['Заказчик', 'customer client developer'],
   ['Подрядчик', 'contractor'],
   ['Генеральный подрядчик', 'general contractor'],
-  ['Субподрядчик', 'subcontractor']
+  ['Субподрядчик', 'subcontractor'],
+
+  // Управление, проектирование, контроль и документация
+  ['Директор по строительству', 'construction director'],
+  ['Заместитель директора по строительству', 'deputy construction director'],
+  ['Технический директор', 'technical director cto'],
+  ['Технический заказчик', 'technical customer client'],
+  ['Представитель заказчика', 'customer representative client representative'],
+  ['Начальник ПТО', 'руководитель пто head of pto'],
+  ['Начальник ОКС', 'руководитель окс капитальное строительство'],
+  ['Начальник сметно-договорного отдела', 'руководитель сдо сметы договоры'],
+  ['Начальник производственно-технического отдела', 'начальник пто production technical department'],
+  ['Инженер технического заказчика', 'technical customer engineer'],
+  ['Координатор строительного проекта', 'project coordinator construction'],
+  ['Администратор строительного проекта', 'project administrator construction'],
+  ['Инженер по планированию', 'project planner scheduler planning engineer'],
+  ['Специалист календарно-сетевого планирования', 'ксп календарный график primavera ms project scheduler'],
+  ['Инженер по качеству', 'quality engineer qa qc'],
+  ['Инспектор строительного контроля', 'construction control inspector'],
+  ['Инспектор технического надзора', 'technical supervision inspector'],
+  ['Инженер по исполнительной документации', 'ид исполнительная документация as built engineer'],
+  ['Специалист по исполнительной документации', 'ид исполнительная документация as built specialist'],
+  ['Документовед строительного проекта', 'document controller construction'],
+  ['Технический писатель в строительстве', 'technical writer construction'],
+  ['Инженер по согласованиям', 'approvals permits engineer'],
+  ['Специалист по разрешительной документации', 'исходно разрешительная документация ирд permits'],
+  ['Тендерный специалист', 'тендеры закупки tender specialist'],
+  ['Контрактный менеджер', 'contract manager construction'],
+  ['Инженер по договорной работе', 'contract engineer'],
+  ['Стоимостной инженер', 'cost engineer quantity surveyor'],
+  ['Инженер по управлению стоимостью', 'cost control engineer'],
+  ['Инженер по рискам проекта', 'project risk engineer'],
+  ['Главный специалист проекта', 'lead project specialist'],
+  ['Главный конструктор проекта', 'chief structural engineer'],
+  ['Инженер-конструктор КЖ', 'кж железобетон reinforced concrete design engineer'],
+  ['Инженер-конструктор КМ', 'км металлоконструкции steel design engineer'],
+  ['Инженер-конструктор КМД', 'кмд деталировка металлоконструкций steel detailing'],
+  ['Инженер-проектировщик АР', 'ар архитектурные решения architect designer'],
+  ['Инженер-проектировщик ГП', 'гп генеральный план master plan designer'],
+  ['Инженер-проектировщик ПОС', 'пос проект организации строительства'],
+  ['Инженер-проектировщик ППР', 'ппр проект производства работ'],
+  ['Разработчик ППР', 'ппр проект производства работ method statement'],
+  ['Проектировщик наружных сетей', 'нвк нэс наружные инженерные сети'],
+  ['Проектировщик внутренних инженерных систем', 'internal mep systems designer'],
+  ['Специалист информационного моделирования', 'тим bim информационная модель'],
+  ['ТИМ-менеджер', 'тим bim manager'],
+  ['ТИМ-координатор', 'тим bim coordinator'],
+  ['ТИМ-моделлер', 'тим bim modeler'],
+  ['Revit-моделлер', 'revit bim modeler'],
+  ['Проектировщик AutoCAD', 'autocad cad designer'],
+
+  // Общестроительные, земляные, бетонные и монтажные работы
+  ['Монолитчик', 'монолитные работы concrete frame worker'],
+  ['Арматурщик-бетонщик', 'арматура бетон rebar concrete worker'],
+  ['Плотник-бетонщик', 'опалубка бетон formwork concrete worker'],
+  ['Монтажник опалубки', 'опалубщик formwork installer'],
+  ['Специалист по алмазному бурению', 'алмазное сверление diamond drilling'],
+  ['Специалист по алмазной резке', 'алмазная резка diamond cutting'],
+  ['Демонтажник', 'демонтаж demolition worker'],
+  ['Землекоп', 'земляные работы digger'],
+  ['Монтажник свай', 'свайщик pile installer'],
+  ['Копровщик', 'сваи pile driver worker'],
+  ['Монтажник ЖБИ', 'жби железобетон precast concrete installer'],
+  ['Монтажник сборного железобетона', 'precast reinforced concrete installer'],
+  ['Монтажник быстровозводимых зданий', 'лстк сэндвич панели prefabricated building installer'],
+  ['Монтажник сэндвич-панелей', 'сэндвич панели sandwich panel installer'],
+  ['Монтажник ЛСТК', 'лстк легкие стальные тонкостенные конструкции'],
+  ['Монтажник лесов', 'строительные леса scaffolder'],
+  ['Сборщик строительных лесов', 'scaffolder scaffold erector'],
+  ['Промышленный альпинист', 'высотные работы industrial climber'],
+  ['Огнезащитчик', 'огнезащита fireproofing worker'],
+  ['Антикоррозийщик', 'антикор corrosion protection worker'],
+  ['Пескоструйщик', 'пескоструй sandblaster'],
+  ['Футеровщик', 'lining refractory worker'],
+  ['Кислотоупорщик-винипластчик', 'chemical resistant lining worker'],
+  ['Печник', 'печи камины stove mason'],
+  ['Монтажник дымоходов', 'дымоход chimney installer'],
+  ['Изолировщик', 'изоляция insulation worker'],
+  ['Изолировщик на термоизоляции', 'теплоизоляция thermal insulation worker'],
+  ['Изолировщик на гидроизоляции', 'гидроизоляция waterproofing worker'],
+  ['Герметизаторщик', 'герметизация швов sealant worker'],
+
+  // Отделка, фасады, окна и благоустройство
+  ['Мастер отделочных работ', 'отделка finishing foreman'],
+  ['Маляр по металлу', 'окраска металлоконструкций metal painter'],
+  ['Маляр по дереву', 'wood painter'],
+  ['Декоратор-отделочник', 'декоративная штукатурка decorator finisher'],
+  ['Шпаклёвщик', 'шпаклевка putty worker'],
+  ['Облицовщик-плиточник', 'плитка tiler'],
+  ['Облицовщик-мраморщик', 'мрамор камень stone marble installer'],
+  ['Камнетёс', 'обработка камня stone cutter'],
+  ['Монтажник перегородок', 'перегородки drywall partition installer'],
+  ['Монтажник подвесных потолков', 'армстронг грильято suspended ceiling installer'],
+  ['Монтажник напольных покрытий', 'линолеум ковролин ламинат flooring installer'],
+  ['Промышленный полимерщик', 'промышленные полы polymer flooring'],
+  ['Мозаичник', 'терраццо mosaic worker'],
+  ['Монтажник светопрозрачных конструкций', 'витражи алюминиевые конструкции glazing installer'],
+  ['Монтажник алюминиевых конструкций', 'алюминиевые окна витражи aluminium installer'],
+  ['Монтажник ПВХ-конструкций', 'пвх окна двери pvc installer'],
+  ['Замерщик окон и дверей', 'window door surveyor measurer'],
+  ['Монтажник ворот и роллет', 'ворота рольставни gate roller shutter installer'],
+  ['Кровельщик по мягкой кровле', 'мягкая наплавляемая кровля roofer'],
+  ['Кровельщик по металлической кровле', 'фальц металлочерепица metal roofer'],
+  ['Монтажник мембранной кровли', 'пвх тпо мембрана membrane roofer'],
+  ['Монтажник мокрого фасада', 'штукатурный фасад wet facade installer'],
+  ['Монтажник НВФ', 'нвф навесной вентилируемый фасад'],
+  ['Мастер по благоустройству', 'благоустройство landscaping foreman'],
+  ['Укладчик тротуарной плитки', 'брусчатка paving slab installer'],
+  ['Монтажник малых архитектурных форм', 'маф благоустройство'],
+
+  // Водоснабжение, отопление, вентиляция, холод и газ
+  ['Проектировщик ОВиК', 'ов овик отопление вентиляция кондиционирование hvac designer'],
+  ['Проектировщик ВК', 'вк водоснабжение канализация plumbing designer'],
+  ['Проектировщик НВК', 'нвк наружные сети водоснабжения канализации'],
+  ['Инженер по вентиляции и кондиционированию', 'овик hvac engineer'],
+  ['Техник по вентиляции и кондиционированию', 'овик hvac technician'],
+  ['Наладчик систем вентиляции', 'пнр вентиляция commissioning'],
+  ['Наладчик систем кондиционирования', 'пнр кондиционирование commissioning'],
+  ['Монтажник воздуховодов', 'вентиляция duct installer'],
+  ['Жестянщик вентиляционных систем', 'воздуховоды sheet metal worker'],
+  ['Монтажник холодильного оборудования', 'холодильщик refrigeration installer'],
+  ['Инженер-холодильщик', 'refrigeration engineer'],
+  ['Сервисный инженер ОВиК', 'овик hvac service engineer'],
+  ['Монтажник тепловых пунктов', 'итп цтп heating substation installer'],
+  ['Наладчик тепловых пунктов', 'итп цтп пнр heating substation commissioning'],
+  ['Инженер ИТП', 'индивидуальный тепловой пункт heating substation engineer'],
+  ['Монтажник котельного оборудования', 'котельная boiler equipment installer'],
+  ['Наладчик котельного оборудования', 'котельная пнр boiler commissioning'],
+  ['Оператор котельной', 'boiler operator'],
+  ['Монтажник наружных трубопроводов', 'наружные сети pipeline installer'],
+  ['Монтажник технологических трубопроводов', 'process pipeline installer'],
+  ['Трубопроводчик линейный', 'pipeline worker'],
+  ['Сварщик трубопроводов', 'трубный сварщик pipe welder'],
+  ['Монтажник ливневой канализации', 'ливневка storm sewer installer'],
+  ['Монтажник дренажных систем', 'дренаж drainage installer'],
+  ['Инженер по водоснабжению и канализации', 'вк plumbing engineer'],
+  ['Инженер по наружным сетям ВК', 'нвк water sewer networks engineer'],
+  ['Монтажник газового оборудования', 'газовик gas equipment installer'],
+  ['Монтажник наружных газопроводов', 'газопровод gas pipeline installer'],
+  ['Инженер-газовик', 'gas engineer'],
+  ['Наладчик газового оборудования', 'пнр газ boiler gas commissioning'],
+  ['Монтажник систем пожаротушения', 'аупт спринклер дренчер fire suppression installer'],
+  ['Инженер систем пожаротушения', 'аупт спринклер дренчер fire suppression engineer'],
+  ['Наладчик систем пожаротушения', 'аупт пнр fire suppression commissioning'],
+  ['Монтажник противодымной вентиляции', 'дымоудаление пдв smoke control installer'],
+  ['Инженер противодымной вентиляции', 'дымоудаление пдв smoke control engineer'],
+
+  // Электрика, энергетика и автоматизация
+  ['Проектировщик ЭОМ', 'эом электроосвещение силовое электрооборудование electrical designer'],
+  ['Проектировщик ЭС', 'эс электроснабжение electrical supply designer'],
+  ['Проектировщик ЭМ', 'эм силовое электрооборудование electrical designer'],
+  ['Проектировщик ЭО', 'эо электроосвещение lighting designer'],
+  ['Инженер по электроснабжению', 'электроснабжение power supply engineer'],
+  ['Инженер по электрооборудованию', 'electrical equipment engineer'],
+  ['Инженер-релейщик', 'рза релейная защита relay protection engineer'],
+  ['Инженер РЗА', 'релейная защита автоматика relay protection automation'],
+  ['Наладчик РЗА', 'пнр релейная защита автоматика'],
+  ['Электромонтёр', 'электромонтер electrician'],
+  ['Электромонтёр по ремонту и обслуживанию', 'дежурный электрик maintenance electrician'],
+  ['Электромонтёр-линейщик', 'вл воздушные линии lineman'],
+  ['Монтажник воздушных линий', 'вл лэп overhead line installer'],
+  ['Монтажник КЛ', 'кл кабельные линии cable installer'],
+  ['Кабельщик-спайщик', 'кабельная муфта cable jointer'],
+  ['Монтажник шинопровода', 'busbar trunking installer'],
+  ['Монтажник трансформаторных подстанций', 'тп ктп transformer substation installer'],
+  ['Инженер подстанций', 'тп ктп substation engineer'],
+  ['Наладчик подстанционного оборудования', 'пнр подстанция commissioning'],
+  ['Монтажник заземления и молниезащиты', 'заземление молниезащита grounding lightning protection'],
+  ['Инженер по молниезащите и заземлению', 'lightning protection grounding engineer'],
+  ['Светотехник', 'освещение lighting engineer'],
+  ['Монтажник систем освещения', 'электроосвещение lighting installer'],
+  ['Инженер АСКУЭ', 'аскуэ учет электроэнергии metering engineer'],
+  ['Монтажник АСКУЭ', 'аскуэ учет электроэнергии metering installer'],
+  ['Наладчик АСКУЭ', 'аскуэ пнр metering commissioning'],
+  ['Инженер КИП', 'кип кипиа instrumentation engineer'],
+  ['Слесарь КИПиА', 'кипиа instrumentation fitter'],
+  ['Монтажник КИПиА', 'кипиа instrumentation installer'],
+  ['Проектировщик АСУ ТП', 'асутп automation designer'],
+  ['Монтажник АСУ ТП', 'асутп industrial automation installer'],
+  ['Наладчик АСУ ТП', 'асутп пнр industrial automation commissioning'],
+  ['Программист АСУ ТП', 'асутп plc scada programmer'],
+  ['Программист ПЛК', 'плк plc programmer'],
+  ['SCADA-инженер', 'скада scada engineer'],
+  ['Инженер BMS', 'бмс диспетчеризация автоматизация здания building management system'],
+  ['Проектировщик BMS', 'бмс диспетчеризация building management designer'],
+  ['Монтажник BMS', 'бмс диспетчеризация building management installer'],
+  ['Наладчик BMS', 'бмс пнр диспетчеризация building management commissioning'],
+
+  // Слаботочные системы: монтаж, проектирование, ПНР и совмещённые специализации
+  ['Техник слаботочных систем', 'техник слаботочник слаботочка слабый ток low voltage technician'],
+  ['Проектировщик слаботочных систем', 'проектировщик слаботочник слаботочка слабый ток low voltage designer'],
+  ['Наладчик слаботочных систем', 'наладчик слаботочник пнр слаботочка low voltage commissioning'],
+  ['Пусконаладчик слаботочных систем', 'пнр слаботочка слабый ток commissioning'],
+  ['Инженер ПНР слаботочных систем', 'пнр слаботочка слабый ток low voltage commissioning engineer'],
+  ['Прораб слаботочных систем', 'прораб слаботочка low voltage foreman'],
+  ['Бригадир слаботочных систем', 'бригадир слаботочка low voltage team leader'],
+  ['Руководитель проекта по слаботочным системам', 'рп слаботочка low voltage project manager'],
+  ['Главный специалист по слаботочным системам', 'главспец слаботочка low voltage lead engineer'],
+  ['Системный интегратор слаботочных систем', 'слаботочка интеграция low voltage system integrator'],
+  ['Монтажник АПС', 'апс аупс пожарная сигнализация fire alarm installer'],
+  ['Инженер АПС', 'апс аупс пожарная сигнализация fire alarm engineer'],
+  ['Проектировщик АПС', 'апс аупс пожарная сигнализация fire alarm designer'],
+  ['Наладчик АПС', 'апс аупс пнр пожарная сигнализация fire alarm commissioning'],
+  ['Монтажник АУПС', 'аупс апс автоматическая пожарная сигнализация installer'],
+  ['Инженер АУПС', 'аупс апс автоматическая пожарная сигнализация engineer'],
+  ['Монтажник СОУЭ', 'соуэ оповещение эвакуация voice evacuation installer'],
+  ['Инженер СОУЭ', 'соуэ оповещение эвакуация voice evacuation engineer'],
+  ['Проектировщик СОУЭ', 'соуэ оповещение эвакуация voice evacuation designer'],
+  ['Наладчик СОУЭ', 'соуэ пнр оповещение эвакуация commissioning'],
+  ['Монтажник АПС и СОУЭ', 'апс аупс соуэ пожарная сигнализация оповещение installer'],
+  ['Инженер АПС и СОУЭ', 'апс аупс соуэ пожарная сигнализация оповещение engineer'],
+  ['Проектировщик АПС и СОУЭ', 'апс аупс соуэ пожарная сигнализация оповещение designer'],
+  ['Наладчик АПС и СОУЭ', 'апс аупс соуэ пнр пожарная сигнализация оповещение'],
+  ['Монтажник ОПС', 'опс охранно пожарная сигнализация installer'],
+  ['Инженер ОПС', 'опс охранно пожарная сигнализация engineer'],
+  ['Проектировщик ОПС', 'опс охранно пожарная сигнализация designer'],
+  ['Наладчик ОПС', 'опс пнр охранно пожарная сигнализация commissioning'],
+  ['Монтажник СКУД', 'скуд контроль управление доступом access control installer'],
+  ['Инженер СКУД', 'скуд контроль управление доступом access control engineer'],
+  ['Проектировщик СКУД', 'скуд контроль управление доступом access control designer'],
+  ['Наладчик СКУД', 'скуд пнр контроль управление доступом commissioning'],
+  ['Монтажник ОПС и СКУД', 'опс скуд охрана доступ installer'],
+  ['Инженер ОПС и СКУД', 'опс скуд охрана доступ engineer'],
+  ['Монтажник СКС и ЛВС', 'скс лвс локальная сеть structured cabling lan installer'],
+  ['Инженер СКС и ЛВС', 'скс лвс локальная сеть structured cabling lan engineer'],
+  ['Проектировщик СКС', 'скс структурированная кабельная система designer'],
+  ['Инженер СКС', 'скс структурированная кабельная система engineer'],
+  ['Наладчик СКС', 'скс пнр structured cabling commissioning'],
+  ['Монтажник ЛВС', 'лвс локальная вычислительная сеть lan installer'],
+  ['Инженер ЛВС', 'лвс локальная вычислительная сеть lan engineer'],
+  ['Сетевой инженер', 'лвс сети network engineer'],
+  ['Монтажник ВОЛС', 'волс оптика оптоволокно fiber optic installer'],
+  ['Инженер ВОЛС', 'волс оптика оптоволокно fiber optic engineer'],
+  ['Сварщик ВОЛС', 'волс сварка оптики fiber optic splicer'],
+  ['Измеритель ВОЛС', 'волс рефлектометрия fiber optic tester'],
+  ['Монтажник видеонаблюдения CCTV', 'cctv видеонаблюдение installer'],
+  ['Инженер видеонаблюдения CCTV', 'cctv видеонаблюдение engineer'],
+  ['Проектировщик видеонаблюдения CCTV', 'cctv видеонаблюдение designer'],
+  ['Наладчик видеонаблюдения CCTV', 'cctv пнр видеонаблюдение commissioning'],
+  ['Монтажник домофонии', 'домофон интерком intercom installer'],
+  ['Инженер домофонии', 'домофон интерком intercom engineer'],
+  ['Монтажник систем связи', 'связь телефония telecommunications installer'],
+  ['Проектировщик систем связи', 'связь телефония telecommunications designer'],
+  ['Наладчик систем связи', 'связь пнр telecommunications commissioning'],
+  ['Монтажник телефонии', 'телефония атс telephone installer'],
+  ['Инженер телефонии', 'телефония атс voip engineer'],
+  ['Монтажник радиофикации', 'радиофикация проводное радио installer'],
+  ['Инженер радиофикации', 'радиофикация проводное радио engineer'],
+  ['Монтажник часофикации', 'часофикация единое время clock system installer'],
+  ['Инженер часофикации', 'часофикация единое время clock system engineer'],
+  ['Монтажник диспетчеризации', 'диспетчеризация автоматизация bms installer'],
+  ['Инженер диспетчеризации', 'диспетчеризация автоматизация bms engineer'],
+  ['Проектировщик диспетчеризации', 'диспетчеризация автоматизация bms designer'],
+  ['Наладчик диспетчеризации', 'диспетчеризация пнр bms commissioning'],
+  ['Монтажник системы сбора и обработки информации', 'ссои security information system installer'],
+  ['Инженер системы сбора и обработки информации', 'ссои security information system engineer'],
+  ['Монтажник мультимедийных систем', 'ав мультимедиа audio video installer'],
+  ['Инженер мультимедийных систем', 'ав мультимедиа audio video engineer'],
+  ['Монтажник конференц-систем', 'конференц связь audio video installer'],
+  ['Инженер акустических систем', 'звук акустика audio engineer'],
+  ['Монтажник кабеленесущих систем', 'лоток кабельная трасса cable tray installer'],
+  ['Инженер ПНР АПС/СОУЭ', 'пнр апс аупс соуэ пожарная автоматика'],
+  ['Инженер ПНР ОПС/СКУД', 'пнр опс скуд безопасность'],
+  ['Инженер ПНР СКС/ЛВС', 'пнр скс лвс сеть'],
+  ['Инженер ПНР CCTV/видеонаблюдения', 'пнр cctv видеонаблюдение'],
+  ['Комплексный монтажник слаботочных систем', 'апс соуэ опс скуд скс лвс cctv слаботочка универсал'],
+  ['Комплексный инженер слаботочных систем', 'апс соуэ опс скуд скс лвс cctv слаботочка универсал'],
+
+  // Пусконаладка и эксплуатация
+  ['Руководитель ПНР', 'начальник пнр commissioning manager'],
+  ['Ведущий инженер ПНР', 'ведущий пусконаладчик lead commissioning engineer'],
+  ['Инженер ПНР электрики', 'пнр электрика электрооборудование electrical commissioning'],
+  ['Инженер ПНР электроснабжения', 'пнр электроснабжение power commissioning'],
+  ['Инженер ПНР ОВиК', 'пнр овик отопление вентиляция кондиционирование hvac commissioning'],
+  ['Инженер ПНР ВК', 'пнр вк водоснабжение канализация plumbing commissioning'],
+  ['Инженер ПНР ИТП', 'пнр итп тепловой пункт commissioning'],
+  ['Инженер ПНР автоматики', 'пнр автоматика automation commissioning'],
+  ['Инженер ПНР пожарной автоматики', 'пнр апс аупс соуэ пожаротушение fire automation'],
+  ['Инженер комплексного опробования', 'комплексное опробование commissioning'],
+  ['Инженер по эксплуатации зданий', 'facility engineer building operation'],
+  ['Техник по эксплуатации зданий', 'facility technician building maintenance'],
+  ['Главный инженер эксплуатации', 'chief facility engineer'],
+  ['Управляющий объектом недвижимости', 'facility manager property manager'],
+  ['Дежурный инженер', 'shift duty engineer'],
+
+  // Геодезия, обследование, лаборатория и безопасность
+  ['Маркшейдер', 'mine surveyor'],
+  ['Инженер-геодезист', 'геодезия survey engineer'],
+  ['Помощник геодезиста', 'survey assistant'],
+  ['Кадастровый инженер', 'cadastral engineer'],
+  ['Инженер-геолог', 'engineering geologist'],
+  ['Инженер-геотехник', 'geotechnical engineer'],
+  ['Инженер по обследованию зданий', 'обследование конструкций building survey engineer'],
+  ['Специалист по обследованию конструкций', 'building structures inspection specialist'],
+  ['Эксперт по промышленной безопасности', 'industrial safety expert'],
+  ['Инженер НК', 'неразрушающий контроль ndt engineer'],
+  ['Специалист неразрушающего контроля', 'нк вик узк рк ndt specialist'],
+  ['Лаборант дорожной лаборатории', 'road laboratory technician'],
+  ['Лаборант бетонной лаборатории', 'concrete laboratory technician'],
+  ['Инженер строительной лаборатории', 'construction laboratory engineer'],
+  ['Специалист входного контроля', 'incoming inspection qa qc'],
+  ['Инженер пожарной безопасности', 'fire safety engineer'],
+  ['Инженер по охране труда и промышленной безопасности', 'от пб hse engineer'],
+  ['HSE-инженер', 'охрана труда промышленная безопасность hse'],
+  ['Координатор по охране труда', 'hse coordinator'],
+
+  // Дороги, мосты, тоннели, железные дороги и спецтехника
+  ['Инженер дорожного строительства', 'road construction engineer'],
+  ['Мастер дорожных работ', 'road works foreman'],
+  ['Прораб дорожного строительства', 'road construction foreman'],
+  ['Машинист асфальтоукладчика', 'asphalt paver operator'],
+  ['Машинист дорожного катка', 'roller operator'],
+  ['Машинист фрезы', 'road milling machine operator'],
+  ['Машинист буровой установки', 'drilling rig operator'],
+  ['Машинист копровой установки', 'pile driving rig operator'],
+  ['Машинист бетононасоса', 'concrete pump operator'],
+  ['Оператор автобетононасоса', 'concrete pump operator'],
+  ['Водитель автобетоносмесителя', 'миксер concrete mixer driver'],
+  ['Водитель самосвала', 'dump truck driver'],
+  ['Оператор фронтального погрузчика', 'front loader operator'],
+  ['Машинист телескопического погрузчика', 'telehandler operator'],
+  ['Машинист трубоукладчика', 'pipe layer operator'],
+  ['Крановщик', 'crane operator'],
+  ['Машинист автомобильного крана', 'автокран mobile crane operator'],
+  ['Машинист гусеничного крана', 'crawler crane operator'],
+  ['Оператор манипулятора', 'кму loader crane operator'],
+  ['Монтажник мостовых конструкций', 'bridge structures installer'],
+  ['Мостостроитель', 'bridge builder'],
+  ['Тоннельщик', 'tunnel worker'],
+  ['Проходчик', 'tunnel miner'],
+  ['Монтажник железнодорожного пути', 'путеец railway track installer'],
+  ['Путевой рабочий', 'railway track worker'],
+  ['Электромеханик СЦБ', 'сцб железная дорога signalling engineer'],
+
+  // Снабжение, склад, логистика и вспомогательные роли
+  ['Руководитель отдела снабжения', 'head of procurement supply'],
+  ['Инженер по комплектации', 'комплектатор equipment procurement engineer'],
+  ['Специалист материально-технического снабжения', 'мтс procurement supply specialist'],
+  ['Логист строительного проекта', 'construction logistics specialist'],
+  ['Комендант строительного городка', 'site camp manager'],
+  ['Заведующий складом', 'warehouse manager'],
+  ['Кладовщик-комплектовщик', 'warehouse picker'],
+  ['Табельщик', 'timekeeper'],
+  ['Оператор строительного подъёмника', 'construction hoist operator'],
+  ['Машинист люльки', 'suspended platform operator'],
+  ['Сигнальщик', 'banksman signaler'],
+  ['Рабочий по комплексному обслуживанию зданий', 'building maintenance worker'],
+  ['Уборщик строительного объекта', 'construction site cleaner'],
+  ['Охранник строительного объекта', 'construction site security guard']
 ].map(([ru, aliases]) => ({ ru, aliases }));
+
+const keyboardMap = Object.freeze({ q: 'й', w: 'ц', e: 'у', r: 'к', t: 'е', y: 'н', u: 'г', i: 'ш', o: 'щ', p: 'з', '[': 'х', ']': 'ъ', a: 'ф', s: 'ы', d: 'в', f: 'а', g: 'п', h: 'р', j: 'о', k: 'л', l: 'д', ';': 'ж', "'": 'э', z: 'я', x: 'ч', c: 'с', v: 'м', b: 'и', n: 'т', m: 'ь', ',': 'б', '.': 'ю' });
+
+function normalizeSearch(value) {
+  return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('ru').replace(/ё/g, 'е').replace(/[^\p{L}\p{N}]+/gu, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function keyboardToRussian(value) {
+  return String(value || '').toLocaleLowerCase('en').replace(/[qwertyuiop\[\]asdfghjkl;'zxcvbnm,.]/g, (character) => keyboardMap[character] || character);
+}
+
+function transliterateToRussian(value) {
+  let result = String(value || '').toLocaleLowerCase('en');
+  [['shch', 'щ'], ['sch', 'щ'], ['yo', 'ё'], ['zh', 'ж'], ['kh', 'х'], ['ts', 'ц'], ['ch', 'ч'], ['sh', 'ш'], ['yu', 'ю'], ['ya', 'я'], ['ye', 'е']].forEach(([latin, cyrillic]) => { result = result.replaceAll(latin, cyrillic); });
+  const characters = { a: 'а', b: 'б', c: 'к', d: 'д', e: 'е', f: 'ф', g: 'г', h: 'х', i: 'и', j: 'й', k: 'к', l: 'л', m: 'м', n: 'н', o: 'о', p: 'п', q: 'к', r: 'р', s: 'с', t: 'т', u: 'у', v: 'в', w: 'в', x: 'кс', y: 'ы', z: 'з' };
+  return result.replace(/[a-z]/g, (character) => characters[character] || character);
+}
+
+function searchForms(value) {
+  return [...new Set([value, keyboardToRussian(value), transliterateToRussian(value)].map(normalizeSearch).filter(Boolean))];
+}
+
+function boundedDistance(left, right, limit) {
+  if (Math.abs(left.length - right.length) > limit) return limit + 1;
+  let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let row = 1; row <= left.length; row += 1) {
+    const current = [row];
+    for (let column = 1; column <= right.length; column += 1) current[column] = Math.min(current[column - 1] + 1, previous[column] + 1, previous[column - 1] + (left[row - 1] === right[column - 1] ? 0 : 1));
+    previous = current;
+  }
+  return previous[right.length];
+}
+
+function professionScore(profession, query) {
+  const queryForms = searchForms(query);
+  if (!queryForms.length) return 0;
+  const candidates = searchForms(`${profession.ru} ${profession.aliases}`);
+  let best = -1;
+  queryForms.forEach((queryForm) => candidates.forEach((candidate) => {
+    const queryTokens = queryForm.split(' ');
+    const candidateTokens = candidate.split(' ');
+    let score = -1;
+    if (candidate === queryForm) score = 0;
+    else if (candidate.startsWith(queryForm)) score = 1;
+    else if (queryTokens.every((queryToken) => candidateTokens.some((token) => {
+      if (token.startsWith(queryToken) || queryToken.startsWith(token)) return true;
+      const minimumLength = Math.min(token.length, queryToken.length);
+      if (minimumLength < 6) return false;
+      let common = 0;
+      while (common < minimumLength && token[common] === queryToken[common]) common += 1;
+      return common >= Math.max(5, Math.floor(minimumLength * .68));
+    }))) score = 2;
+    else if (candidate.includes(queryForm)) score = 3;
+    else if (queryTokens.every((queryToken) => queryToken.length >= 4 && candidateTokens.some((token) => boundedDistance(token, queryToken, queryToken.length >= 8 ? 2 : 1) <= (queryToken.length >= 8 ? 2 : 1)))) score = 4;
+    if (score >= 0 && (best < 0 || score < best)) best = score;
+  }));
+  return best;
+}
+
+export function findProfessions(query, limit = 40) {
+  return professions.map((profession) => ({ profession, score: professionScore(profession, query) })).filter((entry) => entry.score >= 0).sort((left, right) => left.score - right.score || left.profession.ru.localeCompare(right.profession.ru, 'ru')).slice(0, limit).map((entry) => entry.profession);
+}

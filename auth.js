@@ -1,5 +1,5 @@
 import { supabaseConfig } from './auth-config.js';
-import { professions } from './professions.js';
+import { professions, findProfessions } from './professions.js';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -72,14 +72,9 @@ function applyLanguage(nextLanguage) {
   document.title = `${mode === 'register' ? tr('registerHeading') : tr('loginHeading')} — StructOS`;
 }
 
-function normalizeProfession(value) {
-  return value.toLocaleLowerCase().replace(/ё/g, 'е').replace(/[^a-zа-я0-9]+/gi, ' ').trim();
-}
-
 function professionMatches(query) {
-  const normalized = normalizeProfession(query);
-  if (!normalized) return professions.slice(0, 12);
-  return professions.filter(({ ru, aliases }) => normalizeProfession(`${ru} ${aliases}`).includes(normalized)).slice(0, 12);
+  if (!String(query || '').trim()) return professions.slice(0, 40);
+  return findProfessions(query, 40);
 }
 
 function closeProfessionOptions() {

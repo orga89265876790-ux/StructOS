@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=27" />
+    <link rel="stylesheet" href="dashboard.css?v=28" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -200,9 +200,10 @@
           <div class="page-title"><div><span class="eyebrow">STRUCTOS ID</span><h1 data-i18n="myProfile">Мой профиль</h1><p data-user-role>Пользователь</p></div><button class="outline-button" type="button" data-edit-profile data-i18n="edit">Редактировать</button></div>
           <div class="profile-layout">
             <section class="profile-identity"><div class="profile-avatar" data-person-avatar><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><h2 data-user-name>Александр</h2><div class="identity-links"><button class="user-id" type="button" data-copy-id><span>ID <span data-user-id>4 820 197</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button><button class="passport-inline-link" type="button" data-open-view="passport"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"/></svg><span data-i18n="passportLink">Паспорт</span></button></div></div></section>
+            <section class="profile-personal-card"><header><div><span class="eyebrow">STRUCTOS IDENTITY</span><h2 data-i18n="personalData">Личные данные</h2><p data-i18n="personalDataMirrorHint">Изменения здесь отображаются в Паспорте строителя.</p></div><button class="outline-button" type="button" data-edit-profile-personal data-i18n="editPersonalData">Изменить личные данные</button></header><div class="profile-personal-data" data-profile-personal></div></section>
             <button class="profile-row" type="button"><span data-i18n="tariffSubscription">Тарифы и подписка</span><strong data-i18n="userTariff">Пользователь</strong><i>›</i></button>
             <button class="profile-row" type="button" data-open-view="balance"><span data-i18n="balanceBonuses">Баланс и бонусы</span><strong data-finance-summary>0 ₽ · 200</strong><i>›</i></button>
-            <button class="profile-row" type="button" data-open-view="connections"><span data-i18n="connections">Связи и контакты</span><strong>MAX · Telegram · Email</strong><i>›</i></button>
+            <button class="profile-row" type="button" data-open-view="connections"><span data-i18n="connections">Привязать к StructOS</span><strong data-connections-summary>0 / 7</strong><i>›</i></button>
           </div>
         </section>
       </main>
@@ -235,7 +236,7 @@
             <button type="button" data-open-view="invite"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M19 9v6M16 12h6"/></svg><span data-i18n="invite">Пригласить</span></button>
             <button type="button" data-open-view="notifications"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg><span data-i18n="notifications">Уведомления</span></button>
             <button type="button" data-open-view="documents"><svg viewBox="0 0 24 24"><path d="M5 2h9l5 5v15H5zM14 2v6h6M8 13h8M8 17h6"/></svg><span data-i18n="documents">Мои документы</span></button>
-            <button type="button" data-open-view="connections"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 2v4M16 2v4M8 10h8M8 14h5"/></svg><span data-i18n="connections">Связи и контакты</span></button>
+            <button type="button" data-open-view="connections"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 2v4M16 2v4M8 10h8M8 14h5"/></svg><span data-i18n="connections">Привязать к StructOS</span></button>
             <button type="button" data-open-view="settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.6v-.2h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1Z"/></svg><span data-i18n="settings">Настройки</span></button>
             <button class="logout-button" type="button" data-logout><svg viewBox="0 0 24 24"><path d="M10 4H4v16h6M14 8l4 4-4 4M8 12h10"/></svg><span data-i18n="logout">Выйти</span></button>
           </nav>
@@ -282,6 +283,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=27"></script>
+    <script type="module" src="dashboard.js?v=28"></script>
   </body>
 </html>
