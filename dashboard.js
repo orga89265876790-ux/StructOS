@@ -194,6 +194,47 @@ Object.assign(copy.TJ, {
 });
 
 Object.assign(copy.RU, {
+  workByContract: 'Работа по договорам', workByFact: 'Работа по факту выполнения', contractAccounting: 'Работа по договорам', actualAccounting: 'Работа по факту выполнения',
+  receivedAdvanceClosure: 'Получено в аванс/закрытие', completedWorkVolume: 'Выполненный объём работ', factAdvanceCompletion: 'Аванс/выполнение', actuallyCompleted: 'Фактически выполненное',
+  totalReceivedAdvanceClosure: 'Итого получено в аванс/закрытие', totalCompletedWorkVolume: 'Итого выполненный объём работ', totalFactAdvanceCompletion: 'Общий доход', totalActuallyCompleted: 'Общий расход',
+  addReceivedAdvanceClosure: 'Добавить аванс/закрытие', addCompletedWorkVolume: 'Добавить выполненный объём', addFactAdvanceCompletion: 'Добавить аванс/выполнение', addActuallyCompleted: 'Добавить выполненное',
+  overallContractBalance: 'Общий баланс по договорам', overallFactExecutionBalance: 'Общий баланс по факту выполнения', reportIndicator: 'Показатель',
+  totalContractsAmount: 'Общая сумма договоров', contractProduction: 'Выработка по договорам', receivedFromCustomer: 'Получено от заказчика', totalOwnFundsInvested: 'Вложено собственных средств',
+  contractProductionRemaining: 'Остаток от договора', paidProductionRemaining: 'Остаток от оплаченной выработки', overallIncome: 'Общий доход', overallExpense: 'Общий расход', executionRemaining: 'Остаток от выполнения', allOwnFundsInvested: 'Общая сумма вложенных средств',
+  sectionsBreakdown: 'Разбивка по разделам', incomingFunds: 'Поступления', completedWorks: 'Выполнение'
+});
+Object.assign(copy.EN, {
+  workByContract: 'Work under contracts', workByFact: 'Work by actual completion', contractAccounting: 'Work under contracts', actualAccounting: 'Work by actual completion',
+  receivedAdvanceClosure: 'Received as advance/closure', completedWorkVolume: 'Completed work volume', factAdvanceCompletion: 'Advance/completion', actuallyCompleted: 'Actually completed',
+  totalReceivedAdvanceClosure: 'Total received as advance/closure', totalCompletedWorkVolume: 'Total completed work volume', totalFactAdvanceCompletion: 'Total income', totalActuallyCompleted: 'Total expense',
+  addReceivedAdvanceClosure: 'Add advance/closure', addCompletedWorkVolume: 'Add completed volume', addFactAdvanceCompletion: 'Add advance/completion', addActuallyCompleted: 'Add completed work',
+  overallContractBalance: 'Overall balance under contracts', overallFactExecutionBalance: 'Overall balance by actual completion', reportIndicator: 'Indicator',
+  totalContractsAmount: 'Total contract value', contractProduction: 'Production under contracts', receivedFromCustomer: 'Received from customer', totalOwnFundsInvested: 'Own funds invested',
+  contractProductionRemaining: 'Remaining under contracts', paidProductionRemaining: 'Remaining paid production', overallIncome: 'Total income', overallExpense: 'Total expense', executionRemaining: 'Remaining from completion', allOwnFundsInvested: 'Total own funds invested',
+  sectionsBreakdown: 'Breakdown by section', incomingFunds: 'Receipts', completedWorks: 'Completion'
+});
+Object.assign(copy.KY, {
+  workByContract: 'Келишимдер боюнча иш', workByFact: 'Иш жүзүндө аткаруу боюнча иш', contractAccounting: 'Келишимдер боюнча иш', actualAccounting: 'Иш жүзүндө аткаруу боюнча иш',
+  receivedAdvanceClosure: 'Аванс/жабуу катары алынды', completedWorkVolume: 'Аткарылган иштердин көлөмү', factAdvanceCompletion: 'Аванс/аткаруу', actuallyCompleted: 'Иш жүзүндө аткарылды',
+  totalReceivedAdvanceClosure: 'Бардыгы аванс/жабуу катары алынды', totalCompletedWorkVolume: 'Аткарылган иштердин жалпы көлөмү', totalFactAdvanceCompletion: 'Жалпы киреше', totalActuallyCompleted: 'Жалпы чыгаша',
+  addReceivedAdvanceClosure: 'Аванс/жабуу кошуу', addCompletedWorkVolume: 'Аткарылган көлөмдү кошуу', addFactAdvanceCompletion: 'Аванс/аткарууну кошуу', addActuallyCompleted: 'Аткарылган ишти кошуу',
+  overallContractBalance: 'Келишимдер боюнча жалпы баланс', overallFactExecutionBalance: 'Иш жүзүндө аткаруу боюнча жалпы баланс', reportIndicator: 'Көрсөткүч',
+  totalContractsAmount: 'Келишимдердин жалпы суммасы', contractProduction: 'Келишимдер боюнча өндүрүм', receivedFromCustomer: 'Заказчыдан алынды', totalOwnFundsInvested: 'Өз каражаты салынды',
+  contractProductionRemaining: 'Келишим боюнча калды', paidProductionRemaining: 'Төлөнгөн өндүрүмдөн калды', overallIncome: 'Жалпы киреше', overallExpense: 'Жалпы чыгаша', executionRemaining: 'Аткаруудан калган сумма', allOwnFundsInvested: 'Салынган өз каражатынын жалпы суммасы',
+  sectionsBreakdown: 'Бөлүмдөр боюнча бөлүштүрүү', incomingFunds: 'Түшүүлөр', completedWorks: 'Аткаруу'
+});
+Object.assign(copy.TJ, {
+  workByContract: 'Кор аз рӯи шартномаҳо', workByFact: 'Кор аз рӯи иҷрои воқеӣ', contractAccounting: 'Кор аз рӯи шартномаҳо', actualAccounting: 'Кор аз рӯи иҷрои воқеӣ',
+  receivedAdvanceClosure: 'Ҳамчун пешпардохт/бастан гирифта шуд', completedWorkVolume: 'Ҳаҷми корҳои иҷрошуда', factAdvanceCompletion: 'Пешпардохт/иҷро', actuallyCompleted: 'Воқеан иҷро шуд',
+  totalReceivedAdvanceClosure: 'Ҳамагӣ ҳамчун пешпардохт/бастан гирифта шуд', totalCompletedWorkVolume: 'Ҳаҷми умумии корҳои иҷрошуда', totalFactAdvanceCompletion: 'Даромади умумӣ', totalActuallyCompleted: 'Хароҷоти умумӣ',
+  addReceivedAdvanceClosure: 'Иловаи пешпардохт/бастан', addCompletedWorkVolume: 'Иловаи ҳаҷми иҷрошуда', addFactAdvanceCompletion: 'Иловаи пешпардохт/иҷро', addActuallyCompleted: 'Иловаи кори иҷрошуда',
+  overallContractBalance: 'Тавозуни умумӣ аз рӯи шартномаҳо', overallFactExecutionBalance: 'Тавозуни умумӣ аз рӯи иҷрои воқеӣ', reportIndicator: 'Нишондиҳанда',
+  totalContractsAmount: 'Маблағи умумии шартномаҳо', contractProduction: 'Иҷро аз рӯи шартномаҳо', receivedFromCustomer: 'Аз фармоишгар гирифта шуд', totalOwnFundsInvested: 'Маблағи шахсӣ гузошта шуд',
+  contractProductionRemaining: 'Бақия аз шартнома', paidProductionRemaining: 'Бақия аз иҷрои пардохтшуда', overallIncome: 'Даромади умумӣ', overallExpense: 'Хароҷоти умумӣ', executionRemaining: 'Бақия аз иҷро', allOwnFundsInvested: 'Маблағи умумии шахсии гузошташуда',
+  sectionsBreakdown: 'Тақсимот аз рӯи бахшҳо', incomingFunds: 'Воридот', completedWorks: 'Иҷро'
+});
+
+Object.assign(copy.RU, {
   reportPreviewTitle: 'Предпросмотр отчёта', reportPreviewHint: 'Проверьте содержание и оформление перед скачиванием или отправкой.', closePreview: 'Закрыть просмотр',
   widgetCalendar: 'Календарь', calendar: 'Календарь', calendarHint: 'Дела и даты в одном месте', previousMonth: 'Предыдущий месяц', nextMonth: 'Следующий месяц', today: 'Сегодня', selectedDate: 'Выбранная дата', noCalendarEvents: 'На эту дату дел нет', addTaskForDate: 'Добавить дело на эту дату',
   invitedObject: 'По приглашению', demoInvitedObjectName: 'Демо-объект «Северный квартал»', invitedToObject: 'Вы приглашены работать на этом объекте', invitedRole: 'Ваша роль', invitedBy: 'Пригласил', invitedAt: 'Дата приглашения', objectParticipant: 'Участник объекта', invitedDocumentsHint: 'Документы и доступы будут появляться здесь по мере предоставления владельцем объекта.', ownerWillShare: 'Файл пока не предоставлен владельцем объекта'
@@ -2719,6 +2760,36 @@ function cashObjectFinancials(object) {
   return totals;
 }
 
+function cashObjectReportTotals(object) {
+  const totals = object.sections.reduce((total, section) => {
+    if (section.contractMode) {
+      total.contractAmount += section.contractAmount;
+      total.contractProduction += cashTotal(section.expenses);
+      total.contractReceived += cashTotal(section.advances);
+      total.contractOwnInvested += cashTotal(section.ownInvestments);
+    }
+    if (section.factMode) {
+      total.factIncome += cashTotal(section.factIncome);
+      total.factExpense += cashTotal(section.factExpenses);
+      total.factOwnInvested += cashTotal(section.factOwnInvestments);
+    }
+    return total;
+  }, {
+    contractAmount: 0,
+    contractProduction: 0,
+    contractReceived: 0,
+    contractOwnInvested: 0,
+    factIncome: 0,
+    factExpense: 0,
+    factOwnInvested: 0
+  });
+  Object.keys(totals).forEach((key) => { totals[key] = Math.round(totals[key] * 100) / 100; });
+  totals.contractRemaining = Math.round((totals.contractAmount - totals.contractProduction) * 100) / 100;
+  totals.paidProductionRemaining = Math.round((totals.contractProduction - totals.contractReceived) * 100) / 100;
+  totals.factRemaining = Math.round((totals.factIncome - totals.factExpense) * 100) / 100;
+  return totals;
+}
+
 function formatSignedMoney(value) {
   const rounded = Math.round((Number(value) || 0) * 100) / 100;
   return `${rounded > 0 ? '+' : ''}${formatMoney(rounded)}`;
@@ -2728,8 +2799,8 @@ function cashBalanceClass(value) {
   return value < 0 ? 'is-negative' : value > 0 ? 'is-positive' : 'is-zero';
 }
 
-function cashReportSummary(label, value, colored = false) {
-  return { text: `${label}: ${formatMoney(value)}`, tone: colored ? cashBalanceClass(value) : '' };
+function cashReportSummary(label, value, colored = false, toneValue = value) {
+  return { text: `${label}: ${formatMoney(value)}`, tone: colored ? cashBalanceClass(toneValue) : '' };
 }
 
 function cashReportSummaryText(summary) {
@@ -2971,16 +3042,16 @@ function cashOwnFundsMarkup(section, investments, returns, investmentKind, retur
 function cashSectionMarkup(object, section) {
   const advances = cashTotal(section.advances);
   const expenses = cashTotal(section.expenses);
-  const remainingContract = Math.round((section.contractAmount - advances) * 100) / 100;
-  const advanceBalance = Math.round((advances - expenses) * 100) / 100;
+  const remainingContract = Math.round((section.contractAmount - expenses) * 100) / 100;
+  const paidProductionRemaining = Math.round((expenses - advances) * 100) / 100;
   const factIncome = cashTotal(section.factIncome);
   const factExpenses = cashTotal(section.factExpenses);
   const factBalance = Math.round((factIncome - factExpenses) * 100) / 100;
   const sectionBalance = cashSectionFinancials(section).balance;
   const isOpen = expandedCashSections.has(section.id);
   const modeBadges = `${section.contractMode ? `<span>${tr('workByContract')}</span>` : ''}${section.factMode ? `<span>${tr('actualAccounting')}</span>` : ''}${section.staffingMode ? `<span>${tr('peopleAssigned')}</span>` : ''}`;
-  const contractMarkup = section.contractMode ? `<section class="cash-accounting-block cash-contract-accounting"><h4>${tr('contractAccounting')}</h4><div class="cash-contract-head"><article class="cash-contract-value"><span>${tr('contractAmount')}</span><div><strong>${formatMoney(section.contractAmount)}</strong><button type="button" data-edit-contract-amount aria-label="${escapeHtml(tr('editContractAmount'))}" title="${escapeHtml(tr('editContractAmount'))}">✎</button></div></article><article><span>${tr('receivedAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article class="${cashBalanceClass(remainingContract)}"><span>${tr('remainingContract')}</span><strong>${formatSignedMoney(remainingContract)}</strong></article></div><div class="cash-summary"><article><span>${tr('totalAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article><span>${tr('totalExpenses')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining ${cashBalanceClass(advanceBalance)}"><span>${tr('advanceBalance')}</span><strong>${formatSignedMoney(advanceBalance)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('advances', 'received', 'addAdvance')}${cashEntryForm('expenses', 'expense', 'add')}</div>${cashHistoryMarkup(section.advances, 'totalAdvances', 'advances', section.id)}${cashHistoryMarkup(section.expenses, 'totalExpenses', 'expenses', section.id)}${cashOwnFundsMarkup(section, section.ownInvestments, section.ownReturns, 'ownInvestments', 'ownReturns')}</section>` : '';
-  const factMarkup = section.factMode ? `<section class="cash-fact-table cash-accounting-block"><h4 class="cash-fact-title">${tr('actualAccounting')}</h4><div class="cash-entry-grid">${cashEntryForm('factIncome', 'income', 'addIncome')}${cashEntryForm('factExpenses', 'expense', 'addExpense')}</div>${cashHistoryMarkup(section.factIncome, 'income', 'factIncome', section.id)}${cashHistoryMarkup(section.factExpenses, 'expense', 'factExpenses', section.id)}<div class="cash-balance ${cashBalanceClass(factBalance)}"><span>${tr('balanceResult')}</span><strong>${formatSignedMoney(factBalance)}</strong></div>${cashOwnFundsMarkup(section, section.factOwnInvestments, section.factOwnReturns, 'factOwnInvestments', 'factOwnReturns')}</section>` : '';
+  const contractMarkup = section.contractMode ? `<section class="cash-accounting-block cash-contract-accounting"><h4>${tr('contractAccounting')}</h4><div class="cash-contract-head"><article class="cash-contract-value"><span>${tr('contractAmount')}</span><div><strong>${formatMoney(section.contractAmount)}</strong><button type="button" data-edit-contract-amount aria-label="${escapeHtml(tr('editContractAmount'))}" title="${escapeHtml(tr('editContractAmount'))}">✎</button></div></article><article><span>${tr('receivedFromCustomer')}</span><strong>${formatMoney(advances)}</strong></article><article class="${cashBalanceClass(remainingContract)}"><span>${tr('contractProductionRemaining')}</span><strong>${formatSignedMoney(remainingContract)}</strong></article></div><div class="cash-summary"><article><span>${tr('totalReceivedAdvanceClosure')}</span><strong>${formatMoney(advances)}</strong></article><article><span>${tr('totalCompletedWorkVolume')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining ${cashBalanceClass(-paidProductionRemaining)}"><span>${tr('paidProductionRemaining')}</span><strong>${formatSignedMoney(paidProductionRemaining)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('advances', 'receivedAdvanceClosure', 'addReceivedAdvanceClosure')}${cashEntryForm('expenses', 'completedWorkVolume', 'addCompletedWorkVolume')}</div>${cashHistoryMarkup(section.advances, 'totalReceivedAdvanceClosure', 'advances', section.id)}${cashHistoryMarkup(section.expenses, 'totalCompletedWorkVolume', 'expenses', section.id)}${cashOwnFundsMarkup(section, section.ownInvestments, section.ownReturns, 'ownInvestments', 'ownReturns')}</section>` : '';
+  const factMarkup = section.factMode ? `<section class="cash-fact-table cash-accounting-block"><h4 class="cash-fact-title">${tr('actualAccounting')}</h4><div class="cash-entry-grid">${cashEntryForm('factIncome', 'factAdvanceCompletion', 'addFactAdvanceCompletion')}${cashEntryForm('factExpenses', 'actuallyCompleted', 'addActuallyCompleted')}</div>${cashHistoryMarkup(section.factIncome, 'totalFactAdvanceCompletion', 'factIncome', section.id)}${cashHistoryMarkup(section.factExpenses, 'totalActuallyCompleted', 'factExpenses', section.id)}<div class="cash-balance ${cashBalanceClass(factBalance)}"><span>${tr('executionRemaining')}</span><strong>${formatSignedMoney(factBalance)}</strong></div>${cashOwnFundsMarkup(section, section.factOwnInvestments, section.factOwnReturns, 'factOwnInvestments', 'factOwnReturns')}</section>` : '';
   const staffingMarkup = section.staffingMode ? `<section class="cash-staffing-block"><header><h4>${tr('peopleAssigned')}</h4><span>${tr('settings')}</span></header><div aria-hidden="true"></div></section>` : '';
   return `<section class="cash-section" data-cash-section="${escapeHtml(section.id)}">
     <header class="cash-section-head">
@@ -3212,9 +3283,9 @@ function cashDocumentReport(object, section, kind, documentData) {
 }
 
 function sectionFinanceReport(object, section) {
-  const rowsFor = (incomeEntries, expenseEntries, incomeLabel = tr('reportIncome')) => [
+  const rowsFor = (incomeEntries, expenseEntries, incomeLabel = tr('reportIncome'), expenseLabel = tr('reportExpense')) => [
     ...incomeEntries.map((entry, index) => ({ number: index + 1, type: incomeLabel, comment: entry.comment, date: cashDate(entry.date), amount: entry.amount })),
-    ...expenseEntries.map((entry, index) => ({ number: incomeEntries.length + index + 1, type: tr('reportExpense'), comment: entry.comment, date: cashDate(entry.date), amount: entry.amount }))
+    ...expenseEntries.map((entry, index) => ({ number: incomeEntries.length + index + 1, type: expenseLabel, comment: entry.comment, date: cashDate(entry.date), amount: entry.amount }))
   ];
   const columns = [{ label: tr('recordNumber'), key: 'number', width: 42 }, { label: tr('entryType'), key: 'type', width: 88 }, { label: tr('comment'), key: 'comment', width: '*' }, { label: tr('date'), key: 'date', width: 100 }, { label: tr('amount'), key: 'amount', width: 76, money: true }];
   const ownRowsFor = (investments, returns) => [
@@ -3224,13 +3295,13 @@ function sectionFinanceReport(object, section) {
   const tables = [];
   if (section.contractMode) {
     const advances = cashTotal(section.advances); const expenses = cashTotal(section.expenses);
-    tables.push({ title: tr('contractAccounting'), columns, rows: rowsFor(section.advances, section.expenses, tr('advance')), summaries: [cashReportSummary(tr('contractAmount'), section.contractAmount), cashReportSummary(tr('totalAdvances'), advances), cashReportSummary(tr('remainingContract'), section.contractAmount - advances, true), cashReportSummary(tr('totalExpenses'), expenses), cashReportSummary(tr('advanceBalance'), advances - expenses, true)] });
+    tables.push({ title: tr('contractAccounting'), columns, rows: rowsFor(section.advances, section.expenses, tr('receivedAdvanceClosure'), tr('completedWorkVolume')), summaries: [cashReportSummary(tr('contractAmount'), section.contractAmount), cashReportSummary(tr('contractProduction'), expenses), cashReportSummary(tr('receivedFromCustomer'), advances), cashReportSummary(tr('contractProductionRemaining'), section.contractAmount - expenses, true), cashReportSummary(tr('paidProductionRemaining'), expenses - advances, true, advances - expenses)] });
     const ownInvested = cashTotal(section.ownInvestments); const ownReturned = cashTotal(section.ownReturns);
     tables.push({ title: `${tr('ownFundsAccounting')} · ${tr('contractAccounting')}`, columns, rows: ownRowsFor(section.ownInvestments, section.ownReturns), summaries: [cashReportSummary(tr('totalOwnInvested'), ownInvested), cashReportSummary(tr('totalOwnReturned'), ownReturned), cashReportSummary(tr('ownFundsRemaining'), ownInvested - ownReturned, true)] });
   }
   if (section.factMode) {
     const factIncome = cashTotal(section.factIncome); const factExpenses = cashTotal(section.factExpenses);
-    tables.push({ title: tr('actualAccounting'), columns, rows: rowsFor(section.factIncome, section.factExpenses, tr('income')), summaries: [cashReportSummary(tr('income'), factIncome), cashReportSummary(tr('totalExpense'), factExpenses), cashReportSummary(tr('balanceResult'), factIncome - factExpenses, true)] });
+    tables.push({ title: tr('actualAccounting'), columns, rows: rowsFor(section.factIncome, section.factExpenses, tr('factAdvanceCompletion'), tr('actuallyCompleted')), summaries: [cashReportSummary(tr('overallIncome'), factIncome), cashReportSummary(tr('overallExpense'), factExpenses), cashReportSummary(tr('executionRemaining'), factIncome - factExpenses, true)] });
     const factOwnInvested = cashTotal(section.factOwnInvestments); const factOwnReturned = cashTotal(section.factOwnReturns);
     tables.push({ title: `${tr('ownFundsAccounting')} · ${tr('actualAccounting')}`, columns, rows: ownRowsFor(section.factOwnInvestments, section.factOwnReturns), summaries: [cashReportSummary(tr('totalOwnInvested'), factOwnInvested), cashReportSummary(tr('totalOwnReturned'), factOwnReturned), cashReportSummary(tr('ownFundsRemaining'), factOwnInvested - factOwnReturned, true)] });
   }
@@ -3241,11 +3312,11 @@ function sectionFinanceReport(object, section) {
 }
 
 function cashObjectDetailedReport(object) {
-  const columns = [
+  const sectionColumns = [
     { label: tr('sectionName'), key: 'section', width: '*' },
     { label: tr('sectionMode'), key: 'mode', width: 105 },
-    { label: tr('reportIncome'), key: 'income', width: 82, money: true },
-    { label: tr('reportExpense'), key: 'expense', width: 82, money: true },
+    { label: tr('incomingFunds'), key: 'income', width: 82, money: true },
+    { label: tr('completedWorks'), key: 'expense', width: 82, money: true },
     { label: tr('sectionBalance'), key: 'balance', width: 82, money: true, signed: true, tone: true }
   ];
   const summaryRows = [];
@@ -3256,7 +3327,30 @@ function cashObjectDetailedReport(object) {
     if (!section.contractMode && !section.factMode && section.staffingMode) summaryRows.push({ section: section.name, mode: tr('peopleAssigned'), income: 0, expense: 0, balance: 0 });
   });
   const totals = cashObjectFinancials(object);
-  const tables = [{ title: tr('overallSectionsBalance'), columns, rows: summaryRows, summaries: [cashReportSummary(tr('contractBalancesTotal'), totals.contractBalance, true), cashReportSummary(tr('factBalancesTotal'), totals.factBalance, true), cashReportSummary(tr('overallSectionsBalance'), totals.balance, true)] }];
+  const reportTotals = cashObjectReportTotals(object);
+  const balanceColumns = [
+    { label: tr('reportIndicator'), key: 'indicator', width: '*' },
+    { label: tr('amount'), key: 'value', width: 110, money: true }
+  ];
+  const contractBalanceRows = [
+    { indicator: tr('totalContractsAmount'), value: reportTotals.contractAmount },
+    { indicator: tr('contractProduction'), value: reportTotals.contractProduction },
+    { indicator: tr('receivedFromCustomer'), value: reportTotals.contractReceived },
+    { indicator: tr('totalOwnFundsInvested'), value: reportTotals.contractOwnInvested },
+    { indicator: tr('contractProductionRemaining'), value: reportTotals.contractRemaining },
+    { indicator: tr('paidProductionRemaining'), value: reportTotals.paidProductionRemaining }
+  ];
+  const factBalanceRows = [
+    { indicator: tr('overallIncome'), value: reportTotals.factIncome },
+    { indicator: tr('overallExpense'), value: reportTotals.factExpense },
+    { indicator: tr('executionRemaining'), value: reportTotals.factRemaining },
+    { indicator: tr('allOwnFundsInvested'), value: reportTotals.factOwnInvested }
+  ];
+  const tables = [
+    { title: tr('overallContractBalance'), columns: balanceColumns, rows: contractBalanceRows },
+    { title: tr('overallFactExecutionBalance'), columns: balanceColumns, rows: factBalanceRows },
+    { title: tr('sectionsBreakdown'), columns: sectionColumns, rows: summaryRows, summaries: [cashReportSummary(tr('contractBalancesTotal'), totals.contractBalance, true), cashReportSummary(tr('factBalancesTotal'), totals.factBalance, true), cashReportSummary(tr('overallSectionsBalance'), totals.balance, true)] }
+  ];
   object.sections.forEach((section) => {
     sectionFinanceReport(object, section).tables.forEach((table) => tables.push({ ...table, title: `${section.name} · ${table.title}` }));
   });
