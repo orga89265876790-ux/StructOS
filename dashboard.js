@@ -304,6 +304,27 @@ Object.assign(copy.EN, { openDocument: 'Open', replaceDocument: 'Replace', choos
 Object.assign(copy.KY, { openDocument: 'Ачуу', replaceDocument: 'Алмаштыруу', chooseReportDocument: 'Эмнени ачуу керек?', chooseReportDocumentHint: 'Жүктөлгөн документтердин биринин жыйынтыгын тандаңыз.', analysisNotReady: 'Документ али талдана элек', analysisNotReadyHint: 'Деталдуу баракты ачуу үчүн адегенде объектти талдаңыз.', runAnalysisNow: 'Азыр талдоо', projectAnalysis: 'Долбоорду деталдуу талдоо', backToProjects: 'Менин долбоорлорума', sourceFile: 'Булак', analyzedDataOnly: 'StructOS жүктөлгөн файлдан алынган маалыматты гана көрсөтөт. Жетишпеген маанилер ойлоп табылбайт.', commercialProposal: 'Коммерциялык сунуш', projectBySheets: 'Долбоор барактар боюнча', projectBySystems: 'Долбоор системалар боюнча', projectMaterials: 'Долбоордун материалдары', billOfQuantities: 'Иш көлөмдөрүнүн ведомосту', section: 'Бөлүм', sheetNumber: 'Барак', sheetName: 'Барактын аталышы', system: 'Система', sheets: 'Барактар', materials: 'Материалдар', materialName: 'Материалдын аталышы', works: 'Иштер', markType: 'Марка / түрү', source: 'Булак', statusLabel: 'Статус', extractionPending: 'Маалымат чыгарылышын күтүп жатат', extractionPendingCopy: 'Бөлүмдүн түзүмү даяр. Сервердик талдоо кошулгандан кийин саптар пайда болот.', analyzedDocumentPage: 'Талдоо барагы даяр', analyzedDocumentPageCopy: 'Файл сакталды жана тандалды. Бул документтин деталдуу түзүмүн кийинки этапта талкуулайбыз.' });
 Object.assign(copy.TJ, { openDocument: 'Кушодан', replaceDocument: 'Иваз кардан', chooseReportDocument: 'Чиро кушоем?', chooseReportDocumentHint: 'Натиҷаи яке аз ҳуҷҷатҳои боршударо интихоб кунед.', analysisNotReady: 'Ҳуҷҷат ҳанӯз таҳлил нашудааст', analysisNotReadyHint: 'Барои кушодани саҳифаи муфассал аввал таҳлили объектро оғоз кунед.', runAnalysisNow: 'Ҳозир таҳлил кардан', projectAnalysis: 'Таҳлили муфассали лоиҳа', backToProjects: 'Ба лоиҳаҳои ман', sourceFile: 'Манбаъ', analyzedDataOnly: 'StructOS танҳо маълумоти аз файли боршуда гирифташударо нишон медиҳад. Маълумоти набуда сохта намешавад.', commercialProposal: 'Пешниҳоди тиҷоратӣ', projectBySheets: 'Лоиҳа аз рӯи варақҳо', projectBySystems: 'Лоиҳа аз рӯи системаҳо', projectMaterials: 'Маводи лоиҳа', billOfQuantities: 'Рӯйхати ҳаҷми корҳо', section: 'Бахш', sheetNumber: 'Варақ', sheetName: 'Номи варақ', system: 'Система', sheets: 'Варақҳо', materials: 'Мавод', materialName: 'Номи мавод', works: 'Корҳо', markType: 'Тамға / навъ', source: 'Манбаъ', statusLabel: 'Ҳолат', extractionPending: 'Интизори гирифтани маълумот', extractionPendingCopy: 'Сохтори ҷадвал омода аст. Пас аз пайвасти таҳлили серверӣ сатрҳо пайдо мешаванд.', analyzedDocumentPage: 'Саҳифаи таҳлил омода аст', analyzedDocumentPageCopy: 'Файл нигоҳ дошта ва интихоб шуд. Сохтори муфассали ин ҳуҷҷатро дар марҳилаи навбатӣ муайян мекунем.' });
 
+Object.assign(copy.RU, {
+  editContractAmount: 'Изменить общую стоимость договора', contractAmountSaved: 'Общая стоимость договора изменена',
+  sectionSourceDocuments: 'Проект, договор и смета', sectionSourceDocumentsHint: 'Исходные файлы сохраняются без редактора. Их можно открыть или добавить новой версией.',
+  sectionAttachmentSaved: 'Файл добавлен в раздел', sectionAttachmentOpenFailed: 'Не удалось открыть файл. Добавьте его заново.', sectionAttachmentSaveFailed: 'Не удалось сохранить файл на устройстве'
+});
+Object.assign(copy.EN, {
+  editContractAmount: 'Change total contract value', contractAmountSaved: 'Total contract value updated',
+  sectionSourceDocuments: 'Project, contract, and estimate', sectionSourceDocumentsHint: 'Source files are stored without an editor. You can open them or add a new version.',
+  sectionAttachmentSaved: 'File added to the section', sectionAttachmentOpenFailed: 'The file could not be opened. Please add it again.', sectionAttachmentSaveFailed: 'The file could not be saved on this device'
+});
+Object.assign(copy.KY, {
+  editContractAmount: 'Келишимдин жалпы суммасын өзгөртүү', contractAmountSaved: 'Келишимдин жалпы суммасы өзгөртүлдү',
+  sectionSourceDocuments: 'Долбоор, келишим жана смета', sectionSourceDocumentsHint: 'Баштапкы файлдар редакторсуз сакталат. Аларды ачууга же жаңы версиясын кошууга болот.',
+  sectionAttachmentSaved: 'Файл бөлүмгө кошулду', sectionAttachmentOpenFailed: 'Файлды ачуу мүмкүн болгон жок. Аны кайра кошуңуз.', sectionAttachmentSaveFailed: 'Файлды түзмөктө сактоо мүмкүн болгон жок'
+});
+Object.assign(copy.TJ, {
+  editContractAmount: 'Тағйири арзиши умумии шартнома', contractAmountSaved: 'Арзиши умумии шартнома тағйир ёфт',
+  sectionSourceDocuments: 'Лоиҳа, шартнома ва смета', sectionSourceDocumentsHint: 'Файлҳои аслӣ бе муҳаррир нигоҳ дошта мешаванд. Онҳоро кушодан ё версияи нав илова кардан мумкин аст.',
+  sectionAttachmentSaved: 'Файл ба бахш илова шуд', sectionAttachmentOpenFailed: 'Файл кушода нашуд. Онро аз нав илова кунед.', sectionAttachmentSaveFailed: 'Файл дар дастгоҳ нигоҳ дошта нашуд'
+});
+
 Object.assign(copy.RU, { constructionActivityBlock: 'Блок строительной активности', constructionActivityIntro: 'Все ваши действия в StructOS формируют деловую активность. Чем она выше, тем раньше вы получите подходящие предложения.', last30Days: 'За последние 30 дней', businessActivity: 'Деловая активность', cabinetWork: 'Работа с личным кабинетом', projectWork: 'Работа с проектом', activityTotal: 'Всего', daysWithStructos: 'Дней со StructOS', invitedToStructos: 'Приглашено в StructOS', activityActions: 'действий' });
 Object.assign(copy.EN, { constructionActivityBlock: 'Construction activity', constructionActivityIntro: 'Every action in StructOS builds your business activity. The higher it is, the sooner suitable offers are shown to you.', last30Days: 'Last 30 days', businessActivity: 'Business activity', cabinetWork: 'Dashboard activity', projectWork: 'Project activity', activityTotal: 'Total', daysWithStructos: 'Days with StructOS', invitedToStructos: 'Invited to StructOS', activityActions: 'actions' });
 Object.assign(copy.KY, { constructionActivityBlock: 'Курулуш активдүүлүгү', constructionActivityIntro: 'StructOS ичиндеги бардык аракеттериңиз ишкердик активдүүлүктү түзөт. Ал канчалык жогору болсо, ылайыктуу сунуштарды ошончолук эрте аласыз.', last30Days: 'Акыркы 30 күндө', businessActivity: 'Ишкердик активдүүлүк', cabinetWork: 'Жеке кабинеттеги иш', projectWork: 'Долбоор менен иш', activityTotal: 'Бардыгы', daysWithStructos: 'StructOS менен күндөр', invitedToStructos: 'StructOSко чакырылды', activityActions: 'аракет' });
@@ -333,6 +354,9 @@ const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
 const WIDGET_STYLES_KEY = 'structos-space-widget-styles-v1';
 const TODO_KEY = 'structos-space-todo-v1';
 const CASHFLOW_KEY = 'structos-cashflow-v1';
+const CASHFLOW_FILE_DB = 'structos-cashflow-files-db';
+const CASHFLOW_FILE_STORE = 'files';
+const CASH_ATTACHMENT_KINDS = ['project', 'contract', 'estimate'];
 const ACTIVE_OBJECT_LIMIT = 1;
 const uploadRules = {
   project: { accept: '.pdf,.dwg,.rvt,.jpg,.jpeg,.png,.webp,.heic,image/*', extensions: ['pdf', 'dwg', 'rvt', 'jpg', 'jpeg', 'png', 'webp', 'heic'], formats: 'PDF, DWG, RVT, JPG, PNG, WEBP, HEIC', maxMb: 500 },
@@ -2522,9 +2546,33 @@ function normalizeCashReportHistory(value) {
   }));
 }
 
+function normalizeCashAttachmentVersion(value, kind) {
+  if (!value?.name) return null;
+  return {
+    id: String(value.id || value.storageKey || `cash-file-${Date.now()}-${Math.random().toString(16).slice(2)}`),
+    kind,
+    name: String(value.name).slice(0, 240),
+    size: Math.max(0, Number(value.size) || 0),
+    type: String(value.type || ''),
+    lastModified: Number(value.lastModified) || Date.now(),
+    addedAt: value.addedAt || new Date().toISOString()
+  };
+}
+
+function normalizeCashAttachment(value, kind) {
+  const source = Array.isArray(value?.versions) ? value.versions : value?.name ? [value] : [];
+  const versions = source.map((version) => normalizeCashAttachmentVersion(version, kind)).filter(Boolean);
+  return versions.length ? { kind, versions } : null;
+}
+
+function cashAttachmentCurrent(section, kind) {
+  const versions = section?.attachments?.[kind]?.versions;
+  return Array.isArray(versions) && versions.length ? versions[versions.length - 1] : null;
+}
+
 function cashSectionHasData(section) {
   const entries = ['advances', 'expenses', 'ownInvestments', 'ownReturns', 'factIncome', 'factExpenses', 'factOwnInvestments', 'factOwnReturns'].some((key) => section[key]?.length);
-  const documents = Boolean(section.statement?.updatedAt || section.act?.updatedAt || section.reportHistory?.length);
+  const documents = Boolean(section.statement?.updatedAt || section.act?.updatedAt || section.reportHistory?.length || CASH_ATTACHMENT_KINDS.some((kind) => cashAttachmentCurrent(section, kind)));
   return entries || documents || section.contractAmount > 0 || section.staffingMode;
 }
 
@@ -2547,6 +2595,7 @@ function normalizeCashSection(section, legacyObject = {}) {
     factExpenses: normalizeCashEntries(section?.factExpenses),
     factOwnInvestments: normalizeCashEntries(section?.factOwnInvestments),
     factOwnReturns: normalizeCashEntries(section?.factOwnReturns),
+    attachments: Object.fromEntries(CASH_ATTACHMENT_KINDS.map((kind) => [kind, normalizeCashAttachment(section?.attachments?.[kind], kind)])),
     statement: normalizeCashDocument(section?.statement, false, tr('workStatement')),
     act: normalizeCashDocument(section?.act, true, tr('workAct')),
     reportHistory: normalizeCashReportHistory(section?.reportHistory)
@@ -2583,6 +2632,7 @@ let activeCashObjectId = null;
 const expandedCashSections = new Set();
 const expandedCashReportHistory = new Set();
 const expandedCashEntryHistories = new Set();
+let cashflowFileDbPromise;
 let reportLogoDataUrl = '';
 const reportPreviewLogoUrl = new URL('./assets/favicon-192.png', import.meta.url).href;
 
@@ -2590,6 +2640,57 @@ function saveCashflow() {
   localStorage.setItem(CASHFLOW_KEY, JSON.stringify(cashflowObjects));
   renderObjects();
   renderWidgets();
+}
+
+function openCashflowFileDb() {
+  if (cashflowFileDbPromise) return cashflowFileDbPromise;
+  cashflowFileDbPromise = new Promise((resolve, reject) => {
+    if (!('indexedDB' in window)) { reject(new Error('IndexedDB unavailable')); return; }
+    const request = indexedDB.open(CASHFLOW_FILE_DB, 1);
+    request.onupgradeneeded = () => {
+      const db = request.result;
+      if (!db.objectStoreNames.contains(CASHFLOW_FILE_STORE)) db.createObjectStore(CASHFLOW_FILE_STORE, { keyPath: 'id' });
+    };
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(request.error || new Error('Cashflow file database unavailable'));
+  });
+  return cashflowFileDbPromise;
+}
+
+async function storeCashflowFile(id, file) {
+  const db = await openCashflowFileDb();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction(CASHFLOW_FILE_STORE, 'readwrite');
+    transaction.objectStore(CASHFLOW_FILE_STORE).put({ id, blob: file });
+    transaction.oncomplete = () => resolve();
+    transaction.onerror = () => reject(transaction.error || new Error('Cashflow file save failed'));
+    transaction.onabort = () => reject(transaction.error || new Error('Cashflow file save aborted'));
+  });
+}
+
+async function readCashflowFile(id) {
+  const db = await openCashflowFileDb();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction(CASHFLOW_FILE_STORE, 'readonly');
+    const request = transaction.objectStore(CASHFLOW_FILE_STORE).get(id);
+    request.onsuccess = () => resolve(request.result?.blob || null);
+    request.onerror = () => reject(request.error || new Error('Cashflow file read failed'));
+  });
+}
+
+async function deleteCashflowFiles(sectionOrSections) {
+  const sections = Array.isArray(sectionOrSections) ? sectionOrSections : [sectionOrSections];
+  const ids = sections.flatMap((section) => CASH_ATTACHMENT_KINDS.flatMap((kind) => section?.attachments?.[kind]?.versions || [])).map((version) => version.id).filter(Boolean);
+  if (!ids.length) return;
+  const db = await openCashflowFileDb();
+  await new Promise((resolve, reject) => {
+    const transaction = db.transaction(CASHFLOW_FILE_STORE, 'readwrite');
+    const store = transaction.objectStore(CASHFLOW_FILE_STORE);
+    ids.forEach((id) => store.delete(id));
+    transaction.oncomplete = () => resolve();
+    transaction.onerror = () => reject(transaction.error || new Error('Cashflow file deletion failed'));
+    transaction.onabort = () => reject(transaction.error || new Error('Cashflow file deletion aborted'));
+  });
 }
 
 function cashTotal(entries) {
@@ -2704,6 +2805,101 @@ function renameCashSection(objectId, sectionId) {
   });
 }
 
+function openCashContractAmountDialog(objectId, sectionId) {
+  const { object, section } = findCashSection(objectId, sectionId);
+  if (!object || !section?.contractMode) return;
+  showDialog(tr('editContractAmount'), `${object.name} · ${section.name}`, `<div class="cash-create-form cash-contract-amount-edit"><label><span>${tr('contractAmount')}</span><input type="number" min="0.01" step="0.01" inputmode="decimal" data-edit-contract-amount value="${section.contractAmount}" /></label><button class="primary-button" type="button" data-save-contract-amount>${tr('saveChanges')}</button></div>`);
+  const scope = $('[data-dialog-content]');
+  const input = $('[data-edit-contract-amount]', scope);
+  const saveAmount = () => {
+    const amount = Math.max(0, Math.round((Number(input?.value) || 0) * 100) / 100);
+    if (amount <= 0) { showToast(tr('enterContractAmount')); input?.focus(); return; }
+    section.contractAmount = amount;
+    saveCashflow();
+    renderCashflow();
+    $('[data-dialog]')?.close();
+    showToast(tr('contractAmountSaved'));
+  };
+  $('[data-save-contract-amount]', scope)?.addEventListener('click', saveAmount);
+  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); saveAmount(); } });
+  setTimeout(() => { input?.focus(); input?.select(); }, 40);
+}
+
+async function addCashSectionAttachment(objectId, sectionId, kind, file) {
+  const { section } = findCashSection(objectId, sectionId);
+  const rule = uploadRules[kind];
+  if (!section || !rule || !file) return;
+  if (file.size > rule.maxMb * 1024 * 1024) { showToast(`${tr('fileTooLarge')}: ${rule.maxMb} МБ`); return; }
+  if (!isAllowedFile(file, rule)) { showToast(`${tr('unsupportedFormat')}: ${rule.formats}`); return; }
+  const current = cashAttachmentCurrent(section, kind);
+  if (current && sameFileMetadata(current, file)) { showToast(tr('sameFileSelected')); return; }
+  const id = `cash-file-${createObjectId()}`;
+  try {
+    await storeCashflowFile(id, file);
+    const version = normalizeCashAttachmentVersion({ ...fileMetadata(file), id }, kind);
+    const versions = [...(section.attachments?.[kind]?.versions || []), version];
+    section.attachments ||= Object.fromEntries(CASH_ATTACHMENT_KINDS.map((attachmentKind) => [attachmentKind, null]));
+    section.attachments[kind] = { kind, versions };
+    saveCashflow();
+    renderCashflow();
+    showToast(tr('sectionAttachmentSaved'));
+  } catch (error) {
+    console.error(error);
+    showToast(tr('sectionAttachmentSaveFailed'));
+  }
+}
+
+async function openCashSectionAttachment(objectId, sectionId, kind, versionId) {
+  const { section } = findCashSection(objectId, sectionId);
+  const versions = section?.attachments?.[kind]?.versions || [];
+  const version = versions.find((item) => item.id === versionId) || versions[versions.length - 1];
+  if (!version) return;
+  const previewWindow = window.open('', '_blank');
+  if (previewWindow) {
+    previewWindow.opener = null;
+    previewWindow.document.title = version.name;
+    previewWindow.document.body.textContent = `${tr('openDocument')}: ${version.name}`;
+  }
+  try {
+    const blob = await readCashflowFile(version.id);
+    if (!blob) throw new Error('Cashflow attachment is missing');
+    const url = URL.createObjectURL(blob);
+    const extension = version.name.split('.').pop()?.toLowerCase();
+    const canPreview = String(version.type || blob.type).startsWith('image/') || String(version.type || blob.type) === 'application/pdf' || extension === 'pdf';
+    if (previewWindow && !previewWindow.closed) {
+      previewWindow.location.replace(url);
+    } else {
+      const link = document.createElement('a');
+      link.href = url;
+      if (canPreview) { link.target = '_blank'; link.rel = 'noopener'; }
+      else link.download = version.name;
+      document.body.append(link); link.click(); link.remove();
+    }
+    setTimeout(() => URL.revokeObjectURL(url), 300000);
+  } catch (error) {
+    console.error(error);
+    previewWindow?.close();
+    showToast(tr('sectionAttachmentOpenFailed'));
+  }
+}
+
+function cashSectionAttachmentMarkup(section, kind) {
+  const attachment = section.attachments?.[kind];
+  const versions = attachment?.versions || [];
+  const current = versions[versions.length - 1];
+  const icon = { project: '▤', contract: '≡', estimate: '₽' }[kind];
+  const history = versions.length > 1 ? `<details class="cash-source-file-history"><summary>${tr('versionHistory')} · ${versions.length}</summary><div>${[...versions].reverse().map((version, reverseIndex) => `<button type="button" data-open-cash-attachment-version="${escapeHtml(version.id)}" data-cash-attachment-kind="${escapeHtml(kind)}"><b>v${versions.length - reverseIndex}</b><span><strong>${escapeHtml(version.name)}</strong><small>${escapeHtml(formatObjectDateTime(version.addedAt))} · ${escapeHtml(formatStorage(version.size))}</small></span><i>${tr('openDocument')}</i></button>`).join('')}</div></details>` : '';
+  return `<article class="cash-source-file${current ? ' has-file' : ''}">
+    <header><span aria-hidden="true">${icon}</span><div><strong>${tr(kind)}</strong><small>${escapeHtml(current?.name || tr('notUploaded'))}</small>${current ? `<em>v${versions.length} · ${escapeHtml(formatStorage(current.size))}</em>` : ''}</div></header>
+    <div class="cash-source-file-actions">${current ? `<button class="outline-button" type="button" data-open-cash-attachment-version="${escapeHtml(current.id)}" data-cash-attachment-kind="${escapeHtml(kind)}">${tr('openDocument')}</button>` : ''}<button class="primary-button" type="button" data-select-cash-attachment="${escapeHtml(kind)}">${tr(current ? 'replaceDocument' : 'upload')}</button></div>
+    <input type="file" accept="${uploadRules[kind].accept}" data-cash-attachment-input="${escapeHtml(kind)}" hidden />${history}
+  </article>`;
+}
+
+function cashSectionAttachmentsMarkup(section) {
+  return `<section class="cash-source-documents"><header><div><h4>${tr('sectionSourceDocuments')}</h4><p>${tr('sectionSourceDocumentsHint')}</p></div><span aria-hidden="true">◉</span></header><div class="cash-source-files">${CASH_ATTACHMENT_KINDS.map((kind) => cashSectionAttachmentMarkup(section, kind)).join('')}</div></section>`;
+}
+
 function addCashEntry(objectId, sectionId, kind, form) {
   const object = cashflowObjects.find((item) => item.id === objectId);
   const section = object?.sections.find((item) => item.id === sectionId);
@@ -2780,18 +2976,19 @@ function cashSectionMarkup(object, section) {
   const factIncome = cashTotal(section.factIncome);
   const factExpenses = cashTotal(section.factExpenses);
   const factBalance = Math.round((factIncome - factExpenses) * 100) / 100;
+  const sectionBalance = cashSectionFinancials(section).balance;
   const isOpen = expandedCashSections.has(section.id);
   const modeBadges = `${section.contractMode ? `<span>${tr('workByContract')}</span>` : ''}${section.factMode ? `<span>${tr('actualAccounting')}</span>` : ''}${section.staffingMode ? `<span>${tr('peopleAssigned')}</span>` : ''}`;
-  const contractMarkup = section.contractMode ? `<section class="cash-accounting-block cash-contract-accounting"><h4>${tr('contractAccounting')}</h4><div class="cash-contract-head"><article><span>${tr('contractAmount')}</span><strong>${formatMoney(section.contractAmount)}</strong></article><article><span>${tr('receivedAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article class="${cashBalanceClass(remainingContract)}"><span>${tr('remainingContract')}</span><strong>${formatSignedMoney(remainingContract)}</strong></article></div><div class="cash-summary"><article><span>${tr('totalAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article><span>${tr('totalExpenses')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining ${cashBalanceClass(advanceBalance)}"><span>${tr('advanceBalance')}</span><strong>${formatSignedMoney(advanceBalance)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('advances', 'received', 'addAdvance')}${cashEntryForm('expenses', 'expense', 'add')}</div>${cashHistoryMarkup(section.advances, 'totalAdvances', 'advances', section.id)}${cashHistoryMarkup(section.expenses, 'totalExpenses', 'expenses', section.id)}${cashOwnFundsMarkup(section, section.ownInvestments, section.ownReturns, 'ownInvestments', 'ownReturns')}</section>` : '';
+  const contractMarkup = section.contractMode ? `<section class="cash-accounting-block cash-contract-accounting"><h4>${tr('contractAccounting')}</h4><div class="cash-contract-head"><article class="cash-contract-value"><span>${tr('contractAmount')}</span><div><strong>${formatMoney(section.contractAmount)}</strong><button type="button" data-edit-contract-amount aria-label="${escapeHtml(tr('editContractAmount'))}" title="${escapeHtml(tr('editContractAmount'))}">✎</button></div></article><article><span>${tr('receivedAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article class="${cashBalanceClass(remainingContract)}"><span>${tr('remainingContract')}</span><strong>${formatSignedMoney(remainingContract)}</strong></article></div><div class="cash-summary"><article><span>${tr('totalAdvances')}</span><strong>${formatMoney(advances)}</strong></article><article><span>${tr('totalExpenses')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining ${cashBalanceClass(advanceBalance)}"><span>${tr('advanceBalance')}</span><strong>${formatSignedMoney(advanceBalance)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('advances', 'received', 'addAdvance')}${cashEntryForm('expenses', 'expense', 'add')}</div>${cashHistoryMarkup(section.advances, 'totalAdvances', 'advances', section.id)}${cashHistoryMarkup(section.expenses, 'totalExpenses', 'expenses', section.id)}${cashOwnFundsMarkup(section, section.ownInvestments, section.ownReturns, 'ownInvestments', 'ownReturns')}</section>` : '';
   const factMarkup = section.factMode ? `<section class="cash-fact-table cash-accounting-block"><h4 class="cash-fact-title">${tr('actualAccounting')}</h4><div class="cash-entry-grid">${cashEntryForm('factIncome', 'income', 'addIncome')}${cashEntryForm('factExpenses', 'expense', 'addExpense')}</div>${cashHistoryMarkup(section.factIncome, 'income', 'factIncome', section.id)}${cashHistoryMarkup(section.factExpenses, 'expense', 'factExpenses', section.id)}<div class="cash-balance ${cashBalanceClass(factBalance)}"><span>${tr('balanceResult')}</span><strong>${formatSignedMoney(factBalance)}</strong></div>${cashOwnFundsMarkup(section, section.factOwnInvestments, section.factOwnReturns, 'factOwnInvestments', 'factOwnReturns')}</section>` : '';
   const staffingMarkup = section.staffingMode ? `<section class="cash-staffing-block"><header><h4>${tr('peopleAssigned')}</h4><span>${tr('settings')}</span></header><div aria-hidden="true"></div></section>` : '';
   return `<section class="cash-section" data-cash-section="${escapeHtml(section.id)}">
     <header class="cash-section-head">
-      <button class="cash-section-toggle" type="button" data-cash-section-toggle aria-expanded="${isOpen}"><span>${isOpen ? '⌄' : '›'}</span><strong>${escapeHtml(section.name)}</strong><i>${modeBadges}</i></button>
+      <button class="cash-section-toggle" type="button" data-cash-section-toggle aria-expanded="${isOpen}"><span>${isOpen ? '⌄' : '›'}</span><strong>${escapeHtml(section.name)}</strong><b class="cash-section-balance ${cashBalanceClass(sectionBalance)}" aria-label="${escapeHtml(tr('sectionBalance'))}">${formatSignedMoney(sectionBalance)}</b><i>${modeBadges}</i></button>
       <div class="cash-section-head-actions"><button class="cash-mini-button" type="button" data-rename-cash-section>${tr('rename')}</button><button class="cash-mini-button is-danger" type="button" data-delete-cash-section>${tr('deleteSection')}</button></div>
     </header>
     <div class="cash-section-body"${isOpen ? '' : ' hidden'}>
-      <div class="cash-section-document-actions"><button type="button" data-open-cash-document="statement">${tr('workStatement')}</button><button type="button" data-open-cash-document="act">${tr('workAct')}</button><button type="button" data-export-section>${tr('sectionReport')}</button><button type="button" data-toggle-report-history>${tr('reportHistory')} · ${section.reportHistory.length}</button></div>${cashReportHistoryMarkup(section)}${contractMarkup}${factMarkup}${staffingMarkup}
+      ${cashSectionAttachmentsMarkup(section)}<div class="cash-section-document-actions"><button type="button" data-open-cash-document="statement">${tr('workStatement')}</button><button type="button" data-open-cash-document="act">${tr('workAct')}</button><button type="button" data-export-section>${tr('sectionReport')}</button><button type="button" data-toggle-report-history>${tr('reportHistory')} · ${section.reportHistory.length}</button></div>${cashReportHistoryMarkup(section)}${contractMarkup}${factMarkup}${staffingMarkup}
     </div>
   </section>`;
 }
@@ -2824,6 +3021,7 @@ function renderCashflow() {
     $('[data-rename-cash-object]', card)?.addEventListener('click', () => renameCashObject(object.id));
     $('[data-delete-cash-object]', card)?.addEventListener('click', () => {
       if (!window.confirm(tr('deleteCashObjectConfirm'))) return;
+      deleteCashflowFiles(object.sections).catch((error) => console.error(error));
       cashflowObjects = cashflowObjects.filter((item) => item.id !== object.id);
       saveCashflow();
       renderCashflow();
@@ -2848,10 +3046,25 @@ function bindCashSectionEvents(object, scope) {
       $('[data-rename-cash-section]', sectionCard)?.addEventListener('click', () => renameCashSection(object.id, section.id));
       $('[data-delete-cash-section]', sectionCard)?.addEventListener('click', () => {
         if (!window.confirm(tr('deleteSectionConfirm'))) return;
+        deleteCashflowFiles(section).catch((error) => console.error(error));
         object.sections = object.sections.filter((item) => item.id !== section.id);
         expandedCashSections.delete(section.id);
         saveCashflow(); renderCashflow(); showToast(tr('sectionDeleted'));
       });
+      $('[data-edit-contract-amount]', sectionCard)?.addEventListener('click', () => openCashContractAmountDialog(object.id, section.id));
+      $$('[data-select-cash-attachment]', sectionCard).forEach((button) => button.addEventListener('click', () => {
+        const input = $$('[data-cash-attachment-input]', sectionCard).find((item) => item.dataset.cashAttachmentInput === button.dataset.selectCashAttachment);
+        input?.click();
+      }));
+      $$('[data-cash-attachment-input]', sectionCard).forEach((input) => input.addEventListener('change', async () => {
+        const file = input.files?.[0];
+        if (!file) return;
+        input.disabled = true;
+        await addCashSectionAttachment(object.id, section.id, input.dataset.cashAttachmentInput, file);
+        input.value = '';
+        input.disabled = false;
+      }));
+      $$('[data-open-cash-attachment-version]', sectionCard).forEach((button) => button.addEventListener('click', () => openCashSectionAttachment(object.id, section.id, button.dataset.cashAttachmentKind, button.dataset.openCashAttachmentVersion)));
       $('[data-toggle-report-history]', sectionCard)?.addEventListener('click', () => {
         if (expandedCashReportHistory.has(section.id)) expandedCashReportHistory.delete(section.id); else expandedCashReportHistory.add(section.id);
         renderCashflow();
