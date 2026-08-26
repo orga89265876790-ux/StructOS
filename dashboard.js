@@ -1,4 +1,6 @@
 import { supabaseConfig } from './auth-config.js';
+import { professions } from './professions.js';
+import { metroDirectory } from './metro-directory.js';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -267,6 +269,21 @@ Object.assign(copy.TJ, {
   analyzeDocument: 'Таҳлил кардан', analyzingDocument: 'Ҳуҷҷат таҳлил мешавад', analyzingDocumentHint: 'StructOS файли интихобшударо коркард ва саҳифаи таҳлилро омода мекунад.', deleteDocument: 'Нест кардан', deleteDocumentTitle: 'Ҳуҷҷат нест карда шавад?', deleteDocumentHint: 'Файл ва таърихи версияҳои он аз объект нест мешаванд.', documentDeleted: 'Ҳуҷҷат нест шуд'
 });
 
+Object.assign(copy.RU, {
+  connections: 'Привязать к StructOS', connectionsHint: 'Подключите сети и контакты к одному профилю StructOS.', personalDataMirrorHint: 'Это единые личные данные: изменения здесь сразу сохраняются и отображаются в Паспорте строителя.', notSpecified: 'Не указано', editPersonalData: 'Изменить личные данные', contactAndLocation: 'Контакты и место проживания', professionalData: 'Профессиональные данные',
+  accountReward: '+150 бонусов', rewardOnce: 'Можно получить один раз', linkAccount: 'Привязать', linkedAccount: 'Привязано', accountLinked: 'Аккаунт привязан. +150 бонусов начислено.', accountAlreadyLinked: 'Этот аккаунт уже привязан, повторный бонус не начисляется.', accountLinkReward: 'Привязка аккаунта к StructOS', testConnectionTitle: 'Привязка к StructOS', testConnectionHint: 'В тестовом аккаунте подключение подтверждается внутри StructOS. Проверка через сервис будет добавлена при запуске интеграции.', confirmTestConnection: 'Подтвердить привязку', missingConnectionData: 'Сначала укажите эти данные в блоке «Личные данные».', fillPersonalData: 'Заполнить личные данные', mergeAccounts: 'Объединить аккаунты', mergeAccountsHint: 'Здесь можно будет объединить несколько учётных записей StructOS без потери проектов и бонусов.', inDevelopment: 'В разработке', linkedCount: 'Привязано', availableAccountBonus: 'Доступно за все привязки',
+  yandexAccount: 'Яндекс', vkAccount: 'ВК', telegramAccount: 'Telegram', whatsappAccount: 'WhatsApp', maxAccount: 'MAX', phoneAccount: 'Телефон', emailAccount: 'Email',
+  professions: 'Профессии', professionDirectoryHint: 'Введите профессию, специализацию или систему. В справочнике 450 строительных профессий и сочетаний, включая все основные направления слаботочных систем.'
+});
+Object.assign(copy.EN, {
+  connections: 'Link to StructOS', connectionsHint: 'Connect networks and contact methods to one StructOS profile.', personalDataMirrorHint: 'This is shared personal data: changes save immediately and appear in the Builder Passport.', notSpecified: 'Not specified', editPersonalData: 'Edit personal data', contactAndLocation: 'Contacts and residence', professionalData: 'Professional data',
+  accountReward: '+150 bonuses', rewardOnce: 'Available once', linkAccount: 'Link', linkedAccount: 'Linked', accountLinked: 'Account linked. +150 bonuses credited.', accountAlreadyLinked: 'This account is already linked; no repeat bonus is awarded.', accountLinkReward: 'Account linked to StructOS', testConnectionTitle: 'Link to StructOS', testConnectionHint: 'In the test account, linking is confirmed inside StructOS. Provider verification will be added with the integration launch.', confirmTestConnection: 'Confirm linking', missingConnectionData: 'Add this information in Personal data first.', fillPersonalData: 'Fill personal data', mergeAccounts: 'Merge accounts', mergeAccountsHint: 'This will merge several StructOS accounts without losing projects or bonuses.', inDevelopment: 'In development', linkedCount: 'Linked', availableAccountBonus: 'Available for all links',
+  yandexAccount: 'Yandex', vkAccount: 'VK', telegramAccount: 'Telegram', whatsappAccount: 'WhatsApp', maxAccount: 'MAX', phoneAccount: 'Phone', emailAccount: 'Email',
+  professions: 'Professions', professionDirectoryHint: 'Type a trade, specialty, or system. The directory contains 450 construction roles and combinations, including the main low-voltage disciplines.'
+});
+Object.assign(copy.KY, { connections: 'StructOS менен байланыштыруу', connectionsHint: 'Тармактарды жана байланыштарды бир StructOS профилине кошуңуз.', notSpecified: 'Көрсөтүлгөн эмес', editPersonalData: 'Жеке маалыматтарды өзгөртүү', accountReward: '+150 бонус', rewardOnce: 'Бир жолу гана', linkAccount: 'Байлоо', linkedAccount: 'Байланган', mergeAccounts: 'Аккаунттарды бириктирүү', inDevelopment: 'Иштелип жатат' });
+Object.assign(copy.TJ, { connections: 'Пайваст кардан ба StructOS', connectionsHint: 'Шабакаҳо ва тамосҳоро ба як профили StructOS пайваст кунед.', notSpecified: 'Нишон дода нашудааст', editPersonalData: 'Тағйири маълумоти шахсӣ', accountReward: '+150 бонус', rewardOnce: 'Танҳо як бор', linkAccount: 'Пайваст кардан', linkedAccount: 'Пайваст шуд', mergeAccounts: 'Якҷо кардани аккаунтҳо', inDevelopment: 'Дар таҳия' });
+
 Object.assign(copy.RU, { myProjects: 'Мои проекты', myProjectsDescription: 'Все загруженные проекты и их путь до завершения', projectPackages: 'Проектов', uploadProject: 'Загрузить проект', noMyProjects: 'Проектов пока нет', noMyProjectsCopy: 'Загрузите проект, договор или смету — карточка проекта появится здесь автоматически.', projectDocuments: 'Документы проекта', lastProjectUpdate: 'Обновлён' });
 Object.assign(copy.EN, { myProjects: 'My projects', myProjectsDescription: 'All uploaded projects from upload to completion', projectPackages: 'Projects', uploadProject: 'Upload project', noMyProjects: 'No projects yet', noMyProjectsCopy: 'Upload a project, contract, or estimate and its project card will appear here automatically.', projectDocuments: 'Project documents', lastProjectUpdate: 'Updated' });
 Object.assign(copy.KY, { myProjects: 'Менин долбоорлорум', myProjectsDescription: 'Жүктөөдөн аяктаганга чейинки бардык долбоорлор', projectPackages: 'Долбоорлор', uploadProject: 'Долбоор жүктөө', noMyProjects: 'Азырынча долбоор жок', noMyProjectsCopy: 'Долбоорду, келишимди же сметаны жүктөңүз — долбоор картасы бул жерде автоматтык пайда болот.', projectDocuments: 'Долбоордун документтери', lastProjectUpdate: 'Жаңыртылды' });
@@ -302,6 +319,7 @@ const PROFILE_COMPLETION_KEY = 'structos-profile-completion';
 const PERSON_DATA_KEY = 'structos-person-data-v1';
 const PROFILE_DATA_KEY = 'structos-profile-data-v1';
 const BUILDER_PASSPORT_KEY = 'structos-builder-passport-v1';
+const STRUCTOS_CONNECTIONS_KEY = 'structos-connections-v1';
 const STRUCTOS_DOCUMENT_BRAND = Object.freeze({ made: 'Сделано на StructOS', site: 'www.structOS.ru', slogan: 'Единый Строительный Интеллект в России №1' });
 const BOTTOM_MENU_POSITION_KEY = 'structos-bottom-menu-position-v2';
 const ACTIVITY_KEY = 'structos-construction-activity-v1';
@@ -337,6 +355,7 @@ function loadFinance() {
       saved.rewards.passportFirst = Boolean(saved.rewards.passportFirst);
       saved.rewards.passport65 = Boolean(saved.rewards.passport65 || saved.rewards.passportFull);
       saved.rewards.profileFull = Boolean(saved.rewards.profileFull);
+      saved.rewards.accountLinks = saved.rewards.accountLinks && typeof saved.rewards.accountLinks === 'object' ? saved.rewards.accountLinks : {};
       return saved;
     }
   } catch {}
@@ -345,11 +364,28 @@ function loadFinance() {
     bonuses: 200,
     balanceHistory: [],
     bonusHistory: [{ key: 'passportFirstReward', amount: 200, date: new Date().toISOString() }],
-    rewards: { passportFirst: true, passport65: false, profileFull: false }
+    rewards: { passportFirst: true, passport65: false, profileFull: false, accountLinks: {} }
   };
 }
 
 const finance = loadFinance();
+
+const structosConnectionProviders = [
+  { key: 'yandex', labelKey: 'yandexAccount', icon: 'Я', className: 'is-yandex' },
+  { key: 'vk', labelKey: 'vkAccount', icon: 'VK', className: 'is-vk' },
+  { key: 'telegram', labelKey: 'telegramAccount', icon: '✈', className: 'is-telegram' },
+  { key: 'whatsapp', labelKey: 'whatsappAccount', icon: 'W', className: 'is-whatsapp' },
+  { key: 'max', labelKey: 'maxAccount', icon: 'M', className: 'is-max' },
+  { key: 'phone', labelKey: 'phoneAccount', icon: '☎', className: 'is-phone', profileField: 'phone' },
+  { key: 'email', labelKey: 'emailAccount', icon: '@', className: 'is-email', profileField: 'email' }
+];
+
+function loadStructosConnections() {
+  const saved = readStoredJSON(STRUCTOS_CONNECTIONS_KEY, {});
+  return Object.fromEntries(structosConnectionProviders.map(({ key }) => [key, Boolean(saved?.[key]?.linked)]));
+}
+
+let structosConnections = loadStructosConnections();
 
 function loadActivityLog() {
   const stored = readStoredJSON(ACTIVITY_KEY, []);
@@ -600,6 +636,8 @@ function applyLanguage(next) {
   renderWidgetPicker();
   renderCashflow();
   renderPersonIdentity();
+  renderProfilePersonalData();
+  renderConnectionsSummary();
   renderPassportEditor();
   renderPassportProgress();
   renderConstructionActivity();
@@ -747,6 +785,12 @@ function saveFinance() {
   localStorage.setItem(FINANCE_KEY, JSON.stringify(finance));
 }
 
+function saveStructosConnections() {
+  const saved = Object.fromEntries(Object.entries(structosConnections).map(([key, linked]) => [key, { linked: Boolean(linked) }]));
+  localStorage.setItem(STRUCTOS_CONNECTIONS_KEY, JSON.stringify(saved));
+  renderConnectionsSummary();
+}
+
 function applyPassportRewards(progress) {
   finance.rewards ||= { passportFirst: false, passport65: false };
   finance.rewards.passport65 = Boolean(finance.rewards.passport65 || finance.rewards.passportFull);
@@ -796,10 +840,21 @@ function seedIdentityFromAuth(fullName, metadata = {}) {
   renderPassportEditor();
 }
 
-function saveIdentityState(syncRemote = true) {
+function persistIdentityLocal() {
   localStorage.setItem(PERSON_DATA_KEY, JSON.stringify(personData));
   localStorage.setItem(PROFILE_DATA_KEY, JSON.stringify(profileData));
   localStorage.setItem(BUILDER_PASSPORT_KEY, JSON.stringify(builderPassport));
+}
+
+let identityAutosaveTimer;
+
+function queueIdentityAutosave() {
+  clearTimeout(identityAutosaveTimer);
+  identityAutosaveTimer = setTimeout(() => saveIdentityState(false), 120);
+}
+
+function saveIdentityState(syncRemote = true) {
+  persistIdentityLocal();
   const passportProgress = passportCompletion();
   const profileProgress = calculatedProfileCompletion();
   localStorage.setItem(PROFILE_COMPLETION_KEY, String(profileProgress));
@@ -808,6 +863,8 @@ function saveIdentityState(syncRemote = true) {
   renderPersonIdentity();
   renderPassportProgress();
   renderWidgets();
+  renderProfilePersonalData();
+  renderConnectionsSummary();
   if (syncRemote) syncIdentityToAccount();
 }
 
@@ -857,17 +914,17 @@ function passportSmartSelectMarkup({ kind, value = '', placeholder, personField 
 
 function smartSelectOptions(control) {
   const kind = control.dataset.smartKind;
-  if (kind === 'country') return passportCountryDirectory.map((country) => ({ value: localizedCountryName(country), keywords: [country.code, ...Object.values(country.names)] }));
-  if (kind === 'nationality') return passportNationalityDirectory.map((nationality) => ({ value: localizedNationalityName(nationality), keywords: [nationality.code, ...Object.values(nationality.names)] }));
+  if (kind === 'country') return passportCountryDirectory.map((country) => ({ value: localizedCountryName(country), keywords: [country.code, ...Object.values(country.names), ...(countryDirectoryAliases[country.code] || [])] }));
+  if (kind === 'nationality') return passportNationalityDirectory.map((nationality) => ({ value: localizedNationalityName(nationality), keywords: [nationality.code, ...Object.values(nationality.names), ...(nationalityDirectoryAliases[nationality.code] || [])] }));
   if (kind === 'city') {
     const country = countryByValue(control.dataset.smartCountry);
-    return (country?.cities || []).map((city) => ({ value: city, keywords: [city] }));
+    return (country?.cities || []).map((city) => ({ value: city, keywords: [city, ...(cityDirectoryAliases[city] || [])] }));
   }
   if (kind === 'metro') {
-    const cityKey = Object.keys(passportMetroDirectory).find((city) => normalizeDirectoryValue(city) === normalizeDirectoryValue(control.dataset.smartCity));
-    return (passportMetroDirectory[cityKey] || []).map((station) => ({ value: station, keywords: [station] }));
+    const cityKey = metroCityByValue(control.dataset.smartCity);
+    return (metroDirectory[cityKey] || []).map((station) => ({ value: station, keywords: metroStationSearchKeywords(station) }));
   }
-  if (kind === 'profession') return passportProfessionDirectory.map((profession) => ({ value: profession, keywords: [profession] }));
+  if (kind === 'profession') return professions.map((profession) => ({ value: profession.ru, keywords: [profession.ru, profession.aliases] }));
   return [];
 }
 
@@ -905,6 +962,10 @@ function bindPassportSmartSelects(scope, onPersonChange = null) {
       if (profileField) {
         profileData[profileField] = value;
         if (profileField === 'city') profileData.metro = '';
+        if (profileField === 'profession') {
+          builderPassport.professions[0] ||= { id: `profession-${Date.now()}`, name: '', experience: 0 };
+          builderPassport.professions[0].name = value;
+        }
         onPersonChange?.(profileField);
       }
       if (professionId) {
@@ -932,6 +993,7 @@ function bindPassportSmartSelects(scope, onPersonChange = null) {
           }
         }
       }
+      queueIdentityAutosave();
       close();
     };
 
@@ -943,7 +1005,10 @@ function bindPassportSmartSelects(scope, onPersonChange = null) {
         const emptyKey = control.dataset.smartKind === 'city' ? 'selectCountryFirst' : control.dataset.smartKind === 'metro' ? 'noMetroMatches' : 'noMatches';
         optionsRoot.innerHTML = `<p>${tr(emptyKey)}</p>`;
       } else {
-        const matches = allOptions.filter((option) => showAll || option.keywords.some((keyword) => normalizeDirectoryValue(keyword).startsWith(query))).slice(0, 10);
+        const matches = (showAll
+          ? allOptions
+          : allOptions.map((option) => ({ option, score: directoryMatchScore(option.keywords, input.value) })).filter((entry) => entry.score >= 0).sort((left, right) => left.score - right.score || left.option.value.localeCompare(right.option.value, root.lang || 'ru')).map((entry) => entry.option)
+        ).slice(0, showAll ? 500 : 40);
         optionsRoot.innerHTML = matches.length ? matches.map((option, index) => `<button type="button" role="option" data-smart-option="${escapeHtml(option.value)}" data-smart-index="${index}">${escapeHtml(option.value)}</button>`).join('') : `<p>${tr('noMatches')}</p>`;
       }
       optionsRoot.hidden = false;
@@ -1024,7 +1089,7 @@ function fullYears(birthDate) {
 }
 
 function passportBirthAgeMarkup() {
-  return `<div class="passport-birth-age"><span><input type="date" max="${localDateKey()}" autocomplete="bday" data-person-field="birthDate" value="${escapeHtml(personData.birthDate)}" /></span><span><small>${tr('fullYears')}</small><input type="number" value="${escapeHtml(fullYears(personData.birthDate))}" data-person-age readonly aria-readonly="true" /></span></div>`;
+  return `<div class="passport-birth-age"><span><input type="date" max="${localDateKey()}" autocomplete="bday" data-person-field="birthDate" value="${escapeHtml(personData.birthDate)}" /></span><span class="passport-age-box"><small>${tr('fullYears')}</small><input type="text" maxlength="3" value="${escapeHtml(fullYears(personData.birthDate))}" data-person-age readonly aria-readonly="true" tabindex="-1" /></span></div>`;
 }
 
 function messengerLogoMarkup(kind) {
@@ -1048,7 +1113,7 @@ function scheduleSummary() {
 }
 
 function passportWorkSettingsMarkup() {
-  return `<div class="passport-work-settings">${passportBusinessTripsMarkup()}<section class="passport-field-card passport-schedule-card"><span class="passport-field-label">${tr('preferredSchedule')}</span><button type="button" data-open-schedule-days${builderPassport.anySchedule ? ' disabled' : ''}><span>${escapeHtml(scheduleSummary())}</span><i>⌄</i></button><label class="passport-check-line"><input type="checkbox" data-passport-any-schedule${builderPassport.anySchedule ? ' checked' : ''} /><span>✓</span><strong>${tr('anySchedule')}</strong></label></section><section class="passport-field-card"><span class="passport-field-label">${tr('nightShifts')}</span><label class="passport-check-line"><input type="checkbox" data-passport-night-shifts${builderPassport.nightShifts ? ' checked' : ''} /><span>✓</span><strong>${tr(builderPassport.nightShifts ? 'yes' : 'no')}</strong></label></section><section class="passport-field-card passport-call-time"><span class="passport-field-label">${tr('bestCallTime')}</span><div><label><small>${tr('timeFrom')}</small><input type="time" data-passport-call="from" value="${escapeHtml(builderPassport.callFrom)}" /></label><label><small>${tr('timeTo')}</small><input type="time" data-passport-call="to" value="${escapeHtml(builderPassport.callTo)}" /></label></div></section></div>`;
+  return `<div class="passport-work-settings">${passportBusinessTripsMarkup()}<section class="passport-field-card passport-schedule-card"><span class="passport-field-label">${tr('preferredSchedule')}</span><button type="button" data-open-schedule-days${builderPassport.anySchedule ? ' disabled' : ''}><span>${escapeHtml(scheduleSummary())}</span><i>⌄</i></button><label class="passport-check-line"><input type="checkbox" data-passport-any-schedule${builderPassport.anySchedule ? ' checked' : ''} /><span>✓</span><strong>${tr('anySchedule')}</strong></label></section><section class="passport-field-card passport-business-trips passport-night-shifts"><span class="passport-field-label">${tr('nightShifts')}</span><div><label><input type="radio" name="night-shifts" value="yes" data-passport-night-shifts${builderPassport.nightShifts ? ' checked' : ''} /><span>${tr('yes')}</span></label><label><input type="radio" name="night-shifts" value="no" data-passport-night-shifts${!builderPassport.nightShifts ? ' checked' : ''} /><span>${tr('no')}</span></label></div></section><section class="passport-field-card passport-call-time"><span class="passport-field-label">${tr('bestCallTime')}</span><div><label><small>${tr('timeFrom')}</small><input type="time" data-passport-call="from" value="${escapeHtml(builderPassport.callFrom)}" /></label><label><small>${tr('timeTo')}</small><input type="time" data-passport-call="to" value="${escapeHtml(builderPassport.callTo)}" /></label></div></section></div>`;
 }
 
 function passportProfessionMarkup(item, index) {
@@ -1155,6 +1220,7 @@ function openPassportScheduleDialog() {
   }));
   $('[data-save-schedule-days]', scope)?.addEventListener('click', () => {
     builderPassport.scheduleDays = passportWeekdays.filter((day) => selected.has(day));
+    saveIdentityState(false);
     $('[data-dialog]')?.close();
     renderPassportEditor();
   });
@@ -1169,44 +1235,47 @@ function renderPassportEditor() {
     personData[input.dataset.personField] = input.value.slice(0, 100);
     if (input.dataset.personField === 'citizenship') updateForeignDocumentVisibility(form);
     if (input.dataset.personField === 'birthDate') $('[data-person-age]', form).value = fullYears(input.value);
+    queueIdentityAutosave();
   }));
-  $$('[data-profile-field]', form).forEach((input) => input.addEventListener('input', () => { profileData[input.dataset.profileField] = input.value.slice(0, 140); }));
+  $$('[data-profile-field]', form).forEach((input) => input.addEventListener('input', () => { profileData[input.dataset.profileField] = input.value.slice(0, 140); queueIdentityAutosave(); }));
   bindPassportSmartSelects(form, (field) => {
     if (field === 'citizenship') updateForeignDocumentVisibility(form);
     if (field === 'residenceCountry') { profileData.city = ''; profileData.metro = ''; renderPassportEditor(); }
     if (field === 'city') renderPassportEditor();
   });
-  $$('[data-passport-field]', form).forEach((input) => input.addEventListener('change', () => { builderPassport[input.dataset.passportField] = input.checked; }));
-  $$('[data-passport-business-trips]', form).forEach((input) => input.addEventListener('change', () => { if (input.checked) builderPassport.businessTrips = input.value === 'yes'; }));
+  $$('[data-passport-field]', form).forEach((input) => input.addEventListener('change', () => { builderPassport[input.dataset.passportField] = input.checked; queueIdentityAutosave(); }));
+  $$('[data-passport-business-trips]', form).forEach((input) => input.addEventListener('change', () => { if (input.checked) { builderPassport.businessTrips = input.value === 'yes'; queueIdentityAutosave(); } }));
   $$('[data-messenger-linked]', form).forEach((input) => input.addEventListener('change', () => {
     if (!input.checked) return;
     builderPassport.messengerLinked = input.value === 'yes';
-    if (!builderPassport.messengerLinked) Object.keys(builderPassport.messengers).forEach((key) => { builderPassport.messengers[key] = false; });
+    saveIdentityState(false);
     renderPassportEditor();
   }));
   $$('[data-passport-messenger]', form).forEach((input) => input.addEventListener('change', () => {
     builderPassport.messengers[input.dataset.passportMessenger] = input.checked;
-    if (input.checked) builderPassport.messengerLinked = true;
+    saveIdentityState(false);
     renderPassportEditor();
   }));
-  $('[data-passport-any-schedule]', form)?.addEventListener('change', (event) => { builderPassport.anySchedule = event.currentTarget.checked; renderPassportEditor(); });
-  $('[data-passport-night-shifts]', form)?.addEventListener('change', (event) => { builderPassport.nightShifts = event.currentTarget.checked; renderPassportEditor(); });
-  $$('[data-passport-call]', form).forEach((input) => input.addEventListener('input', () => { builderPassport[input.dataset.passportCall === 'from' ? 'callFrom' : 'callTo'] = input.value; }));
+  $('[data-passport-any-schedule]', form)?.addEventListener('change', (event) => { builderPassport.anySchedule = event.currentTarget.checked; saveIdentityState(false); renderPassportEditor(); });
+  $$('[data-passport-night-shifts]', form).forEach((input) => input.addEventListener('change', () => { if (input.checked) { builderPassport.nightShifts = input.value === 'yes'; saveIdentityState(false); renderPassportEditor(); } }));
+  $$('[data-passport-call]', form).forEach((input) => input.addEventListener('input', () => { builderPassport[input.dataset.passportCall === 'from' ? 'callFrom' : 'callTo'] = input.value; queueIdentityAutosave(); }));
   $('[data-open-schedule-days]', form)?.addEventListener('click', openPassportScheduleDialog);
   $$('[data-passport-profession]', form).forEach((row) => {
     const item = builderPassport.professions.find((profession) => profession.id === row.dataset.passportProfession);
     if (!item) return;
-    $('[data-profession-experience]', row)?.addEventListener('input', (event) => { item.experience = Math.max(0, Math.min(70, Number(event.currentTarget.value) || 0)); });
+    $('[data-profession-experience]', row)?.addEventListener('input', (event) => { item.experience = Math.max(0, Math.min(70, Number(event.currentTarget.value) || 0)); queueIdentityAutosave(); });
     $('[data-remove-profession]', row)?.addEventListener('click', () => {
       builderPassport.professions = builderPassport.professions.filter((profession) => profession.id !== item.id);
       if (!builderPassport.professions.length) builderPassport.professions.push({ id: `profession-${Date.now()}`, name: '', experience: 0 });
       profileData.profession = builderPassport.professions.find((profession) => profession.name)?.name || '';
+      saveIdentityState(false);
       renderPassportEditor();
     });
   });
   $('[data-add-profession]', form)?.addEventListener('click', () => {
     if (builderPassport.professions.length >= 50) return;
     builderPassport.professions.push({ id: `profession-${Date.now()}-${Math.random().toString(16).slice(2)}`, name: '', experience: 0 });
+    saveIdentityState(false);
     renderPassportEditor();
   });
   const addSkill = () => {
@@ -1216,36 +1285,40 @@ function renderPassportEditor() {
     if (builderPassport.skills.some((skill) => normalizeDirectoryValue(skill) === normalizeDirectoryValue(value))) { showToast(tr('duplicateSkill')); return; }
     if (builderPassport.skills.length >= 80) return;
     builderPassport.skills.push(value);
+    saveIdentityState(false);
     renderPassportEditor();
   };
   $('[data-add-skill]', form)?.addEventListener('click', addSkill);
   $('[data-new-skill]', form)?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); addSkill(); } });
-  $$('[data-remove-skill]', form).forEach((button) => button.addEventListener('click', () => { builderPassport.skills.splice(Number(button.dataset.removeSkill), 1); renderPassportEditor(); }));
+  $$('[data-remove-skill]', form).forEach((button) => button.addEventListener('click', () => { builderPassport.skills.splice(Number(button.dataset.removeSkill), 1); saveIdentityState(false); renderPassportEditor(); }));
   $('[data-copy-passport-id]', form)?.addEventListener('click', copyId);
   $('[data-share-resume]', form)?.addEventListener('click', shareResume);
   $('[data-share-passport]', form)?.addEventListener('click', sharePassport);
   $('[data-passport-important-toggle]', form)?.addEventListener('click', () => { passportImportantExpanded = !passportImportantExpanded; renderPassportEditor(); });
   $$('[data-passport-important]', form).forEach((input) => input.addEventListener('change', () => {
     builderPassport.important[input.dataset.passportImportant] = input.checked;
+    saveIdentityState(false);
     if (input.dataset.passportImportant === 'passportAvailable') {
       passportAccessListExpanded = input.checked;
       renderPassportEditor();
     }
   }));
   $('[data-passport-access-toggle]', form)?.addEventListener('click', () => { passportAccessListExpanded = !passportAccessListExpanded; renderPassportEditor(); });
-  $$('[data-passport-visible]', form).forEach((input) => input.addEventListener('change', () => { builderPassport.visibleFields[input.dataset.passportVisible] = input.checked; }));
+  $$('[data-passport-visible]', form).forEach((input) => input.addEventListener('change', () => { builderPassport.visibleFields[input.dataset.passportVisible] = input.checked; saveIdentityState(false); }));
   $$('[data-passport-location]', form).forEach((row) => {
     const item = builderPassport.workLocations.find((entry) => entry.id === row.dataset.passportLocation);
     if (!item) return;
     $('[data-remove-location]', row)?.addEventListener('click', () => {
       builderPassport.workLocations = builderPassport.workLocations.filter((entry) => entry.id !== item.id);
       if (!builderPassport.workLocations.length) builderPassport.workLocations.push({ id: `place-${Date.now()}`, country: '', city: '' });
+      saveIdentityState(false);
       renderPassportEditor();
     });
   });
   $('[data-add-passport-location]', form)?.addEventListener('click', () => {
     if (builderPassport.workLocations.length >= 12) return;
     builderPassport.workLocations.push({ id: `place-${Date.now()}-${Math.random().toString(16).slice(2)}`, country: '', city: '' });
+    saveIdentityState(false);
     renderPassportEditor();
   });
   bindPersonPhotoControls(form, renderPassportEditor);
@@ -1256,17 +1329,21 @@ function renderPassportEditor() {
 function profileEditorMarkup() {
   return `<div class="profile-edit-form" data-profile-edit-form>
     ${passportPhotoMarkup(false)}
-    <section><h3>${tr('personalData')}</h3><p>${tr('sharedDataHint')}</p><div class="profile-edit-grid">
+    <section><h3>${tr('personalData')}</h3><p>${tr('personalDataMirrorHint')}</p><div class="profile-edit-grid">
       <label><span>${tr('surname')}</span><input type="text" maxlength="80" data-person-field="lastName" value="${escapeHtml(personData.lastName)}" /></label>
       <label><span>${tr('givenName')}</span><input type="text" maxlength="80" data-person-field="firstName" value="${escapeHtml(personData.firstName)}" /></label>
       <label><span>${tr('patronymic')}</span><input type="text" maxlength="80" data-person-field="patronymic" value="${escapeHtml(personData.patronymic)}" /></label>
       <label><span>${tr('birthDate')}</span>${passportBirthAgeMarkup()}</label>
+      <label><span>${tr('maritalStatus')}</span><select data-person-field="maritalStatus">${maritalOptionsMarkup()}</select></label>
       <label><span>${tr('nationality')}</span>${passportSmartSelectMarkup({ kind: 'nationality', value: personData.nationality, placeholder: tr('selectNationality'), personField: 'nationality' })}</label>
       <label><span>${tr('citizenship')}</span>${passportSmartSelectMarkup({ kind: 'country', value: personData.citizenship, placeholder: tr('selectCountry'), personField: 'citizenship' })}</label>
       <label><span>${tr('permanentResidence')}</span>${passportSmartSelectMarkup({ kind: 'country', value: personData.residenceCountry, placeholder: tr('selectCountry'), personField: 'residenceCountry' })}</label>
-      <label><span>${tr('maritalStatus')}</span><select data-person-field="maritalStatus">${maritalOptionsMarkup()}</select></label>
+      <label><span>${tr('residenceCity')}</span>${passportSmartSelectMarkup({ kind: 'city', value: profileData.city, placeholder: countryByValue(personData.residenceCountry) ? tr('enterCity') : tr('selectCountryFirst'), profileField: 'city', country: personData.residenceCountry })}</label>
+      <label><span>${tr('nearestMetro')}</span>${passportSmartSelectMarkup({ kind: 'metro', value: profileData.metro, placeholder: tr('selectMetro'), profileField: 'metro', city: profileData.city })}</label>
+      <label><span>${tr('contactPhone')}</span><input type="tel" maxlength="60" autocomplete="tel" data-profile-field="phone" value="${escapeHtml(profileData.phone)}" /></label>
+      <label><span>${tr('contactEmail')}</span><input type="email" maxlength="120" autocomplete="email" data-profile-field="email" value="${escapeHtml(profileData.email)}" /></label>
     </div></section>
-    <section><h3>${tr('profileOnlyFields')}</h3><div class="profile-edit-grid"><label><span>${tr('contactPhone')}</span><input type="tel" maxlength="60" data-profile-field="phone" value="${escapeHtml(profileData.phone)}" /></label><label><span>${tr('contactEmail')}</span><input type="email" maxlength="120" data-profile-field="email" value="${escapeHtml(profileData.email)}" /></label><label><span>${tr('residenceCity')}</span>${passportSmartSelectMarkup({ kind: 'city', value: profileData.city, placeholder: countryByValue(personData.residenceCountry) ? tr('enterCity') : tr('selectCountryFirst'), profileField: 'city', country: personData.residenceCountry })}</label><label><span>${tr('nearestMetro')}</span>${passportSmartSelectMarkup({ kind: 'metro', value: profileData.metro, placeholder: tr('selectMetro'), profileField: 'metro', city: profileData.city })}</label><label><span>${tr('profession')}</span>${passportSmartSelectMarkup({ kind: 'profession', value: profileData.profession, placeholder: tr('selectProfession'), profileField: 'profession' })}</label></div></section>
+    <section><h3>${tr('professionalData')}</h3><div class="profile-edit-grid"><label><span>${tr('profession')}</span>${passportSmartSelectMarkup({ kind: 'profession', value: profileData.profession, placeholder: tr('selectProfession'), profileField: 'profession' })}</label></div></section>
     <button class="primary-button" type="button" data-save-profile>${tr('saveChanges')}</button>
   </div>`;
 }
@@ -1277,6 +1354,7 @@ function openProfileEditor() {
   $$('[data-person-field]', scope).forEach((input) => input.addEventListener('input', () => {
     personData[input.dataset.personField] = input.value.slice(0, 100);
     if (input.dataset.personField === 'birthDate') $('[data-person-age]', scope).value = fullYears(input.value);
+    queueIdentityAutosave();
   }));
   bindPassportSmartSelects(scope, (field) => {
     if (field === 'residenceCountry') {
@@ -1292,9 +1370,90 @@ function openProfileEditor() {
       if (metroControl) { metroControl.dataset.smartCity = profileData.city; metroControl.dataset.smartValue = ''; $('[data-smart-input]', metroControl).value = ''; }
     }
   });
-  $$('[data-profile-field]', scope).forEach((input) => input.addEventListener('input', () => { profileData[input.dataset.profileField] = input.value.slice(0, 140); }));
+  $$('[data-profile-field]', scope).forEach((input) => input.addEventListener('input', () => { profileData[input.dataset.profileField] = input.value.slice(0, 140); queueIdentityAutosave(); }));
   bindPersonPhotoControls(scope, () => { $('[data-dialog]').close(); openProfileEditor(); });
-  $('[data-save-profile]', scope)?.addEventListener('click', () => { if (!validatePassportSmartSelects(scope)) return; builderPassport.professions[0].name = profileData.profession; saveIdentityState(); renderPassportEditor(); $('[data-dialog]').close(); showToast(tr('profileSaved')); });
+  $('[data-save-profile]', scope)?.addEventListener('click', () => { if (!validatePassportSmartSelects(scope)) return; builderPassport.professions[0] ||= { id: `profession-${Date.now()}`, name: '', experience: 0 }; builderPassport.professions[0].name = profileData.profession; saveIdentityState(); renderPassportEditor(); $('[data-dialog]').close(); showToast(tr('profileSaved')); });
+}
+
+function profileDateOfBirthValue() {
+  if (!personData.birthDate) return '';
+  const date = new Date(`${personData.birthDate}T12:00:00`);
+  const formatted = Number.isNaN(date.getTime()) ? personData.birthDate : new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(date);
+  const age = fullYears(personData.birthDate);
+  return age ? `${formatted} · ${age}` : formatted;
+}
+
+function renderProfilePersonalData() {
+  const container = $('[data-profile-personal]');
+  if (!container) return;
+  const rows = [
+    [tr('fullName'), [personData.lastName, personData.firstName, personData.patronymic].filter(Boolean).join(' ')],
+    [tr('birthDate'), profileDateOfBirthValue()],
+    [tr('maritalStatus'), personData.maritalStatus ? tr(`${personData.maritalStatus}Status`) : ''],
+    [tr('nationality'), personData.nationality],
+    [tr('citizenship'), personData.citizenship],
+    [tr('permanentResidence'), personData.residenceCountry],
+    [tr('residenceCity'), profileData.city],
+    [tr('nearestMetro'), profileData.metro],
+    [tr('contactPhone'), profileData.phone],
+    [tr('contactEmail'), profileData.email],
+    [tr('profession'), profileData.profession]
+  ];
+  container.innerHTML = rows.map(([label, value]) => `<article><span>${escapeHtml(label)}</span><strong class="${value ? '' : 'is-empty'}">${escapeHtml(value || tr('notSpecified'))}</strong></article>`).join('');
+}
+
+function renderConnectionsSummary() {
+  const linked = structosConnectionProviders.filter(({ key }) => structosConnections[key]).length;
+  $$('[data-connections-summary]').forEach((item) => { item.textContent = `${tr('linkedCount')}: ${linked} / ${structosConnectionProviders.length}`; });
+}
+
+function connectionProviderMarkup(provider) {
+  const linked = Boolean(structosConnections[provider.key]);
+  const profileValue = provider.profileField ? profileData[provider.profileField] : '';
+  return `<article class="structos-connection-row${linked ? ' is-linked' : ''}"><span class="structos-connection-logo ${provider.className}" aria-hidden="true">${escapeHtml(provider.icon)}</span><div><strong>${tr(provider.labelKey)}</strong>${profileValue ? `<small>${escapeHtml(profileValue)}</small>` : ''}<em>${tr('accountReward')} · ${tr('rewardOnce')}</em></div><button type="button" data-link-structos-account="${provider.key}"${linked ? ' disabled' : ''}><span>${tr(linked ? 'linkedAccount' : 'linkAccount')}</span>${linked ? '<i>✓</i>' : ''}</button></article>`;
+}
+
+function connectionsDialogMarkup() {
+  const linked = structosConnectionProviders.filter(({ key }) => structosConnections[key]).length;
+  const available = (structosConnectionProviders.length - linked) * 150;
+  return `<section class="structos-connections"><header><span>${tr('linkedCount')}</span><strong>${linked} / ${structosConnectionProviders.length}</strong><small>${tr('availableAccountBonus')}: +${available}</small></header><div class="structos-connection-list">${structosConnectionProviders.map(connectionProviderMarkup).join('')}</div><section class="merge-accounts-card"><div><span>STRUCTOS ID</span><h3>${tr('mergeAccounts')}</h3><p>${tr('mergeAccountsHint')}</p></div><button type="button" disabled aria-disabled="true"><span>${tr('mergeAccounts')}</span><small>${tr('inDevelopment')}</small></button></section></section>`;
+}
+
+function openConnectionsDialog() {
+  showDialog(tr('connections'), tr('connectionsHint'), connectionsDialogMarkup());
+  const scope = $('[data-dialog-content]');
+  $$('[data-link-structos-account]', scope).forEach((button) => button.addEventListener('click', () => requestStructosConnection(button.dataset.linkStructosAccount)));
+}
+
+function completeStructosConnection(provider) {
+  if (structosConnections[provider.key]) { showToast(tr('accountAlreadyLinked')); return; }
+  structosConnections[provider.key] = true;
+  finance.rewards ||= {};
+  finance.rewards.accountLinks ||= {};
+  const firstReward = !finance.rewards.accountLinks[provider.key];
+  if (firstReward) {
+    finance.rewards.accountLinks[provider.key] = true;
+    finance.bonuses += 150;
+    finance.bonusHistory.unshift({ key: 'accountLinkReward', detail: tr(provider.labelKey), amount: 150, date: new Date().toISOString() });
+    saveFinance();
+    renderFinance();
+  }
+  saveStructosConnections();
+  openConnectionsDialog();
+  showToast(firstReward ? tr('accountLinked') : tr('accountAlreadyLinked'));
+}
+
+function requestStructosConnection(key) {
+  const provider = structosConnectionProviders.find((item) => item.key === key);
+  if (!provider) return;
+  if (structosConnections[key]) { showToast(tr('accountAlreadyLinked')); return; }
+  if (provider.profileField && !profileData[provider.profileField]) {
+    showDialog(`${tr('connections')}: ${tr(provider.labelKey)}`, tr('missingConnectionData'), `<button class="primary-button structos-connection-action" type="button" data-fill-connection-data>${tr('fillPersonalData')}</button>`);
+    $('[data-fill-connection-data]')?.addEventListener('click', () => { $('[data-dialog]')?.close(); openProfileEditor(); });
+    return;
+  }
+  showDialog(`${tr('testConnectionTitle')}: ${tr(provider.labelKey)}`, tr('testConnectionHint'), `<div class="connection-confirm"><span class="structos-connection-logo ${provider.className}" aria-hidden="true">${escapeHtml(provider.icon)}</span><div><strong>${tr(provider.labelKey)}</strong><small>${tr('accountReward')} · ${tr('rewardOnce')}</small></div></div><button class="primary-button structos-connection-action" type="button" data-confirm-structos-connection>${tr('confirmTestConnection')}</button>`);
+  $('[data-confirm-structos-connection]')?.addEventListener('click', () => completeStructosConnection(provider));
 }
 
 function formatMoney(value) {
@@ -1382,6 +1541,7 @@ function setPanel(name) {
   if (next === 'analysis-detail') renderAnalysisDetail();
   if (next === 'objects') renderObjects();
   if (next === 'cashflow') renderCashflow();
+  if (next === 'profile') { renderProfilePersonalData(); renderConnectionsSummary(); }
   if (next === 'passport') renderPassportEditor();
   setBottomMenu(false);
   closeMenu();
@@ -1615,19 +1775,13 @@ const passportNationalityDirectory = [
   { code: 'MN', names: { RU: 'Монгол', EN: 'Mongolian', KY: 'Монгол', TJ: 'Муғул' } }
 ];
 
-const passportMetroDirectory = {
-  'Москва': ['Авиамоторная', 'Автозаводская', 'Академическая', 'Александровский сад', 'Алтуфьево', 'Арбатская', 'Аэропорт', 'Бабушкинская', 'Бауманская', 'Белорусская', 'Бибирево', 'Библиотека имени Ленина', 'Братиславская', 'ВДНХ', 'Войковская', 'Волгоградский проспект', 'Выхино', 'Деловой центр', 'Динамо', 'Домодедовская', 'Киевская', 'Китай-город', 'Коломенская', 'Комсомольская', 'Крылатское', 'Кузьминки', 'Курская', 'Ленинский проспект', 'Люблино', 'Марьино', 'Маяковская', 'Митино', 'Нагатинская', 'Новокузнецкая', 'Новослободская', 'Охотный Ряд', 'Павелецкая', 'Парк Победы', 'Петровско-Разумовская', 'Планерная', 'Площадь Революции', 'Полежаевская', 'Проспект Мира', 'Профсоюзная', 'Пушкинская', 'Речной вокзал', 'Рязанский проспект', 'Савёловская', 'Саларьево', 'Сокол', 'Спортивная', 'Строгино', 'Таганская', 'Текстильщики', 'Тимирязевская', 'Третьяковская', 'Тушинская', 'Университет', 'Фили', 'Царицыно', 'Черкизовская', 'Чистые пруды', 'Щёлковская', 'Юго-Западная'],
-  'Санкт-Петербург': ['Автово', 'Адмиралтейская', 'Академическая', 'Балтийская', 'Василеостровская', 'Владимирская', 'Выборгская', 'Горьковская', 'Гостиный двор', 'Девяткино', 'Звёздная', 'Комендантский проспект', 'Купчино', 'Ладожская', 'Лесная', 'Маяковская', 'Московская', 'Нарвская', 'Невский проспект', 'Обводный канал', 'Озерки', 'Петроградская', 'Пионерская', 'Площадь Восстания', 'Приморская', 'Проспект Ветеранов', 'Садовая', 'Сенная площадь', 'Спасская', 'Технологический институт', 'Удельная', 'Чёрная речка'],
-  'Казань': ['Авиастроительная', 'Аметьево', 'Горки', 'Козья слобода', 'Кремлёвская', 'Площадь Тукая', 'Проспект Победы', 'Северный вокзал', 'Суконная слобода', 'Яшьлек'],
-  'Екатеринбург': ['Ботаническая', 'Геологическая', 'Динамо', 'Машиностроителей', 'Площадь 1905 года', 'Проспект Космонавтов', 'Уралмаш', 'Уральская', 'Чкаловская'],
-  'Новосибирск': ['Берёзовая роща', 'Гагаринская', 'Заельцовская', 'Золотая Нива', 'Красный проспект', 'Маршала Покрышкина', 'Октябрьская', 'Площадь Гарина-Михайловского', 'Площадь Ленина', 'Речной вокзал', 'Сибирская', 'Студенческая'],
-  'Нижний Новгород': ['Автозаводская', 'Буревестник', 'Горьковская', 'Двигатель Революции', 'Канавинская', 'Кировская', 'Комсомольская', 'Ленинская', 'Московская', 'Парк культуры', 'Пролетарская', 'Стрелка', 'Чкаловская'],
-  'Самара': ['Алабинская', 'Безымянка', 'Гагаринская', 'Кировская', 'Московская', 'Победа', 'Российская', 'Советская', 'Спортивная', 'Юнгородок']
+const countryDirectoryAliases = {
+  RU: ['РФ', 'Российская Федерация', 'Russia', 'Russian Federation'], KG: ['Киргизия', 'Кыргызская Республика', 'Kyrgyzstan'], TJ: ['Республика Таджикистан', 'Tajikistan'], UZ: ['Республика Узбекистан', 'Uzbekistan'], KZ: ['Республика Казахстан', 'Kazakhstan'], BY: ['Республика Беларусь', 'Белоруссия', 'Belarus'], AE: ['Эмираты', 'United Arab Emirates', 'UAE'], US: ['Соединённые Штаты', 'Соединённые Штаты Америки', 'United States', 'USA'], GB: ['Великобритания', 'Англия', 'United Kingdom', 'UK']
 };
-
-const passportProfessionDirectory = [
-  'Архитектор', 'Бетонщик', 'Бригадир', 'Вентиляционщик', 'Водитель спецтехники', 'Газосварщик', 'Геодезист', 'Главный инженер проекта', 'Дефектоскопист', 'Дорожный рабочий', 'Инженер ПНР', 'Инженер ПНР АСУ ТП', 'Инженер ПНР вентиляции', 'Инженер ПНР слаботочных систем', 'Инженер ПТО', 'Инженер-сметчик', 'Каменщик', 'Кровельщик', 'Маляр', 'Машинист крана', 'Машинист экскаватора', 'Монолитчик', 'Монтажник металлоконструкций', 'Монтажник окон', 'Монтажник систем вентиляции', 'Монтажник слаботочных систем', 'Отделочник', 'Плотник', 'Прораб', 'Проектировщик', 'Разнорабочий', 'Руководитель проекта', 'Сантехник', 'Сварщик', 'Специалист по охране труда', 'Стропальщик', 'Технадзор', 'Фасадчик', 'Штукатур', 'Электрик', 'Электрогазосварщик', 'Электромонтажник', 'Энергетик'
-];
+const cityDirectoryAliases = {
+  'Москва': ['МСК', 'Moscow', 'Moskva'], 'Санкт-Петербург': ['СПб', 'Питер', 'Петербург', 'Saint Petersburg', 'St Petersburg', 'Sankt Peterburg'], 'Нижний Новгород': ['Нижний', 'НН', 'Nizhny Novgorod'], 'Екатеринбург': ['Екб', 'Yekaterinburg', 'Ekaterinburg'], 'Новосибирск': ['Нск', 'Novosibirsk'], 'Казань': ['Kazan'], 'Самара': ['Samara'], 'Алматы': ['Алма-Ата', 'Almaty'], 'Астана': ['Нур-Султан', 'Nur-Sultan', 'Astana'], 'Кишинёв': ['Кишинев', 'Chisinau'], 'Днепр': ['Днепропетровск', 'Dnipro', 'Dnepropetrovsk']
+};
+const nationalityDirectoryAliases = { RU: ['Россиянин', 'Россиянка', 'Русская'], KG: ['Киргиз', 'Киргизка', 'Кыргызка'], TJ: ['Таджичка'], UZ: ['Узбечка'], KZ: ['Казашка'], BY: ['Белоруска', 'Белорусский'], UA: ['Украинка'] };
 
 const passportVisibilityKeys = ['photo', 'id', 'lastName', 'firstName', 'patronymic', 'birthDate', 'maritalStatus', 'nationality', 'citizenship', 'businessTrips', 'patent', 'workPermit', 'residenceCountry', 'residenceCity', 'nearestMetro', 'phone', 'email', 'messengers', 'schedule', 'professions', 'skills', 'workLocations'];
 
@@ -1706,17 +1860,117 @@ function localizedCountryName(country) { return country.names[language] || count
 function localizedNationalityName(nationality) { return nationality.names[language] || nationality.names.RU; }
 
 function normalizeDirectoryValue(value) {
-  return String(value || '').trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase(root.lang || 'ru');
+  return String(value || '')
+    .trim()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLocaleLowerCase(root.lang || 'ru')
+    .replace(/ё/g, 'е')
+    .replace(/№/g, ' номер ')
+    .replace(/&/g, ' и ')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+const russianKeyboardCharacters = Object.freeze({ q: 'й', w: 'ц', e: 'у', r: 'к', t: 'е', y: 'н', u: 'г', i: 'ш', o: 'щ', p: 'з', '[': 'х', ']': 'ъ', a: 'ф', s: 'ы', d: 'в', f: 'а', g: 'п', h: 'р', j: 'о', k: 'л', l: 'д', ';': 'ж', "'": 'э', z: 'я', x: 'ч', c: 'с', v: 'м', b: 'и', n: 'т', m: 'ь', ',': 'б', '.': 'ю' });
+
+function russianKeyboardValue(value) {
+  return String(value || '').toLocaleLowerCase('en').replace(/[qwertyuiop\[\]asdfghjkl;'zxcvbnm,.]/g, (character) => russianKeyboardCharacters[character] || character);
+}
+
+function latinTransliterationValue(value) {
+  let result = String(value || '').toLocaleLowerCase('en');
+  const combinations = [['shch', 'щ'], ['sch', 'щ'], ['yo', 'ё'], ['jo', 'ё'], ['zh', 'ж'], ['kh', 'х'], ['ts', 'ц'], ['ch', 'ч'], ['sh', 'ш'], ['yu', 'ю'], ['ju', 'ю'], ['ya', 'я'], ['ja', 'я'], ['ye', 'е']];
+  combinations.forEach(([latin, cyrillic]) => { result = result.replaceAll(latin, cyrillic); });
+  const characters = { a: 'а', b: 'б', c: 'к', d: 'д', e: 'е', f: 'ф', g: 'г', h: 'х', i: 'и', j: 'й', k: 'к', l: 'л', m: 'м', n: 'н', o: 'о', p: 'п', q: 'к', r: 'р', s: 'с', t: 'т', u: 'у', v: 'в', w: 'в', x: 'кс', y: 'ы', z: 'з' };
+  return result.replace(/[a-z]/g, (character) => characters[character] || character);
+}
+
+function directorySearchForms(value) {
+  const source = String(value || '').trim();
+  if (!source) return [];
+  const rawVariants = [source, source.replace(/\(([^)]+)\)/g, ' $1 '), source.replace(/\([^)]*\)/g, ' '), russianKeyboardValue(source), latinTransliterationValue(source)];
+  const forms = new Set();
+  rawVariants.forEach((variant) => {
+    const normalized = normalizeDirectoryValue(variant);
+    if (!normalized) return;
+    forms.add(normalized);
+    forms.add(normalized.replace(/^(?:станция\s+)?(?:метро|м)\s+/, '').trim());
+    forms.add(normalized.replace(/\bим\b/g, 'имени').trim());
+    forms.add(normalized.replace(/\s+[12]$/, '').trim());
+  });
+  return [...forms].filter(Boolean);
+}
+
+function directoryValuesEquivalent(left, right) {
+  const rightForms = new Set(directorySearchForms(right));
+  return directorySearchForms(left).some((form) => rightForms.has(form));
+}
+
+function boundedEditDistance(left, right, limit) {
+  if (Math.abs(left.length - right.length) > limit) return limit + 1;
+  let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let row = 1; row <= left.length; row += 1) {
+    const current = [row];
+    let rowMinimum = current[0];
+    for (let column = 1; column <= right.length; column += 1) {
+      current[column] = Math.min(current[column - 1] + 1, previous[column] + 1, previous[column - 1] + (left[row - 1] === right[column - 1] ? 0 : 1));
+      rowMinimum = Math.min(rowMinimum, current[column]);
+    }
+    if (rowMinimum > limit) return limit + 1;
+    previous = current;
+  }
+  return previous[right.length];
+}
+
+function directoryTokenStemMatch(candidate, query) {
+  if (candidate.startsWith(query) || query.startsWith(candidate)) return true;
+  const minimumLength = Math.min(candidate.length, query.length);
+  if (minimumLength < 6) return false;
+  let common = 0;
+  while (common < minimumLength && candidate[common] === query[common]) common += 1;
+  return common >= Math.max(5, Math.floor(minimumLength * .68));
+}
+
+function directoryMatchScore(keywords, query) {
+  const queryForms = directorySearchForms(query);
+  if (!queryForms.length) return 0;
+  const candidateForms = [...new Set(keywords.flatMap(directorySearchForms))];
+  let best = -1;
+  queryForms.forEach((queryForm) => {
+    const queryTokens = queryForm.split(' ').filter(Boolean);
+    candidateForms.forEach((candidate) => {
+      let score = -1;
+      if (candidate === queryForm) score = 0;
+      else if (candidate.startsWith(queryForm)) score = 1;
+      else {
+        const candidateTokens = candidate.split(' ').filter(Boolean);
+        if (queryTokens.every((queryToken) => candidateTokens.some((token) => directoryTokenStemMatch(token, queryToken)))) score = 2;
+        else if (candidate.includes(queryForm)) score = 3;
+        else if (queryTokens.every((queryToken) => queryToken.length >= 4 && candidateTokens.some((token) => boundedEditDistance(token, queryToken, queryToken.length >= 6 ? 2 : 1) <= (queryToken.length >= 6 ? 2 : 1)))) score = 4;
+      }
+      if (score >= 0 && (best < 0 || score < best)) best = score;
+    });
+  });
+  return best;
+}
+
+function metroStationSearchKeywords(station) {
+  const parenthetical = [...String(station).matchAll(/\(([^)]+)\)/g)].map((match) => match[1]);
+  return [...new Set([station, station.replace(/\([^)]*\)/g, '').trim(), station.replace(/\bим\.?\s*/i, 'имени '), station.replace(/\s+[12]$/, '').trim(), ...parenthetical])].filter(Boolean);
+}
+
+function metroCityByValue(value) {
+  return Object.keys(metroDirectory).find((city) => [city, ...(cityDirectoryAliases[city] || [])].some((alias) => directoryValuesEquivalent(alias, value)));
 }
 
 function countryByValue(value) {
-  const normalized = normalizeDirectoryValue(value);
-  return passportCountryDirectory.find((country) => country.code.toLowerCase() === normalized || Object.values(country.names).some((name) => normalizeDirectoryValue(name) === normalized));
+  return passportCountryDirectory.find((country) => [country.code, ...Object.values(country.names), ...(countryDirectoryAliases[country.code] || [])].some((name) => directoryValuesEquivalent(name, value)));
 }
 
 function nationalityByValue(value) {
-  const normalized = normalizeDirectoryValue(value);
-  return passportNationalityDirectory.find((nationality) => nationality.code.toLowerCase() === normalized || Object.values(nationality.names).some((name) => normalizeDirectoryValue(name) === normalized));
+  return passportNationalityDirectory.find((nationality) => [nationality.code, ...Object.values(nationality.names), ...(nationalityDirectoryAliases[nationality.code] || [])].some((name) => directoryValuesEquivalent(name, value)));
 }
 
 function personFullName() {
@@ -1726,6 +1980,8 @@ function personFullName() {
 function isForeignCitizen() {
   const value = personData.citizenship.trim();
   if (!value) return false;
+  const country = countryByValue(value);
+  if (country) return country.code !== 'RU';
   const normalized = value.toLocaleLowerCase(root.lang || 'ru');
   const russia = passportCountryDirectory.find((country) => country.code === 'RU');
   return !['рф', 'российская федерация', 'russian federation'].includes(normalized) && !Object.values(russia.names).some((name) => name.toLocaleLowerCase(root.lang || 'ru') === normalized);
@@ -2161,7 +2417,7 @@ function showDialog(title, copyText, extra = '') {
 function historyMarkup(items, bonus = false) {
   if (!items.length) return `<div class="history-empty">${tr('noOperations')}</div>`;
   const formatter = new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric' });
-  return `<div class="transaction-list">${items.map((item) => `<div class="transaction-row"><span><strong>${tr(item.key)}</strong><small>${formatter.format(new Date(item.date))}</small></span><b>+${bonus ? item.amount : formatMoney(item.amount)}</b></div>`).join('')}</div>`;
+  return `<div class="transaction-list">${items.map((item) => `<div class="transaction-row"><span><strong>${tr(item.key)}${item.detail ? ` · ${escapeHtml(item.detail)}` : ''}</strong><small>${formatter.format(new Date(item.date))}</small></span><b>+${bonus ? item.amount : formatMoney(item.amount)}</b></div>`).join('')}</div>`;
 }
 
 function openBalanceDialog() {
@@ -2182,7 +2438,7 @@ function openBalanceDialog() {
 }
 
 function openBonusDialog() {
-  const rules = `<div class="bonus-rules"><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+200</b><span>${tr('referralReward')}</span></div><div><b>+500</b><span>${tr('profileFullReward')}</span></div></div>`;
+  const rules = `<div class="bonus-rules"><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+200</b><span>${tr('referralReward')}</span></div><div><b>+500</b><span>${tr('profileFullReward')}</span></div><div><b>+150</b><span>${tr('accountLinkReward')} · ${tr('rewardOnce')}</span></div></div>`;
   showDialog(tr('bonuses'), tr('bonusRules'), `${rules}<section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section>`);
 }
 
@@ -4301,6 +4557,7 @@ function openView(view) {
   if (view === 'balance') { openBalanceDialog(); return; }
   if (view === 'finance') { setPanel('cashflow'); return; }
   if (view === 'bonuses') { openBonusDialog(); return; }
+  if (view === 'connections') { openConnectionsDialog(); return; }
   const labels = { subscription: 'tariffSubscription', invitations: 'invitations', invite: 'invite', notifications: 'notifications', documents: 'documents', connections: 'connections', settings: 'settings', acts: 'widgetActs', attention: 'attention', tasks: 'widgetTasks', team: 'widgetTeam' };
   showDialog(tr(labels[view] || 'settings'), tr('comingSoon'), `<div class="dialog-options"><div class="dialog-option"><span>StructOS</span><span>→</span></div></div>`);
 }
@@ -4390,6 +4647,7 @@ $('[data-space-settings]').addEventListener('click', () => {
 });
 $('[data-space-done]').addEventListener('click', () => { $('[data-space-toolbar]').hidden = true; $('[data-space-settings]').setAttribute('aria-expanded', 'false'); });
 $('[data-edit-profile]').addEventListener('click', openProfileEditor);
+$('[data-edit-profile-personal]')?.addEventListener('click', openProfileEditor);
 $('[data-drawing-close]')?.addEventListener('click', closeDrawingStudio);
 $('[data-drawing-minimize]')?.addEventListener('click', minimizeDrawingStudio);
 $('[data-drawing-restore]')?.addEventListener('click', openDrawingStudio);
@@ -4423,6 +4681,7 @@ drawingDialog?.addEventListener('close', () => {
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
 window.addEventListener('resize', () => { renderWidgets(); if (bottomMenuPosition) placeBottomMenuFromRatios(bottomMenuPosition); else restoreBottomMenuPosition(); });
 window.visualViewport?.addEventListener('resize', () => { if ($('[data-bottom-menu]')?.classList.contains('is-open')) requestAnimationFrame(updateBottomMenuDirection); });
+window.addEventListener('pagehide', persistIdentityLocal);
 
 importPendingTransfer();
 applyPassportRewards(passportCompletion());
@@ -4435,6 +4694,8 @@ selectAnalysis(selectedAnalysis);
 renderAnalysisCards();
 renderObjects();
 renderCashflow();
+renderProfilePersonalData();
+renderConnectionsSummary();
 recordActivity('cabinet', 'daily-session', { daily: true });
 document.addEventListener('click', trackConstructionActivity, true);
 setPanel(location.hash.slice(1) || 'home');

@@ -470,3 +470,56 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
   .my-project-documents { grid-template-columns: 1fr; gap: 7px; }.my-project-document { min-height: 94px; padding: 8px; grid-template-columns: 27px minmax(0,1fr) 31px; gap: 4px 7px; }.my-project-document i { width: 27px; height: 27px; }.my-project-document > button { width: 31px; height: 31px; }.my-project-document b { font-size: 10px; }.my-project-document small, .my-project-document-copy em { font-size: 8px; }.my-project-document-actions button { min-height: 36px; font-size: 8px; }
 }
 @media (max-width:360px) { .passport-birth-age { grid-template-columns: 1fr; }.passport-weekday-picker { grid-template-columns: repeat(3,minmax(52px,1fr)); } }
+
+/* Profile/passport refinement: compact age, collision-proof time fields and linked accounts. */
+.passport-birth-age { grid-template-columns: minmax(0,1fr) 64px; gap: 6px; }
+.passport-birth-age > .passport-age-box { width: 64px; justify-self: end; }
+.passport-age-box small { overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; font-size: 6px; }
+.passport-age-box input[readonly] { width: 64px!important; min-height: 44px; padding: 0 4px!important; text-align: center; font-size: 12px; letter-spacing: 0; }
+.passport-call-time { min-width: 0; }
+.passport-call-time > div { width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); }
+.passport-call-time label, .passport-call-time input[type="time"] { min-width: 0; max-width: 100%; }
+.passport-call-time input[type="time"] { width: 100%; min-height: 44px; padding: 0 7px; box-sizing: border-box; color: var(--text); border: 1px solid var(--line); border-radius: 10px; background: var(--surface); font-size: 10px; }
+.passport-call-time input[type="time"]::-webkit-calendar-picker-indicator { margin: 0; padding: 2px; filter: var(--time-icon-filter,none); }
+
+.profile-personal-card { padding: 17px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(145deg,var(--surface),color-mix(in srgb,var(--surface) 94%,#0868e8)); box-shadow: var(--shadow); }
+.profile-personal-card > header { margin-bottom: 12px; display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+.profile-personal-card h2 { margin: 2px 0 0; font-size: 18px; }
+.profile-personal-card header p { max-width: 540px; margin: 6px 0 0; color: var(--muted); font-size: 9px; line-height: 1.45; }
+.profile-personal-card header button { min-height: 40px; flex: 0 0 auto; font-size: 9px; }
+.profile-personal-data { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; }
+.profile-personal-data article { min-width: 0; min-height: 59px; padding: 10px 11px; display: grid; align-content: center; gap: 5px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface-soft); }
+.profile-personal-data span { color: var(--muted); font-size: 7px; }
+.profile-personal-data strong { overflow-wrap: anywhere; font-size: 10px; line-height: 1.35; }
+.profile-personal-data strong.is-empty { color: var(--muted); font-weight: 500; }
+
+.structos-connections { margin-top: 14px; display: grid; gap: 11px; }
+.structos-connections > header { padding: 12px 14px; display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 3px 12px; border: 1px solid rgba(53,216,255,.35); border-radius: 13px; background: rgba(18,135,211,.09); }
+.structos-connections > header span { color: var(--muted); font-size: 8px; }
+.structos-connections > header strong { grid-row: 1/3; grid-column: 2; color: var(--cyan); font-size: 20px; }
+.structos-connections > header small { font-size: 8px; }
+.structos-connection-list { display: grid; gap: 7px; }
+.structos-connection-row { min-width: 0; min-height: 69px; padding: 9px; display: grid; grid-template-columns: 42px minmax(0,1fr) auto; align-items: center; gap: 10px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft); }
+.structos-connection-row.is-linked { border-color: rgba(31,200,132,.45); background: color-mix(in srgb,var(--surface-soft) 91%,#16bd80); }
+.structos-connection-logo { width: 42px; height: 42px; display: grid; place-items: center; color: #fff; border-radius: 12px; font-size: 12px; font-weight: 900; box-shadow: 0 7px 18px rgba(0,0,0,.18); }
+.structos-connection-logo.is-yandex { color: #ff2436; background: #fff; }.structos-connection-logo.is-vk { background: #2787f5; }.structos-connection-logo.is-telegram { background: #2aabee; font-size: 18px; }.structos-connection-logo.is-whatsapp { background: #20b866; }.structos-connection-logo.is-max { background: linear-gradient(145deg,#7559ff,#25bfff); }.structos-connection-logo.is-phone { background: #0a72dc; }.structos-connection-logo.is-email { background: #745ee8; font-size: 17px; }
+.structos-connection-row > div { min-width: 0; display: grid; gap: 2px; }
+.structos-connection-row > div strong { font-size: 11px; }.structos-connection-row > div small { overflow: hidden; color: var(--muted); text-overflow: ellipsis; white-space: nowrap; font-size: 8px; }.structos-connection-row > div em { color: #20c98b; font-size: 7px; font-style: normal; }
+.structos-connection-row > button { min-width: 104px; min-height: 40px; padding: 0 11px; display: flex; align-items: center; justify-content: center; gap: 6px; color: #fff; border: 0; border-radius: 10px; background: var(--blue); font-size: 8px; font-weight: 750; cursor: pointer; }
+.structos-connection-row > button:disabled { color: #25cc91; border: 1px solid rgba(37,204,145,.35); background: rgba(21,175,117,.09); cursor: default; }
+.structos-connection-row > button i { font-size: 13px; font-style: normal; }
+.merge-accounts-card { padding: 13px; display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 12px; border: 1px dashed var(--line-strong); border-radius: 14px; background: var(--surface-soft); }
+.merge-accounts-card span { color: var(--cyan); font-size: 7px; letter-spacing: .13em; }.merge-accounts-card h3 { margin: 4px 0; font-size: 13px; }.merge-accounts-card p { margin: 0; color: var(--muted); font-size: 8px; line-height: 1.4; }
+.merge-accounts-card > button { min-width: 154px; min-height: 48px; padding: 7px 11px; display: grid; place-items: center; gap: 2px; color: var(--muted); border: 1px solid var(--line); border-radius: 11px; background: var(--surface); cursor: not-allowed; }.merge-accounts-card > button span { color: inherit; letter-spacing: 0; font-size: 9px; }.merge-accounts-card > button small { color: #ef9b37; font-size: 7px; }
+.connection-confirm { margin-top: 14px; padding: 12px; display: grid; grid-template-columns: 48px minmax(0,1fr); align-items: center; gap: 11px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-soft); }.connection-confirm .structos-connection-logo { width: 48px; height: 48px; }.connection-confirm > div { display: grid; gap: 4px; }.connection-confirm strong { font-size: 13px; }.connection-confirm small { color: #20c98b; font-size: 8px; }.structos-connection-action { width: 100%; min-height: 47px; margin-top: 10px; }
+
+@media (max-width:620px) {
+  .passport-birth-age { grid-template-columns: minmax(0,1fr) 58px; }.passport-birth-age > .passport-age-box, .passport-age-box input[readonly] { width: 58px!important; }
+  .profile-personal-card { padding: 13px; }.profile-personal-card > header { display: grid; }.profile-personal-card header button { width: 100%; }.profile-personal-data { grid-template-columns: 1fr; }
+  .structos-connection-row { grid-template-columns: 38px minmax(0,1fr) auto; gap: 8px; }.structos-connection-logo { width: 38px; height: 38px; border-radius: 10px; }.structos-connection-row > button { min-width: 88px; padding-inline: 8px; }.merge-accounts-card { grid-template-columns: 1fr; }.merge-accounts-card > button { width: 100%; }
+}
+@media (max-width:360px) {
+  .passport-birth-age { grid-template-columns: minmax(0,1fr) 54px; }.passport-birth-age > .passport-age-box, .passport-age-box input[readonly] { width: 54px!important; }
+  .passport-call-time > div { grid-template-columns: 1fr; }
+  .structos-connection-row { grid-template-columns: 36px minmax(0,1fr); }.structos-connection-row > button { grid-column: 1/-1; width: 100%; }.structos-connection-logo { width: 36px; height: 36px; }
+}
