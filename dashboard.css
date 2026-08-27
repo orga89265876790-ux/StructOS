@@ -510,13 +510,16 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 @media (max-width:360px) { .passport-birth-age { grid-template-columns: 1fr; }.passport-weekday-picker { grid-template-columns: repeat(3,minmax(52px,1fr)); } }
 
 /* Profile/passport refinement: compact age, collision-proof time fields and linked accounts. */
-.passport-birth-age { grid-template-columns: minmax(0,1fr) 64px; gap: 6px; }
+.passport-birth-age { grid-template-columns: minmax(0,1fr) 64px; gap: 10px; }
+.passport-birth-age > span:first-child { min-width: 0; overflow: hidden; border-radius: 10px; }
+.passport-birth-age input[type="date"] { width: 100%; min-width: 0; max-width: 100%; box-sizing: border-box; }
 .passport-birth-age > .passport-age-box { width: 64px; justify-self: end; }
 .passport-age-box small { overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; font-size: 6px; }
 .passport-age-box input[readonly] { width: 64px!important; min-height: 44px; padding: 0 4px!important; text-align: center; font-size: 12px; letter-spacing: 0; }
 .passport-call-time { min-width: 0; }
-.passport-call-time > div { width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); }
-.passport-call-time label, .passport-call-time input[type="time"] { min-width: 0; max-width: 100%; }
+.passport-call-time > div { width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.passport-call-time label { min-width: 0; max-width: 100%; overflow: hidden; border-radius: 10px; }
+.passport-call-time input[type="time"] { min-width: 0; max-width: 100%; }
 .passport-call-time input[type="time"] { width: 100%; min-height: 44px; padding: 0 7px; box-sizing: border-box; color: var(--text); border: 1px solid var(--line); border-radius: 10px; background: var(--surface); font-size: 10px; }
 .passport-call-time input[type="time"]::-webkit-calendar-picker-indicator { margin: 0; padding: 2px; filter: var(--time-icon-filter,none); }
 
