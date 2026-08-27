@@ -75,28 +75,28 @@ Object.assign(copy.KY, { forceRefresh: 'Мажбурлап жаңыртуу', re
 Object.assign(copy.TJ, { forceRefresh: 'Навсозии маҷбурӣ', resizeHint: 'Бо ду ангушт ё кашидани кунҷ андозаро иваз кунед', onField: 'Дар майдон аст', addToField: 'Ба майдон илова кардан', widgetTasks: 'Рӯйхати корҳо', widgetTeam: 'Даста', widgetFinance: 'Молия' });
 
 Object.assign(copy.RU, {
-  money: 'Деньги', quickCashflow: 'Быстрые доходы/расходы', cashflowDescription: 'Короткий финансовый учёт по каждому объекту', noCashObjects: 'Объектов для учёта пока нет', noCashObjectsCopy: 'Добавьте объект, укажите его стоимость и ведите полученные суммы и расходы.',
+  money: 'Деньги', quickCashflow: 'Короткие договора', cashflowDescription: 'Короткий финансовый учёт по каждому объекту', noCashObjects: 'Объектов для учёта пока нет', noCashObjectsCopy: 'Добавьте объект, укажите его стоимость и ведите полученные суммы и расходы.',
   objectCost: 'Стоимость объекта', workByFact: 'Работаю от факта выполнения', paymentByFact: 'Оплата по факту', received: 'Получено', expense: 'Расход', totalReceived: 'Итого получено', totalExpense: 'Итого расход', remainingFromCost: 'Осталось от стоимости объекта', income: 'Доход', balanceResult: 'Баланс: доход − расход', comment: 'Комментарий', addIncome: 'Добавить доход', addExpense: 'Добавить расход', createCashObject: 'Создать финансовый объект', cashObjectCreated: 'Объект добавлен в быстрый учёт', amountRequired: 'Укажите сумму и комментарий', noEntries: 'Записей пока нет',
   widgetAppearance: 'Оформление блока', doubleTapHint: 'Двойное касание открывает оформление', blockColor: 'Внутренний цвет', pulseBlock: 'Пульсация блока',
   widgetDrawing: 'Рисование', drawing: 'Рисование', lineColor: 'Цвет', lineWidth: 'Толщина', undo: 'Отменить', clearDrawing: 'Очистить', stylusHint: 'Рисуйте пальцем, стилусом или Apple Pencil', uploadBackground: 'Загрузить файл', save: 'Сохранить', viewSaved: 'Сохранённое', format: 'Формат', shareDrawing: 'Отправить', savedDrawings: 'Сохранённые рисунки', noSavedDrawings: 'Сохранённых рисунков пока нет', loadDrawing: 'Открыть', drawingSaved: 'Рисунок сохранён', backgroundLoaded: 'Страница загружена для рисования', drawingShareReady: 'Файл подготовлен', newSketch: 'Новый эскиз',
   todoList: 'Список дел', todoEmpty: 'Добавьте первое дело', newTask: 'Новое дело', addTask: 'Добавить дело', taskAdded: 'Дело добавлено', taskDeleted: 'Дело удалено', deleteTask: 'Удалить дело', deleteTaskConfirm: 'Удалить это дело?', dueDate: 'Дата выполнения', overdueTask: 'Просрочено', todayTask: 'Сегодня', nextTask: 'Следующее дело', futureTask: 'Запланировано', completedTask: 'Выполнено'
 });
 Object.assign(copy.EN, {
-  money: 'Money', quickCashflow: 'Quick income/expenses', cashflowDescription: 'Simple financial tracking for each object', noCashObjects: 'No tracked objects yet', noCashObjectsCopy: 'Add an object, set its value, and record received amounts and expenses.',
+  money: 'Money', quickCashflow: 'Short contracts', cashflowDescription: 'Simple financial tracking for each object', noCashObjects: 'No tracked objects yet', noCashObjectsCopy: 'Add an object, set its value, and record received amounts and expenses.',
   objectCost: 'Object value', workByFact: 'Work by actual completion', paymentByFact: 'Payment by actual completion', received: 'Received', expense: 'Expense', totalReceived: 'Total received', totalExpense: 'Total expense', remainingFromCost: 'Remaining from object value', income: 'Income', balanceResult: 'Balance: income − expense', comment: 'Comment', addIncome: 'Add income', addExpense: 'Add expense', createCashObject: 'Create financial object', cashObjectCreated: 'Object added to quick tracking', amountRequired: 'Enter an amount and comment', noEntries: 'No entries yet',
   widgetAppearance: 'Block appearance', doubleTapHint: 'Double tap opens appearance settings', blockColor: 'Inner color', pulseBlock: 'Pulse block',
   widgetDrawing: 'Drawing', drawing: 'Drawing', lineColor: 'Color', lineWidth: 'Width', undo: 'Undo', clearDrawing: 'Clear', stylusHint: 'Draw with a finger, stylus, or Apple Pencil', uploadBackground: 'Upload file', save: 'Save', viewSaved: 'Saved', format: 'Format', shareDrawing: 'Share', savedDrawings: 'Saved drawings', noSavedDrawings: 'No saved drawings yet', loadDrawing: 'Open', drawingSaved: 'Drawing saved', backgroundLoaded: 'Page loaded for drawing', drawingShareReady: 'File prepared', newSketch: 'New sketch',
   todoList: 'To-do list', todoEmpty: 'Add your first task', newTask: 'New task', addTask: 'Add task', taskAdded: 'Task added', taskDeleted: 'Task deleted', deleteTask: 'Delete task', deleteTaskConfirm: 'Delete this task?', dueDate: 'Due date', overdueTask: 'Overdue', todayTask: 'Today', nextTask: 'Next task', futureTask: 'Scheduled', completedTask: 'Completed'
 });
 Object.assign(copy.KY, {
-  money: 'Акча', quickCashflow: 'Тез киреше/чыгаша', cashflowDescription: 'Ар бир объект боюнча кыска каржы эсеби', noCashObjects: 'Эсеп үчүн объект жок', noCashObjectsCopy: 'Объект кошуп, баасын, түшкөн акчаны жана чыгашаны жазыңыз.',
+  money: 'Акча', quickCashflow: 'Кыска келишимдер', cashflowDescription: 'Ар бир объект боюнча кыска каржы эсеби', noCashObjects: 'Эсеп үчүн объект жок', noCashObjectsCopy: 'Объект кошуп, баасын, түшкөн акчаны жана чыгашаны жазыңыз.',
   objectCost: 'Объекттин баасы', workByFact: 'Аткарылган иш боюнча иштейм', paymentByFact: 'Факт боюнча төлөм', received: 'Алынды', expense: 'Чыгаша', totalReceived: 'Бардыгы алынды', totalExpense: 'Бардык чыгаша', remainingFromCost: 'Объекттин баасынан калды', income: 'Киреше', balanceResult: 'Баланс: киреше − чыгаша', comment: 'Комментарий', addIncome: 'Киреше кошуу', addExpense: 'Чыгаша кошуу', createCashObject: 'Каржы объектисин түзүү', cashObjectCreated: 'Объект тез эсепке кошулду', amountRequired: 'Сумманы жана комментарийди жазыңыз', noEntries: 'Жазуу жок',
   widgetAppearance: 'Блоктун көрүнүшү', doubleTapHint: 'Эки жолу тийүү көрүнүштү ачат', blockColor: 'Ички түс', pulseBlock: 'Блоктун пульсациясы',
   widgetDrawing: 'Сүрөт тартуу', drawing: 'Сүрөт тартуу', lineColor: 'Түс', lineWidth: 'Калыңдык', undo: 'Артка кайтаруу', clearDrawing: 'Тазалоо', stylusHint: 'Манжа, стилус же Apple Pencil менен тартыңыз', uploadBackground: 'Файл жүктөө', save: 'Сактоо', viewSaved: 'Сакталгандар', format: 'Формат', shareDrawing: 'Жөнөтүү', savedDrawings: 'Сакталган сүрөттөр', noSavedDrawings: 'Сүрөттөр жок', loadDrawing: 'Ачуу', drawingSaved: 'Сүрөт сакталды', backgroundLoaded: 'Барак сүрөт тартууга жүктөлдү', drawingShareReady: 'Файл даяр', newSketch: 'Жаңы эскиз',
   todoList: 'Иштер тизмеси', todoEmpty: 'Биринчи ишти кошуңуз', newTask: 'Жаңы иш', addTask: 'Иш кошуу', taskAdded: 'Иш кошулду', taskDeleted: 'Иш өчүрүлдү', deleteTask: 'Ишти өчүрүү', deleteTaskConfirm: 'Бул ишти өчүрөсүзбү?', dueDate: 'Аткаруу күнү', overdueTask: 'Мөөнөтү өттү', todayTask: 'Бүгүн', nextTask: 'Кийинки иш', futureTask: 'Пландаштырылган', completedTask: 'Аткарылды'
 });
 Object.assign(copy.TJ, {
-  money: 'Пул', quickCashflow: 'Даромад/хароҷоти зуд', cashflowDescription: 'Ҳисоби кӯтоҳи молиявӣ барои ҳар объект', noCashObjects: 'Объект барои ҳисоб нест', noCashObjectsCopy: 'Объектро илова карда, арзиш, маблағи гирифташуда ва хароҷотро ворид кунед.',
+  money: 'Пул', quickCashflow: 'Шартномаҳои кӯтоҳ', cashflowDescription: 'Ҳисоби кӯтоҳи молиявӣ барои ҳар объект', noCashObjects: 'Объект барои ҳисоб нест', noCashObjectsCopy: 'Объектро илова карда, арзиш, маблағи гирифташуда ва хароҷотро ворид кунед.',
   objectCost: 'Арзиши объект', workByFact: 'Аз рӯи иҷрои воқеӣ кор мекунам', paymentByFact: 'Пардохт аз рӯи факт', received: 'Гирифта шуд', expense: 'Хароҷот', totalReceived: 'Ҳамагӣ гирифта шуд', totalExpense: 'Ҳамагӣ хароҷот', remainingFromCost: 'Аз арзиши объект монд', income: 'Даромад', balanceResult: 'Тавозун: даромад − хароҷот', comment: 'Шарҳ', addIncome: 'Иловаи даромад', addExpense: 'Иловаи хароҷот', createCashObject: 'Сохтани объекти молиявӣ', cashObjectCreated: 'Объект ба ҳисоби зуд илова шуд', amountRequired: 'Маблағ ва шарҳро ворид кунед', noEntries: 'Сабт нест',
   widgetAppearance: 'Намуди блок', doubleTapHint: 'Ду бор ламс намудро мекушояд', blockColor: 'Ранги дохилӣ', pulseBlock: 'Набзи блок',
   widgetDrawing: 'Расмкашӣ', drawing: 'Расмкашӣ', lineColor: 'Ранг', lineWidth: 'Ғафсӣ', undo: 'Бекор кардан', clearDrawing: 'Тоза кардан', stylusHint: 'Бо ангушт, стилус ё Apple Pencil кашед', uploadBackground: 'Бор кардани файл', save: 'Нигоҳ доштан', viewSaved: 'Нигоҳшудаҳо', format: 'Формат', shareDrawing: 'Фиристодан', savedDrawings: 'Расмҳои нигоҳшуда', noSavedDrawings: 'Расм нест', loadDrawing: 'Кушодан', drawingSaved: 'Расм нигоҳ дошта шуд', backgroundLoaded: 'Саҳифа барои расмкашӣ бор шуд', drawingShareReady: 'Файл омода шуд', newSketch: 'Эскизи нав',
@@ -195,43 +195,47 @@ Object.assign(copy.TJ, {
 
 Object.assign(copy.RU, {
   workByContract: 'Работа по договорам', workByFact: 'Работа по факту выполнения', contractAccounting: 'Работа по договорам', actualAccounting: 'Работа по факту выполнения',
-  receivedAdvanceClosure: 'Получено в аванс/закрытие', completedWorkVolume: 'Выполненный объём работ', factAdvanceCompletion: 'Аванс/выполнение', actuallyCompleted: 'Фактически выполненное',
-  totalReceivedAdvanceClosure: 'Итого получено в аванс/закрытие', totalCompletedWorkVolume: 'Итого выполненный объём работ', totalFactAdvanceCompletion: 'Общий доход', totalActuallyCompleted: 'Общий расход',
-  addReceivedAdvanceClosure: 'Добавить аванс/закрытие', addCompletedWorkVolume: 'Добавить выполненный объём', addFactAdvanceCompletion: 'Добавить аванс/выполнение', addActuallyCompleted: 'Добавить выполненное',
+  receivedAdvanceClosure: 'Получено в аванс/закрытие', completedWorkVolume: 'Выполненный объём работ', factAdvanceCompletion: 'Оплата выработки', actuallyCompleted: 'Выполненная выработка',
+  totalReceivedAdvanceClosure: 'Итого получено в аванс/закрытие', totalCompletedWorkVolume: 'Итого выполненный объём работ', totalFactAdvanceCompletion: 'Итого оплата выработки', totalActuallyCompleted: 'Итого выполненная выработка',
+  addReceivedAdvanceClosure: 'Добавить аванс/закрытие', addCompletedWorkVolume: 'Добавить выполненный объём', addFactAdvanceCompletion: 'Добавить оплату выработки', addActuallyCompleted: 'Добавить выполненную выработку',
   overallContractBalance: 'Общий баланс по договорам', overallFactExecutionBalance: 'Общий баланс по факту выполнения', reportIndicator: 'Показатель',
   totalContractsAmount: 'Общая сумма договоров', contractProduction: 'Выработка по договорам', receivedFromCustomer: 'Получено от заказчика', totalOwnFundsInvested: 'Вложено собственных средств',
   contractProductionRemaining: 'Остаток от договора', paidProductionRemaining: 'Остаток от оплаченной выработки', overallIncome: 'Общий доход', overallExpense: 'Общий расход', executionRemaining: 'Остаток от выполнения', allOwnFundsInvested: 'Общая сумма вложенных средств',
-  sectionsBreakdown: 'Разбивка по разделам', incomingFunds: 'Поступления', completedWorks: 'Выполнение'
+  sectionsBreakdown: 'Разбивка по разделам', incomingFunds: 'Поступления', completedWorks: 'Выполнение', totalIncomingFunds: 'Итого поступлений', totalCompletedWorks: 'Итого выполнение', totalBalance: 'Итого баланс',
+  fullCashflowReport: 'Полный отчёт', generalReport: 'Общий отчёт', objectReport: 'Отчёт по объекту', allCashObjects: 'Все объекты'
 });
 Object.assign(copy.EN, {
   workByContract: 'Work under contracts', workByFact: 'Work by actual completion', contractAccounting: 'Work under contracts', actualAccounting: 'Work by actual completion',
-  receivedAdvanceClosure: 'Received as advance/closure', completedWorkVolume: 'Completed work volume', factAdvanceCompletion: 'Advance/completion', actuallyCompleted: 'Actually completed',
-  totalReceivedAdvanceClosure: 'Total received as advance/closure', totalCompletedWorkVolume: 'Total completed work volume', totalFactAdvanceCompletion: 'Total income', totalActuallyCompleted: 'Total expense',
-  addReceivedAdvanceClosure: 'Add advance/closure', addCompletedWorkVolume: 'Add completed volume', addFactAdvanceCompletion: 'Add advance/completion', addActuallyCompleted: 'Add completed work',
+  receivedAdvanceClosure: 'Received as advance/closure', completedWorkVolume: 'Completed work volume', factAdvanceCompletion: 'Production payment', actuallyCompleted: 'Completed production',
+  totalReceivedAdvanceClosure: 'Total received as advance/closure', totalCompletedWorkVolume: 'Total completed work volume', totalFactAdvanceCompletion: 'Total production payment', totalActuallyCompleted: 'Total completed production',
+  addReceivedAdvanceClosure: 'Add advance/closure', addCompletedWorkVolume: 'Add completed volume', addFactAdvanceCompletion: 'Add production payment', addActuallyCompleted: 'Add completed production',
   overallContractBalance: 'Overall balance under contracts', overallFactExecutionBalance: 'Overall balance by actual completion', reportIndicator: 'Indicator',
   totalContractsAmount: 'Total contract value', contractProduction: 'Production under contracts', receivedFromCustomer: 'Received from customer', totalOwnFundsInvested: 'Own funds invested',
   contractProductionRemaining: 'Remaining under contracts', paidProductionRemaining: 'Remaining paid production', overallIncome: 'Total income', overallExpense: 'Total expense', executionRemaining: 'Remaining from completion', allOwnFundsInvested: 'Total own funds invested',
-  sectionsBreakdown: 'Breakdown by section', incomingFunds: 'Receipts', completedWorks: 'Completion'
+  sectionsBreakdown: 'Breakdown by section', incomingFunds: 'Receipts', completedWorks: 'Completion', totalIncomingFunds: 'Total receipts', totalCompletedWorks: 'Total completion', totalBalance: 'Total balance',
+  fullCashflowReport: 'Full report', generalReport: 'Overall report', objectReport: 'Object report', allCashObjects: 'All objects'
 });
 Object.assign(copy.KY, {
   workByContract: 'Келишимдер боюнча иш', workByFact: 'Иш жүзүндө аткаруу боюнча иш', contractAccounting: 'Келишимдер боюнча иш', actualAccounting: 'Иш жүзүндө аткаруу боюнча иш',
-  receivedAdvanceClosure: 'Аванс/жабуу катары алынды', completedWorkVolume: 'Аткарылган иштердин көлөмү', factAdvanceCompletion: 'Аванс/аткаруу', actuallyCompleted: 'Иш жүзүндө аткарылды',
-  totalReceivedAdvanceClosure: 'Бардыгы аванс/жабуу катары алынды', totalCompletedWorkVolume: 'Аткарылган иштердин жалпы көлөмү', totalFactAdvanceCompletion: 'Жалпы киреше', totalActuallyCompleted: 'Жалпы чыгаша',
-  addReceivedAdvanceClosure: 'Аванс/жабуу кошуу', addCompletedWorkVolume: 'Аткарылган көлөмдү кошуу', addFactAdvanceCompletion: 'Аванс/аткарууну кошуу', addActuallyCompleted: 'Аткарылган ишти кошуу',
+  receivedAdvanceClosure: 'Аванс/жабуу катары алынды', completedWorkVolume: 'Аткарылган иштердин көлөмү', factAdvanceCompletion: 'Өндүрүм үчүн төлөм', actuallyCompleted: 'Аткарылган өндүрүм',
+  totalReceivedAdvanceClosure: 'Бардыгы аванс/жабуу катары алынды', totalCompletedWorkVolume: 'Аткарылган иштердин жалпы көлөмү', totalFactAdvanceCompletion: 'Өндүрүм үчүн жалпы төлөм', totalActuallyCompleted: 'Жалпы аткарылган өндүрүм',
+  addReceivedAdvanceClosure: 'Аванс/жабуу кошуу', addCompletedWorkVolume: 'Аткарылган көлөмдү кошуу', addFactAdvanceCompletion: 'Өндүрүм төлөмүн кошуу', addActuallyCompleted: 'Аткарылган өндүрүмдү кошуу',
   overallContractBalance: 'Келишимдер боюнча жалпы баланс', overallFactExecutionBalance: 'Иш жүзүндө аткаруу боюнча жалпы баланс', reportIndicator: 'Көрсөткүч',
   totalContractsAmount: 'Келишимдердин жалпы суммасы', contractProduction: 'Келишимдер боюнча өндүрүм', receivedFromCustomer: 'Заказчыдан алынды', totalOwnFundsInvested: 'Өз каражаты салынды',
   contractProductionRemaining: 'Келишим боюнча калды', paidProductionRemaining: 'Төлөнгөн өндүрүмдөн калды', overallIncome: 'Жалпы киреше', overallExpense: 'Жалпы чыгаша', executionRemaining: 'Аткаруудан калган сумма', allOwnFundsInvested: 'Салынган өз каражатынын жалпы суммасы',
-  sectionsBreakdown: 'Бөлүмдөр боюнча бөлүштүрүү', incomingFunds: 'Түшүүлөр', completedWorks: 'Аткаруу'
+  sectionsBreakdown: 'Бөлүмдөр боюнча бөлүштүрүү', incomingFunds: 'Түшүүлөр', completedWorks: 'Аткаруу', totalIncomingFunds: 'Жалпы түшүүлөр', totalCompletedWorks: 'Жалпы аткаруу', totalBalance: 'Жалпы баланс',
+  fullCashflowReport: 'Толук отчёт', generalReport: 'Жалпы отчёт', objectReport: 'Объект боюнча отчёт', allCashObjects: 'Бардык объекттер'
 });
 Object.assign(copy.TJ, {
   workByContract: 'Кор аз рӯи шартномаҳо', workByFact: 'Кор аз рӯи иҷрои воқеӣ', contractAccounting: 'Кор аз рӯи шартномаҳо', actualAccounting: 'Кор аз рӯи иҷрои воқеӣ',
-  receivedAdvanceClosure: 'Ҳамчун пешпардохт/бастан гирифта шуд', completedWorkVolume: 'Ҳаҷми корҳои иҷрошуда', factAdvanceCompletion: 'Пешпардохт/иҷро', actuallyCompleted: 'Воқеан иҷро шуд',
-  totalReceivedAdvanceClosure: 'Ҳамагӣ ҳамчун пешпардохт/бастан гирифта шуд', totalCompletedWorkVolume: 'Ҳаҷми умумии корҳои иҷрошуда', totalFactAdvanceCompletion: 'Даромади умумӣ', totalActuallyCompleted: 'Хароҷоти умумӣ',
-  addReceivedAdvanceClosure: 'Иловаи пешпардохт/бастан', addCompletedWorkVolume: 'Иловаи ҳаҷми иҷрошуда', addFactAdvanceCompletion: 'Иловаи пешпардохт/иҷро', addActuallyCompleted: 'Иловаи кори иҷрошуда',
+  receivedAdvanceClosure: 'Ҳамчун пешпардохт/бастан гирифта шуд', completedWorkVolume: 'Ҳаҷми корҳои иҷрошуда', factAdvanceCompletion: 'Пардохти иҷро', actuallyCompleted: 'Иҷрои анҷомшуда',
+  totalReceivedAdvanceClosure: 'Ҳамагӣ ҳамчун пешпардохт/бастан гирифта шуд', totalCompletedWorkVolume: 'Ҳаҷми умумии корҳои иҷрошуда', totalFactAdvanceCompletion: 'Ҳамагӣ пардохти иҷро', totalActuallyCompleted: 'Ҳамагӣ иҷрои анҷомшуда',
+  addReceivedAdvanceClosure: 'Иловаи пешпардохт/бастан', addCompletedWorkVolume: 'Иловаи ҳаҷми иҷрошуда', addFactAdvanceCompletion: 'Иловаи пардохти иҷро', addActuallyCompleted: 'Иловаи иҷрои анҷомшуда',
   overallContractBalance: 'Тавозуни умумӣ аз рӯи шартномаҳо', overallFactExecutionBalance: 'Тавозуни умумӣ аз рӯи иҷрои воқеӣ', reportIndicator: 'Нишондиҳанда',
   totalContractsAmount: 'Маблағи умумии шартномаҳо', contractProduction: 'Иҷро аз рӯи шартномаҳо', receivedFromCustomer: 'Аз фармоишгар гирифта шуд', totalOwnFundsInvested: 'Маблағи шахсӣ гузошта шуд',
   contractProductionRemaining: 'Бақия аз шартнома', paidProductionRemaining: 'Бақия аз иҷрои пардохтшуда', overallIncome: 'Даромади умумӣ', overallExpense: 'Хароҷоти умумӣ', executionRemaining: 'Бақия аз иҷро', allOwnFundsInvested: 'Маблағи умумии шахсии гузошташуда',
-  sectionsBreakdown: 'Тақсимот аз рӯи бахшҳо', incomingFunds: 'Воридот', completedWorks: 'Иҷро'
+  sectionsBreakdown: 'Тақсимот аз рӯи бахшҳо', incomingFunds: 'Воридот', completedWorks: 'Иҷро', totalIncomingFunds: 'Ҳамагӣ воридот', totalCompletedWorks: 'Ҳамагӣ иҷро', totalBalance: 'Тавозуни умумӣ',
+  fullCashflowReport: 'Ҳисоботи пурра', generalReport: 'Ҳисоботи умумӣ', objectReport: 'Ҳисоботи объект', allCashObjects: 'Ҳамаи объектҳо'
 });
 
 Object.assign(copy.RU, {
@@ -3077,6 +3081,8 @@ function renderCashflow() {
   activeCashObjectId = null; browser.hidden = false; detail.hidden = true; detail.innerHTML = '';
   empty.hidden = cashflowObjects.length > 0;
   list.hidden = cashflowObjects.length === 0;
+  const exportAllButton = $('[data-export-all-cashflow]', browser);
+  if (exportAllButton) exportAllButton.hidden = cashflowObjects.length === 0;
   const orderedObjects = [...cashflowObjects].sort((a, b) => Number(a.completed) - Number(b.completed) || new Date(b.createdAt) - new Date(a.createdAt));
   list.innerHTML = orderedObjects.map((object) => {
     const financials = cashObjectFinancials(object);
@@ -3311,7 +3317,7 @@ function sectionFinanceReport(object, section) {
   };
 }
 
-function cashObjectDetailedReport(object) {
+function cashObjectOverviewReportPage(object, title = tr('objectReport')) {
   const sectionColumns = [
     { label: tr('sectionName'), key: 'section', width: '*' },
     { label: tr('sectionMode'), key: 'mode', width: 105 },
@@ -3326,8 +3332,10 @@ function cashObjectDetailedReport(object) {
     if (section.factMode) summaryRows.push({ section: section.name, mode: tr('actualAccounting'), income: values.factIncome, expense: values.factExpenses, balance: values.factBalance });
     if (!section.contractMode && !section.factMode && section.staffingMode) summaryRows.push({ section: section.name, mode: tr('peopleAssigned'), income: 0, expense: 0, balance: 0 });
   });
-  const totals = cashObjectFinancials(object);
   const reportTotals = cashObjectReportTotals(object);
+  const incomingTotal = Math.round(summaryRows.reduce((sum, row) => sum + row.income, 0) * 100) / 100;
+  const completedTotal = Math.round(summaryRows.reduce((sum, row) => sum + row.expense, 0) * 100) / 100;
+  const balanceTotal = Math.round((incomingTotal - completedTotal) * 100) / 100;
   const balanceColumns = [
     { label: tr('reportIndicator'), key: 'indicator', width: '*' },
     { label: tr('amount'), key: 'value', width: 110, money: true }
@@ -3349,12 +3357,40 @@ function cashObjectDetailedReport(object) {
   const tables = [
     { title: tr('overallContractBalance'), columns: balanceColumns, rows: contractBalanceRows },
     { title: tr('overallFactExecutionBalance'), columns: balanceColumns, rows: factBalanceRows },
-    { title: tr('sectionsBreakdown'), columns: sectionColumns, rows: summaryRows, summaries: [cashReportSummary(tr('contractBalancesTotal'), totals.contractBalance, true), cashReportSummary(tr('factBalancesTotal'), totals.factBalance, true), cashReportSummary(tr('overallSectionsBalance'), totals.balance, true)] }
+    { title: tr('sectionsBreakdown'), columns: sectionColumns, rows: summaryRows, summaries: [cashReportSummary(tr('totalIncomingFunds'), incomingTotal), cashReportSummary(tr('totalCompletedWorks'), completedTotal), cashReportSummary(tr('totalBalance'), balanceTotal, true)] }
   ];
-  object.sections.forEach((section) => {
-    sectionFinanceReport(object, section).tables.forEach((table) => tables.push({ ...table, title: `${section.name} · ${table.title}` }));
+  return { title, objectName: object.name, sectionName: tr('allObjectSections'), tables, parties: null };
+}
+
+function cashObjectDetailedReport(object) {
+  const overview = cashObjectOverviewReportPage(object, tr('overallDetailedReport'));
+  const sectionPages = object.sections.map((section) => sectionFinanceReport(object, section));
+  return { ...overview, pages: [overview, ...sectionPages] };
+}
+
+function allCashflowDetailedReport(objects) {
+  const objectColumns = [
+    { label: tr('objects'), key: 'object', width: '*' },
+    { label: tr('incomingFunds'), key: 'income', width: 100, money: true },
+    { label: tr('completedWorks'), key: 'expense', width: 100, money: true },
+    { label: tr('sectionBalance'), key: 'balance', width: 100, money: true, signed: true, tone: true }
+  ];
+  const rows = objects.map((object) => {
+    const reportTotals = cashObjectReportTotals(object);
+    const income = Math.round((reportTotals.contractReceived + reportTotals.factIncome) * 100) / 100;
+    const expense = Math.round((reportTotals.contractProduction + reportTotals.factExpense) * 100) / 100;
+    return { object: object.name, income, expense, balance: Math.round((income - expense) * 100) / 100 };
   });
-  return { title: tr('overallDetailedReport'), objectName: object.name, sectionName: tr('allObjectSections'), tables, parties: null };
+  const incomeTotal = Math.round(rows.reduce((sum, row) => sum + row.income, 0) * 100) / 100;
+  const expenseTotal = Math.round(rows.reduce((sum, row) => sum + row.expense, 0) * 100) / 100;
+  const balanceTotal = Math.round((incomeTotal - expenseTotal) * 100) / 100;
+  const generalPage = {
+    title: tr('generalReport'), objectName: tr('allCashObjects'), sectionName: tr('allObjectSections'),
+    tables: [{ title: tr('generalReport'), columns: objectColumns, rows, summaries: [cashReportSummary(tr('totalIncomingFunds'), incomeTotal), cashReportSummary(tr('totalCompletedWorks'), expenseTotal), cashReportSummary(tr('totalBalance'), balanceTotal, true)] }],
+    parties: null
+  };
+  const objectPages = objects.map((object) => cashObjectOverviewReportPage(object, `${tr('objectReport')}: ${object.name}`));
+  return { title: tr('fullCashflowReport'), objectName: tr('allCashObjects'), sectionName: tr('allObjectSections'), tables: generalPage.tables, parties: null, pages: [generalPage, ...objectPages] };
 }
 
 function saveCashReportHistory(section, type, report) {
@@ -3400,8 +3436,25 @@ function reportPreviewPartiesMarkup(parties) {
   return `<section class="report-preview-parties"><h3>${tr('fillDate')}: ${escapeHtml(parties.date || localDateKey())}</h3><div>${rows.map(([label, party]) => `<article><strong>${escapeHtml(label)}</strong><span>${tr('fullName')}: ${escapeHtml(party?.name || '—')}</span><span>${tr('signature')}: ${escapeHtml(party?.signature || '—')}</span></article>`).join('')}</div></section>`;
 }
 
-function reportPreviewMarkup(report) {
+function cashReportPages(report) {
+  const pages = Array.isArray(report?.pages) && report.pages.length ? report.pages : [report];
+  return pages.map((page) => ({
+    title: page.title || report.title,
+    documentNumber: page.documentNumber || '',
+    numberLabel: page.numberLabel || report.numberLabel,
+    objectName: page.objectName || report.objectName,
+    sectionName: page.sectionName || report.sectionName,
+    tables: Array.isArray(page.tables) ? page.tables : [],
+    parties: page.parties || null
+  }));
+}
+
+function reportPreviewPageMarkup(report) {
   return `<article class="report-preview-sheet"><header><div><span>STRUCTOS REPORT</span><h2>${escapeHtml(report.title)}</h2>${report.documentNumber ? `<p>${escapeHtml(report.numberLabel || tr('documentNumber'))}: ${escapeHtml(report.documentNumber)}</p>` : ''}</div><img src="${reportPreviewLogoUrl}" alt="StructOS" /></header><div class="report-preview-meta"><p><strong>${tr('objects')}:</strong> ${escapeHtml(report.objectName)}</p><p><strong>${tr('sectionName')}:</strong> ${escapeHtml(report.sectionName)}</p></div>${report.tables.map(reportPreviewTableMarkup).join('')}${reportPreviewPartiesMarkup(report.parties)}<footer><img src="${reportPreviewLogoUrl}" alt="" /><div><strong>${STRUCTOS_DOCUMENT_BRAND.made}</strong><span>${STRUCTOS_DOCUMENT_BRAND.site}</span><span>${STRUCTOS_DOCUMENT_BRAND.slogan}</span></div></footer></article>`;
+}
+
+function reportPreviewMarkup(report) {
+  return `<div class="report-preview-pages">${cashReportPages(report).map(reportPreviewPageMarkup).join('')}</div>`;
 }
 
 function openCashReportPreview(report, getDeliveryReport = () => report, onSuccess = null) {
@@ -3420,25 +3473,28 @@ async function createPdfReport(report) {
   const [{ default: pdfMake }, { default: pdfFonts }] = await Promise.all([import('pdfmake/build/pdfmake.js'), import('pdfmake/build/vfs_fonts.js')]);
   const logo = await loadReportLogo();
   pdfMake.vfs = pdfFonts?.pdfMake?.vfs || pdfFonts?.vfs || pdfFonts;
-  const content = [
-    { text: report.title, style: 'title' },
-    ...(report.documentNumber ? [{ text: `${report.numberLabel || tr('documentNumber')}: ${report.documentNumber}`, style: 'meta' }] : []),
-    { text: `${tr('objects')}: ${report.objectName}`, style: 'meta' },
-    { text: `${tr('sectionName')}: ${report.sectionName}`, style: 'meta', margin: [0, 0, 0, 14] }
-  ];
-  report.tables.forEach((table) => {
-    const body = [table.columns.map((column) => ({ text: column.label, style: 'tableHeader' })), ...(table.rows.length ? table.rows.map((row) => table.columns.map((column) => {
-      const tone = column.tone ? cashBalanceClass(Number(row[column.key]) || 0) : '';
-      return { text: reportCellValue(column, row), alignment: column.number || column.money ? 'right' : 'left', ...(tone === 'is-negative' ? { color: '#d9384b', bold: true } : tone === 'is-positive' ? { color: '#138a5b', bold: true } : {}) };
-    })) : [[{ text: tr('noEntries'), colSpan: table.columns.length, alignment: 'center', color: '#64748b', margin: [0, 8] }, ...Array.from({ length: table.columns.length - 1 }, () => ({}))]])];
-    content.push({ text: table.title, style: 'sectionTitle', margin: [0, 10, 0, 6] }, { table: { headerRows: 1, widths: table.columns.map((column) => column.width), body }, layout: { fillColor: (rowIndex) => rowIndex === 0 ? '#eaf3ff' : null, hLineColor: '#b8c9dc', vLineColor: '#b8c9dc' }, fontSize: 8 });
-    if (Number.isFinite(table.total)) content.push({ text: `${tr('rowTotal')}: ${formatMoney(table.total)}`, bold: true, alignment: 'right', margin: [0, 7, 0, 4] });
-    if (table.summaries?.length) content.push({ ul: table.summaries.map((summary) => ({ text: cashReportSummaryText(summary), bold: Boolean(summary?.tone), color: summary?.tone === 'is-negative' ? '#d9384b' : summary?.tone === 'is-positive' ? '#138a5b' : '#14213d' })), margin: [10, 7, 0, 5], fontSize: 9 });
+  const content = [];
+  cashReportPages(report).forEach((page, pageIndex) => {
+    content.push({ text: page.title, style: 'title', ...(pageIndex ? { pageBreak: 'before' } : {}) });
+    if (page.documentNumber) content.push({ text: `${page.numberLabel || tr('documentNumber')}: ${page.documentNumber}`, style: 'meta' });
+    content.push(
+      { text: `${tr('objects')}: ${page.objectName}`, style: 'meta' },
+      { text: `${tr('sectionName')}: ${page.sectionName}`, style: 'meta', margin: [0, 0, 0, 14] }
+    );
+    page.tables.forEach((table) => {
+      const body = [table.columns.map((column) => ({ text: column.label, style: 'tableHeader' })), ...(table.rows.length ? table.rows.map((row) => table.columns.map((column) => {
+        const tone = column.tone ? cashBalanceClass(Number(row[column.key]) || 0) : '';
+        return { text: reportCellValue(column, row), alignment: column.number || column.money ? 'right' : 'left', ...(tone === 'is-negative' ? { color: '#d9384b', bold: true } : tone === 'is-positive' ? { color: '#138a5b', bold: true } : {}) };
+      })) : [[{ text: tr('noEntries'), colSpan: table.columns.length, alignment: 'center', color: '#64748b', margin: [0, 8] }, ...Array.from({ length: table.columns.length - 1 }, () => ({}))]])];
+      content.push({ text: table.title, style: 'sectionTitle', margin: [0, 10, 0, 6] }, { table: { headerRows: 1, widths: table.columns.map((column) => column.width), body }, layout: { fillColor: (rowIndex) => rowIndex === 0 ? '#eaf3ff' : null, hLineColor: '#b8c9dc', vLineColor: '#b8c9dc' }, fontSize: 8 });
+      if (Number.isFinite(table.total)) content.push({ text: `${tr('rowTotal')}: ${formatMoney(table.total)}`, bold: true, alignment: 'right', margin: [0, 7, 0, 4] });
+      if (table.summaries?.length) content.push({ ul: table.summaries.map((summary) => ({ text: cashReportSummaryText(summary), bold: Boolean(summary?.tone), color: summary?.tone === 'is-negative' ? '#d9384b' : summary?.tone === 'is-positive' ? '#138a5b' : '#14213d' })), margin: [10, 7, 0, 5], fontSize: 9 });
+    });
+    if (page.parties) {
+      const partyRows = [['', tr('fullName'), tr('signature')], [tr('preparedBy'), page.parties.prepared.name, page.parties.prepared.signature], [tr('performedBy'), page.parties.performed.name, page.parties.performed.signature], [tr('acceptedBy'), page.parties.accepted.name, page.parties.accepted.signature]];
+      content.push({ text: tr('fillDate'), style: 'sectionTitle', margin: [0, 16, 0, 6] }, { text: page.parties.date || localDateKey(), margin: [0, 0, 0, 8] }, { table: { widths: [90, '*', '*'], body: partyRows }, layout: 'lightHorizontalLines', fontSize: 9 });
+    }
   });
-  if (report.parties) {
-    const partyRows = [['', tr('fullName'), tr('signature')], [tr('preparedBy'), report.parties.prepared.name, report.parties.prepared.signature], [tr('performedBy'), report.parties.performed.name, report.parties.performed.signature], [tr('acceptedBy'), report.parties.accepted.name, report.parties.accepted.signature]];
-    content.push({ text: tr('fillDate'), style: 'sectionTitle', margin: [0, 16, 0, 6] }, { text: report.parties.date || localDateKey(), margin: [0, 0, 0, 8] }, { table: { widths: [90, '*', '*'], body: partyRows }, layout: 'lightHorizontalLines', fontSize: 9 });
-  }
   const definition = {
     pageSize: 'A4', pageMargins: [34, 38, 34, 88], defaultStyle: { font: 'Roboto', fontSize: 9, color: '#14213d' },
     styles: { title: { fontSize: 18, bold: true, color: '#075cd3', margin: [0, 0, 0, 10] }, meta: { fontSize: 10, color: '#43546a', margin: [0, 0, 0, 3] }, sectionTitle: { fontSize: 12, bold: true, color: '#075cd3' }, tableHeader: { bold: true, color: '#0b2e59', fontSize: 8 } },
@@ -3452,39 +3508,50 @@ async function createExcelReport(report) {
   const { default: ExcelJS } = await import('exceljs');
   const workbook = new ExcelJS.Workbook();
   workbook.creator = 'StructOS'; workbook.created = new Date();
-  const worksheet = workbook.addWorksheet(report.sectionName.slice(0, 31) || 'StructOS', { pageSetup: { orientation: 'landscape', fitToPage: true, fitToWidth: 1, fitToHeight: 0, margins: { left: 0.3, right: 0.3, top: 0.5, bottom: 0.8, header: 0.2, footer: 0.2 } } });
-  const maxColumns = Math.max(6, ...report.tables.map((table) => table.columns.length));
-  worksheet.mergeCells(1, 1, 1, maxColumns); worksheet.getCell(1, 1).value = report.title; worksheet.getCell(1, 1).font = { size: 17, bold: true, color: { argb: 'FF075CD3' } };
-  let metaRow = 2;
-  if (report.documentNumber) { worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${report.numberLabel || tr('documentNumber')}: ${report.documentNumber}`; metaRow += 1; }
-  worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${tr('objects')}: ${report.objectName}`; metaRow += 1;
-  worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${tr('sectionName')}: ${report.sectionName}`;
-  let cursor = metaRow + 2;
-  report.tables.forEach((table) => {
-    worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = table.title; worksheet.getCell(cursor, 1).font = { bold: true, size: 12, color: { argb: 'FF075CD3' } }; cursor += 1;
-    const header = worksheet.getRow(cursor); table.columns.forEach((column, index) => { const cell = header.getCell(index + 1); cell.value = column.label; cell.font = { bold: true, color: { argb: 'FFFFFFFF' } }; cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF075CD3' } }; cell.alignment = { vertical: 'middle', wrapText: true }; cell.border = { top: { style: 'thin', color: { argb: 'FF9EB6D0' } }, left: { style: 'thin', color: { argb: 'FF9EB6D0' } }, bottom: { style: 'thin', color: { argb: 'FF9EB6D0' } }, right: { style: 'thin', color: { argb: 'FF9EB6D0' } } }; }); header.height = 28; cursor += 1;
-    const rows = table.rows.length ? table.rows : [{ [table.columns[0].key]: tr('noEntries') }];
-    rows.forEach((row) => { const excelRow = worksheet.getRow(cursor); table.columns.forEach((column, index) => { const cell = excelRow.getCell(index + 1); cell.value = column.number || column.money ? (Number(row[column.key]) || 0) : String(row[column.key] ?? ''); if (column.money) cell.numFmt = `${column.signed ? '+' : ''}#,##0.00 "₽";[Red]-#,##0.00 "₽";0.00 "₽"`; if (column.tone) { const tone = cashBalanceClass(Number(row[column.key]) || 0); if (tone !== 'is-zero') cell.font = { bold: true, color: { argb: tone === 'is-negative' ? 'FFD9384B' : 'FF138A5B' } }; } cell.alignment = { vertical: 'top', wrapText: true, horizontal: column.number || column.money ? 'right' : 'left' }; cell.border = { top: { style: 'thin', color: { argb: 'FFD4DFEB' } }, left: { style: 'thin', color: { argb: 'FFD4DFEB' } }, bottom: { style: 'thin', color: { argb: 'FFD4DFEB' } }, right: { style: 'thin', color: { argb: 'FFD4DFEB' } } }; }); cursor += 1; });
-    if (Number.isFinite(table.total)) { worksheet.mergeCells(cursor, 1, cursor, maxColumns - 1); worksheet.getCell(cursor, 1).value = tr('rowTotal'); worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, maxColumns).value = table.total; worksheet.getCell(cursor, maxColumns).numFmt = '#,##0.00 "₽"'; worksheet.getCell(cursor, maxColumns).font = { bold: true }; cursor += 1; }
-    (table.summaries || []).forEach((summary) => {
-      worksheet.mergeCells(cursor, 1, cursor, maxColumns);
-      const cell = worksheet.getCell(cursor, 1);
-      cell.value = cashReportSummaryText(summary);
-      cell.font = { bold: true, ...(summary?.tone === 'is-negative' ? { color: { argb: 'FFD9384B' } } : summary?.tone === 'is-positive' ? { color: { argb: 'FF138A5B' } } : {}) };
-      cursor += 1;
-    });
-    cursor += 2;
-  });
-  if (report.parties) {
-    worksheet.getCell(cursor, 1).value = tr('fillDate'); worksheet.getCell(cursor, 2).value = report.parties.date || localDateKey(); cursor += 2;
-    [[tr('preparedBy'), report.parties.prepared], [tr('performedBy'), report.parties.performed], [tr('acceptedBy'), report.parties.accepted]].forEach(([label, party]) => { worksheet.getCell(cursor, 1).value = label; worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, 2).value = `${tr('fullName')}: ${party.name}`; worksheet.getCell(cursor, 4).value = `${tr('signature')}: ${party.signature}`; cursor += 1; }); cursor += 2;
-  }
   const logo = await loadReportLogo();
   const imageId = workbook.addImage({ base64: logo, extension: 'png' });
-  worksheet.addImage(imageId, { tl: { col: maxColumns - 3, row: cursor - 1 }, ext: { width: 46, height: 46 } });
-  worksheet.mergeCells(cursor, maxColumns - 2, cursor + 2, maxColumns); const brandCell = worksheet.getCell(cursor, maxColumns - 2); brandCell.value = `${STRUCTOS_DOCUMENT_BRAND.made}\n${STRUCTOS_DOCUMENT_BRAND.site}\n${STRUCTOS_DOCUMENT_BRAND.slogan}`; brandCell.font = { bold: true, color: { argb: 'FF075CD3' }, size: 10 }; brandCell.alignment = { horizontal: 'right', vertical: 'middle', wrapText: true }; worksheet.getRow(cursor).height = 32; worksheet.getRow(cursor + 1).height = 20; worksheet.getRow(cursor + 2).height = 20;
-  const widths = [12, 36, 18, 22, 18, 18]; for (let index = 1; index <= maxColumns; index += 1) worksheet.getColumn(index).width = widths[index - 1] || 18;
-  worksheet.views = [{ state: 'frozen', ySplit: metaRow + 2 }];
+  const usedSheetNames = new Set();
+  const sheetNameFor = (page, pageIndex) => {
+    const cleaned = `${pageIndex + 1} ${page.sectionName || page.objectName || page.title}`.replace(/[\\/*?:\[\]]+/g, ' ').replace(/\s+/g, ' ').trim() || `StructOS ${pageIndex + 1}`;
+    let name = cleaned.slice(0, 31);
+    let suffix = 2;
+    while (usedSheetNames.has(name)) { const ending = ` ${suffix}`; name = `${cleaned.slice(0, 31 - ending.length)}${ending}`; suffix += 1; }
+    usedSheetNames.add(name);
+    return name;
+  };
+  cashReportPages(report).forEach((page, pageIndex) => {
+    const worksheet = workbook.addWorksheet(sheetNameFor(page, pageIndex), { pageSetup: { paperSize: 9, orientation: 'portrait', fitToPage: true, fitToWidth: 1, fitToHeight: 0, horizontalCentered: true, margins: { left: 0.3, right: 0.3, top: 0.5, bottom: 0.8, header: 0.2, footer: 0.2 } } });
+    const maxColumns = Math.max(6, ...page.tables.map((table) => table.columns.length));
+    worksheet.mergeCells(1, 1, 1, maxColumns); worksheet.getCell(1, 1).value = page.title; worksheet.getCell(1, 1).font = { size: 17, bold: true, color: { argb: 'FF075CD3' } };
+    let metaRow = 2;
+    if (page.documentNumber) { worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${page.numberLabel || tr('documentNumber')}: ${page.documentNumber}`; metaRow += 1; }
+    worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${tr('objects')}: ${page.objectName}`; metaRow += 1;
+    worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${tr('sectionName')}: ${page.sectionName}`;
+    let cursor = metaRow + 2;
+    page.tables.forEach((table) => {
+      worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = table.title; worksheet.getCell(cursor, 1).font = { bold: true, size: 12, color: { argb: 'FF075CD3' } }; cursor += 1;
+      const header = worksheet.getRow(cursor); table.columns.forEach((column, index) => { const cell = header.getCell(index + 1); cell.value = column.label; cell.font = { bold: true, color: { argb: 'FFFFFFFF' } }; cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF075CD3' } }; cell.alignment = { vertical: 'middle', wrapText: true }; cell.border = { top: { style: 'thin', color: { argb: 'FF9EB6D0' } }, left: { style: 'thin', color: { argb: 'FF9EB6D0' } }, bottom: { style: 'thin', color: { argb: 'FF9EB6D0' } }, right: { style: 'thin', color: { argb: 'FF9EB6D0' } } }; }); header.height = 28; cursor += 1;
+      const rows = table.rows.length ? table.rows : [{ [table.columns[0].key]: tr('noEntries') }];
+      rows.forEach((row) => { const excelRow = worksheet.getRow(cursor); table.columns.forEach((column, index) => { const cell = excelRow.getCell(index + 1); cell.value = column.number || column.money ? (Number(row[column.key]) || 0) : String(row[column.key] ?? ''); if (column.money) cell.numFmt = `${column.signed ? '+' : ''}#,##0.00 "₽";[Red]-#,##0.00 "₽";0.00 "₽"`; if (column.tone) { const tone = cashBalanceClass(Number(row[column.key]) || 0); if (tone !== 'is-zero') cell.font = { bold: true, color: { argb: tone === 'is-negative' ? 'FFD9384B' : 'FF138A5B' } }; } cell.alignment = { vertical: 'top', wrapText: true, horizontal: column.number || column.money ? 'right' : 'left' }; cell.border = { top: { style: 'thin', color: { argb: 'FFD4DFEB' } }, left: { style: 'thin', color: { argb: 'FFD4DFEB' } }, bottom: { style: 'thin', color: { argb: 'FFD4DFEB' } }, right: { style: 'thin', color: { argb: 'FFD4DFEB' } } }; }); cursor += 1; });
+      if (Number.isFinite(table.total)) { worksheet.mergeCells(cursor, 1, cursor, maxColumns - 1); worksheet.getCell(cursor, 1).value = tr('rowTotal'); worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, maxColumns).value = table.total; worksheet.getCell(cursor, maxColumns).numFmt = '#,##0.00 "₽"'; worksheet.getCell(cursor, maxColumns).font = { bold: true }; cursor += 1; }
+      (table.summaries || []).forEach((summary) => {
+        worksheet.mergeCells(cursor, 1, cursor, maxColumns);
+        const cell = worksheet.getCell(cursor, 1);
+        cell.value = cashReportSummaryText(summary);
+        cell.font = { bold: true, ...(summary?.tone === 'is-negative' ? { color: { argb: 'FFD9384B' } } : summary?.tone === 'is-positive' ? { color: { argb: 'FF138A5B' } } : {}) };
+        cursor += 1;
+      });
+      cursor += 2;
+    });
+    if (page.parties) {
+      worksheet.getCell(cursor, 1).value = tr('fillDate'); worksheet.getCell(cursor, 2).value = page.parties.date || localDateKey(); cursor += 2;
+      [[tr('preparedBy'), page.parties.prepared], [tr('performedBy'), page.parties.performed], [tr('acceptedBy'), page.parties.accepted]].forEach(([label, party]) => { worksheet.getCell(cursor, 1).value = label; worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, 2).value = `${tr('fullName')}: ${party.name}`; worksheet.getCell(cursor, 4).value = `${tr('signature')}: ${party.signature}`; cursor += 1; }); cursor += 2;
+    }
+    worksheet.addImage(imageId, { tl: { col: maxColumns - 3, row: cursor - 1 }, ext: { width: 46, height: 46 } });
+    worksheet.mergeCells(cursor, maxColumns - 2, cursor + 2, maxColumns); const brandCell = worksheet.getCell(cursor, maxColumns - 2); brandCell.value = `${STRUCTOS_DOCUMENT_BRAND.made}\n${STRUCTOS_DOCUMENT_BRAND.site}\n${STRUCTOS_DOCUMENT_BRAND.slogan}`; brandCell.font = { bold: true, color: { argb: 'FF075CD3' }, size: 10 }; brandCell.alignment = { horizontal: 'right', vertical: 'middle', wrapText: true }; worksheet.getRow(cursor).height = 32; worksheet.getRow(cursor + 1).height = 20; worksheet.getRow(cursor + 2).height = 20;
+    const widths = [12, 36, 18, 22, 18, 18]; for (let index = 1; index <= maxColumns; index += 1) worksheet.getColumn(index).width = widths[index - 1] || 18;
+    worksheet.views = [{ state: 'frozen', ySplit: metaRow + 2 }];
+  });
   const buffer = await workbook.xlsx.writeBuffer();
   return new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
 }
@@ -3600,6 +3667,13 @@ function openCashObjectExportDialog(objectId) {
   showDialog(tr('overallDetailedReport'), object.name, cashReportActionsMarkup());
   const dialog = $('[data-dialog]'); dialog.classList.add('cash-export-dialog');
   bindCashReportActions($('[data-dialog-content]'), () => cashObjectDetailedReport(object));
+}
+
+function openAllCashflowExportDialog() {
+  if (!cashflowObjects.length) return;
+  showDialog(tr('fullCashflowReport'), tr('allCashObjects'), cashReportActionsMarkup());
+  const dialog = $('[data-dialog]'); dialog.classList.add('cash-export-dialog');
+  bindCashReportActions($('[data-dialog-content]'), () => allCashflowDetailedReport(cashflowObjects));
 }
 
 const drawingDialog = $('[data-drawing-dialog]');
@@ -4950,6 +5024,7 @@ $$('[data-analysis-type]').forEach((button) => button.addEventListener('click', 
 $('[data-run-analysis]').addEventListener('click', runAnalysis);
 $$('[data-add-object]').forEach((button) => button.addEventListener('click', openObjectDialog));
 $$('[data-add-cash-object]').forEach((button) => button.addEventListener('click', openCashObjectDialog));
+$('[data-export-all-cashflow]')?.addEventListener('click', openAllCashflowExportDialog);
 $('[data-profile-menu]').addEventListener('click', () => $('.drawer-group').classList.toggle('is-open'));
 $('[data-logout]').addEventListener('click', logout);
 $('[data-space-settings]').addEventListener('click', () => {
