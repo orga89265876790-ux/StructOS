@@ -375,28 +375,32 @@ Object.assign(copy.RU, {
   contractor: 'Исполнитель', customer: 'Заказчик', partyType: 'Тип карточки', legalEntity: 'Организация', individual: 'Физическое лицо', companyName: 'Компания', inn: 'ИНН', kpp: 'КПП', passportSeriesNumber: 'Серия и номер паспорта',
   uploadOrganizationCard: 'Загрузить карточку или паспорт', organizationCardSaved: 'Карточка организации сохранена', organizationFileSaved: 'Документ организации сохранён', organizationFileOpenFailed: 'Не удалось открыть документ организации', manualDetails: 'Заполнить вручную', uploadedDocuments: 'Загруженные документы', noOrganizationFile: 'Файл ещё не загружен',
   preparedBy: 'Составил', performedBy: 'Выполнил', acceptedBy: 'Принял', confirmedBy: 'Подтвердил', seal: 'Печать', justification: 'Обоснование', documentDate: 'Дата документа', changeSavedAt: 'Изменения внесены',
-  expandOrganizationDocuments: 'Развернуть документы организаций', collapseOrganizationDocuments: 'Свернуть документы организаций', documentObject: 'Объект', documentSection: 'Раздел', objectPlaceholderDocument: 'Введите наименование объекта', sectionPlaceholderDocument: 'Введите наименование раздела'
+  expandOrganizationDocuments: 'Развернуть документы организаций', collapseOrganizationDocuments: 'Свернуть документы организаций', documentObject: 'Объект', documentSection: 'Раздел', objectPlaceholderDocument: 'Введите наименование объекта', sectionPlaceholderDocument: 'Введите наименование раздела',
+  generateAct: 'Сформировать акт', generateStatement: 'Сформировать ведомость', documentRequiredFields: 'Заполните название документа, объект и раздел'
 });
 Object.assign(copy.EN, {
   workStatement: 'Statement of work quantities', organizationDocuments: 'Organization documents', organizationDocumentsHint: 'Contractor and Customer cards automatically fill statements and acts for every section of the object.',
   contractor: 'Contractor', customer: 'Customer', partyType: 'Card type', legalEntity: 'Organization', individual: 'Individual', companyName: 'Company', inn: 'Tax ID', kpp: 'Registration code', passportSeriesNumber: 'Passport series and number',
   uploadOrganizationCard: 'Upload organization card or passport', organizationCardSaved: 'Organization card saved', organizationFileSaved: 'Organization document saved', organizationFileOpenFailed: 'Organization document could not be opened', manualDetails: 'Enter manually', uploadedDocuments: 'Uploaded documents', noOrganizationFile: 'No file uploaded yet',
   preparedBy: 'Prepared by', performedBy: 'Performed by', acceptedBy: 'Accepted by', confirmedBy: 'Confirmed by', seal: 'Seal', justification: 'Justification', documentDate: 'Document date', changeSavedAt: 'Changes saved',
-  expandOrganizationDocuments: 'Expand organization documents', collapseOrganizationDocuments: 'Collapse organization documents', documentObject: 'Object', documentSection: 'Section', objectPlaceholderDocument: 'Enter object name', sectionPlaceholderDocument: 'Enter section name'
+  expandOrganizationDocuments: 'Expand organization documents', collapseOrganizationDocuments: 'Collapse organization documents', documentObject: 'Object', documentSection: 'Section', objectPlaceholderDocument: 'Enter object name', sectionPlaceholderDocument: 'Enter section name',
+  generateAct: 'Create act', generateStatement: 'Create statement', documentRequiredFields: 'Enter the document name, object, and section'
 });
 Object.assign(copy.KY, {
   workStatement: 'Иш көлөмдөрүнүн ведомосту', organizationDocuments: 'Уюмдардын документтери', organizationDocumentsHint: 'Аткаруучунун жана Заказчынын карточкалары объекттин бардык бөлүмдөрүндөгү ведомость менен актыларды автоматтык толтурат.',
   contractor: 'Аткаруучу', customer: 'Заказчы', partyType: 'Карточканын түрү', legalEntity: 'Уюм', individual: 'Жеке жак', companyName: 'Компания', inn: 'ИНН', kpp: 'КПП', passportSeriesNumber: 'Паспорттун сериясы жана номери',
   uploadOrganizationCard: 'Карточканы же паспортту жүктөө', organizationCardSaved: 'Уюмдун карточкасы сакталды', organizationFileSaved: 'Уюмдун документи сакталды', organizationFileOpenFailed: 'Уюмдун документи ачылган жок', manualDetails: 'Кол менен толтуруу', uploadedDocuments: 'Жүктөлгөн документтер', noOrganizationFile: 'Файл али жүктөлө элек',
   preparedBy: 'Түзгөн', performedBy: 'Аткарган', acceptedBy: 'Кабыл алган', confirmedBy: 'Ырастаган', seal: 'Мөөр', justification: 'Негиздеме', documentDate: 'Документтин күнү', changeSavedAt: 'Өзгөртүү киргизилди',
-  expandOrganizationDocuments: 'Уюмдардын документтерин ачуу', collapseOrganizationDocuments: 'Уюмдардын документтерин жыйноо', documentObject: 'Объект', documentSection: 'Бөлүм', objectPlaceholderDocument: 'Объекттин аталышын жазыңыз', sectionPlaceholderDocument: 'Бөлүмдүн аталышын жазыңыз'
+  expandOrganizationDocuments: 'Уюмдардын документтерин ачуу', collapseOrganizationDocuments: 'Уюмдардын документтерин жыйноо', documentObject: 'Объект', documentSection: 'Бөлүм', objectPlaceholderDocument: 'Объекттин аталышын жазыңыз', sectionPlaceholderDocument: 'Бөлүмдүн аталышын жазыңыз',
+  generateAct: 'Акт түзүү', generateStatement: 'Ведомость түзүү', documentRequiredFields: 'Документтин аталышын, объектти жана бөлүмдү толтуруңуз'
 });
 Object.assign(copy.TJ, {
   workStatement: 'Ведомости ҳаҷми корҳо', organizationDocuments: 'Ҳуҷҷатҳои ташкилотҳо', organizationDocumentsHint: 'Карточкаҳои Иҷрокунанда ва Фармоишгар ведомост ва санадҳои ҳамаи бахшҳои объектро худкор пур мекунанд.',
   contractor: 'Иҷрокунанда', customer: 'Фармоишгар', partyType: 'Навъи карточка', legalEntity: 'Ташкилот', individual: 'Шахси воқеӣ', companyName: 'Ширкат', inn: 'ИНН', kpp: 'КПП', passportSeriesNumber: 'Серия ва рақами шиноснома',
   uploadOrganizationCard: 'Карточка ё шиносномаро бор кунед', organizationCardSaved: 'Карточкаи ташкилот нигоҳ дошта шуд', organizationFileSaved: 'Ҳуҷҷати ташкилот нигоҳ дошта шуд', organizationFileOpenFailed: 'Ҳуҷҷати ташкилот кушода нашуд', manualDetails: 'Дастӣ пур кардан', uploadedDocuments: 'Ҳуҷҷатҳои боршуда', noOrganizationFile: 'Файл ҳанӯз бор нашудааст',
   preparedBy: 'Тартиб дод', performedBy: 'Иҷро кард', acceptedBy: 'Қабул кард', confirmedBy: 'Тасдиқ кард', seal: 'Мӯҳр', justification: 'Асосноккунӣ', documentDate: 'Санаи ҳуҷҷат', changeSavedAt: 'Тағйирот ворид шуд',
-  expandOrganizationDocuments: 'Кушодани ҳуҷҷатҳои ташкилотҳо', collapseOrganizationDocuments: 'Пӯшидани ҳуҷҷатҳои ташкилотҳо', documentObject: 'Объект', documentSection: 'Бахш', objectPlaceholderDocument: 'Номи объектро ворид кунед', sectionPlaceholderDocument: 'Номи бахшро ворид кунед'
+  expandOrganizationDocuments: 'Кушодани ҳуҷҷатҳои ташкилотҳо', collapseOrganizationDocuments: 'Пӯшидани ҳуҷҷатҳои ташкилотҳо', documentObject: 'Объект', documentSection: 'Бахш', objectPlaceholderDocument: 'Номи объектро ворид кунед', sectionPlaceholderDocument: 'Номи бахшро ворид кунед',
+  generateAct: 'Ташкили санад', generateStatement: 'Ташкили ведомост', documentRequiredFields: 'Номи ҳуҷҷат, объект ва бахшро пур кунед'
 });
 
 Object.assign(copy.RU, { constructionActivityBlock: 'Блок строительной активности', constructionActivityIntro: 'Все ваши действия в StructOS формируют деловую активность. Чем она выше, тем раньше вы получите подходящие предложения.', last30Days: 'За последние 30 дней', businessActivity: 'Деловая активность', cabinetWork: 'Работа с личным кабинетом', projectWork: 'Работа с проектом', activityTotal: 'Всего', daysWithStructos: 'Дней со StructOS', invitedToStructos: 'Приглашено в StructOS', activityActions: 'действий' });
@@ -420,7 +424,7 @@ const PERSON_DATA_KEY = 'structos-person-data-v1';
 const PROFILE_DATA_KEY = 'structos-profile-data-v1';
 const BUILDER_PASSPORT_KEY = 'structos-builder-passport-v1';
 const STRUCTOS_CONNECTIONS_KEY = 'structos-connections-v1';
-const STRUCTOS_DOCUMENT_BRAND = Object.freeze({ made: 'Сделано на StructOS', site: 'www.structOS.ru', slogan: 'Единый Строительный Интеллект в России №1' });
+const STRUCTOS_DOCUMENT_BRAND = Object.freeze({ name: 'StructOS', made: 'Сделано на StructOS', site: 'www.structOS.ru', slogan: 'Единый Строительный Интеллект в России №1' });
 const BOTTOM_MENU_POSITION_KEY = 'structos-bottom-menu-position-v2';
 const ACTIVITY_KEY = 'structos-construction-activity-v1';
 const FIRST_ACTIVITY_KEY = 'structos-first-activity-v1';
@@ -3509,13 +3513,14 @@ function cashDocumentReport(object, section, kind, documentData) {
   const documentObjectName = String(documentData.objectName || object.name).trim().slice(0, 160) || object.name;
   const documentSectionName = String(documentData.sectionName || section.name).trim().slice(0, 160) || section.name;
   const columns = [
-    { label: tr('recordNumber'), key: 'number', width: 42 },
+    { label: tr('recordNumber'), key: 'number', width: 34 },
     { label: tr('workName'), key: 'name', width: '*' },
-    { label: tr('unit'), key: 'unit', width: 62 },
-    { label: tr('quantity'), key: 'quantity', width: 64, number: true },
-    ...(priced ? [{ label: tr('price'), key: 'price', width: 72, money: true }, { label: tr('rowTotal'), key: 'total', width: 78, money: true }] : [{ label: tr('justification'), key: 'basis', width: 112 }])
+    { label: tr('unit'), key: 'unit', width: 48 },
+    { label: tr('quantity'), key: 'quantity', width: 48, number: true },
+    ...(priced ? [{ label: tr('price'), key: 'price', width: 66, money: true }, { label: tr('rowTotal'), key: 'total', width: 72, money: true }] : [{ label: tr('justification'), key: 'basis', width: '*' }])
   ];
   return {
+    documentKind: kind,
     title: priced ? documentTitle : defaultTitle, documentName: documentTitle, documentNumber, numberLabel: tr(priced ? 'actNumber' : 'statementNumber'), objectName: documentObjectName, sectionName: documentSectionName, objectLabel: tr('documentObject'), sectionLabel: tr('documentSection'),
     tables: [{ title: documentTitle, columns, rows: documentData.rows.map((row, index) => ({ number: index + 1, name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { price: row.price, total: Math.round(row.quantity * row.price * 100) / 100 } : { basis: row.basis }) })), ...(priced ? { total: documentData.rows.reduce((sum, row) => sum + row.quantity * row.price, 0) } : {}) }],
     parties: documentData.parties,
@@ -3657,10 +3662,10 @@ function reportCellValue(column, row) {
 }
 
 function reportPreviewTableMarkup(table) {
-  const headers = table.columns.map((column) => `<th>${escapeHtml(column.label)}</th>`).join('');
+  const headers = table.columns.map((column) => `<th class="report-col-${escapeHtml(column.key)}">${escapeHtml(column.label)}</th>`).join('');
   const rows = table.rows.length ? table.rows.map((row) => `<tr>${table.columns.map((column) => {
     const tone = column.tone ? cashBalanceClass(Number(row[column.key]) || 0) : '';
-    return `<td class="${column.number || column.money ? 'is-number ' : ''}${tone}">${escapeHtml(reportCellValue(column, row))}</td>`;
+    return `<td class="report-col-${escapeHtml(column.key)} ${column.number || column.money ? 'is-number ' : ''}${tone}">${escapeHtml(reportCellValue(column, row))}</td>`;
   }).join('')}</tr>`).join('') : `<tr><td class="report-preview-empty" colspan="${table.columns.length}">${tr('noEntries')}</td></tr>`;
   const total = Number.isFinite(table.total) ? `<div class="report-preview-total"><span>${tr('rowTotal')}</span><strong>${formatMoney(table.total)}</strong></div>` : '';
   const summaries = table.summaries?.length ? `<div class="report-preview-summaries">${table.summaries.map((summary) => `<div class="${escapeHtml(summary?.tone || '')}"><strong>${escapeHtml(cashReportSummaryText(summary))}</strong></div>`).join('')}</div>` : '';
@@ -3689,12 +3694,13 @@ function reportPreviewOrganizationsMarkup(organizations) {
 function reportPreviewPartiesMarkup(parties, partyRoles) {
   if (!parties) return '';
   const rows = partyRoles.map((role) => [cashPartyRoleLabel(role), parties[role]]);
-  return `<section class="report-preview-parties"><h3>${tr('documentDate')}: ${escapeHtml(parties.date || localDateKey())}</h3><div>${rows.map(([label, party]) => `<article><strong>${escapeHtml(label)}</strong><span>${tr('fullName')}: ${escapeHtml(party?.name || '—')}</span><span>${tr('signature')}: ${escapeHtml(party?.signature || '—')}</span><span>${tr('seal')}: ${escapeHtml(party?.seal || '—')}</span></article>`).join('')}</div></section>`;
+  return `<section class="report-preview-parties"><div>${rows.map(([label, party]) => `<article><strong>${escapeHtml(label)}</strong><span>${tr('fullName')}: ${escapeHtml(party?.name || '—')}</span><span>${tr('signature')}: ${escapeHtml(party?.signature || '—')}</span><span>${tr('seal')}: ${escapeHtml(party?.seal || '—')}<small>${tr('documentDate')}: ${escapeHtml(parties.date || localDateKey())}</small></span></article>`).join('')}</div></section>`;
 }
 
 function cashReportPages(report) {
   const pages = Array.isArray(report?.pages) && report.pages.length ? report.pages : [report];
   return pages.map((page) => ({
+    documentKind: page.documentKind || report.documentKind || null,
     title: page.title || report.title,
     documentNumber: page.documentNumber || '',
     numberLabel: page.numberLabel || report.numberLabel,
@@ -3710,7 +3716,7 @@ function cashReportPages(report) {
 }
 
 function reportPreviewPageMarkup(report) {
-  return `<article class="report-preview-sheet"><header><div><span>STRUCTOS REPORT</span><h2>${escapeHtml(report.title)}</h2>${report.documentNumber ? `<p>${escapeHtml(report.numberLabel || tr('documentNumber'))}: ${escapeHtml(report.documentNumber)}</p>` : ''}</div><img src="${reportPreviewLogoUrl}" alt="StructOS" /></header><div class="report-preview-meta"><p><strong>${escapeHtml(report.objectLabel)}:</strong> ${escapeHtml(report.objectName)}</p><p><strong>${escapeHtml(report.sectionLabel)}:</strong> ${escapeHtml(report.sectionName)}</p></div>${reportPreviewOrganizationsMarkup(report.organizations)}${report.tables.map(reportPreviewTableMarkup).join('')}${reportPreviewPartiesMarkup(report.parties, report.partyRoles)}<footer><img src="${reportPreviewLogoUrl}" alt="" /><div><strong>${STRUCTOS_DOCUMENT_BRAND.made}</strong><span>${STRUCTOS_DOCUMENT_BRAND.site}</span><span>${STRUCTOS_DOCUMENT_BRAND.slogan}</span></div></footer></article>`;
+  return `<article class="report-preview-sheet"><header><div><span>STRUCTOS REPORT</span><h2>${escapeHtml(report.title)}</h2>${report.documentNumber ? `<p>${escapeHtml(report.numberLabel || tr('documentNumber'))}: ${escapeHtml(report.documentNumber)}</p>` : ''}</div><img src="${reportPreviewLogoUrl}" alt="StructOS" /></header><div class="report-preview-meta"><p><strong>${escapeHtml(report.objectLabel)}:</strong> ${escapeHtml(report.objectName)}</p><p><strong>${escapeHtml(report.sectionLabel)}:</strong> ${escapeHtml(report.sectionName)}</p></div>${reportPreviewOrganizationsMarkup(report.organizations)}${report.tables.map(reportPreviewTableMarkup).join('')}${reportPreviewPartiesMarkup(report.parties, report.partyRoles)}<footer><img src="${reportPreviewLogoUrl}" alt="" /><div><strong>${STRUCTOS_DOCUMENT_BRAND.name}</strong><span>${STRUCTOS_DOCUMENT_BRAND.made}</span><span>${STRUCTOS_DOCUMENT_BRAND.site}</span><span>${STRUCTOS_DOCUMENT_BRAND.slogan}</span></div></footer></article>`;
 }
 
 function reportPreviewMarkup(report) {
@@ -3734,7 +3740,13 @@ async function createPdfReport(report) {
   const logo = await loadReportLogo();
   pdfMake.vfs = pdfFonts?.pdfMake?.vfs || pdfFonts?.vfs || pdfFonts;
   const content = [];
-  cashReportPages(report).forEach((page, pageIndex) => {
+  const reportPages = cashReportPages(report);
+  const repeatingPartyPage = reportPages.length === 1
+    && ['statement', 'act'].includes(reportPages[0].documentKind)
+    && reportPages[0].parties
+    ? reportPages[0]
+    : null;
+  reportPages.forEach((page, pageIndex) => {
     content.push({ text: page.title, style: 'title', ...(pageIndex ? { pageBreak: 'before' } : {}) });
     if (page.documentNumber) content.push({ text: `${page.numberLabel || tr('documentNumber')}: ${page.documentNumber}`, style: 'meta' });
     content.push(
@@ -3760,16 +3772,44 @@ async function createPdfReport(report) {
       if (Number.isFinite(table.total)) content.push({ text: `${tr('rowTotal')}: ${formatMoney(table.total)}`, bold: true, alignment: 'right', margin: [0, 7, 0, 4] });
       if (table.summaries?.length) content.push({ ul: table.summaries.map((summary) => ({ text: cashReportSummaryText(summary), bold: Boolean(summary?.tone), color: summary?.tone === 'is-negative' ? '#d9384b' : summary?.tone === 'is-positive' ? '#138a5b' : '#14213d' })), margin: [10, 7, 0, 5], fontSize: 9 });
     });
-    if (page.parties) {
+    if (page.parties && !repeatingPartyPage) {
       const partyRows = [['', tr('fullName'), tr('signature'), tr('seal')], ...page.partyRoles.map((role) => [cashPartyRoleLabel(role), page.parties[role]?.name || '', page.parties[role]?.signature || '', page.parties[role]?.seal || ''])];
       content.push({ text: tr('documentDate'), style: 'sectionTitle', margin: [0, 16, 0, 6] }, { text: page.parties.date || localDateKey(), margin: [0, 0, 0, 8] }, { table: { widths: [80, '*', '*', '*'], body: partyRows }, layout: 'lightHorizontalLines', fontSize: 9 });
     }
   });
+  const footerBrand = (currentPage, pageCount) => ({
+    columns: [
+      { width: 175, text: '' },
+      { width: '*', text: `${currentPage}/${pageCount}`, alignment: 'center', bold: true, color: '#43546a', fontSize: 8, margin: [0, 9, 0, 0] },
+      { width: 175, columns: [{ image: logo, width: 25 }, { width: '*', stack: [{ text: STRUCTOS_DOCUMENT_BRAND.name, bold: true, fontSize: 10, color: '#075cd3', alignment: 'right' }, { text: STRUCTOS_DOCUMENT_BRAND.site, fontSize: 6, color: '#64748b', alignment: 'right' }, { text: STRUCTOS_DOCUMENT_BRAND.slogan, fontSize: 6, color: '#64748b', alignment: 'right' }] }], columnGap: 6 }
+    ]
+  });
+  const footer = (currentPage, pageCount) => {
+    const brand = footerBrand(currentPage, pageCount);
+    if (!repeatingPartyPage) return { ...brand, margin: [34, 6, 34, 15] };
+    const documentDate = repeatingPartyPage.parties.date || localDateKey();
+    const partyRows = repeatingPartyPage.partyRoles.map((role) => {
+      const party = repeatingPartyPage.parties[role] || {};
+      return [
+        { text: cashPartyRoleLabel(role), bold: true, color: '#075cd3' },
+        { text: `${tr('fullName')}: ${party.name || ''}` },
+        { text: `${tr('signature')}: ${party.signature || ''}` },
+        { stack: [{ text: `${tr('seal')}: ${party.seal || ''}` }, { text: `${tr('documentDate')}: ${documentDate}`, color: '#64748b', fontSize: 6, margin: [0, 3, 0, 0] }] }
+      ];
+    });
+    return {
+      margin: [34, 0, 34, 10],
+      stack: [
+        { table: { widths: [68, '*', '*', '*'], body: partyRows }, layout: { hLineColor: '#c7d5e5', vLineColor: '#c7d5e5', paddingLeft: () => 4, paddingRight: () => 4, paddingTop: () => 3, paddingBottom: () => 3 }, fontSize: 7 },
+        { ...brand, margin: [0, 5, 0, 0] }
+      ]
+    };
+  };
   const definition = {
-    pageSize: 'A4', pageMargins: [34, 38, 34, 88], defaultStyle: { font: 'Roboto', fontSize: 9, color: '#14213d' },
+    pageSize: 'A4', pageMargins: [34, 38, 34, repeatingPartyPage ? 138 : 88], defaultStyle: { font: 'Roboto', fontSize: 9, color: '#14213d' },
     styles: { title: { fontSize: 18, bold: true, color: '#075cd3', margin: [0, 0, 0, 10] }, meta: { fontSize: 10, color: '#43546a', margin: [0, 0, 0, 3] }, sectionTitle: { fontSize: 12, bold: true, color: '#075cd3' }, tableHeader: { bold: true, color: '#0b2e59', fontSize: 8 } },
     content,
-    footer: () => ({ columns: [{ text: '' }, { width: 230, stack: [{ image: logo, width: 30, alignment: 'right' }, { text: STRUCTOS_DOCUMENT_BRAND.made, bold: true, fontSize: 9, color: '#075cd3', alignment: 'right' }, { text: STRUCTOS_DOCUMENT_BRAND.site, fontSize: 7, color: '#64748b', alignment: 'right' }, { text: STRUCTOS_DOCUMENT_BRAND.slogan, fontSize: 7, color: '#64748b', alignment: 'right' }] }], margin: [34, 6, 34, 15] })
+    footer
   };
   return new Promise((resolve) => pdfMake.createPdf(definition).getBlob(resolve));
 }
@@ -3828,11 +3868,13 @@ async function createExcelReport(report) {
       cursor += 2;
     });
     if (page.parties) {
-      worksheet.getCell(cursor, 1).value = tr('documentDate'); worksheet.getCell(cursor, 2).value = page.parties.date || localDateKey(); cursor += 2;
-      page.partyRoles.forEach((role) => { const party = page.parties[role] || {}; worksheet.getCell(cursor, 1).value = cashPartyRoleLabel(role); worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, 2).value = `${tr('fullName')}: ${party.name || ''}`; worksheet.getCell(cursor, 4).value = `${tr('signature')}: ${party.signature || ''}`; worksheet.getCell(cursor, 6).value = `${tr('seal')}: ${party.seal || ''}`; cursor += 1; }); cursor += 2;
+      const documentDate = page.parties.date || localDateKey();
+      page.partyRoles.forEach((role) => { const party = page.parties[role] || {}; worksheet.getCell(cursor, 1).value = cashPartyRoleLabel(role); worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, 2).value = `${tr('fullName')}: ${party.name || ''}`; worksheet.getCell(cursor, 4).value = `${tr('signature')}: ${party.signature || ''}`; worksheet.getCell(cursor, 6).value = `${tr('seal')}: ${party.seal || ''}\n${tr('documentDate')}: ${documentDate}`; worksheet.getCell(cursor, 6).alignment = { wrapText: true, vertical: 'top' }; cursor += 1; }); cursor += 2;
     }
     worksheet.addImage(imageId, { tl: { col: maxColumns - 3, row: cursor - 1 }, ext: { width: 46, height: 46 } });
-    worksheet.mergeCells(cursor, maxColumns - 2, cursor + 2, maxColumns); const brandCell = worksheet.getCell(cursor, maxColumns - 2); brandCell.value = `${STRUCTOS_DOCUMENT_BRAND.made}\n${STRUCTOS_DOCUMENT_BRAND.site}\n${STRUCTOS_DOCUMENT_BRAND.slogan}`; brandCell.font = { bold: true, color: { argb: 'FF075CD3' }, size: 10 }; brandCell.alignment = { horizontal: 'right', vertical: 'middle', wrapText: true }; worksheet.getRow(cursor).height = 32; worksheet.getRow(cursor + 1).height = 20; worksheet.getRow(cursor + 2).height = 20;
+    worksheet.mergeCells(cursor, maxColumns - 2, cursor + 2, maxColumns); const brandCell = worksheet.getCell(cursor, maxColumns - 2); brandCell.value = `${STRUCTOS_DOCUMENT_BRAND.name}\n${STRUCTOS_DOCUMENT_BRAND.made}\n${STRUCTOS_DOCUMENT_BRAND.site}\n${STRUCTOS_DOCUMENT_BRAND.slogan}`; brandCell.font = { bold: true, color: { argb: 'FF075CD3' }, size: 10 }; brandCell.alignment = { horizontal: 'right', vertical: 'middle', wrapText: true }; worksheet.getRow(cursor).height = 32; worksheet.getRow(cursor + 1).height = 20; worksheet.getRow(cursor + 2).height = 20;
+    worksheet.headerFooter.oddFooter = `&C&P/&N&R${STRUCTOS_DOCUMENT_BRAND.name}`;
+    worksheet.headerFooter.evenFooter = `&C&P/&N&R${STRUCTOS_DOCUMENT_BRAND.name}`;
     const widths = [12, 36, 18, 22, 18, 18]; for (let index = 1; index <= maxColumns; index += 1) worksheet.getColumn(index).width = widths[index - 1] || 18;
     worksheet.views = [{ state: 'frozen', ySplit: metaRow + 2 }];
   });
@@ -3876,7 +3918,7 @@ function bindCashDeliveryActions(scope, getReport, onSuccess = null) {
       const report = getReport();
       await deliverCashReport(report, button.dataset.reportFormat, false);
       onSuccess?.(report);
-    } catch (error) { console.error(error); showToast(tr('comingSoon')); }
+    } catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
     finally { button.disabled = false; }
   }));
   $$('[data-report-share]', scope).forEach((button) => button.addEventListener('click', async () => {
@@ -3885,7 +3927,7 @@ function bindCashDeliveryActions(scope, getReport, onSuccess = null) {
       const report = getReport();
       await deliverCashReport(report, button.dataset.reportShare, true);
       onSuccess?.(report);
-    } catch (error) { if (error?.name !== 'AbortError') { console.error(error); showToast(tr('comingSoon')); } }
+    } catch (error) { if (error?.name !== 'AbortError' && error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
     finally { button.disabled = false; }
   }));
 }
@@ -3893,52 +3935,98 @@ function bindCashDeliveryActions(scope, getReport, onSuccess = null) {
 function bindCashReportActions(scope, getReport, onSuccess = null, getPreviewReport = getReport) {
   $('[data-report-preview]', scope)?.addEventListener('click', () => {
     try { openCashReportPreview(getPreviewReport(), getReport, onSuccess); }
-    catch (error) { console.error(error); showToast(tr('comingSoon')); }
+    catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
   });
   bindCashDeliveryActions(scope, getReport, onSuccess);
 }
 
-function openCashDocumentDialog(objectId, sectionId, kind) {
+function openCashDocumentDialog(objectId, sectionId, kind, generatedRows = null) {
   const { object, section } = findCashSection(objectId, sectionId);
   if (!object || !section) return;
   const priced = kind === 'act';
   const defaultTitle = tr(priced ? 'workAct' : 'workStatement');
-  const draft = normalizeCashDocument(JSON.parse(JSON.stringify(section[priced ? 'act' : 'statement'])), priced, defaultTitle);
-  if (!draft.objectName) draft.objectName = object.name;
-  if (!draft.sectionName) draft.sectionName = section.name;
-  if (priced && !draft.updatedAt && section.statement?.rows?.some((row) => row.name || row.unit || row.quantity)) {
+  const storedDocument = section[priced ? 'act' : 'statement'];
+  const draft = normalizeCashDocument(JSON.parse(JSON.stringify(storedDocument)), priced, defaultTitle);
+  if (!storedDocument?.updatedAt) {
+    draft.title = '';
+    draft.number = '';
+    draft.objectName = '';
+    draft.sectionName = '';
+  }
+  if (Array.isArray(generatedRows)) {
+    draft.title = '';
+    draft.number = '';
+    draft.objectName = '';
+    draft.sectionName = '';
+    draft.rows = normalizeCashWorkRows(generatedRows, priced);
+    draft.parties = cashDocumentParties(null);
+    draft.updatedAt = null;
+  } else if (priced && !draft.updatedAt && section.statement?.rows?.some((row) => row.name || row.unit || row.quantity)) {
     draft.rows = normalizeCashWorkRows(section.statement.rows.map((row) => ({ name: row.name, unit: row.unit, quantity: row.quantity, price: 0 })), true);
   }
   const headCells = `<th>${tr('recordNumber')}</th><th>${tr('workName')}</th><th>${tr('unit')}</th><th>${tr('quantity')}</th>${priced ? `<th>${tr('price')}</th><th>${tr('rowTotal')}</th>` : `<th>${tr('justification')}</th>`}<th></th>`;
+  const columnLayout = `<colgroup><col class="work-col-number" /><col class="work-col-name" /><col class="work-col-unit" /><col class="work-col-quantity" />${priced ? '<col class="work-col-price" /><col class="work-col-total" />' : '<col class="work-col-basis" />'}<col class="work-col-actions" /></colgroup>`;
   const responsibleMarkup = priced
     ? `${cashPartyMarkup('performed', tr('performedBy'), draft.parties.performed)}${cashPartyMarkup('accepted', tr('acceptedBy'), draft.parties.accepted)}`
     : `${cashPartyMarkup('prepared', tr('preparedBy'), draft.parties.prepared)}${cashPartyMarkup('confirmed', tr('confirmedBy'), draft.parties.confirmed)}`;
-  showDialog(defaultTitle, `${object.name} · ${section.name}`, `<div class="cash-document-editor">${cashDocumentOrganizationsSummaryMarkup(object)}<div class="cash-document-meta"><label><span>${tr(priced ? 'actName' : 'statementName')}</span><input type="text" maxlength="160" data-document-title value="${escapeHtml(draft.title)}" /></label><label><span>${tr(priced ? 'actNumber' : 'statementNumber')}</span><input type="text" maxlength="80" data-document-number value="${escapeHtml(draft.number)}" placeholder="1" /></label><label><span>${tr('documentObject')}</span><input type="text" maxlength="160" data-document-object value="${escapeHtml(draft.objectName)}" placeholder="${escapeHtml(tr('objectPlaceholderDocument'))}" /></label><label><span>${tr('documentSection')}</span><input type="text" maxlength="160" data-document-section value="${escapeHtml(draft.sectionName)}" placeholder="${escapeHtml(tr('sectionPlaceholderDocument'))}" /></label></div><div class="cash-work-table-wrap"><table class="cash-work-table"><thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="5">${tr('rowTotal')}</td><td data-document-grand-total>0 ₽</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>＋ ${tr('addRow')}</button><div class="cash-parties">${responsibleMarkup}<label class="cash-document-date"><span>${tr('documentDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button></div>${cashReportActionsMarkup()}</div>`);
+  showDialog(defaultTitle, `${object.name} · ${section.name}`, `<div class="cash-document-editor">${cashDocumentOrganizationsSummaryMarkup(object)}<div class="cash-document-meta"><label><span>${tr(priced ? 'actName' : 'statementName')}</span><input type="text" maxlength="160" data-document-title value="${escapeHtml(draft.title)}" /></label><label><span>${tr(priced ? 'actNumber' : 'statementNumber')}</span><input type="text" maxlength="80" data-document-number value="${escapeHtml(draft.number)}" placeholder="1" /></label><label><span>${tr('documentObject')}</span><input type="text" maxlength="160" data-document-object value="${escapeHtml(draft.objectName)}" placeholder="${escapeHtml(tr('objectPlaceholderDocument'))}" /></label><label><span>${tr('documentSection')}</span><input type="text" maxlength="160" data-document-section value="${escapeHtml(draft.sectionName)}" placeholder="${escapeHtml(tr('sectionPlaceholderDocument'))}" /></label></div><div class="cash-work-table-wrap"><table class="cash-work-table ${priced ? 'is-act' : 'is-statement'}">${columnLayout}<thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="5">${tr('rowTotal')}</td><td data-document-grand-total>0 ₽</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>＋ ${tr('addRow')}</button><div class="cash-parties">${responsibleMarkup}<label class="cash-document-date"><span>${tr('documentDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button><button class="outline-button" type="button" data-generate-related-document>${tr(priced ? 'generateStatement' : 'generateAct')}</button></div>${cashReportActionsMarkup()}</div>`);
   const dialog = $('[data-dialog]'); dialog.classList.add('cash-document-dialog');
   const scope = $('[data-dialog-content]'); bindCashDocumentRows(scope, draft, priced);
-  $('[data-document-title]', scope)?.addEventListener('input', (event) => { draft.title = event.currentTarget.value.slice(0, 160); });
+  const requiredFields = [
+    { selector: '[data-document-title]', key: 'title' },
+    { selector: '[data-document-object]', key: 'objectName' },
+    { selector: '[data-document-section]', key: 'sectionName' }
+  ];
+  const validateDocument = () => {
+    const missing = requiredFields.find(({ selector, key }) => !String(draft[key] || '').trim() && $(selector, scope));
+    requiredFields.forEach(({ selector, key }) => $(selector, scope)?.setAttribute('aria-invalid', String(!String(draft[key] || '').trim())));
+    if (!missing) return;
+    showToast(tr('documentRequiredFields'));
+    $(missing.selector, scope)?.focus();
+    const error = new Error(tr('documentRequiredFields'));
+    error.code = 'DOCUMENT_REQUIRED';
+    throw error;
+  };
+  $('[data-document-title]', scope)?.addEventListener('input', (event) => { draft.title = event.currentTarget.value.slice(0, 160); event.currentTarget.removeAttribute('aria-invalid'); });
   $('[data-document-number]', scope)?.addEventListener('input', (event) => { draft.number = event.currentTarget.value.slice(0, 80); });
-  $('[data-document-object]', scope)?.addEventListener('input', (event) => { draft.objectName = event.currentTarget.value.slice(0, 160); });
-  $('[data-document-section]', scope)?.addEventListener('input', (event) => { draft.sectionName = event.currentTarget.value.slice(0, 160); });
+  $('[data-document-object]', scope)?.addEventListener('input', (event) => { draft.objectName = event.currentTarget.value.slice(0, 160); event.currentTarget.removeAttribute('aria-invalid'); });
+  $('[data-document-section]', scope)?.addEventListener('input', (event) => { draft.sectionName = event.currentTarget.value.slice(0, 160); event.currentTarget.removeAttribute('aria-invalid'); });
   $('[data-add-work-row]', scope)?.addEventListener('click', () => { draft.rows.push(...normalizeCashWorkRows([], priced)); bindCashDocumentRows(scope, draft, priced); });
   $$('[data-party-field]', scope).forEach((input) => input.addEventListener('input', () => { draft.parties[input.dataset.party][input.dataset.partyField] = input.value.slice(0, 160); }));
   $('[data-document-date]', scope)?.addEventListener('change', (event) => { draft.parties.date = event.currentTarget.value || localDateKey(); });
-  const previewDocument = () => cashDocumentReport(object, section, kind, { ...draft, title: draft.title.trim() || defaultTitle, number: draft.number.trim() });
+  const previewDocument = () => {
+    validateDocument();
+    return cashDocumentReport(object, section, kind, { ...draft, title: draft.title.trim(), number: draft.number.trim(), objectName: draft.objectName.trim(), sectionName: draft.sectionName.trim() });
+  };
   const persistDocument = () => {
-    draft.title = draft.title.trim() || defaultTitle;
+    validateDocument();
+    draft.title = draft.title.trim();
     draft.number = draft.number.trim();
-    draft.objectName = draft.objectName.trim() || object.name;
-    draft.sectionName = draft.sectionName.trim() || section.name;
+    draft.objectName = draft.objectName.trim();
+    draft.sectionName = draft.sectionName.trim();
     draft.updatedAt = new Date().toISOString();
     section[priced ? 'act' : 'statement'] = normalizeCashDocument(draft, priced, defaultTitle);
     saveCashflow();
     return cashDocumentReport(object, section, kind, draft);
   };
   $('[data-save-cash-document]', scope)?.addEventListener('click', () => {
-    const report = persistDocument();
-    saveCashReportHistory(section, kind, report);
-    renderCashflow();
-    showToast(tr('documentSaved'));
+    try {
+      const report = persistDocument();
+      saveCashReportHistory(section, kind, report);
+      renderCashflow();
+      showToast(tr('documentSaved'));
+    } catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
+  });
+  $('[data-generate-related-document]', scope)?.addEventListener('click', () => {
+    try {
+      const report = persistDocument();
+      saveCashReportHistory(section, kind, report);
+      const relatedKind = priced ? 'statement' : 'act';
+      const relatedRows = draft.rows.map((row) => ({ name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { basis: '' } : { price: 0 }) }));
+      renderCashflow();
+      showToast(tr('documentSaved'));
+      openCashDocumentDialog(objectId, sectionId, relatedKind, relatedRows);
+    } catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
   });
   bindCashReportActions(scope, persistDocument, (report) => {
     saveCashReportHistory(section, kind, report);
