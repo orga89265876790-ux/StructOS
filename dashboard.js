@@ -411,10 +411,10 @@ Object.assign(copy.TJ, {
   generateAct: 'Ташкили санад', generateStatement: 'Ташкили ведомост', documentRequiredFields: 'Номи ҳуҷҷат, объект ва бахшро пур кунед', documentParties: 'Тарафҳои ҳуҷҷат', editDocument: 'Таҳрир', deleteDocument: 'Нест кардан', deleteDocumentConfirm: 'Ин ҳуҷҷат аз таърих нест карда шавад?', documentDeleted: 'Ҳуҷҷат аз таърих нест шуд'
 });
 
-Object.assign(copy.RU, { constructionActivityBlock: 'Блок строительной активности', constructionActivityIntro: 'Все ваши действия в StructOS формируют деловую активность. Чем она выше, тем раньше вы получите подходящие предложения.', last30Days: 'За последние 30 дней', businessActivity: 'Деловая активность', cabinetWork: 'Работа с личным кабинетом', projectWork: 'Работа с проектом', activityTotal: 'Всего', daysWithStructos: 'Дней со StructOS', invitedToStructos: 'Приглашено в StructOS', activityActions: 'действий' });
-Object.assign(copy.EN, { constructionActivityBlock: 'Construction activity', constructionActivityIntro: 'Every action in StructOS builds your business activity. The higher it is, the sooner suitable offers are shown to you.', last30Days: 'Last 30 days', businessActivity: 'Business activity', cabinetWork: 'Dashboard activity', projectWork: 'Project activity', activityTotal: 'Total', daysWithStructos: 'Days with StructOS', invitedToStructos: 'Invited to StructOS', activityActions: 'actions' });
-Object.assign(copy.KY, { constructionActivityBlock: 'Курулуш активдүүлүгү', constructionActivityIntro: 'StructOS ичиндеги бардык аракеттериңиз ишкердик активдүүлүктү түзөт. Ал канчалык жогору болсо, ылайыктуу сунуштарды ошончолук эрте аласыз.', last30Days: 'Акыркы 30 күндө', businessActivity: 'Ишкердик активдүүлүк', cabinetWork: 'Жеке кабинеттеги иш', projectWork: 'Долбоор менен иш', activityTotal: 'Бардыгы', daysWithStructos: 'StructOS менен күндөр', invitedToStructos: 'StructOSко чакырылды', activityActions: 'аракет' });
-Object.assign(copy.TJ, { constructionActivityBlock: 'Фаъолияти сохтмонӣ', constructionActivityIntro: 'Ҳамаи амалҳои шумо дар StructOS фаъолияти кориро ташаккул медиҳанд. Ҳар қадар он баланд бошад, пешниҳодҳои мувофиқ ҳамон қадар барвақттар нишон дода мешаванд.', last30Days: 'Дар 30 рӯзи охир', businessActivity: 'Фаъолияти корӣ', cabinetWork: 'Кор дар кабинети шахсӣ', projectWork: 'Кор бо лоиҳа', activityTotal: 'Ҳамагӣ', daysWithStructos: 'Рӯз бо StructOS', invitedToStructos: 'Ба StructOS даъват шуд', activityActions: 'амал' });
+Object.assign(copy.RU, { profileActivity: 'Активность', profileActivityHint: 'Активность в StructOS усиливает ваш профиль и повышает позицию в выдаче.' });
+Object.assign(copy.EN, { profileActivity: 'Activity', profileActivityHint: 'Activity in StructOS strengthens your profile and improves its position in search results.' });
+Object.assign(copy.KY, { profileActivity: 'Активдүүлүк', profileActivityHint: 'StructOS ичиндеги активдүүлүк профилиңизди күчөтүп, издөө жыйынтыгындагы ордуңузду жогорулатат.' });
+Object.assign(copy.TJ, { profileActivity: 'Фаъолият', profileActivityHint: 'Фаъолият дар StructOS профили шуморо қавӣ карда, мавқеи онро дар натиҷаҳои ҷустуҷӯ баланд мебардорад.' });
 
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
@@ -569,18 +569,17 @@ function constructionActivityData() {
 }
 
 function renderConstructionActivity() {
-  const card = $('[data-construction-activity]');
-  if (!card) return;
   const data = constructionActivityData();
-  $('[data-business-activity]', card).textContent = `${data.score}%`;
-  $('[data-cabinet-activity]', card).textContent = `${data.cabinet} ${tr('activityActions')}`;
-  $('[data-project-activity]', card).textContent = `${data.project} ${tr('activityActions')}`;
-  $('[data-activity-total]', card).textContent = String(data.total);
-  $('[data-activity-days]', card).textContent = String(data.days);
-  $('[data-activity-invited]', card).textContent = String(data.invited);
-  $('[data-activity-progress]', card).style.setProperty('--activity-progress', `${data.score}%`);
-  $('[data-activity-progress]', card).setAttribute('aria-label', tr('businessActivity'));
-  $('[data-activity-progress]', card).setAttribute('aria-valuenow', String(data.score));
+  $$('[data-construction-activity]').forEach((card) => {
+    const value = $('[data-business-activity]', card);
+    const progress = $('[data-activity-progress]', card);
+    if (value) value.textContent = `${data.score}%`;
+    if (progress) {
+      progress.style.setProperty('--activity-progress', `${data.score}%`);
+      progress.setAttribute('aria-label', tr('profileActivity'));
+      progress.setAttribute('aria-valuenow', String(data.score));
+    }
+  });
 }
 
 function activityActionFromElement(element) {
