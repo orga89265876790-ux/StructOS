@@ -332,10 +332,10 @@ Object.assign(copy.RU, { demoVersion: 'Демо-версия', executorPlan: 'И
 Object.assign(copy.EN, { demoVersion: 'Demo version', executorPlan: 'Contractor', supplierPlan: 'Supplier', aggregatorPlan: 'Aggregator', choosePlan: 'Choose a plan and subscription', planSelectionHint: 'Your selection is saved in the profile and controls the available workspace features.', currentPlan: 'Selected', planSelected: 'Plan and subscription saved', moneyBalance: 'Money balance', bonusBalance: 'Bonus balance', financeHubHint: 'Manage your money balance, bonuses, and transaction history in one place.', financeHistoryHint: 'Select a balance to open its history.', newBonusRulesHint: 'New ways to earn bonuses will be added to this list.' });
 Object.assign(copy.KY, { demoVersion: 'Демо-версия', executorPlan: 'Аткаруучу', supplierPlan: 'Жеткирүүчү', aggregatorPlan: 'Агрегатор', choosePlan: 'Тарифти жана жазылууну тандаңыз', planSelectionHint: 'Тандоо профилде сакталат жана кабинеттин жеткиликтүү мүмкүнчүлүктөрүн аныктайт.', currentPlan: 'Тандалды', planSelected: 'Тариф жана жазылуу сакталды', moneyBalance: 'Акча балансы', bonusBalance: 'Бонус балансы', financeHubHint: 'Акча балансын, бонустарды жана операциялар тарыхын бир жерден башкарыңыз.', financeHistoryHint: 'Тарыхын ачуу үчүн керектүү балансты басыңыз.', newBonusRulesHint: 'Бонус алуунун жаңы жолдору ушул тизмеге кошулат.' });
 Object.assign(copy.TJ, { demoVersion: 'Демо-версия', executorPlan: 'Иҷрокунанда', supplierPlan: 'Таъминкунанда', aggregatorPlan: 'Агрегатор', choosePlan: 'Тариф ва обунаро интихоб кунед', planSelectionHint: 'Интихоб дар профил нигоҳ дошта шуда, имкониятҳои дастрасро муайян мекунад.', currentPlan: 'Интихоб шуд', planSelected: 'Тариф ва обуна нигоҳ дошта шуд', moneyBalance: 'Тавозуни пулӣ', bonusBalance: 'Тавозуни бонусӣ', financeHubHint: 'Тавозуни пулӣ, бонусҳо ва таърихи амалиётро дар як ҷо идора кунед.', financeHistoryHint: 'Барои кушодани таърих тавозуни лозимиро интихоб кунед.', newBonusRulesHint: 'Роҳҳои нави гирифтани бонусҳо ба ин рӯйхат илова мешаванд.' });
-Object.assign(copy.RU, { editedDocumentSaved: 'Новая редакция сохранена', deletePreviousDocumentQuestion: 'Что сделать с предыдущим документом?', deletePreviousDocument: 'Удалить предыдущий', keepBothDocuments: 'Оставить оба', previousDocumentDeleted: 'Новая редакция сохранена, предыдущий документ удалён', bothDocumentVersionsSaved: 'Обе редакции сохранены в истории' });
-Object.assign(copy.EN, { editedDocumentSaved: 'New revision saved', deletePreviousDocumentQuestion: 'What should happen to the previous document?', deletePreviousDocument: 'Delete previous', keepBothDocuments: 'Keep both', previousDocumentDeleted: 'New revision saved and the previous document deleted', bothDocumentVersionsSaved: 'Both revisions were saved in history' });
-Object.assign(copy.KY, { editedDocumentSaved: 'Жаңы редакция сакталды', deletePreviousDocumentQuestion: 'Мурунку документ менен эмне кылуу керек?', deletePreviousDocument: 'Мурункусун өчүрүү', keepBothDocuments: 'Экөөнү тең калтыруу', previousDocumentDeleted: 'Жаңы редакция сакталды, мурунку документ өчүрүлдү', bothDocumentVersionsSaved: 'Эки редакция тең тарыхта сакталды' });
-Object.assign(copy.TJ, { editedDocumentSaved: 'Таҳрири нав нигоҳ дошта шуд', deletePreviousDocumentQuestion: 'Бо ҳуҷҷати пешина чӣ бояд кард?', deletePreviousDocument: 'Пешинаро нест кардан', keepBothDocuments: 'Ҳар дуро нигоҳ доштан', previousDocumentDeleted: 'Таҳрири нав нигоҳ дошта шуд, ҳуҷҷати пешина нест карда шуд', bothDocumentVersionsSaved: 'Ҳар ду таҳрир дар таърих нигоҳ дошта шуданд' });
+Object.assign(copy.RU, { editedReportSaved: 'Новая редакция отчёта сохранена', deletePreviousReportQuestion: 'Удалить предыдущий отчёт?', deletePreviousReport: 'Да, удалить предыдущий', keepBothReports: 'Нет, оставить оба', previousReportDeleted: 'Новая редакция сохранена, предыдущий отчёт удалён', bothReportVersionsSaved: 'Оба отчёта сохранены в истории' });
+Object.assign(copy.EN, { editedReportSaved: 'New report revision saved', deletePreviousReportQuestion: 'Delete the previous report?', deletePreviousReport: 'Yes, delete previous', keepBothReports: 'No, keep both', previousReportDeleted: 'New revision saved and the previous report deleted', bothReportVersionsSaved: 'Both reports were saved in history' });
+Object.assign(copy.KY, { editedReportSaved: 'Отчёттун жаңы редакциясы сакталды', deletePreviousReportQuestion: 'Мурунку отчёт өчүрүлсүнбү?', deletePreviousReport: 'Ооба, мурункусун өчүрүү', keepBothReports: 'Жок, экөөнү тең калтыруу', previousReportDeleted: 'Жаңы редакция сакталды, мурунку отчёт өчүрүлдү', bothReportVersionsSaved: 'Эки отчёт тең тарыхта сакталды' });
+Object.assign(copy.TJ, { editedReportSaved: 'Таҳрири нави ҳисобот нигоҳ дошта шуд', deletePreviousReportQuestion: 'Ҳисоботи пешина нест карда шавад?', deletePreviousReport: 'Ҳа, пешинаро нест кардан', keepBothReports: 'Не, ҳар дуро нигоҳ доштан', previousReportDeleted: 'Таҳрири нав нигоҳ дошта шуд, ҳисоботи пешина нест карда шуд', bothReportVersionsSaved: 'Ҳар ду ҳисобот дар таърих нигоҳ дошта шуданд' });
 
 Object.assign(copy.RU, { followOurChannel: 'Подпишись на наш канал', followOurChannelHint: 'Новости StructOS, обновления функций и важные объявления.' });
 Object.assign(copy.EN, { followOurChannel: 'Follow our channel', followOurChannelHint: 'StructOS news, feature updates, and important announcements.' });
@@ -3793,23 +3793,31 @@ function saveCashReportHistory(section, type, report, historyId = null, forceNew
   return item;
 }
 
-function askEditedDocumentHistoryChoice(section, previousHistoryId, dialog, documentLabel) {
+function saveEditedCashReportRevision(section, type, report, previousHistoryId = null) {
+  const previousExists = Boolean(previousHistoryId && section.reportHistory.some((item) => item.id === previousHistoryId));
+  const savedReport = saveCashReportHistory(section, type, report, null, previousExists);
+  return { savedReport, previousHistoryId: previousExists ? previousHistoryId : null };
+}
+
+function askEditedReportHistoryChoice(section, previousHistoryId, dialog, reportLabel, onComplete = null) {
   if (!previousHistoryId || !section.reportHistory.some((item) => item.id === previousHistoryId)) {
     renderCashflow();
     dialog.close();
     showToast(tr('documentSaved'));
+    onComplete?.();
     return;
   }
-  showDialog(`${tr('editedDocumentSaved')} · ${escapeHtml(documentLabel)}`, tr('deletePreviousDocumentQuestion'), `<div class="edited-document-choice"><button class="outline-button" type="button" data-keep-both-documents>${tr('keepBothDocuments')}</button><button class="primary-button is-danger" type="button" data-delete-previous-document>${tr('deletePreviousDocument')}</button></div>`);
+  showDialog(`${tr('editedReportSaved')} · ${escapeHtml(reportLabel)}`, tr('deletePreviousReportQuestion'), `<div class="edited-document-choice"><button class="outline-button" type="button" data-keep-both-reports>${tr('keepBothReports')}</button><button class="primary-button is-danger" type="button" data-delete-previous-report>${tr('deletePreviousReport')}</button></div>`);
   const finish = (deletePrevious) => {
     if (deletePrevious) section.reportHistory = section.reportHistory.filter((item) => item.id !== previousHistoryId);
     saveCashflow();
     renderCashflow();
     dialog.close();
-    showToast(tr(deletePrevious ? 'previousDocumentDeleted' : 'bothDocumentVersionsSaved'));
+    showToast(tr(deletePrevious ? 'previousReportDeleted' : 'bothReportVersionsSaved'));
+    onComplete?.();
   };
-  $('[data-keep-both-documents]')?.addEventListener('click', () => finish(false));
-  $('[data-delete-previous-document]')?.addEventListener('click', () => finish(true));
+  $('[data-keep-both-reports]')?.addEventListener('click', () => finish(false));
+  $('[data-delete-previous-report]')?.addEventListener('click', () => finish(true));
 }
 
 async function loadReportLogo() {
@@ -4177,29 +4185,32 @@ function openCashDocumentDialog(objectId, sectionId, kind, options = {}) {
   $('[data-save-cash-document]', scope)?.addEventListener('click', () => {
     try {
       const report = persistDocument();
-      saveCashReportHistory(section, kind, report, null, Boolean(historyId));
+      const revision = saveEditedCashReportRevision(section, kind, report, historyId);
       clearCurrentForm();
-      renderCashflow();
-      if (historyId) askEditedDocumentHistoryChoice(section, historyId, dialog, defaultTitle);
-      else { dialog.close(); showToast(tr('documentSaved')); }
+      if (revision.previousHistoryId) askEditedReportHistoryChoice(section, revision.previousHistoryId, dialog, defaultTitle);
+      else { renderCashflow(); dialog.close(); showToast(tr('documentSaved')); }
     } catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
   });
   $('[data-generate-related-document]', scope)?.addEventListener('click', () => {
     try {
       const report = persistDocument();
-      saveCashReportHistory(section, kind, report, historyId);
+      const revision = saveEditedCashReportRevision(section, kind, report, historyId);
       const relatedKind = priced ? 'statement' : 'act';
       const relatedRows = draft.rows.map((row) => ({ name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { basis: '' } : { price: 0 }) }));
       const relatedDocument = { title: draft.title, number: draft.number, objectName: draft.objectName, sectionName: draft.sectionName, rows: relatedRows, organizations: draft.organizations, parties: cashDocumentParties(null) };
       clearCurrentForm();
-      renderCashflow();
-      showToast(tr('documentSaved'));
-      openCashDocumentDialog(objectId, sectionId, relatedKind, { generatedDocument: relatedDocument });
+      const openRelatedDocument = () => openCashDocumentDialog(objectId, sectionId, relatedKind, { generatedDocument: relatedDocument });
+      if (revision.previousHistoryId) askEditedReportHistoryChoice(section, revision.previousHistoryId, dialog, defaultTitle, openRelatedDocument);
+      else { renderCashflow(); dialog.close(); showToast(tr('documentSaved')); openRelatedDocument(); }
     } catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
   });
   bindCashReportActions(scope, persistDocument, (report) => {
-    saveCashReportHistory(section, kind, report, historyId);
-    renderCashflow();
+    const revision = saveEditedCashReportRevision(section, kind, report, historyId);
+    if (revision.previousHistoryId) {
+      const previewDialog = $('[data-report-preview-dialog]');
+      if (previewDialog?.open) previewDialog.close();
+      askEditedReportHistoryChoice(section, revision.previousHistoryId, dialog, defaultTitle);
+    } else renderCashflow();
   }, previewDocument);
 }
 
