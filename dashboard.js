@@ -2739,7 +2739,8 @@ async function deleteCashflowFiles(sectionOrSections) {
 }
 
 function cashTotal(entries) {
-  return Math.round(entries.reduce((sum, entry) => sum + entry.amount, 0) * 100) / 100;
+  const safeEntries = Array.isArray(entries) ? entries : [];
+  return Math.round(safeEntries.reduce((sum, entry) => sum + (Number(entry?.amount) || 0), 0) * 100) / 100;
 }
 
 function cashSectionFinancials(section) {
@@ -2753,7 +2754,8 @@ function cashSectionFinancials(section) {
 }
 
 function cashObjectFinancials(object) {
-  const totals = object.sections.reduce((total, section) => {
+  const sections = Array.isArray(object?.sections) ? object.sections : [];
+  const totals = sections.reduce((total, section) => {
     const values = cashSectionFinancials(section);
     total.contractBalance += values.contractBalance;
     total.factBalance += values.factBalance;
@@ -2765,7 +2767,8 @@ function cashObjectFinancials(object) {
 }
 
 function cashObjectReportTotals(object) {
-  const totals = object.sections.reduce((total, section) => {
+  const sections = Array.isArray(object?.sections) ? object.sections : [];
+  const totals = sections.reduce((total, section) => {
     if (section.contractMode) {
       total.contractAmount += section.contractAmount;
       total.contractProduction += cashTotal(section.expenses);
@@ -2843,10 +2846,11 @@ function cashEntryCollection(section, kind) {
 }
 
 function cashHistoryMarkup(entries, labelKey, kind, sectionId) {
-  const total = cashTotal(entries);
+  const safeEntries = Array.isArray(entries) ? entries : [];
+  const total = cashTotal(safeEntries);
   const historyKey = `${sectionId}:${kind}`;
-  const rows = entries.length
-    ? entries.map((entry) => `<div class="cash-history-row" data-cash-history-entry="${escapeHtml(entry.id)}"><span>${escapeHtml(entry.comment)}<small>${cashDate(entry.date)}</small></span><b>${formatMoney(entry.amount)}</b><button type="button" data-edit-cash-entry="${escapeHtml(entry.id)}" data-cash-entry-kind="${escapeHtml(kind)}" aria-label="${escapeHtml(tr('editCashEntry'))}" title="${escapeHtml(tr('editCashEntry'))}">✎ <em>${tr('edit')}</em></button></div>`).join('')
+  const rows = safeEntries.length
+    ? safeEntries.map((entry) => `<div class="cash-history-row" data-cash-history-entry="${escapeHtml(entry.id)}"><span>${escapeHtml(entry.comment)}<small>${cashDate(entry.date)}</small></span><b>${formatMoney(entry.amount)}</b><button type="button" data-edit-cash-entry="${escapeHtml(entry.id)}" data-cash-entry-kind="${escapeHtml(kind)}" aria-label="${escapeHtml(tr('editCashEntry'))}" title="${escapeHtml(tr('editCashEntry'))}">✎ <em>${tr('edit')}</em></button></div>`).join('')
     : `<div class="cash-history-empty">${tr('noEntries')}</div>`;
   return `<details class="cash-history" data-cash-history="${escapeHtml(historyKey)}"${expandedCashEntryHistories.has(historyKey) ? ' open' : ''}><summary><span>${tr(labelKey)}</span><b>${formatMoney(total)}</b></summary><div class="cash-history-list">${rows}</div></details>`;
 }
@@ -3032,7 +3036,8 @@ function openCashEntryEditDialog(objectId, sectionId, kind, entryId) {
 
 function cashReportHistoryMarkup(section) {
   const isOpen = expandedCashReportHistory.has(section.id);
-  const rows = section.reportHistory.length ? section.reportHistory.map((item) => `<article class="cash-report-history-row" data-report-history-id="${escapeHtml(item.id)}"><span><strong>${escapeHtml(item.title)}</strong><small>${cashDate(item.createdAt)}</small></span><div><button type="button" data-history-preview aria-label="${escapeHtml(tr('viewReport'))}" title="${escapeHtml(tr('viewReport'))}">◉</button><button type="button" data-history-download="pdf">PDF</button><button type="button" data-history-download="xlsx">Excel</button><button type="button" data-history-share="pdf">↗ PDF</button><button type="button" data-history-share="xlsx">↗ Excel</button></div></article>`).join('') : `<div class="cash-history-empty">${tr('noReports')}</div>`;
+  const reportHistory = Array.isArray(section?.reportHistory) ? section.reportHistory : [];
+  const rows = reportHistory.length ? reportHistory.map((item) => `<article class="cash-report-history-row" data-report-history-id="${escapeHtml(item.id)}"><span><strong>${escapeHtml(item.title)}</strong><small>${cashDate(item.createdAt)}</small></span><div><button type="button" data-history-preview aria-label="${escapeHtml(tr('viewReport'))}" title="${escapeHtml(tr('viewReport'))}">◉</button><button type="button" data-history-download="pdf">PDF</button><button type="button" data-history-download="xlsx">Excel</button><button type="button" data-history-share="pdf">↗ PDF</button><button type="button" data-history-share="xlsx">↗ Excel</button></div></article>`).join('') : `<div class="cash-history-empty">${tr('noReports')}</div>`;
   return `<div class="cash-report-history"${isOpen ? '' : ' hidden'}><div class="cash-report-history-list">${rows}</div></div>`;
 }
 
@@ -3044,6 +3049,7 @@ function cashOwnFundsMarkup(section, investments, returns, investmentKind, retur
 }
 
 function cashSectionMarkup(object, section) {
+  const reportHistory = Array.isArray(section?.reportHistory) ? section.reportHistory : [];
   const advances = cashTotal(section.advances);
   const expenses = cashTotal(section.expenses);
   const remainingContract = Math.round((section.contractAmount - expenses) * 100) / 100;
@@ -3063,12 +3069,12 @@ function cashSectionMarkup(object, section) {
       <div class="cash-section-head-actions"><button class="cash-mini-button" type="button" data-rename-cash-section>${tr('rename')}</button><button class="cash-mini-button is-danger" type="button" data-delete-cash-section>${tr('deleteSection')}</button></div>
     </header>
     <div class="cash-section-body"${isOpen ? '' : ' hidden'}>
-      ${cashSectionAttachmentsMarkup(section)}<div class="cash-section-document-actions"><button type="button" data-open-cash-document="statement">${tr('workStatement')}</button><button type="button" data-open-cash-document="act">${tr('workAct')}</button><button type="button" data-export-section>${tr('sectionReport')}</button><button type="button" data-toggle-report-history>${tr('reportHistory')} · ${section.reportHistory.length}</button></div>${cashReportHistoryMarkup(section)}${contractMarkup}${factMarkup}${staffingMarkup}
+      ${cashSectionAttachmentsMarkup(section)}<div class="cash-section-document-actions"><button type="button" data-open-cash-document="statement">${tr('workStatement')}</button><button type="button" data-open-cash-document="act">${tr('workAct')}</button><button type="button" data-export-section>${tr('sectionReport')}</button><button type="button" data-toggle-report-history>${tr('reportHistory')} · ${reportHistory.length}</button></div>${cashReportHistoryMarkup(section)}${contractMarkup}${factMarkup}${staffingMarkup}
     </div>
   </section>`;
 }
 
-function renderCashflow() {
+function renderCashflowContent() {
   const browser = $('[data-cashflow-browser]');
   const detail = $('[data-cashflow-detail]');
   const list = $('[data-cashflow-list]');
@@ -3083,10 +3089,11 @@ function renderCashflow() {
   list.hidden = cashflowObjects.length === 0;
   const exportAllButton = $('[data-export-all-cashflow]', browser);
   if (exportAllButton) exportAllButton.hidden = cashflowObjects.length === 0;
-  const orderedObjects = [...cashflowObjects].sort((a, b) => Number(a.completed) - Number(b.completed) || new Date(b.createdAt) - new Date(a.createdAt));
+  const orderedObjects = [...(Array.isArray(cashflowObjects) ? cashflowObjects : [])].sort((a, b) => Number(a.completed) - Number(b.completed) || new Date(b.createdAt) - new Date(a.createdAt));
   list.innerHTML = orderedObjects.map((object) => {
     const financials = cashObjectFinancials(object);
-    return `<article class="cash-object${object.completed ? ' is-completed' : ''}" data-cash-object="${escapeHtml(object.id)}" role="button" tabindex="0" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}"><header><div class="cash-object-heading"><div class="cash-object-name-line"><h2>${escapeHtml(object.name)}</h2><strong class="cash-card-balance ${cashBalanceClass(financials.balance)}">${formatSignedMoney(financials.balance)}</strong></div><small>${cashDate(object.createdAt)} · ${object.sections.length} ${tr('sectionCalculations')}${object.completed ? ` · ${tr('completedObject')}` : ''}</small><div class="cash-object-actions"><button class="cash-mini-button" type="button" data-rename-cash-object>${tr('rename')}</button><button class="cash-mini-button is-danger" type="button" data-delete-cash-object>${tr('deleteObject')}</button><label class="cash-mini-button is-complete"><input type="checkbox" data-complete-cash-object${object.completed ? ' checked' : ''} /><span>${object.completed ? tr('reopenObject') : tr('finishObject')}</span></label></div></div></header></article>`;
+    const sectionCount = Array.isArray(object?.sections) ? object.sections.length : 0;
+    return `<article class="cash-object${object.completed ? ' is-completed' : ''}" data-cash-object="${escapeHtml(object.id)}" role="button" tabindex="0" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}"><header><div class="cash-object-heading"><div class="cash-object-name-line"><h2>${escapeHtml(object.name)}</h2><strong class="cash-card-balance ${cashBalanceClass(financials.balance)}">${formatSignedMoney(financials.balance)}</strong></div><small>${cashDate(object.createdAt)} · ${sectionCount} ${tr('sectionCalculations')}${object.completed ? ` · ${tr('completedObject')}` : ''}</small><div class="cash-object-actions"><button class="cash-mini-button" type="button" data-rename-cash-object>${tr('rename')}</button><button class="cash-mini-button is-danger" type="button" data-delete-cash-object>${tr('deleteObject')}</button><label class="cash-mini-button is-complete"><input type="checkbox" data-complete-cash-object${object.completed ? ' checked' : ''} /><span>${object.completed ? tr('reopenObject') : tr('finishObject')}</span></label></div></div></header></article>`;
   }).join('');
 
   $$('[data-cash-object]', list).forEach((card) => {
@@ -3110,6 +3117,41 @@ function renderCashflow() {
       saveCashflow(); renderCashflow(); showToast(tr(object.completed ? 'completedObject' : 'objectReopened'));
     });
   });
+}
+
+let cashflowRecoveryInProgress = false;
+
+function renderCashflow() {
+  try {
+    renderCashflowContent();
+  } catch (error) {
+    console.error('StructOS short contracts render failed:', error);
+    if (!cashflowRecoveryInProgress) {
+      cashflowRecoveryInProgress = true;
+      try {
+        cashflowObjects = loadCashflow();
+        if (activeCashObjectId && !cashflowObjects.some((object) => object.id === activeCashObjectId)) activeCashObjectId = null;
+        renderCashflowContent();
+        return;
+      } catch (retryError) {
+        console.error('StructOS short contracts recovery failed:', retryError);
+      } finally {
+        cashflowRecoveryInProgress = false;
+      }
+    }
+    const browser = $('[data-cashflow-browser]');
+    const detail = $('[data-cashflow-detail]');
+    const list = $('[data-cashflow-list]');
+    const empty = $('[data-cashflow-empty]');
+    if (browser) browser.hidden = false;
+    if (detail) { detail.hidden = true; detail.innerHTML = ''; }
+    if (empty) empty.hidden = true;
+    if (list) {
+      list.hidden = false;
+      list.innerHTML = `<div class="cashflow-empty"><span>↻</span><h2>${escapeHtml(tr('quickCashflow'))}</h2><p>${escapeHtml(tr('cashflowDescription'))}</p><button class="primary-button" type="button" data-retry-cashflow>${escapeHtml(tr('refreshPage'))}</button></div>`;
+      $('[data-retry-cashflow]', list)?.addEventListener('click', () => window.location.reload());
+    }
+  }
 }
 
 function bindCashSectionEvents(object, scope) {
@@ -3170,8 +3212,9 @@ function bindCashSectionEvents(object, scope) {
 
 function renderCashObjectDetail(object, detail) {
   const financials = cashObjectFinancials(object);
+  const sections = Array.isArray(object?.sections) ? object.sections : [];
   const overall = `<section class="cash-object-total"><header><div><span class="eyebrow">STRUCTOS TOTAL</span><h2>${tr('overallSectionsBalance')}</h2></div><strong class="${cashBalanceClass(financials.balance)}">${formatSignedMoney(financials.balance)}</strong></header><div class="cash-object-total-breakdown"><article><span>${tr('contractBalancesTotal')}</span><strong class="${cashBalanceClass(financials.contractBalance)}">${formatSignedMoney(financials.contractBalance)}</strong></article><article><span>${tr('factBalancesTotal')}</span><strong class="${cashBalanceClass(financials.factBalance)}">${formatSignedMoney(financials.factBalance)}</strong></article></div><button class="primary-button" type="button" data-export-cash-object>${tr('downloadOverallReport')}</button></section>`;
-  detail.innerHTML = `<div class="cash-object-detail-head"><button class="outline-button" type="button" data-close-cash-object>‹ ${tr('backToMoneyObjects')}</button><div><span class="eyebrow">STRUCTOS MONEY</span><div class="cash-object-title-line"><h1>${escapeHtml(object.name)}</h1><button type="button" data-rename-cash-object aria-label="${escapeHtml(tr('renameObject'))}" title="${escapeHtml(tr('renameObject'))}">✎</button></div><p>${object.completed ? tr('completedObject') : tr('objectSections')}</p></div><button class="primary-button" type="button" data-add-cash-section><span>＋</span>${tr('addSection')}</button></div>${object.sections.length ? `<div class="cash-sections">${object.sections.map((section) => cashSectionMarkup(object, section)).join('')}</div>` : `<div class="cash-sections-empty"><span>＋</span><h2>${tr('noSections')}</h2><p>${tr('noSectionsCopy')}</p><button class="primary-button" type="button" data-add-cash-section>${tr('addSection')}</button></div>`}${overall}`;
+  detail.innerHTML = `<div class="cash-object-detail-head"><button class="outline-button" type="button" data-close-cash-object>‹ ${tr('backToMoneyObjects')}</button><div><span class="eyebrow">STRUCTOS MONEY</span><div class="cash-object-title-line"><h1>${escapeHtml(object.name)}</h1><button type="button" data-rename-cash-object aria-label="${escapeHtml(tr('renameObject'))}" title="${escapeHtml(tr('renameObject'))}">✎</button></div><p>${object.completed ? tr('completedObject') : tr('objectSections')}</p></div><button class="primary-button" type="button" data-add-cash-section><span>＋</span>${tr('addSection')}</button></div>${sections.length ? `<div class="cash-sections">${sections.map((section) => cashSectionMarkup(object, section)).join('')}</div>` : `<div class="cash-sections-empty"><span>＋</span><h2>${tr('noSections')}</h2><p>${tr('noSectionsCopy')}</p><button class="primary-button" type="button" data-add-cash-section>${tr('addSection')}</button></div>`}${overall}`;
   $('[data-close-cash-object]', detail)?.addEventListener('click', () => { activeCashObjectId = null; renderCashflow(); });
   $('[data-rename-cash-object]', detail)?.addEventListener('click', () => renameCashObject(object.id));
   $$('[data-add-cash-section]', detail).forEach((button) => button.addEventListener('click', () => openCashSectionDialog(object.id)));
