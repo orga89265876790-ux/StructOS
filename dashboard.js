@@ -347,6 +347,31 @@ Object.assign(copy.EN, { myProjects: 'My projects', myProjectsDescription: 'All 
 Object.assign(copy.KY, { myProjects: 'Менин долбоорлорум', myProjectsDescription: 'Жүктөөдөн аяктаганга чейинки бардык долбоорлор', projectPackages: 'Долбоорлор', uploadProject: 'Долбоор жүктөө', noMyProjects: 'Азырынча долбоор жок', noMyProjectsCopy: 'Долбоорду, келишимди же сметаны жүктөңүз — долбоор картасы бул жерде автоматтык пайда болот.', projectDocuments: 'Долбоордун документтери', lastProjectUpdate: 'Жаңыртылды' });
 Object.assign(copy.TJ, { myProjects: 'Лоиҳаҳои ман', myProjectsDescription: 'Ҳамаи лоиҳаҳо аз боркунӣ то анҷом', projectPackages: 'Лоиҳаҳо', uploadProject: 'Бор кардани лоиҳа', noMyProjects: 'Ҳоло лоиҳа нест', noMyProjectsCopy: 'Лоиҳа, шартнома ё сметаро бор кунед — корти лоиҳа худкор дар ин ҷо пайдо мешавад.', projectDocuments: 'Ҳуҷҷатҳои лоиҳа', lastProjectUpdate: 'Нав шуд' });
 
+Object.assign(copy.RU, {
+  myProjects: 'Проекты', myProjectsDescription: 'Объекты, проекты, договоры и сметы в одной структуре', projectObjects: 'Объектов', projectDocuments: 'Проект · Договор · Смета', noMyProjects: 'Объектов пока нет', noMyProjectsCopy: 'Создайте объект, дайте проекту понятное название и загрузите нужные документы.',
+  invitationsHomeHint: 'Доступ к объектам и командам', notificationsHomeHint: 'Важные события по вашим объектам', chooseAction: 'Выберите действие', quickProjectAnalysis: 'Быстрый анализ проекта', quickProjectAnalysisHint: 'Создать объект, загрузить проект и запустить анализ', quickProjectStart: 'Быстрый старт проекта', quickObjectStart: 'Быстрый старт объекта', quickObjectStartHint: 'Создать короткий объект для доходов, расходов и отчётов', inDevelopment: 'В разработке',
+  projectObjectWizard: 'Создание объекта', objectNameStep: 'Название объекта', projectNameStep: 'Название проекта', documentsStep: 'Документы', stepOf: 'Шаг', continueAction: 'Продолжить', backAction: 'Назад', giveProjectName: 'Дайте своё название проекту', projectNamePlaceholder: 'Например, Электроснабжение БЦ «Северный»', projectNameHint: 'Это название будет видно в списке проектов, договоре и смете.', uploadDocuments: 'Загрузите документы', uploadDocumentsHint: 'Можно загрузить один, два или все три документа. StructOS проанализирует только загруженное.', documentOptional: 'Необязательно', documentRequired: 'Обязательно', chooseDocument: 'Выбрать файл', changeDocument: 'Заменить файл', analyzeAll: 'Анализировать всё', objectSaved: 'Объект создан', projectNameRequired: 'Укажите название проекта', documentsRequired: 'Загрузите хотя бы один документ',
+  contractNumberPending: 'Номер будет извлечён при анализе договора', estimateForProject: 'Смета проекта', documentNotLoaded: 'Документ ещё не загружен', pendingAnalysis: 'Ожидает анализа', analyzeLoadedDocuments: 'Анализировать загруженное', analyzingDocuments: 'Анализируем документы', analyzingDocumentsHint: 'StructOS отдельно обрабатывает каждый загруженный файл.', allDocumentsAnalyzed: 'Все загруженные документы проанализированы', allDocumentsAnalyzedCopy: 'Результаты сохранены отдельно по проекту, договору и смете.', invitationsCenter: 'Входящие приглашения', noNewNotifications: 'Новых уведомлений нет', noNewNotificationsHint: 'Важные события по объектам появятся здесь.', contractNumberLabel: 'Договор №'
+});
+Object.assign(copy.EN, {
+  myProjects: 'Projects', myProjectsDescription: 'Objects, projects, contracts, and estimates in one structure', projectObjects: 'Objects', projectDocuments: 'Project · Contract · Estimate', noMyProjects: 'No objects yet', noMyProjectsCopy: 'Create an object, give the project a clear name, and upload the required documents.',
+  invitationsHomeHint: 'Access to objects and teams', notificationsHomeHint: 'Important events for your objects', chooseAction: 'Choose an action', quickProjectAnalysis: 'Quick project analysis', quickProjectAnalysisHint: 'Create an object, upload a project, and start analysis', quickProjectStart: 'Quick project start', quickObjectStart: 'Quick object start', quickObjectStartHint: 'Create a short object for income, expenses, and reports', inDevelopment: 'In development',
+  projectObjectWizard: 'Create object', objectNameStep: 'Object name', projectNameStep: 'Project name', documentsStep: 'Documents', stepOf: 'Step', continueAction: 'Continue', backAction: 'Back', giveProjectName: 'Give the project your own name', projectNamePlaceholder: 'For example, Power supply for Northern Business Center', projectNameHint: 'This name will be visible in the project, contract, and estimate list.', uploadDocuments: 'Upload documents', uploadDocumentsHint: 'Upload one, two, or all three documents. StructOS analyzes only what is uploaded.', documentOptional: 'Optional', documentRequired: 'Required', chooseDocument: 'Choose file', changeDocument: 'Replace file', analyzeAll: 'Analyze all', objectSaved: 'Object created', projectNameRequired: 'Enter a project name', documentsRequired: 'Upload at least one document',
+  contractNumberPending: 'The number will be extracted during contract analysis', estimateForProject: 'Project estimate', documentNotLoaded: 'Document has not been uploaded', pendingAnalysis: 'Awaiting analysis', analyzeLoadedDocuments: 'Analyze uploaded files', analyzingDocuments: 'Analyzing documents', analyzingDocumentsHint: 'StructOS processes each uploaded file separately.', allDocumentsAnalyzed: 'All uploaded documents have been analyzed', allDocumentsAnalyzedCopy: 'Results are saved separately for the project, contract, and estimate.', invitationsCenter: 'Incoming invitations', noNewNotifications: 'No new notifications', noNewNotificationsHint: 'Important object events will appear here.', contractNumberLabel: 'Contract No.'
+});
+Object.assign(copy.KY, {
+  myProjects: 'Долбоорлор', myProjectsDescription: 'Объекттер, долбоорлор, келишимдер жана сметалар бир түзүмдө', projectObjects: 'Объекттер', projectDocuments: 'Долбоор · Келишим · Смета', noMyProjects: 'Азырынча объект жок', noMyProjectsCopy: 'Объект түзүп, долбоорго түшүнүктүү ат берип, керектүү документтерди жүктөңүз.',
+  invitationsHomeHint: 'Объекттерге жана командаларга кирүү', notificationsHomeHint: 'Объекттер боюнча маанилүү окуялар', chooseAction: 'Аракетти тандаңыз', quickProjectAnalysis: 'Долбоорду тез талдоо', quickProjectAnalysisHint: 'Объект түзүп, долбоорду жүктөп, талдоону баштоо', quickProjectStart: 'Долбоорду тез баштоо', quickObjectStart: 'Объектти тез баштоо', quickObjectStartHint: 'Киреше, чыгаша жана отчет үчүн кыска объект түзүү', inDevelopment: 'Иштелип жатат',
+  projectObjectWizard: 'Объект түзүү', objectNameStep: 'Объекттин аталышы', projectNameStep: 'Долбоордун аталышы', documentsStep: 'Документтер', stepOf: 'Кадам', continueAction: 'Улантуу', backAction: 'Артка', giveProjectName: 'Долбоорго өз аталышыңызды бериңиз', projectNamePlaceholder: 'Мисалы, «Түндүк» ББ электр менен камсыздоо', projectNameHint: 'Бул аталыш долбоор, келишим жана смета тизмесинде көрүнөт.', uploadDocuments: 'Документтерди жүктөңүз', uploadDocumentsHint: 'Бир, эки же үч документти тең жүктөөгө болот. StructOS жүктөлгөндөрдү гана талдайт.', documentOptional: 'Милдеттүү эмес', documentRequired: 'Милдеттүү', chooseDocument: 'Файл тандоо', changeDocument: 'Файлды алмаштыруу', analyzeAll: 'Баарын талдоо', objectSaved: 'Объект түзүлдү', projectNameRequired: 'Долбоордун аталышын жазыңыз', documentsRequired: 'Жок дегенде бир документ жүктөңүз',
+  contractNumberPending: 'Номер келишим талданганда алынат', estimateForProject: 'Долбоордун сметасы', documentNotLoaded: 'Документ жүктөлө элек', pendingAnalysis: 'Талдоону күтүп жатат', analyzeLoadedDocuments: 'Жүктөлгөндөрдү талдоо', analyzingDocuments: 'Документтер талданууда', analyzingDocumentsHint: 'StructOS ар бир файлды өзүнчө иштетет.', allDocumentsAnalyzed: 'Бардык жүктөлгөн документтер талданды', allDocumentsAnalyzedCopy: 'Натыйжалар долбоор, келишим жана смета боюнча өзүнчө сакталды.', invitationsCenter: 'Кирген чакыруулар', noNewNotifications: 'Жаңы билдирүү жок', noNewNotificationsHint: 'Объекттер боюнча маанилүү окуялар бул жерде чыгат.', contractNumberLabel: 'Келишим №'
+});
+Object.assign(copy.TJ, {
+  myProjects: 'Лоиҳаҳо', myProjectsDescription: 'Объектҳо, лоиҳаҳо, шартномаҳо ва сметаҳо дар як сохтор', projectObjects: 'Объектҳо', projectDocuments: 'Лоиҳа · Шартнома · Смета', noMyProjects: 'Ҳоло объект нест', noMyProjectsCopy: 'Объект созед, ба лоиҳа номи фаҳмо диҳед ва ҳуҷҷатҳои лозимро бор кунед.',
+  invitationsHomeHint: 'Дастрасӣ ба объектҳо ва гурӯҳҳо', notificationsHomeHint: 'Рӯйдодҳои муҳими объектҳо', chooseAction: 'Амалро интихоб кунед', quickProjectAnalysis: 'Таҳлили зуди лоиҳа', quickProjectAnalysisHint: 'Объект созед, лоиҳаро бор карда, таҳлилро оғоз кунед', quickProjectStart: 'Оғози зуди лоиҳа', quickObjectStart: 'Оғози зуди объект', quickObjectStartHint: 'Объекти кӯтоҳ барои даромад, хароҷот ва ҳисобот созед', inDevelopment: 'Дар таҳия',
+  projectObjectWizard: 'Сохтани объект', objectNameStep: 'Номи объект', projectNameStep: 'Номи лоиҳа', documentsStep: 'Ҳуҷҷатҳо', stepOf: 'Қадам', continueAction: 'Идома', backAction: 'Ба қафо', giveProjectName: 'Ба лоиҳа номи худро диҳед', projectNamePlaceholder: 'Масалан, Таъминоти барқи МТ «Шимолӣ»', projectNameHint: 'Ин ном дар рӯйхати лоиҳа, шартнома ва смета дида мешавад.', uploadDocuments: 'Ҳуҷҷатҳоро бор кунед', uploadDocumentsHint: 'Як, ду ё ҳар се ҳуҷҷатро бор кардан мумкин. StructOS танҳо ҳуҷҷатҳои боршударо таҳлил мекунад.', documentOptional: 'Ихтиёрӣ', documentRequired: 'Ҳатмӣ', chooseDocument: 'Интихоби файл', changeDocument: 'Иваз кардани файл', analyzeAll: 'Ҳамаро таҳлил кардан', objectSaved: 'Объект сохта шуд', projectNameRequired: 'Номи лоиҳаро ворид кунед', documentsRequired: 'Ақаллан як ҳуҷҷатро бор кунед',
+  contractNumberPending: 'Рақам ҳангоми таҳлили шартнома гирифта мешавад', estimateForProject: 'Сметаи лоиҳа', documentNotLoaded: 'Ҳуҷҷат ҳанӯз бор нашудааст', pendingAnalysis: 'Интизори таҳлил', analyzeLoadedDocuments: 'Таҳлили ҳуҷҷатҳои боршуда', analyzingDocuments: 'Ҳуҷҷатҳо таҳлил мешаванд', analyzingDocumentsHint: 'StructOS ҳар файли боршударо алоҳида коркард мекунад.', allDocumentsAnalyzed: 'Ҳамаи ҳуҷҷатҳои боршуда таҳлил шуданд', allDocumentsAnalyzedCopy: 'Натиҷаҳо барои лоиҳа, шартнома ва смета алоҳида нигоҳ дошта шуданд.', invitationsCenter: 'Даъватҳои воридшуда', noNewNotifications: 'Огоҳии нав нест', noNewNotificationsHint: 'Рӯйдодҳои муҳими объектҳо дар ин ҷо пайдо мешаванд.', contractNumberLabel: 'Шартнома №'
+});
+
 Object.assign(copy.RU, { newVersion: 'Новая версия', uploadChanges: 'Подгрузить изменения', uploadAndCompare: 'Загрузить и сравнить', revisionUploadHint: 'Старый файл останется в истории. После загрузки StructOS сразу сравнит предыдущую и новую версии.', currentStoredVersion: 'Текущая сохранённая версия', versionHistory: 'История версий', versionNumber: 'Версия', versions: 'версии', versionComparison: 'Сравнение версий', comparisonInProgress: 'Сравниваем версии', comparisonInProgressCopy: 'Проверяем предыдущий и новый файл и сохраняем найденные изменения.', comparisonComplete: 'Сравнение завершено', comparisonCompleteCopy: 'Новая версия сохранена. Ниже показано, что изменилось по доступным данным файлов.', viewComparison: 'Посмотреть сравнение', previousVersion: 'Предыдущая версия', currentVersion: 'Новая версия', fileNameLabel: 'Название файла', fileSizeLabel: 'Размер файла', fileFormatLabel: 'Формат файла', fileModifiedLabel: 'Изменён на устройстве', uploadDate: 'Дата загрузки', before: 'Было', after: 'Стало', changed: 'Изменено', unchanged: 'Без изменений', metadataDifferences: 'Найденные различия', contentDifferences: 'Содержимое документа', contentComparisonPending: 'Ожидает серверного разбора', contentComparisonPendingCopy: 'Названия, форматы, размеры и даты изменения уже сопоставлены. Отличия по листам, строкам и содержимому появятся после подключения серверного извлечения — StructOS не придумывает отсутствующие данные.', changesFound: 'изменений найдено', sameFileSelected: 'Выбран тот же файл. Для новой версии укажите изменённый файл.', versionSaved: 'Новая версия сохранена и сравнена' });
 Object.assign(copy.EN, { newVersion: 'New version', uploadChanges: 'Upload changes', uploadAndCompare: 'Upload and compare', revisionUploadHint: 'The previous file stays in history. StructOS will compare the old and new versions immediately after upload.', currentStoredVersion: 'Current saved version', versionHistory: 'Version history', versionNumber: 'Version', versions: 'versions', versionComparison: 'Version comparison', comparisonInProgress: 'Comparing versions', comparisonInProgressCopy: 'Checking the previous and new file and saving the detected changes.', comparisonComplete: 'Comparison complete', comparisonCompleteCopy: 'The new version is saved. The available file-level changes are shown below.', viewComparison: 'View comparison', previousVersion: 'Previous version', currentVersion: 'New version', fileNameLabel: 'File name', fileSizeLabel: 'File size', fileFormatLabel: 'File format', fileModifiedLabel: 'Modified on device', uploadDate: 'Upload date', before: 'Before', after: 'After', changed: 'Changed', unchanged: 'Unchanged', metadataDifferences: 'Detected differences', contentDifferences: 'Document content', contentComparisonPending: 'Awaiting server extraction', contentComparisonPendingCopy: 'Names, formats, sizes, and modification dates have been compared. Sheet, row, and content differences will appear after server extraction is connected; StructOS does not invent missing data.', changesFound: 'changes found', sameFileSelected: 'This is the same file. Choose a changed file for a new version.', versionSaved: 'New version saved and compared' });
 Object.assign(copy.KY, { newVersion: 'Жаңы версия', uploadChanges: 'Өзгөртүүлөрдү жүктөө', uploadAndCompare: 'Жүктөп салыштыруу', revisionUploadHint: 'Мурунку файл тарыхта калат. Жүктөлгөндөн кийин StructOS эски жана жаңы версияны дароо салыштырат.', currentStoredVersion: 'Учурдагы сакталган версия', versionHistory: 'Версиялар тарыхы', versionNumber: 'Версия', versions: 'версия', versionComparison: 'Версияларды салыштыруу', comparisonInProgress: 'Версиялар салыштырылууда', comparisonInProgressCopy: 'Мурунку жана жаңы файл текшерилип, табылган өзгөрүүлөр сакталууда.', comparisonComplete: 'Салыштыруу аяктады', comparisonCompleteCopy: 'Жаңы версия сакталды. Файл боюнча жеткиликтүү өзгөрүүлөр төмөндө көрсөтүлдү.', viewComparison: 'Салыштырууну көрүү', previousVersion: 'Мурунку версия', currentVersion: 'Жаңы версия', fileNameLabel: 'Файлдын аты', fileSizeLabel: 'Файлдын өлчөмү', fileFormatLabel: 'Файлдын форматы', fileModifiedLabel: 'Түзмөктө өзгөртүлгөн', uploadDate: 'Жүктөлгөн күнү', before: 'Болгон', after: 'Болду', changed: 'Өзгөрдү', unchanged: 'Өзгөргөн жок', metadataDifferences: 'Табылган айырмалар', contentDifferences: 'Документтин мазмуну', contentComparisonPending: 'Сервердик талдоону күтүп жатат', contentComparisonPendingCopy: 'Аталыштар, форматтар, өлчөмдөр жана өзгөртүү даталары салыштырылды. Барактар, саптар жана мазмун боюнча айырмалар сервердик талдоо кошулганда чыгат; StructOS жок маалыматты ойлоп таппайт.', changesFound: 'өзгөрүү табылды', sameFileSelected: 'Ошол эле файл тандалды. Жаңы версия үчүн өзгөртүлгөн файлды тандаңыз.', versionSaved: 'Жаңы версия сакталды жана салыштырылды' });
@@ -459,6 +484,7 @@ let activeUploadMode = 'standard';
 let pendingFile = null;
 let activeUploadObjectId = null;
 let newObjectNameDraft = '';
+let projectObjectWizardDraft = null;
 let revisionAnalysisTimer;
 let activeRevisionComparisonId = null;
 let activeAnalysisDocument = { objectId: null, kind: 'project' };
@@ -690,8 +716,11 @@ function loadObjectRegistry() {
         .map((object) => ({
           id: String(object.id || `object-${Date.now()}-${Math.random().toString(16).slice(2)}`),
           name: object.name.trim().slice(0, 100) || 'Объект',
+          projectTitle: String(object.projectTitle || object.name || '').trim().slice(0, 140),
+          contractNumber: String(object.contractNumber || '').trim().slice(0, 60),
           status: object.status,
-          analyzedAt: object.analyzedAt || new Date().toISOString(),
+          createdAt: object.createdAt || object.uploadedAt || object.analyzedAt || new Date().toISOString(),
+          analyzedAt: object.analyzedAt || (object.status === 'uploaded' ? null : new Date().toISOString()),
           uploadedAt: object.uploadedAt || object.analyzedAt || new Date().toISOString(),
           startedAt: object.startedAt || null,
           completedAt: object.completedAt || null,
@@ -4625,6 +4654,12 @@ function renderAnalysisCards() {
   });
 }
 
+function renderHomeInbox() {
+  const invitationCount = invitedObjects.filter((object) => object.status !== 'completed').length;
+  $$('[data-home-invitations-count]').forEach((element) => { element.textContent = String(invitationCount); });
+  $$('[data-home-notifications-count]').forEach((element) => { element.textContent = '0'; });
+}
+
 function saveObjects() {
   localStorage.setItem(OBJECTS_KEY, JSON.stringify(objectRegistry));
 }
@@ -4650,13 +4685,16 @@ function importPendingTransfer() {
     if (!objectName || !files.length) return;
     let object = objectRegistry.find((item) => item.name.trim().toLocaleLowerCase() === objectName.toLocaleLowerCase());
     if (!object) {
-      object = { id: createObjectId(), name: objectName, status: pending.analysisComplete ? 'ready' : 'uploaded', uploadedAt: pending.updatedAt || new Date().toISOString(), analyzedAt: pending.analysisComplete ? (pending.updatedAt || new Date().toISOString()) : null, startedAt: null, files: [] };
+      object = { id: createObjectId(), name: objectName, projectTitle: objectName, contractNumber: '', status: pending.analysisComplete ? 'ready' : 'uploaded', createdAt: pending.updatedAt || new Date().toISOString(), uploadedAt: pending.updatedAt || new Date().toISOString(), analyzedAt: pending.analysisComplete ? (pending.updatedAt || new Date().toISOString()) : null, startedAt: null, files: [] };
       objectRegistry.unshift(object);
     } else if (pending.analysisComplete && object.status === 'uploaded') {
       object.status = 'ready';
       object.analyzedAt = pending.updatedAt || new Date().toISOString();
     }
-    files.forEach((file) => { object.files = [...(object.files || []).filter((item) => item.kind !== file.kind), file]; });
+    files.forEach((file) => {
+      object.files = [...(object.files || []).filter((item) => item.kind !== file.kind), file];
+      if (file.kind === 'contract' && !object.contractNumber) object.contractNumber = extractContractNumberFromName(file.name);
+    });
     object.uploadedAt ||= pending.updatedAt || new Date().toISOString();
     selectObjectForAnalysis(object);
     saveObjects();
@@ -4688,6 +4726,141 @@ function formatStorage(bytes) {
   return `${(value / 1024 / 1024 / 1024).toFixed(2)} ${tr('storageGb')}`;
 }
 
+function extractContractNumberFromName(name) {
+  const baseName = String(name || '').replace(/\.[^.]+$/, '').trim();
+  const patterns = [
+    /(?:договор|contract|келишим|шартнома)\s*(?:№|n(?:o)?\.?\s*)?([\p{L}\d][\p{L}\d._/-]{1,40})/iu,
+    /№\s*([\p{L}\d][\p{L}\d._/-]{1,40})/u
+  ];
+  for (const pattern of patterns) {
+    const match = baseName.match(pattern);
+    const candidate = String(match?.[1] || '').replace(/^[№#\s]+|[\s._-]+$/g, '');
+    if (candidate && !/^(договор|contract|келишим|шартнома)$/iu.test(candidate)) return candidate.slice(0, 60);
+  }
+  return '';
+}
+
+function wizardProgressMarkup(step) {
+  const labels = ['objectNameStep', 'projectNameStep', 'documentsStep'];
+  return `<ol class="project-wizard-progress">${labels.map((key, index) => `<li class="${index + 1 === step ? 'is-current' : index + 1 < step ? 'is-complete' : ''}"><span>${index + 1 < step ? '✓' : index + 1}</span><b>${escapeHtml(tr(key))}</b></li>`).join('')}</ol>`;
+}
+
+function projectWizardTitle() {
+  return projectObjectWizardDraft?.quickProjectOnly ? tr('quickProjectAnalysis') : tr('projectObjectWizard');
+}
+
+function openProjectObjectWizard(options = {}) {
+  projectObjectWizardDraft = {
+    step: 1,
+    quickProjectOnly: Boolean(options.quickProjectOnly),
+    objectName: '',
+    projectTitle: '',
+    files: { project: null, contract: null, estimate: null }
+  };
+  renderProjectObjectWizard();
+}
+
+function renderProjectObjectWizard() {
+  const draft = projectObjectWizardDraft;
+  if (!draft) return;
+  const step = Math.max(1, Math.min(3, Number(draft.step) || 1));
+  draft.step = step;
+  if (step === 1) {
+    showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 1 / 3 · ${escapeHtml(tr('objectNameStep'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><label class="project-wizard-field"><span>${escapeHtml(tr('objectName'))}</span><input data-wizard-object-name maxlength="100" autocomplete="organization" placeholder="${escapeHtml(tr('objectPlaceholder'))}" value="${escapeHtml(draft.objectName)}" /></label><button class="primary-button project-wizard-main-action" type="button" data-wizard-next>${escapeHtml(tr('continueAction'))} →</button></section>`);
+    const input = $('[data-wizard-object-name]');
+    const next = () => {
+      const value = input?.value.trim().slice(0, 100) || '';
+      if (!value) { input?.focus(); showToast(tr('objectRequired')); return; }
+      draft.objectName = value;
+      draft.projectTitle ||= value;
+      draft.step = 2;
+      renderProjectObjectWizard();
+    };
+    $('[data-wizard-next]')?.addEventListener('click', next);
+    input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); next(); } });
+    setTimeout(() => input?.focus(), 40);
+    return;
+  }
+  if (step === 2) {
+    showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 2 / 3 · ${escapeHtml(tr('projectNameStep'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><div class="project-wizard-object-chip"><small>${escapeHtml(tr('objectName'))}</small><strong>${escapeHtml(draft.objectName)}</strong></div><label class="project-wizard-field"><span>${escapeHtml(tr('giveProjectName'))}</span><input data-wizard-project-name maxlength="140" placeholder="${escapeHtml(tr('projectNamePlaceholder'))}" value="${escapeHtml(draft.projectTitle)}" /><small>${escapeHtml(tr('projectNameHint'))}</small></label><div class="project-wizard-navigation"><button class="outline-button" type="button" data-wizard-back>← ${escapeHtml(tr('backAction'))}</button><button class="primary-button" type="button" data-wizard-next>${escapeHtml(tr('continueAction'))} →</button></div></section>`);
+    const input = $('[data-wizard-project-name]');
+    const next = () => {
+      const value = input?.value.trim().slice(0, 140) || '';
+      if (!value) { input?.focus(); showToast(tr('projectNameRequired')); return; }
+      draft.projectTitle = value;
+      draft.step = 3;
+      renderProjectObjectWizard();
+    };
+    $('[data-wizard-back]')?.addEventListener('click', () => { draft.projectTitle = input?.value.trim().slice(0, 140) || draft.projectTitle; draft.step = 1; renderProjectObjectWizard(); });
+    $('[data-wizard-next]')?.addEventListener('click', next);
+    input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); next(); } });
+    setTimeout(() => { input?.focus(); input?.select(); }, 40);
+    return;
+  }
+
+  const kinds = draft.quickProjectOnly ? ['project'] : Object.keys(uploadRules);
+  const selectedEntries = kinds.filter((kind) => draft.files[kind]);
+  const documentCards = kinds.map((kind) => {
+    const file = draft.files[kind];
+    const rule = uploadRules[kind];
+    const requirement = draft.quickProjectOnly && kind === 'project' ? tr('documentRequired') : tr('documentOptional');
+    return `<article class="project-wizard-document${file ? ' has-file' : ''}"><header><span>${file ? '✓' : kind === 'project' ? '▤' : kind === 'contract' ? '≡' : '₽'}</span><div><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(requirement)}</small></div></header><div class="project-wizard-file-state"><b>${escapeHtml(file?.name || tr('documentNotLoaded'))}</b><small>${file ? `${escapeHtml(formatStorage(file.size))} · ${escapeHtml(fileFormatLabel(file))}` : escapeHtml(rule.formats)}</small></div><input class="hidden-file-input" data-wizard-document-input="${escapeHtml(kind)}" type="file" accept="${rule.accept}" /><button class="${file ? 'outline-button' : 'primary-button'}" type="button" data-wizard-choose-document="${escapeHtml(kind)}">${escapeHtml(tr(file ? 'changeDocument' : 'chooseDocument'))}</button></article>`;
+  }).join('');
+  const analyzeLabel = selectedEntries.length > 1 ? tr('analyzeAll') : tr('analyze');
+  showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 3 / 3 · ${escapeHtml(tr('uploadDocuments'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><div class="project-wizard-summary"><span><small>${escapeHtml(tr('objectName'))}</small><strong>${escapeHtml(draft.objectName)}</strong></span><span><small>${escapeHtml(tr('projectNameStep'))}</small><strong>${escapeHtml(draft.projectTitle)}</strong></span></div><p class="project-wizard-documents-hint">${escapeHtml(tr('uploadDocumentsHint'))}</p><div class="project-wizard-documents">${documentCards}</div><div class="project-wizard-navigation"><button class="outline-button" type="button" data-wizard-back>← ${escapeHtml(tr('backAction'))}</button><button class="primary-button" type="button" data-wizard-analyze ${selectedEntries.length ? '' : 'disabled'}>${escapeHtml(analyzeLabel)} →</button></div></section>`);
+  $('[data-wizard-back]')?.addEventListener('click', () => { draft.step = 2; renderProjectObjectWizard(); });
+  $$('[data-wizard-choose-document]').forEach((button) => button.addEventListener('click', () => $(`[data-wizard-document-input="${button.dataset.wizardChooseDocument}"]`)?.click()));
+  $$('[data-wizard-document-input]').forEach((input) => input.addEventListener('change', () => chooseProjectWizardDocument(input.dataset.wizardDocumentInput, input.files?.[0])));
+  $('[data-wizard-analyze]')?.addEventListener('click', finishProjectObjectWizard);
+}
+
+function chooseProjectWizardDocument(kind, file) {
+  const draft = projectObjectWizardDraft;
+  const rule = uploadRules[kind];
+  if (!draft || !rule || !file) return;
+  if (file.size > rule.maxMb * 1024 * 1024) { showToast(`${tr('fileTooLarge')}: ${rule.maxMb} МБ`); return; }
+  if (!isAllowedFile(file, rule)) { showToast(`${tr('unsupportedFormat')}: ${rule.formats}`); return; }
+  const metadata = fileMetadata(file);
+  if (kind === 'contract') metadata.contractNumber = extractContractNumberFromName(file.name);
+  draft.files[kind] = metadata;
+  renderProjectObjectWizard();
+}
+
+function finishProjectObjectWizard() {
+  const draft = projectObjectWizardDraft;
+  if (!draft) return;
+  const readyFiles = Object.entries(draft.files).filter(([, file]) => file);
+  if (!readyFiles.length) { showToast(tr('documentsRequired')); return; }
+  const now = new Date().toISOString();
+  const files = readyFiles.map(([kind, file]) => {
+    const record = { ...file, kind, addedAt: file.addedAt || now, analysisPending: true, analyzedAt: null };
+    return { ...record, versions: [fileVersionSnapshot(record)], comparison: null };
+  });
+  const object = {
+    id: createObjectId(),
+    name: draft.objectName,
+    projectTitle: draft.projectTitle,
+    contractNumber: String(draft.files.contract?.contractNumber || ''),
+    status: 'uploaded',
+    createdAt: now,
+    uploadedAt: now,
+    analyzedAt: null,
+    startedAt: null,
+    completedAt: null,
+    files
+  };
+  objectRegistry.unshift(object);
+  selectObjectForAnalysis(object);
+  saveObjects();
+  renderObjects();
+  renderWidgets();
+  projectObjectWizardDraft = null;
+  $('[data-dialog]')?.close();
+  showToast(tr('objectSaved'));
+  if (files.length === 1) analyzeObjectDocument(object.id, files[0].kind);
+  else analyzeObjectDocuments(object.id, files.map((file) => file.kind));
+}
+
 function objectRowMarkup(object) {
   const isReady = object.status === 'ready';
   const isActive = object.status === 'active';
@@ -4705,7 +4878,7 @@ function objectRowMarkup(object) {
 }
 
 function myProjectObjects() {
-  const projects = objectRegistry.filter((object) => Array.isArray(object.files) && object.files.length > 0);
+  const projects = objectRegistry.slice();
   return projects.sort((a, b) => {
     if (a.status === 'completed' && b.status !== 'completed') return 1;
     if (a.status !== 'completed' && b.status === 'completed') return -1;
@@ -4724,17 +4897,31 @@ function myProjectStatusKey(object) {
 
 function myProjectMarkup(object) {
   const usedBytes = (object.files || []).reduce((total, file) => total + (Number(file.size) || 0), 0);
-  const updatedAt = object.completedAt || object.startedAt || object.analyzedAt || object.uploadedAt;
+  const updatedAt = object.completedAt || object.startedAt || object.analyzedAt || object.uploadedAt || object.createdAt;
   const statusKey = myProjectStatusKey(object);
+  const projectTitle = String(object.projectTitle || object.name || '').trim() || object.name;
+  const pendingKinds = Object.keys(uploadRules).filter((kind) => {
+    const file = objectFile(object, kind);
+    return file && !isObjectDocumentAnalyzed(object, file);
+  });
   const documents = Object.keys(uploadRules).map((kind) => {
     const file = objectFile(object, kind);
     const versionCount = fileVersionCount(file);
-    const actionLabel = file ? `${tr('newVersion')}: ${tr(kind)}` : `${tr('upload')}: ${tr(kind)}`;
     const analyzed = isObjectDocumentAnalyzed(object, file);
-    const documentActions = file ? `<div class="my-project-document-actions"><button class="${analyzed ? 'outline-button' : 'primary-button'}" type="button" data-my-project-${analyzed ? 'open' : 'analyze'}="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}">${escapeHtml(tr(analyzed ? 'openDocument' : 'analyzeDocument'))}</button><button class="my-project-document-delete" type="button" data-my-project-delete="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}">${escapeHtml(tr('deleteDocument'))}</button></div>` : '';
-    return `<div class="my-project-document${file ? ' has-file' : ''}${file && !analyzed ? ' is-pending' : ''}"><i>${file ? analyzed ? '✓' : '…' : '+'}</i><span class="my-project-document-copy"><b>${escapeHtml(tr(kind))}</b><small>${escapeHtml(file?.name || tr('notUploaded'))}</small>${file ? `<em>v${versionCount} · ${versionCount} ${escapeHtml(tr('versions'))}</em>` : ''}</span><button type="button" data-my-project-file-action="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}" data-version-mode="${file ? 'revision' : 'standard'}" aria-label="${escapeHtml(actionLabel)}" title="${escapeHtml(actionLabel)}">+</button>${documentActions}</div>`;
+    const documentTitle = kind === 'project'
+      ? projectTitle
+      : kind === 'contract'
+        ? `${projectTitle} · ${object.contractNumber ? `${tr('contractNumberLabel')} ${object.contractNumber}` : tr('contract')}`
+        : `${projectTitle} · ${tr('estimate')}`;
+    const statusText = !file
+      ? tr('documentNotLoaded')
+      : `${file.name} · v${versionCount} · ${tr(analyzed ? 'analyzed' : 'pendingAnalysis')}${kind === 'contract' && !object.contractNumber ? ` · ${tr('contractNumberPending')}` : ''}`;
+    const openAction = file ? `<button class="outline-button" type="button" data-my-project-open="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}">${escapeHtml(tr('openDocument'))}</button>` : '';
+    const deleteAction = file ? `<button class="my-project-document-delete" type="button" data-my-project-delete="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}">${escapeHtml(tr('deleteDocument'))}</button>` : '';
+    return `<section class="my-project-document-row${file ? ' has-file' : ''}${file && !analyzed ? ' is-pending' : ''}"><span class="my-project-document-icon" aria-hidden="true">${file ? analyzed ? '✓' : '…' : '+'}</span><span class="my-project-document-copy"><small>${escapeHtml(tr(kind))}</small><strong>${escapeHtml(documentTitle)}</strong><em>${escapeHtml(statusText)}</em></span><span class="my-project-document-row-actions">${openAction}${deleteAction}<button class="primary-button" type="button" data-my-project-upload="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}" data-version-mode="${file ? 'revision' : 'standard'}">${escapeHtml(tr('upload'))}</button></span></section>`;
   }).join('');
-  return `<article class="my-project-card is-${escapeHtml(object.status)}" data-my-project="${escapeHtml(object.id)}" role="button" tabindex="0" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}"><header><span class="my-project-mark" aria-hidden="true">▰</span><div><small>STRUCTOS PROJECT</small><h2>${escapeHtml(object.name)}</h2><span class="my-project-badges"><b>${escapeHtml(tr('fullCycleObject'))}</b><b class="is-${escapeHtml(object.status)}">${escapeHtml(tr(statusKey))}</b></span></div><i aria-hidden="true">›</i></header><div class="my-project-documents">${documents}</div><footer><span>${escapeHtml(tr('lastProjectUpdate'))}: ${escapeHtml(formatObjectDate(updatedAt))}</span><span>${escapeHtml(tr('memoryUsed'))}: ${escapeHtml(formatStorage(usedBytes))}</span></footer></article>`;
+  const analysisAction = pendingKinds.length ? `<section class="my-project-analysis-action"><span><b>${pendingKinds.length}</b><small>${escapeHtml(tr('analyzeLoadedDocuments'))}</small></span><button class="primary-button" type="button" data-my-project-analyze-all="${escapeHtml(object.id)}">${escapeHtml(tr(pendingKinds.length > 1 ? 'analyzeAll' : 'analyze'))} →</button></section>` : '';
+  return `<article class="my-project-card is-${escapeHtml(object.status)}" data-my-project="${escapeHtml(object.id)}"><header><button class="my-project-object-open" type="button" data-open-project-object="${escapeHtml(object.id)}" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}"><span class="my-project-mark" aria-hidden="true">▰</span><span><small>STRUCTOS OBJECT</small><h2>${escapeHtml(object.name)}</h2><span class="my-project-badges"><b>${escapeHtml(tr('fullCycleObject'))}</b><b class="is-${escapeHtml(object.status)}">${escapeHtml(tr(statusKey))}</b></span></span><i aria-hidden="true">›</i></button></header><div class="my-project-documents">${documents}</div>${analysisAction}<footer><span>${escapeHtml(tr('lastProjectUpdate'))}: ${escapeHtml(formatObjectDate(updatedAt))}</span><span>${escapeHtml(tr('memoryUsed'))}: ${escapeHtml(formatStorage(usedBytes))}</span></footer></article>`;
 }
 
 function renderMyProjects() {
@@ -4742,19 +4929,11 @@ function renderMyProjects() {
   $$('[data-my-projects-list]').forEach((list) => {
     list.innerHTML = projects.map(myProjectMarkup).join('');
     $$('[data-my-project]', list).forEach((card) => {
-      const open = () => openObjectCard(card.dataset.myProject);
-      card.addEventListener('click', open);
-      card.addEventListener('keydown', (event) => { if (event.target !== card || !['Enter', ' '].includes(event.key)) return; event.preventDefault(); open(); });
-      $$('[data-my-project-file-action]', card).forEach((button) => {
-        button.addEventListener('click', (event) => {
-          event.stopPropagation();
-          openUploadDialog(button.dataset.myProjectFileAction, button.dataset.objectId, button.dataset.versionMode);
-        });
-        button.addEventListener('keydown', (event) => event.stopPropagation());
-      });
-      $$('[data-my-project-analyze]', card).forEach((button) => button.addEventListener('click', (event) => { event.stopPropagation(); analyzeObjectDocument(button.dataset.objectId, button.dataset.myProjectAnalyze); }));
-      $$('[data-my-project-open]', card).forEach((button) => button.addEventListener('click', (event) => { event.stopPropagation(); openAnalyzedDocument(button.dataset.objectId, button.dataset.myProjectOpen); }));
-      $$('[data-my-project-delete]', card).forEach((button) => button.addEventListener('click', (event) => { event.stopPropagation(); deleteObjectDocument(button.dataset.objectId, button.dataset.myProjectDelete); }));
+      $('[data-open-project-object]', card)?.addEventListener('click', (event) => { event.stopPropagation(); openObjectCard(event.currentTarget.dataset.openProjectObject); });
+      $$('[data-my-project-upload]', card).forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.myProjectUpload, button.dataset.objectId, button.dataset.versionMode)));
+      $$('[data-my-project-open]', card).forEach((button) => button.addEventListener('click', () => openAnalyzedDocument(button.dataset.objectId, button.dataset.myProjectOpen)));
+      $$('[data-my-project-delete]', card).forEach((button) => button.addEventListener('click', () => deleteObjectDocument(button.dataset.objectId, button.dataset.myProjectDelete)));
+      $('[data-my-project-analyze-all]', card)?.addEventListener('click', (event) => analyzePendingObjectDocuments(event.currentTarget.dataset.myProjectAnalyzeAll));
     });
   });
   $$('[data-my-projects-count]').forEach((count) => { count.textContent = String(projects.length); });
@@ -4849,6 +5028,7 @@ function analyzeObjectDocument(objectId, kind) {
     currentFile.analysisPending = false;
     currentFile.analyzedAt = analyzedAt;
     currentFile.versions = fileVersions(currentFile).map((version, index, versions) => index === versions.length - 1 ? { ...version, analyzedAt } : version);
+    if (kind === 'contract') currentObject.contractNumber = String(currentFile.contractNumber || extractContractNumberFromName(currentFile.name) || currentObject.contractNumber || '');
     currentObject.analyzedAt = analyzedAt;
     if (currentObject.status === 'uploaded') currentObject.status = 'ready';
     selectObjectForAnalysis(currentObject);
@@ -4863,6 +5043,56 @@ function analyzeObjectDocument(objectId, kind) {
   }, 1100);
 }
 
+function analyzeObjectDocuments(objectId, requestedKinds = []) {
+  const object = objectRegistry.find((item) => item.id === objectId);
+  if (!object) return;
+  const kinds = [...new Set(requestedKinds)]
+    .filter((kind) => uploadRules[kind])
+    .filter((kind) => {
+      const file = objectFile(object, kind);
+      return file && !isObjectDocumentAnalyzed(object, file);
+    });
+  if (!kinds.length) { openReportChooser(object); return; }
+  if (kinds.length === 1) { analyzeObjectDocument(objectId, kinds[0]); return; }
+  const filesMarkup = `<div class="analysis-ready-files">${kinds.map((kind) => { const file = objectFile(object, kind); return `<div><span>✓</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file.name)}</small></div>`; }).join('')}</div>`;
+  clearTimeout(analysisTimer);
+  showDialog(escapeHtml(tr('analyzingDocuments')), escapeHtml(tr('analyzingDocumentsHint')), `${filesMarkup}<div class="analysis-loader"><span></span><span></span><span></span></div>`);
+  analysisTimer = setTimeout(() => {
+    const currentObject = objectRegistry.find((item) => item.id === objectId);
+    if (!currentObject) return;
+    const analyzedAt = new Date().toISOString();
+    kinds.forEach((kind) => {
+      const file = objectFile(currentObject, kind);
+      if (!file) return;
+      file.analysisPending = false;
+      file.analyzedAt = analyzedAt;
+      file.versions = fileVersions(file).map((version, index, versions) => index === versions.length - 1 ? { ...version, analyzedAt } : version);
+      if (kind === 'contract') currentObject.contractNumber = String(file.contractNumber || extractContractNumberFromName(file.name) || currentObject.contractNumber || '');
+    });
+    currentObject.analyzedAt = analyzedAt;
+    if (currentObject.status === 'uploaded') currentObject.status = 'ready';
+    selectObjectForAnalysis(currentObject);
+    saveObjects();
+    saveUploads();
+    renderObjects();
+    renderWidgets();
+    showDialog(escapeHtml(tr('allDocumentsAnalyzed')), escapeHtml(tr('allDocumentsAnalyzedCopy')), `<div class="result-actions"><button class="outline-button" type="button" data-view-report>${escapeHtml(tr('viewReport'))}</button><button class="primary-button" type="button" data-start-object>${escapeHtml(tr('startObject'))}</button></div>`);
+    $('[data-view-report]')?.addEventListener('click', () => openReportChooser(currentObject));
+    $('[data-start-object]')?.addEventListener('click', () => startReadyObject(currentObject.id));
+  }, 1100);
+}
+
+function analyzePendingObjectDocuments(objectId) {
+  const object = objectRegistry.find((item) => item.id === objectId);
+  if (!object) return;
+  const pendingKinds = Object.keys(uploadRules).filter((kind) => {
+    const file = objectFile(object, kind);
+    return file && !isObjectDocumentAnalyzed(object, file);
+  });
+  if (pendingKinds.length) analyzeObjectDocuments(objectId, pendingKinds);
+  else openReportChooser(object);
+}
+
 function deleteObjectDocument(objectId, kind) {
   const object = objectRegistry.find((item) => item.id === objectId);
   const file = objectFile(object, kind);
@@ -4871,6 +5101,7 @@ function deleteObjectDocument(objectId, kind) {
   $('[data-cancel-document-delete]')?.addEventListener('click', () => $('[data-dialog]')?.close());
   $('[data-confirm-document-delete]')?.addEventListener('click', () => {
     object.files = (object.files || []).filter((item) => item.kind !== kind);
+    if (kind === 'contract') object.contractNumber = '';
     if (selectedFiles[kind] && sameFileMetadata(selectedFiles[kind], file)) selectedFiles[kind] = null;
     if (!object.files.length && object.status === 'ready') { object.status = 'uploaded'; object.analyzedAt = null; }
     saveObjects();
@@ -5073,6 +5304,7 @@ function renderObjects() {
   $$('[data-delete-ready]').forEach((button) => button.addEventListener('click', () => deleteReadyObject(button.dataset.deleteReady)));
   $$('[data-open-object]').forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openObject)));
   renderMyProjects();
+  renderHomeInbox();
 }
 
 function openObjectCard(id) {
@@ -5143,6 +5375,7 @@ function registerAnalyzedObject(name, readyFiles) {
   const analyzedAt = new Date().toISOString();
   const files = readyFiles.map(([kind, file]) => ({ ...file, kind, name: file.name, size: file.size || 0, analysisPending: false, analyzedAt }));
   if (existing) {
+    existing.projectTitle ||= String(name).trim();
     existing.analyzedAt = analyzedAt;
     existing.files = files;
     if (!['active', 'completed'].includes(existing.status)) {
@@ -5155,7 +5388,7 @@ function registerAnalyzedObject(name, readyFiles) {
     renderWidgets();
     return existing;
   }
-  const object = { id: createObjectId(), name: String(name).trim(), status: 'ready', uploadedAt: analyzedAt, analyzedAt, startedAt: null, files };
+  const object = { id: createObjectId(), name: String(name).trim(), projectTitle: String(name).trim(), contractNumber: '', status: 'ready', createdAt: analyzedAt, uploadedAt: analyzedAt, analyzedAt, startedAt: null, files };
   objectRegistry.unshift(object);
   saveObjects();
   renderObjects();
@@ -5345,8 +5578,9 @@ function confirmUpload() {
     return;
   }
   let uploadedFile = { ...pendingFile, kind: activeUploadKind, addedAt: uploadedAt, analysisPending: true, analyzedAt: null };
+  if (activeUploadKind === 'contract') uploadedFile.contractNumber = String(pendingFile.contractNumber || extractContractNumberFromName(pendingFile.name) || '');
   if (!destination) {
-    destination = { id: createObjectId(), name: objectName, status: 'uploaded', uploadedAt, analyzedAt: null, startedAt: null, files: [] };
+    destination = { id: createObjectId(), name: objectName, projectTitle: objectName, contractNumber: '', status: 'uploaded', createdAt: uploadedAt, uploadedAt, analyzedAt: null, startedAt: null, files: [] };
     objectRegistry.unshift(destination);
   }
   let comparisonId = null;
@@ -5366,6 +5600,8 @@ function confirmUpload() {
     uploadedFile = { ...uploadedFile, versions: [fileVersionSnapshot(uploadedFile)], comparison: null };
   }
   destination.files = [...(destination.files || []).filter((file) => file.kind !== activeUploadKind), uploadedFile];
+  destination.projectTitle ||= destination.name;
+  if (activeUploadKind === 'contract') destination.contractNumber = String(uploadedFile.contractNumber || extractContractNumberFromName(uploadedFile.name) || '');
   destination.uploadedAt = uploadedAt;
   activeUploadObjectId = destination.id;
   selectObjectForAnalysis(destination);
@@ -5491,16 +5727,35 @@ function runAnalysis() {
   }, 1100);
 }
 
+function openInvitationsCenter() {
+  const active = invitedObjects.filter((object) => object.status !== 'completed');
+  const markup = active.length
+    ? `<div class="home-invitation-list">${active.map((object) => `<button type="button" data-open-home-invitation="${escapeHtml(object.id)}"><span>↗</span><span><strong>${escapeHtml(invitedObjectName(object))}</strong><small>${escapeHtml(tr(object.roleKey || 'objectParticipant'))} · ${escapeHtml(formatObjectDate(object.invitedAt))}</small></span><i>›</i></button>`).join('')}</div>`
+    : `<div class="history-empty">${escapeHtml(tr('noObjects'))}</div>`;
+  showDialog(escapeHtml(tr('invitationsCenter')), `${active.length} · ${escapeHtml(tr('invitations'))}`, markup);
+  $$('[data-open-home-invitation]').forEach((button) => button.addEventListener('click', () => openInvitedObjectCard(button.dataset.openHomeInvitation)));
+}
+
+function openNotificationsCenter() {
+  showDialog(escapeHtml(tr('notifications')), escapeHtml(tr('noNewNotificationsHint')), `<section class="home-notifications-empty"><span>✓</span><strong>${escapeHtml(tr('noNewNotifications'))}</strong><small>${escapeHtml(tr('noNewNotificationsHint'))}</small></section>`);
+}
+
 function openView(view) {
   if (view === 'profile') { setPanel('profile'); return; }
   if (view === 'passport') { setPanel('passport'); return; }
   if (view === 'projects') { setPanel('projects'); return; }
   if (view === 'objects') { setPanel('objects'); return; }
+  if (view === 'invitations') { openInvitationsCenter(); return; }
+  if (view === 'notifications') { openNotificationsCenter(); return; }
   if (view === 'tasks') { openTodoDialog(); return; }
   if (view === 'calendar') { openCalendarDialog(); return; }
   if (view === 'drawing') { openDrawingStudio(); return; }
-  if (view === 'project' || view === 'contract' || view === 'estimate' || view === 'analysis') {
-    openUploadDialog(view === 'analysis' ? 'project' : view);
+  if (view === 'project' || view === 'analysis') {
+    openProjectObjectWizard({ quickProjectOnly: true });
+    return;
+  }
+  if (view === 'contract' || view === 'estimate') {
+    openUploadDialog(view);
     return;
   }
   if (view === 'balance') { openBalanceDialog(); return; }
@@ -5524,7 +5779,7 @@ function openObjectDialog() {
     const name = $('[data-object-name]').value.trim();
     if (!name) { $('[data-object-name]').focus(); return; }
     const now = new Date().toISOString();
-    objectRegistry.unshift({ id: createObjectId(), name, status: 'active', uploadedAt: now, analyzedAt: now, startedAt: now, completedAt: null, files: [] });
+    objectRegistry.unshift({ id: createObjectId(), name, projectTitle: name, contractNumber: '', status: 'active', createdAt: now, uploadedAt: now, analyzedAt: now, startedAt: now, completedAt: null, files: [] });
     saveObjects();
     renderObjects();
     renderWidgets();
@@ -5586,7 +5841,10 @@ $$('[data-open-panel]').forEach((button) => button.addEventListener('click', () 
 $$('[data-open-view]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.openView)));
 $$('[data-action]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.action)));
 $$('[data-analysis-type]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.analysisType)));
-$('[data-run-analysis]').addEventListener('click', runAnalysis);
+$('[data-run-analysis]')?.addEventListener('click', runAnalysis);
+$$('[data-create-project-object]').forEach((button) => button.addEventListener('click', () => openProjectObjectWizard()));
+$('[data-quick-project-analysis]')?.addEventListener('click', () => openProjectObjectWizard({ quickProjectOnly: true }));
+$('[data-quick-object-start]')?.addEventListener('click', openCashObjectDialog);
 $$('[data-add-object]').forEach((button) => button.addEventListener('click', openObjectDialog));
 $$('[data-add-cash-object]').forEach((button) => button.addEventListener('click', openCashObjectDialog));
 $('[data-export-all-cashflow]')?.addEventListener('click', openAllCashflowExportDialog);

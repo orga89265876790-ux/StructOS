@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=30" />
+    <link rel="stylesheet" href="dashboard.css?v=31" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -98,23 +98,35 @@
             </div>
           </section>
 
-          <section class="section-block">
-            <div class="section-heading"><div><span class="eyebrow" data-i18n="quickStart">БЫСТРЫЙ СТАРТ</span><h2 data-i18n="analysis">Анализ</h2></div><button class="text-action" type="button" data-open-panel="space" data-i18n="configure">Настроить</button></div>
-            <div class="analysis-grid">
-              <button class="analysis-card is-selected" type="button" data-analysis-type="project" aria-pressed="true">
-                <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 39h36M10 39V18h25v21M15 18V9h17v9M18 26h4M27 26h4M18 32h4M27 32h4"/><path d="m9 13 7-5 7 5 7-5 7 5"/></svg>
-                <span data-i18n="project">Проект</span><small data-analysis-status="project">0 из 1</small><em data-analysis-file="project" hidden></em>
+          <section class="home-inbox-grid" aria-label="Приглашения и уведомления">
+            <button class="home-inbox-card is-invitations" type="button" data-open-view="invitations">
+              <span class="home-inbox-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6h18v14H3zM3 7l9 7 9-7"/></svg></span>
+              <span class="home-inbox-copy"><small>STRUCTOS INVITE</small><strong data-i18n="invitations">Приглашения</strong><em data-i18n="invitationsHomeHint">Доступ к объектам и командам</em></span>
+              <b data-home-invitations-count>0</b>
+            </button>
+            <button class="home-inbox-card is-notifications" type="button" data-open-view="notifications">
+              <span class="home-inbox-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg></span>
+              <span class="home-inbox-copy"><small>STRUCTOS NOTICE</small><strong data-i18n="notifications">Уведомления</strong><em data-i18n="notificationsHomeHint">Важные события по вашим объектам</em></span>
+              <b data-home-notifications-count>0</b>
+            </button>
+          </section>
+
+          <section class="section-block quick-start-section">
+            <div class="section-heading"><div><span class="eyebrow" data-i18n="quickStart">БЫСТРЫЙ СТАРТ</span><h2 data-i18n="chooseAction">Выберите действие</h2></div></div>
+            <div class="quick-start-grid">
+              <button class="quick-start-card is-project-analysis" type="button" data-quick-project-analysis>
+                <span class="quick-start-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M6 39h36M10 39V18h25v21M15 18V9h17v9M18 26h4M27 26h4M18 32h4M27 32h4"/><path d="m9 13 7-5 7 5 7-5 7 5"/></svg></span>
+                <span><strong data-i18n="quickProjectAnalysis">Быстрый анализ проекта</strong><small data-i18n="quickProjectAnalysisHint">Создать объект, загрузить проект и запустить анализ</small></span><i aria-hidden="true">→</i>
               </button>
-              <button class="analysis-card" type="button" data-analysis-type="contract" aria-pressed="false">
-                <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 5h20l5 6v19L24 43H12V5Z"/><path d="M32 5v7h6M17 18h15M17 24h12M17 30h7M27 35l9-9 4 4-9 9-5 1 1-5Z"/></svg>
-                <span data-i18n="contract">Договор</span><small data-analysis-status="contract">0 из 1</small><em data-analysis-file="contract" hidden></em>
+              <button class="quick-start-card is-development" type="button" disabled aria-disabled="true">
+                <span class="quick-start-icon" aria-hidden="true">▶</span>
+                <span><strong data-i18n="quickProjectStart">Быстрый старт проекта</strong><small data-i18n="inDevelopment">В разработке</small></span><i class="development-badge" data-i18n="inDevelopment">В разработке</i>
               </button>
-              <button class="analysis-card" type="button" data-analysis-type="estimate" aria-pressed="false">
-                <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="5" width="28" height="38" rx="3"/><path d="M16 11h16v7H16zM16 24h4M24 24h4M32 24h1M16 30h4M24 30h4M32 30h1M16 36h4M24 36h4M32 36h1"/></svg>
-                <span data-i18n="estimate">Смета</span><small data-analysis-status="estimate">0 из 1</small><em data-analysis-file="estimate" hidden></em>
+              <button class="quick-start-card is-quick-object" type="button" data-quick-object-start>
+                <span class="quick-start-icon" aria-hidden="true">+₽−</span>
+                <span><strong data-i18n="quickObjectStart">Быстрый старт объекта</strong><small data-i18n="quickObjectStartHint">Создать короткий объект для доходов, расходов и отчётов</small></span><i aria-hidden="true">→</i>
               </button>
             </div>
-            <button class="analyze-button primary-button" type="button" data-run-analysis><span data-i18n="analyze">Анализировать</span><span>→</span></button>
           </section>
 
           <section class="object-status-block ready-objects-block">
@@ -151,10 +163,10 @@
         </section>
 
         <section class="tab-panel projects-panel" data-panel="projects" aria-label="Мои проекты" hidden>
-          <div class="page-title my-projects-page-title"><div><span class="eyebrow">STRUCTOS PROJECTS</span><h1 data-i18n="myProjects">Мои проекты</h1><p data-i18n="myProjectsDescription">Все загруженные проекты и их путь до завершения</p></div><div class="my-project-upload-actions"><button class="primary-button" type="button" data-open-view="project" data-i18n="uploadProject">Загрузить проект</button><button class="outline-button" type="button" data-open-view="contract" data-i18n="uploadContract">Загрузить договор</button><button class="outline-button" type="button" data-open-view="estimate" data-i18n="uploadEstimate">Загрузить смету</button></div></div>
-          <section class="my-projects-summary"><span>▰</span><div><small data-i18n="projectPackages">Проектов</small><strong data-my-projects-count>0</strong></div><p data-i18n="projectDocuments">Документы проекта</p></section>
+          <div class="page-title my-projects-page-title"><div><span class="eyebrow">STRUCTOS PROJECTS</span><h1 data-i18n="myProjects">Проекты</h1><p data-i18n="myProjectsDescription">Объекты, проекты, договоры и сметы в одной структуре</p></div><div class="my-project-upload-actions"><button class="primary-button create-project-object-button" type="button" data-create-project-object>＋ <span data-i18n="createObject">Создать объект</span></button></div></div>
+          <section class="my-projects-summary"><span>▰</span><div><small data-i18n="projectObjects">Объектов</small><strong data-my-projects-count>0</strong></div><p data-i18n="projectDocuments">Проект · Договор · Смета</p></section>
           <div class="my-projects-list" data-my-projects-list></div>
-          <div class="empty-state" data-my-projects-empty><div class="empty-building" aria-hidden="true"><span></span><span></span><span></span></div><h2 data-i18n="noMyProjects">Проектов пока нет</h2><p data-i18n="noMyProjectsCopy">Загрузите проект, договор или смету — карточка проекта появится здесь автоматически.</p><div class="my-project-upload-actions is-empty"><button class="primary-button" type="button" data-open-view="project" data-i18n="uploadProject">Загрузить проект</button><button class="outline-button" type="button" data-open-view="contract" data-i18n="uploadContract">Загрузить договор</button><button class="outline-button" type="button" data-open-view="estimate" data-i18n="uploadEstimate">Загрузить смету</button></div></div>
+          <div class="empty-state" data-my-projects-empty><div class="empty-building" aria-hidden="true"><span></span><span></span><span></span></div><h2 data-i18n="noMyProjects">Объектов пока нет</h2><p data-i18n="noMyProjectsCopy">Создайте объект, дайте проекту понятное название и загрузите нужные документы.</p><div class="my-project-upload-actions is-empty"><button class="primary-button create-project-object-button" type="button" data-create-project-object>＋ <span data-i18n="createObject">Создать объект</span></button></div></div>
         </section>
 
         <section class="tab-panel analysis-detail-panel" data-panel="analysis-detail" aria-label="Детальный анализ" hidden>
@@ -269,6 +281,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=30"></script>
+    <script type="module" src="dashboard.js?v=31"></script>
   </body>
 </html>
