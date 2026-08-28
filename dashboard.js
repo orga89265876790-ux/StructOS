@@ -376,7 +376,7 @@ Object.assign(copy.RU, {
   uploadOrganizationCard: 'Загрузить карточку или паспорт', organizationCardSaved: 'Карточка организации сохранена', organizationFileSaved: 'Документ организации сохранён', organizationFileOpenFailed: 'Не удалось открыть документ организации', manualDetails: 'Заполнить вручную', uploadedDocuments: 'Загруженные документы', noOrganizationFile: 'Файл ещё не загружен',
   preparedBy: 'Составил', performedBy: 'Выполнил', acceptedBy: 'Принял', confirmedBy: 'Подтвердил', seal: 'Печать', justification: 'Обоснование', documentDate: 'Дата документа', changeSavedAt: 'Изменения внесены',
   expandOrganizationDocuments: 'Развернуть документы организаций', collapseOrganizationDocuments: 'Свернуть документы организаций', documentObject: 'Объект', documentSection: 'Раздел', objectPlaceholderDocument: 'Введите наименование объекта', sectionPlaceholderDocument: 'Введите наименование раздела',
-  generateAct: 'Сформировать акт', generateStatement: 'Сформировать ведомость', documentRequiredFields: 'Заполните название документа, объект и раздел'
+  generateAct: 'Сформировать акт', generateStatement: 'Сформировать ведомость', documentRequiredFields: 'Заполните название документа, объект и раздел', documentParties: 'Стороны документа', editDocument: 'Редактировать', deleteDocument: 'Удалить', deleteDocumentConfirm: 'Удалить этот документ из истории?', documentDeleted: 'Документ удалён из истории'
 });
 Object.assign(copy.EN, {
   workStatement: 'Statement of work quantities', organizationDocuments: 'Organization documents', organizationDocumentsHint: 'Contractor and Customer cards automatically fill statements and acts for every section of the object.',
@@ -384,7 +384,7 @@ Object.assign(copy.EN, {
   uploadOrganizationCard: 'Upload organization card or passport', organizationCardSaved: 'Organization card saved', organizationFileSaved: 'Organization document saved', organizationFileOpenFailed: 'Organization document could not be opened', manualDetails: 'Enter manually', uploadedDocuments: 'Uploaded documents', noOrganizationFile: 'No file uploaded yet',
   preparedBy: 'Prepared by', performedBy: 'Performed by', acceptedBy: 'Accepted by', confirmedBy: 'Confirmed by', seal: 'Seal', justification: 'Justification', documentDate: 'Document date', changeSavedAt: 'Changes saved',
   expandOrganizationDocuments: 'Expand organization documents', collapseOrganizationDocuments: 'Collapse organization documents', documentObject: 'Object', documentSection: 'Section', objectPlaceholderDocument: 'Enter object name', sectionPlaceholderDocument: 'Enter section name',
-  generateAct: 'Create act', generateStatement: 'Create statement', documentRequiredFields: 'Enter the document name, object, and section'
+  generateAct: 'Create act', generateStatement: 'Create statement', documentRequiredFields: 'Enter the document name, object, and section', documentParties: 'Document parties', editDocument: 'Edit', deleteDocument: 'Delete', deleteDocumentConfirm: 'Delete this document from history?', documentDeleted: 'Document deleted from history'
 });
 Object.assign(copy.KY, {
   workStatement: 'Иш көлөмдөрүнүн ведомосту', organizationDocuments: 'Уюмдардын документтери', organizationDocumentsHint: 'Аткаруучунун жана Заказчынын карточкалары объекттин бардык бөлүмдөрүндөгү ведомость менен актыларды автоматтык толтурат.',
@@ -392,7 +392,7 @@ Object.assign(copy.KY, {
   uploadOrganizationCard: 'Карточканы же паспортту жүктөө', organizationCardSaved: 'Уюмдун карточкасы сакталды', organizationFileSaved: 'Уюмдун документи сакталды', organizationFileOpenFailed: 'Уюмдун документи ачылган жок', manualDetails: 'Кол менен толтуруу', uploadedDocuments: 'Жүктөлгөн документтер', noOrganizationFile: 'Файл али жүктөлө элек',
   preparedBy: 'Түзгөн', performedBy: 'Аткарган', acceptedBy: 'Кабыл алган', confirmedBy: 'Ырастаган', seal: 'Мөөр', justification: 'Негиздеме', documentDate: 'Документтин күнү', changeSavedAt: 'Өзгөртүү киргизилди',
   expandOrganizationDocuments: 'Уюмдардын документтерин ачуу', collapseOrganizationDocuments: 'Уюмдардын документтерин жыйноо', documentObject: 'Объект', documentSection: 'Бөлүм', objectPlaceholderDocument: 'Объекттин аталышын жазыңыз', sectionPlaceholderDocument: 'Бөлүмдүн аталышын жазыңыз',
-  generateAct: 'Акт түзүү', generateStatement: 'Ведомость түзүү', documentRequiredFields: 'Документтин аталышын, объектти жана бөлүмдү толтуруңуз'
+  generateAct: 'Акт түзүү', generateStatement: 'Ведомость түзүү', documentRequiredFields: 'Документтин аталышын, объектти жана бөлүмдү толтуруңуз', documentParties: 'Документтин тараптары', editDocument: 'Өзгөртүү', deleteDocument: 'Өчүрүү', deleteDocumentConfirm: 'Бул документ тарыхтан өчүрүлсүнбү?', documentDeleted: 'Документ тарыхтан өчүрүлдү'
 });
 Object.assign(copy.TJ, {
   workStatement: 'Ведомости ҳаҷми корҳо', organizationDocuments: 'Ҳуҷҷатҳои ташкилотҳо', organizationDocumentsHint: 'Карточкаҳои Иҷрокунанда ва Фармоишгар ведомост ва санадҳои ҳамаи бахшҳои объектро худкор пур мекунанд.',
@@ -400,7 +400,7 @@ Object.assign(copy.TJ, {
   uploadOrganizationCard: 'Карточка ё шиносномаро бор кунед', organizationCardSaved: 'Карточкаи ташкилот нигоҳ дошта шуд', organizationFileSaved: 'Ҳуҷҷати ташкилот нигоҳ дошта шуд', organizationFileOpenFailed: 'Ҳуҷҷати ташкилот кушода нашуд', manualDetails: 'Дастӣ пур кардан', uploadedDocuments: 'Ҳуҷҷатҳои боршуда', noOrganizationFile: 'Файл ҳанӯз бор нашудааст',
   preparedBy: 'Тартиб дод', performedBy: 'Иҷро кард', acceptedBy: 'Қабул кард', confirmedBy: 'Тасдиқ кард', seal: 'Мӯҳр', justification: 'Асосноккунӣ', documentDate: 'Санаи ҳуҷҷат', changeSavedAt: 'Тағйирот ворид шуд',
   expandOrganizationDocuments: 'Кушодани ҳуҷҷатҳои ташкилотҳо', collapseOrganizationDocuments: 'Пӯшидани ҳуҷҷатҳои ташкилотҳо', documentObject: 'Объект', documentSection: 'Бахш', objectPlaceholderDocument: 'Номи объектро ворид кунед', sectionPlaceholderDocument: 'Номи бахшро ворид кунед',
-  generateAct: 'Ташкили санад', generateStatement: 'Ташкили ведомост', documentRequiredFields: 'Номи ҳуҷҷат, объект ва бахшро пур кунед'
+  generateAct: 'Ташкили санад', generateStatement: 'Ташкили ведомост', documentRequiredFields: 'Номи ҳуҷҷат, объект ва бахшро пур кунед', documentParties: 'Тарафҳои ҳуҷҷат', editDocument: 'Таҳрир', deleteDocument: 'Нест кардан', deleteDocumentConfirm: 'Ин ҳуҷҷат аз таърих нест карда шавад?', documentDeleted: 'Ҳуҷҷат аз таърих нест шуд'
 });
 
 Object.assign(copy.RU, { constructionActivityBlock: 'Блок строительной активности', constructionActivityIntro: 'Все ваши действия в StructOS формируют деловую активность. Чем она выше, тем раньше вы получите подходящие предложения.', last30Days: 'За последние 30 дней', businessActivity: 'Деловая активность', cabinetWork: 'Работа с личным кабинетом', projectWork: 'Работа с проектом', activityTotal: 'Всего', daysWithStructos: 'Дней со StructOS', invitedToStructos: 'Приглашено в StructOS', activityActions: 'действий' });
@@ -2610,6 +2610,21 @@ function normalizeCashWorkRows(value, priced = false) {
   return normalized.length ? normalized : [{ id: `work-${Date.now()}-${Math.random().toString(16).slice(2)}`, name: '', unit: '', quantity: 0, ...(priced ? { price: 0 } : { basis: '' }) }];
 }
 
+function normalizeCashDocumentOrganizations(value) {
+  return Object.fromEntries(CASH_ORGANIZATION_ROLES.map((role) => {
+    const card = value?.[role] || {};
+    return [role, {
+      type: card.type === 'individual' ? 'individual' : 'organization',
+      company: String(card.company || '').trim().slice(0, 200),
+      inn: String(card.inn || '').replace(/\D+/g, '').slice(0, 12),
+      kpp: String(card.kpp || '').replace(/\D+/g, '').slice(0, 9),
+      fullName: String(card.fullName || '').trim().slice(0, 200),
+      passport: String(card.passport || '').trim().slice(0, 80),
+      fileName: String(card.fileName || '').slice(0, 240)
+    }];
+  }));
+}
+
 function normalizeCashDocument(value, priced = false, defaultTitle = '') {
   const savedTitle = String(value?.title || '').trim();
   return {
@@ -2619,6 +2634,7 @@ function normalizeCashDocument(value, priced = false, defaultTitle = '') {
     sectionName: String(value?.sectionName || '').trim().slice(0, 160),
     rows: normalizeCashWorkRows(value?.rows, priced),
     parties: cashDocumentParties(value?.parties),
+    organizations: normalizeCashDocumentOrganizations(value?.organizations),
     updatedAt: value?.updatedAt || null
   };
 }
@@ -2630,6 +2646,7 @@ function normalizeCashReportHistory(value) {
     type: ['statement', 'act', 'finance'].includes(item.type) ? item.type : 'finance',
     title: String(item.title || item.report.title).slice(0, 160),
     createdAt: item.createdAt || new Date().toISOString(),
+    updatedAt: item.updatedAt || item.createdAt || new Date().toISOString(),
     report: item.report
   }));
 }
@@ -3198,7 +3215,10 @@ function openCashEntryEditDialog(objectId, sectionId, kind, entryId) {
 function cashReportHistoryMarkup(section) {
   const isOpen = expandedCashReportHistory.has(section.id);
   const reportHistory = Array.isArray(section?.reportHistory) ? section.reportHistory : [];
-  const rows = reportHistory.length ? reportHistory.map((item) => `<article class="cash-report-history-row" data-report-history-id="${escapeHtml(item.id)}"><span><strong>${escapeHtml(item.title)}</strong><small>${tr('changeSavedAt')}: ${cashDate(item.createdAt)}${item.report?.parties?.date ? ` · ${tr('documentDate')}: ${escapeHtml(item.report.parties.date)}` : ''}</small></span><div><button type="button" data-history-preview aria-label="${escapeHtml(tr('viewReport'))}" title="${escapeHtml(tr('viewReport'))}">◉</button><button type="button" data-history-download="pdf">PDF</button><button type="button" data-history-download="xlsx">Excel</button><button type="button" data-history-share="pdf">↗ PDF</button><button type="button" data-history-share="xlsx">↗ Excel</button></div></article>`).join('') : `<div class="cash-history-empty">${tr('noReports')}</div>`;
+  const rows = reportHistory.length ? reportHistory.map((item) => {
+    const documentActions = ['statement', 'act'].includes(item.type) ? `<button type="button" data-history-edit>${tr('editDocument')}</button><button class="is-danger" type="button" data-history-delete>${tr('deleteDocument')}</button>` : '';
+    return `<article class="cash-report-history-row" data-report-history-id="${escapeHtml(item.id)}"><span><strong>${escapeHtml(item.title)}</strong><small>${tr('changeSavedAt')}: ${cashDate(item.updatedAt || item.createdAt)}${item.report?.parties?.date ? ` · ${tr('documentDate')}: ${escapeHtml(item.report.parties.date)}` : ''}</small></span><div>${documentActions}<button type="button" data-history-preview aria-label="${escapeHtml(tr('viewReport'))}" title="${escapeHtml(tr('viewReport'))}">◉</button><button type="button" data-history-download="pdf">PDF</button><button type="button" data-history-download="xlsx">Excel</button><button type="button" data-history-share="pdf">↗ PDF</button><button type="button" data-history-share="xlsx">↗ Excel</button></div></article>`;
+  }).join('') : `<div class="cash-history-empty">${tr('noReports')}</div>`;
   return `<div class="cash-report-history"${isOpen ? '' : ' hidden'}><div class="cash-report-history-list">${rows}</div></div>`;
 }
 
@@ -3364,6 +3384,12 @@ function bindCashSectionEvents(object, scope) {
       $$('[data-report-history-id]', sectionCard).forEach((historyRow) => {
         const item = section.reportHistory.find((record) => record.id === historyRow.dataset.reportHistoryId);
         if (!item) return;
+        $('[data-history-edit]', historyRow)?.addEventListener('click', () => openCashDocumentDialog(object.id, section.id, item.type, { sourceReport: item.report, historyId: item.id }));
+        $('[data-history-delete]', historyRow)?.addEventListener('click', () => {
+          if (!window.confirm(tr('deleteDocumentConfirm'))) return;
+          section.reportHistory = section.reportHistory.filter((record) => record.id !== item.id);
+          saveCashflow(); renderCashflow(); showToast(tr('documentDeleted'));
+        });
         $('[data-history-preview]', historyRow)?.addEventListener('click', () => openCashReportPreview(item.report, () => item.report));
         $$('[data-history-download]', historyRow).forEach((button) => button.addEventListener('click', () => deliverCashReport(item.report, button.dataset.historyDownload, false).catch((error) => { console.error(error); showToast(tr('comingSoon')); })));
         $$('[data-history-share]', historyRow).forEach((button) => button.addEventListener('click', () => deliverCashReport(item.report, button.dataset.historyShare, true).catch((error) => { if (error?.name !== 'AbortError') { console.error(error); showToast(tr('comingSoon')); } })));
@@ -3505,6 +3531,31 @@ function cashDocumentOrganizationsSummaryMarkup(object) {
   }).join('')}</div></section>`;
 }
 
+function cashDocumentOrganizationsEditorMarkup(organizations) {
+  return `<section class="cash-document-party-editor"><h3>${tr('documentParties')}</h3><div>${CASH_ORGANIZATION_ROLES.map((role) => {
+    const card = organizations[role];
+    return `<article data-document-organization-role="${role}"><header><strong>${tr(role)}</strong><select data-document-organization-type><option value="organization"${card.type === 'organization' ? ' selected' : ''}>${tr('legalEntity')}</option><option value="individual"${card.type === 'individual' ? ' selected' : ''}>${tr('individual')}</option></select></header><div data-document-organization-legal${card.type === 'organization' ? '' : ' hidden'}><label><span>${tr('companyName')}</span><input data-document-organization-field="company" maxlength="200" value="${escapeHtml(card.company)}" /></label><label><span>${tr('inn')}</span><input data-document-organization-field="inn" inputmode="numeric" maxlength="12" value="${escapeHtml(card.inn)}" /></label><label><span>${tr('kpp')}</span><input data-document-organization-field="kpp" inputmode="numeric" maxlength="9" value="${escapeHtml(card.kpp)}" /></label></div><div data-document-organization-individual${card.type === 'individual' ? '' : ' hidden'}><label><span>${tr('fullName')}</span><input data-document-organization-field="fullName" maxlength="200" value="${escapeHtml(card.fullName)}" /></label><label><span>${tr('passportSeriesNumber')}</span><input data-document-organization-field="passport" maxlength="80" value="${escapeHtml(card.passport)}" /></label></div>${card.fileName ? `<small>${tr('uploadedDocuments')}: ${escapeHtml(card.fileName)}</small>` : ''}</article>`;
+  }).join('')}</div></section>`;
+}
+
+function bindCashDocumentOrganizations(scope, draft) {
+  $$('[data-document-organization-role]', scope).forEach((cardElement) => {
+    const role = cardElement.dataset.documentOrganizationRole;
+    const card = draft.organizations[role];
+    const typeSelect = $('[data-document-organization-type]', cardElement);
+    typeSelect?.addEventListener('change', () => {
+      card.type = typeSelect.value === 'individual' ? 'individual' : 'organization';
+      $('[data-document-organization-legal]', cardElement).hidden = card.type !== 'organization';
+      $('[data-document-organization-individual]', cardElement).hidden = card.type !== 'individual';
+    });
+    $$('[data-document-organization-field]', cardElement).forEach((input) => input.addEventListener('input', () => {
+      const field = input.dataset.documentOrganizationField;
+      card[field] = ['inn', 'kpp'].includes(field) ? input.value.replace(/\D+/g, '').slice(0, field === 'inn' ? 12 : 9) : input.value.slice(0, field === 'passport' ? 80 : 200);
+      if (input.value !== card[field]) input.value = card[field];
+    }));
+  });
+}
+
 function cashDocumentReport(object, section, kind, documentData) {
   const priced = kind === 'act';
   const defaultTitle = tr(priced ? 'workAct' : 'workStatement');
@@ -3525,8 +3576,23 @@ function cashDocumentReport(object, section, kind, documentData) {
     tables: [{ title: documentTitle, columns, rows: documentData.rows.map((row, index) => ({ number: index + 1, name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { price: row.price, total: Math.round(row.quantity * row.price * 100) / 100 } : { basis: row.basis }) })), ...(priced ? { total: documentData.rows.reduce((sum, row) => sum + row.quantity * row.price, 0) } : {}) }],
     parties: documentData.parties,
     partyRoles: priced ? ['performed', 'accepted'] : ['prepared', 'confirmed'],
-    organizations: cashOrganizationReportData(object)
+    organizations: normalizeCashDocumentOrganizations(documentData.organizations || cashOrganizationReportData(object))
   };
+}
+
+function cashDocumentDataFromReport(report, kind) {
+  const priced = kind === 'act';
+  const table = report?.tables?.[0] || { rows: [] };
+  return normalizeCashDocument({
+    title: report?.documentName || table.title || '',
+    number: report?.documentNumber || '',
+    objectName: report?.objectName || '',
+    sectionName: report?.sectionName || '',
+    rows: (table.rows || []).map((row) => ({ name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { price: row.price } : { basis: row.basis }) })),
+    parties: report?.parties,
+    organizations: report?.organizations,
+    updatedAt: new Date().toISOString()
+  }, priced, tr(priced ? 'workAct' : 'workStatement'));
 }
 
 function sectionFinanceReport(object, section) {
@@ -3634,13 +3700,25 @@ function allCashflowDetailedReport(objects) {
   return { title: tr('fullCashflowReport'), objectName: tr('allCashObjects'), sectionName: tr('allObjectSections'), tables: generalPage.tables, parties: null, pages: [generalPage, ...objectPages] };
 }
 
-function saveCashReportHistory(section, type, report) {
+function saveCashReportHistory(section, type, report, historyId = null) {
   const snapshot = JSON.parse(JSON.stringify(report));
-  const latest = section.reportHistory[0];
-  if (latest?.type === type && JSON.stringify(latest.report) === JSON.stringify(snapshot)) return latest;
   const visibleTitle = snapshot.documentName || snapshot.title;
   const historyTitle = snapshot.documentNumber ? `${visibleTitle} · № ${snapshot.documentNumber.replace(/^№\s*/u, '')}` : visibleTitle;
-  const item = { id: `report-${Date.now()}-${Math.random().toString(16).slice(2)}`, type, title: historyTitle, createdAt: new Date().toISOString(), report: snapshot };
+  const changedAt = new Date().toISOString();
+  if (historyId) {
+    const existing = section.reportHistory.find((item) => item.id === historyId);
+    if (existing) {
+      existing.type = type;
+      existing.title = historyTitle;
+      existing.updatedAt = changedAt;
+      existing.report = snapshot;
+      saveCashflow();
+      return existing;
+    }
+  }
+  const latest = section.reportHistory[0];
+  if (latest?.type === type && JSON.stringify(latest.report) === JSON.stringify(snapshot)) return latest;
+  const item = { id: `report-${Date.now()}-${Math.random().toString(16).slice(2)}`, type, title: historyTitle, createdAt: changedAt, updatedAt: changedAt, report: snapshot };
   section.reportHistory.unshift(item);
   section.reportHistory = section.reportHistory.slice(0, 50);
   saveCashflow();
@@ -3687,7 +3765,7 @@ function reportPreviewOrganizationsMarkup(organizations) {
     const fields = card.type === 'individual'
       ? [[tr('fullName'), card.fullName], [tr('passportSeriesNumber'), card.passport]]
       : [[tr('companyName'), card.company], [tr('inn'), card.inn], [tr('kpp'), card.kpp]];
-    return `<article><strong>${tr(role)}</strong>${fields.map(([label, value]) => `<span>${escapeHtml(label)}: ${escapeHtml(value || '—')}</span>`).join('')}${card.fileName ? `<small>${escapeHtml(card.fileName)}</small>` : ''}</article>`;
+    return `<article><strong>${tr(role)} · ${tr(card.type === 'individual' ? 'individual' : 'legalEntity')}</strong>${fields.map(([label, value]) => `<span>${escapeHtml(label)}: ${escapeHtml(value || '—')}</span>`).join('')}${card.fileName ? `<small>${escapeHtml(card.fileName)}</small>` : ''}</article>`;
   }).join('')}</div></section>`;
 }
 
@@ -3754,14 +3832,14 @@ async function createPdfReport(report) {
       { text: `${page.sectionLabel}: ${page.sectionName}`, style: 'meta', margin: [0, 0, 0, 14] }
     );
     if (page.organizations) {
-      const organizationRows = [[tr('partyType'), tr('manualDetails'), tr('uploadedDocuments')], ...CASH_ORGANIZATION_ROLES.map((role) => {
+      const organizationRows = [[tr('reportType'), tr('partyType'), tr('manualDetails'), tr('uploadedDocuments')], ...CASH_ORGANIZATION_ROLES.map((role) => {
         const card = page.organizations[role] || {};
         const details = card.type === 'individual'
           ? `${tr('fullName')}: ${card.fullName || '—'}; ${tr('passportSeriesNumber')}: ${card.passport || '—'}`
           : `${tr('companyName')}: ${card.company || '—'}; ${tr('inn')}: ${card.inn || '—'}; ${tr('kpp')}: ${card.kpp || '—'}`;
-        return [tr(role), details, card.fileName || '—'];
+        return [tr(role), tr(card.type === 'individual' ? 'individual' : 'legalEntity'), details, card.fileName || '—'];
       })];
-      content.push({ text: tr('organizationDocuments'), style: 'sectionTitle', margin: [0, 4, 0, 6] }, { table: { headerRows: 1, widths: [78, '*', 105], body: organizationRows }, layout: 'lightHorizontalLines', fontSize: 8, margin: [0, 0, 0, 8] });
+      content.push({ text: tr('organizationDocuments'), style: 'sectionTitle', margin: [0, 4, 0, 6] }, { table: { headerRows: 1, widths: [65, 72, '*', 88], body: organizationRows }, layout: 'lightHorizontalLines', fontSize: 8, margin: [0, 0, 0, 8] });
     }
     page.tables.forEach((table) => {
       const body = [table.columns.map((column) => ({ text: column.label, style: 'tableHeader' })), ...(table.rows.length ? table.rows.map((row) => table.columns.map((column) => {
@@ -3845,7 +3923,7 @@ async function createExcelReport(report) {
         const details = card.type === 'individual'
           ? `${tr('fullName')}: ${card.fullName || '—'}; ${tr('passportSeriesNumber')}: ${card.passport || '—'}`
           : `${tr('companyName')}: ${card.company || '—'}; ${tr('inn')}: ${card.inn || '—'}; ${tr('kpp')}: ${card.kpp || '—'}`;
-        worksheet.getCell(cursor, 1).value = tr(role); worksheet.getCell(cursor, 1).font = { bold: true };
+        worksheet.getCell(cursor, 1).value = `${tr(role)} · ${tr(card.type === 'individual' ? 'individual' : 'legalEntity')}`; worksheet.getCell(cursor, 1).font = { bold: true };
         worksheet.getCell(cursor, 2).value = details;
         worksheet.getCell(cursor, Math.min(5, maxColumns)).value = card.fileName || '—';
         cursor += 1;
@@ -3940,38 +4018,34 @@ function bindCashReportActions(scope, getReport, onSuccess = null, getPreviewRep
   bindCashDeliveryActions(scope, getReport, onSuccess);
 }
 
-function openCashDocumentDialog(objectId, sectionId, kind, generatedRows = null) {
+function openCashDocumentDialog(objectId, sectionId, kind, options = {}) {
   const { object, section } = findCashSection(objectId, sectionId);
   if (!object || !section) return;
   const priced = kind === 'act';
   const defaultTitle = tr(priced ? 'workAct' : 'workStatement');
-  const storedDocument = section[priced ? 'act' : 'statement'];
-  const draft = normalizeCashDocument(JSON.parse(JSON.stringify(storedDocument)), priced, defaultTitle);
-  if (!storedDocument?.updatedAt) {
+  const sourceReport = options?.sourceReport || null;
+  const generatedDocument = options?.generatedDocument || null;
+  const historyId = options?.historyId || null;
+  const draft = sourceReport
+    ? cashDocumentDataFromReport(sourceReport, kind)
+    : normalizeCashDocument(generatedDocument, priced, defaultTitle);
+  if (!sourceReport && !generatedDocument) {
     draft.title = '';
     draft.number = '';
     draft.objectName = '';
     draft.sectionName = '';
-  }
-  if (Array.isArray(generatedRows)) {
-    draft.title = '';
-    draft.number = '';
-    draft.objectName = '';
-    draft.sectionName = '';
-    draft.rows = normalizeCashWorkRows(generatedRows, priced);
     draft.parties = cashDocumentParties(null);
     draft.updatedAt = null;
-  } else if (priced && !draft.updatedAt && section.statement?.rows?.some((row) => row.name || row.unit || row.quantity)) {
-    draft.rows = normalizeCashWorkRows(section.statement.rows.map((row) => ({ name: row.name, unit: row.unit, quantity: row.quantity, price: 0 })), true);
   }
+  draft.organizations = normalizeCashDocumentOrganizations((sourceReport || generatedDocument)?.organizations || cashOrganizationReportData(object));
   const headCells = `<th>${tr('recordNumber')}</th><th>${tr('workName')}</th><th>${tr('unit')}</th><th>${tr('quantity')}</th>${priced ? `<th>${tr('price')}</th><th>${tr('rowTotal')}</th>` : `<th>${tr('justification')}</th>`}<th></th>`;
   const columnLayout = `<colgroup><col class="work-col-number" /><col class="work-col-name" /><col class="work-col-unit" /><col class="work-col-quantity" />${priced ? '<col class="work-col-price" /><col class="work-col-total" />' : '<col class="work-col-basis" />'}<col class="work-col-actions" /></colgroup>`;
   const responsibleMarkup = priced
     ? `${cashPartyMarkup('performed', tr('performedBy'), draft.parties.performed)}${cashPartyMarkup('accepted', tr('acceptedBy'), draft.parties.accepted)}`
     : `${cashPartyMarkup('prepared', tr('preparedBy'), draft.parties.prepared)}${cashPartyMarkup('confirmed', tr('confirmedBy'), draft.parties.confirmed)}`;
-  showDialog(defaultTitle, `${object.name} · ${section.name}`, `<div class="cash-document-editor">${cashDocumentOrganizationsSummaryMarkup(object)}<div class="cash-document-meta"><label><span>${tr(priced ? 'actName' : 'statementName')}</span><input type="text" maxlength="160" data-document-title value="${escapeHtml(draft.title)}" /></label><label><span>${tr(priced ? 'actNumber' : 'statementNumber')}</span><input type="text" maxlength="80" data-document-number value="${escapeHtml(draft.number)}" placeholder="1" /></label><label><span>${tr('documentObject')}</span><input type="text" maxlength="160" data-document-object value="${escapeHtml(draft.objectName)}" placeholder="${escapeHtml(tr('objectPlaceholderDocument'))}" /></label><label><span>${tr('documentSection')}</span><input type="text" maxlength="160" data-document-section value="${escapeHtml(draft.sectionName)}" placeholder="${escapeHtml(tr('sectionPlaceholderDocument'))}" /></label></div><div class="cash-work-table-wrap"><table class="cash-work-table ${priced ? 'is-act' : 'is-statement'}">${columnLayout}<thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="5">${tr('rowTotal')}</td><td data-document-grand-total>0 ₽</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>＋ ${tr('addRow')}</button><div class="cash-parties">${responsibleMarkup}<label class="cash-document-date"><span>${tr('documentDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button><button class="outline-button" type="button" data-generate-related-document>${tr(priced ? 'generateStatement' : 'generateAct')}</button></div>${cashReportActionsMarkup()}</div>`);
+  showDialog(defaultTitle, `${object.name} · ${section.name}`, `<div class="cash-document-editor">${cashDocumentOrganizationsEditorMarkup(draft.organizations)}<div class="cash-document-meta"><label><span>${tr(priced ? 'actName' : 'statementName')}</span><input type="text" maxlength="160" data-document-title value="${escapeHtml(draft.title)}" /></label><label><span>${tr(priced ? 'actNumber' : 'statementNumber')}</span><input type="text" maxlength="80" data-document-number value="${escapeHtml(draft.number)}" placeholder="1" /></label><label><span>${tr('documentObject')}</span><input type="text" maxlength="160" data-document-object value="${escapeHtml(draft.objectName)}" placeholder="${escapeHtml(tr('objectPlaceholderDocument'))}" /></label><label><span>${tr('documentSection')}</span><input type="text" maxlength="160" data-document-section value="${escapeHtml(draft.sectionName)}" placeholder="${escapeHtml(tr('sectionPlaceholderDocument'))}" /></label></div><div class="cash-work-table-wrap"><table class="cash-work-table ${priced ? 'is-act' : 'is-statement'}">${columnLayout}<thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="5">${tr('rowTotal')}</td><td data-document-grand-total>0 ₽</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>＋ ${tr('addRow')}</button><div class="cash-parties">${responsibleMarkup}<label class="cash-document-date"><span>${tr('documentDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button><button class="${priced ? 'outline-button' : 'primary-button'}" type="button" data-generate-related-document>${tr(priced ? 'generateStatement' : 'generateAct')}</button></div>${cashReportActionsMarkup()}</div>`);
   const dialog = $('[data-dialog]'); dialog.classList.add('cash-document-dialog');
-  const scope = $('[data-dialog-content]'); bindCashDocumentRows(scope, draft, priced);
+  const scope = $('[data-dialog-content]'); bindCashDocumentRows(scope, draft, priced); bindCashDocumentOrganizations(scope, draft);
   const requiredFields = [
     { selector: '[data-document-title]', key: 'title' },
     { selector: '[data-document-object]', key: 'objectName' },
@@ -4009,27 +4083,35 @@ function openCashDocumentDialog(objectId, sectionId, kind, generatedRows = null)
     saveCashflow();
     return cashDocumentReport(object, section, kind, draft);
   };
+  const clearCurrentForm = () => {
+    section[priced ? 'act' : 'statement'] = normalizeCashDocument(null, priced, defaultTitle);
+    saveCashflow();
+  };
   $('[data-save-cash-document]', scope)?.addEventListener('click', () => {
     try {
       const report = persistDocument();
-      saveCashReportHistory(section, kind, report);
+      saveCashReportHistory(section, kind, report, historyId);
+      clearCurrentForm();
       renderCashflow();
+      dialog.close();
       showToast(tr('documentSaved'));
     } catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
   });
   $('[data-generate-related-document]', scope)?.addEventListener('click', () => {
     try {
       const report = persistDocument();
-      saveCashReportHistory(section, kind, report);
+      saveCashReportHistory(section, kind, report, historyId);
       const relatedKind = priced ? 'statement' : 'act';
       const relatedRows = draft.rows.map((row) => ({ name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { basis: '' } : { price: 0 }) }));
+      const relatedDocument = { title: draft.title, number: draft.number, objectName: draft.objectName, sectionName: draft.sectionName, rows: relatedRows, organizations: draft.organizations, parties: cashDocumentParties(null) };
+      clearCurrentForm();
       renderCashflow();
       showToast(tr('documentSaved'));
-      openCashDocumentDialog(objectId, sectionId, relatedKind, relatedRows);
+      openCashDocumentDialog(objectId, sectionId, relatedKind, { generatedDocument: relatedDocument });
     } catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
   });
   bindCashReportActions(scope, persistDocument, (report) => {
-    saveCashReportHistory(section, kind, report);
+    saveCashReportHistory(section, kind, report, historyId);
     renderCashflow();
   }, previewDocument);
 }
