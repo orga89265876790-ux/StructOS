@@ -3534,8 +3534,15 @@ function cashDocumentOrganizationsSummaryMarkup(object) {
 function cashDocumentOrganizationsEditorMarkup(organizations) {
   return `<section class="cash-document-party-editor"><h3>${tr('documentParties')}</h3><div>${CASH_ORGANIZATION_ROLES.map((role) => {
     const card = organizations[role];
-    return `<article data-document-organization-role="${role}"><header><strong>${tr(role)}</strong><select data-document-organization-type><option value="organization"${card.type === 'organization' ? ' selected' : ''}>${tr('legalEntity')}</option><option value="individual"${card.type === 'individual' ? ' selected' : ''}>${tr('individual')}</option></select></header><div data-document-organization-legal${card.type === 'organization' ? '' : ' hidden'}><label><span>${tr('companyName')}</span><input data-document-organization-field="company" maxlength="200" value="${escapeHtml(card.company)}" /></label><label><span>${tr('inn')}</span><input data-document-organization-field="inn" inputmode="numeric" maxlength="12" value="${escapeHtml(card.inn)}" /></label><label><span>${tr('kpp')}</span><input data-document-organization-field="kpp" inputmode="numeric" maxlength="9" value="${escapeHtml(card.kpp)}" /></label></div><div data-document-organization-individual${card.type === 'individual' ? '' : ' hidden'}><label><span>${tr('fullName')}</span><input data-document-organization-field="fullName" maxlength="200" value="${escapeHtml(card.fullName)}" /></label><label><span>${tr('passportSeriesNumber')}</span><input data-document-organization-field="passport" maxlength="80" value="${escapeHtml(card.passport)}" /></label></div>${card.fileName ? `<small>${tr('uploadedDocuments')}: ${escapeHtml(card.fileName)}</small>` : ''}</article>`;
+    return `<article data-document-organization-role="${role}"><header><strong>${tr(role)}</strong><select data-document-organization-type><option value="organization"${card.type === 'organization' ? ' selected' : ''}>${tr('legalEntity')}</option><option value="individual"${card.type === 'individual' ? ' selected' : ''}>${tr('individual')}</option></select></header><p data-document-organization-summary>${escapeHtml(cashDocumentOrganizationSummary(card))}</p>${card.fileName ? `<small>${tr('uploadedDocuments')}: ${escapeHtml(card.fileName)}</small>` : ''}</article>`;
   }).join('')}</div></section>`;
+}
+
+function cashDocumentOrganizationSummary(card) {
+  const details = card.type === 'individual'
+    ? [card.fullName, card.passport && `${tr('passportSeriesNumber')}: ${card.passport}`]
+    : [card.company, card.inn && `${tr('inn')}: ${card.inn}`, card.kpp && `${tr('kpp')}: ${card.kpp}`];
+  return details.filter(Boolean).join(' · ') || tr('notSpecified');
 }
 
 function bindCashDocumentOrganizations(scope, draft) {
@@ -3545,14 +3552,9 @@ function bindCashDocumentOrganizations(scope, draft) {
     const typeSelect = $('[data-document-organization-type]', cardElement);
     typeSelect?.addEventListener('change', () => {
       card.type = typeSelect.value === 'individual' ? 'individual' : 'organization';
-      $('[data-document-organization-legal]', cardElement).hidden = card.type !== 'organization';
-      $('[data-document-organization-individual]', cardElement).hidden = card.type !== 'individual';
+      const summary = $('[data-document-organization-summary]', cardElement);
+      if (summary) summary.textContent = cashDocumentOrganizationSummary(card);
     });
-    $$('[data-document-organization-field]', cardElement).forEach((input) => input.addEventListener('input', () => {
-      const field = input.dataset.documentOrganizationField;
-      card[field] = ['inn', 'kpp'].includes(field) ? input.value.replace(/\D+/g, '').slice(0, field === 'inn' ? 12 : 9) : input.value.slice(0, field === 'passport' ? 80 : 200);
-      if (input.value !== card[field]) input.value = card[field];
-    }));
   });
 }
 
