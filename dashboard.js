@@ -328,6 +328,10 @@ Object.assign(copy.EN, {
 });
 Object.assign(copy.KY, { connections: 'StructOS менен байланыштыруу', connectionsHint: 'Тармактарды жана байланыштарды бир StructOS профилине кошуңуз.', notSpecified: 'Көрсөтүлгөн эмес', editPersonalData: 'Жеке маалыматтарды өзгөртүү', accountReward: '+150 бонус', rewardOnce: 'Бир жолу гана', linkAccount: 'Байлоо', linkedAccount: 'Байланган', mergeAccounts: 'Аккаунттарды бириктирүү', inDevelopment: 'Иштелип жатат' });
 Object.assign(copy.TJ, { connections: 'Пайваст кардан ба StructOS', connectionsHint: 'Шабакаҳо ва тамосҳоро ба як профили StructOS пайваст кунед.', notSpecified: 'Нишон дода нашудааст', editPersonalData: 'Тағйири маълумоти шахсӣ', accountReward: '+150 бонус', rewardOnce: 'Танҳо як бор', linkAccount: 'Пайваст кардан', linkedAccount: 'Пайваст шуд', mergeAccounts: 'Якҷо кардани аккаунтҳо', inDevelopment: 'Дар таҳия' });
+Object.assign(copy.RU, { demoVersion: 'Демо-версия', executorPlan: 'Исполнитель', supplierPlan: 'Поставщик', aggregatorPlan: 'Агрегатор', choosePlan: 'Выберите тариф и подписку', planSelectionHint: 'Выбор сохраняется в профиле и определяет доступные возможности кабинета.', currentPlan: 'Выбран', planSelected: 'Тариф и подписка сохранены', moneyBalance: 'Денежный баланс', bonusBalance: 'Бонусный баланс', financeHubHint: 'Управляйте денежным балансом, бонусами и историей операций в одном месте.', financeHistoryHint: 'Нажмите на нужный баланс, чтобы открыть его историю.', newBonusRulesHint: 'Новые способы получения бонусов будут добавляться в этот список.' });
+Object.assign(copy.EN, { demoVersion: 'Demo version', executorPlan: 'Contractor', supplierPlan: 'Supplier', aggregatorPlan: 'Aggregator', choosePlan: 'Choose a plan and subscription', planSelectionHint: 'Your selection is saved in the profile and controls the available workspace features.', currentPlan: 'Selected', planSelected: 'Plan and subscription saved', moneyBalance: 'Money balance', bonusBalance: 'Bonus balance', financeHubHint: 'Manage your money balance, bonuses, and transaction history in one place.', financeHistoryHint: 'Select a balance to open its history.', newBonusRulesHint: 'New ways to earn bonuses will be added to this list.' });
+Object.assign(copy.KY, { demoVersion: 'Демо-версия', executorPlan: 'Аткаруучу', supplierPlan: 'Жеткирүүчү', aggregatorPlan: 'Агрегатор', choosePlan: 'Тарифти жана жазылууну тандаңыз', planSelectionHint: 'Тандоо профилде сакталат жана кабинеттин жеткиликтүү мүмкүнчүлүктөрүн аныктайт.', currentPlan: 'Тандалды', planSelected: 'Тариф жана жазылуу сакталды', moneyBalance: 'Акча балансы', bonusBalance: 'Бонус балансы', financeHubHint: 'Акча балансын, бонустарды жана операциялар тарыхын бир жерден башкарыңыз.', financeHistoryHint: 'Тарыхын ачуу үчүн керектүү балансты басыңыз.', newBonusRulesHint: 'Бонус алуунун жаңы жолдору ушул тизмеге кошулат.' });
+Object.assign(copy.TJ, { demoVersion: 'Демо-версия', executorPlan: 'Иҷрокунанда', supplierPlan: 'Таъминкунанда', aggregatorPlan: 'Агрегатор', choosePlan: 'Тариф ва обунаро интихоб кунед', planSelectionHint: 'Интихоб дар профил нигоҳ дошта шуда, имкониятҳои дастрасро муайян мекунад.', currentPlan: 'Интихоб шуд', planSelected: 'Тариф ва обуна нигоҳ дошта шуд', moneyBalance: 'Тавозуни пулӣ', bonusBalance: 'Тавозуни бонусӣ', financeHubHint: 'Тавозуни пулӣ, бонусҳо ва таърихи амалиётро дар як ҷо идора кунед.', financeHistoryHint: 'Барои кушодани таърих тавозуни лозимиро интихоб кунед.', newBonusRulesHint: 'Роҳҳои нави гирифтани бонусҳо ба ин рӯйхат илова мешаванд.' });
 
 Object.assign(copy.RU, { followOurChannel: 'Подпишись на наш канал', followOurChannelHint: 'Новости StructOS, обновления функций и важные объявления.' });
 Object.assign(copy.EN, { followOurChannel: 'Follow our channel', followOurChannelHint: 'StructOS news, feature updates, and important announcements.' });
@@ -414,6 +418,7 @@ let authClient = null;
 let toastTimer;
 const DEMO_SESSION_KEY = 'structos-demo-session';
 const FINANCE_KEY = 'structos-finance-v1';
+const PROFILE_PLAN_KEY = 'structos-profile-plan-v1';
 const UPLOADS_KEY = 'structos-analysis-uploads-v1';
 const OBJECT_NAME_KEY = 'structos-analysis-object-name';
 const OBJECTS_KEY = 'structos-objects-v1';
@@ -478,6 +483,15 @@ function loadFinance() {
 }
 
 const finance = loadFinance();
+
+const profilePlans = [
+  { key: 'demo', labelKey: 'demoVersion' },
+  { key: 'user', labelKey: 'userTariff' },
+  { key: 'executor', labelKey: 'executorPlan' },
+  { key: 'supplier', labelKey: 'supplierPlan' },
+  { key: 'aggregator', labelKey: 'aggregatorPlan' }
+];
+let profilePlan = profilePlans.some((plan) => plan.key === localStorage.getItem(PROFILE_PLAN_KEY)) ? localStorage.getItem(PROFILE_PLAN_KEY) : 'user';
 
 const structosConnectionProviders = [
   { key: 'yandex', labelKey: 'yandexAccount', icon: 'Я', className: 'is-yandex' },
@@ -738,6 +752,7 @@ function applyLanguage(next) {
   $('[data-force-refresh]')?.setAttribute('title', tr('forceRefresh'));
   $$('[data-i18n]').forEach((element) => { element.textContent = tr(element.dataset.i18n); });
   renderFinance();
+  renderProfilePlan();
   renderReferral();
   renderAnalysisCards();
   renderObjects();
@@ -920,16 +935,6 @@ function applyPassportRewards(progress) {
   if (changed) saveFinance();
 }
 
-function applyProfileReward(progress) {
-  finance.rewards ||= {};
-  finance.rewards.profileFull = Boolean(finance.rewards.profileFull);
-  if (progress < 100 || finance.rewards.profileFull) return;
-  finance.rewards.profileFull = true;
-  finance.bonuses += 500;
-  finance.bonusHistory.unshift({ key: 'profileFullReward', amount: 500, date: new Date().toISOString() });
-  saveFinance();
-}
-
 function splitAuthName(fullName) {
   const parts = String(fullName || '').trim().split(/\s+/).filter(Boolean).slice(0, 3);
   if (parts.length >= 3) return { lastName: parts[0], firstName: parts[1], patronymic: parts.slice(2).join(' ') };
@@ -968,7 +973,6 @@ function saveIdentityState(syncRemote = true) {
   const profileProgress = calculatedProfileCompletion();
   localStorage.setItem(PROFILE_COMPLETION_KEY, String(profileProgress));
   applyPassportRewards(passportProgress);
-  applyProfileReward(profileProgress);
   renderPersonIdentity();
   renderPassportProgress();
   renderWidgets();
@@ -1573,6 +1577,34 @@ function renderFinance() {
   $$('[data-balance-value]').forEach((item) => { item.textContent = formatMoney(finance.balance); });
   $$('[data-bonus-value]').forEach((item) => { item.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(finance.bonuses); });
   $$('[data-finance-summary]').forEach((item) => { item.textContent = `${formatMoney(finance.balance)} · ${finance.bonuses}`; });
+}
+
+function currentProfilePlan() {
+  return profilePlans.find((plan) => plan.key === profilePlan) || profilePlans[1];
+}
+
+function renderProfilePlan() {
+  const label = tr(currentProfilePlan().labelKey);
+  $$('[data-plan-summary]').forEach((item) => { item.textContent = label; });
+}
+
+function profilePlansMarkup() {
+  return `<section class="profile-plan-list">${profilePlans.map((plan) => {
+    const selected = plan.key === profilePlan;
+    return `<button class="profile-plan-option${selected ? ' is-selected' : ''}" type="button" data-select-profile-plan="${plan.key}" aria-pressed="${selected}"><span><small>STRUCTOS</small><strong>${escapeHtml(tr(plan.labelKey))}</strong></span><i>${selected ? `✓ ${escapeHtml(tr('currentPlan'))}` : '›'}</i></button>`;
+  }).join('')}</section>`;
+}
+
+function openSubscriptionDialog() {
+  showDialog(tr('tariffSubscription'), tr('planSelectionHint'), profilePlansMarkup());
+  const scope = $('[data-dialog-content]');
+  $$('[data-select-profile-plan]', scope).forEach((button) => button.addEventListener('click', () => {
+    profilePlan = profilePlans.some((plan) => plan.key === button.dataset.selectProfilePlan) ? button.dataset.selectProfilePlan : 'user';
+    localStorage.setItem(PROFILE_PLAN_KEY, profilePlan);
+    renderProfilePlan();
+    openSubscriptionDialog();
+    showToast(tr('planSelected'));
+  }));
 }
 
 function referralUrl() {
@@ -2529,26 +2561,54 @@ function historyMarkup(items, bonus = false) {
   return `<div class="transaction-list">${items.map((item) => `<div class="transaction-row"><span><strong>${tr(item.key)}${item.detail ? ` · ${escapeHtml(item.detail)}` : ''}</strong><small>${formatter.format(new Date(item.date))}</small></span><b>+${bonus ? item.amount : formatMoney(item.amount)}</b></div>`).join('')}</div>`;
 }
 
+function bonusRulesMarkup() {
+  return `<section class="finance-bonus-rules"><header><h3>${tr('bonusRules')}</h3><p>${tr('newBonusRulesHint')}</p></header><div class="bonus-rules"><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+200</b><span>${tr('referralReward')}</span></div><div><b>+150</b><span>${tr('accountLinkReward')} · ${tr('rewardOnce')}</span></div></div></section>`;
+}
+
+function processBalanceTopUp(input, reopen) {
+  const amount = Math.round(Number(input?.value) * 100) / 100;
+  if (!Number.isFinite(amount) || amount <= 0) { input?.focus(); showToast(tr('invalidAmount')); return; }
+  const bonus = Math.round(amount * 10) / 100;
+  const date = new Date().toISOString();
+  finance.balance += amount;
+  finance.bonuses = Math.round((finance.bonuses + bonus) * 100) / 100;
+  finance.balanceHistory.unshift({ key: 'balanceTopUp', amount, date });
+  finance.bonusHistory.unshift({ key: 'topUpBonus', amount: bonus, date });
+  saveFinance();
+  renderFinance();
+  $('[data-dialog]')?.close();
+  showToast(tr('credited'));
+  reopen();
+}
+
 function openBalanceDialog() {
   showDialog(tr('balance'), tr('topUpHint'), `<div class="topup-form"><label><span>${tr('topUpAmount')}</span><input data-topup-amount type="number" inputmode="decimal" min="1" step="1" placeholder="1000" /></label><button class="primary-button" type="button" data-topup>${tr('topUp')}</button></div><section class="history-section"><h3>${tr('balanceHistory')}</h3>${historyMarkup(finance.balanceHistory)}</section>`);
-  $('[data-topup]')?.addEventListener('click', () => {
-    const input = $('[data-topup-amount]');
-    const amount = Math.round(Number(input.value) * 100) / 100;
-    if (!Number.isFinite(amount) || amount <= 0) { input.focus(); showToast(tr('invalidAmount')); return; }
-    const bonus = Math.round(amount * 10) / 100;
-    const date = new Date().toISOString();
-    finance.balance += amount;
-    finance.bonuses = Math.round((finance.bonuses + bonus) * 100) / 100;
-    finance.balanceHistory.unshift({ key: 'balanceTopUp', amount, date });
-    finance.bonusHistory.unshift({ key: 'topUpBonus', amount: bonus, date });
-    saveFinance(); renderFinance();
-    $('[data-dialog]').close(); showToast(tr('credited')); openBalanceDialog();
-  });
+  $('[data-topup]')?.addEventListener('click', () => processBalanceTopUp($('[data-topup-amount]'), openBalanceDialog));
 }
 
 function openBonusDialog() {
-  const rules = `<div class="bonus-rules"><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+200</b><span>${tr('referralReward')}</span></div><div><b>+500</b><span>${tr('profileFullReward')}</span></div><div><b>+150</b><span>${tr('accountLinkReward')} · ${tr('rewardOnce')}</span></div></div>`;
-  showDialog(tr('bonuses'), tr('bonusRules'), `${rules}<section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section>`);
+  showDialog(tr('bonuses'), tr('bonusRules'), `${bonusRulesMarkup()}<section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section>`);
+}
+
+function setFinanceHubTab(tab) {
+  const next = tab === 'bonuses' ? 'bonuses' : 'balance';
+  $$('[data-finance-hub-tab]').forEach((button) => {
+    const active = button.dataset.financeHubTab === next;
+    button.classList.toggle('is-active', active);
+    button.setAttribute('aria-pressed', String(active));
+  });
+  $$('[data-finance-hub-pane]').forEach((pane) => { pane.hidden = pane.dataset.financeHubPane !== next; });
+}
+
+function openFinanceHubDialog(activeTab = 'balance') {
+  const balanceValue = formatMoney(finance.balance);
+  const bonusValue = new Intl.NumberFormat(root.lang || 'ru-RU').format(finance.bonuses);
+  const markup = `<section class="finance-hub"><div class="finance-hub-balances"><button type="button" data-finance-hub-tab="balance"><span>${tr('moneyBalance')}</span><strong>${balanceValue}</strong><small>${tr('balanceHistory')}</small></button><button type="button" data-finance-hub-tab="bonuses"><span>${tr('bonusBalance')}</span><strong>${bonusValue}</strong><small>${tr('bonusHistory')}</small></button></div>${bonusRulesMarkup()}<div class="finance-hub-pane" data-finance-hub-pane="balance"><div class="topup-form"><label><span>${tr('topUpAmount')}</span><input data-topup-amount type="number" inputmode="decimal" min="1" step="1" placeholder="1000" /></label><button class="primary-button" type="button" data-topup>${tr('topUp')}</button></div><section class="history-section"><h3>${tr('balanceHistory')}</h3>${historyMarkup(finance.balanceHistory)}</section></div><div class="finance-hub-pane" data-finance-hub-pane="bonuses" hidden><section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section></div></section>`;
+  showDialog(tr('balanceBonuses'), tr('financeHubHint'), markup);
+  const scope = $('[data-dialog-content]');
+  $$('[data-finance-hub-tab]', scope).forEach((button) => button.addEventListener('click', () => setFinanceHubTab(button.dataset.financeHubTab)));
+  $('[data-topup]', scope)?.addEventListener('click', () => processBalanceTopUp($('[data-topup-amount]', scope), () => openFinanceHubDialog('balance')));
+  setFinanceHubTab(activeTab);
 }
 
 function escapeHtml(value) {
@@ -5409,8 +5469,10 @@ function openView(view) {
     return;
   }
   if (view === 'balance') { openBalanceDialog(); return; }
+  if (view === 'balanceBonuses') { openFinanceHubDialog(); return; }
   if (view === 'finance') { setPanel('cashflow'); return; }
   if (view === 'bonuses') { openBonusDialog(); return; }
+  if (view === 'subscription') { openSubscriptionDialog(); return; }
   if (view === 'connections') { openConnectionsDialog(); return; }
   const labels = { subscription: 'tariffSubscription', invitations: 'invitations', invite: 'invite', notifications: 'notifications', documents: 'documents', connections: 'connections', settings: 'settings', acts: 'widgetActs', attention: 'attention', tasks: 'widgetTasks', team: 'widgetTeam' };
   showDialog(tr(labels[view] || 'settings'), tr('comingSoon'), `<div class="dialog-options"><div class="dialog-option"><span>StructOS</span><span>→</span></div></div>`);
@@ -5540,7 +5602,6 @@ window.addEventListener('pagehide', persistIdentityLocal);
 
 importPendingTransfer();
 applyPassportRewards(passportCompletion());
-applyProfileReward(calculatedProfileCompletion());
 applyTheme(localStorage.getItem('structos-theme') === 'light' ? 'light' : 'dark');
 applyLanguage(language);
 renderWidgetPicker();
