@@ -374,25 +374,29 @@ Object.assign(copy.RU, {
   workStatement: 'Ведомость объемов работ', organizationDocuments: 'Документы организаций', organizationDocumentsHint: 'Карточки Исполнителя и Заказчика автоматически заполняют ведомости и акты всех разделов объекта.',
   contractor: 'Исполнитель', customer: 'Заказчик', partyType: 'Тип карточки', legalEntity: 'Организация', individual: 'Физическое лицо', companyName: 'Компания', inn: 'ИНН', kpp: 'КПП', passportSeriesNumber: 'Серия и номер паспорта',
   uploadOrganizationCard: 'Загрузить карточку или паспорт', organizationCardSaved: 'Карточка организации сохранена', organizationFileSaved: 'Документ организации сохранён', organizationFileOpenFailed: 'Не удалось открыть документ организации', manualDetails: 'Заполнить вручную', uploadedDocuments: 'Загруженные документы', noOrganizationFile: 'Файл ещё не загружен',
-  preparedBy: 'Составил', performedBy: 'Выполнил', acceptedBy: 'Принял', confirmedBy: 'Подтвердил', seal: 'Печать', justification: 'Обоснование', documentDate: 'Дата документа', changeSavedAt: 'Изменения внесены'
+  preparedBy: 'Составил', performedBy: 'Выполнил', acceptedBy: 'Принял', confirmedBy: 'Подтвердил', seal: 'Печать', justification: 'Обоснование', documentDate: 'Дата документа', changeSavedAt: 'Изменения внесены',
+  expandOrganizationDocuments: 'Развернуть документы организаций', collapseOrganizationDocuments: 'Свернуть документы организаций', documentObject: 'Объект', documentSection: 'Раздел', objectPlaceholderDocument: 'Введите наименование объекта', sectionPlaceholderDocument: 'Введите наименование раздела'
 });
 Object.assign(copy.EN, {
   workStatement: 'Statement of work quantities', organizationDocuments: 'Organization documents', organizationDocumentsHint: 'Contractor and Customer cards automatically fill statements and acts for every section of the object.',
   contractor: 'Contractor', customer: 'Customer', partyType: 'Card type', legalEntity: 'Organization', individual: 'Individual', companyName: 'Company', inn: 'Tax ID', kpp: 'Registration code', passportSeriesNumber: 'Passport series and number',
   uploadOrganizationCard: 'Upload organization card or passport', organizationCardSaved: 'Organization card saved', organizationFileSaved: 'Organization document saved', organizationFileOpenFailed: 'Organization document could not be opened', manualDetails: 'Enter manually', uploadedDocuments: 'Uploaded documents', noOrganizationFile: 'No file uploaded yet',
-  preparedBy: 'Prepared by', performedBy: 'Performed by', acceptedBy: 'Accepted by', confirmedBy: 'Confirmed by', seal: 'Seal', justification: 'Justification', documentDate: 'Document date', changeSavedAt: 'Changes saved'
+  preparedBy: 'Prepared by', performedBy: 'Performed by', acceptedBy: 'Accepted by', confirmedBy: 'Confirmed by', seal: 'Seal', justification: 'Justification', documentDate: 'Document date', changeSavedAt: 'Changes saved',
+  expandOrganizationDocuments: 'Expand organization documents', collapseOrganizationDocuments: 'Collapse organization documents', documentObject: 'Object', documentSection: 'Section', objectPlaceholderDocument: 'Enter object name', sectionPlaceholderDocument: 'Enter section name'
 });
 Object.assign(copy.KY, {
   workStatement: 'Иш көлөмдөрүнүн ведомосту', organizationDocuments: 'Уюмдардын документтери', organizationDocumentsHint: 'Аткаруучунун жана Заказчынын карточкалары объекттин бардык бөлүмдөрүндөгү ведомость менен актыларды автоматтык толтурат.',
   contractor: 'Аткаруучу', customer: 'Заказчы', partyType: 'Карточканын түрү', legalEntity: 'Уюм', individual: 'Жеке жак', companyName: 'Компания', inn: 'ИНН', kpp: 'КПП', passportSeriesNumber: 'Паспорттун сериясы жана номери',
   uploadOrganizationCard: 'Карточканы же паспортту жүктөө', organizationCardSaved: 'Уюмдун карточкасы сакталды', organizationFileSaved: 'Уюмдун документи сакталды', organizationFileOpenFailed: 'Уюмдун документи ачылган жок', manualDetails: 'Кол менен толтуруу', uploadedDocuments: 'Жүктөлгөн документтер', noOrganizationFile: 'Файл али жүктөлө элек',
-  preparedBy: 'Түзгөн', performedBy: 'Аткарган', acceptedBy: 'Кабыл алган', confirmedBy: 'Ырастаган', seal: 'Мөөр', justification: 'Негиздеме', documentDate: 'Документтин күнү', changeSavedAt: 'Өзгөртүү киргизилди'
+  preparedBy: 'Түзгөн', performedBy: 'Аткарган', acceptedBy: 'Кабыл алган', confirmedBy: 'Ырастаган', seal: 'Мөөр', justification: 'Негиздеме', documentDate: 'Документтин күнү', changeSavedAt: 'Өзгөртүү киргизилди',
+  expandOrganizationDocuments: 'Уюмдардын документтерин ачуу', collapseOrganizationDocuments: 'Уюмдардын документтерин жыйноо', documentObject: 'Объект', documentSection: 'Бөлүм', objectPlaceholderDocument: 'Объекттин аталышын жазыңыз', sectionPlaceholderDocument: 'Бөлүмдүн аталышын жазыңыз'
 });
 Object.assign(copy.TJ, {
   workStatement: 'Ведомости ҳаҷми корҳо', organizationDocuments: 'Ҳуҷҷатҳои ташкилотҳо', organizationDocumentsHint: 'Карточкаҳои Иҷрокунанда ва Фармоишгар ведомост ва санадҳои ҳамаи бахшҳои объектро худкор пур мекунанд.',
   contractor: 'Иҷрокунанда', customer: 'Фармоишгар', partyType: 'Навъи карточка', legalEntity: 'Ташкилот', individual: 'Шахси воқеӣ', companyName: 'Ширкат', inn: 'ИНН', kpp: 'КПП', passportSeriesNumber: 'Серия ва рақами шиноснома',
   uploadOrganizationCard: 'Карточка ё шиносномаро бор кунед', organizationCardSaved: 'Карточкаи ташкилот нигоҳ дошта шуд', organizationFileSaved: 'Ҳуҷҷати ташкилот нигоҳ дошта шуд', organizationFileOpenFailed: 'Ҳуҷҷати ташкилот кушода нашуд', manualDetails: 'Дастӣ пур кардан', uploadedDocuments: 'Ҳуҷҷатҳои боршуда', noOrganizationFile: 'Файл ҳанӯз бор нашудааст',
-  preparedBy: 'Тартиб дод', performedBy: 'Иҷро кард', acceptedBy: 'Қабул кард', confirmedBy: 'Тасдиқ кард', seal: 'Мӯҳр', justification: 'Асосноккунӣ', documentDate: 'Санаи ҳуҷҷат', changeSavedAt: 'Тағйирот ворид шуд'
+  preparedBy: 'Тартиб дод', performedBy: 'Иҷро кард', acceptedBy: 'Қабул кард', confirmedBy: 'Тасдиқ кард', seal: 'Мӯҳр', justification: 'Асосноккунӣ', documentDate: 'Санаи ҳуҷҷат', changeSavedAt: 'Тағйирот ворид шуд',
+  expandOrganizationDocuments: 'Кушодани ҳуҷҷатҳои ташкилотҳо', collapseOrganizationDocuments: 'Пӯшидани ҳуҷҷатҳои ташкилотҳо', documentObject: 'Объект', documentSection: 'Бахш', objectPlaceholderDocument: 'Номи объектро ворид кунед', sectionPlaceholderDocument: 'Номи бахшро ворид кунед'
 });
 
 Object.assign(copy.RU, { constructionActivityBlock: 'Блок строительной активности', constructionActivityIntro: 'Все ваши действия в StructOS формируют деловую активность. Чем она выше, тем раньше вы получите подходящие предложения.', last30Days: 'За последние 30 дней', businessActivity: 'Деловая активность', cabinetWork: 'Работа с личным кабинетом', projectWork: 'Работа с проектом', activityTotal: 'Всего', daysWithStructos: 'Дней со StructOS', invitedToStructos: 'Приглашено в StructOS', activityActions: 'действий' });
@@ -2607,6 +2611,8 @@ function normalizeCashDocument(value, priced = false, defaultTitle = '') {
   return {
     title: String(!priced && LEGACY_STATEMENT_TITLES.has(savedTitle) ? defaultTitle : savedTitle || defaultTitle).trim().slice(0, 160),
     number: String(value?.number || '').trim().slice(0, 80),
+    objectName: String(value?.objectName || '').trim().slice(0, 160),
+    sectionName: String(value?.sectionName || '').trim().slice(0, 160),
     rows: normalizeCashWorkRows(value?.rows, priced),
     parties: cashDocumentParties(value?.parties),
     updatedAt: value?.updatedAt || null
@@ -2716,6 +2722,7 @@ function loadCashflow() {
       createdAt: object.createdAt || new Date().toISOString(),
       completed: Boolean(object.completed),
       completedAt: object.completedAt || null,
+      organizationDocumentsCollapsed: Boolean(object.organizationDocumentsCollapsed),
       organizationDocuments: normalizeCashOrganizationDocuments(object.organizationDocuments),
       sections
     };
@@ -3077,10 +3084,18 @@ function cashOrganizationCardMarkup(card, role) {
 
 function cashOrganizationDocumentsMarkup(object) {
   const documents = normalizeCashOrganizationDocuments(object?.organizationDocuments);
-  return `<section class="cash-organization-documents"><header><div><span class="eyebrow">STRUCTOS DOCUMENTS</span><h2>${tr('organizationDocuments')}</h2><p>${tr('organizationDocumentsHint')}</p></div><b aria-hidden="true">▣</b></header><div class="cash-organization-grid">${CASH_ORGANIZATION_ROLES.map((role) => cashOrganizationCardMarkup(documents[role], role)).join('')}</div></section>`;
+  const collapsed = Boolean(object?.organizationDocumentsCollapsed);
+  return `<details class="cash-organization-documents" data-organization-documents${collapsed ? '' : ' open'}><summary><div><span class="eyebrow">STRUCTOS DOCUMENTS</span><h2>${tr('organizationDocuments')}</h2><p>${tr('organizationDocumentsHint')}</p></div><span class="cash-organization-toggle-label" data-organization-toggle-label>${tr(collapsed ? 'expandOrganizationDocuments' : 'collapseOrganizationDocuments')}</span><b aria-hidden="true">⌄</b></summary><div class="cash-organization-grid">${CASH_ORGANIZATION_ROLES.map((role) => cashOrganizationCardMarkup(documents[role], role)).join('')}</div></details>`;
 }
 
 function bindCashOrganizationDocuments(object, scope) {
+  const documentsSection = $('[data-organization-documents]', scope);
+  documentsSection?.addEventListener('toggle', () => {
+    object.organizationDocumentsCollapsed = !documentsSection.open;
+    const label = $('[data-organization-toggle-label]', documentsSection);
+    if (label) label.textContent = tr(documentsSection.open ? 'collapseOrganizationDocuments' : 'expandOrganizationDocuments');
+    saveCashflow();
+  });
   $$('[data-organization-role]', scope).forEach((cardElement) => {
     const role = cardElement.dataset.organizationRole;
     const card = object.organizationDocuments[role];
@@ -3405,6 +3420,7 @@ function openCashObjectDialog() {
       name: name.slice(0, 100),
       createdAt: new Date().toISOString(),
       completed: false, completedAt: null,
+      organizationDocumentsCollapsed: false,
       organizationDocuments: normalizeCashOrganizationDocuments(),
       sections: []
     });
@@ -3490,6 +3506,8 @@ function cashDocumentReport(object, section, kind, documentData) {
   const defaultTitle = tr(priced ? 'workAct' : 'workStatement');
   const documentTitle = String(documentData.title || defaultTitle).trim().slice(0, 160) || defaultTitle;
   const documentNumber = String(documentData.number || '').trim().slice(0, 80);
+  const documentObjectName = String(documentData.objectName || object.name).trim().slice(0, 160) || object.name;
+  const documentSectionName = String(documentData.sectionName || section.name).trim().slice(0, 160) || section.name;
   const columns = [
     { label: tr('recordNumber'), key: 'number', width: 42 },
     { label: tr('workName'), key: 'name', width: '*' },
@@ -3498,7 +3516,7 @@ function cashDocumentReport(object, section, kind, documentData) {
     ...(priced ? [{ label: tr('price'), key: 'price', width: 72, money: true }, { label: tr('rowTotal'), key: 'total', width: 78, money: true }] : [{ label: tr('justification'), key: 'basis', width: 112 }])
   ];
   return {
-    title: documentTitle, documentNumber, numberLabel: tr(priced ? 'actNumber' : 'statementNumber'), objectName: object.name, sectionName: section.name,
+    title: priced ? documentTitle : defaultTitle, documentName: documentTitle, documentNumber, numberLabel: tr(priced ? 'actNumber' : 'statementNumber'), objectName: documentObjectName, sectionName: documentSectionName, objectLabel: tr('documentObject'), sectionLabel: tr('documentSection'),
     tables: [{ title: documentTitle, columns, rows: documentData.rows.map((row, index) => ({ number: index + 1, name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { price: row.price, total: Math.round(row.quantity * row.price * 100) / 100 } : { basis: row.basis }) })), ...(priced ? { total: documentData.rows.reduce((sum, row) => sum + row.quantity * row.price, 0) } : {}) }],
     parties: documentData.parties,
     partyRoles: priced ? ['performed', 'accepted'] : ['prepared', 'confirmed'],
@@ -3615,7 +3633,8 @@ function saveCashReportHistory(section, type, report) {
   const snapshot = JSON.parse(JSON.stringify(report));
   const latest = section.reportHistory[0];
   if (latest?.type === type && JSON.stringify(latest.report) === JSON.stringify(snapshot)) return latest;
-  const historyTitle = snapshot.documentNumber ? `${snapshot.title} · № ${snapshot.documentNumber.replace(/^№\s*/u, '')}` : snapshot.title;
+  const visibleTitle = snapshot.documentName || snapshot.title;
+  const historyTitle = snapshot.documentNumber ? `${visibleTitle} · № ${snapshot.documentNumber.replace(/^№\s*/u, '')}` : visibleTitle;
   const item = { id: `report-${Date.now()}-${Math.random().toString(16).slice(2)}`, type, title: historyTitle, createdAt: new Date().toISOString(), report: snapshot };
   section.reportHistory.unshift(item);
   section.reportHistory = section.reportHistory.slice(0, 50);
@@ -3681,6 +3700,8 @@ function cashReportPages(report) {
     numberLabel: page.numberLabel || report.numberLabel,
     objectName: page.objectName || report.objectName,
     sectionName: page.sectionName || report.sectionName,
+    objectLabel: page.objectLabel || report.objectLabel || tr('objects'),
+    sectionLabel: page.sectionLabel || report.sectionLabel || tr('sectionName'),
     tables: Array.isArray(page.tables) ? page.tables : [],
     parties: page.parties || null,
     partyRoles: cashReportPartyRoles(page),
@@ -3689,7 +3710,7 @@ function cashReportPages(report) {
 }
 
 function reportPreviewPageMarkup(report) {
-  return `<article class="report-preview-sheet"><header><div><span>STRUCTOS REPORT</span><h2>${escapeHtml(report.title)}</h2>${report.documentNumber ? `<p>${escapeHtml(report.numberLabel || tr('documentNumber'))}: ${escapeHtml(report.documentNumber)}</p>` : ''}</div><img src="${reportPreviewLogoUrl}" alt="StructOS" /></header><div class="report-preview-meta"><p><strong>${tr('objects')}:</strong> ${escapeHtml(report.objectName)}</p><p><strong>${tr('sectionName')}:</strong> ${escapeHtml(report.sectionName)}</p></div>${reportPreviewOrganizationsMarkup(report.organizations)}${report.tables.map(reportPreviewTableMarkup).join('')}${reportPreviewPartiesMarkup(report.parties, report.partyRoles)}<footer><img src="${reportPreviewLogoUrl}" alt="" /><div><strong>${STRUCTOS_DOCUMENT_BRAND.made}</strong><span>${STRUCTOS_DOCUMENT_BRAND.site}</span><span>${STRUCTOS_DOCUMENT_BRAND.slogan}</span></div></footer></article>`;
+  return `<article class="report-preview-sheet"><header><div><span>STRUCTOS REPORT</span><h2>${escapeHtml(report.title)}</h2>${report.documentNumber ? `<p>${escapeHtml(report.numberLabel || tr('documentNumber'))}: ${escapeHtml(report.documentNumber)}</p>` : ''}</div><img src="${reportPreviewLogoUrl}" alt="StructOS" /></header><div class="report-preview-meta"><p><strong>${escapeHtml(report.objectLabel)}:</strong> ${escapeHtml(report.objectName)}</p><p><strong>${escapeHtml(report.sectionLabel)}:</strong> ${escapeHtml(report.sectionName)}</p></div>${reportPreviewOrganizationsMarkup(report.organizations)}${report.tables.map(reportPreviewTableMarkup).join('')}${reportPreviewPartiesMarkup(report.parties, report.partyRoles)}<footer><img src="${reportPreviewLogoUrl}" alt="" /><div><strong>${STRUCTOS_DOCUMENT_BRAND.made}</strong><span>${STRUCTOS_DOCUMENT_BRAND.site}</span><span>${STRUCTOS_DOCUMENT_BRAND.slogan}</span></div></footer></article>`;
 }
 
 function reportPreviewMarkup(report) {
@@ -3717,8 +3738,8 @@ async function createPdfReport(report) {
     content.push({ text: page.title, style: 'title', ...(pageIndex ? { pageBreak: 'before' } : {}) });
     if (page.documentNumber) content.push({ text: `${page.numberLabel || tr('documentNumber')}: ${page.documentNumber}`, style: 'meta' });
     content.push(
-      { text: `${tr('objects')}: ${page.objectName}`, style: 'meta' },
-      { text: `${tr('sectionName')}: ${page.sectionName}`, style: 'meta', margin: [0, 0, 0, 14] }
+      { text: `${page.objectLabel}: ${page.objectName}`, style: 'meta' },
+      { text: `${page.sectionLabel}: ${page.sectionName}`, style: 'meta', margin: [0, 0, 0, 14] }
     );
     if (page.organizations) {
       const organizationRows = [[tr('partyType'), tr('manualDetails'), tr('uploadedDocuments')], ...CASH_ORGANIZATION_ROLES.map((role) => {
@@ -3774,8 +3795,8 @@ async function createExcelReport(report) {
     worksheet.mergeCells(1, 1, 1, maxColumns); worksheet.getCell(1, 1).value = page.title; worksheet.getCell(1, 1).font = { size: 17, bold: true, color: { argb: 'FF075CD3' } };
     let metaRow = 2;
     if (page.documentNumber) { worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${page.numberLabel || tr('documentNumber')}: ${page.documentNumber}`; metaRow += 1; }
-    worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${tr('objects')}: ${page.objectName}`; metaRow += 1;
-    worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${tr('sectionName')}: ${page.sectionName}`;
+    worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${page.objectLabel}: ${page.objectName}`; metaRow += 1;
+    worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${page.sectionLabel}: ${page.sectionName}`;
     let cursor = metaRow + 2;
     if (page.organizations) {
       worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = tr('organizationDocuments'); worksheet.getCell(cursor, 1).font = { bold: true, size: 12, color: { argb: 'FF075CD3' } }; cursor += 1;
@@ -3883,6 +3904,8 @@ function openCashDocumentDialog(objectId, sectionId, kind) {
   const priced = kind === 'act';
   const defaultTitle = tr(priced ? 'workAct' : 'workStatement');
   const draft = normalizeCashDocument(JSON.parse(JSON.stringify(section[priced ? 'act' : 'statement'])), priced, defaultTitle);
+  if (!draft.objectName) draft.objectName = object.name;
+  if (!draft.sectionName) draft.sectionName = section.name;
   if (priced && !draft.updatedAt && section.statement?.rows?.some((row) => row.name || row.unit || row.quantity)) {
     draft.rows = normalizeCashWorkRows(section.statement.rows.map((row) => ({ name: row.name, unit: row.unit, quantity: row.quantity, price: 0 })), true);
   }
@@ -3890,11 +3913,13 @@ function openCashDocumentDialog(objectId, sectionId, kind) {
   const responsibleMarkup = priced
     ? `${cashPartyMarkup('performed', tr('performedBy'), draft.parties.performed)}${cashPartyMarkup('accepted', tr('acceptedBy'), draft.parties.accepted)}`
     : `${cashPartyMarkup('prepared', tr('preparedBy'), draft.parties.prepared)}${cashPartyMarkup('confirmed', tr('confirmedBy'), draft.parties.confirmed)}`;
-  showDialog(defaultTitle, `${object.name} · ${section.name}`, `<div class="cash-document-editor">${cashDocumentOrganizationsSummaryMarkup(object)}<div class="cash-document-meta"><label><span>${tr(priced ? 'actName' : 'statementName')}</span><input type="text" maxlength="160" data-document-title value="${escapeHtml(draft.title)}" /></label><label><span>${tr(priced ? 'actNumber' : 'statementNumber')}</span><input type="text" maxlength="80" data-document-number value="${escapeHtml(draft.number)}" placeholder="1" /></label></div><div class="cash-work-table-wrap"><table class="cash-work-table"><thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="5">${tr('rowTotal')}</td><td data-document-grand-total>0 ₽</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>＋ ${tr('addRow')}</button><div class="cash-parties">${responsibleMarkup}<label class="cash-document-date"><span>${tr('documentDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button></div>${cashReportActionsMarkup()}</div>`);
+  showDialog(defaultTitle, `${object.name} · ${section.name}`, `<div class="cash-document-editor">${cashDocumentOrganizationsSummaryMarkup(object)}<div class="cash-document-meta"><label><span>${tr(priced ? 'actName' : 'statementName')}</span><input type="text" maxlength="160" data-document-title value="${escapeHtml(draft.title)}" /></label><label><span>${tr(priced ? 'actNumber' : 'statementNumber')}</span><input type="text" maxlength="80" data-document-number value="${escapeHtml(draft.number)}" placeholder="1" /></label><label><span>${tr('documentObject')}</span><input type="text" maxlength="160" data-document-object value="${escapeHtml(draft.objectName)}" placeholder="${escapeHtml(tr('objectPlaceholderDocument'))}" /></label><label><span>${tr('documentSection')}</span><input type="text" maxlength="160" data-document-section value="${escapeHtml(draft.sectionName)}" placeholder="${escapeHtml(tr('sectionPlaceholderDocument'))}" /></label></div><div class="cash-work-table-wrap"><table class="cash-work-table"><thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="5">${tr('rowTotal')}</td><td data-document-grand-total>0 ₽</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>＋ ${tr('addRow')}</button><div class="cash-parties">${responsibleMarkup}<label class="cash-document-date"><span>${tr('documentDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button></div>${cashReportActionsMarkup()}</div>`);
   const dialog = $('[data-dialog]'); dialog.classList.add('cash-document-dialog');
   const scope = $('[data-dialog-content]'); bindCashDocumentRows(scope, draft, priced);
   $('[data-document-title]', scope)?.addEventListener('input', (event) => { draft.title = event.currentTarget.value.slice(0, 160); });
   $('[data-document-number]', scope)?.addEventListener('input', (event) => { draft.number = event.currentTarget.value.slice(0, 80); });
+  $('[data-document-object]', scope)?.addEventListener('input', (event) => { draft.objectName = event.currentTarget.value.slice(0, 160); });
+  $('[data-document-section]', scope)?.addEventListener('input', (event) => { draft.sectionName = event.currentTarget.value.slice(0, 160); });
   $('[data-add-work-row]', scope)?.addEventListener('click', () => { draft.rows.push(...normalizeCashWorkRows([], priced)); bindCashDocumentRows(scope, draft, priced); });
   $$('[data-party-field]', scope).forEach((input) => input.addEventListener('input', () => { draft.parties[input.dataset.party][input.dataset.partyField] = input.value.slice(0, 160); }));
   $('[data-document-date]', scope)?.addEventListener('change', (event) => { draft.parties.date = event.currentTarget.value || localDateKey(); });
@@ -3902,6 +3927,8 @@ function openCashDocumentDialog(objectId, sectionId, kind) {
   const persistDocument = () => {
     draft.title = draft.title.trim() || defaultTitle;
     draft.number = draft.number.trim();
+    draft.objectName = draft.objectName.trim() || object.name;
+    draft.sectionName = draft.sectionName.trim() || section.name;
     draft.updatedAt = new Date().toISOString();
     section[priced ? 'act' : 'statement'] = normalizeCashDocument(draft, priced, defaultTitle);
     saveCashflow();
