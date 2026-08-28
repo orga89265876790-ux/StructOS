@@ -348,25 +348,25 @@ Object.assign(copy.KY, { myProjects: 'Менин долбоорлорум', myPr
 Object.assign(copy.TJ, { myProjects: 'Лоиҳаҳои ман', myProjectsDescription: 'Ҳамаи лоиҳаҳо аз боркунӣ то анҷом', projectPackages: 'Лоиҳаҳо', uploadProject: 'Бор кардани лоиҳа', noMyProjects: 'Ҳоло лоиҳа нест', noMyProjectsCopy: 'Лоиҳа, шартнома ё сметаро бор кунед — корти лоиҳа худкор дар ин ҷо пайдо мешавад.', projectDocuments: 'Ҳуҷҷатҳои лоиҳа', lastProjectUpdate: 'Нав шуд' });
 
 Object.assign(copy.RU, {
-  myProjects: 'Проекты', myProjectsDescription: 'Объекты, проекты, договоры и сметы в одной структуре', projectObjects: 'Объектов', projectDocuments: 'Проект · Договор · Смета', noMyProjects: 'Объектов пока нет', noMyProjectsCopy: 'Создайте объект, дайте проекту понятное название и загрузите нужные документы.',
+  quickStart: 'Быстрый старт', myProjects: 'Проекты', myProjectsDescription: 'Объекты, проекты, договоры и сметы в одной структуре', projectObjects: 'Объектов', projectDocuments: 'Проект · Договор · Смета', noMyProjects: 'Объектов пока нет', noMyProjectsCopy: 'Создайте объект, дайте проекту понятное название и загрузите нужные документы.',
   invitationsHomeHint: 'Доступ к объектам и командам', notificationsHomeHint: 'Важные события по вашим объектам', chooseAction: 'Выберите действие', quickProjectAnalysis: 'Быстрый анализ проекта', quickProjectAnalysisHint: 'Создать объект, загрузить проект и запустить анализ', quickProjectStart: 'Быстрый старт проекта', quickObjectStart: 'Быстрый старт объекта', quickObjectStartHint: 'Создать короткий объект для доходов, расходов и отчётов', inDevelopment: 'В разработке',
   projectObjectWizard: 'Создание объекта', objectNameStep: 'Название объекта', projectNameStep: 'Название проекта', documentsStep: 'Документы', stepOf: 'Шаг', continueAction: 'Продолжить', backAction: 'Назад', giveProjectName: 'Дайте своё название проекту', projectNamePlaceholder: 'Например, Электроснабжение БЦ «Северный»', projectNameHint: 'Это название будет видно в списке проектов, договоре и смете.', uploadDocuments: 'Загрузите документы', uploadDocumentsHint: 'Можно загрузить один, два или все три документа. StructOS проанализирует только загруженное.', documentOptional: 'Необязательно', documentRequired: 'Обязательно', chooseDocument: 'Выбрать файл', changeDocument: 'Заменить файл', analyzeAll: 'Анализировать всё', objectSaved: 'Объект создан', projectNameRequired: 'Укажите название проекта', documentsRequired: 'Загрузите хотя бы один документ',
   contractNumberPending: 'Номер будет извлечён при анализе договора', estimateForProject: 'Смета проекта', documentNotLoaded: 'Документ ещё не загружен', pendingAnalysis: 'Ожидает анализа', analyzeLoadedDocuments: 'Анализировать загруженное', analyzingDocuments: 'Анализируем документы', analyzingDocumentsHint: 'StructOS отдельно обрабатывает каждый загруженный файл.', allDocumentsAnalyzed: 'Все загруженные документы проанализированы', allDocumentsAnalyzedCopy: 'Результаты сохранены отдельно по проекту, договору и смете.', invitationsCenter: 'Входящие приглашения', noNewNotifications: 'Новых уведомлений нет', noNewNotificationsHint: 'Важные события по объектам появятся здесь.', contractNumberLabel: 'Договор №'
 });
 Object.assign(copy.EN, {
-  myProjects: 'Projects', myProjectsDescription: 'Objects, projects, contracts, and estimates in one structure', projectObjects: 'Objects', projectDocuments: 'Project · Contract · Estimate', noMyProjects: 'No objects yet', noMyProjectsCopy: 'Create an object, give the project a clear name, and upload the required documents.',
+  quickStart: 'Quick start', myProjects: 'Projects', myProjectsDescription: 'Objects, projects, contracts, and estimates in one structure', projectObjects: 'Objects', projectDocuments: 'Project · Contract · Estimate', noMyProjects: 'No objects yet', noMyProjectsCopy: 'Create an object, give the project a clear name, and upload the required documents.',
   invitationsHomeHint: 'Access to objects and teams', notificationsHomeHint: 'Important events for your objects', chooseAction: 'Choose an action', quickProjectAnalysis: 'Quick project analysis', quickProjectAnalysisHint: 'Create an object, upload a project, and start analysis', quickProjectStart: 'Quick project start', quickObjectStart: 'Quick object start', quickObjectStartHint: 'Create a short object for income, expenses, and reports', inDevelopment: 'In development',
   projectObjectWizard: 'Create object', objectNameStep: 'Object name', projectNameStep: 'Project name', documentsStep: 'Documents', stepOf: 'Step', continueAction: 'Continue', backAction: 'Back', giveProjectName: 'Give the project your own name', projectNamePlaceholder: 'For example, Power supply for Northern Business Center', projectNameHint: 'This name will be visible in the project, contract, and estimate list.', uploadDocuments: 'Upload documents', uploadDocumentsHint: 'Upload one, two, or all three documents. StructOS analyzes only what is uploaded.', documentOptional: 'Optional', documentRequired: 'Required', chooseDocument: 'Choose file', changeDocument: 'Replace file', analyzeAll: 'Analyze all', objectSaved: 'Object created', projectNameRequired: 'Enter a project name', documentsRequired: 'Upload at least one document',
   contractNumberPending: 'The number will be extracted during contract analysis', estimateForProject: 'Project estimate', documentNotLoaded: 'Document has not been uploaded', pendingAnalysis: 'Awaiting analysis', analyzeLoadedDocuments: 'Analyze uploaded files', analyzingDocuments: 'Analyzing documents', analyzingDocumentsHint: 'StructOS processes each uploaded file separately.', allDocumentsAnalyzed: 'All uploaded documents have been analyzed', allDocumentsAnalyzedCopy: 'Results are saved separately for the project, contract, and estimate.', invitationsCenter: 'Incoming invitations', noNewNotifications: 'No new notifications', noNewNotificationsHint: 'Important object events will appear here.', contractNumberLabel: 'Contract No.'
 });
 Object.assign(copy.KY, {
-  myProjects: 'Долбоорлор', myProjectsDescription: 'Объекттер, долбоорлор, келишимдер жана сметалар бир түзүмдө', projectObjects: 'Объекттер', projectDocuments: 'Долбоор · Келишим · Смета', noMyProjects: 'Азырынча объект жок', noMyProjectsCopy: 'Объект түзүп, долбоорго түшүнүктүү ат берип, керектүү документтерди жүктөңүз.',
+  quickStart: 'Тез баштоо', myProjects: 'Долбоорлор', myProjectsDescription: 'Объекттер, долбоорлор, келишимдер жана сметалар бир түзүмдө', projectObjects: 'Объекттер', projectDocuments: 'Долбоор · Келишим · Смета', noMyProjects: 'Азырынча объект жок', noMyProjectsCopy: 'Объект түзүп, долбоорго түшүнүктүү ат берип, керектүү документтерди жүктөңүз.',
   invitationsHomeHint: 'Объекттерге жана командаларга кирүү', notificationsHomeHint: 'Объекттер боюнча маанилүү окуялар', chooseAction: 'Аракетти тандаңыз', quickProjectAnalysis: 'Долбоорду тез талдоо', quickProjectAnalysisHint: 'Объект түзүп, долбоорду жүктөп, талдоону баштоо', quickProjectStart: 'Долбоорду тез баштоо', quickObjectStart: 'Объектти тез баштоо', quickObjectStartHint: 'Киреше, чыгаша жана отчет үчүн кыска объект түзүү', inDevelopment: 'Иштелип жатат',
   projectObjectWizard: 'Объект түзүү', objectNameStep: 'Объекттин аталышы', projectNameStep: 'Долбоордун аталышы', documentsStep: 'Документтер', stepOf: 'Кадам', continueAction: 'Улантуу', backAction: 'Артка', giveProjectName: 'Долбоорго өз аталышыңызды бериңиз', projectNamePlaceholder: 'Мисалы, «Түндүк» ББ электр менен камсыздоо', projectNameHint: 'Бул аталыш долбоор, келишим жана смета тизмесинде көрүнөт.', uploadDocuments: 'Документтерди жүктөңүз', uploadDocumentsHint: 'Бир, эки же үч документти тең жүктөөгө болот. StructOS жүктөлгөндөрдү гана талдайт.', documentOptional: 'Милдеттүү эмес', documentRequired: 'Милдеттүү', chooseDocument: 'Файл тандоо', changeDocument: 'Файлды алмаштыруу', analyzeAll: 'Баарын талдоо', objectSaved: 'Объект түзүлдү', projectNameRequired: 'Долбоордун аталышын жазыңыз', documentsRequired: 'Жок дегенде бир документ жүктөңүз',
   contractNumberPending: 'Номер келишим талданганда алынат', estimateForProject: 'Долбоордун сметасы', documentNotLoaded: 'Документ жүктөлө элек', pendingAnalysis: 'Талдоону күтүп жатат', analyzeLoadedDocuments: 'Жүктөлгөндөрдү талдоо', analyzingDocuments: 'Документтер талданууда', analyzingDocumentsHint: 'StructOS ар бир файлды өзүнчө иштетет.', allDocumentsAnalyzed: 'Бардык жүктөлгөн документтер талданды', allDocumentsAnalyzedCopy: 'Натыйжалар долбоор, келишим жана смета боюнча өзүнчө сакталды.', invitationsCenter: 'Кирген чакыруулар', noNewNotifications: 'Жаңы билдирүү жок', noNewNotificationsHint: 'Объекттер боюнча маанилүү окуялар бул жерде чыгат.', contractNumberLabel: 'Келишим №'
 });
 Object.assign(copy.TJ, {
-  myProjects: 'Лоиҳаҳо', myProjectsDescription: 'Объектҳо, лоиҳаҳо, шартномаҳо ва сметаҳо дар як сохтор', projectObjects: 'Объектҳо', projectDocuments: 'Лоиҳа · Шартнома · Смета', noMyProjects: 'Ҳоло объект нест', noMyProjectsCopy: 'Объект созед, ба лоиҳа номи фаҳмо диҳед ва ҳуҷҷатҳои лозимро бор кунед.',
+  quickStart: 'Оғози зуд', myProjects: 'Лоиҳаҳо', myProjectsDescription: 'Объектҳо, лоиҳаҳо, шартномаҳо ва сметаҳо дар як сохтор', projectObjects: 'Объектҳо', projectDocuments: 'Лоиҳа · Шартнома · Смета', noMyProjects: 'Ҳоло объект нест', noMyProjectsCopy: 'Объект созед, ба лоиҳа номи фаҳмо диҳед ва ҳуҷҷатҳои лозимро бор кунед.',
   invitationsHomeHint: 'Дастрасӣ ба объектҳо ва гурӯҳҳо', notificationsHomeHint: 'Рӯйдодҳои муҳими объектҳо', chooseAction: 'Амалро интихоб кунед', quickProjectAnalysis: 'Таҳлили зуди лоиҳа', quickProjectAnalysisHint: 'Объект созед, лоиҳаро бор карда, таҳлилро оғоз кунед', quickProjectStart: 'Оғози зуди лоиҳа', quickObjectStart: 'Оғози зуди объект', quickObjectStartHint: 'Объекти кӯтоҳ барои даромад, хароҷот ва ҳисобот созед', inDevelopment: 'Дар таҳия',
   projectObjectWizard: 'Сохтани объект', objectNameStep: 'Номи объект', projectNameStep: 'Номи лоиҳа', documentsStep: 'Ҳуҷҷатҳо', stepOf: 'Қадам', continueAction: 'Идома', backAction: 'Ба қафо', giveProjectName: 'Ба лоиҳа номи худро диҳед', projectNamePlaceholder: 'Масалан, Таъминоти барқи МТ «Шимолӣ»', projectNameHint: 'Ин ном дар рӯйхати лоиҳа, шартнома ва смета дида мешавад.', uploadDocuments: 'Ҳуҷҷатҳоро бор кунед', uploadDocumentsHint: 'Як, ду ё ҳар се ҳуҷҷатро бор кардан мумкин. StructOS танҳо ҳуҷҷатҳои боршударо таҳлил мекунад.', documentOptional: 'Ихтиёрӣ', documentRequired: 'Ҳатмӣ', chooseDocument: 'Интихоби файл', changeDocument: 'Иваз кардани файл', analyzeAll: 'Ҳамаро таҳлил кардан', objectSaved: 'Объект сохта шуд', projectNameRequired: 'Номи лоиҳаро ворид кунед', documentsRequired: 'Ақаллан як ҳуҷҷатро бор кунед',
   contractNumberPending: 'Рақам ҳангоми таҳлили шартнома гирифта мешавад', estimateForProject: 'Сметаи лоиҳа', documentNotLoaded: 'Ҳуҷҷат ҳанӯз бор нашудааст', pendingAnalysis: 'Интизори таҳлил', analyzeLoadedDocuments: 'Таҳлили ҳуҷҷатҳои боршуда', analyzingDocuments: 'Ҳуҷҷатҳо таҳлил мешаванд', analyzingDocumentsHint: 'StructOS ҳар файли боршударо алоҳида коркард мекунад.', allDocumentsAnalyzed: 'Ҳамаи ҳуҷҷатҳои боршуда таҳлил шуданд', allDocumentsAnalyzedCopy: 'Натиҷаҳо барои лоиҳа, шартнома ва смета алоҳида нигоҳ дошта шуданд.', invitationsCenter: 'Даъватҳои воридшуда', noNewNotifications: 'Огоҳии нав нест', noNewNotificationsHint: 'Рӯйдодҳои муҳими объектҳо дар ин ҷо пайдо мешаванд.', contractNumberLabel: 'Шартнома №'
@@ -1725,11 +1725,12 @@ let bottomMenuDrag = null;
 let bottomMenuSuppressClick = false;
 
 function bottomMenuViewport() {
+  const viewport = window.visualViewport;
   return {
-    left: 0,
-    top: 0,
-    width: document.documentElement.clientWidth || window.innerWidth,
-    height: document.documentElement.clientHeight || window.innerHeight
+    left: viewport?.offsetLeft || 0,
+    top: viewport?.offsetTop || 0,
+    width: viewport?.width || window.innerWidth || document.documentElement.clientWidth,
+    height: viewport?.height || window.innerHeight || document.documentElement.clientHeight
   };
 }
 
@@ -1839,6 +1840,8 @@ function moveBottomMenu(event) {
 function finishBottomMenuDrag(event) {
   if (!bottomMenuDrag || event.pointerId !== bottomMenuDrag.pointerId) return;
   const moved = bottomMenuDrag.moved;
+  const toggle = $('[data-bottom-menu-toggle]');
+  if (toggle?.hasPointerCapture?.(event.pointerId)) toggle.releasePointerCapture(event.pointerId);
   bottomMenuDrag = null;
   $('[data-bottom-menu]')?.classList.remove('is-dragging');
   if (!moved) return;
@@ -4654,10 +4657,25 @@ function renderAnalysisCards() {
   });
 }
 
+function homePendingNotifications() {
+  return objectRegistry.flatMap((object) => (object.files || [])
+    .filter((file) => file?.kind && !isObjectDocumentAnalyzed(object, file))
+    .map((file) => ({ object, file })));
+}
+
 function renderHomeInbox() {
   const invitationCount = invitedObjects.filter((object) => object.status !== 'completed').length;
-  $$('[data-home-invitations-count]').forEach((element) => { element.textContent = String(invitationCount); });
-  $$('[data-home-notifications-count]').forEach((element) => { element.textContent = '0'; });
+  const notificationCount = homePendingNotifications().length;
+  const renderCount = (selector, count, labelKey) => {
+    $$(selector).forEach((element) => {
+      element.textContent = String(count);
+      const card = element.closest('.home-inbox-card');
+      card?.classList.toggle('has-activity', count > 0);
+      card?.setAttribute('aria-label', `${tr(labelKey)}: ${count}`);
+    });
+  };
+  renderCount('[data-home-invitations-count]', invitationCount, 'invitations');
+  renderCount('[data-home-notifications-count]', notificationCount, 'notifications');
 }
 
 function saveObjects() {
@@ -5737,7 +5755,12 @@ function openInvitationsCenter() {
 }
 
 function openNotificationsCenter() {
-  showDialog(escapeHtml(tr('notifications')), escapeHtml(tr('noNewNotificationsHint')), `<section class="home-notifications-empty"><span>✓</span><strong>${escapeHtml(tr('noNewNotifications'))}</strong><small>${escapeHtml(tr('noNewNotificationsHint'))}</small></section>`);
+  const notifications = homePendingNotifications();
+  const markup = notifications.length
+    ? `<div class="home-invitation-list home-notification-list">${notifications.map(({ object, file }) => `<button type="button" data-open-home-notification="${escapeHtml(object.id)}"><span>!</span><span><strong>${escapeHtml(object.projectTitle || object.name)}</strong><small>${escapeHtml(tr(file.kind))} · ${escapeHtml(tr('pendingAnalysis'))}</small></span><i>›</i></button>`).join('')}</div>`
+    : `<section class="home-notifications-empty"><span>✓</span><strong>${escapeHtml(tr('noNewNotifications'))}</strong><small>${escapeHtml(tr('noNewNotificationsHint'))}</small></section>`;
+  showDialog(escapeHtml(tr('notifications')), `${notifications.length} · ${escapeHtml(tr('notifications'))}`, markup);
+  $$('[data-open-home-notification]').forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openHomeNotification)));
 }
 
 function openView(view) {
@@ -5832,9 +5855,10 @@ bottomMenuToggle?.addEventListener('click', (event) => {
   setBottomMenu(!$('[data-bottom-menu]').classList.contains('is-open'));
 });
 bottomMenuToggle?.addEventListener('pointerdown', startBottomMenuDrag);
-bottomMenuToggle?.addEventListener('pointermove', moveBottomMenu);
-bottomMenuToggle?.addEventListener('pointerup', finishBottomMenuDrag);
-bottomMenuToggle?.addEventListener('pointercancel', finishBottomMenuDrag);
+bottomMenuToggle?.addEventListener('dragstart', (event) => event.preventDefault());
+window.addEventListener('pointermove', moveBottomMenu, { passive: false });
+window.addEventListener('pointerup', finishBottomMenuDrag);
+window.addEventListener('pointercancel', finishBottomMenuDrag);
 $('[data-bottom-menu-close]')?.addEventListener('click', () => setBottomMenu(false));
 $$('[data-tab]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.tab)));
 $$('[data-open-panel]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.openPanel)));
