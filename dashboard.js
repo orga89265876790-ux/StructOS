@@ -372,6 +372,11 @@ Object.assign(copy.TJ, {
   contractNumberPending: 'Рақам ҳангоми таҳлили шартнома гирифта мешавад', estimateForProject: 'Сметаи лоиҳа', documentNotLoaded: 'Ҳуҷҷат ҳанӯз бор нашудааст', pendingAnalysis: 'Интизори таҳлил', analyzeLoadedDocuments: 'Таҳлили ҳуҷҷатҳои боршуда', analyzingDocuments: 'Ҳуҷҷатҳо таҳлил мешаванд', analyzingDocumentsHint: 'StructOS ҳар файли боршударо алоҳида коркард мекунад.', allDocumentsAnalyzed: 'Ҳамаи ҳуҷҷатҳои боршуда таҳлил шуданд', allDocumentsAnalyzedCopy: 'Натиҷаҳо барои лоиҳа, шартнома ва смета алоҳида нигоҳ дошта шуданд.', invitationsCenter: 'Даъватҳои воридшуда', noNewNotifications: 'Огоҳии нав нест', noNewNotificationsHint: 'Рӯйдодҳои муҳими объектҳо дар ин ҷо пайдо мешаванд.', contractNumberLabel: 'Шартнома №'
 });
 
+Object.assign(copy.RU, { projectNameStep: 'Раздел проекта', giveProjectName: 'Укажите раздел проекта', projectNamePlaceholder: 'Например, Электроснабжение', projectNameHint: 'Загруженный проект будет сохранён внутри этого раздела.', projectNameRequired: 'Укажите раздел проекта', deleteProject: 'Удалить проект', deleteProjectTitle: 'Удаление проекта', deleteProjectHint: 'Удалить проект, связанный объект и все загруженные документы?', projectDeleted: 'Проект удалён', expandProject: 'Развернуть проект', collapseProject: 'Свернуть проект' });
+Object.assign(copy.EN, { projectNameStep: 'Project section', giveProjectName: 'Enter the project section', projectNamePlaceholder: 'For example, Electrical supply', projectNameHint: 'The uploaded project will be saved inside this section.', projectNameRequired: 'Enter the project section', deleteProject: 'Delete project', deleteProjectTitle: 'Delete project', deleteProjectHint: 'Delete the project, its object, and all uploaded documents?', projectDeleted: 'Project deleted', expandProject: 'Expand project', collapseProject: 'Collapse project' });
+Object.assign(copy.KY, { projectNameStep: 'Долбоор бөлүмү', giveProjectName: 'Долбоор бөлүмүн көрсөтүңүз', projectNamePlaceholder: 'Мисалы, Электр менен камсыздоо', projectNameHint: 'Жүктөлгөн долбоор ушул бөлүмдүн ичинде сакталат.', projectNameRequired: 'Долбоор бөлүмүн көрсөтүңүз', deleteProject: 'Долбоорду өчүрүү', deleteProjectTitle: 'Долбоорду өчүрүү', deleteProjectHint: 'Долбоор, ага байланышкан объект жана бардык документтер өчүрүлсүнбү?', projectDeleted: 'Долбоор өчүрүлдү', expandProject: 'Долбоорду жайуу', collapseProject: 'Долбоорду жыйноо' });
+Object.assign(copy.TJ, { projectNameStep: 'Бахши лоиҳа', giveProjectName: 'Бахши лоиҳаро нишон диҳед', projectNamePlaceholder: 'Масалан, Таъминоти барқ', projectNameHint: 'Лоиҳаи боршуда дар дохили ҳамин бахш нигоҳ дошта мешавад.', projectNameRequired: 'Бахши лоиҳаро нишон диҳед', deleteProject: 'Нест кардани лоиҳа', deleteProjectTitle: 'Нест кардани лоиҳа', deleteProjectHint: 'Лоиҳа, объекти вобаста ва ҳамаи ҳуҷҷатҳо нест карда шаванд?', projectDeleted: 'Лоиҳа нест шуд', expandProject: 'Кушодани лоиҳа', collapseProject: 'Пӯшидани лоиҳа' });
+
 Object.assign(copy.RU, { newVersion: 'Новая версия', uploadChanges: 'Подгрузить изменения', uploadAndCompare: 'Загрузить и сравнить', revisionUploadHint: 'Старый файл останется в истории. После загрузки StructOS сразу сравнит предыдущую и новую версии.', currentStoredVersion: 'Текущая сохранённая версия', versionHistory: 'История версий', versionNumber: 'Версия', versions: 'версии', versionComparison: 'Сравнение версий', comparisonInProgress: 'Сравниваем версии', comparisonInProgressCopy: 'Проверяем предыдущий и новый файл и сохраняем найденные изменения.', comparisonComplete: 'Сравнение завершено', comparisonCompleteCopy: 'Новая версия сохранена. Ниже показано, что изменилось по доступным данным файлов.', viewComparison: 'Посмотреть сравнение', previousVersion: 'Предыдущая версия', currentVersion: 'Новая версия', fileNameLabel: 'Название файла', fileSizeLabel: 'Размер файла', fileFormatLabel: 'Формат файла', fileModifiedLabel: 'Изменён на устройстве', uploadDate: 'Дата загрузки', before: 'Было', after: 'Стало', changed: 'Изменено', unchanged: 'Без изменений', metadataDifferences: 'Найденные различия', contentDifferences: 'Содержимое документа', contentComparisonPending: 'Ожидает серверного разбора', contentComparisonPendingCopy: 'Названия, форматы, размеры и даты изменения уже сопоставлены. Отличия по листам, строкам и содержимому появятся после подключения серверного извлечения — StructOS не придумывает отсутствующие данные.', changesFound: 'изменений найдено', sameFileSelected: 'Выбран тот же файл. Для новой версии укажите изменённый файл.', versionSaved: 'Новая версия сохранена и сравнена' });
 Object.assign(copy.EN, { newVersion: 'New version', uploadChanges: 'Upload changes', uploadAndCompare: 'Upload and compare', revisionUploadHint: 'The previous file stays in history. StructOS will compare the old and new versions immediately after upload.', currentStoredVersion: 'Current saved version', versionHistory: 'Version history', versionNumber: 'Version', versions: 'versions', versionComparison: 'Version comparison', comparisonInProgress: 'Comparing versions', comparisonInProgressCopy: 'Checking the previous and new file and saving the detected changes.', comparisonComplete: 'Comparison complete', comparisonCompleteCopy: 'The new version is saved. The available file-level changes are shown below.', viewComparison: 'View comparison', previousVersion: 'Previous version', currentVersion: 'New version', fileNameLabel: 'File name', fileSizeLabel: 'File size', fileFormatLabel: 'File format', fileModifiedLabel: 'Modified on device', uploadDate: 'Upload date', before: 'Before', after: 'After', changed: 'Changed', unchanged: 'Unchanged', metadataDifferences: 'Detected differences', contentDifferences: 'Document content', contentComparisonPending: 'Awaiting server extraction', contentComparisonPendingCopy: 'Names, formats, sizes, and modification dates have been compared. Sheet, row, and content differences will appear after server extraction is connected; StructOS does not invent missing data.', changesFound: 'changes found', sameFileSelected: 'This is the same file. Choose a changed file for a new version.', versionSaved: 'New version saved and compared' });
 Object.assign(copy.KY, { newVersion: 'Жаңы версия', uploadChanges: 'Өзгөртүүлөрдү жүктөө', uploadAndCompare: 'Жүктөп салыштыруу', revisionUploadHint: 'Мурунку файл тарыхта калат. Жүктөлгөндөн кийин StructOS эски жана жаңы версияны дароо салыштырат.', currentStoredVersion: 'Учурдагы сакталган версия', versionHistory: 'Версиялар тарыхы', versionNumber: 'Версия', versions: 'версия', versionComparison: 'Версияларды салыштыруу', comparisonInProgress: 'Версиялар салыштырылууда', comparisonInProgressCopy: 'Мурунку жана жаңы файл текшерилип, табылган өзгөрүүлөр сакталууда.', comparisonComplete: 'Салыштыруу аяктады', comparisonCompleteCopy: 'Жаңы версия сакталды. Файл боюнча жеткиликтүү өзгөрүүлөр төмөндө көрсөтүлдү.', viewComparison: 'Салыштырууну көрүү', previousVersion: 'Мурунку версия', currentVersion: 'Жаңы версия', fileNameLabel: 'Файлдын аты', fileSizeLabel: 'Файлдын өлчөмү', fileFormatLabel: 'Файлдын форматы', fileModifiedLabel: 'Түзмөктө өзгөртүлгөн', uploadDate: 'Жүктөлгөн күнү', before: 'Болгон', after: 'Болду', changed: 'Өзгөрдү', unchanged: 'Өзгөргөн жок', metadataDifferences: 'Табылган айырмалар', contentDifferences: 'Документтин мазмуну', contentComparisonPending: 'Сервердик талдоону күтүп жатат', contentComparisonPendingCopy: 'Аталыштар, форматтар, өлчөмдөр жана өзгөртүү даталары салыштырылды. Барактар, саптар жана мазмун боюнча айырмалар сервердик талдоо кошулганда чыгат; StructOS жок маалыматты ойлоп таппайт.', changesFound: 'өзгөрүү табылды', sameFileSelected: 'Ошол эле файл тандалды. Жаңы версия үчүн өзгөртүлгөн файлды тандаңыз.', versionSaved: 'Жаңы версия сакталды жана салыштырылды' });
@@ -460,6 +465,7 @@ const BUILDER_PASSPORT_KEY = 'structos-builder-passport-v1';
 const STRUCTOS_CONNECTIONS_KEY = 'structos-connections-v1';
 const STRUCTOS_DOCUMENT_BRAND = Object.freeze({ name: 'StructOS', made: 'Сделано на StructOS', site: 'www.structOS.ru', slogan: 'Единый Строительный Интеллект в России №1' });
 const BOTTOM_MENU_POSITION_KEY = 'structos-bottom-menu-position-v2';
+const PROJECT_CARD_STATE_KEY = 'structos-project-card-state-v1';
 const ACTIVITY_KEY = 'structos-construction-activity-v1';
 const FIRST_ACTIVITY_KEY = 'structos-first-activity-v1';
 const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
@@ -717,6 +723,7 @@ function loadObjectRegistry() {
           id: String(object.id || `object-${Date.now()}-${Math.random().toString(16).slice(2)}`),
           name: object.name.trim().slice(0, 100) || 'Объект',
           projectTitle: String(object.projectTitle || object.name || '').trim().slice(0, 140),
+          projectSection: String(object.projectSection || object.projectTitle || object.name || '').trim().slice(0, 140),
           contractNumber: String(object.contractNumber || '').trim().slice(0, 60),
           status: object.status,
           createdAt: object.createdAt || object.uploadedAt || object.analyzedAt || new Date().toISOString(),
@@ -732,6 +739,10 @@ function loadObjectRegistry() {
 }
 
 let objectRegistry = loadObjectRegistry();
+let collapsedProjectIds = new Set((() => {
+  const stored = readStoredJSON(PROJECT_CARD_STATE_KEY, []);
+  return Array.isArray(stored) ? stored.map(String) : [];
+})());
 
 function demoInvitedObject() {
   return {
@@ -4772,7 +4783,7 @@ function openProjectObjectWizard(options = {}) {
     step: 1,
     quickProjectOnly: Boolean(options.quickProjectOnly),
     objectName: '',
-    projectTitle: '',
+    projectSection: '',
     files: { project: null, contract: null, estimate: null }
   };
   renderProjectObjectWizard();
@@ -4790,7 +4801,6 @@ function renderProjectObjectWizard() {
       const value = input?.value.trim().slice(0, 100) || '';
       if (!value) { input?.focus(); showToast(tr('objectRequired')); return; }
       draft.objectName = value;
-      draft.projectTitle ||= value;
       draft.step = 2;
       renderProjectObjectWizard();
     };
@@ -4800,16 +4810,16 @@ function renderProjectObjectWizard() {
     return;
   }
   if (step === 2) {
-    showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 2 / 3 · ${escapeHtml(tr('projectNameStep'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><div class="project-wizard-object-chip"><small>${escapeHtml(tr('objectName'))}</small><strong>${escapeHtml(draft.objectName)}</strong></div><label class="project-wizard-field"><span>${escapeHtml(tr('giveProjectName'))}</span><input data-wizard-project-name maxlength="140" placeholder="${escapeHtml(tr('projectNamePlaceholder'))}" value="${escapeHtml(draft.projectTitle)}" /><small>${escapeHtml(tr('projectNameHint'))}</small></label><div class="project-wizard-navigation"><button class="outline-button" type="button" data-wizard-back>← ${escapeHtml(tr('backAction'))}</button><button class="primary-button" type="button" data-wizard-next>${escapeHtml(tr('continueAction'))} →</button></div></section>`);
+    showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 2 / 3 · ${escapeHtml(tr('projectNameStep'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><div class="project-wizard-object-chip"><small>${escapeHtml(tr('objectName'))}</small><strong>${escapeHtml(draft.objectName)}</strong></div><label class="project-wizard-field"><span>${escapeHtml(tr('giveProjectName'))}</span><input data-wizard-project-name maxlength="140" placeholder="${escapeHtml(tr('projectNamePlaceholder'))}" value="${escapeHtml(draft.projectSection)}" /><small>${escapeHtml(tr('projectNameHint'))}</small></label><div class="project-wizard-navigation"><button class="outline-button" type="button" data-wizard-back>← ${escapeHtml(tr('backAction'))}</button><button class="primary-button" type="button" data-wizard-next>${escapeHtml(tr('continueAction'))} →</button></div></section>`);
     const input = $('[data-wizard-project-name]');
     const next = () => {
       const value = input?.value.trim().slice(0, 140) || '';
       if (!value) { input?.focus(); showToast(tr('projectNameRequired')); return; }
-      draft.projectTitle = value;
+      draft.projectSection = value;
       draft.step = 3;
       renderProjectObjectWizard();
     };
-    $('[data-wizard-back]')?.addEventListener('click', () => { draft.projectTitle = input?.value.trim().slice(0, 140) || draft.projectTitle; draft.step = 1; renderProjectObjectWizard(); });
+    $('[data-wizard-back]')?.addEventListener('click', () => { draft.projectSection = input?.value.trim().slice(0, 140) || draft.projectSection; draft.step = 1; renderProjectObjectWizard(); });
     $('[data-wizard-next]')?.addEventListener('click', next);
     input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); next(); } });
     setTimeout(() => { input?.focus(); input?.select(); }, 40);
@@ -4817,19 +4827,18 @@ function renderProjectObjectWizard() {
   }
 
   const kinds = draft.quickProjectOnly ? ['project'] : Object.keys(uploadRules);
-  const selectedEntries = kinds.filter((kind) => draft.files[kind]);
   const documentCards = kinds.map((kind) => {
     const file = draft.files[kind];
     const rule = uploadRules[kind];
     const requirement = draft.quickProjectOnly && kind === 'project' ? tr('documentRequired') : tr('documentOptional');
-    return `<article class="project-wizard-document${file ? ' has-file' : ''}"><header><span>${file ? '✓' : kind === 'project' ? '▤' : kind === 'contract' ? '≡' : '₽'}</span><div><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(requirement)}</small></div></header><div class="project-wizard-file-state"><b>${escapeHtml(file?.name || tr('documentNotLoaded'))}</b><small>${file ? `${escapeHtml(formatStorage(file.size))} · ${escapeHtml(fileFormatLabel(file))}` : escapeHtml(rule.formats)}</small></div><input class="hidden-file-input" data-wizard-document-input="${escapeHtml(kind)}" type="file" accept="${rule.accept}" /><button class="${file ? 'outline-button' : 'primary-button'}" type="button" data-wizard-choose-document="${escapeHtml(kind)}">${escapeHtml(tr(file ? 'changeDocument' : 'chooseDocument'))}</button></article>`;
+    const analyzeAction = file ? `<button class="primary-button" type="button" data-wizard-analyze-kind="${escapeHtml(kind)}">${escapeHtml(tr('analyze'))} →</button>` : '';
+    return `<article class="project-wizard-document${file ? ' has-file' : ''}"><header><span>${file ? '✓' : kind === 'project' ? '▤' : kind === 'contract' ? '≡' : '₽'}</span><div><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(requirement)}</small></div></header><div class="project-wizard-file-state"><b>${escapeHtml(file?.name || tr('documentNotLoaded'))}</b><small>${file ? `${escapeHtml(formatStorage(file.size))} · ${escapeHtml(fileFormatLabel(file))}` : escapeHtml(rule.formats)}</small></div><input class="hidden-file-input" data-wizard-document-input="${escapeHtml(kind)}" type="file" accept="${rule.accept}" /><div class="project-wizard-document-actions"><button class="${file ? 'outline-button' : 'primary-button'}" type="button" data-wizard-choose-document="${escapeHtml(kind)}">${escapeHtml(tr(file ? 'changeDocument' : 'chooseDocument'))}</button>${analyzeAction}</div></article>`;
   }).join('');
-  const analyzeLabel = selectedEntries.length > 1 ? tr('analyzeAll') : tr('analyze');
-  showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 3 / 3 · ${escapeHtml(tr('uploadDocuments'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><div class="project-wizard-summary"><span><small>${escapeHtml(tr('objectName'))}</small><strong>${escapeHtml(draft.objectName)}</strong></span><span><small>${escapeHtml(tr('projectNameStep'))}</small><strong>${escapeHtml(draft.projectTitle)}</strong></span></div><p class="project-wizard-documents-hint">${escapeHtml(tr('uploadDocumentsHint'))}</p><div class="project-wizard-documents">${documentCards}</div><div class="project-wizard-navigation"><button class="outline-button" type="button" data-wizard-back>← ${escapeHtml(tr('backAction'))}</button><button class="primary-button" type="button" data-wizard-analyze ${selectedEntries.length ? '' : 'disabled'}>${escapeHtml(analyzeLabel)} →</button></div></section>`);
+  showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 3 / 3 · ${escapeHtml(tr('uploadDocuments'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><div class="project-wizard-summary"><span><small>${escapeHtml(tr('objectName'))}</small><strong>${escapeHtml(draft.objectName)}</strong></span><span><small>${escapeHtml(tr('projectNameStep'))}</small><strong>${escapeHtml(draft.projectSection)}</strong></span></div><p class="project-wizard-documents-hint">${escapeHtml(tr('uploadDocumentsHint'))}</p><div class="project-wizard-documents">${documentCards}</div><div class="project-wizard-navigation is-back-only"><button class="outline-button" type="button" data-wizard-back>← ${escapeHtml(tr('backAction'))}</button></div></section>`);
   $('[data-wizard-back]')?.addEventListener('click', () => { draft.step = 2; renderProjectObjectWizard(); });
   $$('[data-wizard-choose-document]').forEach((button) => button.addEventListener('click', () => $(`[data-wizard-document-input="${button.dataset.wizardChooseDocument}"]`)?.click()));
   $$('[data-wizard-document-input]').forEach((input) => input.addEventListener('change', () => chooseProjectWizardDocument(input.dataset.wizardDocumentInput, input.files?.[0])));
-  $('[data-wizard-analyze]')?.addEventListener('click', finishProjectObjectWizard);
+  $$('[data-wizard-analyze-kind]').forEach((button) => button.addEventListener('click', () => finishProjectObjectWizard(button.dataset.wizardAnalyzeKind)));
 }
 
 function chooseProjectWizardDocument(kind, file) {
@@ -4844,20 +4853,22 @@ function chooseProjectWizardDocument(kind, file) {
   renderProjectObjectWizard();
 }
 
-function finishProjectObjectWizard() {
+function finishProjectObjectWizard(analyzeKind) {
   const draft = projectObjectWizardDraft;
   if (!draft) return;
   const readyFiles = Object.entries(draft.files).filter(([, file]) => file);
   if (!readyFiles.length) { showToast(tr('documentsRequired')); return; }
+  if (!draft.files[analyzeKind]) return;
   const now = new Date().toISOString();
   const files = readyFiles.map(([kind, file]) => {
-    const record = { ...file, kind, addedAt: file.addedAt || now, analysisPending: true, analyzedAt: null };
+    const record = { ...file, kind, projectSection: draft.projectSection, addedAt: file.addedAt || now, analysisPending: true, analyzedAt: null };
     return { ...record, versions: [fileVersionSnapshot(record)], comparison: null };
   });
   const object = {
     id: createObjectId(),
     name: draft.objectName,
-    projectTitle: draft.projectTitle,
+    projectTitle: draft.projectSection,
+    projectSection: draft.projectSection,
     contractNumber: String(draft.files.contract?.contractNumber || ''),
     status: 'uploaded',
     createdAt: now,
@@ -4875,8 +4886,7 @@ function finishProjectObjectWizard() {
   projectObjectWizardDraft = null;
   $('[data-dialog]')?.close();
   showToast(tr('objectSaved'));
-  if (files.length === 1) analyzeObjectDocument(object.id, files[0].kind);
-  else analyzeObjectDocuments(object.id, files.map((file) => file.kind));
+  analyzeObjectDocument(object.id, analyzeKind);
 }
 
 function objectRowMarkup(object) {
@@ -4913,33 +4923,65 @@ function myProjectStatusKey(object) {
   return 'uploaded';
 }
 
+function saveCollapsedProjectIds() {
+  localStorage.setItem(PROJECT_CARD_STATE_KEY, JSON.stringify([...collapsedProjectIds]));
+}
+
+function toggleMyProjectCard(id) {
+  if (collapsedProjectIds.has(id)) collapsedProjectIds.delete(id);
+  else collapsedProjectIds.add(id);
+  saveCollapsedProjectIds();
+  renderMyProjects();
+}
+
+function deleteProjectObject(id) {
+  const object = objectRegistry.find((item) => item.id === id);
+  if (!object) return;
+  showDialog(escapeHtml(tr('deleteProjectTitle')), escapeHtml(tr('deleteProjectHint')), `<div class="result-actions"><button class="outline-button" type="button" data-cancel-project-delete>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-project-delete>${escapeHtml(tr('deleteProject'))}</button></div>`);
+  $('[data-cancel-project-delete]')?.addEventListener('click', () => $('[data-dialog]')?.close());
+  $('[data-confirm-project-delete]')?.addEventListener('click', () => {
+    Object.keys(uploadRules).forEach((kind) => {
+      const file = objectFile(object, kind);
+      if (file && selectedFiles[kind] && sameFileMetadata(selectedFiles[kind], file)) selectedFiles[kind] = null;
+    });
+    objectRegistry = objectRegistry.filter((item) => item.id !== id);
+    collapsedProjectIds.delete(id);
+    saveCollapsedProjectIds();
+    saveObjects();
+    saveUploads();
+    renderAnalysisCards();
+    renderObjects();
+    renderWidgets();
+    $('[data-dialog]')?.close();
+    showToast(tr('projectDeleted'));
+  });
+}
+
 function myProjectMarkup(object) {
   const usedBytes = (object.files || []).reduce((total, file) => total + (Number(file.size) || 0), 0);
   const updatedAt = object.completedAt || object.startedAt || object.analyzedAt || object.uploadedAt || object.createdAt;
   const statusKey = myProjectStatusKey(object);
-  const projectTitle = String(object.projectTitle || object.name || '').trim() || object.name;
-  const pendingKinds = Object.keys(uploadRules).filter((kind) => {
-    const file = objectFile(object, kind);
-    return file && !isObjectDocumentAnalyzed(object, file);
-  });
+  const projectSection = String(object.projectSection || object.projectTitle || object.name || '').trim() || object.name;
+  const collapsed = collapsedProjectIds.has(object.id);
   const documents = Object.keys(uploadRules).map((kind) => {
     const file = objectFile(object, kind);
     const versionCount = fileVersionCount(file);
     const analyzed = isObjectDocumentAnalyzed(object, file);
     const documentTitle = kind === 'project'
-      ? projectTitle
+      ? projectSection
       : kind === 'contract'
-        ? `${projectTitle} · ${object.contractNumber ? `${tr('contractNumberLabel')} ${object.contractNumber}` : tr('contract')}`
-        : `${projectTitle} · ${tr('estimate')}`;
+        ? `${projectSection} · ${object.contractNumber ? `${tr('contractNumberLabel')} ${object.contractNumber}` : tr('contract')}`
+        : `${projectSection} · ${tr('estimate')}`;
     const statusText = !file
       ? tr('documentNotLoaded')
       : `${file.name} · v${versionCount} · ${tr(analyzed ? 'analyzed' : 'pendingAnalysis')}${kind === 'contract' && !object.contractNumber ? ` · ${tr('contractNumberPending')}` : ''}`;
     const openAction = file ? `<button class="outline-button" type="button" data-my-project-open="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}">${escapeHtml(tr('openDocument'))}</button>` : '';
     const deleteAction = file ? `<button class="my-project-document-delete" type="button" data-my-project-delete="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}">${escapeHtml(tr('deleteDocument'))}</button>` : '';
-    return `<section class="my-project-document-row${file ? ' has-file' : ''}${file && !analyzed ? ' is-pending' : ''}"><span class="my-project-document-icon" aria-hidden="true">${file ? analyzed ? '✓' : '…' : '+'}</span><span class="my-project-document-copy"><small>${escapeHtml(tr(kind))}</small><strong>${escapeHtml(documentTitle)}</strong><em>${escapeHtml(statusText)}</em></span><span class="my-project-document-row-actions">${openAction}${deleteAction}<button class="primary-button" type="button" data-my-project-upload="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}" data-version-mode="${file ? 'revision' : 'standard'}">${escapeHtml(tr('upload'))}</button></span></section>`;
+    const analyzeAction = file && !analyzed ? `<button class="primary-button my-project-document-analyze" type="button" data-my-project-analyze="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}">${escapeHtml(tr('analyze'))}</button>` : '';
+    return `<section class="my-project-document-row${file ? ' has-file' : ''}${file && !analyzed ? ' is-pending' : ''}"><span class="my-project-document-icon" aria-hidden="true">${file ? analyzed ? '✓' : '…' : '+'}</span><span class="my-project-document-copy"><small>${escapeHtml(tr(kind))}</small><strong>${escapeHtml(documentTitle)}</strong><em>${escapeHtml(statusText)}</em></span><span class="my-project-document-row-actions">${openAction}${deleteAction}<button class="primary-button" type="button" data-my-project-upload="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}" data-version-mode="${file ? 'revision' : 'standard'}">${escapeHtml(tr('upload'))}</button>${analyzeAction}</span></section>`;
   }).join('');
-  const analysisAction = pendingKinds.length ? `<section class="my-project-analysis-action"><span><b>${pendingKinds.length}</b><small>${escapeHtml(tr('analyzeLoadedDocuments'))}</small></span><button class="primary-button" type="button" data-my-project-analyze-all="${escapeHtml(object.id)}">${escapeHtml(tr(pendingKinds.length > 1 ? 'analyzeAll' : 'analyze'))} →</button></section>` : '';
-  return `<article class="my-project-card is-${escapeHtml(object.status)}" data-my-project="${escapeHtml(object.id)}"><header><button class="my-project-object-open" type="button" data-open-project-object="${escapeHtml(object.id)}" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}"><span class="my-project-mark" aria-hidden="true">▰</span><span><small>STRUCTOS OBJECT</small><h2>${escapeHtml(object.name)}</h2><span class="my-project-badges"><b>${escapeHtml(tr('fullCycleObject'))}</b><b class="is-${escapeHtml(object.status)}">${escapeHtml(tr(statusKey))}</b></span></span><i aria-hidden="true">›</i></button></header><div class="my-project-documents">${documents}</div>${analysisAction}<footer><span>${escapeHtml(tr('lastProjectUpdate'))}: ${escapeHtml(formatObjectDate(updatedAt))}</span><span>${escapeHtml(tr('memoryUsed'))}: ${escapeHtml(formatStorage(usedBytes))}</span></footer></article>`;
+  const toggleLabel = tr(collapsed ? 'expandProject' : 'collapseProject');
+  return `<article class="my-project-card is-${escapeHtml(object.status)}${collapsed ? ' is-collapsed' : ''}" data-my-project="${escapeHtml(object.id)}"><header><button class="my-project-object-open" type="button" data-toggle-my-project="${escapeHtml(object.id)}" aria-expanded="${String(!collapsed)}" aria-label="${escapeHtml(toggleLabel)}"><span class="my-project-mark" aria-hidden="true">▰</span><span><small>STRUCTOS OBJECT</small><h2>${escapeHtml(object.name)}</h2><em class="my-project-section-name">${escapeHtml(tr('projectNameStep'))}: ${escapeHtml(projectSection)}</em><span class="my-project-badges"><b>${escapeHtml(tr('fullCycleObject'))}</b><b class="is-${escapeHtml(object.status)}">${escapeHtml(tr(statusKey))}</b></span></span><i aria-hidden="true">⌄</i></button><div class="my-project-card-actions"><button class="outline-button" type="button" data-open-project-object="${escapeHtml(object.id)}">${escapeHtml(tr('openDocument'))}</button><button class="my-project-delete-button" type="button" data-delete-project="${escapeHtml(object.id)}">${escapeHtml(tr('deleteProject'))}</button></div></header><div class="my-project-card-content"${collapsed ? ' hidden' : ''}><div class="my-project-documents">${documents}</div><footer><span>${escapeHtml(tr('lastProjectUpdate'))}: ${escapeHtml(formatObjectDate(updatedAt))}</span><span>${escapeHtml(tr('memoryUsed'))}: ${escapeHtml(formatStorage(usedBytes))}</span></footer></div></article>`;
 }
 
 function renderMyProjects() {
@@ -4947,11 +4989,13 @@ function renderMyProjects() {
   $$('[data-my-projects-list]').forEach((list) => {
     list.innerHTML = projects.map(myProjectMarkup).join('');
     $$('[data-my-project]', list).forEach((card) => {
+      $('[data-toggle-my-project]', card)?.addEventListener('click', (event) => toggleMyProjectCard(event.currentTarget.dataset.toggleMyProject));
       $('[data-open-project-object]', card)?.addEventListener('click', (event) => { event.stopPropagation(); openObjectCard(event.currentTarget.dataset.openProjectObject); });
+      $('[data-delete-project]', card)?.addEventListener('click', (event) => { event.stopPropagation(); deleteProjectObject(event.currentTarget.dataset.deleteProject); });
       $$('[data-my-project-upload]', card).forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.myProjectUpload, button.dataset.objectId, button.dataset.versionMode)));
       $$('[data-my-project-open]', card).forEach((button) => button.addEventListener('click', () => openAnalyzedDocument(button.dataset.objectId, button.dataset.myProjectOpen)));
       $$('[data-my-project-delete]', card).forEach((button) => button.addEventListener('click', () => deleteObjectDocument(button.dataset.objectId, button.dataset.myProjectDelete)));
-      $('[data-my-project-analyze-all]', card)?.addEventListener('click', (event) => analyzePendingObjectDocuments(event.currentTarget.dataset.myProjectAnalyzeAll));
+      $$('[data-my-project-analyze]', card).forEach((button) => button.addEventListener('click', () => analyzeObjectDocument(button.dataset.objectId, button.dataset.myProjectAnalyze)));
     });
   });
   $$('[data-my-projects-count]').forEach((count) => { count.textContent = String(projects.length); });
