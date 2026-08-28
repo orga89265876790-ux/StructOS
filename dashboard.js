@@ -332,6 +332,10 @@ Object.assign(copy.RU, { demoVersion: 'Демо-версия', executorPlan: 'И
 Object.assign(copy.EN, { demoVersion: 'Demo version', executorPlan: 'Contractor', supplierPlan: 'Supplier', aggregatorPlan: 'Aggregator', choosePlan: 'Choose a plan and subscription', planSelectionHint: 'Your selection is saved in the profile and controls the available workspace features.', currentPlan: 'Selected', planSelected: 'Plan and subscription saved', moneyBalance: 'Money balance', bonusBalance: 'Bonus balance', financeHubHint: 'Manage your money balance, bonuses, and transaction history in one place.', financeHistoryHint: 'Select a balance to open its history.', newBonusRulesHint: 'New ways to earn bonuses will be added to this list.' });
 Object.assign(copy.KY, { demoVersion: 'Демо-версия', executorPlan: 'Аткаруучу', supplierPlan: 'Жеткирүүчү', aggregatorPlan: 'Агрегатор', choosePlan: 'Тарифти жана жазылууну тандаңыз', planSelectionHint: 'Тандоо профилде сакталат жана кабинеттин жеткиликтүү мүмкүнчүлүктөрүн аныктайт.', currentPlan: 'Тандалды', planSelected: 'Тариф жана жазылуу сакталды', moneyBalance: 'Акча балансы', bonusBalance: 'Бонус балансы', financeHubHint: 'Акча балансын, бонустарды жана операциялар тарыхын бир жерден башкарыңыз.', financeHistoryHint: 'Тарыхын ачуу үчүн керектүү балансты басыңыз.', newBonusRulesHint: 'Бонус алуунун жаңы жолдору ушул тизмеге кошулат.' });
 Object.assign(copy.TJ, { demoVersion: 'Демо-версия', executorPlan: 'Иҷрокунанда', supplierPlan: 'Таъминкунанда', aggregatorPlan: 'Агрегатор', choosePlan: 'Тариф ва обунаро интихоб кунед', planSelectionHint: 'Интихоб дар профил нигоҳ дошта шуда, имкониятҳои дастрасро муайян мекунад.', currentPlan: 'Интихоб шуд', planSelected: 'Тариф ва обуна нигоҳ дошта шуд', moneyBalance: 'Тавозуни пулӣ', bonusBalance: 'Тавозуни бонусӣ', financeHubHint: 'Тавозуни пулӣ, бонусҳо ва таърихи амалиётро дар як ҷо идора кунед.', financeHistoryHint: 'Барои кушодани таърих тавозуни лозимиро интихоб кунед.', newBonusRulesHint: 'Роҳҳои нави гирифтани бонусҳо ба ин рӯйхат илова мешаванд.' });
+Object.assign(copy.RU, { editedDocumentSaved: 'Новая редакция сохранена', deletePreviousDocumentQuestion: 'Что сделать с предыдущим документом?', deletePreviousDocument: 'Удалить предыдущий', keepBothDocuments: 'Оставить оба', previousDocumentDeleted: 'Новая редакция сохранена, предыдущий документ удалён', bothDocumentVersionsSaved: 'Обе редакции сохранены в истории' });
+Object.assign(copy.EN, { editedDocumentSaved: 'New revision saved', deletePreviousDocumentQuestion: 'What should happen to the previous document?', deletePreviousDocument: 'Delete previous', keepBothDocuments: 'Keep both', previousDocumentDeleted: 'New revision saved and the previous document deleted', bothDocumentVersionsSaved: 'Both revisions were saved in history' });
+Object.assign(copy.KY, { editedDocumentSaved: 'Жаңы редакция сакталды', deletePreviousDocumentQuestion: 'Мурунку документ менен эмне кылуу керек?', deletePreviousDocument: 'Мурункусун өчүрүү', keepBothDocuments: 'Экөөнү тең калтыруу', previousDocumentDeleted: 'Жаңы редакция сакталды, мурунку документ өчүрүлдү', bothDocumentVersionsSaved: 'Эки редакция тең тарыхта сакталды' });
+Object.assign(copy.TJ, { editedDocumentSaved: 'Таҳрири нав нигоҳ дошта шуд', deletePreviousDocumentQuestion: 'Бо ҳуҷҷати пешина чӣ бояд кард?', deletePreviousDocument: 'Пешинаро нест кардан', keepBothDocuments: 'Ҳар дуро нигоҳ доштан', previousDocumentDeleted: 'Таҳрири нав нигоҳ дошта шуд, ҳуҷҷати пешина нест карда шуд', bothDocumentVersionsSaved: 'Ҳар ду таҳрир дар таърих нигоҳ дошта шуданд' });
 
 Object.assign(copy.RU, { followOurChannel: 'Подпишись на наш канал', followOurChannelHint: 'Новости StructOS, обновления функций и важные объявления.' });
 Object.assign(copy.EN, { followOurChannel: 'Follow our channel', followOurChannelHint: 'StructOS news, feature updates, and important announcements.' });
@@ -3762,7 +3766,7 @@ function allCashflowDetailedReport(objects) {
   return { title: tr('fullCashflowReport'), objectName: tr('allCashObjects'), sectionName: tr('allObjectSections'), tables: generalPage.tables, parties: null, pages: [generalPage, ...objectPages] };
 }
 
-function saveCashReportHistory(section, type, report, historyId = null) {
+function saveCashReportHistory(section, type, report, historyId = null, forceNew = false) {
   const snapshot = JSON.parse(JSON.stringify(report));
   const visibleTitle = snapshot.documentName || snapshot.title;
   const historyTitle = snapshot.documentNumber ? `${visibleTitle} · № ${snapshot.documentNumber.replace(/^№\s*/u, '')}` : visibleTitle;
@@ -3779,12 +3783,31 @@ function saveCashReportHistory(section, type, report, historyId = null) {
     }
   }
   const latest = section.reportHistory[0];
-  if (latest?.type === type && JSON.stringify(latest.report) === JSON.stringify(snapshot)) return latest;
+  if (!forceNew && latest?.type === type && JSON.stringify(latest.report) === JSON.stringify(snapshot)) return latest;
   const item = { id: `report-${Date.now()}-${Math.random().toString(16).slice(2)}`, type, title: historyTitle, createdAt: changedAt, updatedAt: changedAt, report: snapshot };
   section.reportHistory.unshift(item);
-  section.reportHistory = section.reportHistory.slice(0, 50);
+  section.reportHistory = section.reportHistory.slice(0, forceNew ? 100 : 50);
   saveCashflow();
   return item;
+}
+
+function askEditedDocumentHistoryChoice(section, previousHistoryId, dialog, documentLabel) {
+  if (!previousHistoryId || !section.reportHistory.some((item) => item.id === previousHistoryId)) {
+    renderCashflow();
+    dialog.close();
+    showToast(tr('documentSaved'));
+    return;
+  }
+  showDialog(`${tr('editedDocumentSaved')} · ${escapeHtml(documentLabel)}`, tr('deletePreviousDocumentQuestion'), `<div class="edited-document-choice"><button class="outline-button" type="button" data-keep-both-documents>${tr('keepBothDocuments')}</button><button class="primary-button is-danger" type="button" data-delete-previous-document>${tr('deletePreviousDocument')}</button></div>`);
+  const finish = (deletePrevious) => {
+    if (deletePrevious) section.reportHistory = section.reportHistory.filter((item) => item.id !== previousHistoryId);
+    saveCashflow();
+    renderCashflow();
+    dialog.close();
+    showToast(tr(deletePrevious ? 'previousDocumentDeleted' : 'bothDocumentVersionsSaved'));
+  };
+  $('[data-keep-both-documents]')?.addEventListener('click', () => finish(false));
+  $('[data-delete-previous-document]')?.addEventListener('click', () => finish(true));
 }
 
 async function loadReportLogo() {
@@ -4152,11 +4175,11 @@ function openCashDocumentDialog(objectId, sectionId, kind, options = {}) {
   $('[data-save-cash-document]', scope)?.addEventListener('click', () => {
     try {
       const report = persistDocument();
-      saveCashReportHistory(section, kind, report, historyId);
+      saveCashReportHistory(section, kind, report, null, Boolean(historyId));
       clearCurrentForm();
       renderCashflow();
-      dialog.close();
-      showToast(tr('documentSaved'));
+      if (historyId) askEditedDocumentHistoryChoice(section, historyId, dialog, defaultTitle);
+      else { dialog.close(); showToast(tr('documentSaved')); }
     } catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
   });
   $('[data-generate-related-document]', scope)?.addEventListener('click', () => {
