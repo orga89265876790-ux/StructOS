@@ -308,6 +308,11 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .cash-report-history-row strong, .cash-report-history-row small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cash-report-history-row strong { font-size: 9px; }
 .cash-report-history-row small { margin-top: 3px; color: var(--muted); font-size: 7px; }
+.cash-report-history-title { min-width: 0; display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: 7px; }
+.cash-report-type-badge { min-width: 39px; min-height: 24px; padding: 0 7px; display: inline-grid; place-items: center; color: var(--text); border: 1px solid var(--line-strong); border-radius: 7px; background: var(--surface-soft); font-size: 8px; font-weight: 900; letter-spacing: .06em; white-space: nowrap; }
+.cash-report-type-badge.is-statement { color: #41d9ff; border-color: rgba(65,217,255,.48); background: rgba(24,163,215,.11); }
+.cash-report-type-badge.is-act { color: #52e3a9; border-color: rgba(82,227,169,.48); background: rgba(31,191,130,.11); }
+.cash-report-type-badge.is-report { color: var(--muted); }
 .cash-report-history-row > div { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px; }
 .cash-report-history-row button { min-height: 30px; padding: 0 7px; color: var(--blue); border: 1px solid var(--line); border-radius: 8px; background: var(--surface-soft); font-size: 7px; cursor: pointer; }
 .cash-report-history-row button.is-danger { color: var(--danger); border-color: color-mix(in srgb,var(--danger) 38%,var(--line)); }
