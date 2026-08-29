@@ -446,19 +446,21 @@ Object.assign(copy.EN, { profileActivity: 'Activity', profileActivityHint: 'Acti
 Object.assign(copy.KY, { profileActivity: 'Активдүүлүк', profileActivityHint: 'StructOS ичиндеги активдүүлүк профилиңизди күчөтүп, издөө жыйынтыгындагы ордуңузду жогорулатат.' });
 Object.assign(copy.TJ, { profileActivity: 'Фаъолият', profileActivityHint: 'Фаъолият дар StructOS профили шуморо қавӣ карда, мавқеи онро дар натиҷаҳои ҷустуҷӯ баланд мебардорад.' });
 
-Object.assign(copy.RU, { statistics: 'Статистика', online: 'online', users: 'Пользователей', processedProjects: 'Обработано проектов', personalReferralLink: 'Личная реферальная ссылка', referralRecommendationReward: '+150 рублей за рекомендацию', shareEarn: 'StructOS — +150 рублей за рекомендацию', referralReward: 'Рекомендация по вашей ссылке' });
-Object.assign(copy.EN, { statistics: 'Statistics', online: 'online', users: 'Users', processedProjects: 'Projects processed', personalReferralLink: 'Personal referral link', referralRecommendationReward: '₽150 per recommendation', shareEarn: 'StructOS — ₽150 per recommendation', referralReward: 'Recommendation through your link' });
-Object.assign(copy.KY, { statistics: 'Статистика', online: 'online', users: 'Колдонуучулар', processedProjects: 'Иштетилген долбоорлор', personalReferralLink: 'Жеке рефералдык шилтеме', referralRecommendationReward: 'Ар бир сунуш үчүн +150 рубль', shareEarn: 'StructOS — ар бир сунуш үчүн +150 рубль', referralReward: 'Сиздин шилтеме аркылуу сунуш' });
-Object.assign(copy.TJ, { statistics: 'Омор', online: 'online', users: 'Истифодабарандагон', processedProjects: 'Лоиҳаҳои коркардшуда', personalReferralLink: 'Пайванди шахсии рефералӣ', referralRecommendationReward: '+150 рубл барои ҳар тавсия', shareEarn: 'StructOS — +150 рубл барои ҳар тавсия', referralReward: 'Тавсия тавассути пайванди шумо' });
+Object.assign(copy.RU, { statistics: 'Статистика', online: 'online', registeredUsers: 'Зарегистрировано пользователей', referralContribution: 'Ваш вклад по ссылке', personalReferralLink: 'Личная реферальная ссылка', referralRecommendationReward: '+150 рублей за рекомендацию', shareEarn: 'StructOS — +150 рублей за рекомендацию', referralReward: 'Рекомендация по вашей ссылке' });
+Object.assign(copy.EN, { statistics: 'Statistics', online: 'online', registeredUsers: 'Registered users', referralContribution: 'Your referral contribution', personalReferralLink: 'Personal referral link', referralRecommendationReward: '₽150 per recommendation', shareEarn: 'StructOS — ₽150 per recommendation', referralReward: 'Recommendation through your link' });
+Object.assign(copy.KY, { statistics: 'Статистика', online: 'online', registeredUsers: 'Катталган колдонуучулар', referralContribution: 'Шилтеме боюнча салымыңыз', personalReferralLink: 'Жеке рефералдык шилтеме', referralRecommendationReward: 'Ар бир сунуш үчүн +150 рубль', shareEarn: 'StructOS — ар бир сунуш үчүн +150 рубль', referralReward: 'Сиздин шилтеме аркылуу сунуш' });
+Object.assign(copy.TJ, { statistics: 'Омор', online: 'online', registeredUsers: 'Истифодабарандагони бақайдгирифташуда', referralContribution: 'Саҳми шумо аз рӯи пайванд', personalReferralLink: 'Пайванди шахсии рефералӣ', referralRecommendationReward: '+150 рубл барои ҳар тавсия', shareEarn: 'StructOS — +150 рубл барои ҳар тавсия', referralReward: 'Тавсия тавассути пайванди шумо' });
 
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
 let toastTimer;
-const STATISTICS_USERS_BASE = 875;
-const STATISTICS_USERS_EPOCH = Date.parse('2026-08-29T07:12:00Z');
+const STATISTICS_USERS_BASE = 1324;
+const STATISTICS_USERS_EPOCH = Date.parse('2026-08-29T07:42:00Z');
 const STATISTICS_USERS_STEP = 45 * 60 * 1000;
-let previousOnlineCount;
+const STATISTICS_ONLINE_STEP = 2000;
+const STATISTICS_HOUR_FORMATTER = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Moscow', hour: '2-digit', hourCycle: 'h23' });
+let serverReferralCount = 0;
 const DEMO_SESSION_KEY = 'structos-demo-session';
 const FINANCE_KEY = 'structos-finance-v1';
 const PROFILE_PLAN_KEY = 'structos-profile-plan-v1';
@@ -806,7 +808,7 @@ function applyLanguage(next) {
   renderFinance();
   renderProfilePlan();
   renderReferral();
-  renderHomeStatistics(false);
+  renderHomeStatistics();
   renderAnalysisCards();
   renderObjects();
   renderWidgets();
@@ -960,6 +962,7 @@ async function shareResume() {
 
 function saveFinance() {
   localStorage.setItem(FINANCE_KEY, JSON.stringify(finance));
+  renderHomeStatistics();
 }
 
 function saveStructosConnections() {
@@ -1677,11 +1680,21 @@ function onlineRangeForHour(hour) {
   return [100, 130];
 }
 
-function randomOnlineCount(now = new Date()) {
-  const [minimum, maximum] = onlineRangeForHour(now.getHours());
-  let count = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
-  if (count === previousOnlineCount) count = count === maximum ? minimum : count + 1;
-  previousOnlineCount = count;
+function statisticsSeed(bucket) {
+  let value = bucket | 0;
+  value = Math.imul(value ^ (value >>> 16), 0x45d9f3b);
+  value = Math.imul(value ^ (value >>> 16), 0x45d9f3b);
+  return (value ^ (value >>> 16)) >>> 0;
+}
+
+function sharedOnlineCount(now = Date.now()) {
+  const hour = Number(STATISTICS_HOUR_FORMATTER.format(new Date(now)));
+  const [minimum, maximum] = onlineRangeForHour(hour);
+  const span = maximum - minimum + 1;
+  const bucket = Math.floor(now / STATISTICS_ONLINE_STEP);
+  let count = minimum + (statisticsSeed(bucket) % span);
+  const previous = minimum + (statisticsSeed(bucket - 1) % span);
+  if (count === previous) count = minimum + ((count - minimum + 1) % span);
   return count;
 }
 
@@ -1690,11 +1703,27 @@ function statisticsUsersCount(now = Date.now()) {
   return STATISTICS_USERS_BASE + Math.floor(elapsed / STATISTICS_USERS_STEP);
 }
 
-function renderHomeStatistics(refreshOnline = true) {
+function referralContributionCount() {
+  const localCount = (finance.bonusHistory || []).filter((entry) => entry.key === 'referralReward').length;
+  return Math.max(serverReferralCount, localCount);
+}
+
+function renderHomeStatistics() {
   const online = $('[data-stat-online]');
   const users = $('[data-stat-users]');
-  if (online && (refreshOnline || previousOnlineCount === undefined)) online.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(randomOnlineCount());
+  const referrals = $('[data-stat-referrals]');
+  if (online) online.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(sharedOnlineCount());
   if (users) users.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(statisticsUsersCount());
+  if (referrals) referrals.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(referralContributionCount());
+}
+
+function startHomeStatisticsClock() {
+  renderHomeStatistics();
+  const delay = STATISTICS_ONLINE_STEP - (Date.now() % STATISTICS_ONLINE_STEP) + 20;
+  setTimeout(() => {
+    renderHomeStatistics();
+    setInterval(renderHomeStatistics, STATISTICS_ONLINE_STEP);
+  }, delay);
 }
 
 async function copyReferral() {
@@ -1717,10 +1746,12 @@ async function initAuth() {
   const demoSession = JSON.parse(localStorage.getItem(DEMO_SESSION_KEY) || 'null');
   if (demoSession?.email === 'str@str.com') {
     currentId = formattedId(demoSession.id || '4820197');
+    serverReferralCount = Math.max(0, Math.floor(Number(demoSession.referralCount) || 0));
     $$('[data-user-role]').forEach((item) => { item.textContent = demoSession.role || tr('userTariff'); });
     $$('[data-user-id]').forEach((item) => { item.textContent = currentId; });
     seedIdentityFromAuth(demoSession.name || 'StructOS', {});
     renderReferral();
+    renderHomeStatistics();
     return;
   }
   const supabaseUrl = supabaseConfig.url || import.meta.env?.VITE_SUPABASE_URL;
@@ -1735,11 +1766,13 @@ async function initAuth() {
     const meta = user.user_metadata || {};
     const fullName = String(meta.full_name || user.email?.split('@')[0] || 'Пользователь').trim();
     const role = String(meta.primary_role || tr('userTariff'));
+    serverReferralCount = Math.max(0, Math.floor(Number(user.app_metadata?.referral_count) || 0));
     currentId = formattedId(meta.structos_id || idFromUuid(user.id));
     $$('[data-user-role]').forEach((item) => { item.textContent = role; });
     $$('[data-user-id]').forEach((item) => { item.textContent = currentId; });
     seedIdentityFromAuth(fullName, { ...meta, email: user.email || '' });
     renderReferral();
+    renderHomeStatistics();
   } catch (error) {
     console.warn('StructOS auth is unavailable:', error);
   }
@@ -6001,7 +6034,7 @@ importPendingTransfer();
 applyPassportRewards(passportCompletion());
 applyTheme(localStorage.getItem('structos-theme') === 'light' ? 'light' : 'dark');
 applyLanguage(language);
-setInterval(renderHomeStatistics, 2000);
+startHomeStatisticsClock();
 renderWidgetPicker();
 renderWidgets();
 selectAnalysis(selectedAnalysis);
