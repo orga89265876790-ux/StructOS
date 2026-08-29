@@ -619,6 +619,46 @@ Object.assign(copy.EN, { declineInvitation: 'Decline invitation', declineInvitat
 Object.assign(copy.KY, { declineInvitation: 'Чакырууну четке кагуу', declineInvitationTitle: 'Чакыруу четке кагылсынбы?', declineInvitationHint: 'Чакыруу киргендерден өчүрүлөт жана объект тизмеде мындан ары көрүнбөйт.', invitationDeclined: 'Чакыруу четке кагылды' });
 Object.assign(copy.TJ, { declineInvitation: 'Рад кардани даъват', declineInvitationTitle: 'Даъват рад карда шавад?', declineInvitationHint: 'Даъват аз воридот хориҷ мешавад ва объект дигар дар рӯйхат намоиш дода намешавад.', invitationDeclined: 'Даъват рад карда шуд' });
 
+Object.assign(copy.RU, {
+  cabinetWelcomeTagline: 'ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ', cabinetWelcomeA11y: 'Вход в личный кабинет',
+  cabinetWelcomeUserRole: 'Пользователь', cabinetWelcomeExecutorRole: 'Исполнитель', cabinetWelcomeSupplierRole: 'Поставщик', cabinetWelcomeAggregatorRole: 'Агрегатор',
+  cabinetWelcomeUserOne: 'Всё понятно.', cabinetWelcomeUserTwo: 'Всё доступно.', cabinetWelcomeUserThree: 'Любая задача будет Вами решена.',
+  cabinetWelcomeExecutorOne: 'Создавайте КП первым.', cabinetWelcomeExecutorTwo: 'Запускайте проект в один клик.', cabinetWelcomeExecutorThree: 'Создавайте свою репутацию.',
+  cabinetWelcomeSupplierOne: 'Предлагайте быстрее.', cabinetWelcomeSupplierTwo: 'Будьте там, где есть реальная потребность.',
+  cabinetWelcomeAggregatorOne: 'Собирайте команды быстрее.', cabinetWelcomeAggregatorTwo: 'Управляйте людьми точнее.'
+});
+Object.assign(copy.EN, {
+  cabinetWelcomeTagline: 'UNIFIED CONSTRUCTION INTELLIGENCE', cabinetWelcomeA11y: 'Entering your account',
+  cabinetWelcomeUserRole: 'User', cabinetWelcomeExecutorRole: 'Contractor', cabinetWelcomeSupplierRole: 'Supplier', cabinetWelcomeAggregatorRole: 'Aggregator',
+  cabinetWelcomeUserOne: 'Everything is clear.', cabinetWelcomeUserTwo: 'Everything is accessible.', cabinetWelcomeUserThree: 'You can solve any task.',
+  cabinetWelcomeExecutorOne: 'Create proposals first.', cabinetWelcomeExecutorTwo: 'Launch a project in one click.', cabinetWelcomeExecutorThree: 'Build your reputation.',
+  cabinetWelcomeSupplierOne: 'Make offers faster.', cabinetWelcomeSupplierTwo: 'Be where there is real demand.',
+  cabinetWelcomeAggregatorOne: 'Build teams faster.', cabinetWelcomeAggregatorTwo: 'Manage people with greater precision.'
+});
+Object.assign(copy.KY, {
+  cabinetWelcomeTagline: 'БИРДИКТҮҮ КУРУЛУШ ИНТЕЛЛЕКТИ', cabinetWelcomeA11y: 'Жеке кабинетке кирүү',
+  cabinetWelcomeUserRole: 'Колдонуучу', cabinetWelcomeExecutorRole: 'Аткаруучу', cabinetWelcomeSupplierRole: 'Жеткирүүчү', cabinetWelcomeAggregatorRole: 'Агрегатор',
+  cabinetWelcomeUserOne: 'Баары түшүнүктүү.', cabinetWelcomeUserTwo: 'Баары жеткиликтүү.', cabinetWelcomeUserThree: 'Ар кандай милдетти Сиз чече аласыз.',
+  cabinetWelcomeExecutorOne: 'КПны биринчи түзүңүз.', cabinetWelcomeExecutorTwo: 'Долбоорду бир баскыч менен ишке киргизиңиз.', cabinetWelcomeExecutorThree: 'Өз аброюңузду түзүңүз.',
+  cabinetWelcomeSupplierOne: 'Сунуштарды тезирээк бериңиз.', cabinetWelcomeSupplierTwo: 'Чыныгы муктаждык бар жерде болуңуз.',
+  cabinetWelcomeAggregatorOne: 'Командаларды тезирээк чогултуңуз.', cabinetWelcomeAggregatorTwo: 'Адамдарды так башкарыңыз.'
+});
+Object.assign(copy.TJ, {
+  cabinetWelcomeTagline: 'ЗЕҲНИ ЯГОНАИ СОХТМОНӢ', cabinetWelcomeA11y: 'Воридшавӣ ба кабинети шахсӣ',
+  cabinetWelcomeUserRole: 'Истифодабаранда', cabinetWelcomeExecutorRole: 'Иҷрокунанда', cabinetWelcomeSupplierRole: 'Таъминкунанда', cabinetWelcomeAggregatorRole: 'Агрегатор',
+  cabinetWelcomeUserOne: 'Ҳама чиз фаҳмо.', cabinetWelcomeUserTwo: 'Ҳама чиз дастрас.', cabinetWelcomeUserThree: 'Шумо метавонед ҳар вазифаро ҳал кунед.',
+  cabinetWelcomeExecutorOne: 'Пешниҳоди тиҷоратиро аввал созед.', cabinetWelcomeExecutorTwo: 'Лоиҳаро бо як пахш оғоз кунед.', cabinetWelcomeExecutorThree: 'Обрӯи худро созед.',
+  cabinetWelcomeSupplierOne: 'Тезтар пешниҳод кунед.', cabinetWelcomeSupplierTwo: 'Дар ҷое бошед, ки талаботи воқеӣ ҳаст.',
+  cabinetWelcomeAggregatorOne: 'Дастаҳоро тезтар ҷамъ кунед.', cabinetWelcomeAggregatorTwo: 'Одамонро дақиқтар идора кунед.'
+});
+
+const CABINET_WELCOME_PROFILES = Object.freeze({
+  user: { roleKey: 'cabinetWelcomeUserRole', phraseKeys: ['cabinetWelcomeUserOne', 'cabinetWelcomeUserTwo', 'cabinetWelcomeUserThree'] },
+  executor: { roleKey: 'cabinetWelcomeExecutorRole', phraseKeys: ['cabinetWelcomeExecutorOne', 'cabinetWelcomeExecutorTwo', 'cabinetWelcomeExecutorThree'] },
+  supplier: { roleKey: 'cabinetWelcomeSupplierRole', phraseKeys: ['cabinetWelcomeSupplierOne', 'cabinetWelcomeSupplierTwo'] },
+  aggregator: { roleKey: 'cabinetWelcomeAggregatorRole', phraseKeys: ['cabinetWelcomeAggregatorOne', 'cabinetWelcomeAggregatorTwo'] }
+});
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -1046,6 +1086,54 @@ function invitedObjectName(object) {
 }
 
 function tr(key) { return copy[language]?.[key] ?? copy.RU[key] ?? key; }
+
+function cabinetWelcomeProfile(role) {
+  const normalized = String(role || '').trim().toLocaleLowerCase('ru-RU');
+  if (/поставщик|supplier|жеткир|таъмин/.test(normalized)) return CABINET_WELCOME_PROFILES.supplier;
+  if (/агрегатор|aggregator|арacı|araci/.test(normalized)) return CABINET_WELCOME_PROFILES.aggregator;
+  if (/исполн|executor|contractor|worker|аткар|иҷро|uygulayıcı|uygulayici/.test(normalized)) return CABINET_WELCOME_PROFILES.executor;
+  return CABINET_WELCOME_PROFILES.user;
+}
+
+function playCabinetWelcome(role) {
+  const entry = $('[data-cabinet-entry]');
+  if (!entry) {
+    document.body.classList.remove('is-cabinet-entering', 'is-cabinet-ready');
+    return;
+  }
+
+  const profile = cabinetWelcomeProfile(role);
+  const roleLabel = tr(profile.roleKey);
+  const roleElement = $('[data-cabinet-entry-role]', entry);
+  const phraseElement = $('[data-cabinet-entry-phrase]', entry);
+  const messageElement = $('[data-cabinet-entry-message]', entry);
+
+  roleElement.textContent = roleLabel;
+  phraseElement.replaceChildren(...profile.phraseKeys.map((key, index) => {
+    const line = document.createElement('span');
+    line.className = 'cabinet-entry-line';
+    line.style.setProperty('--entry-line', index);
+    line.textContent = tr(key);
+    return line;
+  }));
+  messageElement.setAttribute('aria-hidden', 'false');
+  entry.setAttribute('aria-label', `${tr('cabinetWelcomeA11y')}: ${roleLabel}`);
+  entry.classList.remove('is-leaving');
+  requestAnimationFrame(() => entry.classList.add('is-ready'));
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const displayDuration = reducedMotion ? 900 : 2850;
+  const exitDuration = reducedMotion ? 80 : 720;
+  window.setTimeout(() => {
+    document.body.classList.add('is-cabinet-ready');
+    entry.classList.add('is-leaving');
+    window.setTimeout(() => {
+      entry.hidden = true;
+      entry.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('is-cabinet-entering', 'is-cabinet-ready');
+    }, exitDuration);
+  }, displayDuration);
+}
 
 function applyLanguage(next) {
   language = copy[next] ? next : 'RU';
@@ -1997,23 +2085,24 @@ async function shareReferral() {
 async function initAuth() {
   const demoSession = JSON.parse(localStorage.getItem(DEMO_SESSION_KEY) || 'null');
   if (demoSession?.email === 'str@str.com') {
+    const role = demoSession.role || tr('userTariff');
     currentId = formattedId(demoSession.id || '4820197');
     serverReferralCount = Math.max(0, Math.floor(Number(demoSession.referralCount) || 0));
-    $$('[data-user-role]').forEach((item) => { item.textContent = demoSession.role || tr('userTariff'); });
+    $$('[data-user-role]').forEach((item) => { item.textContent = role; });
     $$('[data-user-id]').forEach((item) => { item.textContent = currentId; });
     seedIdentityFromAuth(demoSession.name || 'StructOS', {});
     renderReferral();
     renderHomeStatistics();
-    return;
+    return role;
   }
   const supabaseUrl = supabaseConfig.url || import.meta.env?.VITE_SUPABASE_URL;
   const supabaseKey = supabaseConfig.publishableKey || import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env?.VITE_SUPABASE_ANON_KEY;
-  if (!supabaseUrl || !supabaseKey) { window.location.replace('login.html#login'); return; }
+  if (!supabaseUrl || !supabaseKey) { window.location.replace('login.html#login'); return null; }
   try {
     const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.112.3/+esm');
     authClient = createClient(supabaseUrl, supabaseKey, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
     const { data, error } = await authClient.auth.getUser();
-    if (error || !data?.user) { window.location.replace('login.html#login'); return; }
+    if (error || !data?.user) { window.location.replace('login.html#login'); return null; }
     const user = data.user;
     const meta = user.user_metadata || {};
     const fullName = String(meta.full_name || user.email?.split('@')[0] || 'Пользователь').trim();
@@ -2025,8 +2114,10 @@ async function initAuth() {
     seedIdentityFromAuth(fullName, { ...meta, email: user.email || '' });
     renderReferral();
     renderHomeStatistics();
+    return role;
   } catch (error) {
     console.warn('StructOS auth is unavailable:', error);
+    return tr('userTariff');
   }
 }
 
@@ -7179,6 +7270,7 @@ recordActivity('cabinet', 'daily-session', { daily: true });
 document.addEventListener('click', trackConstructionActivity, true);
 setPanel(location.hash.slice(1) || 'home');
 restoreBottomMenuState();
-await initAuth();
+const cabinetRole = await initAuth();
+if (cabinetRole) playCabinetWelcome(cabinetRole);
 
 if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));

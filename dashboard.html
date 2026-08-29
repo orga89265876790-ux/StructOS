@@ -9,9 +9,30 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=43" />
+    <link rel="stylesheet" href="dashboard.css?v=44" />
   </head>
-  <body>
+  <body class="is-cabinet-entering">
+    <section class="cabinet-entry" data-cabinet-entry role="status" aria-live="polite" aria-label="Вход в личный кабинет">
+      <div class="cabinet-entry-grid" aria-hidden="true"></div>
+      <div class="cabinet-entry-scan" aria-hidden="true"></div>
+      <div class="cabinet-entry-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="cabinet-entry-stage">
+        <div class="cabinet-entry-kicker">STRUCTOS IDENTITY</div>
+        <div class="cabinet-entry-brand" aria-label="StructOS">
+          <span class="cabinet-entry-mark" aria-hidden="true">
+            <img src="assets/structos-building-mark.svg" alt="" />
+            <i></i>
+          </span>
+          <span class="cabinet-entry-wordmark">Struct<span>OS</span></span>
+        </div>
+        <p class="cabinet-entry-tagline" data-i18n="cabinetWelcomeTagline">ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ</p>
+        <div class="cabinet-entry-message" data-cabinet-entry-message aria-hidden="true">
+          <strong class="cabinet-entry-role" data-cabinet-entry-role></strong>
+          <p class="cabinet-entry-phrase" data-cabinet-entry-phrase></p>
+        </div>
+        <div class="cabinet-entry-progress" aria-hidden="true"><i></i></div>
+      </div>
+    </section>
     <div class="dashboard-app" data-dashboard>
       <header class="app-header">
         <a class="brand" href="index.html" aria-label="StructOS — на главную">
@@ -315,6 +336,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=43"></script>
+    <script type="module" src="dashboard.js?v=44"></script>
   </body>
 </html>
