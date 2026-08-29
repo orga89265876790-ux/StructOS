@@ -578,6 +578,39 @@ Object.assign(copy.TJ, {
   fileVersionDeleted: 'Файли интихобшуда нест шуд', latestFile: 'Файли охирин'
 });
 
+Object.assign(copy.RU, {
+  quickProjectAnalysisHint: 'Загрузить проект, договор или смету и запустить отдельный анализ',
+  quickDocumentChoiceHint: 'Загрузите проект, договор или смету. Можно добавить несколько документов — каждый анализируется отдельно.',
+  projectEstimate: 'Смета', installationEstimate: 'Смета на монтаж', installationWorks: 'Монтажные работы',
+  associatedWorks: 'Сопутствующие работы, необходимые для монтажа', projectMaterialsEquipment: 'Материалы и оборудование из проекта',
+  associatedInstallationMaterials: 'Сопутствующие монтажу материалы', extractedFromProject: 'Извлечено из проекта', identifiedByAnalysis: 'Выявлено анализом',
+  estimateGroupPending: 'Позиции появятся после извлечения данных из загруженного проекта.', estimateAnalysisSummary: 'Работы, материалы и оборудование разделены по назначению и источнику.'
+});
+Object.assign(copy.EN, {
+  quickProjectAnalysisHint: 'Upload a project, contract, or estimate and run a separate analysis',
+  quickDocumentChoiceHint: 'Upload a project, contract, or estimate. You can add several documents; each is analyzed separately.',
+  projectEstimate: 'Estimate', installationEstimate: 'Installation estimate', installationWorks: 'Installation works',
+  associatedWorks: 'Associated works required for installation', projectMaterialsEquipment: 'Project materials and equipment',
+  associatedInstallationMaterials: 'Associated installation materials', extractedFromProject: 'Extracted from project', identifiedByAnalysis: 'Identified by analysis',
+  estimateGroupPending: 'Items will appear after data is extracted from the uploaded project.', estimateAnalysisSummary: 'Works, materials, and equipment are grouped by purpose and source.'
+});
+Object.assign(copy.KY, {
+  quickProjectAnalysisHint: 'Долбоорду, келишимди же сметаны жүктөп, өзүнчө талдоону баштоо',
+  quickDocumentChoiceHint: 'Долбоорду, келишимди же сметаны жүктөңүз. Бир нече документ кошсо болот — ар бири өзүнчө талданат.',
+  projectEstimate: 'Смета', installationEstimate: 'Монтаж сметасы', installationWorks: 'Монтаж иштери',
+  associatedWorks: 'Монтаж үчүн керектүү коштоочу иштер', projectMaterialsEquipment: 'Долбоордогу материалдар жана жабдуулар',
+  associatedInstallationMaterials: 'Монтажга керектүү коштоочу материалдар', extractedFromProject: 'Долбоордон алынды', identifiedByAnalysis: 'Талдоо аныктады',
+  estimateGroupPending: 'Позициялар жүктөлгөн долбоордон маалымат алынгандан кийин чыгат.', estimateAnalysisSummary: 'Иштер, материалдар жана жабдуулар максаты жана булагы боюнча бөлүндү.'
+});
+Object.assign(copy.TJ, {
+  quickProjectAnalysisHint: 'Лоиҳа, шартнома ё сметаро бор карда, таҳлили алоҳидаро оғоз кунед',
+  quickDocumentChoiceHint: 'Лоиҳа, шартнома ё сметаро бор кунед. Якчанд ҳуҷҷат илова кардан мумкин — ҳар кадом алоҳида таҳлил мешавад.',
+  projectEstimate: 'Смета', installationEstimate: 'Сметаи монтаж', installationWorks: 'Корҳои монтажӣ',
+  associatedWorks: 'Корҳои ҳамроҳи барои монтаж зарур', projectMaterialsEquipment: 'Мавод ва таҷҳизоти лоиҳа',
+  associatedInstallationMaterials: 'Маводи ҳамроҳи монтаж', extractedFromProject: 'Аз лоиҳа гирифта шуд', identifiedByAnalysis: 'Бо таҳлил муайян шуд',
+  estimateGroupPending: 'Позицияҳо пас аз гирифтани маълумот аз лоиҳаи боршуда пайдо мешаванд.', estimateAnalysisSummary: 'Корҳо, мавод ва таҷҳизот аз рӯи вазифа ва манбаъ ҷудо шуданд.'
+});
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -778,7 +811,7 @@ function fileVersionSnapshot(file) {
   const size = Number(file?.size) || 0;
   const lastModified = Number(file?.lastModified) || Number(new Date(addedAt)) || Date.now();
   const structuredFields = {};
-  ['analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'].forEach((key) => {
+  ['analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'].forEach((key) => {
     if (file?.[key] != null) structuredFields[key] = file[key];
   });
   return {
@@ -851,7 +884,7 @@ function isDocumentVersionAnalyzed(version) {
 function syncLatestDocumentVersion(file, versions) {
   if (!file || !Array.isArray(versions) || !versions.length) return file;
   const latest = fileVersionSnapshot(versions[versions.length - 1]);
-  const syncedFields = ['id', 'name', 'size', 'type', 'lastModified', 'addedAt', 'analyzedAt', 'analysisPending', 'contractNumber', 'projectSection', 'sourceCatalog', 'sourceCatalogScanned', 'analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'];
+  const syncedFields = ['id', 'name', 'size', 'type', 'lastModified', 'addedAt', 'analyzedAt', 'analysisPending', 'contractNumber', 'projectSection', 'sourceCatalog', 'sourceCatalogScanned', 'analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'];
   syncedFields.forEach((key) => {
     if (Object.prototype.hasOwnProperty.call(latest, key)) file[key] = latest[key];
     else if (key !== 'projectSection') delete file[key];
@@ -3079,7 +3112,7 @@ function cashSourceCatalogFromFileRecord(file, kind) {
   if (!file || !CASH_SOURCE_DOCUMENT_KINDS.includes(kind)) return [];
   const defaults = { sourceKind: kind, sourceName: file.name || tr(kind) };
   const entries = [...normalizeCashSourceCatalog(file.sourceCatalog, defaults)];
-  ['analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'].forEach((key) => {
+  ['analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'].forEach((key) => {
     if (file[key] != null) entries.push(...cashSourceCatalogFromStructuredData(file[key], { ...defaults, category: cashSourceCategoryFromKey(key) }));
   });
   return mergeCashSourceCatalog(entries);
@@ -5423,19 +5456,25 @@ function renderProjectObjectWizard() {
     return;
   }
 
-  const kinds = draft.quickProjectOnly ? ['project'] : Object.keys(uploadRules);
+  const kinds = Object.keys(uploadRules);
   const documentCards = kinds.map((kind) => {
     const file = draft.files[kind];
     const rule = uploadRules[kind];
-    const requirement = draft.quickProjectOnly && kind === 'project' ? tr('documentRequired') : tr('documentOptional');
+    const requirement = tr('documentOptional');
     const analyzeAction = file ? `<button class="primary-button" type="button" data-wizard-analyze-kind="${escapeHtml(kind)}">${escapeHtml(tr('analyze'))} →</button>` : '';
-    return `<article class="project-wizard-document${file ? ' has-file' : ''}"><header><span>${file ? '✓' : kind === 'project' ? '▤' : kind === 'contract' ? '≡' : '₽'}</span><div><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(requirement)}</small></div></header><div class="project-wizard-file-state"><b>${escapeHtml(file?.name || tr('documentNotLoaded'))}</b><small>${file ? `${escapeHtml(formatStorage(file.size))} · ${escapeHtml(fileFormatLabel(file))}` : escapeHtml(rule.formats)}</small></div><input class="hidden-file-input" data-wizard-document-input="${escapeHtml(kind)}" type="file" accept="${rule.accept}" /><div class="project-wizard-document-actions"><button class="${file ? 'outline-button' : 'primary-button'}" type="button" data-wizard-choose-document="${escapeHtml(kind)}">${escapeHtml(tr(file ? 'changeDocument' : 'chooseDocument'))}</button>${analyzeAction}</div></article>`;
+    const deleteAction = file ? `<button class="project-wizard-delete-document" type="button" data-wizard-delete-document="${escapeHtml(kind)}" aria-label="${escapeHtml(tr('deleteFile'))}">× <span>${escapeHtml(tr('deleteDocument'))}</span></button>` : '';
+    return `<article class="project-wizard-document${file ? ' has-file' : ''}"><header><span>${file ? '✓' : kind === 'project' ? '▤' : kind === 'contract' ? '≡' : '₽'}</span><div><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(requirement)}</small></div></header><div class="project-wizard-file-state"><b>${escapeHtml(file?.name || tr('documentNotLoaded'))}</b><small>${file ? `${escapeHtml(formatStorage(file.size))} · ${escapeHtml(fileFormatLabel(file))}` : escapeHtml(rule.formats)}</small></div><input class="hidden-file-input" data-wizard-document-input="${escapeHtml(kind)}" type="file" accept="${rule.accept}" /><div class="project-wizard-document-actions${file ? ' has-file' : ''}"><button class="${file ? 'outline-button' : 'primary-button'}" type="button" data-wizard-choose-document="${escapeHtml(kind)}">${escapeHtml(tr(file ? 'changeDocument' : 'chooseDocument'))}</button>${analyzeAction}${deleteAction}</div></article>`;
   }).join('');
-  showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 3 / 3 · ${escapeHtml(tr('uploadDocuments'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><div class="project-wizard-summary"><span><small>${escapeHtml(tr('objectName'))}</small><strong>${escapeHtml(draft.objectName)}</strong></span><span><small>${escapeHtml(tr('projectNameStep'))}</small><strong>${escapeHtml(draft.projectSection)}</strong></span></div><p class="project-wizard-documents-hint">${escapeHtml(tr('uploadDocumentsHint'))}</p><div class="project-wizard-documents">${documentCards}</div><div class="project-wizard-navigation is-back-only"><button class="outline-button" type="button" data-wizard-back>← ${escapeHtml(tr('backAction'))}</button></div></section>`);
+  const documentsHint = draft.quickProjectOnly ? tr('quickDocumentChoiceHint') : tr('uploadDocumentsHint');
+  const loadedCount = Object.values(draft.files).filter(Boolean).length;
+  const analyzeAllAction = loadedCount > 1 ? `<button class="primary-button project-wizard-main-action" type="button" data-wizard-analyze-all>${escapeHtml(tr('analyzeAll'))} →</button>` : '';
+  showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 3 / 3 · ${escapeHtml(tr('uploadDocuments'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><div class="project-wizard-summary"><span><small>${escapeHtml(tr('objectName'))}</small><strong>${escapeHtml(draft.objectName)}</strong></span><span><small>${escapeHtml(tr('projectNameStep'))}</small><strong>${escapeHtml(draft.projectSection)}</strong></span></div><p class="project-wizard-documents-hint">${escapeHtml(documentsHint)}</p><div class="project-wizard-documents">${documentCards}</div>${analyzeAllAction}<div class="project-wizard-navigation is-back-only"><button class="outline-button" type="button" data-wizard-back>← ${escapeHtml(tr('backAction'))}</button></div></section>`);
   $('[data-wizard-back]')?.addEventListener('click', () => { draft.step = 2; renderProjectObjectWizard(); });
   $$('[data-wizard-choose-document]').forEach((button) => button.addEventListener('click', () => $(`[data-wizard-document-input="${button.dataset.wizardChooseDocument}"]`)?.click()));
   $$('[data-wizard-document-input]').forEach((input) => input.addEventListener('change', () => chooseProjectWizardDocument(input.dataset.wizardDocumentInput, input.files?.[0])));
+  $$('[data-wizard-delete-document]').forEach((button) => button.addEventListener('click', () => deleteProjectWizardDocument(button.dataset.wizardDeleteDocument)));
   $$('[data-wizard-analyze-kind]').forEach((button) => button.addEventListener('click', () => finishProjectObjectWizard(button.dataset.wizardAnalyzeKind)));
+  $('[data-wizard-analyze-all]')?.addEventListener('click', () => finishProjectObjectWizard('all'));
 }
 
 function chooseProjectWizardDocument(kind, file) {
@@ -5451,14 +5490,24 @@ function chooseProjectWizardDocument(kind, file) {
   renderProjectObjectWizard();
 }
 
+function deleteProjectWizardDocument(kind) {
+  const draft = projectObjectWizardDraft;
+  if (!draft || !uploadRules[kind]) return;
+  draft.files[kind] = null;
+  draft.sourceFiles[kind] = null;
+  renderProjectObjectWizard();
+}
+
 async function finishProjectObjectWizard(analyzeKind) {
   const draft = projectObjectWizardDraft;
   if (!draft || draft.finishing) return;
   const readyFiles = Object.entries(draft.files).filter(([, file]) => file);
   if (!readyFiles.length) { showToast(tr('documentsRequired')); return; }
-  if (!draft.files[analyzeKind]) return;
+  const analyzeKinds = analyzeKind === 'all' ? readyFiles.map(([kind]) => kind) : [analyzeKind].filter((kind) => draft.files[kind]);
+  if (!analyzeKinds.length) return;
   draft.finishing = true;
   $$('[data-wizard-analyze-kind]').forEach((button) => { button.disabled = true; });
+  if ($('[data-wizard-analyze-all]')) $('[data-wizard-analyze-all]').disabled = true;
   const sourceCatalogByKind = Object.fromEntries(await Promise.all(readyFiles.map(async ([kind]) => [
     kind,
     await extractCashSourceCatalogFromFile(draft.sourceFiles[kind], kind)
@@ -5492,7 +5541,8 @@ async function finishProjectObjectWizard(analyzeKind) {
   projectObjectWizardDraft = null;
   $('[data-dialog]')?.close();
   showToast(tr('objectSaved'));
-  analyzeObjectDocument(object.id, analyzeKind);
+  if (analyzeKinds.length > 1) analyzeObjectDocuments(object.id, analyzeKinds);
+  else analyzeObjectDocument(object.id, analyzeKinds[0]);
 }
 
 function objectRowMarkup(object) {
@@ -5758,7 +5808,7 @@ function projectVersionAnalysisMarkup(object, kind, version) {
   let resultBody = '';
   if (kind === 'project') {
     const tabs = projectAnalysisTabs.map((tab) => `<button class="${tab.id === selectedTab ? 'is-active' : ''}" type="button" data-project-version-tab="${escapeHtml(tab.id)}" data-object-id="${escapeHtml(object.id)}" data-kind="${escapeHtml(kind)}" data-version-id="${escapeHtml(version.id)}" aria-selected="${tab.id === selectedTab}"><span>${tab.icon}</span><strong>${escapeHtml(tr(tab.label))}</strong></button>`).join('');
-    resultBody = `<nav class="project-analysis-tabs is-inline" aria-label="${escapeHtml(tr('projectAnalysis'))}">${tabs}</nav><section class="project-analysis-content is-inline"><header><span class="eyebrow">STRUCTOS DETAIL</span><h2>${escapeHtml(tr(projectAnalysisTabs.find((tab) => tab.id === selectedTab)?.label || 'commercialProposal'))}</h2></header>${projectAnalysisTabContent(selectedTab, version, kind)}</section>`;
+    resultBody = `<nav class="project-analysis-tabs is-inline" aria-label="${escapeHtml(tr('projectAnalysis'))}">${tabs}</nav><section class="project-analysis-content is-inline"><header><span class="eyebrow">STRUCTOS DETAIL</span><h2>${escapeHtml(tr(projectAnalysisTabs.find((tab) => tab.id === selectedTab)?.label || 'projectEstimate'))}</h2></header>${projectAnalysisTabContent(selectedTab, version, kind)}</section>`;
   } else if (kind === 'estimate') {
     resultBody = `<section class="project-analysis-content is-inline"><header><span class="eyebrow">STRUCTOS ESTIMATE</span><h2>${escapeHtml(tr('estimate'))}</h2></header>${projectAnalysisTabContent('proposal', version, kind)}</section>`;
   } else {
@@ -5867,7 +5917,7 @@ function renderMyProjects() {
 }
 
 const projectAnalysisTabs = [
-  { id: 'proposal', label: 'commercialProposal', icon: '₽' },
+  { id: 'proposal', label: 'projectEstimate', icon: '₽' },
   { id: 'sheets', label: 'projectBySheets', icon: '▤' },
   { id: 'systems', label: 'projectBySystems', icon: '⌘' },
   { id: 'materials', label: 'projectMaterials', icon: '◇' },
@@ -5883,7 +5933,133 @@ function analysisEmptyTable(columns) {
   return `<div class="analysis-detail-table-scroll"><table class="analysis-detail-table"><thead><tr>${columns.map((key) => `<th>${escapeHtml(tr(key))}</th>`).join('')}</tr></thead><tbody><tr class="analysis-detail-empty-row"><td colspan="${columns.length}"><span>◇</span><strong>${escapeHtml(tr('extractionPending'))}</strong><small>${escapeHtml(tr('extractionPendingCopy'))}</small></td></tr></tbody></table></div>`;
 }
 
+const PROJECT_ESTIMATE_GROUP_ALIASES = Object.freeze({
+  installationWorks: new Set(['installationworks', 'mountingworks', 'works', 'workitems', 'services', 'монтажныеработы', 'работы', 'услуги']),
+  associatedWorks: new Set(['associatedworks', 'companionworks', 'additionalworks', 'relatedworks', 'hiddenworks', 'auxiliaryworks', 'сопутствующиеработы', 'дополнительныеработы', 'скрытыеработы']),
+  projectMaterials: new Set(['projectmaterials', 'materials', 'materialitems', 'equipment', 'specification', 'specifications', 'материалы', 'оборудование', 'спецификация']),
+  associatedMaterials: new Set(['associatedmaterials', 'companionmaterials', 'mountingmaterials', 'consumables', 'auxiliarymaterials', 'relatedmaterials', 'сопутствующиематериалы', 'монтажныематериалы', 'расходныематериалы'])
+});
+
+function mergeProjectEstimateItems(entries) {
+  const merged = new Map();
+  (Array.isArray(entries) ? entries : []).filter(Boolean).forEach((entry) => {
+    const normalized = normalizeCashSourceCatalogEntry(entry, entry);
+    if (!normalized) return;
+    const item = { ...normalized, origin: entry.origin === 'analysis' ? 'analysis' : 'project' };
+    const key = cashSourceKey(item.name);
+    const current = merged.get(key);
+    if (!current) merged.set(key, item);
+    else merged.set(key, {
+      ...current,
+      unit: current.unit || item.unit,
+      quantity: current.quantity || item.quantity,
+      price: current.price || item.price,
+      sourceSheet: current.sourceSheet || item.sourceSheet,
+      sourceName: current.sourceName || item.sourceName,
+      origin: current.origin === 'project' || item.origin === 'project' ? 'project' : 'analysis'
+    });
+  });
+  return [...merged.values()].sort((left, right) => left.name.localeCompare(right.name, root.lang || 'ru')).slice(0, 500);
+}
+
+function projectEstimateEntriesFromValue(value, defaults = {}) {
+  const values = Array.isArray(value)
+    ? value
+    : value && typeof value === 'object'
+      ? [value, ...cashSourceCatalogFromStructuredData(value, defaults)]
+      : [];
+  return mergeProjectEstimateItems(values.map((entry) => {
+    const normalized = normalizeCashSourceCatalogEntry(entry, defaults);
+    return normalized ? { ...normalized, origin: defaults.origin || entry?.origin } : null;
+  }));
+}
+
+function collectProjectEstimateGroups(rootValue, groups, depth = 0) {
+  if (!rootValue || typeof rootValue !== 'object' || depth > 6) return;
+  Object.entries(rootValue).forEach(([key, child]) => {
+    const normalizedKey = cashSourceKey(key);
+    const groupKey = Object.entries(PROJECT_ESTIMATE_GROUP_ALIASES).find(([, aliases]) => aliases.has(normalizedKey))?.[0];
+    if (groupKey) {
+      groups[groupKey].push(...projectEstimateEntriesFromValue(child, {
+        sourceKind: 'project',
+        sourceName: tr(groupKey === 'projectMaterials' || groupKey === 'installationWorks' ? 'extractedFromProject' : 'identifiedByAnalysis'),
+        category: groupKey.includes('Works') ? 'work' : 'material',
+        origin: groupKey === 'projectMaterials' || groupKey === 'installationWorks' ? 'project' : 'analysis'
+      }));
+    }
+    if (child && typeof child === 'object') collectProjectEstimateGroups(child, groups, depth + 1);
+  });
+}
+
+function projectEstimateCatalogGroup(entry) {
+  if (entry.category === 'work') return 'installationWorks';
+  if (entry.category === 'material') return 'projectMaterials';
+  const key = cashSourceKey(entry.name);
+  if (/(монтаж|установ|проклад|демонтаж|пусконалад|испытан|настрой|подключ|работ|услуг|install|mount|laying|testing|commission|service)/u.test(key)) return 'installationWorks';
+  return 'projectMaterials';
+}
+
+function derivedProjectEstimateItem(entry, groupKey) {
+  const prefix = groupKey === 'installationWorks' ? tr('installationWorks') : groupKey === 'associatedWorks' ? tr('associatedWorks') : tr('associatedInstallationMaterials');
+  return {
+    name: `${prefix}: ${entry.name}`,
+    unit: groupKey === 'installationWorks' ? entry.unit : '',
+    quantity: groupKey === 'installationWorks' ? entry.quantity : 0,
+    price: 0,
+    category: groupKey.includes('Works') ? 'work' : 'material',
+    sourceKind: 'project',
+    sourceName: tr('identifiedByAnalysis'),
+    sourceSheet: entry.sourceSheet || '',
+    origin: 'analysis'
+  };
+}
+
+function projectEstimateBreakdown(version, kind = 'project', options = {}) {
+  const groups = { installationWorks: [], associatedWorks: [], projectMaterials: [], associatedMaterials: [] };
+  const roots = [
+    version?.estimateBreakdown,
+    version?.analysisData,
+    version?.analysisResult,
+    version?.result,
+    version?.extractedData,
+    version?.extraction,
+    { works: version?.works, services: version?.services, materials: version?.materials, equipment: version?.equipment, specification: version?.specification }
+  ];
+  roots.forEach((rootValue) => collectProjectEstimateGroups(rootValue, groups));
+  cashSourceCatalogFromFileRecord(version, kind).forEach((entry) => {
+    groups[projectEstimateCatalogGroup(entry)].push({ ...entry, origin: 'project' });
+  });
+  Object.keys(groups).forEach((groupKey) => { groups[groupKey] = mergeProjectEstimateItems(groups[groupKey]); });
+  if (options.derive === false || !groups.projectMaterials.length) return groups;
+  if (!groups.installationWorks.length) groups.installationWorks = mergeProjectEstimateItems(groups.projectMaterials.map((entry) => derivedProjectEstimateItem(entry, 'installationWorks')));
+  if (!groups.associatedWorks.length) groups.associatedWorks = mergeProjectEstimateItems(groups.projectMaterials.map((entry) => derivedProjectEstimateItem(entry, 'associatedWorks')));
+  if (!groups.associatedMaterials.length) groups.associatedMaterials = mergeProjectEstimateItems(groups.projectMaterials.map((entry) => derivedProjectEstimateItem(entry, 'associatedMaterials')));
+  return groups;
+}
+
+function projectEstimateSnapshot(version) {
+  const groups = projectEstimateBreakdown(version, 'project', { derive: false });
+  return { generatedAt: new Date().toISOString(), ...groups };
+}
+
+function projectEstimateGroupMarkup(groupKey, entries, icon) {
+  const sourceKey = groupKey === 'installationWorks' || groupKey === 'projectMaterials' ? 'extractedFromProject' : 'identifiedByAnalysis';
+  const labelKey = groupKey === 'associatedMaterials' ? 'associatedInstallationMaterials' : groupKey;
+  const body = entries.length
+    ? `<div class="project-estimate-list">${entries.slice(0, 200).map((entry) => `<article><span>${escapeHtml(icon)}</span><div><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(entry.sourceSheet || entry.sourceName || tr(sourceKey))}</small></div><b>${entry.quantity ? escapeHtml(String(entry.quantity)) : '—'}${entry.unit ? ` ${escapeHtml(entry.unit)}` : ''}</b></article>`).join('')}</div>`
+    : `<div class="project-estimate-empty"><span>◇</span><p>${escapeHtml(tr('estimateGroupPending'))}</p></div>`;
+  return `<section class="project-estimate-group"><header><span>${escapeHtml(icon)}</span><div><h4>${escapeHtml(tr(labelKey))}</h4><small>${escapeHtml(tr(sourceKey))}</small></div><b>${entries.length}</b></header>${body}</section>`;
+}
+
+function projectEstimateBreakdownMarkup(version, kind = 'project') {
+  const groups = projectEstimateBreakdown(version, kind);
+  const worksCount = groups.installationWorks.length + groups.associatedWorks.length;
+  const materialsCount = groups.projectMaterials.length + groups.associatedMaterials.length;
+  return `<section class="project-estimate-breakdown"><header><div><span class="eyebrow">STRUCTOS ESTIMATE</span><h3>${escapeHtml(tr('projectEstimate'))}</h3><p>${escapeHtml(tr('estimateAnalysisSummary'))}</p></div><div><b>${worksCount}</b><small>${escapeHtml(tr('works'))}</small><b>${materialsCount}</b><small>${escapeHtml(tr('materials'))}</small></div></header><div class="project-estimate-columns"><article class="project-estimate-column is-works"><header><span>⚒</span><div><h3>${escapeHtml(tr('installationEstimate'))}</h3><small>${worksCount} · ${escapeHtml(tr('works'))}</small></div></header>${projectEstimateGroupMarkup('installationWorks', groups.installationWorks, 'W')}${projectEstimateGroupMarkup('associatedWorks', groups.associatedWorks, '+')}</article><article class="project-estimate-column is-materials"><header><span>◇</span><div><h3>${escapeHtml(tr('projectMaterialsEquipment'))}</h3><small>${materialsCount} · ${escapeHtml(tr('materials'))}</small></div></header>${projectEstimateGroupMarkup('projectMaterials', groups.projectMaterials, 'M')}${projectEstimateGroupMarkup('associatedMaterials', groups.associatedMaterials, '+')}</article></div></section>`;
+}
+
 function projectAnalysisTabContent(tab, version = null, kind = 'project') {
+  if (tab === 'proposal' && kind === 'project') return projectEstimateBreakdownMarkup(version, kind);
   const catalog = version ? cashSourceCatalogFromFileRecord(version, kind) : [];
   if (catalog.length) {
     if (tab === 'sheets') {
@@ -5985,7 +6161,7 @@ function renderAnalysisDetail() {
     rootElement.innerHTML = `${version ? analysisDetailHeader(object, kind, file, version) : ''}<section class="analysis-document-placeholder"><span>⌛</span><h2>${escapeHtml(tr('fileAwaitingAnalysis'))}</h2><p>${escapeHtml(tr('fileAwaitingAnalysisCopy'))}</p>${version ? `<button class="primary-button" type="button" data-analyze-active-version>${escapeHtml(tr('analyze'))}</button>` : ''}</section>`;
   } else if (kind === 'project') {
     const tabs = projectAnalysisTabs.map((tab) => `<button class="${tab.id === activeProjectAnalysisTab ? 'is-active' : ''}" type="button" data-project-analysis-tab="${tab.id}" aria-selected="${tab.id === activeProjectAnalysisTab}"><span>${tab.icon}</span><strong>${escapeHtml(tr(tab.label))}</strong></button>`).join('');
-    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file, version)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><nav class="project-analysis-tabs" aria-label="${escapeHtml(tr('projectAnalysis'))}">${tabs}</nav><section class="project-analysis-content"><header><span class="eyebrow">STRUCTOS DETAIL</span><h2>${escapeHtml(tr(projectAnalysisTabs.find((tab) => tab.id === activeProjectAnalysisTab)?.label || 'commercialProposal'))}</h2></header>${projectAnalysisTabContent(activeProjectAnalysisTab, version, kind)}</section>`;
+    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file, version)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><nav class="project-analysis-tabs" aria-label="${escapeHtml(tr('projectAnalysis'))}">${tabs}</nav><section class="project-analysis-content"><header><span class="eyebrow">STRUCTOS DETAIL</span><h2>${escapeHtml(tr(projectAnalysisTabs.find((tab) => tab.id === activeProjectAnalysisTab)?.label || 'projectEstimate'))}</h2></header>${projectAnalysisTabContent(activeProjectAnalysisTab, version, kind)}</section>`;
   } else if (kind === 'estimate') {
     rootElement.innerHTML = `${analysisDetailHeader(object, kind, file, version)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><section class="project-analysis-content"><header><span class="eyebrow">STRUCTOS ESTIMATE</span><h2>${escapeHtml(tr('estimate'))}</h2></header>${projectAnalysisTabContent('proposal', version, kind)}</section>`;
   } else {
@@ -6027,7 +6203,9 @@ function analyzeObjectDocument(objectId, kind, versionId = null, options = {}) {
     const currentVersion = documentVersionById(currentFile, version.id);
     if (!currentObject || !currentFile || !currentVersion) return;
     const analyzedAt = new Date().toISOString();
-    const analyzedVersion = updateDocumentVersion(currentFile, currentVersion.id, { analysisPending: false, analyzedAt });
+    const analysisPatch = { analysisPending: false, analyzedAt };
+    if (kind === 'project') analysisPatch.estimateBreakdown = projectEstimateSnapshot(currentVersion);
+    const analyzedVersion = updateDocumentVersion(currentFile, currentVersion.id, analysisPatch);
     if (kind === 'contract' && latestDocumentVersion(currentFile)?.id === analyzedVersion?.id) currentObject.contractNumber = String(analyzedVersion.contractNumber || extractContractNumberFromName(analyzedVersion.name) || currentObject.contractNumber || '');
     currentObject.analyzedAt = analyzedAt;
     if (currentObject.status === 'uploaded' && currentObject.files?.length && currentObject.files.every((item) => isObjectDocumentAnalyzed(currentObject, item))) currentObject.status = 'ready';
@@ -6071,9 +6249,11 @@ function analyzeObjectDocuments(objectId, requestedKinds = []) {
     kinds.forEach((kind) => {
       const file = objectFile(currentObject, kind);
       if (!file) return;
-      file.analysisPending = false;
-      file.analyzedAt = analyzedAt;
-      file.versions = fileVersions(file).map((version, index, versions) => index === versions.length - 1 ? { ...version, analyzedAt } : version);
+      const latestVersion = latestDocumentVersion(file);
+      if (!latestVersion) return;
+      const analysisPatch = { analysisPending: false, analyzedAt };
+      if (kind === 'project') analysisPatch.estimateBreakdown = projectEstimateSnapshot(latestVersion);
+      updateDocumentVersion(file, latestVersion.id, analysisPatch);
       if (kind === 'contract') currentObject.contractNumber = String(file.contractNumber || extractContractNumberFromName(file.name) || currentObject.contractNumber || '');
     });
     currentObject.analyzedAt = analyzedAt;
@@ -6429,7 +6609,11 @@ function registerAnalyzedObject(name, readyFiles) {
   const normalizedName = String(name).trim().toLocaleLowerCase();
   const existing = objectRegistry.find((object) => object.name.trim().toLocaleLowerCase() === normalizedName);
   const analyzedAt = new Date().toISOString();
-  const files = readyFiles.map(([kind, file]) => ({ ...file, kind, name: file.name, size: file.size || 0, analysisPending: false, analyzedAt }));
+  const files = readyFiles.map(([kind, file]) => {
+    const record = { ...file, kind, name: file.name, size: file.size || 0, analysisPending: false, analyzedAt };
+    if (kind === 'project') record.estimateBreakdown = projectEstimateSnapshot(record);
+    return { ...record, versions: [fileVersionSnapshot(record)] };
+  });
   if (existing) {
     existing.projectTitle ||= String(name).trim();
     existing.projectSection ||= existing.projectTitle;
