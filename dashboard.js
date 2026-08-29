@@ -610,6 +610,10 @@ Object.assign(copy.TJ, {
   associatedInstallationMaterials: 'Маводи ҳамроҳи монтаж', extractedFromProject: 'Аз лоиҳа гирифта шуд', identifiedByAnalysis: 'Бо таҳлил муайян шуд',
   estimateGroupPending: 'Позицияҳо пас аз гирифтани маълумот аз лоиҳаи боршуда пайдо мешаванд.', estimateAnalysisSummary: 'Корҳо, мавод ва таҷҳизот аз рӯи вазифа ва манбаъ ҷудо шуданд.'
 });
+Object.assign(copy.RU, { deleteSectionAttachment: 'Удалить', deleteSectionAttachmentTitle: 'Удалить документ из раздела?', deleteSectionAttachmentHint: 'Выбранный документ и вся его история версий будут удалены. Остальные файлы раздела сохранятся.', sectionAttachmentDeleted: 'Документ удалён из раздела', sectionAttachmentDeleteFailed: 'Не удалось удалить документ' });
+Object.assign(copy.EN, { deleteSectionAttachment: 'Delete', deleteSectionAttachmentTitle: 'Delete document from this section?', deleteSectionAttachmentHint: 'The selected document and its entire version history will be deleted. Other section files will remain.', sectionAttachmentDeleted: 'Document deleted from section', sectionAttachmentDeleteFailed: 'Could not delete document' });
+Object.assign(copy.KY, { deleteSectionAttachment: 'Өчүрүү', deleteSectionAttachmentTitle: 'Документ бөлүмдөн өчүрүлсүнбү?', deleteSectionAttachmentHint: 'Тандалган документ жана анын бардык версиялары өчүрүлөт. Бөлүмдүн башка файлдары сакталат.', sectionAttachmentDeleted: 'Документ бөлүмдөн өчүрүлдү', sectionAttachmentDeleteFailed: 'Документти өчүрүү мүмкүн болгон жок' });
+Object.assign(copy.TJ, { deleteSectionAttachment: 'Нест кардан', deleteSectionAttachmentTitle: 'Ҳуҷҷат аз бахш нест карда шавад?', deleteSectionAttachmentHint: 'Ҳуҷҷати интихобшуда ва тамоми таърихи версияҳои он нест мешавад. Файлҳои дигари бахш нигоҳ дошта мешаванд.', sectionAttachmentDeleted: 'Ҳуҷҷат аз бахш нест шуд', sectionAttachmentDeleteFailed: 'Ҳуҷҷатро нест кардан муяссар нашуд' });
 
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
@@ -3312,6 +3316,7 @@ function cashAttachmentCurrent(section, kind) {
 
 function cashSectionHasSourceDocuments(section) {
   if (CASH_SOURCE_DOCUMENT_KINDS.some((kind) => cashAttachmentCurrent(section, kind))) return true;
+  if (CASH_ATTACHMENT_KINDS.some((kind) => cashAttachmentCurrent(section, kind))) return false;
   const sourceObject = section?.sourceProjectId && objectRegistry.find((object) => object.id === section.sourceProjectId);
   return Boolean(sourceObject && CASH_SOURCE_DOCUMENT_KINDS.some((kind) => objectFile(sourceObject, kind)));
 }
@@ -3319,19 +3324,21 @@ function cashSectionHasSourceDocuments(section) {
 function cashSectionSourceCatalog(section) {
   if (!section) return [];
   const entries = [...normalizeCashSourceCatalog(section.sourceCatalog)];
-  const sourceObjectIds = new Set(section.sourceProjectId ? [section.sourceProjectId] : []);
+  const hasAttachmentVersions = CASH_ATTACHMENT_KINDS.some((kind) => (section.attachments?.[kind]?.versions || []).length);
   CASH_SOURCE_DOCUMENT_KINDS.forEach((kind) => {
     const versions = section.attachments?.[kind]?.versions || [];
     versions.forEach((version) => {
       entries.push(...normalizeCashSourceCatalog(version.sourceCatalog, { sourceKind: kind, sourceName: version.name }));
-      if (version.sourceObjectId) sourceObjectIds.add(version.sourceObjectId);
+      const sourceObject = version.sourceObjectId && objectRegistry.find((object) => object.id === version.sourceObjectId);
+      if (sourceObject) entries.push(...cashSourceCatalogFromFileRecord(objectFile(sourceObject, kind), kind));
     });
   });
-  sourceObjectIds.forEach((objectId) => {
-    const sourceObject = objectRegistry.find((object) => object.id === objectId);
-    if (!sourceObject) return;
+  if (!hasAttachmentVersions && section.sourceProjectId) {
+    const sourceObject = objectRegistry.find((object) => object.id === section.sourceProjectId);
+    if (sourceObject) {
     CASH_SOURCE_DOCUMENT_KINDS.forEach((kind) => entries.push(...cashSourceCatalogFromFileRecord(objectFile(sourceObject, kind), kind)));
-  });
+    }
+  }
   return mergeCashSourceCatalog(entries);
 }
 
@@ -3472,12 +3479,8 @@ async function readCashflowFile(id) {
   });
 }
 
-async function deleteCashflowFiles(sectionOrSections) {
-  const sections = Array.isArray(sectionOrSections) ? sectionOrSections : [sectionOrSections];
-  const ids = sections.flatMap((section) => [
-    ...CASH_ATTACHMENT_KINDS.flatMap((kind) => section?.attachments?.[kind]?.versions || []),
-    ...CASH_ORGANIZATION_ROLES.flatMap((role) => section?.organizationDocuments?.[role]?.attachment?.versions || [])
-  ]).filter((version) => !version.linkedFromProject).map((version) => version.id).filter(Boolean);
+async function deleteCashflowFileVersions(versions) {
+  const ids = (Array.isArray(versions) ? versions : []).filter((version) => !version?.linkedFromProject).map((version) => version?.id).filter(Boolean);
   if (!ids.length) return;
   const db = await openCashflowFileDb();
   await new Promise((resolve, reject) => {
@@ -3488,6 +3491,15 @@ async function deleteCashflowFiles(sectionOrSections) {
     transaction.onerror = () => reject(transaction.error || new Error('Cashflow file deletion failed'));
     transaction.onabort = () => reject(transaction.error || new Error('Cashflow file deletion aborted'));
   });
+}
+
+async function deleteCashflowFiles(sectionOrSections) {
+  const sections = Array.isArray(sectionOrSections) ? sectionOrSections : [sectionOrSections];
+  const versions = sections.flatMap((section) => [
+    ...CASH_ATTACHMENT_KINDS.flatMap((kind) => section?.attachments?.[kind]?.versions || []),
+    ...CASH_ORGANIZATION_ROLES.flatMap((role) => section?.organizationDocuments?.[role]?.attachment?.versions || [])
+  ]);
+  await deleteCashflowFileVersions(versions);
 }
 
 function cashTotal(entries) {
@@ -3681,6 +3693,35 @@ async function addCashSectionAttachment(objectId, sectionId, kind, file) {
   }
 }
 
+function deleteCashSectionAttachment(objectId, sectionId, kind) {
+  const { section } = findCashSection(objectId, sectionId);
+  const versions = section?.attachments?.[kind]?.versions || [];
+  const current = versions[versions.length - 1];
+  if (!section || !uploadRules[kind] || !current) return;
+  const icon = { project: '▤', contract: '≡', estimate: '₽' }[kind];
+  showDialog(tr('deleteSectionAttachmentTitle'), tr('deleteSectionAttachmentHint'), `<section class="revision-upload-source"><span>${icon}</span><div><small>${escapeHtml(tr(kind))}</small><strong>${escapeHtml(current.sourceDocumentTitle || current.name)}</strong><em>${versions.length} ${escapeHtml(tr('versions'))} · ${escapeHtml(formatStorage(versions.reduce((total, version) => total + (Number(version.size) || 0), 0)))}</em></div></section><div class="result-actions"><button class="outline-button" type="button" data-cancel-section-attachment-delete>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-section-attachment-delete>${escapeHtml(tr('deleteSectionAttachment'))}</button></div>`);
+  const scope = $('[data-dialog-content]');
+  $('[data-cancel-section-attachment-delete]', scope)?.addEventListener('click', () => $('[data-dialog]')?.close());
+  $('[data-confirm-section-attachment-delete]', scope)?.addEventListener('click', async (event) => {
+    const button = event.currentTarget;
+    button.disabled = true;
+    try {
+      await deleteCashflowFileVersions(versions);
+      section.attachments[kind] = null;
+      const hasLinkedDocuments = CASH_ATTACHMENT_KINDS.some((attachmentKind) => (section.attachments?.[attachmentKind]?.versions || []).some((version) => version.linkedFromProject));
+      if (!hasLinkedDocuments) section.sourceProjectId = null;
+      saveCashflow();
+      renderCashflow();
+      $('[data-dialog]')?.close();
+      showToast(tr('sectionAttachmentDeleted'));
+    } catch (error) {
+      console.error(error);
+      button.disabled = false;
+      showToast(tr('sectionAttachmentDeleteFailed'));
+    }
+  });
+}
+
 async function openCashSectionAttachment(objectId, sectionId, kind, versionId) {
   const { section } = findCashSection(objectId, sectionId);
   const versions = section?.attachments?.[kind]?.versions || [];
@@ -3821,7 +3862,7 @@ function cashSectionAttachmentMarkup(section, kind) {
   const history = versions.length > 1 ? `<details class="cash-source-file-history"><summary>${tr('versionHistory')} · ${versions.length}</summary><div>${[...versions].reverse().map((version, reverseIndex) => `<button type="button" data-open-cash-attachment-version="${escapeHtml(version.id)}" data-cash-attachment-kind="${escapeHtml(kind)}"><b>v${versions.length - reverseIndex}</b><span><strong>${escapeHtml(version.sourceDocumentTitle || version.name)}</strong><small>${version.linkedFromProject ? `${escapeHtml(tr('linkedFromProject'))} · ` : ''}${escapeHtml(formatObjectDateTime(version.addedAt))} · ${escapeHtml(formatStorage(version.size))}</small></span><i>${tr('openDocument')}</i></button>`).join('')}</div></details>` : '';
   return `<article class="cash-source-file${current ? ' has-file' : ''}">
     <header><span aria-hidden="true">${icon}</span><div><strong>${tr(kind)}</strong><small>${escapeHtml(current?.sourceDocumentTitle || current?.name || tr('notUploaded'))}</small>${current ? `<em>${current.linkedFromProject ? `${escapeHtml(tr('linkedFromProject'))} · ` : ''}${escapeHtml(current.name)} · v${versions.length} · ${escapeHtml(formatStorage(current.size))}</em>` : ''}</div></header>
-    <div class="cash-source-file-actions">${current ? `<button class="outline-button" type="button" data-open-cash-attachment-version="${escapeHtml(current.id)}" data-cash-attachment-kind="${escapeHtml(kind)}">${tr('openDocument')}</button>` : ''}<button class="primary-button" type="button" data-select-cash-attachment="${escapeHtml(kind)}">${tr(current ? 'replaceDocument' : 'upload')}</button></div>
+    <div class="cash-source-file-actions">${current ? `<button class="outline-button" type="button" data-open-cash-attachment-version="${escapeHtml(current.id)}" data-cash-attachment-kind="${escapeHtml(kind)}">${tr('openDocument')}</button>` : ''}<button class="primary-button" type="button" data-select-cash-attachment="${escapeHtml(kind)}">${tr(current ? 'replaceDocument' : 'upload')}</button>${current ? `<button class="cash-source-file-delete" type="button" data-delete-cash-attachment="${escapeHtml(kind)}">${escapeHtml(tr('deleteSectionAttachment'))}</button>` : ''}</div>
     <input type="file" accept="${uploadRules[kind].accept}" data-cash-attachment-input="${escapeHtml(kind)}" hidden />${history}
   </article>`;
 }
@@ -4040,6 +4081,7 @@ function bindCashSectionEvents(object, scope) {
         input.disabled = false;
       }));
       $$('[data-open-cash-attachment-version]', sectionCard).forEach((button) => button.addEventListener('click', () => openCashSectionAttachment(object.id, section.id, button.dataset.cashAttachmentKind, button.dataset.openCashAttachmentVersion)));
+      $$('[data-delete-cash-attachment]', sectionCard).forEach((button) => button.addEventListener('click', () => deleteCashSectionAttachment(object.id, section.id, button.dataset.deleteCashAttachment)));
       $('[data-toggle-report-history]', sectionCard)?.addEventListener('click', () => {
         if (expandedCashReportHistory.has(section.id)) expandedCashReportHistory.delete(section.id); else expandedCashReportHistory.add(section.id);
         renderCashflow();

@@ -349,6 +349,7 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .cash-source-file > header em { margin-top: 3px; color: var(--blue); font-size: 7px; font-style: normal; }
 .cash-source-file-actions { display: grid; grid-template-columns: repeat(auto-fit,minmax(74px,1fr)); gap: 5px; }
 .cash-source-file-actions button { min-width: 0; min-height: 36px; padding: 5px 7px; font-size: 8px; }
+.cash-source-file-actions .cash-source-file-delete { color: #ff6577; border: 1px solid rgba(255,91,113,.42); border-radius: 10px; background: rgba(226,29,58,.08); cursor: pointer; transition: border-color .18s ease,background .18s ease,transform .18s ease; }.cash-source-file-actions .cash-source-file-delete:hover { border-color: rgba(255,91,113,.72); background: rgba(226,29,58,.15); }.cash-source-file-actions .cash-source-file-delete:active { transform: scale(.97); }
 .cash-source-file-history { border-top: 1px solid var(--line); }
 .cash-source-file-history summary { padding-top: 8px; color: var(--blue); font-size: 8px; font-weight: 750; cursor: pointer; }
 .cash-source-file-history > div { margin-top: 6px; display: grid; gap: 5px; }
