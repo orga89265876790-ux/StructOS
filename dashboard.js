@@ -639,7 +639,7 @@ const PROFILE_DATA_KEY = 'structos-profile-data-v1';
 const BUILDER_PASSPORT_KEY = 'structos-builder-passport-v1';
 const STRUCTOS_CONNECTIONS_KEY = 'structos-connections-v1';
 const STRUCTOS_DOCUMENT_BRAND = Object.freeze({ name: 'StructOS', made: 'Сделано на StructOS', site: 'www.structOS.ru', slogan: 'Единый Строительный Интеллект в России №1' });
-const BOTTOM_MENU_POSITION_KEY = 'structos-bottom-menu-position-v2';
+const BOTTOM_MENU_STATE_KEY = 'structos-bottom-menu-open-v1';
 const PROJECT_CARD_STATE_KEY = 'structos-project-card-state-v1';
 const ACTIVITY_KEY = 'structos-construction-activity-v1';
 const FIRST_ACTIVITY_KEY = 'structos-first-activity-v1';
@@ -792,7 +792,7 @@ function renderConstructionActivity() {
 }
 
 function activityActionFromElement(element) {
-  const ignored = '[data-bottom-menu-toggle],[data-bottom-menu-close],[data-tab],[data-menu-open],[data-menu-close],[data-refresh-page],[data-force-refresh],[data-theme-toggle],[data-language]';
+  const ignored = '[data-bottom-menu-toggle],[data-tab],[data-menu-open],[data-menu-close],[data-refresh-page],[data-force-refresh],[data-theme-toggle],[data-language]';
   if (element.matches(ignored)) return null;
   const projectAction = element.matches('[data-analysis-type],[data-run-analysis],[data-open-object],[data-my-project],[data-open-object-analysis],[data-view-object-report],[data-object-upload],[data-start-ready],[data-open-report-document],[data-project-analysis-tab]')
     || ['projects', 'analysis-detail', 'objects', 'cashflow'].includes(element.closest('[data-panel]')?.dataset.panel);
@@ -1051,6 +1051,7 @@ function applyLanguage(next) {
   renderPassportEditor();
   renderPassportProgress();
   renderConstructionActivity();
+  updateBottomMenuAccessibility();
   if ($('[data-panel="analysis-detail"]')?.classList.contains('is-active')) renderAnalysisDetail();
 }
 
@@ -2027,138 +2028,48 @@ function setPanel(name) {
   if (next === 'cashflow') renderCashflow();
   if (next === 'profile') { renderProfilePersonalData(); renderConnectionsSummary(); }
   if (next === 'passport') renderPassportEditor();
-  setBottomMenu(false);
   closeMenu();
 }
 
-let bottomMenuPosition = null;
-let bottomMenuDrag = null;
-let bottomMenuSuppressClick = false;
+let bottomMenuAnimationTimer = null;
 
-function bottomMenuViewport() {
-  const viewport = window.visualViewport;
-  return {
-    left: viewport?.offsetLeft || 0,
-    top: viewport?.offsetTop || 0,
-    width: viewport?.width || window.innerWidth || document.documentElement.clientWidth,
-    height: viewport?.height || window.innerHeight || document.documentElement.clientHeight
-  };
-}
-
-function placeBottomMenu(x, y, persist = false) {
+function updateBottomMenuAccessibility() {
   const menu = $('[data-bottom-menu]');
   const toggle = $('[data-bottom-menu-toggle]');
   if (!menu || !toggle) return;
-  const viewport = bottomMenuViewport();
-  const width = toggle.offsetWidth || 190;
-  const height = toggle.offsetHeight || 54;
-  const margin = 8;
-  const safeBottom = Math.max(0, Number.parseFloat(getComputedStyle(menu).getPropertyValue('--bottom-menu-safe-area')) || 0);
-  const minLeft = viewport.left + margin;
-  const maxLeft = Math.max(minLeft, viewport.left + viewport.width - width - margin);
-  const minTop = viewport.top + margin;
-  const maxTop = Math.max(minTop, viewport.top + viewport.height - height - margin - safeBottom);
-  const left = Math.max(minLeft, Math.min(maxLeft, Number(x) || 0));
-  const top = Math.max(minTop, Math.min(maxTop, Number(y) || 0));
-  const xRatio = maxLeft > minLeft ? (left - minLeft) / (maxLeft - minLeft) : 0;
-  const yRatio = maxTop > minTop ? (top - minTop) / (maxTop - minTop) : 0;
-  bottomMenuPosition = { x: Math.round(left), y: Math.round(top), xRatio, yRatio };
-  menu.style.left = `${bottomMenuPosition.x}px`;
-  menu.style.top = `${bottomMenuPosition.y}px`;
-  menu.style.right = 'auto'; menu.style.bottom = 'auto'; menu.style.transform = 'none';
-  if (persist) localStorage.setItem(BOTTOM_MENU_POSITION_KEY, JSON.stringify(bottomMenuPosition));
-  if (menu.classList.contains('is-open')) updateBottomMenuDirection();
-}
-
-function placeBottomMenuFromRatios(position = bottomMenuPosition) {
-  const menu = $('[data-bottom-menu]');
-  const toggle = $('[data-bottom-menu-toggle]');
-  if (!menu || !toggle || !position) return;
-  const viewport = bottomMenuViewport();
-  const width = toggle.offsetWidth || 190;
-  const height = toggle.offsetHeight || 54;
-  const margin = 8;
-  const safeBottom = Math.max(0, Number.parseFloat(getComputedStyle(menu).getPropertyValue('--bottom-menu-safe-area')) || 0);
-  const availableX = Math.max(0, viewport.width - width - margin * 2);
-  const availableY = Math.max(0, viewport.height - height - margin * 2 - safeBottom);
-  const xRatio = Number.isFinite(position.xRatio) ? Math.max(0, Math.min(1, position.xRatio)) : 0.5;
-  const yRatio = Number.isFinite(position.yRatio) ? Math.max(0, Math.min(1, position.yRatio)) : 1;
-  placeBottomMenu(viewport.left + margin + availableX * xRatio, viewport.top + margin + availableY * yRatio);
-}
-
-function restoreBottomMenuPosition() {
-  const toggle = $('[data-bottom-menu-toggle]');
-  if (!toggle) return;
-  const saved = readStoredJSON(BOTTOM_MENU_POSITION_KEY, null);
-  if (Number.isFinite(saved?.xRatio) && Number.isFinite(saved?.yRatio)) {
-    placeBottomMenuFromRatios(saved);
-    return;
-  }
-  placeBottomMenuFromRatios({ xRatio: 0.5, yRatio: 1 });
-}
-
-function updateBottomMenuDirection() {
-  const menu = $('[data-bottom-menu]');
-  const nav = $('[data-bottom-nav]');
-  const toggle = $('[data-bottom-menu-toggle]');
-  if (!menu || !nav || !toggle || nav.hidden) return;
-  const viewport = bottomMenuViewport();
-  const rect = toggle.getBoundingClientRect();
-  const spaceAbove = Math.max(0, rect.top - viewport.top - 10);
-  const spaceBelow = Math.max(0, viewport.top + viewport.height - rect.bottom - 10);
-  const opensUp = spaceAbove >= spaceBelow;
-  menu.classList.toggle('opens-up', opensUp);
-  menu.classList.toggle('opens-down', !opensUp);
-  menu.classList.toggle('menu-align-right', rect.left + 260 > viewport.left + viewport.width - 8);
-  nav.style.setProperty('--bottom-menu-max-height', `${Math.max(150, Math.floor(opensUp ? spaceAbove : spaceBelow))}px`);
-}
-
-function setBottomMenu(open) {
-  const menu = $('[data-bottom-menu]');
-  const nav = $('[data-bottom-nav]');
-  const toggle = $('[data-bottom-menu-toggle]');
-  if (!menu || !nav || !toggle) return;
-  menu.classList.toggle('is-open', open);
-  nav.hidden = !open;
+  const open = menu.classList.contains('is-open');
   toggle.setAttribute('aria-expanded', String(open));
-  if (open) requestAnimationFrame(updateBottomMenuDirection);
+  toggle.setAttribute('aria-label', tr(open ? 'collapseMenu' : 'menu'));
+  toggle.setAttribute('title', tr(open ? 'collapseMenu' : 'menu'));
 }
 
-function startBottomMenuDrag(event) {
-  if (event.pointerType === 'mouse' && event.button !== 0) return;
+function setBottomMenu(open, options = {}) {
   const menu = $('[data-bottom-menu]');
-  const toggle = $('[data-bottom-menu-toggle]');
-  if (!menu || !toggle) return;
-  const rect = toggle.getBoundingClientRect();
-  bottomMenuDrag = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, originX: rect.left, originY: rect.top, moved: false };
-  toggle.setPointerCapture?.(event.pointerId);
-}
-
-function moveBottomMenu(event) {
-  if (!bottomMenuDrag || event.pointerId !== bottomMenuDrag.pointerId) return;
-  const dx = event.clientX - bottomMenuDrag.startX;
-  const dy = event.clientY - bottomMenuDrag.startY;
-  if (!bottomMenuDrag.moved && Math.hypot(dx, dy) < 6) return;
-  if (!bottomMenuDrag.moved) {
-    bottomMenuDrag.moved = true;
-    setBottomMenu(false);
-    $('[data-bottom-menu]')?.classList.add('is-dragging');
+  const nav = $('[data-bottom-nav]');
+  const items = nav ? $('.bottom-nav-items', nav) : null;
+  if (!menu || !nav || !items) return;
+  const shouldAnimate = options.animate !== false;
+  menu.classList.toggle('is-open', open);
+  menu.classList.toggle('is-collapsed', !open);
+  nav.hidden = false;
+  items.setAttribute('aria-hidden', String(!open));
+  $$('[data-tab]', items).forEach((button) => { button.tabIndex = open ? 0 : -1; });
+  updateBottomMenuAccessibility();
+  if (options.persist !== false) localStorage.setItem(BOTTOM_MENU_STATE_KEY, String(open));
+  clearTimeout(bottomMenuAnimationTimer);
+  menu.classList.remove('is-building');
+  if (open && shouldAnimate) {
+    requestAnimationFrame(() => {
+      if (!menu.classList.contains('is-open')) return;
+      menu.classList.add('is-building');
+      bottomMenuAnimationTimer = setTimeout(() => menu.classList.remove('is-building'), 1250);
+    });
   }
-  event.preventDefault();
-  placeBottomMenu(bottomMenuDrag.originX + dx, bottomMenuDrag.originY + dy);
 }
 
-function finishBottomMenuDrag(event) {
-  if (!bottomMenuDrag || event.pointerId !== bottomMenuDrag.pointerId) return;
-  const moved = bottomMenuDrag.moved;
-  const toggle = $('[data-bottom-menu-toggle]');
-  if (toggle?.hasPointerCapture?.(event.pointerId)) toggle.releasePointerCapture(event.pointerId);
-  bottomMenuDrag = null;
-  $('[data-bottom-menu]')?.classList.remove('is-dragging');
-  if (!moved) return;
-  if (bottomMenuPosition) localStorage.setItem(BOTTOM_MENU_POSITION_KEY, JSON.stringify(bottomMenuPosition));
-  bottomMenuSuppressClick = true;
-  setTimeout(() => { bottomMenuSuppressClick = false; }, 0);
+function restoreBottomMenuState() {
+  const saved = localStorage.getItem(BOTTOM_MENU_STATE_KEY);
+  setBottomMenu(saved !== 'false', { animate: false, persist: false });
 }
 
 function openMenu() {
@@ -7129,16 +7040,7 @@ $$('[data-copy-id]').forEach((button) => button.addEventListener('click', copyId
 $$('[data-copy-referral]').forEach((button) => button.addEventListener('click', copyReferral));
 $$('[data-share-referral]').forEach((button) => button.addEventListener('click', shareReferral));
 const bottomMenuToggle = $('[data-bottom-menu-toggle]');
-bottomMenuToggle?.addEventListener('click', (event) => {
-  if (bottomMenuSuppressClick) { event.preventDefault(); return; }
-  setBottomMenu(!$('[data-bottom-menu]').classList.contains('is-open'));
-});
-bottomMenuToggle?.addEventListener('pointerdown', startBottomMenuDrag);
-bottomMenuToggle?.addEventListener('dragstart', (event) => event.preventDefault());
-window.addEventListener('pointermove', moveBottomMenu, { passive: false });
-window.addEventListener('pointerup', finishBottomMenuDrag);
-window.addEventListener('pointercancel', finishBottomMenuDrag);
-$('[data-bottom-menu-close]')?.addEventListener('click', () => setBottomMenu(false));
+bottomMenuToggle?.addEventListener('click', () => setBottomMenu(!$('[data-bottom-menu]').classList.contains('is-open')));
 $$('[data-tab]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.tab)));
 $$('[data-open-panel]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.openPanel)));
 $$('[data-open-view]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.openView)));
@@ -7192,8 +7094,7 @@ drawingDialog?.addEventListener('close', () => {
   if (!drawingMinimized) $('[data-drawing-restore]').hidden = true;
 });
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
-window.addEventListener('resize', () => { renderWidgets(); if (bottomMenuPosition) placeBottomMenuFromRatios(bottomMenuPosition); else restoreBottomMenuPosition(); });
-window.visualViewport?.addEventListener('resize', () => { if ($('[data-bottom-menu]')?.classList.contains('is-open')) requestAnimationFrame(updateBottomMenuDirection); });
+window.addEventListener('resize', renderWidgets);
 window.addEventListener('pagehide', persistIdentityLocal);
 
 importPendingTransfer();
@@ -7212,7 +7113,7 @@ renderConnectionsSummary();
 recordActivity('cabinet', 'daily-session', { daily: true });
 document.addEventListener('click', trackConstructionActivity, true);
 setPanel(location.hash.slice(1) || 'home');
-requestAnimationFrame(restoreBottomMenuPosition);
+restoreBottomMenuState();
 await initAuth();
 
 if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));

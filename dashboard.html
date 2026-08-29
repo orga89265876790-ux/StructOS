@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=41" />
+    <link rel="stylesheet" href="dashboard.css?v=42" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -229,10 +229,18 @@
         </section>
       </main>
 
-      <div class="bottom-menu" data-bottom-menu>
-        <nav class="bottom-nav" aria-label="Основная навигация" data-bottom-nav hidden>
-          <button class="bottom-nav-collapse" type="button" data-bottom-menu-close><span class="bottom-nav-mini-brand"><img src="assets/structos-building-mark.svg" alt="" />StructOS</span><span data-i18n="collapseMenu">Свернуть меню</span><i>⌄</i></button>
-          <div class="bottom-nav-items">
+      <div class="bottom-menu is-open" data-bottom-menu>
+        <nav class="bottom-nav" aria-label="Основная навигация" data-bottom-nav>
+          <span class="bottom-menu-build-visual" aria-hidden="true">
+            <i class="bottom-menu-build-ground"></i>
+            <i class="bottom-menu-build-column is-left"></i>
+            <i class="bottom-menu-build-column is-right"></i>
+            <i class="bottom-menu-build-floor is-one"></i>
+            <i class="bottom-menu-build-floor is-two"></i>
+            <i class="bottom-menu-build-floor is-three"></i>
+            <i class="bottom-menu-build-beacon"></i>
+          </span>
+          <div class="bottom-nav-items" id="bottom-nav-items">
             <button class="is-active" type="button" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v10h-6v-6H9v6H3V11Z"/></svg><span data-i18n="home">Главная</span></button>
             <button type="button" data-tab="projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h7l2 2h9v11H3zM3 7V4h7l2 3"/></svg><span data-i18n="myProjects">Мои проекты</span></button>
             <button type="button" data-tab="space"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span data-i18n="space">Пространство</span></button>
@@ -240,8 +248,11 @@
             <button type="button" data-tab="cashflow"><span class="cashflow-nav-icon" aria-hidden="true">+₽−</span><span data-i18n="money">Быстрый объект</span></button>
             <button type="button" data-tab="profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="profile">Профиль</span></button>
           </div>
+          <button class="bottom-menu-toggle" type="button" data-bottom-menu-toggle aria-controls="bottom-nav-items" aria-expanded="true" aria-label="Свернуть меню">
+            <span class="bottom-menu-logo-mark" aria-hidden="true"><img src="assets/structos-building-mark.svg" alt="" /><i></i></span>
+            <span class="bottom-menu-wordmark">Struct<span>OS</span></span>
+          </button>
         </nav>
-        <button class="bottom-menu-toggle" type="button" data-bottom-menu-toggle aria-expanded="false"><img src="assets/structos-building-mark.svg" alt="" /><span class="brand-name">Struct<span>OS</span></span><strong data-i18n="menu">Меню</strong><i aria-hidden="true">⌃</i></button>
       </div>
 
       <div class="drawer-backdrop" data-menu-close hidden></div>
@@ -304,6 +315,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=41"></script>
+    <script type="module" src="dashboard.js?v=42"></script>
   </body>
 </html>
