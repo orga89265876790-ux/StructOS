@@ -484,6 +484,35 @@ Object.assign(copy.TJ, {
   launchQuickObject: 'Оғози объекти зуд', quickObjectFromProjectCreated: 'Объекти зуд сохта ва кушода шуд', quickObjectFromProjectUpdated: 'Объекти зуд нав ва кушода шуд'
 });
 
+Object.assign(copy.RU, {
+  workOrMaterialName: 'Наименование работы / материала', sourceCatalogTitle: 'Подсказки из проекта и сметы',
+  sourceCatalogReady: 'позиций доступно. Начните вводить название и выберите совпадение.',
+  sourceCatalogPending: 'Проект или смета подключены. Позиции появятся после извлечения данных из документа.',
+  sourceCatalogEmpty: 'Загрузите проект или смету в этот раздел, чтобы получать подсказки.',
+  sourceCatalogLoading: 'Проверяем позиции в загруженных документах…', sourceCatalogFreeInput: 'Если нужной работы или материала нет — введите своё название в свободной форме.'
+});
+Object.assign(copy.EN, {
+  workOrMaterialName: 'Work / material name', sourceCatalogTitle: 'Suggestions from project and estimate',
+  sourceCatalogReady: 'items available. Start typing and choose a match.',
+  sourceCatalogPending: 'A project or estimate is connected. Items will appear after document data is extracted.',
+  sourceCatalogEmpty: 'Upload a project or estimate to this section to get suggestions.',
+  sourceCatalogLoading: 'Checking items in uploaded documents…', sourceCatalogFreeInput: 'If the work or material is not listed, enter your own name freely.'
+});
+Object.assign(copy.KY, {
+  workOrMaterialName: 'Иштин / материалдын аталышы', sourceCatalogTitle: 'Долбоор жана сметадан сунуштар',
+  sourceCatalogReady: 'позиция жеткиликтүү. Аталышты жаза баштап, дал келгенин тандаңыз.',
+  sourceCatalogPending: 'Долбоор же смета тиркелген. Документтен маалымат алынгандан кийин позициялар чыгат.',
+  sourceCatalogEmpty: 'Сунуштарды алуу үчүн бул бөлүмгө долбоор же смета жүктөңүз.',
+  sourceCatalogLoading: 'Жүктөлгөн документтердеги позициялар текшерилүүдө…', sourceCatalogFreeInput: 'Керектүү иш же материал жок болсо, өз аталышыңызды эркин жазыңыз.'
+});
+Object.assign(copy.TJ, {
+  workOrMaterialName: 'Номи кор / мавод', sourceCatalogTitle: 'Пешниҳодҳо аз лоиҳа ва смета',
+  sourceCatalogReady: 'мавқеъ дастрас аст. Номро навишта, мувофиқро интихоб кунед.',
+  sourceCatalogPending: 'Лоиҳа ё смета пайваст аст. Пас аз гирифтани маълумот аз ҳуҷҷат мавқеъҳо пайдо мешаванд.',
+  sourceCatalogEmpty: 'Барои гирифтани пешниҳодҳо ба ин бахш лоиҳа ё смета бор кунед.',
+  sourceCatalogLoading: 'Мавқеъҳои ҳуҷҷатҳои боршуда санҷида мешаванд…', sourceCatalogFreeInput: 'Агар кор ё маводи лозим набошад, номи худро озодона ворид кунед.'
+});
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -519,6 +548,7 @@ const CASHFLOW_KEY = 'structos-cashflow-v1';
 const CASHFLOW_FILE_DB = 'structos-cashflow-files-db';
 const CASHFLOW_FILE_STORE = 'files';
 const CASH_ATTACHMENT_KINDS = ['project', 'contract', 'estimate'];
+const CASH_SOURCE_DOCUMENT_KINDS = ['project', 'estimate'];
 const CASH_ORGANIZATION_ROLES = ['contractor', 'customer'];
 const LEGACY_STATEMENT_TITLES = new Set(['Ведомость выполненных работ', 'Completed works statement', 'Аткарылган иштердин ведомосту', 'Ведомости корҳои иҷрошуда']);
 const ACTIVE_OBJECT_LIMIT = 1;
@@ -532,6 +562,7 @@ let analysisTimer;
 let activeUploadKind = 'project';
 let activeUploadMode = 'standard';
 let pendingFile = null;
+let pendingUploadSourceFile = null;
 let activeUploadObjectId = null;
 let newObjectNameDraft = '';
 let projectObjectWizardDraft = null;
@@ -2816,6 +2847,212 @@ function cashDocumentParties(value) {
   };
 }
 
+function cashSourceKey(value) {
+  return String(value || '').trim().toLocaleLowerCase('ru').replace(/ё/g, 'е').replace(/[^a-zа-я0-9]+/giu, '');
+}
+
+function cashSourceCellText(value) {
+  if (value == null) return '';
+  if (typeof value === 'string' || typeof value === 'number') return String(value).trim();
+  if (typeof value !== 'object') return '';
+  if (typeof value.text === 'string') return value.text.trim();
+  if (value.result != null) return cashSourceCellText(value.result);
+  if (Array.isArray(value.richText)) return value.richText.map((part) => part?.text || '').join('').trim();
+  return '';
+}
+
+function cashSourceProperty(record, aliases) {
+  if (!record || typeof record !== 'object') return '';
+  const wanted = new Set(aliases.map(cashSourceKey));
+  const found = Object.entries(record).find(([key]) => wanted.has(cashSourceKey(key)));
+  return found ? found[1] : '';
+}
+
+function cashSourceNumber(value) {
+  if (Number.isFinite(Number(value))) return Math.max(0, Number(value));
+  const normalized = cashSourceCellText(value).replace(/\s+/g, '').replace(',', '.').replace(/[^\d.-]+/g, '');
+  const number = Number(normalized);
+  return Number.isFinite(number) ? Math.max(0, number) : 0;
+}
+
+function cashSourceCategoryFromKey(value) {
+  const key = cashSourceKey(value);
+  if (/(material|материал|оборуд|equipment)/u.test(key)) return 'material';
+  if (/(work|работ|service|услуг)/u.test(key)) return 'work';
+  return 'position';
+}
+
+function normalizeCashSourceCatalogEntry(value, defaults = {}) {
+  const record = value && typeof value === 'object' ? value : null;
+  const nameValue = record
+    ? cashSourceProperty(record, ['name', 'title', 'description', 'item', 'itemName', 'position', 'workName', 'materialName', 'serviceName', 'наименование', 'наименование работ', 'наименование материала', 'работа', 'материал', 'услуга', 'позиция', 'описание'])
+    : value;
+  const name = cashSourceCellText(nameValue).replace(/\s+/g, ' ').trim().slice(0, 240);
+  if (!name || /^(итого|всего|total|subtotal)$/iu.test(name)) return null;
+  const unit = cashSourceCellText(record && cashSourceProperty(record, ['unit', 'measure', 'unitName', 'uom', 'ед', 'ед. изм.', 'единица измерения'])).replace(/\s+/g, ' ').trim().slice(0, 40);
+  const quantity = cashSourceNumber(record && cashSourceProperty(record, ['quantity', 'qty', 'volume', 'amount', 'количество', 'объем', 'объём', 'кол-во']));
+  const price = cashSourceNumber(record && cashSourceProperty(record, ['price', 'unitPrice', 'rate', 'cost', 'цена', 'стоимость единицы', 'расценка']));
+  const sourceKind = CASH_SOURCE_DOCUMENT_KINDS.includes(defaults.sourceKind) ? defaults.sourceKind : 'project';
+  return {
+    name,
+    unit,
+    quantity,
+    price,
+    category: ['work', 'material', 'position'].includes(defaults.category) ? defaults.category : 'position',
+    sourceKind,
+    sourceName: String(defaults.sourceName || tr(sourceKind)).trim().slice(0, 240),
+    sourceSheet: String(defaults.sourceSheet || '').trim().slice(0, 120)
+  };
+}
+
+function mergeCashSourceCatalog(entries) {
+  const priority = (entry) => (entry.sourceKind === 'estimate' ? 10 : 0) + Boolean(entry.unit) * 2 + Boolean(entry.price) * 2 + Boolean(entry.quantity);
+  const ordered = (Array.isArray(entries) ? entries : []).filter(Boolean).sort((left, right) => priority(right) - priority(left));
+  const merged = new Map();
+  ordered.forEach((entry) => {
+    const normalized = normalizeCashSourceCatalogEntry(entry, entry);
+    if (!normalized) return;
+    const key = cashSourceKey(normalized.name);
+    const current = merged.get(key);
+    if (!current) merged.set(key, normalized);
+    else merged.set(key, { ...current, unit: current.unit || normalized.unit, quantity: current.quantity || normalized.quantity, price: current.price || normalized.price });
+  });
+  return [...merged.values()].sort((left, right) => left.name.localeCompare(right.name, root.lang || 'ru')).slice(0, 2000);
+}
+
+function normalizeCashSourceCatalog(value, defaults = {}) {
+  if (!Array.isArray(value)) return [];
+  return mergeCashSourceCatalog(value.map((entry) => normalizeCashSourceCatalogEntry(entry, defaults)));
+}
+
+function cashSourceCatalogFromStructuredData(value, defaults = {}) {
+  const collected = [];
+  const collectionKeys = new Set(['rows', 'items', 'positions', 'works', 'workitems', 'materials', 'materialitems', 'services', 'equipment', 'specification', 'specifications', 'boq', 'estimerows', 'projectrows', 'data', 'result', 'results', 'analysis', 'analysisdata', 'extracted', 'extracteddata', 'таблица', 'строки', 'позиции', 'работы', 'материалы', 'услуги', 'оборудование', 'спецификация', 'ведомостьобъемовработ']);
+  const walk = (node, context, depth = 0, collection = false) => {
+    if (node == null || depth > 7 || collected.length >= 2000) return;
+    if (Array.isArray(node)) {
+      node.forEach((item) => {
+        const entry = normalizeCashSourceCatalogEntry(item, context);
+        if (entry) collected.push(entry);
+        if (item && typeof item === 'object') walk(item, context, depth + 1, false);
+      });
+      return;
+    }
+    if (typeof node !== 'object') {
+      if (collection) {
+        const entry = normalizeCashSourceCatalogEntry(node, context);
+        if (entry) collected.push(entry);
+      }
+      return;
+    }
+    Object.entries(node).forEach(([key, child]) => {
+      const normalizedKey = cashSourceKey(key);
+      if (!collectionKeys.has(normalizedKey)) return;
+      walk(child, { ...context, category: cashSourceCategoryFromKey(key) }, depth + 1, true);
+    });
+  };
+  walk(value, defaults, 0, Array.isArray(value));
+  return mergeCashSourceCatalog(collected);
+}
+
+function cashSourceCatalogFromFileRecord(file, kind) {
+  if (!file || !CASH_SOURCE_DOCUMENT_KINDS.includes(kind)) return [];
+  const defaults = { sourceKind: kind, sourceName: file.name || tr(kind) };
+  const entries = [...normalizeCashSourceCatalog(file.sourceCatalog, defaults)];
+  ['analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'].forEach((key) => {
+    if (file[key] != null) entries.push(...cashSourceCatalogFromStructuredData(file[key], { ...defaults, category: cashSourceCategoryFromKey(key) }));
+  });
+  return mergeCashSourceCatalog(entries);
+}
+
+function cashSourceHeaderIndex(headers, patterns) {
+  const keys = headers.map(cashSourceKey);
+  return keys.findIndex((key) => patterns.some((pattern) => key.includes(pattern)));
+}
+
+function cashSourceCatalogFromTabularRows(rows, defaults = {}) {
+  const safeRows = Array.isArray(rows) ? rows : [];
+  let headerIndex = -1;
+  let columns = null;
+  let bestScore = -1;
+  safeRows.slice(0, 40).forEach((row, index) => {
+    const headers = (Array.isArray(row) ? row : []).map(cashSourceCellText);
+    const candidate = {
+      name: cashSourceHeaderIndex(headers, ['наименован', 'описан', 'workname', 'materialname', 'servicename', 'description', 'position', 'позици', 'работ', 'материал', 'услуг']),
+      unit: cashSourceHeaderIndex(headers, ['едизм', 'единицаизмер', 'unit', 'measure', 'uom']),
+      quantity: cashSourceHeaderIndex(headers, ['колич', 'колво', 'объем', 'объём', 'quantity', 'qty', 'volume']),
+      price: cashSourceHeaderIndex(headers, ['цена', 'стоимостьед', 'расцен', 'unitprice', 'price', 'rate'])
+    };
+    const score = (candidate.name >= 0 ? 5 : 0) + (candidate.unit >= 0 ? 1 : 0) + (candidate.quantity >= 0 ? 1 : 0) + (candidate.price >= 0 ? 1 : 0);
+    if (candidate.name >= 0 && score > bestScore) { headerIndex = index; columns = candidate; bestScore = score; }
+  });
+  if (headerIndex < 0 || !columns) return [];
+  const headerName = cashSourceCellText(safeRows[headerIndex]?.[columns.name]);
+  const category = cashSourceCategoryFromKey(headerName);
+  const collected = [];
+  let blankRows = 0;
+  for (let index = headerIndex + 1; index < safeRows.length && collected.length < 2000; index += 1) {
+    const row = Array.isArray(safeRows[index]) ? safeRows[index] : [];
+    const name = cashSourceCellText(row[columns.name]);
+    if (!name) { blankRows += 1; if (blankRows > 30) break; continue; }
+    blankRows = 0;
+    const entry = normalizeCashSourceCatalogEntry({
+      name,
+      unit: columns.unit >= 0 ? row[columns.unit] : '',
+      quantity: columns.quantity >= 0 ? row[columns.quantity] : 0,
+      price: columns.price >= 0 ? row[columns.price] : 0
+    }, { ...defaults, category });
+    if (entry) collected.push(entry);
+  }
+  return mergeCashSourceCatalog(collected);
+}
+
+function parseCashDelimitedLine(line, delimiter) {
+  const cells = [];
+  let value = '';
+  let quoted = false;
+  for (let index = 0; index < line.length; index += 1) {
+    const character = line[index];
+    if (character === '"' && quoted && line[index + 1] === '"') { value += '"'; index += 1; }
+    else if (character === '"') quoted = !quoted;
+    else if (character === delimiter && !quoted) { cells.push(value.trim()); value = ''; }
+    else value += character;
+  }
+  cells.push(value.trim());
+  return cells;
+}
+
+async function extractCashSourceCatalogFromFile(file, kind) {
+  if (!file || !CASH_SOURCE_DOCUMENT_KINDS.includes(kind)) return [];
+  const extension = String(file.name || '').split('.').pop()?.toLowerCase();
+  const defaults = { sourceKind: kind, sourceName: file.name || tr(kind) };
+  try {
+    if (extension === 'csv') {
+      const lines = (await file.text()).replace(/^\uFEFF/, '').split(/\r?\n/);
+      const delimiters = [';', ',', '\t'];
+      const delimiter = delimiters.map((value) => ({ value, score: lines.slice(0, 12).reduce((sum, line) => sum + Math.max(0, parseCashDelimitedLine(line, value).length - 1), 0) })).sort((left, right) => right.score - left.score)[0].value;
+      return cashSourceCatalogFromTabularRows(lines.map((line) => parseCashDelimitedLine(line, delimiter)), defaults);
+    }
+    if (extension === 'xlsx' || extension === 'xls') {
+      const { default: ExcelJS } = await import('exceljs');
+      const workbook = new ExcelJS.Workbook();
+      await workbook.xlsx.load(await file.arrayBuffer());
+      const entries = [];
+      workbook.worksheets.forEach((worksheet) => {
+        const rows = [];
+        worksheet.eachRow({ includeEmpty: false }, (row) => {
+          if (rows.length < 6000) rows.push(Array.from({ length: row.cellCount }, (_, index) => row.getCell(index + 1).text));
+        });
+        entries.push(...cashSourceCatalogFromTabularRows(rows, { ...defaults, sourceSheet: worksheet.name }));
+      });
+      return mergeCashSourceCatalog(entries);
+    }
+  } catch (error) {
+    console.warn('StructOS source catalog extraction failed:', error);
+  }
+  return [];
+}
+
 function normalizeCashWorkRows(value, priced = false) {
   const rows = Array.isArray(value) ? value : [];
   const normalized = rows.map((row) => ({
@@ -2823,6 +3060,8 @@ function normalizeCashWorkRows(value, priced = false) {
     name: String(row?.name || '').slice(0, 240),
     unit: String(row?.unit || '').slice(0, 40),
     quantity: Math.max(0, Number(row?.quantity) || 0),
+    sourceKind: CASH_SOURCE_DOCUMENT_KINDS.includes(row?.sourceKind) ? row.sourceKind : null,
+    sourceName: String(row?.sourceName || '').slice(0, 240),
     ...(priced ? { price: Math.max(0, Number(row?.price) || 0) } : { basis: String(row?.basis || '').slice(0, 240) })
   }));
   return normalized.length ? normalized : [{ id: `work-${Date.now()}-${Math.random().toString(16).slice(2)}`, name: '', unit: '', quantity: 0, ...(priced ? { price: 0 } : { basis: '' }) }];
@@ -2882,7 +3121,9 @@ function normalizeCashAttachmentVersion(value, kind) {
     sourceObjectId: value.sourceObjectId ? String(value.sourceObjectId) : null,
     sourceDocumentKind: CASH_ATTACHMENT_KINDS.includes(value.sourceDocumentKind) ? value.sourceDocumentKind : null,
     sourceDocumentTitle: String(value.sourceDocumentTitle || '').trim().slice(0, 180),
-    linkedFromProject: Boolean(value.linkedFromProject || value.sourceObjectId)
+    linkedFromProject: Boolean(value.linkedFromProject || value.sourceObjectId),
+    sourceCatalog: normalizeCashSourceCatalog(value.sourceCatalog, { sourceKind: kind, sourceName: value.name }),
+    sourceCatalogScanned: Boolean(value.sourceCatalogScanned || Array.isArray(value.sourceCatalog))
   };
 }
 
@@ -2916,6 +3157,55 @@ function cashAttachmentCurrent(section, kind) {
   return Array.isArray(versions) && versions.length ? versions[versions.length - 1] : null;
 }
 
+function cashSectionHasSourceDocuments(section) {
+  if (CASH_SOURCE_DOCUMENT_KINDS.some((kind) => cashAttachmentCurrent(section, kind))) return true;
+  const sourceObject = section?.sourceProjectId && objectRegistry.find((object) => object.id === section.sourceProjectId);
+  return Boolean(sourceObject && CASH_SOURCE_DOCUMENT_KINDS.some((kind) => objectFile(sourceObject, kind)));
+}
+
+function cashSectionSourceCatalog(section) {
+  if (!section) return [];
+  const entries = [...normalizeCashSourceCatalog(section.sourceCatalog)];
+  const sourceObjectIds = new Set(section.sourceProjectId ? [section.sourceProjectId] : []);
+  CASH_SOURCE_DOCUMENT_KINDS.forEach((kind) => {
+    const versions = section.attachments?.[kind]?.versions || [];
+    versions.forEach((version) => {
+      entries.push(...normalizeCashSourceCatalog(version.sourceCatalog, { sourceKind: kind, sourceName: version.name }));
+      if (version.sourceObjectId) sourceObjectIds.add(version.sourceObjectId);
+    });
+  });
+  sourceObjectIds.forEach((objectId) => {
+    const sourceObject = objectRegistry.find((object) => object.id === objectId);
+    if (!sourceObject) return;
+    CASH_SOURCE_DOCUMENT_KINDS.forEach((kind) => entries.push(...cashSourceCatalogFromFileRecord(objectFile(sourceObject, kind), kind)));
+  });
+  return mergeCashSourceCatalog(entries);
+}
+
+async function hydrateCashSectionSourceCatalog(section) {
+  if (!section) return [];
+  let changed = false;
+  for (const kind of CASH_SOURCE_DOCUMENT_KINDS) {
+    const version = cashAttachmentCurrent(section, kind);
+    if (!version || version.linkedFromProject || version.sourceCatalogScanned) continue;
+    let catalog = [];
+    try {
+      const blob = await readCashflowFile(version.id);
+      if (blob) {
+        const file = new File([blob], version.name, { type: version.type || blob.type, lastModified: version.lastModified });
+        catalog = await extractCashSourceCatalogFromFile(file, kind);
+      }
+    } catch (error) {
+      console.warn('StructOS source document could not be checked:', error);
+    }
+    version.sourceCatalog = catalog;
+    version.sourceCatalogScanned = true;
+    changed = true;
+  }
+  if (changed) saveCashflow();
+  return cashSectionSourceCatalog(section);
+}
+
 function cashSectionHasData(section) {
   const entries = ['advances', 'expenses', 'ownInvestments', 'ownReturns', 'factIncome', 'factExpenses', 'factOwnInvestments', 'factOwnReturns'].some((key) => section[key]?.length);
   const documents = Boolean(section.statement?.updatedAt || section.act?.updatedAt || section.reportHistory?.length || CASH_ATTACHMENT_KINDS.some((kind) => cashAttachmentCurrent(section, kind)));
@@ -2942,6 +3232,7 @@ function normalizeCashSection(section, legacyObject = {}) {
     factExpenses: normalizeCashEntries(section?.factExpenses),
     factOwnInvestments: normalizeCashEntries(section?.factOwnInvestments),
     factOwnReturns: normalizeCashEntries(section?.factOwnReturns),
+    sourceCatalog: normalizeCashSourceCatalog(section?.sourceCatalog),
     attachments: Object.fromEntries(CASH_ATTACHMENT_KINDS.map((kind) => [kind, normalizeCashAttachment(section?.attachments?.[kind], kind)])),
     statement: normalizeCashDocument(section?.statement, false, tr('workStatement')),
     act: normalizeCashDocument(section?.act, true, tr('workAct')),
@@ -3223,7 +3514,8 @@ async function addCashSectionAttachment(objectId, sectionId, kind, file) {
   const id = `cash-file-${createObjectId()}`;
   try {
     await storeCashflowFile(id, file);
-    const version = normalizeCashAttachmentVersion({ ...fileMetadata(file), id }, kind);
+    const sourceCatalog = CASH_SOURCE_DOCUMENT_KINDS.includes(kind) ? await extractCashSourceCatalogFromFile(file, kind) : [];
+    const version = normalizeCashAttachmentVersion({ ...fileMetadata(file), id, sourceCatalog, sourceCatalogScanned: CASH_SOURCE_DOCUMENT_KINDS.includes(kind) }, kind);
     const versions = [...(section.attachments?.[kind]?.versions || []), version];
     section.attachments ||= Object.fromEntries(CASH_ATTACHMENT_KINDS.map((attachmentKind) => [attachmentKind, null]));
     section.attachments[kind] = { kind, versions };
@@ -3695,8 +3987,28 @@ function openCashObjectDialog() {
   setTimeout(() => nameInput?.focus(), 40);
 }
 
-function cashWorkRowsMarkup(rows, priced) {
-  return rows.map((row, index) => `<tr data-cash-work-row="${escapeHtml(row.id)}"><td>${index + 1}</td><td><input data-work-field="name" maxlength="240" value="${escapeHtml(row.name)}" placeholder="${tr('workName')}" /></td><td><input data-work-field="unit" maxlength="40" value="${escapeHtml(row.unit)}" placeholder="${tr('unit')}" /></td><td><input data-work-field="quantity" type="number" min="0" step="0.001" inputmode="decimal" value="${row.quantity || ''}" placeholder="0" /></td>${priced ? `<td><input data-work-field="price" type="number" min="0" step="0.01" inputmode="decimal" value="${row.price || ''}" placeholder="0 ₽" /></td><td data-work-total>${formatMoney(row.quantity * row.price)}</td>` : `<td><input data-work-field="basis" maxlength="240" value="${escapeHtml(row.basis)}" placeholder="${tr('justification')}" /></td>`}<td><button type="button" data-remove-work-row aria-label="${tr('removeRow')}">×</button></td></tr>`).join('');
+function cashSourceOptionLabel(entry) {
+  return [tr(entry.sourceKind), entry.sourceName, entry.sourceSheet, entry.unit].filter(Boolean).join(' · ');
+}
+
+function renderCashDocumentSourceCatalog(scope, catalog, section, loading = false) {
+  const banner = $('[data-cash-source-catalog]', scope);
+  const dataList = $('[data-cash-source-options]', scope);
+  if (!banner || !dataList) return;
+  const hasSources = cashSectionHasSourceDocuments(section);
+  const message = loading
+    ? tr('sourceCatalogLoading')
+    : catalog.length
+      ? `${catalog.length} ${tr('sourceCatalogReady')}`
+      : tr(hasSources ? 'sourceCatalogPending' : 'sourceCatalogEmpty');
+  banner.className = `cash-source-catalog${catalog.length ? ' is-ready' : hasSources ? ' is-pending' : ''}`;
+  banner.innerHTML = `<span aria-hidden="true">⌕</span><div><strong>${escapeHtml(tr('sourceCatalogTitle'))}</strong><p>${escapeHtml(message)}</p><small>${escapeHtml(tr('sourceCatalogFreeInput'))}</small></div>${catalog.length ? `<b>${catalog.length}</b>` : ''}`;
+  dataList.innerHTML = catalog.slice(0, 1200).map((entry) => `<option value="${escapeHtml(entry.name)}" label="${escapeHtml(cashSourceOptionLabel(entry))}"></option>`).join('');
+}
+
+function cashWorkRowsMarkup(rows, priced, sourceListId = '') {
+  const listAttribute = sourceListId ? ` list="${escapeHtml(sourceListId)}" autocomplete="off"` : '';
+  return rows.map((row, index) => `<tr data-cash-work-row="${escapeHtml(row.id)}"><td>${index + 1}</td><td><input data-work-field="name" maxlength="240" value="${escapeHtml(row.name)}" placeholder="${tr('workOrMaterialName')}"${listAttribute} /></td><td><input data-work-field="unit" maxlength="40" value="${escapeHtml(row.unit)}" placeholder="${tr('unit')}" /></td><td><input data-work-field="quantity" type="number" min="0" step="0.001" inputmode="decimal" value="${row.quantity || ''}" placeholder="0" /></td>${priced ? `<td><input data-work-field="price" type="number" min="0" step="0.01" inputmode="decimal" value="${row.price || ''}" placeholder="0 ₽" /></td><td data-work-total>${formatMoney(row.quantity * row.price)}</td>` : `<td><input data-work-field="basis" maxlength="240" value="${escapeHtml(row.basis)}" placeholder="${tr('justification')}" /></td>`}<td><button type="button" data-remove-work-row aria-label="${tr('removeRow')}">×</button></td></tr>`).join('');
 }
 
 function cashPartyMarkup(key, label, party) {
@@ -3713,20 +4025,43 @@ function updateCashDocumentTotal(scope, draft, priced) {
   $('[data-document-grand-total]', scope).textContent = formatMoney(total);
 }
 
-function bindCashDocumentRows(scope, draft, priced) {
+function bindCashDocumentRows(scope, draft, priced, sourceCatalog = [], sourceListId = '') {
   const body = $('[data-cash-work-rows]', scope);
-  body.innerHTML = cashWorkRowsMarkup(draft.rows, priced);
+  body.innerHTML = cashWorkRowsMarkup(draft.rows, priced, sourceListId);
   $$('[data-cash-work-row]', body).forEach((rowElement, index) => {
     const row = draft.rows[index];
     $$('[data-work-field]', rowElement).forEach((input) => input.addEventListener('input', () => {
       const field = input.dataset.workField;
       row[field] = ['quantity', 'price'].includes(field) ? Math.max(0, Number(input.value) || 0) : input.value.slice(0, ['name', 'basis'].includes(field) ? 240 : 40);
+      if (field === 'name') {
+        const previousSource = Boolean(row.sourceKind);
+        const match = sourceCatalog.find((entry) => cashSourceKey(entry.name) === cashSourceKey(row.name));
+        if (match) {
+          row.sourceKind = match.sourceKind;
+          row.sourceName = match.sourceName;
+          if (match.unit && (!row.unit || previousSource)) {
+            row.unit = match.unit;
+            $('[data-work-field="unit"]', rowElement).value = match.unit;
+          }
+          if (priced && match.price > 0 && (!row.price || previousSource)) {
+            row.price = match.price;
+            $('[data-work-field="price"]', rowElement).value = String(match.price);
+          }
+          if (!priced && (!row.basis || previousSource)) {
+            row.basis = cashSourceOptionLabel(match).slice(0, 240);
+            $('[data-work-field="basis"]', rowElement).value = row.basis;
+          }
+        } else {
+          row.sourceKind = null;
+          row.sourceName = '';
+        }
+      }
       updateCashDocumentTotal(scope, draft, priced);
     }));
     $('[data-remove-work-row]', rowElement)?.addEventListener('click', () => {
       draft.rows.splice(index, 1);
       if (!draft.rows.length) draft.rows.push(...normalizeCashWorkRows([], priced));
-      bindCashDocumentRows(scope, draft, priced);
+      bindCashDocumentRows(scope, draft, priced, sourceCatalog, sourceListId);
       updateCashDocumentTotal(scope, draft, priced);
     });
   });
@@ -3797,7 +4132,7 @@ function cashDocumentReport(object, section, kind, documentData) {
   const documentSectionName = String(documentData.sectionName || section.name).trim().slice(0, 160) || section.name;
   const columns = [
     { label: tr('recordNumber'), key: 'number', width: 34 },
-    { label: tr('workName'), key: 'name', width: '*' },
+    { label: tr('workOrMaterialName'), key: 'name', width: '*' },
     { label: tr('unit'), key: 'unit', width: 48 },
     { label: tr('quantity'), key: 'quantity', width: 48, number: true },
     ...(priced ? [{ label: tr('price'), key: 'price', width: 66, money: true }, { label: tr('rowTotal'), key: 'total', width: 72, money: true }] : [{ label: tr('justification'), key: 'basis', width: '*' }])
@@ -4297,14 +4632,29 @@ function openCashDocumentDialog(objectId, sectionId, kind, options = {}) {
     draft.updatedAt = null;
   }
   draft.organizations = normalizeCashDocumentOrganizations((sourceReport || generatedDocument)?.organizations || cashOrganizationReportData(object));
-  const headCells = `<th>${tr('recordNumber')}</th><th>${tr('workName')}</th><th>${tr('unit')}</th><th>${tr('quantity')}</th>${priced ? `<th>${tr('price')}</th><th>${tr('rowTotal')}</th>` : `<th>${tr('justification')}</th>`}<th></th>`;
+  const headCells = `<th>${tr('recordNumber')}</th><th>${tr('workOrMaterialName')}</th><th>${tr('unit')}</th><th>${tr('quantity')}</th>${priced ? `<th>${tr('price')}</th><th>${tr('rowTotal')}</th>` : `<th>${tr('justification')}</th>`}<th></th>`;
   const columnLayout = `<colgroup><col class="work-col-number" /><col class="work-col-name" /><col class="work-col-unit" /><col class="work-col-quantity" />${priced ? '<col class="work-col-price" /><col class="work-col-total" />' : '<col class="work-col-basis" />'}<col class="work-col-actions" /></colgroup>`;
   const responsibleMarkup = priced
     ? `${cashPartyMarkup('performed', tr('performedBy'), draft.parties.performed)}${cashPartyMarkup('accepted', tr('acceptedBy'), draft.parties.accepted)}`
     : `${cashPartyMarkup('prepared', tr('preparedBy'), draft.parties.prepared)}${cashPartyMarkup('confirmed', tr('confirmedBy'), draft.parties.confirmed)}`;
-  showDialog(defaultTitle, `${object.name} · ${section.name}`, `<div class="cash-document-editor">${cashDocumentOrganizationsEditorMarkup(draft.organizations)}<div class="cash-document-meta"><label><span>${tr(priced ? 'actName' : 'statementName')}</span><input type="text" maxlength="160" data-document-title value="${escapeHtml(draft.title)}" /></label><label><span>${tr(priced ? 'actNumber' : 'statementNumber')}</span><input type="text" maxlength="80" data-document-number value="${escapeHtml(draft.number)}" placeholder="1" /></label><label><span>${tr('documentObject')}</span><input type="text" maxlength="160" data-document-object value="${escapeHtml(draft.objectName)}" placeholder="${escapeHtml(tr('objectPlaceholderDocument'))}" /></label><label><span>${tr('documentSection')}</span><input type="text" maxlength="160" data-document-section value="${escapeHtml(draft.sectionName)}" placeholder="${escapeHtml(tr('sectionPlaceholderDocument'))}" /></label></div><div class="cash-work-table-wrap"><table class="cash-work-table ${priced ? 'is-act' : 'is-statement'}">${columnLayout}<thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="5">${tr('rowTotal')}</td><td data-document-grand-total>0 ₽</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>＋ ${tr('addRow')}</button><div class="cash-parties">${responsibleMarkup}<label class="cash-document-date"><span>${tr('documentDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button><button class="${priced ? 'outline-button' : 'primary-button'}" type="button" data-generate-related-document>${tr(priced ? 'generateStatement' : 'generateAct')}</button></div>${cashReportActionsMarkup()}</div>`);
+  const sourceListId = `cash-source-options-${createObjectId().replace(/[^a-z0-9-]+/gi, '')}`;
+  let sourceCatalog = cashSectionSourceCatalog(section);
+  const sourceCatalogNeedsHydration = CASH_SOURCE_DOCUMENT_KINDS.some((sourceKind) => {
+    const version = cashAttachmentCurrent(section, sourceKind);
+    return version && !version.linkedFromProject && !version.sourceCatalogScanned;
+  });
+  showDialog(defaultTitle, `${object.name} · ${section.name}`, `<div class="cash-document-editor">${cashDocumentOrganizationsEditorMarkup(draft.organizations)}<div class="cash-document-meta"><label><span>${tr(priced ? 'actName' : 'statementName')}</span><input type="text" maxlength="160" data-document-title value="${escapeHtml(draft.title)}" /></label><label><span>${tr(priced ? 'actNumber' : 'statementNumber')}</span><input type="text" maxlength="80" data-document-number value="${escapeHtml(draft.number)}" placeholder="1" /></label><label><span>${tr('documentObject')}</span><input type="text" maxlength="160" data-document-object value="${escapeHtml(draft.objectName)}" placeholder="${escapeHtml(tr('objectPlaceholderDocument'))}" /></label><label><span>${tr('documentSection')}</span><input type="text" maxlength="160" data-document-section value="${escapeHtml(draft.sectionName)}" placeholder="${escapeHtml(tr('sectionPlaceholderDocument'))}" /></label></div><section data-cash-source-catalog></section><datalist id="${escapeHtml(sourceListId)}" data-cash-source-options></datalist><div class="cash-work-table-wrap"><table class="cash-work-table ${priced ? 'is-act' : 'is-statement'}">${columnLayout}<thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="5">${tr('rowTotal')}</td><td data-document-grand-total>0 ₽</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>＋ ${tr('addRow')}</button><div class="cash-parties">${responsibleMarkup}<label class="cash-document-date"><span>${tr('documentDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button><button class="${priced ? 'outline-button' : 'primary-button'}" type="button" data-generate-related-document>${tr(priced ? 'generateStatement' : 'generateAct')}</button></div>${cashReportActionsMarkup()}</div>`);
   const dialog = $('[data-dialog]'); dialog.classList.add('cash-document-dialog');
-  const scope = $('[data-dialog-content]'); bindCashDocumentRows(scope, draft, priced); bindCashDocumentOrganizations(scope, draft);
+  const scope = $('[data-dialog-content]');
+  renderCashDocumentSourceCatalog(scope, sourceCatalog, section, sourceCatalogNeedsHydration);
+  bindCashDocumentRows(scope, draft, priced, sourceCatalog, sourceListId);
+  bindCashDocumentOrganizations(scope, draft);
+  if (sourceCatalogNeedsHydration) hydrateCashSectionSourceCatalog(section).then((catalog) => {
+    if (!scope.isConnected) return;
+    sourceCatalog = catalog;
+    renderCashDocumentSourceCatalog(scope, sourceCatalog, section, false);
+    bindCashDocumentRows(scope, draft, priced, sourceCatalog, sourceListId);
+  });
   const requiredFields = [
     { selector: '[data-document-title]', key: 'title' },
     { selector: '[data-document-object]', key: 'objectName' },
@@ -4324,7 +4674,7 @@ function openCashDocumentDialog(objectId, sectionId, kind, options = {}) {
   $('[data-document-number]', scope)?.addEventListener('input', (event) => { draft.number = event.currentTarget.value.slice(0, 80); });
   $('[data-document-object]', scope)?.addEventListener('input', (event) => { draft.objectName = event.currentTarget.value.slice(0, 160); event.currentTarget.removeAttribute('aria-invalid'); });
   $('[data-document-section]', scope)?.addEventListener('input', (event) => { draft.sectionName = event.currentTarget.value.slice(0, 160); event.currentTarget.removeAttribute('aria-invalid'); });
-  $('[data-add-work-row]', scope)?.addEventListener('click', () => { draft.rows.push(...normalizeCashWorkRows([], priced)); bindCashDocumentRows(scope, draft, priced); });
+  $('[data-add-work-row]', scope)?.addEventListener('click', () => { draft.rows.push(...normalizeCashWorkRows([], priced)); bindCashDocumentRows(scope, draft, priced, sourceCatalog, sourceListId); });
   $$('[data-party-field]', scope).forEach((input) => input.addEventListener('input', () => { draft.parties[input.dataset.party][input.dataset.partyField] = input.value.slice(0, 160); }));
   $('[data-document-date]', scope)?.addEventListener('change', (event) => { draft.parties.date = event.currentTarget.value || localDateKey(); });
   const previewDocument = () => {
@@ -4909,7 +5259,9 @@ function openProjectObjectWizard(options = {}) {
     quickProjectOnly: Boolean(options.quickProjectOnly),
     objectName: '',
     projectSection: '',
-    files: { project: null, contract: null, estimate: null }
+    files: { project: null, contract: null, estimate: null },
+    sourceFiles: { project: null, contract: null, estimate: null },
+    finishing: false
   };
   renderProjectObjectWizard();
 }
@@ -4975,18 +5327,25 @@ function chooseProjectWizardDocument(kind, file) {
   const metadata = fileMetadata(file);
   if (kind === 'contract') metadata.contractNumber = extractContractNumberFromName(file.name);
   draft.files[kind] = metadata;
+  draft.sourceFiles[kind] = file;
   renderProjectObjectWizard();
 }
 
-function finishProjectObjectWizard(analyzeKind) {
+async function finishProjectObjectWizard(analyzeKind) {
   const draft = projectObjectWizardDraft;
-  if (!draft) return;
+  if (!draft || draft.finishing) return;
   const readyFiles = Object.entries(draft.files).filter(([, file]) => file);
   if (!readyFiles.length) { showToast(tr('documentsRequired')); return; }
   if (!draft.files[analyzeKind]) return;
+  draft.finishing = true;
+  $$('[data-wizard-analyze-kind]').forEach((button) => { button.disabled = true; });
+  const sourceCatalogByKind = Object.fromEntries(await Promise.all(readyFiles.map(async ([kind]) => [
+    kind,
+    await extractCashSourceCatalogFromFile(draft.sourceFiles[kind], kind)
+  ])));
   const now = new Date().toISOString();
   const files = readyFiles.map(([kind, file]) => {
-    const record = { ...file, kind, projectSection: draft.projectSection, addedAt: file.addedAt || now, analysisPending: true, analyzedAt: null };
+    const record = { ...file, kind, projectSection: draft.projectSection, addedAt: file.addedAt || now, analysisPending: true, analyzedAt: null, sourceCatalog: sourceCatalogByKind[kind] || [], sourceCatalogScanned: Boolean(draft.sourceFiles[kind] && CASH_SOURCE_DOCUMENT_KINDS.includes(kind)) };
     return { ...record, versions: [fileVersionSnapshot(record)], comparison: null };
   });
   const object = {
@@ -5844,12 +6203,14 @@ function chooseUploadFile(file) {
     return;
   }
   pendingFile = fileMetadata(file);
+  pendingUploadSourceFile = file;
   renderUploadFile();
   showToast(`${tr('fileSelected')}: ${file.name}`);
 }
 
 function removeUploadFile() {
   pendingFile = null;
+  pendingUploadSourceFile = null;
   if (activeUploadMode === 'revision') {
     renderUploadFile();
     return;
@@ -5912,7 +6273,7 @@ function startRevisionComparison(objectId, kind, comparisonId) {
   }, 1100);
 }
 
-function confirmUpload() {
+async function confirmUpload() {
   const objectNameInput = $('[data-analysis-object-name]');
   const selectedTargetId = $('[data-upload-object-target]')?.value || activeUploadObjectId;
   let destination = objectRegistry.find((object) => object.id === selectedTargetId);
@@ -5940,11 +6301,18 @@ function confirmUpload() {
       showToast(tr('sameFileSelected'));
       return;
     }
+    pendingUploadSourceFile = null;
     $('[data-dialog]').close();
     showToast(tr('uploadComplete'));
     return;
   }
-  let uploadedFile = { ...pendingFile, kind: activeUploadKind, addedAt: uploadedAt, analysisPending: true, analyzedAt: null };
+  const sourceFile = pendingUploadSourceFile;
+  const shouldExtractSourceCatalog = Boolean(sourceFile && CASH_SOURCE_DOCUMENT_KINDS.includes(activeUploadKind));
+  const confirmButton = $('[data-confirm-upload]');
+  if (confirmButton) confirmButton.disabled = true;
+  const sourceCatalog = shouldExtractSourceCatalog ? await extractCashSourceCatalogFromFile(sourceFile, activeUploadKind) : [];
+  if (confirmButton?.isConnected) confirmButton.disabled = false;
+  let uploadedFile = { ...pendingFile, kind: activeUploadKind, addedAt: uploadedAt, analysisPending: true, analyzedAt: null, sourceCatalog, sourceCatalogScanned: shouldExtractSourceCatalog };
   if (activeUploadKind === 'contract') uploadedFile.contractNumber = String(pendingFile.contractNumber || extractContractNumberFromName(pendingFile.name) || '');
   if (!destination) {
     destination = { id: createObjectId(), name: objectName, projectTitle: objectName, projectSection: objectName, documentTitles: normalizeProjectDocumentTitles(), contractNumber: '', status: 'uploaded', createdAt: uploadedAt, updatedAt: uploadedAt, uploadedAt, analyzedAt: null, startedAt: null, files: [] };
@@ -5979,6 +6347,7 @@ function confirmUpload() {
   renderAnalysisCards();
   renderObjects();
   renderWidgets();
+  pendingUploadSourceFile = null;
   $('[data-dialog]').close();
   if (comparisonId) startRevisionComparison(destination.id, activeUploadKind, comparisonId);
   else showToast(tr('uploadComplete'));
@@ -5992,6 +6361,7 @@ function openUploadDialog(kind, objectId = null, mode = 'standard') {
   const selectedObject = objectRegistry.find((object) => object.id === activeUploadObjectId);
   const storedFile = objectFile(selectedObject, activeUploadKind);
   if (activeUploadMode === 'revision' && !storedFile) activeUploadMode = 'standard';
+  pendingUploadSourceFile = null;
   pendingFile = activeUploadMode === 'revision' ? null : (selectedObject ? (storedFile ? { ...storedFile } : null) : (selectedFiles[activeUploadKind] ? { ...selectedFiles[activeUploadKind] } : null));
   const rule = uploadRules[activeUploadKind];
   newObjectNameDraft = selectedObject ? '' : (localStorage.getItem(OBJECT_NAME_KEY) || '');
@@ -6053,6 +6423,7 @@ function openUploadDialog(kind, objectId = null, mode = 'standard') {
     activeUploadObjectId = target?.id || null;
     objectNameInput.readOnly = Boolean(target);
     objectNameInput.value = target?.name || newObjectNameDraft;
+    pendingUploadSourceFile = null;
     pendingFile = target && objectFile(target, activeUploadKind) ? { ...objectFile(target, activeUploadKind) } : null;
     renderUploadFile();
   });
