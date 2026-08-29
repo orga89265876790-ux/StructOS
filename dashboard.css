@@ -706,6 +706,7 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .my-project-card.is-collapsed .my-project-object-open > i { transform: rotate(-90deg); }
 .my-project-card-actions { display: flex; align-items: center; gap: 6px; }
 .my-project-card-actions button { min-height: 36px; padding: 5px 9px; border-radius: 9px; font-size: 7px; white-space: nowrap; }
+.my-project-rename-section-button { color: var(--cyan); border-color: rgba(47,181,255,.38); background: rgba(13,116,229,.08); }
 .my-project-delete-button { color: #ff6275; border: 1px solid rgba(255,82,105,.42); background: rgba(226,29,58,.08); cursor: pointer; }
 .my-project-card-content { display: grid; gap: 10px; }
 .my-project-card-content[hidden] { display: none; }
@@ -723,6 +724,7 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .my-project-document-copy > em { overflow: hidden; color: var(--muted); font-size: 7px; font-style: normal; line-height: 1.35; text-overflow: ellipsis; white-space: nowrap; }
 .my-project-document-row-actions { display: flex; align-items: center; gap: 5px; }
 .my-project-document-row-actions button { min-height: 34px; padding: 4px 8px; border-radius: 9px; box-shadow: none; font-size: 7px; white-space: nowrap; }
+.my-project-document-row-actions .my-project-document-rename { color: var(--cyan); border-color: rgba(47,181,255,.38); background: rgba(13,116,229,.08); }
 .my-project-document-row-actions .my-project-document-delete { color: #ff6275; border: 1px solid rgba(255,82,105,.38); background: rgba(226,29,58,.07); cursor: pointer; }
 .my-project-document-row-actions .my-project-document-analyze { border-color: #179bff; background: linear-gradient(135deg,#0874e7,#16aef2); box-shadow: 0 0 17px rgba(24,155,255,.2); }
 .my-project-analysis-action { padding: 9px 10px; display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 10px; border: 1px solid rgba(42,170,255,.34); border-radius: 12px; background: rgba(11,113,211,.08); }
@@ -825,6 +827,7 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
   .my-project-card > header { grid-template-columns: 1fr; }
   .my-project-card-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
   .my-project-card-actions button { min-width: 0; min-height: 38px; }
+  .my-project-card-actions .my-project-rename-section-button { grid-column: 1 / -1; }
   .my-project-document-row { grid-template-columns: 30px minmax(0,1fr); align-items: start; }
   .my-project-document-icon { width: 30px; height: 30px; }
   .my-project-document-copy > strong, .my-project-document-copy > em { white-space: normal; overflow-wrap: anywhere; }
