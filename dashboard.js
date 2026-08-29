@@ -614,6 +614,10 @@ Object.assign(copy.RU, { deleteSectionAttachment: 'Удалить', deleteSectio
 Object.assign(copy.EN, { deleteSectionAttachment: 'Delete', deleteSectionAttachmentTitle: 'Delete document from this section?', deleteSectionAttachmentHint: 'The selected document and its entire version history will be deleted. Other section files will remain.', sectionAttachmentDeleted: 'Document deleted from section', sectionAttachmentDeleteFailed: 'Could not delete document' });
 Object.assign(copy.KY, { deleteSectionAttachment: 'Өчүрүү', deleteSectionAttachmentTitle: 'Документ бөлүмдөн өчүрүлсүнбү?', deleteSectionAttachmentHint: 'Тандалган документ жана анын бардык версиялары өчүрүлөт. Бөлүмдүн башка файлдары сакталат.', sectionAttachmentDeleted: 'Документ бөлүмдөн өчүрүлдү', sectionAttachmentDeleteFailed: 'Документти өчүрүү мүмкүн болгон жок' });
 Object.assign(copy.TJ, { deleteSectionAttachment: 'Нест кардан', deleteSectionAttachmentTitle: 'Ҳуҷҷат аз бахш нест карда шавад?', deleteSectionAttachmentHint: 'Ҳуҷҷати интихобшуда ва тамоми таърихи версияҳои он нест мешавад. Файлҳои дигари бахш нигоҳ дошта мешаванд.', sectionAttachmentDeleted: 'Ҳуҷҷат аз бахш нест шуд', sectionAttachmentDeleteFailed: 'Ҳуҷҷатро нест кардан муяссар нашуд' });
+Object.assign(copy.RU, { declineInvitation: 'Отклонить приглашение', declineInvitationTitle: 'Отклонить приглашение?', declineInvitationHint: 'Приглашение будет удалено из входящих и объект больше не будет показываться в списке.', invitationDeclined: 'Приглашение отклонено' });
+Object.assign(copy.EN, { declineInvitation: 'Decline invitation', declineInvitationTitle: 'Decline this invitation?', declineInvitationHint: 'The invitation will be removed from your inbox and the object will no longer appear in the list.', invitationDeclined: 'Invitation declined' });
+Object.assign(copy.KY, { declineInvitation: 'Чакырууну четке кагуу', declineInvitationTitle: 'Чакыруу четке кагылсынбы?', declineInvitationHint: 'Чакыруу киргендерден өчүрүлөт жана объект тизмеде мындан ары көрүнбөйт.', invitationDeclined: 'Чакыруу четке кагылды' });
+Object.assign(copy.TJ, { declineInvitation: 'Рад кардани даъват', declineInvitationTitle: 'Даъват рад карда шавад?', declineInvitationHint: 'Даъват аз воридот хориҷ мешавад ва объект дигар дар рӯйхат намоиш дода намешавад.', invitationDeclined: 'Даъват рад карда шуд' });
 
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
@@ -633,6 +637,7 @@ const OBJECT_NAME_KEY = 'structos-analysis-object-name';
 const OBJECTS_KEY = 'structos-objects-v1';
 const OBJECT_ORDER_KEY = 'structos-object-order-v1';
 const INVITED_OBJECTS_KEY = 'structos-invited-objects-v1';
+const HOME_NOTIFICATION_READ_KEY = 'structos-home-notification-read-v1';
 const PROFILE_COMPLETION_KEY = 'structos-profile-completion';
 const PERSON_DATA_KEY = 'structos-person-data-v1';
 const PROFILE_DATA_KEY = 'structos-profile-data-v1';
@@ -1006,9 +1011,10 @@ function loadInvitedObjects() {
     id: String(object.id),
     nameKey: String(object.nameKey || ''),
     name: String(object.name || '').trim().slice(0, 120),
-    status: object.status === 'completed' ? 'completed' : 'active',
+    status: ['completed', 'declined'].includes(object.status) ? object.status : 'active',
     invitedAt: object.invitedAt || new Date().toISOString(),
     completedAt: object.completedAt || null,
+    declinedAt: object.declinedAt || null,
     invitedBy: String(object.invitedBy || 'StructOS').slice(0, 120),
     roleKey: String(object.roleKey || 'objectParticipant'),
     files: Array.isArray(object.files) ? object.files.slice(0, 3) : []
@@ -1020,6 +1026,20 @@ function loadInvitedObjects() {
 }
 
 let invitedObjects = loadInvitedObjects();
+let homeReadNotificationKeys = new Set((() => {
+  const stored = readStoredJSON(HOME_NOTIFICATION_READ_KEY, []);
+  return Array.isArray(stored) ? stored.map(String).slice(-500) : [];
+})());
+
+function saveInvitedObjects() {
+  localStorage.setItem(INVITED_OBJECTS_KEY, JSON.stringify(invitedObjects));
+}
+
+function saveHomeReadNotifications() {
+  const keys = [...homeReadNotificationKeys].slice(-500);
+  homeReadNotificationKeys = new Set(keys);
+  localStorage.setItem(HOME_NOTIFICATION_READ_KEY, JSON.stringify(keys));
+}
 
 function invitedObjectName(object) {
   return object.nameKey ? tr(object.nameKey) : object.name || tr('invitedObject');
@@ -5252,9 +5272,35 @@ function homePendingNotifications() {
     .map((file) => ({ object, file })));
 }
 
+function homeNotificationKey({ object, file }) {
+  const fileKey = file?.id || file?.versionId || [file?.kind, file?.name, file?.lastModified, file?.addedAt].filter(Boolean).join(':');
+  return `${object?.id || 'object'}:${fileKey || 'notification'}`;
+}
+
+function homePendingInvitations() {
+  return invitedObjects.filter((object) => object.status === 'active');
+}
+
+function homeUnreadNotifications() {
+  return homePendingNotifications().filter((notification) => !homeReadNotificationKeys.has(homeNotificationKey(notification)));
+}
+
+function markHomeNotificationsRead(notifications) {
+  let changed = false;
+  (Array.isArray(notifications) ? notifications : []).forEach((notification) => {
+    const key = homeNotificationKey(notification);
+    if (homeReadNotificationKeys.has(key)) return;
+    homeReadNotificationKeys.add(key);
+    changed = true;
+  });
+  if (!changed) return;
+  saveHomeReadNotifications();
+  renderHomeInbox();
+}
+
 function renderHomeInbox() {
-  const invitationCount = invitedObjects.filter((object) => object.status !== 'completed').length;
-  const notificationCount = homePendingNotifications().length;
+  const invitationCount = homePendingInvitations().length;
+  const notificationCount = homeUnreadNotifications().length;
   const renderCount = (selector, count, labelKey) => {
     $$(selector).forEach((element) => {
       element.textContent = String(count);
@@ -6335,7 +6381,7 @@ function combinedManagedObjects() {
     completedAt: object.completedAt || null,
     details: `${object.sections.length} ${tr('sectionCalculations')}`
   }));
-  const invitedManagedObjects = invitedObjects.map((object) => ({
+  const invitedManagedObjects = invitedObjects.filter((object) => object.status !== 'declined').map((object) => ({
     key: `invited:${object.id}`,
     id: object.id,
     source: 'invited',
@@ -6382,6 +6428,22 @@ function openUnifiedObject(key) {
   if (key.startsWith('core:')) openObjectCard(key.slice('core:'.length));
 }
 
+function confirmDeclineInvitation(id) {
+  const object = invitedObjects.find((item) => item.id === id && item.status === 'active');
+  if (!object) return;
+  showDialog(escapeHtml(tr('declineInvitationTitle')), tr('declineInvitationHint'), `<div class="result-actions"><button class="outline-button" type="button" data-cancel-invitation-decline>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-invitation-decline>${escapeHtml(tr('declineInvitation'))}</button></div>`);
+  $('[data-cancel-invitation-decline]')?.addEventListener('click', () => $('[data-dialog]')?.close());
+  $('[data-confirm-invitation-decline]')?.addEventListener('click', () => {
+    object.status = 'declined';
+    object.declinedAt = new Date().toISOString();
+    saveInvitedObjects();
+    renderHomeInbox();
+    renderObjects();
+    $('[data-dialog]')?.close();
+    showToast(tr('invitationDeclined'));
+  });
+}
+
 function openInvitedObjectCard(id) {
   const object = invitedObjects.find((item) => item.id === id);
   if (!object) return;
@@ -6390,9 +6452,11 @@ function openInvitedObjectCard(id) {
     const file = object.files.find((item) => item.kind === kind);
     return `<button class="object-document-choice${file ? ' has-file' : ''}" type="button" data-invited-document><span>${file ? '✓' : '+'}</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file?.name || tr('ownerWillShare'))}</small></button>`;
   }).join('');
-  showDialog(escapeHtml(name), tr('invitedToObject'), `<section class="invited-object-card"><div class="invited-object-status"><span>↗</span><div><b>${tr('invitedObject')}</b><small>${tr('inWork')}</small></div></div><dl><div><dt>${tr('invitedRole')}</dt><dd>${tr(object.roleKey || 'objectParticipant')}</dd></div><div><dt>${tr('invitedBy')}</dt><dd>${escapeHtml(object.invitedBy)}</dd></div><div><dt>${tr('invitedAt')}</dt><dd>${escapeHtml(formatObjectDate(object.invitedAt))}</dd></div></dl><p>${tr('invitedDocumentsHint')}</p><div class="object-document-chooser">${documents}</div></section>`);
+  const declineAction = object.status === 'active' ? `<div class="result-actions"><button class="outline-button is-danger" type="button" data-decline-invitation>${escapeHtml(tr('declineInvitation'))}</button></div>` : '';
+  showDialog(escapeHtml(name), tr('invitedToObject'), `<section class="invited-object-card"><div class="invited-object-status"><span>↗</span><div><b>${tr('invitedObject')}</b><small>${tr('inWork')}</small></div></div><dl><div><dt>${tr('invitedRole')}</dt><dd>${tr(object.roleKey || 'objectParticipant')}</dd></div><div><dt>${tr('invitedBy')}</dt><dd>${escapeHtml(object.invitedBy)}</dd></div><div><dt>${tr('invitedAt')}</dt><dd>${escapeHtml(formatObjectDate(object.invitedAt))}</dd></div></dl><p>${tr('invitedDocumentsHint')}</p><div class="object-document-chooser">${documents}</div>${declineAction}</section>`);
   $('[data-dialog]')?.classList.add('invited-object-dialog');
   $$('[data-invited-document]', $('[data-dialog-content]')).forEach((button) => button.addEventListener('click', () => showToast(tr('ownerWillShare'))));
+  $('[data-decline-invitation]')?.addEventListener('click', () => confirmDeclineInvitation(object.id));
 }
 
 function persistUnifiedObjectOrder(list) {
@@ -6936,7 +7000,7 @@ function runAnalysis() {
 }
 
 function openInvitationsCenter() {
-  const active = invitedObjects.filter((object) => object.status !== 'completed');
+  const active = homePendingInvitations();
   const markup = active.length
     ? `<div class="home-invitation-list">${active.map((object) => `<button type="button" data-open-home-invitation="${escapeHtml(object.id)}"><span>↗</span><span><strong>${escapeHtml(invitedObjectName(object))}</strong><small>${escapeHtml(tr(object.roleKey || 'objectParticipant'))} · ${escapeHtml(formatObjectDate(object.invitedAt))}</small></span><i>›</i></button>`).join('')}</div>`
     : `<div class="history-empty">${escapeHtml(tr('noObjects'))}</div>`;
@@ -6951,6 +7015,7 @@ function openNotificationsCenter() {
     : `<section class="home-notifications-empty"><span>✓</span><strong>${escapeHtml(tr('noNewNotifications'))}</strong><small>${escapeHtml(tr('noNewNotificationsHint'))}</small></section>`;
   showDialog(escapeHtml(tr('notifications')), `${notifications.length} · ${escapeHtml(tr('notifications'))}`, markup);
   $$('[data-open-home-notification]').forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openHomeNotification)));
+  markHomeNotificationsRead(notifications);
 }
 
 function openView(view) {

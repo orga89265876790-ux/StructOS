@@ -1,4 +1,4 @@
-const CACHE_NAME = 'structos-shell-v75';
+const CACHE_NAME = 'structos-shell-v76';
 const APP_SHELL = ['./', './dashboard.html', './passport.html'];
 
 self.addEventListener('install', (event) => {

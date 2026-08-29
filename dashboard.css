@@ -664,6 +664,9 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 @keyframes homeInboxIconPulse { 0%,100% { filter: brightness(1); } 50% { filter: brightness(1.36) drop-shadow(0 0 9px var(--inbox-pulse-glow)); } }
 .home-inbox-icon { width: 44px; height: 44px; display: grid; place-items: center; color: var(--cyan); border: 1px solid var(--line-strong); border-radius: 13px; background: rgba(15,118,225,.11); }
 .home-inbox-card.is-invitations .home-inbox-icon { color: #c3b4ff; border-color: rgba(151,120,255,.42); background: rgba(120,78,222,.12); }
+.home-inbox-card.has-activity .home-inbox-icon { color: #ff3957; border-color: rgba(255,64,91,.92); background: radial-gradient(circle at 50% 44%,rgba(255,77,102,.24),rgba(123,8,29,.15)); box-shadow: 0 0 8px rgba(255,37,69,.62),0 0 25px rgba(255,37,69,.42),inset 0 0 14px rgba(255,55,84,.16); animation: homeInboxRedNeon 1.85s ease-in-out infinite; }
+.home-inbox-card.has-activity .home-inbox-icon svg { filter: drop-shadow(0 0 4px rgba(255,35,68,.92)) drop-shadow(0 0 10px rgba(255,35,68,.64)); }
+@keyframes homeInboxRedNeon { 0%,100% { color: #ff3957; border-color: rgba(255,64,91,.78); box-shadow: 0 0 7px rgba(255,37,69,.52),0 0 19px rgba(255,37,69,.32),inset 0 0 12px rgba(255,55,84,.12); transform: scale(1); } 50% { color: #ff7186; border-color: #ff4864; box-shadow: 0 0 11px rgba(255,42,73,.82),0 0 33px rgba(255,42,73,.6),inset 0 0 19px rgba(255,58,88,.25); transform: scale(1.045); } }
 .home-inbox-icon svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; }
 .home-inbox-copy { min-width: 0; display: grid; gap: 3px; }
 .home-inbox-copy > small { color: var(--blue); font-size: 7px; letter-spacing: .13em; }
