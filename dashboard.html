@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=33" />
+    <link rel="stylesheet" href="dashboard.css?v=34" />
   </head>
   <body>
     <div class="dashboard-app" data-dashboard>
@@ -60,12 +60,6 @@
             </button>
           </div>
 
-          <section class="referral-card">
-            <div class="referral-icon" aria-hidden="true">+</div>
-            <div class="referral-copy"><strong data-i18n="shareEarn">Поделись — за регистрацию +200 бонусов</strong><button type="button" data-copy-referral><span data-referral-short>StructOS · r/4820197</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button></div>
-            <button class="referral-share" type="button" data-share-referral data-i18n="share">Поделиться</button>
-          </section>
-
           <section class="welcome-block">
             <p data-i18n="hello">Здравствуйте,</p>
             <h1 data-user-name>Александр</h1>
@@ -96,6 +90,35 @@
                 <i class="passport-activity-progress" data-activity-progress role="progressbar" aria-label="Активность" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></i>
               </aside>
             </div>
+          </section>
+
+          <section class="section-block home-statistics" aria-labelledby="home-statistics-title">
+            <div class="section-heading home-statistics-heading">
+              <div><span class="eyebrow">STRUCTOS LIVE</span><h2 id="home-statistics-title" data-i18n="statistics">Статистика</h2></div>
+            </div>
+            <div class="home-statistics-grid">
+              <article class="home-stat-card is-online">
+                <span class="home-stat-label"><i class="home-stat-dot" aria-hidden="true"></i><span data-i18n="online">online</span></span>
+                <strong data-stat-online>—</strong>
+              </article>
+              <article class="home-stat-card">
+                <span class="home-stat-label" data-i18n="users">Пользователей</span>
+                <strong data-stat-users>875</strong>
+              </article>
+              <article class="home-stat-card">
+                <span class="home-stat-label" data-i18n="processedProjects">Обработано проектов</span>
+                <strong>1500+</strong>
+              </article>
+            </div>
+            <section class="referral-card" aria-label="Личная реферальная ссылка">
+              <div class="referral-icon" aria-hidden="true">+</div>
+              <div class="referral-copy">
+                <strong data-i18n="personalReferralLink">Личная реферальная ссылка</strong>
+                <button type="button" data-copy-referral><span data-referral-short>StructOS · r/4820197</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button>
+                <small data-i18n="referralRecommendationReward">+150 рублей за рекомендацию</small>
+              </div>
+              <button class="referral-share" type="button" data-share-referral data-i18n="share">Поделиться</button>
+            </section>
           </section>
 
           <section class="home-inbox-grid" aria-label="Приглашения и уведомления">
@@ -281,6 +304,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=33"></script>
+    <script type="module" src="dashboard.js?v=34"></script>
   </body>
 </html>

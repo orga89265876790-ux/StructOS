@@ -36,6 +36,12 @@ const translations = {
   }
 };
 
+Object.assign(translations.RU, { companies: 'компаний и физлиц<br>с нами' });
+Object.assign(translations.EN, { companies: 'companies and individuals<br>with us' });
+Object.assign(translations.TJ, { companies: 'ширкатҳо ва шахсони воқеӣ<br>бо мо' });
+Object.assign(translations.KG, { companies: 'компаниялар жана жеке адамдар<br>биз менен' });
+Object.assign(translations.TR, { companies: 'şirketler ve bireyler<br>bizimle' });
+
 Object.assign(translations.EN, {
   projectFormats: 'PDF, DWG, RVT, images<br>up to 500 MB', contractFormats: 'PDF, DOCX, DOC, images<br>up to 100 MB', estimateFormats: 'XLSX, CSV, PDF, images<br>up to 100 MB',
   safariStep1: 'Tap “Share” in Safari.', safariStep2: 'Choose “Add to Home Screen”.', safariStep3: 'Enable “Open as Web App”.', safariStep4: 'Tap “Add”.',

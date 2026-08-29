@@ -446,10 +446,19 @@ Object.assign(copy.EN, { profileActivity: 'Activity', profileActivityHint: 'Acti
 Object.assign(copy.KY, { profileActivity: 'Активдүүлүк', profileActivityHint: 'StructOS ичиндеги активдүүлүк профилиңизди күчөтүп, издөө жыйынтыгындагы ордуңузду жогорулатат.' });
 Object.assign(copy.TJ, { profileActivity: 'Фаъолият', profileActivityHint: 'Фаъолият дар StructOS профили шуморо қавӣ карда, мавқеи онро дар натиҷаҳои ҷустуҷӯ баланд мебардорад.' });
 
+Object.assign(copy.RU, { statistics: 'Статистика', online: 'online', users: 'Пользователей', processedProjects: 'Обработано проектов', personalReferralLink: 'Личная реферальная ссылка', referralRecommendationReward: '+150 рублей за рекомендацию', shareEarn: 'StructOS — +150 рублей за рекомендацию', referralReward: 'Рекомендация по вашей ссылке' });
+Object.assign(copy.EN, { statistics: 'Statistics', online: 'online', users: 'Users', processedProjects: 'Projects processed', personalReferralLink: 'Personal referral link', referralRecommendationReward: '₽150 per recommendation', shareEarn: 'StructOS — ₽150 per recommendation', referralReward: 'Recommendation through your link' });
+Object.assign(copy.KY, { statistics: 'Статистика', online: 'online', users: 'Колдонуучулар', processedProjects: 'Иштетилген долбоорлор', personalReferralLink: 'Жеке рефералдык шилтеме', referralRecommendationReward: 'Ар бир сунуш үчүн +150 рубль', shareEarn: 'StructOS — ар бир сунуш үчүн +150 рубль', referralReward: 'Сиздин шилтеме аркылуу сунуш' });
+Object.assign(copy.TJ, { statistics: 'Омор', online: 'online', users: 'Истифодабарандагон', processedProjects: 'Лоиҳаҳои коркардшуда', personalReferralLink: 'Пайванди шахсии рефералӣ', referralRecommendationReward: '+150 рубл барои ҳар тавсия', shareEarn: 'StructOS — +150 рубл барои ҳар тавсия', referralReward: 'Тавсия тавассути пайванди шумо' });
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
 let toastTimer;
+const STATISTICS_USERS_BASE = 875;
+const STATISTICS_USERS_EPOCH = Date.parse('2026-08-29T07:12:00Z');
+const STATISTICS_USERS_STEP = 45 * 60 * 1000;
+let previousOnlineCount;
 const DEMO_SESSION_KEY = 'structos-demo-session';
 const FINANCE_KEY = 'structos-finance-v1';
 const PROFILE_PLAN_KEY = 'structos-profile-plan-v1';
@@ -797,6 +806,7 @@ function applyLanguage(next) {
   renderFinance();
   renderProfilePlan();
   renderReferral();
+  renderHomeStatistics(false);
   renderAnalysisCards();
   renderObjects();
   renderWidgets();
@@ -1659,6 +1669,32 @@ function referralUrl() {
 
 function renderReferral() {
   $$('[data-referral-short]').forEach((item) => { item.textContent = `StructOS · r/${currentId.replaceAll(' ', '')}`; });
+}
+
+function onlineRangeForHour(hour) {
+  if (hour >= 22 || hour < 8) return [70, 120];
+  if (hour < 19) return [310, 450];
+  return [100, 130];
+}
+
+function randomOnlineCount(now = new Date()) {
+  const [minimum, maximum] = onlineRangeForHour(now.getHours());
+  let count = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+  if (count === previousOnlineCount) count = count === maximum ? minimum : count + 1;
+  previousOnlineCount = count;
+  return count;
+}
+
+function statisticsUsersCount(now = Date.now()) {
+  const elapsed = Math.max(0, now - STATISTICS_USERS_EPOCH);
+  return STATISTICS_USERS_BASE + Math.floor(elapsed / STATISTICS_USERS_STEP);
+}
+
+function renderHomeStatistics(refreshOnline = true) {
+  const online = $('[data-stat-online]');
+  const users = $('[data-stat-users]');
+  if (online && (refreshOnline || previousOnlineCount === undefined)) online.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(randomOnlineCount());
+  if (users) users.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(statisticsUsersCount());
 }
 
 async function copyReferral() {
@@ -2608,7 +2644,7 @@ function historyMarkup(items, bonus = false) {
 }
 
 function bonusRulesMarkup() {
-  return `<section class="finance-bonus-rules"><header><h3>${tr('bonusRules')}</h3><p>${tr('newBonusRulesHint')}</p></header><div class="bonus-rules"><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+200</b><span>${tr('referralReward')}</span></div><div><b>+150</b><span>${tr('accountLinkReward')} · ${tr('rewardOnce')}</span></div></div></section>`;
+  return `<section class="finance-bonus-rules"><header><h3>${tr('bonusRules')}</h3><p>${tr('newBonusRulesHint')}</p></header><div class="bonus-rules"><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+150 ₽</b><span>${tr('referralReward')}</span></div><div><b>+150</b><span>${tr('accountLinkReward')} · ${tr('rewardOnce')}</span></div></div></section>`;
 }
 
 function processBalanceTopUp(input, reopen) {
@@ -5965,6 +6001,7 @@ importPendingTransfer();
 applyPassportRewards(passportCompletion());
 applyTheme(localStorage.getItem('structos-theme') === 'light' ? 'light' : 'dark');
 applyLanguage(language);
+setInterval(renderHomeStatistics, 2000);
 renderWidgetPicker();
 renderWidgets();
 selectAnalysis(selectedAnalysis);
