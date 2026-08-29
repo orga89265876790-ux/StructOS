@@ -441,6 +441,71 @@ Object.assign(copy.TJ, {
   generateAct: 'Ташкили санад', generateStatement: 'Ташкили ведомост', documentRequiredFields: 'Номи ҳуҷҷат, объект ва бахшро пур кунед', documentParties: 'Тарафҳои ҳуҷҷат', editDocument: 'Таҳрир', deleteDocument: 'Нест кардан', deleteDocumentConfirm: 'Ин ҳуҷҷат аз таърих нест карда шавад?', documentDeleted: 'Ҳуҷҷат аз таърих нест шуд'
 });
 
+Object.assign(copy.RU, {
+  companyName: 'Наименование', manualDetails: 'Реквизиты для ручного ввода',
+  organizationCardSaved: 'Реквизиты сохранены', organizationFileSaved: 'Документ сохранён',
+  uploadOrganizationCard: 'Загрузить карточку организации', uploadPassport: 'Загрузить паспорт',
+  replaceOrganizationCard: 'Заменить карточку организации', replacePassport: 'Заменить паспорт',
+  organizationCardFile: 'Карточка организации', passportFile: 'Паспорт',
+  noOrganizationFile: 'Карточка организации не загружена', noPassportFile: 'Паспорт не загружен',
+  passportSeries: 'Серия', passportNumber: 'Номер', saveOrganizationDetails: 'Сохранить реквизиты',
+  previewUploadedDocument: 'Просмотреть документ', removeUploadedDocument: 'Удалить документ',
+  deleteOrganizationFileTitle: 'Удалить загруженный документ?', deleteOrganizationFileHint: 'Файл будет удалён из карточки. Введённые вручную реквизиты сохранятся.',
+  organizationFileDeleted: 'Документ удалён из карточки', organizationFileDeleteFailed: 'Не удалось удалить документ',
+  organizationPreviewTitle: 'Просмотр документа', organizationPreviewHint: 'Проверьте документ, скачайте его или отправьте прямо из просмотра.',
+  previewUnavailable: 'Этот формат нельзя показать внутри приложения, но файл можно скачать или отправить.',
+  downloadDocument: 'Скачать', sendDocument: 'Отправить', shareFileFallback: 'Отправка файлов недоступна — документ скачан',
+  changePartyTypeTitle: 'Изменить тип карточки?', changePartyTypeHint: 'Загруженный документ относится к текущему типу и будет удалён. Ручные реквизиты сохранятся.', changePartyType: 'Изменить тип'
+});
+Object.assign(copy.EN, {
+  companyName: 'Name', manualDetails: 'Details for manual entry',
+  organizationCardSaved: 'Details saved', organizationFileSaved: 'Document saved',
+  uploadOrganizationCard: 'Upload organization card', uploadPassport: 'Upload passport',
+  replaceOrganizationCard: 'Replace organization card', replacePassport: 'Replace passport',
+  organizationCardFile: 'Organization card', passportFile: 'Passport',
+  noOrganizationFile: 'Organization card not uploaded', noPassportFile: 'Passport not uploaded',
+  passportSeries: 'Series', passportNumber: 'Number', saveOrganizationDetails: 'Save details',
+  previewUploadedDocument: 'Preview document', removeUploadedDocument: 'Delete document',
+  deleteOrganizationFileTitle: 'Delete the uploaded document?', deleteOrganizationFileHint: 'The file will be removed from the card. Manually entered details will remain.',
+  organizationFileDeleted: 'Document removed from the card', organizationFileDeleteFailed: 'Could not delete the document',
+  organizationPreviewTitle: 'Document preview', organizationPreviewHint: 'Review, download, or share the document directly from this preview.',
+  previewUnavailable: 'This format cannot be displayed in the app, but you can download or share the file.',
+  downloadDocument: 'Download', sendDocument: 'Share', shareFileFallback: 'File sharing is unavailable — the document was downloaded',
+  changePartyTypeTitle: 'Change card type?', changePartyTypeHint: 'The uploaded document belongs to the current type and will be deleted. Manual details will remain.', changePartyType: 'Change type'
+});
+Object.assign(copy.KY, {
+  companyName: 'Аталышы', manualDetails: 'Кол менен киргизүү үчүн реквизиттер',
+  organizationCardSaved: 'Реквизиттер сакталды', organizationFileSaved: 'Документ сакталды',
+  uploadOrganizationCard: 'Уюмдун карточкасын жүктөө', uploadPassport: 'Паспортту жүктөө',
+  replaceOrganizationCard: 'Уюмдун карточкасын алмаштыруу', replacePassport: 'Паспортту алмаштыруу',
+  organizationCardFile: 'Уюмдун карточкасы', passportFile: 'Паспорт',
+  noOrganizationFile: 'Уюмдун карточкасы жүктөлгөн жок', noPassportFile: 'Паспорт жүктөлгөн жок',
+  passportSeries: 'Сериясы', passportNumber: 'Номери', saveOrganizationDetails: 'Реквизиттерди сактоо',
+  previewUploadedDocument: 'Документти көрүү', removeUploadedDocument: 'Документти өчүрүү',
+  deleteOrganizationFileTitle: 'Жүктөлгөн документ өчүрүлсүнбү?', deleteOrganizationFileHint: 'Файл карточкадан өчүрүлөт. Кол менен киргизилген реквизиттер сакталат.',
+  organizationFileDeleted: 'Документ карточкадан өчүрүлдү', organizationFileDeleteFailed: 'Документти өчүрүү мүмкүн болгон жок',
+  organizationPreviewTitle: 'Документти көрүү', organizationPreviewHint: 'Документти текшерип, жүктөп алыңыз же ушул жерден жөнөтүңүз.',
+  previewUnavailable: 'Бул формат колдонмонун ичинде көрсөтүлбөйт, бирок файлды жүктөп же жөнөтсө болот.',
+  downloadDocument: 'Жүктөп алуу', sendDocument: 'Жөнөтүү', shareFileFallback: 'Файл жөнөтүү жеткиликтүү эмес — документ жүктөлдү',
+  changePartyTypeTitle: 'Карточканын түрү өзгөртүлсүнбү?', changePartyTypeHint: 'Жүктөлгөн документ учурдагы түргө тиешелүү жана өчүрүлөт. Кол менен киргизилген реквизиттер сакталат.', changePartyType: 'Түрүн өзгөртүү'
+});
+Object.assign(copy.TJ, {
+  companyName: 'Ном', manualDetails: 'Реквизитҳо барои воридкунии дастӣ',
+  organizationCardSaved: 'Реквизитҳо нигоҳ дошта шуданд', organizationFileSaved: 'Ҳуҷҷат нигоҳ дошта шуд',
+  uploadOrganizationCard: 'Бор кардани карточкаи ташкилот', uploadPassport: 'Бор кардани шиноснома',
+  replaceOrganizationCard: 'Иваз кардани карточкаи ташкилот', replacePassport: 'Иваз кардани шиноснома',
+  organizationCardFile: 'Карточкаи ташкилот', passportFile: 'Шиноснома',
+  noOrganizationFile: 'Карточкаи ташкилот бор нашудааст', noPassportFile: 'Шиноснома бор нашудааст',
+  passportSeries: 'Серия', passportNumber: 'Рақам', saveOrganizationDetails: 'Нигоҳ доштани реквизитҳо',
+  previewUploadedDocument: 'Дидани ҳуҷҷат', removeUploadedDocument: 'Нест кардани ҳуҷҷат',
+  deleteOrganizationFileTitle: 'Ҳуҷҷати боршуда нест карда шавад?', deleteOrganizationFileHint: 'Файл аз карточка нест мешавад. Реквизитҳои дастӣ нигоҳ дошта мешаванд.',
+  organizationFileDeleted: 'Ҳуҷҷат аз карточка нест шуд', organizationFileDeleteFailed: 'Ҳуҷҷатро нест кардан муяссар нашуд',
+  organizationPreviewTitle: 'Намоиши ҳуҷҷат', organizationPreviewHint: 'Ҳуҷҷатро санҷед, бор кунед ё аз ҳамин ҷо фиристед.',
+  previewUnavailable: 'Ин формат дар дохили барнома намоиш дода намешавад, вале файлро бор ё фиристодан мумкин аст.',
+  downloadDocument: 'Бор кардан', sendDocument: 'Фиристодан', shareFileFallback: 'Фиристодани файл дастрас нест — ҳуҷҷат бор карда шуд',
+  changePartyTypeTitle: 'Навъи карточка тағйир дода шавад?', changePartyTypeHint: 'Ҳуҷҷати боршуда ба навъи ҷорӣ тааллуқ дорад ва нест мешавад. Реквизитҳои дастӣ нигоҳ дошта мешаванд.', changePartyType: 'Тағйири навъ'
+});
+
 Object.assign(copy.RU, { profileActivity: 'Активность', profileActivityHint: 'Активность в StructOS усиливает ваш профиль и повышает позицию в выдаче.' });
 Object.assign(copy.EN, { profileActivity: 'Activity', profileActivityHint: 'Activity in StructOS strengthens your profile and improves its position in search results.' });
 Object.assign(copy.KY, { profileActivity: 'Активдүүлүк', profileActivityHint: 'StructOS ичиндеги активдүүлүк профилиңизди күчөтүп, издөө жыйынтыгындагы ордуңузду жогорулатат.' });
@@ -3246,16 +3311,39 @@ function normalizeCashWorkRows(value, priced = false) {
   return normalized.length ? normalized : [{ id: `work-${Date.now()}-${Math.random().toString(16).slice(2)}`, name: '', unit: '', quantity: 0, ...(priced ? { price: 0 } : { basis: '' }) }];
 }
 
+function cashPassportParts(value = {}) {
+  const legacy = String(value?.passport || '').trim();
+  let series = String(value?.passportSeries || '').trim();
+  let number = String(value?.passportNumber || '').trim();
+  if (!series && !number && legacy) {
+    const digits = legacy.replace(/\D+/g, '');
+    const spaced = legacy.match(/^(.{1,20}?)[\s-]+(.+)$/u);
+    if (digits.length === 10) {
+      series = digits.slice(0, 4);
+      number = digits.slice(4);
+    } else if (spaced) {
+      series = spaced[1].trim();
+      number = spaced[2].trim();
+    } else number = legacy;
+  }
+  series = series.slice(0, 20);
+  number = number.slice(0, 40);
+  return { series, number, combined: [series, number].filter(Boolean).join(' ').slice(0, 80) };
+}
+
 function normalizeCashDocumentOrganizations(value) {
   return Object.fromEntries(CASH_ORGANIZATION_ROLES.map((role) => {
     const card = value?.[role] || {};
+    const passport = cashPassportParts(card);
     return [role, {
       type: card.type === 'individual' ? 'individual' : 'organization',
       company: String(card.company || '').trim().slice(0, 200),
       inn: String(card.inn || '').replace(/\D+/g, '').slice(0, 12),
       kpp: String(card.kpp || '').replace(/\D+/g, '').slice(0, 9),
       fullName: String(card.fullName || '').trim().slice(0, 200),
-      passport: String(card.passport || '').trim().slice(0, 80),
+      passportSeries: passport.series,
+      passportNumber: passport.number,
+      passport: passport.combined,
       fileName: String(card.fileName || '').slice(0, 240)
     }];
   }));
@@ -3314,6 +3402,7 @@ function normalizeCashAttachment(value, kind) {
 
 function normalizeCashOrganizationCard(value, role) {
   const type = value?.type === 'individual' ? 'individual' : 'organization';
+  const passport = cashPassportParts(value);
   return {
     role,
     type,
@@ -3321,7 +3410,9 @@ function normalizeCashOrganizationCard(value, role) {
     inn: String(value?.inn || '').replace(/\D+/g, '').slice(0, 12),
     kpp: String(value?.kpp || '').replace(/\D+/g, '').slice(0, 9),
     fullName: String(value?.fullName || '').trim().slice(0, 200),
-    passport: String(value?.passport || '').trim().slice(0, 80),
+    passportSeries: passport.series,
+    passportNumber: passport.number,
+    passport: passport.combined,
     attachment: normalizeCashAttachment(value?.attachment, `organization-${role}`),
     updatedAt: value?.updatedAt || null
   };
@@ -3458,6 +3549,7 @@ const expandedCashEntryHistories = new Set();
 let cashflowFileDbPromise;
 let reportLogoDataUrl = '';
 const reportPreviewLogoUrl = new URL('./assets/favicon-192.png', import.meta.url).href;
+let activeCashOrganizationPreview = null;
 
 function saveCashflow() {
   localStorage.setItem(CASHFLOW_KEY, JSON.stringify(cashflowObjects));
@@ -3803,39 +3895,128 @@ async function addCashOrganizationFile(objectId, role, file) {
   }
 }
 
+function releaseCashOrganizationPreview() {
+  if (activeCashOrganizationPreview?.url) URL.revokeObjectURL(activeCashOrganizationPreview.url);
+  activeCashOrganizationPreview = null;
+  $('[data-report-preview-content]')?.classList.remove('is-organization-file-preview');
+}
+
+function downloadCashOrganizationPreview() {
+  const preview = activeCashOrganizationPreview;
+  if (!preview) return;
+  downloadReportBlob(preview.blob, preview.version.name);
+}
+
+async function shareCashOrganizationPreview() {
+  const preview = activeCashOrganizationPreview;
+  if (!preview) return;
+  const file = new File([preview.blob], preview.version.name, { type: preview.version.type || preview.blob.type || 'application/octet-stream', lastModified: preview.version.lastModified || Date.now() });
+  let canShare = Boolean(navigator.share);
+  try { if (canShare && navigator.canShare) canShare = navigator.canShare({ files: [file] }); }
+  catch { canShare = false; }
+  if (canShare) {
+    try {
+      await navigator.share({ title: preview.version.name, text: `${tr(preview.role)} · StructOS`, files: [file] });
+      return;
+    } catch (error) {
+      if (error?.name === 'AbortError') return;
+    }
+  }
+  downloadReportBlob(preview.blob, preview.version.name);
+  showToast(tr('shareFileFallback'));
+}
+
 async function openCashOrganizationFile(objectId, role, versionId) {
   const object = cashflowObjects.find((item) => item.id === objectId);
-  const versions = object?.organizationDocuments?.[role]?.attachment?.versions || [];
+  const card = object?.organizationDocuments?.[role];
+  const versions = card?.attachment?.versions || [];
   const version = versions.find((item) => item.id === versionId) || versions.at(-1);
-  if (!version) return;
-  const previewWindow = window.open('', '_blank');
-  if (previewWindow) { previewWindow.opener = null; previewWindow.document.title = version.name; previewWindow.document.body.textContent = `${tr('openDocument')}: ${version.name}`; }
+  const dialog = $('[data-report-preview-dialog]');
+  if (!version || !dialog) return;
   try {
     const blob = await readCashflowFile(version.id);
     if (!blob) throw new Error('Organization document is missing');
+    releaseCashOrganizationPreview();
     const url = URL.createObjectURL(blob);
+    const mime = String(version.type || blob.type || '').toLowerCase();
     const extension = version.name.split('.').pop()?.toLowerCase();
-    const canPreview = String(version.type || blob.type).startsWith('image/') || String(version.type || blob.type) === 'application/pdf' || extension === 'pdf';
-    if (previewWindow && !previewWindow.closed) previewWindow.location.replace(url);
-    else {
-      const link = document.createElement('a'); link.href = url;
-      if (canPreview) { link.target = '_blank'; link.rel = 'noopener'; } else link.download = version.name;
-      document.body.append(link); link.click(); link.remove();
-    }
-    setTimeout(() => URL.revokeObjectURL(url), 300000);
+    const image = mime.startsWith('image/') || ['jpg', 'jpeg', 'png', 'webp', 'gif', 'heic'].includes(extension);
+    const pdf = mime === 'application/pdf' || extension === 'pdf';
+    activeCashOrganizationPreview = { objectId, role, cardType: card.type, version, blob, url };
+    $('[data-report-preview-title]', dialog).textContent = tr('organizationPreviewTitle');
+    $('[data-report-preview-hint]', dialog).textContent = `${tr(role)} · ${tr(card.type === 'individual' ? 'passportFile' : 'organizationCardFile')} · ${version.name}`;
+    const content = $('[data-report-preview-content]', dialog);
+    content.classList.add('is-organization-file-preview');
+    content.innerHTML = `<section class="cash-organization-preview">${image
+      ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(version.name)}" />`
+      : pdf
+        ? `<iframe src="${escapeHtml(url)}" title="${escapeHtml(version.name)}"></iframe>`
+        : `<div class="cash-organization-preview-fallback"><span aria-hidden="true">▤</span><strong>${escapeHtml(version.name)}</strong><p>${escapeHtml(tr('previewUnavailable'))}</p></div>`}</section>`;
+    const actions = $('[data-report-preview-actions]', dialog);
+    actions.innerHTML = `<div class="cash-report-actions cash-organization-preview-actions"><button class="outline-button" type="button" data-download-organization-preview>↓ ${tr('downloadDocument')}</button><button class="primary-button" type="button" data-share-organization-preview>${tr('sendDocument')} ↗</button></div>`;
+    $('[data-download-organization-preview]', actions)?.addEventListener('click', downloadCashOrganizationPreview);
+    $('[data-share-organization-preview]', actions)?.addEventListener('click', shareCashOrganizationPreview);
+    if (!dialog.open) dialog.showModal();
   } catch (error) {
-    console.error(error); previewWindow?.close(); showToast(tr('organizationFileOpenFailed'));
+    console.error(error);
+    releaseCashOrganizationPreview();
+    showToast(tr('organizationFileOpenFailed'));
   }
+}
+
+async function removeCashOrganizationAttachment(object, role) {
+  const card = object?.organizationDocuments?.[role];
+  const versions = card?.attachment?.versions || [];
+  if (!card || !versions.length) return false;
+  await deleteCashflowFileVersions(versions);
+  card.attachment = null;
+  card.updatedAt = new Date().toISOString();
+  return true;
+}
+
+function deleteCashOrganizationFile(objectId, role) {
+  const object = cashflowObjects.find((item) => item.id === objectId);
+  const card = object?.organizationDocuments?.[role];
+  const versions = card?.attachment?.versions || [];
+  const current = versions.at(-1);
+  if (!object || !card || !current) return;
+  showDialog(tr('deleteOrganizationFileTitle'), tr('deleteOrganizationFileHint'), `<section class="revision-upload-source"><span>${card.type === 'individual' ? '▣' : '▤'}</span><div><small>${escapeHtml(tr(card.type === 'individual' ? 'passportFile' : 'organizationCardFile'))}</small><strong>${escapeHtml(current.name)}</strong><em>${escapeHtml(formatStorage(current.size))}</em></div></section><div class="result-actions"><button class="outline-button" type="button" data-cancel-organization-file-delete>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-organization-file-delete>${escapeHtml(tr('deleteDocument'))}</button></div>`);
+  const scope = $('[data-dialog-content]');
+  $('[data-cancel-organization-file-delete]', scope)?.addEventListener('click', () => $('[data-dialog]')?.close());
+  $('[data-confirm-organization-file-delete]', scope)?.addEventListener('click', async (event) => {
+    event.currentTarget.disabled = true;
+    try {
+      await removeCashOrganizationAttachment(object, role);
+      saveCashflow();
+      renderCashflow();
+      $('[data-dialog]')?.close();
+      showToast(tr('organizationFileDeleted'));
+    } catch (error) {
+      console.error(error);
+      event.currentTarget.disabled = false;
+      showToast(tr('organizationFileDeleteFailed'));
+    }
+  });
 }
 
 function cashOrganizationCardMarkup(card, role) {
   const versions = card?.attachment?.versions || [];
   const current = versions.at(-1);
+  const individual = card.type === 'individual';
+  const documentLabelKey = individual ? 'passportFile' : 'organizationCardFile';
+  const emptyLabelKey = individual ? 'noPassportFile' : 'noOrganizationFile';
+  const uploadLabelKey = current ? (individual ? 'replacePassport' : 'replaceOrganizationCard') : (individual ? 'uploadPassport' : 'uploadOrganizationCard');
+  const eyeIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg>';
   const history = versions.length > 1 ? `<details class="cash-organization-file-history"><summary>${tr('versionHistory')} · ${versions.length}</summary>${[...versions].reverse().map((version, reverseIndex) => `<button type="button" data-open-organization-file="${escapeHtml(version.id)}"><b>v${versions.length - reverseIndex}</b><span><strong>${escapeHtml(version.name)}</strong><small>${escapeHtml(formatObjectDateTime(version.addedAt))} · ${escapeHtml(formatStorage(version.size))}</small></span></button>`).join('')}</details>` : '';
   return `<article class="cash-organization-card" data-organization-role="${role}">
     <header><span>${role === 'contractor' ? 'И' : 'З'}</span><div><h3>${tr(role)}</h3><small>${tr('organizationDocuments')}</small></div></header>
-    <div class="cash-organization-file"><div><strong>${escapeHtml(current?.name || tr('noOrganizationFile'))}</strong>${current ? `<small>v${versions.length} · ${escapeHtml(formatObjectDateTime(current.addedAt))}</small>` : ''}</div><div>${current ? `<button class="outline-button" type="button" data-open-organization-file="${escapeHtml(current.id)}">${tr('openDocument')}</button>` : ''}<button class="outline-button" type="button" data-select-organization-file>${tr('uploadOrganizationCard')}</button></div><input type="file" data-organization-file hidden />${history}</div>
-    <div class="cash-organization-manual"><h4>${tr('manualDetails')}</h4><label><span>${tr('partyType')}</span><select data-organization-type><option value="organization"${card.type === 'organization' ? ' selected' : ''}>${tr('legalEntity')}</option><option value="individual"${card.type === 'individual' ? ' selected' : ''}>${tr('individual')}</option></select></label><div data-organization-legal${card.type === 'organization' ? '' : ' hidden'}><label><span>${tr('companyName')}</span><input data-organization-field="company" maxlength="200" value="${escapeHtml(card.company)}" /></label><label><span>${tr('inn')}</span><input data-organization-field="inn" inputmode="numeric" maxlength="12" value="${escapeHtml(card.inn)}" /></label><label><span>${tr('kpp')}</span><input data-organization-field="kpp" inputmode="numeric" maxlength="9" value="${escapeHtml(card.kpp)}" /></label></div><div data-organization-individual${card.type === 'individual' ? '' : ' hidden'}><label><span>${tr('fullName')}</span><input data-organization-field="fullName" maxlength="200" value="${escapeHtml(card.fullName)}" /></label><label><span>${tr('passportSeriesNumber')}</span><input data-organization-field="passport" maxlength="80" value="${escapeHtml(card.passport)}" /></label></div><button class="primary-button" type="button" data-save-organization-card>${tr('save')}</button></div>
+    <div class="cash-organization-type"><label><span>${tr('partyType')}</span><select data-organization-type><option value="organization"${card.type === 'organization' ? ' selected' : ''}>${tr('legalEntity')}</option><option value="individual"${card.type === 'individual' ? ' selected' : ''}>${tr('individual')}</option></select></label></div>
+    <div class="cash-organization-file${current ? ' has-file' : ' is-empty'}">
+      <div class="cash-organization-file-main"><span class="cash-organization-file-mark" aria-hidden="true">${individual ? '▣' : '▤'}</span><div class="cash-organization-file-copy"><small>${tr(documentLabelKey)}</small><strong title="${escapeHtml(current?.name || tr(emptyLabelKey))}">${escapeHtml(current?.name || tr(emptyLabelKey))}</strong>${current ? `<em>v${versions.length} · ${escapeHtml(formatObjectDateTime(current.addedAt))} · ${escapeHtml(formatStorage(current.size))}</em>` : ''}</div>${current ? `<div class="cash-organization-file-icons"><button class="cash-organization-file-icon is-view" type="button" data-open-organization-file="${escapeHtml(current.id)}" aria-label="${escapeHtml(tr('previewUploadedDocument'))}" title="${escapeHtml(tr('previewUploadedDocument'))}">${eyeIcon}</button><button class="cash-organization-file-icon is-delete" type="button" data-delete-organization-file aria-label="${escapeHtml(tr('removeUploadedDocument'))}" title="${escapeHtml(tr('removeUploadedDocument'))}">×</button></div>` : ''}</div>
+      <button class="outline-button cash-organization-upload" type="button" data-select-organization-file>${tr(uploadLabelKey)}</button>
+      <input type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.heic,image/*" data-organization-file hidden />${history}
+    </div>
+    <div class="cash-organization-manual"><h4>${tr('manualDetails')}</h4><div class="cash-organization-fields is-legal" data-organization-legal${card.type === 'organization' ? '' : ' hidden'}><label><span>${tr('inn')}</span><input data-organization-field="inn" inputmode="numeric" maxlength="12" value="${escapeHtml(card.inn)}" /></label><label><span>${tr('kpp')}</span><input data-organization-field="kpp" inputmode="numeric" maxlength="9" value="${escapeHtml(card.kpp)}" /></label><label class="is-wide"><span>${tr('companyName')}</span><input data-organization-field="company" maxlength="200" value="${escapeHtml(card.company)}" /></label></div><div class="cash-organization-fields is-individual" data-organization-individual${card.type === 'individual' ? '' : ' hidden'}><label class="is-wide"><span>${tr('fullName')}</span><input data-organization-field="fullName" maxlength="200" value="${escapeHtml(card.fullName)}" /></label><label><span>${tr('passportSeries')}</span><input data-organization-field="passportSeries" inputmode="numeric" maxlength="20" value="${escapeHtml(card.passportSeries)}" /></label><label><span>${tr('passportNumber')}</span><input data-organization-field="passportNumber" inputmode="numeric" maxlength="40" value="${escapeHtml(card.passportNumber)}" /></label></div><button class="primary-button" type="button" data-save-organization-card>${tr('saveOrganizationDetails')}</button></div>
   </article>`;
 }
 
@@ -3858,16 +4039,38 @@ function bindCashOrganizationDocuments(object, scope) {
     const card = object.organizationDocuments[role];
     const typeSelect = $('[data-organization-type]', cardElement);
     typeSelect?.addEventListener('change', () => {
-      $('[data-organization-legal]', cardElement).hidden = typeSelect.value !== 'organization';
-      $('[data-organization-individual]', cardElement).hidden = typeSelect.value !== 'individual';
+      $$('[data-organization-field]', cardElement).forEach((input) => { card[input.dataset.organizationField] = input.value; });
+      card.passport = [card.passportSeries, card.passportNumber].map((value) => String(value || '').trim()).filter(Boolean).join(' ');
+      const nextType = typeSelect.value === 'individual' ? 'individual' : 'organization';
+      if (nextType === card.type) return;
+      const applyType = async (removeAttachment = false) => {
+        if (removeAttachment) await removeCashOrganizationAttachment(object, role);
+        card.type = nextType;
+        card.updatedAt = new Date().toISOString();
+        object.organizationDocuments[role] = normalizeCashOrganizationCard(card, role);
+        saveCashflow();
+        renderCashflow();
+      };
+      const versions = card.attachment?.versions || [];
+      if (!versions.length) { applyType().catch((error) => console.error(error)); return; }
+      showDialog(tr('changePartyTypeTitle'), tr('changePartyTypeHint'), `<div class="result-actions"><button class="outline-button" type="button" data-cancel-party-type>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-party-type>${escapeHtml(tr('changePartyType'))}</button></div>`);
+      const dialogScope = $('[data-dialog-content]');
+      $('[data-cancel-party-type]', dialogScope)?.addEventListener('click', () => { typeSelect.value = card.type; $('[data-dialog]')?.close(); });
+      $('[data-confirm-party-type]', dialogScope)?.addEventListener('click', async (event) => {
+        event.currentTarget.disabled = true;
+        try { await applyType(true); $('[data-dialog]')?.close(); }
+        catch (error) { console.error(error); typeSelect.value = card.type; event.currentTarget.disabled = false; showToast(tr('organizationFileDeleteFailed')); }
+      });
     });
     $('[data-save-organization-card]', cardElement)?.addEventListener('click', () => {
       const values = { ...card, type: typeSelect?.value === 'individual' ? 'individual' : 'organization', updatedAt: new Date().toISOString() };
       $$('[data-organization-field]', cardElement).forEach((input) => { values[input.dataset.organizationField] = input.value; });
+      values.passport = [values.passportSeries, values.passportNumber].map((value) => String(value || '').trim()).filter(Boolean).join(' ');
       object.organizationDocuments[role] = normalizeCashOrganizationCard(values, role);
       saveCashflow(); renderCashflow(); showToast(tr('organizationCardSaved'));
     });
     $('[data-select-organization-file]', cardElement)?.addEventListener('click', () => $('[data-organization-file]', cardElement)?.click());
+    $('[data-delete-organization-file]', cardElement)?.addEventListener('click', () => deleteCashOrganizationFile(object.id, role));
     $('[data-organization-file]', cardElement)?.addEventListener('change', async (event) => {
       const file = event.currentTarget.files?.[0]; if (!file) return;
       event.currentTarget.disabled = true; await addCashOrganizationFile(object.id, role, file); event.currentTarget.value = ''; event.currentTarget.disabled = false;
@@ -4295,6 +4498,8 @@ function cashOrganizationReportData(object) {
       inn: card.inn,
       kpp: card.kpp,
       fullName: card.fullName,
+      passportSeries: card.passportSeries,
+      passportNumber: card.passportNumber,
       passport: card.passport,
       fileName: card.attachment?.versions?.at(-1)?.name || '',
       updatedAt: card.updatedAt
@@ -4307,7 +4512,7 @@ function cashDocumentOrganizationsSummaryMarkup(object) {
   return `<section class="cash-document-organizations"><h3>${tr('organizationDocuments')}</h3><div>${CASH_ORGANIZATION_ROLES.map((role) => {
     const card = organizations[role];
     const details = card.type === 'individual'
-      ? [card.fullName, card.passport && `${tr('passportSeriesNumber')}: ${card.passport}`]
+      ? [card.fullName, card.passportSeries && `${tr('passportSeries')}: ${card.passportSeries}`, card.passportNumber && `${tr('passportNumber')}: ${card.passportNumber}`]
       : [card.company, card.inn && `${tr('inn')}: ${card.inn}`, card.kpp && `${tr('kpp')}: ${card.kpp}`];
     return `<article><strong>${tr(role)}</strong><span>${escapeHtml(details.filter(Boolean).join(' · ') || tr('notSpecified'))}</span>${card.fileName ? `<small>${escapeHtml(card.fileName)}</small>` : ''}</article>`;
   }).join('')}</div></section>`;
@@ -4322,7 +4527,7 @@ function cashDocumentOrganizationsEditorMarkup(organizations) {
 
 function cashDocumentOrganizationSummary(card) {
   const details = card.type === 'individual'
-    ? [card.fullName, card.passport && `${tr('passportSeriesNumber')}: ${card.passport}`]
+    ? [card.fullName, card.passportSeries && `${tr('passportSeries')}: ${card.passportSeries}`, card.passportNumber && `${tr('passportNumber')}: ${card.passportNumber}`]
     : [card.company, card.inn && `${tr('inn')}: ${card.inn}`, card.kpp && `${tr('kpp')}: ${card.kpp}`];
   return details.filter(Boolean).join(' · ') || tr('notSpecified');
 }
@@ -4574,7 +4779,7 @@ function reportPreviewOrganizationsMarkup(organizations) {
   return `<section class="report-preview-organizations"><h3>${tr('organizationDocuments')}</h3><div>${CASH_ORGANIZATION_ROLES.map((role) => {
     const card = organizations[role] || {};
     const fields = card.type === 'individual'
-      ? [[tr('fullName'), card.fullName], [tr('passportSeriesNumber'), card.passport]]
+      ? [[tr('fullName'), card.fullName], [tr('passportSeries'), card.passportSeries], [tr('passportNumber'), card.passportNumber]]
       : [[tr('companyName'), card.company], [tr('inn'), card.inn], [tr('kpp'), card.kpp]];
     return `<article><strong>${tr(role)} · ${tr(card.type === 'individual' ? 'individual' : 'legalEntity')}</strong>${fields.map(([label, value]) => `<span>${escapeHtml(label)}: ${escapeHtml(value || '—')}</span>`).join('')}${card.fileName ? `<small>${escapeHtml(card.fileName)}</small>` : ''}</article>`;
   }).join('')}</div></section>`;
@@ -4615,6 +4820,7 @@ function reportPreviewMarkup(report) {
 function openCashReportPreview(report, getDeliveryReport = () => report, onSuccess = null) {
   const dialog = $('[data-report-preview-dialog]');
   if (!dialog) return;
+  releaseCashOrganizationPreview();
   $('[data-report-preview-title]', dialog).textContent = tr('reportPreviewTitle');
   $('[data-report-preview-hint]', dialog).textContent = tr('reportPreviewHint');
   $('[data-report-preview-content]', dialog).innerHTML = reportPreviewMarkup(report);
@@ -4646,7 +4852,7 @@ async function createPdfReport(report) {
       const organizationRows = [[tr('reportType'), tr('partyType'), tr('manualDetails'), tr('uploadedDocuments')], ...CASH_ORGANIZATION_ROLES.map((role) => {
         const card = page.organizations[role] || {};
         const details = card.type === 'individual'
-          ? `${tr('fullName')}: ${card.fullName || '—'}; ${tr('passportSeriesNumber')}: ${card.passport || '—'}`
+          ? `${tr('fullName')}: ${card.fullName || '—'}; ${tr('passportSeries')}: ${card.passportSeries || '—'}; ${tr('passportNumber')}: ${card.passportNumber || '—'}`
           : `${tr('companyName')}: ${card.company || '—'}; ${tr('inn')}: ${card.inn || '—'}; ${tr('kpp')}: ${card.kpp || '—'}`;
         return [tr(role), tr(card.type === 'individual' ? 'individual' : 'legalEntity'), details, card.fileName || '—'];
       })];
@@ -4732,7 +4938,7 @@ async function createExcelReport(report) {
       CASH_ORGANIZATION_ROLES.forEach((role) => {
         const card = page.organizations[role] || {};
         const details = card.type === 'individual'
-          ? `${tr('fullName')}: ${card.fullName || '—'}; ${tr('passportSeriesNumber')}: ${card.passport || '—'}`
+          ? `${tr('fullName')}: ${card.fullName || '—'}; ${tr('passportSeries')}: ${card.passportSeries || '—'}; ${tr('passportNumber')}: ${card.passportNumber || '—'}`
           : `${tr('companyName')}: ${card.company || '—'}; ${tr('inn')}: ${card.inn || '—'}; ${tr('kpp')}: ${card.kpp || '—'}`;
         worksheet.getCell(cursor, 1).value = `${tr(role)} · ${tr(card.type === 'individual' ? 'individual' : 'legalEntity')}`; worksheet.getCell(cursor, 1).font = { bold: true };
         worksheet.getCell(cursor, 2).value = details;
@@ -7237,6 +7443,7 @@ $('[data-drawing-gallery-close]')?.addEventListener('click', () => { $('[data-dr
 $('[data-drawing-share]')?.addEventListener('click', shareDrawingFile);
 $$('[data-report-preview-close]').forEach((button) => button.addEventListener('click', () => $('[data-report-preview-dialog]')?.close()));
 $('[data-report-preview-dialog]')?.addEventListener('close', () => {
+  releaseCashOrganizationPreview();
   const content = $('[data-report-preview-content]');
   const actions = $('[data-report-preview-actions]');
   if (content) content.innerHTML = '';

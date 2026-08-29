@@ -1571,3 +1571,106 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
   .bottom-menu.is-building .bottom-menu-logo-mark > i { animation: none; }
   .bottom-menu-build-visual { display: none; }
 }
+
+/* Quick object party cards: type-first flow, compact file actions, and in-app preview. */
+.cash-organization-type { margin-top: 12px; }
+.cash-organization-type label { display: grid; gap: 5px; }
+.cash-organization-type label > span { color: var(--muted); font-size: 8px; }
+.cash-organization-type select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 38px 0 11px;
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  outline: 0;
+  background: var(--surface);
+}
+.cash-organization-type select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,119,255,.12); }
+.cash-organization-file.has-file { border-style: solid; border-color: color-mix(in srgb,#2bdca1 42%,var(--line-strong)); }
+.cash-organization-file > .cash-organization-file-main {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 36px minmax(0,1fr) auto;
+  align-items: center;
+  gap: 9px;
+}
+.cash-organization-file-mark {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: var(--cyan);
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--surface-soft);
+  font-size: 18px;
+  box-shadow: 0 0 15px var(--glow);
+}
+.cash-organization-file-copy { min-width: 0; display: grid; gap: 2px; }
+.cash-organization-file-copy > small { color: var(--cyan); font-size: 7px; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; }
+.cash-organization-file-copy > strong { overflow: hidden; color: var(--text); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.cash-organization-file-copy > em { overflow: hidden; color: var(--muted); font-size: 7px; font-style: normal; text-overflow: ellipsis; white-space: nowrap; }
+.cash-organization-file-icons { display: flex; align-items: center; gap: 5px; }
+.cash-organization-file-icon {
+  width: 32px;
+  height: 32px;
+  min-height: 0!important;
+  padding: 0!important;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface-soft);
+  cursor: pointer;
+}
+.cash-organization-file-icon.is-view { color: var(--cyan); }
+.cash-organization-file-icon.is-view svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.cash-organization-file-icon.is-delete {
+  color: #ff5368;
+  border-color: rgba(255,83,104,.45);
+  background: rgba(255,54,79,.08);
+  font-size: 20px!important;
+  line-height: 1;
+  box-shadow: 0 0 12px rgba(255,54,79,.08);
+}
+.cash-organization-file-icon.is-delete:hover,
+.cash-organization-file-icon.is-delete:focus-visible { color: #fff; background: #db3149; box-shadow: 0 0 18px rgba(255,54,79,.35); }
+.cash-organization-upload { width: 100%; min-height: 40px!important; }
+.cash-organization-manual { padding-top: 2px; }
+.cash-organization-manual > .cash-organization-fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; }
+.cash-organization-manual > .cash-organization-fields > .is-wide { grid-column: 1/-1; }
+.cash-organization-manual > .cash-organization-fields[hidden] { display: none!important; }
+.cash-organization-manual > button { margin-top: 2px; }
+
+.report-preview-scroll.is-organization-file-preview { padding: 14px; background: color-mix(in srgb,var(--bg-deep) 90%,#0a3973); }
+.cash-organization-preview {
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: rgba(1,10,25,.72);
+  box-shadow: inset 0 0 55px rgba(8,100,255,.08);
+}
+.cash-organization-preview > img { display: block; max-width: 100%; max-height: calc(95dvh - 190px); object-fit: contain; }
+.cash-organization-preview > iframe { width: 100%; height: 100%; min-height: 620px; border: 0; background: #fff; }
+.cash-organization-preview-fallback { width: min(420px,calc(100% - 30px)); padding: 34px 22px; display: grid; justify-items: center; gap: 10px; text-align: center; border: 1px dashed var(--line-strong); border-radius: 16px; background: var(--surface); }
+.cash-organization-preview-fallback > span { width: 58px; height: 58px; display: grid; place-items: center; color: var(--cyan); border: 1px solid var(--line-strong); border-radius: 15px; background: var(--surface-soft); font-size: 29px; box-shadow: 0 0 22px var(--glow); }
+.cash-organization-preview-fallback > strong { max-width: 100%; overflow-wrap: anywhere; font-size: 14px; }
+.cash-organization-preview-fallback > p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.cash-organization-preview-actions { grid-template-columns: repeat(2,minmax(0,1fr)); }
+
+@media (max-width:620px) {
+  .cash-organization-file > .cash-organization-file-main { grid-template-columns: 34px minmax(0,1fr) auto; gap: 7px; }
+  .cash-organization-file-mark { width: 34px; height: 34px; }
+  .cash-organization-file-icons { gap: 3px; }
+  .cash-organization-file-icon { width: 30px; height: 30px; }
+  .cash-organization-manual > .cash-organization-fields { grid-template-columns: 1fr; }
+  .cash-organization-manual > .cash-organization-fields > .is-wide { grid-column: auto; }
+  .report-preview-scroll.is-organization-file-preview { padding: 6px; }
+  .cash-organization-preview { border-radius: 10px; }
+  .cash-organization-preview > iframe { min-height: calc(100dvh - 160px); }
+}
