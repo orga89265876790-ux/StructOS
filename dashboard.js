@@ -451,6 +451,39 @@ Object.assign(copy.EN, { statistics: 'Statistics', online: 'online', registeredU
 Object.assign(copy.KY, { statistics: 'Статистика', online: 'online', registeredUsers: 'Катталган колдонуучулар', referralContribution: 'Шилтеме боюнча салымыңыз', personalReferralLink: 'Жеке рефералдык шилтеме', referralRecommendationReward: 'Ар бир сунуш үчүн +150 рубль', shareEarn: 'StructOS — ар бир сунуш үчүн +150 рубль', referralReward: 'Сиздин шилтеме аркылуу сунуш' });
 Object.assign(copy.TJ, { statistics: 'Омор', online: 'online', registeredUsers: 'Истифодабарандагони бақайдгирифташуда', referralContribution: 'Саҳми шумо аз рӯи пайванд', personalReferralLink: 'Пайванди шахсии рефералӣ', referralRecommendationReward: '+150 рубл барои ҳар тавсия', shareEarn: 'StructOS — +150 рубл барои ҳар тавсия', referralReward: 'Тавсия тавассути пайванди шумо' });
 
+Object.assign(copy.RU, {
+  launchProject: 'Запустить проект', startObjectQuestion: 'Желаете начать объект?', fullCycleChoice: 'Полного цикла', quickObjectChoice: 'Быстрый объект',
+  fullCycleChoiceHint: 'Полный цикл ведения объекта', quickObjectChoiceHint: 'Название, раздел и документы будут перенесены в быстрый объект',
+  quickObjectSetup: 'Запуск быстрого объекта', quickObjectSetupHint: 'Проверьте название и раздел, затем выберите один вариант работы.',
+  quickObjectName: 'Название быстрого объекта', chooseOneWorkMode: 'Выберите один вариант работы', linkedProjectDocuments: 'Документы из проекта',
+  linkedProjectDocumentsHint: 'Все загруженные документы будут добавлены в раздел быстрого объекта.', linkedFromProject: 'Из проекта',
+  launchQuickObject: 'Запустить быстрый объект', quickObjectFromProjectCreated: 'Быстрый объект создан и открыт', quickObjectFromProjectUpdated: 'Быстрый объект обновлён и открыт'
+});
+Object.assign(copy.EN, {
+  launchProject: 'Launch project', startObjectQuestion: 'Would you like to start an object?', fullCycleChoice: 'Full cycle', quickObjectChoice: 'Quick object',
+  fullCycleChoiceHint: 'Full-cycle object management', quickObjectChoiceHint: 'The name, section, and documents will be transferred to a quick object',
+  quickObjectSetup: 'Launch quick object', quickObjectSetupHint: 'Check the name and section, then choose one work mode.',
+  quickObjectName: 'Quick object name', chooseOneWorkMode: 'Choose one work mode', linkedProjectDocuments: 'Project documents',
+  linkedProjectDocumentsHint: 'All uploaded documents will be added to the quick-object section.', linkedFromProject: 'From project',
+  launchQuickObject: 'Launch quick object', quickObjectFromProjectCreated: 'Quick object created and opened', quickObjectFromProjectUpdated: 'Quick object updated and opened'
+});
+Object.assign(copy.KY, {
+  launchProject: 'Долбоорду баштоо', startObjectQuestion: 'Объектти баштайсызбы?', fullCycleChoice: 'Толук цикл', quickObjectChoice: 'Ыкчам объект',
+  fullCycleChoiceHint: 'Объектти толук цикл менен жүргүзүү', quickObjectChoiceHint: 'Аталыш, бөлүм жана документтер ыкчам объектке өткөрүлөт',
+  quickObjectSetup: 'Ыкчам объектти баштоо', quickObjectSetupHint: 'Аталышты жана бөлүмдү текшерип, иштин бир вариантын тандаңыз.',
+  quickObjectName: 'Ыкчам объекттин аталышы', chooseOneWorkMode: 'Иштин бир вариантын тандаңыз', linkedProjectDocuments: 'Долбоордун документтери',
+  linkedProjectDocumentsHint: 'Бардык жүктөлгөн документтер ыкчам объекттин бөлүмүнө кошулат.', linkedFromProject: 'Долбоордон',
+  launchQuickObject: 'Ыкчам объектти баштоо', quickObjectFromProjectCreated: 'Ыкчам объект түзүлүп ачылды', quickObjectFromProjectUpdated: 'Ыкчам объект жаңыртылып ачылды'
+});
+Object.assign(copy.TJ, {
+  launchProject: 'Оғози лоиҳа', startObjectQuestion: 'Мехоҳед объектро оғоз кунед?', fullCycleChoice: 'Давраи пурра', quickObjectChoice: 'Объекти зуд',
+  fullCycleChoiceHint: 'Идоракунии пурраи объект', quickObjectChoiceHint: 'Ном, бахш ва ҳуҷҷатҳо ба объекти зуд гузаронда мешаванд',
+  quickObjectSetup: 'Оғози объекти зуд', quickObjectSetupHint: 'Ном ва бахшро санҷида, як тарзи корро интихоб кунед.',
+  quickObjectName: 'Номи объекти зуд', chooseOneWorkMode: 'Як тарзи корро интихоб кунед', linkedProjectDocuments: 'Ҳуҷҷатҳои лоиҳа',
+  linkedProjectDocumentsHint: 'Ҳамаи ҳуҷҷатҳои боршуда ба бахши объекти зуд илова мешаванд.', linkedFromProject: 'Аз лоиҳа',
+  launchQuickObject: 'Оғози объекти зуд', quickObjectFromProjectCreated: 'Объекти зуд сохта ва кушода шуд', quickObjectFromProjectUpdated: 'Объекти зуд нав ва кушода шуд'
+});
+
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
@@ -2845,7 +2878,11 @@ function normalizeCashAttachmentVersion(value, kind) {
     size: Math.max(0, Number(value.size) || 0),
     type: String(value.type || ''),
     lastModified: Number(value.lastModified) || Date.now(),
-    addedAt: value.addedAt || new Date().toISOString()
+    addedAt: value.addedAt || new Date().toISOString(),
+    sourceObjectId: value.sourceObjectId ? String(value.sourceObjectId) : null,
+    sourceDocumentKind: CASH_ATTACHMENT_KINDS.includes(value.sourceDocumentKind) ? value.sourceDocumentKind : null,
+    sourceDocumentTitle: String(value.sourceDocumentTitle || '').trim().slice(0, 180),
+    linkedFromProject: Boolean(value.linkedFromProject || value.sourceObjectId)
   };
 }
 
@@ -2889,6 +2926,7 @@ function normalizeCashSection(section, legacyObject = {}) {
   const contractAmount = Math.max(0, Number(section?.contractAmount ?? legacyObject.cost) || 0);
   const normalized = {
     id: String(section?.id || `section-${Date.now()}-${Math.random().toString(16).slice(2)}`),
+    sourceProjectId: section?.sourceProjectId ? String(section.sourceProjectId) : null,
     name: String(section?.name || tr('sectionName')).trim().slice(0, 120) || tr('sectionName'),
     createdAt: section?.createdAt || new Date().toISOString(),
     createdManually: Boolean(section?.createdManually),
@@ -2924,6 +2962,7 @@ function loadCashflow() {
     sections = sections.filter((section) => section.createdManually || !automaticSectionNames.has(section.name) || cashSectionHasData(section));
     return {
       id: String(object.id || `cash-${Date.now()}-${Math.random().toString(16).slice(2)}`),
+      sourceProjectId: object.sourceProjectId ? String(object.sourceProjectId) : null,
       name: object.name.trim().slice(0, 100) || tr('objects'),
       createdAt: object.createdAt || new Date().toISOString(),
       completed: Boolean(object.completed),
@@ -2994,7 +3033,7 @@ async function deleteCashflowFiles(sectionOrSections) {
   const ids = sections.flatMap((section) => [
     ...CASH_ATTACHMENT_KINDS.flatMap((kind) => section?.attachments?.[kind]?.versions || []),
     ...CASH_ORGANIZATION_ROLES.flatMap((role) => section?.organizationDocuments?.[role]?.attachment?.versions || [])
-  ]).map((version) => version.id).filter(Boolean);
+  ]).filter((version) => !version.linkedFromProject).map((version) => version.id).filter(Boolean);
   if (!ids.length) return;
   const db = await openCashflowFileDb();
   await new Promise((resolve, reject) => {
@@ -3202,6 +3241,10 @@ async function openCashSectionAttachment(objectId, sectionId, kind, versionId) {
   const versions = section?.attachments?.[kind]?.versions || [];
   const version = versions.find((item) => item.id === versionId) || versions[versions.length - 1];
   if (!version) return;
+  if (version.linkedFromProject && version.sourceObjectId) {
+    openAnalyzedDocument(version.sourceObjectId, version.sourceDocumentKind || kind);
+    return;
+  }
   const previewWindow = window.open('', '_blank');
   if (previewWindow) {
     previewWindow.opener = null;
@@ -3330,9 +3373,9 @@ function cashSectionAttachmentMarkup(section, kind) {
   const versions = attachment?.versions || [];
   const current = versions[versions.length - 1];
   const icon = { project: '▤', contract: '≡', estimate: '₽' }[kind];
-  const history = versions.length > 1 ? `<details class="cash-source-file-history"><summary>${tr('versionHistory')} · ${versions.length}</summary><div>${[...versions].reverse().map((version, reverseIndex) => `<button type="button" data-open-cash-attachment-version="${escapeHtml(version.id)}" data-cash-attachment-kind="${escapeHtml(kind)}"><b>v${versions.length - reverseIndex}</b><span><strong>${escapeHtml(version.name)}</strong><small>${escapeHtml(formatObjectDateTime(version.addedAt))} · ${escapeHtml(formatStorage(version.size))}</small></span><i>${tr('openDocument')}</i></button>`).join('')}</div></details>` : '';
+  const history = versions.length > 1 ? `<details class="cash-source-file-history"><summary>${tr('versionHistory')} · ${versions.length}</summary><div>${[...versions].reverse().map((version, reverseIndex) => `<button type="button" data-open-cash-attachment-version="${escapeHtml(version.id)}" data-cash-attachment-kind="${escapeHtml(kind)}"><b>v${versions.length - reverseIndex}</b><span><strong>${escapeHtml(version.sourceDocumentTitle || version.name)}</strong><small>${version.linkedFromProject ? `${escapeHtml(tr('linkedFromProject'))} · ` : ''}${escapeHtml(formatObjectDateTime(version.addedAt))} · ${escapeHtml(formatStorage(version.size))}</small></span><i>${tr('openDocument')}</i></button>`).join('')}</div></details>` : '';
   return `<article class="cash-source-file${current ? ' has-file' : ''}">
-    <header><span aria-hidden="true">${icon}</span><div><strong>${tr(kind)}</strong><small>${escapeHtml(current?.name || tr('notUploaded'))}</small>${current ? `<em>v${versions.length} · ${escapeHtml(formatStorage(current.size))}</em>` : ''}</div></header>
+    <header><span aria-hidden="true">${icon}</span><div><strong>${tr(kind)}</strong><small>${escapeHtml(current?.sourceDocumentTitle || current?.name || tr('notUploaded'))}</small>${current ? `<em>${current.linkedFromProject ? `${escapeHtml(tr('linkedFromProject'))} · ` : ''}${escapeHtml(current.name)} · v${versions.length} · ${escapeHtml(formatStorage(current.size))}</em>` : ''}</div></header>
     <div class="cash-source-file-actions">${current ? `<button class="outline-button" type="button" data-open-cash-attachment-version="${escapeHtml(current.id)}" data-cash-attachment-kind="${escapeHtml(kind)}">${tr('openDocument')}</button>` : ''}<button class="primary-button" type="button" data-select-cash-attachment="${escapeHtml(kind)}">${tr(current ? 'replaceDocument' : 'upload')}</button></div>
     <input type="file" accept="${uploadRules[kind].accept}" data-cash-attachment-input="${escapeHtml(kind)}" hidden />${history}
   </article>`;
@@ -5012,6 +5055,123 @@ function projectDocumentTitle(object, kind) {
     : `${projectTitleFor(object)} · ${tr('contractNumberLabel')} ${object.contractNumber}`;
 }
 
+function linkedCashAttachmentFromProject(object, kind) {
+  const file = objectFile(object, kind);
+  if (!file) return null;
+  const versions = fileVersions(file).map((version, index) => normalizeCashAttachmentVersion({
+    ...version,
+    id: `project-link-${object.id}-${kind}-${index}-${version.lastModified}`,
+    sourceObjectId: object.id,
+    sourceDocumentKind: kind,
+    sourceDocumentTitle: projectDocumentTitle(object, kind),
+    linkedFromProject: true
+  }, kind)).filter(Boolean);
+  return versions.length ? { kind, versions } : null;
+}
+
+function cashAttachmentsFromProject(object, currentAttachments = {}) {
+  return Object.fromEntries(CASH_ATTACHMENT_KINDS.map((kind) => {
+    const linked = linkedCashAttachmentFromProject(object, kind);
+    const localVersions = (currentAttachments?.[kind]?.versions || []).filter((version) => !version.linkedFromProject);
+    const versions = [...(linked?.versions || []), ...localVersions];
+    return [kind, versions.length ? { kind, versions } : null];
+  }));
+}
+
+function openProjectLaunchDialog(objectId) {
+  const object = objectRegistry.find((item) => item.id === objectId);
+  if (!object) return;
+  showDialog(escapeHtml(tr('startObjectQuestion')), `${escapeHtml(tr('project'))}: ${escapeHtml(projectTitleFor(object))}`, `<div class="project-launch-choice-grid">
+    <button class="project-launch-choice is-development" type="button" disabled aria-disabled="true"><span class="project-launch-choice-icon" aria-hidden="true">◎</span><span><strong>${escapeHtml(tr('fullCycleChoice'))}</strong><small>${escapeHtml(tr('fullCycleChoiceHint'))}</small></span><b>${escapeHtml(tr('inDevelopment'))}</b></button>
+    <button class="project-launch-choice is-quick" type="button" data-launch-quick-object><span class="project-launch-choice-icon" aria-hidden="true">↗</span><span><strong>${escapeHtml(tr('quickObjectChoice'))}</strong><small>${escapeHtml(tr('quickObjectChoiceHint'))}</small></span><i aria-hidden="true">›</i></button>
+  </div>`);
+  $('[data-launch-quick-object]', $('[data-dialog-content]'))?.addEventListener('click', () => openQuickObjectFromProjectDialog(object.id));
+}
+
+function openQuickObjectFromProjectDialog(objectId) {
+  const object = objectRegistry.find((item) => item.id === objectId);
+  if (!object) return;
+  const uploadedDocuments = CASH_ATTACHMENT_KINDS.map((kind) => ({ kind, file: objectFile(object, kind) })).filter((item) => item.file);
+  const documents = uploadedDocuments.length
+    ? uploadedDocuments.map(({ kind, file }) => `<article class="project-linked-document"><span aria-hidden="true">${kind === 'project' ? '▤' : kind === 'contract' ? '≡' : '₽'}</span><div><strong>${escapeHtml(projectDocumentTitle(object, kind))}</strong><small>${escapeHtml(file.name)} · ${escapeHtml(formatStorage(file.size))}</small></div><b>✓ ${escapeHtml(tr('linkedFromProject'))}</b></article>`).join('')
+    : `<div class="project-linked-documents-empty">${escapeHtml(tr('notUploaded'))}</div>`;
+  showDialog(escapeHtml(tr('quickObjectSetup')), escapeHtml(tr('quickObjectSetupHint')), `<div class="project-quick-start-form">
+    <div class="project-quick-start-fields"><label><span>${escapeHtml(tr('quickObjectName'))}</span><input type="text" maxlength="100" data-project-quick-name value="${escapeHtml(object.name)}" /></label><label><span>${escapeHtml(tr('sectionName'))}</span><input type="text" maxlength="120" data-project-quick-section value="${escapeHtml(projectSectionFor(object))}" /></label></div>
+    <fieldset class="project-quick-modes"><legend>${escapeHtml(tr('chooseOneWorkMode'))}</legend><div><label><input type="radio" name="project-quick-mode" value="contract" /><span><b>${escapeHtml(tr('workByContract'))}</b></span></label><label><input type="radio" name="project-quick-mode" value="fact" /><span><b>${escapeHtml(tr('workByFact'))}</b></span></label><label><input type="radio" name="project-quick-mode" value="staffing" /><span><b>${escapeHtml(tr('peopleAssigned'))}</b></span></label></div></fieldset>
+    <div class="project-quick-contract-amount" data-project-quick-contract-amount hidden><label><span>${escapeHtml(tr('contractAmount'))}</span><input type="number" min="0.01" step="0.01" inputmode="decimal" data-project-quick-contract-value placeholder="0 ₽" /></label></div>
+    <section class="project-linked-documents"><header><div><h3>${escapeHtml(tr('linkedProjectDocuments'))}</h3><p>${escapeHtml(tr('linkedProjectDocumentsHint'))}</p></div><b>${uploadedDocuments.length}</b></header><div>${documents}</div></section>
+    <button class="primary-button project-quick-start-submit" type="button" data-confirm-project-quick-start>${escapeHtml(tr('launchQuickObject'))}</button>
+  </div>`);
+  const scope = $('[data-dialog-content]');
+  const nameInput = $('[data-project-quick-name]', scope);
+  const sectionInput = $('[data-project-quick-section]', scope);
+  const contractAmountField = $('[data-project-quick-contract-amount]', scope);
+  const syncMode = () => {
+    const mode = $('input[name="project-quick-mode"]:checked', scope)?.value;
+    contractAmountField.hidden = mode !== 'contract';
+    if (mode === 'contract') $('[data-project-quick-contract-value]', contractAmountField)?.focus();
+  };
+  $$('input[name="project-quick-mode"]', scope).forEach((input) => input.addEventListener('change', syncMode));
+  const launchQuickObject = () => {
+    const name = nameInput?.value.trim().slice(0, 100) || '';
+    const sectionName = sectionInput?.value.trim().slice(0, 120) || '';
+    const mode = $('input[name="project-quick-mode"]:checked', scope)?.value || '';
+    if (!name) { nameInput?.focus(); return; }
+    if (!sectionName) { sectionInput?.focus(); return; }
+    if (!mode) { showToast(tr('chooseOneWorkMode')); return; }
+    const contractAmountInput = $('[data-project-quick-contract-value]', scope);
+    const contractAmount = mode === 'contract' ? Math.max(0, Math.round((Number(contractAmountInput?.value) || 0) * 100) / 100) : 0;
+    if (mode === 'contract' && contractAmount <= 0) { showToast(tr('enterContractAmount')); contractAmountInput?.focus(); return; }
+    const now = new Date().toISOString();
+    let cashObject = cashflowObjects.find((item) => item.sourceProjectId === object.id);
+    const existed = Boolean(cashObject);
+    if (!cashObject) {
+      cashObject = {
+        id: `cash-${Date.now()}-${Math.random().toString(16).slice(2)}`,
+        sourceProjectId: object.id,
+        name,
+        createdAt: now,
+        completed: false,
+        completedAt: null,
+        organizationDocumentsCollapsed: false,
+        organizationDocuments: normalizeCashOrganizationDocuments(),
+        sections: []
+      };
+      cashflowObjects.unshift(cashObject);
+    }
+    cashObject.name = name;
+    cashObject.completed = false;
+    cashObject.completedAt = null;
+    let sectionIndex = cashObject.sections.findIndex((section) => section.sourceProjectId === object.id);
+    const currentSection = sectionIndex >= 0 ? cashObject.sections[sectionIndex] : null;
+    const section = normalizeCashSection({
+      ...(currentSection || {}),
+      sourceProjectId: object.id,
+      name: sectionName,
+      createdAt: currentSection?.createdAt || now,
+      createdManually: true,
+      contractMode: mode === 'contract',
+      factMode: mode === 'fact',
+      staffingMode: mode === 'staffing',
+      contractAmount,
+      attachments: cashAttachmentsFromProject(object, currentSection?.attachments)
+    });
+    if (sectionIndex >= 0) cashObject.sections[sectionIndex] = section;
+    else cashObject.sections.push(section);
+    expandedCashSections.add(section.id);
+    activeCashObjectId = cashObject.id;
+    object.updatedAt = now;
+    saveObjects();
+    saveCashflow();
+    $('[data-dialog]')?.close();
+    setPanel('cashflow');
+    showToast(tr(existed ? 'quickObjectFromProjectUpdated' : 'quickObjectFromProjectCreated'));
+  };
+  $('[data-confirm-project-quick-start]', scope)?.addEventListener('click', launchQuickObject);
+  [nameInput, sectionInput].forEach((input) => input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); launchQuickObject(); } }));
+  setTimeout(() => { nameInput?.focus(); nameInput?.select(); }, 40);
+}
+
 function projectLastUpdatedAt(object) {
   const dates = [object?.createdAt, object?.uploadedAt, object?.analyzedAt, object?.startedAt, object?.completedAt, object?.updatedAt]
     .map((value) => new Date(value || 0))
@@ -5116,7 +5276,8 @@ function myProjectMarkup(object) {
     const deleteAction = file ? `<button class="my-project-document-delete" type="button" data-my-project-delete="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}">${escapeHtml(tr('deleteDocument'))}</button>` : '';
     const analyzeAction = file && !analyzed ? `<button class="primary-button my-project-document-analyze" type="button" data-my-project-analyze="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}">${escapeHtml(tr('analyze'))}</button>` : '';
     const renameAction = `<button class="outline-button my-project-document-rename" type="button" data-my-project-rename-document="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}" aria-label="${escapeHtml(tr(kind === 'project' ? 'renameProject' : kind === 'contract' ? 'renameContract' : 'renameEstimate'))}">✎ ${escapeHtml(tr('rename'))}</button>`;
-    return `<section class="my-project-document-row${file ? ' has-file' : ''}${file && !analyzed ? ' is-pending' : ''}"><span class="my-project-document-icon" aria-hidden="true">${file ? analyzed ? '✓' : '…' : '+'}</span><span class="my-project-document-copy"><small>${escapeHtml(tr(kind))}</small><strong>${escapeHtml(documentTitle)}</strong><em>${escapeHtml(statusText)}</em></span><span class="my-project-document-row-actions">${renameAction}${openAction}${deleteAction}<button class="primary-button" type="button" data-my-project-upload="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}" data-version-mode="${file ? 'revision' : 'standard'}">${escapeHtml(tr('upload'))}</button>${analyzeAction}</span></section>`;
+    const launchAction = kind === 'project' ? `<button class="my-project-document-launch" type="button" data-launch-project="${escapeHtml(object.id)}">▶ ${escapeHtml(tr('launchProject'))}</button>` : '';
+    return `<section class="my-project-document-row${file ? ' has-file' : ''}${file && !analyzed ? ' is-pending' : ''}"><span class="my-project-document-icon" aria-hidden="true">${file ? analyzed ? '✓' : '…' : '+'}</span><span class="my-project-document-copy"><small>${escapeHtml(tr(kind))}</small><span class="my-project-document-title-line"><strong>${escapeHtml(documentTitle)}</strong>${launchAction}</span><em>${escapeHtml(statusText)}</em></span><span class="my-project-document-row-actions">${renameAction}${openAction}${deleteAction}<button class="primary-button" type="button" data-my-project-upload="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}" data-version-mode="${file ? 'revision' : 'standard'}">${escapeHtml(tr('upload'))}</button>${analyzeAction}</span></section>`;
   }).join('');
   const toggleLabel = tr(collapsed ? 'expandProject' : 'collapseProject');
   return `<article class="my-project-card is-${escapeHtml(object.status)}${collapsed ? ' is-collapsed' : ''}" data-my-project="${escapeHtml(object.id)}"><header><button class="my-project-object-open" type="button" data-toggle-my-project="${escapeHtml(object.id)}" aria-expanded="${String(!collapsed)}" aria-label="${escapeHtml(toggleLabel)}"><span class="my-project-mark" aria-hidden="true">▰</span><span><small>STRUCTOS OBJECT</small><h2>${escapeHtml(object.name)}</h2><em class="my-project-section-name">${escapeHtml(tr('projectNameStep'))}: ${escapeHtml(projectSection)}</em><span class="my-project-badges"><b>${escapeHtml(tr('fullCycleObject'))}</b><b class="is-${escapeHtml(object.status)}">${escapeHtml(tr(statusKey))}</b></span></span><i aria-hidden="true">⌄</i></button><div class="my-project-card-actions"><button class="outline-button" type="button" data-open-project-object="${escapeHtml(object.id)}">${escapeHtml(tr('openDocument'))}</button><button class="outline-button my-project-rename-section-button" type="button" data-my-project-rename-section="${escapeHtml(object.id)}">✎ ${escapeHtml(tr('projectNameStep'))}</button><button class="my-project-delete-button" type="button" data-delete-project="${escapeHtml(object.id)}">${escapeHtml(tr('deleteProject'))}</button></div></header><div class="my-project-card-content"${collapsed ? ' hidden' : ''}><div class="my-project-documents">${documents}</div><footer><span>${escapeHtml(tr('lastProjectUpdate'))}: ${escapeHtml(formatObjectDate(updatedAt))}</span><span>${escapeHtml(tr('memoryUsed'))}: ${escapeHtml(formatStorage(usedBytes))}</span></footer></div></article>`;
@@ -5128,6 +5289,7 @@ function renderMyProjects() {
     list.innerHTML = projects.map(myProjectMarkup).join('');
     $$('[data-my-project]', list).forEach((card) => {
       $('[data-toggle-my-project]', card)?.addEventListener('click', (event) => toggleMyProjectCard(event.currentTarget.dataset.toggleMyProject));
+      $('[data-launch-project]', card)?.addEventListener('click', (event) => { event.stopPropagation(); openProjectLaunchDialog(event.currentTarget.dataset.launchProject); });
       $('[data-open-project-object]', card)?.addEventListener('click', (event) => { event.stopPropagation(); openObjectCard(event.currentTarget.dataset.openProjectObject); });
       $('[data-my-project-rename-section]', card)?.addEventListener('click', (event) => { event.stopPropagation(); renameProjectSection(event.currentTarget.dataset.myProjectRenameSection); });
       $('[data-delete-project]', card)?.addEventListener('click', (event) => { event.stopPropagation(); deleteProjectObject(event.currentTarget.dataset.deleteProject); });
