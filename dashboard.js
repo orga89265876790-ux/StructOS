@@ -388,6 +388,11 @@ Object.assign(copy.EN, { openDocument: 'Open', replaceDocument: 'Replace', choos
 Object.assign(copy.KY, { openDocument: 'Ачуу', replaceDocument: 'Алмаштыруу', chooseReportDocument: 'Эмнени ачуу керек?', chooseReportDocumentHint: 'Жүктөлгөн документтердин биринин жыйынтыгын тандаңыз.', analysisNotReady: 'Документ али талдана элек', analysisNotReadyHint: 'Деталдуу баракты ачуу үчүн адегенде объектти талдаңыз.', runAnalysisNow: 'Азыр талдоо', projectAnalysis: 'Долбоорду деталдуу талдоо', backToProjects: 'Менин долбоорлорума', sourceFile: 'Булак', analyzedDataOnly: 'StructOS жүктөлгөн файлдан алынган маалыматты гана көрсөтөт. Жетишпеген маанилер ойлоп табылбайт.', commercialProposal: 'Коммерциялык сунуш', projectBySheets: 'Долбоор барактар боюнча', projectBySystems: 'Долбоор системалар боюнча', projectMaterials: 'Долбоордун материалдары', billOfQuantities: 'Иш көлөмдөрүнүн ведомосту', section: 'Бөлүм', sheetNumber: 'Барак', sheetName: 'Барактын аталышы', system: 'Система', sheets: 'Барактар', materials: 'Материалдар', materialName: 'Материалдын аталышы', works: 'Иштер', markType: 'Марка / түрү', source: 'Булак', statusLabel: 'Статус', extractionPending: 'Маалымат чыгарылышын күтүп жатат', extractionPendingCopy: 'Бөлүмдүн түзүмү даяр. Сервердик талдоо кошулгандан кийин саптар пайда болот.', analyzedDocumentPage: 'Талдоо барагы даяр', analyzedDocumentPageCopy: 'Файл сакталды жана тандалды. Бул документтин деталдуу түзүмүн кийинки этапта талкуулайбыз.' });
 Object.assign(copy.TJ, { openDocument: 'Кушодан', replaceDocument: 'Иваз кардан', chooseReportDocument: 'Чиро кушоем?', chooseReportDocumentHint: 'Натиҷаи яке аз ҳуҷҷатҳои боршударо интихоб кунед.', analysisNotReady: 'Ҳуҷҷат ҳанӯз таҳлил нашудааст', analysisNotReadyHint: 'Барои кушодани саҳифаи муфассал аввал таҳлили объектро оғоз кунед.', runAnalysisNow: 'Ҳозир таҳлил кардан', projectAnalysis: 'Таҳлили муфассали лоиҳа', backToProjects: 'Ба лоиҳаҳои ман', sourceFile: 'Манбаъ', analyzedDataOnly: 'StructOS танҳо маълумоти аз файли боршуда гирифташударо нишон медиҳад. Маълумоти набуда сохта намешавад.', commercialProposal: 'Пешниҳоди тиҷоратӣ', projectBySheets: 'Лоиҳа аз рӯи варақҳо', projectBySystems: 'Лоиҳа аз рӯи системаҳо', projectMaterials: 'Маводи лоиҳа', billOfQuantities: 'Рӯйхати ҳаҷми корҳо', section: 'Бахш', sheetNumber: 'Варақ', sheetName: 'Номи варақ', system: 'Система', sheets: 'Варақҳо', materials: 'Мавод', materialName: 'Номи мавод', works: 'Корҳо', markType: 'Тамға / навъ', source: 'Манбаъ', statusLabel: 'Ҳолат', extractionPending: 'Интизори гирифтани маълумот', extractionPendingCopy: 'Сохтори ҷадвал омода аст. Пас аз пайвасти таҳлили серверӣ сатрҳо пайдо мешаванд.', analyzedDocumentPage: 'Саҳифаи таҳлил омода аст', analyzedDocumentPageCopy: 'Файл нигоҳ дошта ва интихоб шуд. Сохтори муфассали ин ҳуҷҷатро дар марҳилаи навбатӣ муайян мекунем.' });
 
+Object.assign(copy.RU, { commercialProposals: 'Коммерческие предложения', commercialProposalsDescription: 'КП по каждому объекту, проекту и разделу работ', proposalWorkspaceHint: 'Проект или смета превращаются в понятную структуру работ и материалов', noCommercialProposals: 'Коммерческих предложений пока нет', noCommercialProposalsCopy: 'Загрузите проект или смету в объект — здесь появится подготовка КП.', buildCommercialProposal: 'Сформировать КП', openCommercialProposal: 'Открыть КП', documentsTab: 'Документы', proposalAwaitingAnalysis: 'Файл загружен и готов к формированию КП', proposalReady: 'КП подготовлено', proposalSource: 'Исходный файл', proposalObjectTabHint: 'StructOS соберёт работы, объёмы и материалы для расчёта предложения', uploadProjectOrEstimate: 'Загрузить проект или смету' });
+Object.assign(copy.EN, { commercialProposals: 'Commercial proposals', commercialProposalsDescription: 'A proposal for every object, project and work section', proposalWorkspaceHint: 'A project or estimate becomes a clear structure of work and materials', noCommercialProposals: 'No commercial proposals yet', noCommercialProposalsCopy: 'Upload a project or estimate to an object and proposal preparation will appear here.', buildCommercialProposal: 'Create proposal', openCommercialProposal: 'Open proposal', documentsTab: 'Documents', proposalAwaitingAnalysis: 'The file is uploaded and ready for proposal generation', proposalReady: 'Proposal prepared', proposalSource: 'Source file', proposalObjectTabHint: 'StructOS organizes work, quantities and materials for proposal pricing', uploadProjectOrEstimate: 'Upload a project or estimate' });
+Object.assign(copy.KY, { commercialProposals: 'Коммерциялык сунуштар', commercialProposalsDescription: 'Ар бир объект, долбоор жана иш бөлүмү үчүн КП', proposalWorkspaceHint: 'Долбоор же смета иштердин жана материалдардын түшүнүктүү түзүмүнө айланат', noCommercialProposals: 'Коммерциялык сунуштар азырынча жок', noCommercialProposalsCopy: 'Объектке долбоор же смета жүктөңүз — бул жерде КП даярдоо пайда болот.', buildCommercialProposal: 'КП түзүү', openCommercialProposal: 'КПны ачуу', documentsTab: 'Документтер', proposalAwaitingAnalysis: 'Файл жүктөлдү жана КП түзүүгө даяр', proposalReady: 'КП даярдалды', proposalSource: 'Баштапкы файл', proposalObjectTabHint: 'StructOS сунушту эсептөө үчүн иштерди, көлөмдөрдү жана материалдарды чогултат', uploadProjectOrEstimate: 'Долбоор же смета жүктөө' });
+Object.assign(copy.TJ, { commercialProposals: 'Пешниҳодҳои тиҷоратӣ', commercialProposalsDescription: 'Пешниҳод барои ҳар объект, лоиҳа ва бахши кор', proposalWorkspaceHint: 'Лоиҳа ё смета ба сохтори фаҳмои корҳо ва мавод табдил меёбад', noCommercialProposals: 'Пешниҳоди тиҷоратӣ ҳоло нест', noCommercialProposalsCopy: 'Лоиҳа ё сметаро ба объект бор кунед — омодасозии пешниҳод дар ин ҷо пайдо мешавад.', buildCommercialProposal: 'Сохтани пешниҳод', openCommercialProposal: 'Кушодани пешниҳод', documentsTab: 'Ҳуҷҷатҳо', proposalAwaitingAnalysis: 'Файл бор шуд ва барои сохтани пешниҳод омода аст', proposalReady: 'Пешниҳод омода шуд', proposalSource: 'Файли аслӣ', proposalObjectTabHint: 'StructOS корҳо, ҳаҷмҳо ва маводро барои ҳисоб ҷамъ мекунад', uploadProjectOrEstimate: 'Бор кардани лоиҳа ё смета' });
+
 Object.assign(copy.RU, {
   editContractAmount: 'Изменить общую стоимость договора', contractAmountSaved: 'Общая стоимость договора изменена',
   sectionSourceDocuments: 'Проект, договор и смета', sectionSourceDocumentsHint: 'Исходные файлы сохраняются без редактора. Их можно открыть или добавить новой версией.',
@@ -832,6 +837,7 @@ const PROJECT_CARD_STATE_KEY = 'structos-project-card-state-v1';
 const ACTIVITY_KEY = 'structos-construction-activity-v1';
 const FIRST_ACTIVITY_KEY = 'structos-first-activity-v1';
 const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
+const AUTH_RETURN_KEY = 'structos-auth-return-v1';
 const WIDGET_STYLES_KEY = 'structos-space-widget-styles-v1';
 const TODO_KEY = 'structos-space-todo-v1';
 const CASHFLOW_KEY = 'structos-cashflow-v1';
@@ -860,6 +866,8 @@ let revisionAnalysisTimer;
 let activeRevisionComparisonId = null;
 let activeAnalysisDocument = { objectId: null, kind: 'project', versionId: null };
 let activeProjectAnalysisTab = 'proposal';
+let activeObjectDialogId = null;
+let activeObjectDialogTab = 'documents';
 const widgetColors = ['#0b63ce', '#00a9df', '#04a77b', '#41a447', '#d5a800', '#e87919', '#d64254', '#7957d5', '#c04ea3', '#44546a'];
 
 function loadFinance() {
@@ -2266,18 +2274,19 @@ async function initAuth() {
 }
 
 function setPanel(name) {
-  const next = ['home', 'projects', 'analysis-detail', 'space', 'objects', 'cashflow', 'profile', 'passport'].includes(name) ? name : 'home';
+  const next = ['home', 'projects', 'proposals', 'analysis-detail', 'space', 'objects', 'cashflow', 'profile', 'passport'].includes(name) ? name : 'home';
   $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
   if (next !== 'space') {
     $('[data-space-toolbar]').hidden = true;
     $('[data-space-settings]').setAttribute('aria-expanded', 'false');
   }
   $$('[data-panel]').forEach((panel) => { panel.hidden = panel.dataset.panel !== next; panel.classList.toggle('is-active', panel.dataset.panel === next); });
-  $$('[data-tab]').forEach((button) => { button.classList.toggle('is-active', button.dataset.tab === next || (next === 'analysis-detail' && button.dataset.tab === 'projects') || (next === 'passport' && button.dataset.tab === 'profile')); });
+  $$('[data-tab]').forEach((button) => { button.classList.toggle('is-active', button.dataset.tab === next || (['analysis-detail', 'proposals'].includes(next) && button.dataset.tab === 'projects') || (next === 'passport' && button.dataset.tab === 'profile')); });
   history.replaceState(null, '', `#${next}`);
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (next === 'space') requestAnimationFrame(renderWidgets);
   if (next === 'projects') renderMyProjects();
+  if (next === 'proposals') renderCommercialProposals();
   if (next === 'analysis-detail') renderAnalysisDetail();
   if (next === 'objects') renderObjects();
   if (next === 'cashflow') renderCashflow();
@@ -6010,13 +6019,14 @@ function importPendingTransfer() {
   try {
     const pending = JSON.parse(localStorage.getItem(PENDING_TRANSFER_KEY) || 'null');
     const objectName = String(pending?.objectName || '').trim();
+    const sectionName = String(pending?.sectionName || pending?.projectSection || '').trim();
     const files = Object.entries(pending?.files || {})
       .filter(([kind, file]) => uploadRules[kind] && file?.name)
-      .map(([kind, file]) => ({ kind, name: String(file.name), size: Number(file.size) || 0, type: String(file.type || ''), lastModified: Number(file.lastModified) || Date.now(), addedAt: file.addedAt || new Date().toISOString(), analysisPending: !pending.analysisComplete, analyzedAt: pending.analysisComplete ? (pending.updatedAt || new Date().toISOString()) : null }));
-    if (!objectName || !files.length) return;
+      .map(([kind, file]) => ({ kind, name: String(file.name), size: Number(file.size) || 0, type: String(file.type || ''), lastModified: Number(file.lastModified) || Date.now(), localFileId: String(file.localFileId || ''), addedAt: file.addedAt || new Date().toISOString(), analysisPending: !pending.analysisComplete, analyzedAt: pending.analysisComplete ? (pending.updatedAt || new Date().toISOString()) : null }));
+    if (!objectName || !files.length) return null;
     let object = objectRegistry.find((item) => item.name.trim().toLocaleLowerCase() === objectName.toLocaleLowerCase());
     if (!object) {
-      object = { id: createObjectId(), name: objectName, projectTitle: objectName, projectSection: objectName, documentTitles: normalizeProjectDocumentTitles(), contractNumber: '', status: pending.analysisComplete ? 'ready' : 'uploaded', createdAt: pending.updatedAt || new Date().toISOString(), updatedAt: pending.updatedAt || new Date().toISOString(), uploadedAt: pending.updatedAt || new Date().toISOString(), analyzedAt: pending.analysisComplete ? (pending.updatedAt || new Date().toISOString()) : null, startedAt: null, files: [] };
+      object = { id: createObjectId(), name: objectName, projectTitle: objectName, projectSection: sectionName || objectName, documentTitles: normalizeProjectDocumentTitles(), contractNumber: '', status: pending.analysisComplete ? 'ready' : 'uploaded', createdAt: pending.updatedAt || new Date().toISOString(), updatedAt: pending.updatedAt || new Date().toISOString(), uploadedAt: pending.updatedAt || new Date().toISOString(), analyzedAt: pending.analysisComplete ? (pending.updatedAt || new Date().toISOString()) : null, startedAt: null, files: [] };
       objectRegistry.unshift(object);
     } else if (pending.analysisComplete && object.status === 'uploaded') {
       object.status = 'ready';
@@ -6026,6 +6036,7 @@ function importPendingTransfer() {
       object.files = [...(object.files || []).filter((item) => item.kind !== file.kind), file];
       if (file.kind === 'contract' && !object.contractNumber) object.contractNumber = extractContractNumberFromName(file.name);
     });
+    if (sectionName) object.projectSection = sectionName;
     object.projectSection ||= object.projectTitle || object.name;
     object.documentTitles = normalizeProjectDocumentTitles(object.documentTitles);
     object.updatedAt = pending.updatedAt || new Date().toISOString();
@@ -6033,7 +6044,8 @@ function importPendingTransfer() {
     selectObjectForAnalysis(object);
     saveObjects();
     localStorage.removeItem(PENDING_TRANSFER_KEY);
-  } catch {}
+    return { objectId: object.id, intent: String(pending.intent || ''), source: String(pending.source || '') };
+  } catch { return null; }
 }
 
 function createObjectId() {
@@ -6593,8 +6605,33 @@ function renderMyProjects() {
   $$('[data-my-projects-empty]').forEach((empty) => { empty.hidden = projects.length > 0; });
 }
 
+function commercialProposalSource(object) {
+  const kind = objectFile(object, 'project') ? 'project' : objectFile(object, 'estimate') ? 'estimate' : null;
+  const file = kind ? objectFile(object, kind) : null;
+  const version = latestDocumentVersion(file);
+  return kind && file && version ? { kind, file, version } : null;
+}
+
+function commercialProposalCardMarkup(object) {
+  const source = commercialProposalSource(object);
+  if (!source) return '';
+  const ready = isDocumentVersionAnalyzed(source.version);
+  return `<article class="commercial-proposal-card${ready ? ' is-ready' : ' is-pending'}"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(projectSectionFor(object))}</small><h2>${escapeHtml(object.name)}</h2><p>${escapeHtml(tr('proposalSource'))}: ${escapeHtml(source.version.name)}</p></div><b>${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header><footer><span>${escapeHtml(formatObjectDate(source.version.addedAt))}</span><button class="${ready ? 'outline-button' : 'primary-button'}" type="button" data-open-commercial-proposal="${escapeHtml(object.id)}">${escapeHtml(tr(ready ? 'openCommercialProposal' : 'buildCommercialProposal'))} →</button></footer></article>`;
+}
+
+function renderCommercialProposals() {
+  const objects = myProjectObjects().filter((object) => commercialProposalSource(object));
+  const markup = objects.map(commercialProposalCardMarkup).join('');
+  $$('[data-commercial-proposals-list]').forEach((list) => {
+    list.innerHTML = markup;
+    $$('[data-open-commercial-proposal]', list).forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openCommercialProposal, 'proposal')));
+  });
+  $$('[data-commercial-proposals-count]').forEach((count) => { count.textContent = String(objects.length); });
+  $$('[data-commercial-proposals-empty]').forEach((empty) => { empty.hidden = objects.length > 0; });
+}
+
 const projectAnalysisTabs = [
-  { id: 'proposal', label: 'projectEstimate', icon: '₽' },
+  { id: 'proposal', label: 'commercialProposal', icon: '₽' },
   { id: 'sheets', label: 'projectBySheets', icon: '▤' },
   { id: 'systems', label: 'projectBySystems', icon: '⌘' },
   { id: 'materials', label: 'projectMaterials', icon: '◇' },
@@ -7221,12 +7258,29 @@ function renderObjects() {
   $$('[data-delete-ready]').forEach((button) => button.addEventListener('click', () => deleteReadyObject(button.dataset.deleteReady)));
   $$('[data-open-object]').forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openObject)));
   renderMyProjects();
+  renderCommercialProposals();
   renderHomeInbox();
 }
 
-function openObjectCard(id) {
+function objectCommercialProposalMarkup(object) {
+  const source = commercialProposalSource(object);
+  if (!source) {
+    return `<section class="object-proposal-empty"><span aria-hidden="true">₽</span><h2>${escapeHtml(tr('commercialProposal'))}</h2><p>${escapeHtml(tr('noCommercialProposalsCopy'))}</p><div><button class="primary-button" type="button" data-proposal-upload-kind="project">＋ ${escapeHtml(tr('uploadProject'))}</button><button class="outline-button" type="button" data-proposal-upload-kind="estimate">＋ ${escapeHtml(tr('uploadEstimate'))}</button></div></section>`;
+  }
+  const ready = isDocumentVersionAnalyzed(source.version);
+  const result = ready
+    ? `<section class="object-proposal-result"><div class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></div>${projectAnalysisTabContent('proposal', source.version, source.kind)}</section>`
+    : `<section class="object-proposal-pending"><span aria-hidden="true">⌛</span><div><strong>${escapeHtml(tr('proposalAwaitingAnalysis'))}</strong><p>${escapeHtml(tr('proposalObjectTabHint'))}</p></div><button class="primary-button" type="button" data-build-object-proposal data-object-id="${escapeHtml(object.id)}" data-kind="${escapeHtml(source.kind)}" data-version-id="${escapeHtml(source.version.id)}">${escapeHtml(tr('buildCommercialProposal'))} →</button></section>`;
+  return `<section class="object-proposal-workspace"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(projectSectionFor(object))}</small><h2>${escapeHtml(tr('commercialProposal'))}</h2><p>${escapeHtml(tr('proposalSource'))}: ${escapeHtml(source.version.name)}</p></div><b class="${ready ? 'is-ready' : 'is-pending'}">${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header>${result}</section>`;
+}
+
+function openObjectCard(id, requestedTab = null) {
   const object = objectRegistry.find((item) => item.id === id);
   if (!object) return;
+  const currentDialog = $('[data-dialog]');
+  if (requestedTab) activeObjectDialogTab = requestedTab === 'proposal' ? 'proposal' : 'documents';
+  else if (activeObjectDialogId !== id || !currentDialog?.open) activeObjectDialogTab = 'documents';
+  activeObjectDialogId = id;
   const documentChoices = Object.keys(uploadRules).map((kind) => myProjectDocumentGroupMarkup(object, kind)).join('');
   const lifecycleAction = ['active', 'completed'].includes(object.status)
     ? `<button class="outline-button object-lifecycle-button${object.status === 'active' ? ' is-danger' : ''}" type="button" data-toggle-core-object>${escapeHtml(tr(object.status === 'active' ? 'finishObject' : 'reopenObject'))}</button>`
@@ -7234,8 +7288,17 @@ function openObjectCard(id) {
       ? `<button class="outline-button object-start-project" type="button" data-start-core-object>${escapeHtml(tr('startObject'))}</button>`
       : '';
   const reportAction = object.files?.length ? `<button class="outline-button object-view-report" type="button" data-view-object-report>${escapeHtml(tr('viewReport'))}</button>` : '';
-  showDialog(escapeHtml(object.name), tr('chooseObjectDocument'), `<div class="object-document-chooser is-versioned my-project-documents">${documentChoices}</div><div class="object-card-actions">${reportAction}<button class="outline-button object-rename-button" type="button" data-rename-core-object>${escapeHtml(tr('rename'))}</button>${lifecycleAction}</div>`);
+  const documentsContent = `<div class="object-document-chooser is-versioned my-project-documents">${documentChoices}</div><div class="object-card-actions">${reportAction}<button class="outline-button object-rename-button" type="button" data-rename-core-object>${escapeHtml(tr('rename'))}</button>${lifecycleAction}</div>`;
+  const tabs = `<nav class="object-workspace-tabs" aria-label="${escapeHtml(tr('chooseObjectDocument'))}"><button class="${activeObjectDialogTab === 'documents' ? 'is-active' : ''}" type="button" data-object-workspace-tab="documents" aria-selected="${String(activeObjectDialogTab === 'documents')}"><span>▤</span><strong>${escapeHtml(tr('documentsTab'))}</strong></button><button class="${activeObjectDialogTab === 'proposal' ? 'is-active' : ''}" type="button" data-object-workspace-tab="proposal" aria-selected="${String(activeObjectDialogTab === 'proposal')}"><span>₽</span><strong>${escapeHtml(tr('commercialProposal'))}</strong></button></nav>`;
+  const activeContent = activeObjectDialogTab === 'proposal' ? objectCommercialProposalMarkup(object) : documentsContent;
+  showDialog(escapeHtml(object.name), tr(activeObjectDialogTab === 'proposal' ? 'proposalObjectTabHint' : 'chooseObjectDocument'), `${tabs}<div class="object-workspace-content">${activeContent}</div>`);
   const scope = $('[data-dialog-content]');
+  $$('[data-object-workspace-tab]', scope).forEach((button) => button.addEventListener('click', () => openObjectCard(object.id, button.dataset.objectWorkspaceTab)));
+  $$('[data-proposal-upload-kind]', scope).forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.proposalUploadKind, object.id, 'standard')));
+  $('[data-build-object-proposal]', scope)?.addEventListener('click', (event) => {
+    activeObjectDialogTab = 'proposal';
+    analyzeObjectDocument(event.currentTarget.dataset.objectId, event.currentTarget.dataset.kind, event.currentTarget.dataset.versionId, { dialog: true });
+  });
   $('[data-launch-project]', scope)?.addEventListener('click', () => openProjectLaunchDialog(object.id));
   $$('[data-my-project-rename-document]', scope).forEach((button) => button.addEventListener('click', () => renameProjectDocument(button.dataset.objectId, button.dataset.myProjectRenameDocument)));
   $$('[data-my-project-upload]', scope).forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.myProjectUpload, button.dataset.objectId, button.dataset.versionMode)));
@@ -7700,6 +7763,7 @@ function openView(view) {
   if (view === 'profile') { setPanel('profile'); return; }
   if (view === 'passport') { setPanel('passport'); return; }
   if (view === 'projects') { setPanel('projects'); return; }
+  if (view === 'proposals') { setPanel('proposals'); return; }
   if (view === 'objects') { setPanel('objects'); return; }
   if (view === 'invitations') { openInvitationsCenter(); return; }
   if (view === 'notifications') { openNotificationsCenter(); return; }
@@ -8218,7 +8282,7 @@ document.addEventListener('keydown', (event) => { if (event.key === 'Escape') cl
 window.addEventListener('resize', renderWidgets);
 window.addEventListener('pagehide', persistIdentityLocal);
 
-importPendingTransfer();
+const pendingTransferImport = importPendingTransfer();
 applyPassportRewards(passportCompletion());
 applyTheme(localStorage.getItem('structos-theme') === 'light' ? 'light' : 'dark');
 applyLanguage(language);
@@ -8234,9 +8298,10 @@ renderConnectionsSummary();
 offlineSync.initialize();
 recordActivity('cabinet', 'daily-session', { daily: true });
 document.addEventListener('click', trackConstructionActivity, true);
-setPanel(location.hash.slice(1) || 'home');
+setPanel(pendingTransferImport?.intent === 'commercial-proposal' ? 'proposals' : (location.hash.slice(1) || 'home'));
 restoreBottomMenuState();
 const cabinetRole = await initAuth();
 if (cabinetRole) playCabinetWelcome(cabinetRole);
+if (pendingTransferImport?.intent === 'commercial-proposal' || location.hash === '#proposals') localStorage.removeItem(AUTH_RETURN_KEY);
 
 if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));

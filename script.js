@@ -233,6 +233,32 @@ Object.assign(translations.TR, {
   ecoCta: 'Tüm özellikleri keşfet'
 });
 
+Object.assign(translations.RU, {
+  proposalLeadKicker: 'STRUCTOS КП · БЫСТРЕЕ КОНКУРЕНТОВ', proposalLeadTitle: 'Загрузите проект или смету — получите основу коммерческого предложения', proposalLeadCopy: 'StructOS соберёт объёмы, работы и материалы в единую структуру и поможет не пропустить сопутствующие позиции.',
+  proposalBenefitOne: 'Структура работ', proposalBenefitTwo: 'Объёмы и материалы', proposalBenefitThree: 'Основа для цены', proposalObjectLabel: 'Название объекта', proposalSectionLabel: 'Раздел работ', proposalObjectPlaceholder: 'Например, БЦ Северный', proposalSectionPlaceholder: 'Например, ЭОМ', proposalProjectKind: 'Проект', proposalEstimateKind: 'Смета',
+  proposalDropTitle: 'Загрузите файл', proposalDropCopy: 'Выберите на телефоне или перетащите сюда', proposalChooseFile: 'Выбрать', proposalProjectFormats: 'PDF, DWG, RVT, изображения · до 500 МБ', proposalEstimateFormats: 'XLSX, CSV, PDF, изображения · до 100 МБ', proposalBuild: 'СФОРМИРОВАТЬ КП', proposalRegistrationNote: 'После нажатия сохраним данные и перенесём вас на регистрацию. Затем КП откроется в личном кабинете.', proposalSectionRequired: 'Укажите раздел работ', proposalFileRequired: 'Загрузите проект или смету', proposalFileSaveError: 'Не удалось сохранить файл на устройстве. Освободите место и попробуйте снова.'
+});
+Object.assign(translations.EN, {
+  proposalLeadKicker: 'STRUCTOS PROPOSAL · MOVE FASTER', proposalLeadTitle: 'Upload a project or estimate and get a commercial proposal foundation', proposalLeadCopy: 'StructOS organizes quantities, work and materials and helps surface related items that are easy to miss.',
+  proposalBenefitOne: 'Work structure', proposalBenefitTwo: 'Quantities and materials', proposalBenefitThree: 'Pricing foundation', proposalObjectLabel: 'Object name', proposalSectionLabel: 'Work section', proposalObjectPlaceholder: 'For example, North Business Center', proposalSectionPlaceholder: 'For example, Electrical', proposalProjectKind: 'Project', proposalEstimateKind: 'Estimate',
+  proposalDropTitle: 'Upload a file', proposalDropCopy: 'Choose it on your phone or drag it here', proposalChooseFile: 'Choose', proposalProjectFormats: 'PDF, DWG, RVT, images · up to 500 MB', proposalEstimateFormats: 'XLSX, CSV, PDF, images · up to 100 MB', proposalBuild: 'CREATE PROPOSAL', proposalRegistrationNote: 'We will save the data and take you to registration. Your proposal will then open in the workspace.', proposalSectionRequired: 'Enter the work section', proposalFileRequired: 'Upload a project or estimate', proposalFileSaveError: 'The file could not be saved on this device. Free up storage and try again.'
+});
+Object.assign(translations.TJ, {
+  proposalLeadKicker: 'ПЕШНИҲОДИ STRUCTOS · ТЕЗТАР', proposalLeadTitle: 'Лоиҳа ё сметаро бор кунед — асоси пешниҳоди тиҷоратиро гиред', proposalLeadCopy: 'StructOS ҳаҷмҳо, корҳо ва маводро дар як сохтор ҷамъ карда, мавқеъҳои ҳамроҳро аз даст намедиҳад.',
+  proposalBenefitOne: 'Сохтори корҳо', proposalBenefitTwo: 'Ҳаҷм ва мавод', proposalBenefitThree: 'Асоси нарх', proposalObjectLabel: 'Номи объект', proposalSectionLabel: 'Бахши корҳо', proposalObjectPlaceholder: 'Масалан, Бизнес-маркази Шимолӣ', proposalSectionPlaceholder: 'Масалан, ЭОМ', proposalProjectKind: 'Лоиҳа', proposalEstimateKind: 'Смета',
+  proposalDropTitle: 'Файлро бор кунед', proposalDropCopy: 'Аз телефон интихоб ё ба ин ҷо кашед', proposalChooseFile: 'Интихоб', proposalProjectFormats: 'PDF, DWG, RVT, тасвирҳо · то 500 МБ', proposalEstimateFormats: 'XLSX, CSV, PDF, тасвирҳо · то 100 МБ', proposalBuild: 'СОХТАНИ ПЕШНИҲОД', proposalRegistrationNote: 'Маълумотро нигоҳ дошта, шуморо ба бақайдгирӣ мебарем. Баъд пешниҳод дар кабинети шахсӣ кушода мешавад.', proposalSectionRequired: 'Бахши корҳоро ворид кунед', proposalFileRequired: 'Лоиҳа ё сметаро бор кунед', proposalFileSaveError: 'Файл дар дастгоҳ нигоҳ дошта нашуд. Ҷойро холӣ карда, боз кӯшиш кунед.'
+});
+Object.assign(translations.KG, {
+  proposalLeadKicker: 'STRUCTOS КП · ТЕЗИРЭЭК', proposalLeadTitle: 'Долбоорду же сметаны жүктөп, коммерциялык сунуштун негизин алыңыз', proposalLeadCopy: 'StructOS көлөмдөрдү, иштерди жана материалдарды бир түзүмгө чогултуп, кошумча позицияларды өткөрүп жибербөөгө жардам берет.',
+  proposalBenefitOne: 'Иштердин түзүмү', proposalBenefitTwo: 'Көлөм жана материалдар', proposalBenefitThree: 'Баанын негизи', proposalObjectLabel: 'Объекттин аталышы', proposalSectionLabel: 'Иш бөлүмү', proposalObjectPlaceholder: 'Мисалы, Түндүк бизнес-борбору', proposalSectionPlaceholder: 'Мисалы, ЭОМ', proposalProjectKind: 'Долбоор', proposalEstimateKind: 'Смета',
+  proposalDropTitle: 'Файлды жүктөңүз', proposalDropCopy: 'Телефондон тандаңыз же бул жерге сүйрөңүз', proposalChooseFile: 'Тандоо', proposalProjectFormats: 'PDF, DWG, RVT, сүрөттөр · 500 МБ чейин', proposalEstimateFormats: 'XLSX, CSV, PDF, сүрөттөр · 100 МБ чейин', proposalBuild: 'КП ТҮЗҮҮ', proposalRegistrationNote: 'Маалыматты сактап, сизди катталууга өткөрөбүз. Андан кийин сунуш жеке кабинетте ачылат.', proposalSectionRequired: 'Иш бөлүмүн жазыңыз', proposalFileRequired: 'Долбоорду же сметаны жүктөңүз', proposalFileSaveError: 'Файл түзмөккө сакталган жок. Орун бошотуп, кайра аракет кылыңыз.'
+});
+Object.assign(translations.TR, {
+  proposalLeadKicker: 'STRUCTOS TEKLİF · DAHA HIZLI', proposalLeadTitle: 'Proje veya keşif yükleyin, ticari teklif temelini alın', proposalLeadCopy: 'StructOS miktarları, işleri ve malzemeleri tek yapıda toplar ve ilişkili kalemleri kaçırmamanıza yardımcı olur.',
+  proposalBenefitOne: 'İş yapısı', proposalBenefitTwo: 'Miktarlar ve malzemeler', proposalBenefitThree: 'Fiyat temeli', proposalObjectLabel: 'Proje adı', proposalSectionLabel: 'İş bölümü', proposalObjectPlaceholder: 'Örneğin, Kuzey İş Merkezi', proposalSectionPlaceholder: 'Örneğin, Elektrik', proposalProjectKind: 'Proje', proposalEstimateKind: 'Keşif',
+  proposalDropTitle: 'Dosya yükleyin', proposalDropCopy: 'Telefondan seçin veya buraya sürükleyin', proposalChooseFile: 'Seç', proposalProjectFormats: 'PDF, DWG, RVT, görseller · 500 MB’a kadar', proposalEstimateFormats: 'XLSX, CSV, PDF, görseller · 100 MB’a kadar', proposalBuild: 'TEKLİF OLUŞTUR', proposalRegistrationNote: 'Verileri kaydedip sizi kayda yönlendireceğiz. Ardından teklif çalışma alanında açılacak.', proposalSectionRequired: 'İş bölümünü girin', proposalFileRequired: 'Proje veya keşif yükleyin', proposalFileSaveError: 'Dosya bu cihaza kaydedilemedi. Alan açıp tekrar deneyin.'
+});
+
 const themeButton = $('.theme-switch');
 const themeMeta = $('meta[name="theme-color"]');
 const languageButton = $('.language-button');
@@ -248,6 +274,17 @@ const modalInput = $('#modal-file-input');
 const objectNameInput = $('#object-name');
 const selectedFiles = { project: null, contract: null, estimate: null };
 const PENDING_TRANSFER_KEY = 'structos-pending-transfer-v1';
+const AUTH_RETURN_KEY = 'structos-auth-return-v1';
+const DEMO_SESSION_KEY = 'structos-demo-session';
+const TRANSFER_FILES_DB = 'structos-transfer-files-v1';
+const TRANSFER_FILES_STORE = 'pending-files';
+const proposalForm = $('[data-proposal-lead]');
+const proposalObjectInput = $('[data-proposal-object]');
+const proposalSectionInput = $('[data-proposal-section]');
+const proposalFileInput = $('[data-proposal-file]');
+const proposalDropzone = $('[data-proposal-dropzone]');
+let proposalLeadKind = 'project';
+let proposalLeadFile = null;
 let pendingFile = null;
 const acceptMap = {
   project: '.pdf,.dwg,.rvt,.jpg,.jpeg,.png,.webp,.heic,image/*',
@@ -276,6 +313,9 @@ function applyLanguage(language) {
     const value = t(element.dataset.i18n);
     if (value) element.innerHTML = value;
   });
+  if (proposalObjectInput) proposalObjectInput.placeholder = t('proposalObjectPlaceholder');
+  if (proposalSectionInput) proposalSectionInput.placeholder = t('proposalSectionPlaceholder');
+  renderProposalLead();
   renderUploadCards();
   renderSlots();
   syncAnalysisAccess();
@@ -317,6 +357,96 @@ function transferFileMetadata(file) {
     lastModified: Number(file?.lastModified) || Date.now(),
     addedAt: new Date().toISOString()
   };
+}
+
+function storePendingTransferFile(file, id) {
+  return new Promise((resolve, reject) => {
+    if (!globalThis.indexedDB) { reject(new Error('IndexedDB is unavailable')); return; }
+    const request = indexedDB.open(TRANSFER_FILES_DB, 1);
+    request.onupgradeneeded = () => {
+      const database = request.result;
+      if (!database.objectStoreNames.contains(TRANSFER_FILES_STORE)) database.createObjectStore(TRANSFER_FILES_STORE, { keyPath: 'id' });
+    };
+    request.onerror = () => reject(request.error || new Error('Could not open local file storage'));
+    request.onsuccess = () => {
+      const database = request.result;
+      const transaction = database.transaction(TRANSFER_FILES_STORE, 'readwrite');
+      transaction.objectStore(TRANSFER_FILES_STORE).put({ id, file, name: file.name, type: file.type, size: file.size, savedAt: new Date().toISOString() });
+      transaction.oncomplete = () => { database.close(); resolve(id); };
+      transaction.onerror = () => { database.close(); reject(transaction.error || new Error('Could not save file locally')); };
+      transaction.onabort = transaction.onerror;
+    };
+  });
+}
+
+function proposalAccept(kind = proposalLeadKind) {
+  return kind === 'estimate'
+    ? '.xlsx,.xls,.csv,.pdf,.jpg,.jpeg,.png,.webp,.heic,image/*'
+    : '.pdf,.dwg,.rvt,.jpg,.jpeg,.png,.webp,.heic,image/*';
+}
+
+function proposalSizeLimit(kind = proposalLeadKind) {
+  return kind === 'estimate' ? 100 : 500;
+}
+
+function renderProposalLead() {
+  if (!proposalForm) return;
+  $$('[data-proposal-kind]', proposalForm).forEach((button) => button.classList.toggle('is-active', button.dataset.proposalKind === proposalLeadKind));
+  proposalFileInput.accept = proposalAccept();
+  $('[data-proposal-formats]', proposalForm).textContent = t(proposalLeadKind === 'estimate' ? 'proposalEstimateFormats' : 'proposalProjectFormats');
+  const selected = $('[data-proposal-selected]', proposalForm);
+  const buildButton = $('[data-proposal-build]', proposalForm);
+  selected.hidden = !proposalLeadFile;
+  proposalDropzone.hidden = Boolean(proposalLeadFile);
+  buildButton.hidden = !proposalLeadFile;
+  buildButton.disabled = !(proposalLeadFile && proposalObjectInput.value.trim() && proposalSectionInput.value.trim());
+  if (proposalLeadFile) {
+    $('[data-proposal-file-name]', selected).textContent = proposalLeadFile.name;
+    $('[data-proposal-file-meta]', selected).textContent = `${proposalLeadFile.type || 'Файл'} · ${fileSize(proposalLeadFile)}`;
+  }
+}
+
+function selectProposalLeadFile(file) {
+  if (!file) return;
+  const limitMb = proposalSizeLimit();
+  if (file.size > limitMb * 1024 * 1024) {
+    showToast(`Файл превышает ${limitMb} МБ`);
+    return;
+  }
+  proposalLeadFile = file;
+  renderProposalLead();
+  showToast(`Файл «${file.name}» выбран`);
+}
+
+async function persistCommercialProposalTransfer() {
+  const objectName = proposalObjectInput.value.trim();
+  const sectionName = proposalSectionInput.value.trim();
+  if (!objectName || !sectionName || !proposalLeadFile) return false;
+  const updatedAt = new Date().toISOString();
+  const localFileId = globalThis.crypto?.randomUUID?.() || `proposal-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+  try { await storePendingTransferFile(proposalLeadFile, localFileId); }
+  catch { showToast(t('proposalFileSaveError')); return false; }
+  localStorage.setItem(PENDING_TRANSFER_KEY, JSON.stringify({
+    objectName,
+    sectionName,
+    projectSection: sectionName,
+    files: { [proposalLeadKind]: { ...transferFileMetadata(proposalLeadFile), localFileId } },
+    analysisComplete: false,
+    intent: 'commercial-proposal',
+    source: 'landing-proposal',
+    updatedAt
+  }));
+  localStorage.setItem(AUTH_RETURN_KEY, JSON.stringify({ intent: 'commercial-proposal', destination: 'dashboard.html#proposals', updatedAt }));
+  return true;
+}
+
+async function submitCommercialProposalLead() {
+  if (!proposalLeadFile) { showToast(t('proposalFileRequired')); proposalDropzone.focus(); return; }
+  if (!proposalObjectInput.value.trim()) { showToast(t('objectRequired')); proposalObjectInput.focus(); return; }
+  if (!proposalSectionInput.value.trim()) { showToast(t('proposalSectionRequired')); proposalSectionInput.focus(); return; }
+  if (!await persistCommercialProposalTransfer()) return;
+  const hasDemoSession = Boolean(localStorage.getItem(DEMO_SESSION_KEY));
+  window.location.href = hasDemoSession ? 'dashboard.html#proposals' : 'login.html#register';
 }
 
 function persistDashboardTransfer() {
@@ -575,6 +705,22 @@ $$('.ecosystem-module').forEach((moduleButton) => {
   });
 });
 $$('.upload-card').forEach((card) => { card.addEventListener('click', () => openUpload(card.dataset.kind)); card.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') openUpload(card.dataset.kind); }); });
+$$('[data-proposal-kind]', proposalForm).forEach((button) => button.addEventListener('click', () => {
+  if (proposalLeadKind === button.dataset.proposalKind) return;
+  proposalLeadKind = button.dataset.proposalKind;
+  proposalLeadFile = null;
+  proposalFileInput.value = '';
+  renderProposalLead();
+}));
+proposalFileInput.addEventListener('change', () => selectProposalLeadFile(proposalFileInput.files?.[0]));
+proposalObjectInput.addEventListener('input', renderProposalLead);
+proposalSectionInput.addEventListener('input', renderProposalLead);
+proposalDropzone.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); proposalFileInput.click(); } });
+['dragenter', 'dragover'].forEach((type) => proposalDropzone.addEventListener(type, (event) => { event.preventDefault(); proposalDropzone.classList.add('is-dragging'); }));
+['dragleave', 'drop'].forEach((type) => proposalDropzone.addEventListener(type, (event) => { event.preventDefault(); proposalDropzone.classList.remove('is-dragging'); }));
+proposalDropzone.addEventListener('drop', (event) => selectProposalLeadFile(event.dataTransfer.files?.[0]));
+$('[data-proposal-remove]', proposalForm).addEventListener('click', () => { proposalLeadFile = null; proposalFileInput.value = ''; renderProposalLead(); });
+proposalForm.addEventListener('submit', async (event) => { event.preventDefault(); await submitCommercialProposalLead(); });
 modalInput.addEventListener('change', () => setFile(modalInput.files?.[0]));
 objectNameInput.addEventListener('input', () => { setObjectNameError(false); updateUploadButton(); if (Object.values(selectedFiles).some(Boolean)) persistDashboardTransfer(); });
 objectNameInput.addEventListener('blur', () => { if (!objectNameInput.value.trim()) setObjectNameError(true); });

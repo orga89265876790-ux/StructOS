@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="styles.css?v=12" />
+    <link rel="stylesheet" href="styles.css?v=13" />
   </head>
   <body>
     <main class="site-shell" id="app-shell">
@@ -87,6 +87,43 @@
           <article class="stat-card"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 13h14l4 5h20v24H5z"/><path d="M5 18V9h13l4 4h10"/></svg></span><div><strong>1500+</strong><p data-i18n="projectsAnalyzed">проектов<br />проанализировано</p></div></article>
           <article class="stat-card"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M18 13h9c8 0 8 12 0 12h-9M18 19h12M18 25v12M18 31h11"/></svg></span><div><strong>2,7 млрд ₽</strong><p data-i18n="saved">сэкономлено<br />нашим клиентам</p></div></article>
           <article class="stat-card"><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="21" cy="27" r="16"/><circle cx="21" cy="27" r="9"/><circle cx="21" cy="27" r="3"/><path d="m27 21 13-13M32 8h8v8"/></svg></span><div><strong>98%</strong><p data-i18n="accuracy">точность<br />анализа</p></div></article>
+        </section>
+
+        <section class="proposal-lead" id="commercial-offer-start" aria-labelledby="proposal-lead-title">
+          <span class="proposal-lead-scan" aria-hidden="true"></span>
+          <span class="proposal-lead-orbit orbit-one" aria-hidden="true"></span>
+          <span class="proposal-lead-orbit orbit-two" aria-hidden="true"></span>
+          <header class="proposal-lead-head">
+            <span class="proposal-lead-kicker" data-i18n="proposalLeadKicker">STRUCTOS КП · БЫСТРЕЕ КОНКУРЕНТОВ</span>
+            <h2 id="proposal-lead-title" data-i18n="proposalLeadTitle">Загрузите проект или смету — получите основу коммерческого предложения</h2>
+            <p data-i18n="proposalLeadCopy">StructOS соберёт объёмы, работы и материалы в единую структуру и поможет не пропустить сопутствующие позиции.</p>
+          </header>
+          <div class="proposal-lead-benefits" aria-label="Результат формирования КП">
+            <span><b>01</b><small data-i18n="proposalBenefitOne">Структура работ</small></span>
+            <span><b>02</b><small data-i18n="proposalBenefitTwo">Объёмы и материалы</small></span>
+            <span><b>03</b><small data-i18n="proposalBenefitThree">Основа для цены</small></span>
+          </div>
+          <form class="proposal-lead-form" data-proposal-lead novalidate>
+            <div class="proposal-lead-fields">
+              <label><span data-i18n="proposalObjectLabel">Название объекта</span><input type="text" maxlength="100" autocomplete="organization" data-proposal-object placeholder="Например, БЦ Северный" required /></label>
+              <label><span data-i18n="proposalSectionLabel">Раздел работ</span><input type="text" maxlength="140" data-proposal-section placeholder="Например, ЭОМ" required /></label>
+            </div>
+            <div class="proposal-kind-switch" role="group" aria-label="Тип загружаемого документа">
+              <button class="is-active" type="button" data-proposal-kind="project"><span>▤</span><strong data-i18n="proposalProjectKind">Проект</strong></button>
+              <button type="button" data-proposal-kind="estimate"><span>₽</span><strong data-i18n="proposalEstimateKind">Смета</strong></button>
+            </div>
+            <label class="proposal-dropzone" data-proposal-dropzone tabindex="0">
+              <input type="file" data-proposal-file accept=".pdf,.dwg,.rvt,.xlsx,.xls,.csv,.jpg,.jpeg,.png,.webp,.heic,image/*" />
+              <span class="proposal-upload-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 22V6M10 12l6-6 6 6M7 21v5h18v-5"/></svg></span>
+              <span><strong data-i18n="proposalDropTitle">Загрузите файл</strong><small data-i18n="proposalDropCopy">Выберите на телефоне или перетащите сюда</small><em data-proposal-formats>PDF, DWG, RVT, изображения · до 500 МБ</em></span>
+              <b data-i18n="proposalChooseFile">Выбрать</b>
+            </label>
+            <div class="proposal-selected-file" data-proposal-selected hidden>
+              <span aria-hidden="true">✓</span><div><strong data-proposal-file-name></strong><small data-proposal-file-meta></small></div><button type="button" data-proposal-remove aria-label="Удалить файл">×</button>
+            </div>
+            <button class="proposal-build-button" type="submit" data-proposal-build hidden disabled><span data-i18n="proposalBuild">СФОРМИРОВАТЬ КП</span><i aria-hidden="true">→</i></button>
+            <p class="proposal-registration-note" data-i18n="proposalRegistrationNote">После нажатия сохраним данные и перенесём вас на регистрацию. Затем КП откроется в личном кабинете.</p>
+          </form>
         </section>
 
         <section class="ecosystem" aria-labelledby="ecosystem-title">
@@ -166,6 +203,6 @@
     <dialog class="app-dialog install-dialog" id="install-dialog">
       <div class="dialog-card install-card"><header><div><span class="dialog-eyebrow">PWA</span><h2 data-i18n="installTitle">Установить StructOS</h2></div><button class="dialog-close install-close" type="button" aria-label="Закрыть">×</button></header><div class="install-hero"><img src="assets/structos-mark.jpg" alt="" /><div><strong>StructOS</strong><span data-i18n="appLike">Открывается как обычное приложение</span></div></div><div class="browser-tabs" role="tablist"><button type="button" data-browser="safari">Safari</button><button type="button" data-browser="chrome">Google</button><button type="button" data-browser="yandex">Яндекс</button></div><div class="browser-instruction" data-panel="safari"><ol><li data-i18n="safariStep1">Нажмите «Поделиться» в Safari.</li><li data-i18n="safariStep2">Выберите «На экран Домой».</li><li data-i18n="safariStep3">Включите «Открывать как веб-приложение».</li><li data-i18n="safariStep4">Нажмите «Добавить».</li></ol></div><div class="browser-instruction" data-panel="chrome" hidden><ol><li data-i18n="chromeStep1">Откройте меню ⋮.</li><li data-i18n="chromeStep2">Выберите «Установить приложение» или «Добавить на главный экран».</li><li data-i18n="chromeStep3">Подтвердите установку.</li></ol></div><div class="browser-instruction" data-panel="yandex" hidden><ol><li data-i18n="yandexStep1">Откройте меню Яндекс Браузера.</li><li data-i18n="yandexStep2">Выберите «Добавить ярлык».</li><li data-i18n="yandexStep3">Нажмите «Добавить».</li></ol><small data-i18n="yandexNote">Ярлык будет открывать StructOS через Яндекс Браузер.</small></div><p class="install-device-note"></p><button class="native-install-button" type="button" hidden data-i18n="installApp">Установить приложение</button></div>
     </dialog>
-    <script type="module" src="script.js?v=12"></script>
+    <script type="module" src="script.js?v=13"></script>
   </body>
 </html>

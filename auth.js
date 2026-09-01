@@ -33,6 +33,15 @@ let authClient = null;
 const DEMO_SESSION_KEY = 'structos-demo-session';
 const DEMO_EMAIL = 'str@str.com';
 const DEMO_PASSWORD = 'str';
+const AUTH_RETURN_KEY = 'structos-auth-return-v1';
+
+function authenticatedDestination() {
+  try {
+    const pending = JSON.parse(localStorage.getItem(AUTH_RETURN_KEY) || 'null');
+    if (pending?.intent === 'commercial-proposal') return 'dashboard.html#proposals';
+  } catch {}
+  return 'dashboard.html';
+}
 
 async function initAuthClient() {
   if (!supabaseUrl || !supabaseKey) return;
@@ -175,7 +184,7 @@ async function submitLogin(form) {
   if (email === DEMO_EMAIL && password === DEMO_PASSWORD) {
     localStorage.setItem(DEMO_SESSION_KEY, JSON.stringify({ email: DEMO_EMAIL, name: 'StructOS', role: 'Пользователь', id: '4 820 197' }));
     setFeedback(tr('loginSuccess'), 'success');
-    setTimeout(() => window.location.assign('dashboard.html'), 350);
+    setTimeout(() => window.location.assign(authenticatedDestination()), 350);
     return;
   }
   if (!validate(form)) return;
@@ -183,7 +192,7 @@ async function submitLogin(form) {
   setBusy(form, true);
   const { error } = await authClient.auth.signInWithPassword({ email, password });
   setBusy(form, false);
-  if (error) setFeedback(friendlyError(error), 'error'); else { setFeedback(tr('loginSuccess'), 'success'); setTimeout(() => window.location.assign('dashboard.html'), 450); }
+  if (error) setFeedback(friendlyError(error), 'error'); else { setFeedback(tr('loginSuccess'), 'success'); setTimeout(() => window.location.assign(authenticatedDestination()), 450); }
 }
 
 async function submitRegister(form) {
@@ -200,7 +209,7 @@ async function submitRegister(form) {
     options: { emailRedirectTo: redirect, data: { structos_id: structosId, full_name: form.elements.fullName.value.trim(), phone: form.elements.phone.value.trim(), city: form.elements.city.value.trim(), primary_role: form.elements.role.value, primary_profession: form.elements.professionDisplay.dataset.profession } }
   });
   setBusy(form, false);
-  if (error) setFeedback(friendlyError(error), 'error'); else { setFeedback(tr('registerSuccess'), 'success'); form.reset(); updateStrength(''); if (data?.session) setTimeout(() => window.location.assign('dashboard.html'), 450); }
+  if (error) setFeedback(friendlyError(error), 'error'); else { setFeedback(tr('registerSuccess'), 'success'); form.reset(); updateStrength(''); if (data?.session) setTimeout(() => window.location.assign(authenticatedDestination()), 450); }
 }
 
 async function submitRecovery(form) {
