@@ -249,7 +249,25 @@
         </section>
 
         <section class="tab-panel projects-panel" data-panel="projects" aria-label="Мои проекты" hidden>
-          <div class="page-title my-projects-page-title"><div><span class="eyebrow">STRUCTOS PROJECTS</span><h1 data-i18n="myProjects">Проекты</h1><p data-i18n="myProjectsDescription">Объекты, проекты, договоры и сметы в одной структуре</p></div><div class="my-project-upload-actions"><button class="outline-button" type="button" data-open-panel="proposals">₽ <span data-i18n="commercialProposals">Коммерческие предложения</span></button><button class="primary-button create-project-object-button" type="button" data-create-project-object>＋ <span data-i18n="createObject">Создать объект</span></button></div></div>
+          <div class="page-title my-projects-page-title"><div><span class="eyebrow">STRUCTOS PROJECTS</span><h1 data-i18n="myProjects">Проекты</h1><p data-i18n="myProjectsDescription">Объекты, проекты, договоры и сметы в одной структуре</p></div><div class="my-project-upload-actions"><button class="primary-button create-project-object-button" type="button" data-create-project-object>＋ <span data-i18n="createObject">Создать объект</span></button></div></div>
+          <section class="projects-entry-menu" aria-labelledby="projects-entry-title">
+            <header class="projects-entry-heading"><span class="eyebrow">STRUCTOS WORKFLOW</span><h2 id="projects-entry-title" data-i18n="allYourProjectTools">Все ваши:</h2></header>
+            <div class="projects-entry-primary">
+              <button class="project-entry-button is-proposal" type="button" data-open-panel="proposals"><span aria-hidden="true">₽</span><strong data-i18n="commercialProposals">Коммерческие предложения</strong><i aria-hidden="true">→</i></button>
+              <button class="project-entry-button is-analysis" type="button" data-project-menu-placeholder="detailedProjectAnalysis"><span aria-hidden="true">▤</span><strong data-i18n="detailedProjectAnalysis">Детально разобрать проект</strong><i aria-hidden="true">→</i></button>
+              <button class="project-entry-button is-contract" type="button" data-project-menu-placeholder="contractsUnderReview"><span aria-hidden="true">≡</span><strong data-i18n="contractsUnderReview">Договоры на рассмотрении</strong><i aria-hidden="true">→</i></button>
+              <button class="project-entry-button is-estimate" type="button" data-project-menu-placeholder="estimatesUnderReview"><span aria-hidden="true">Σ</span><strong data-i18n="estimatesUnderReview">Сметы на рассмотрении</strong><i aria-hidden="true">→</i></button>
+            </div>
+            <button class="project-turnkey-button" type="button" data-project-menu-placeholder="turnkeyObject"><span aria-hidden="true">⌂</span><strong data-i18n="turnkeyObject">Сдать объект под ключ</strong><i aria-hidden="true">→</i></button>
+            <div class="project-mailings">
+              <h3 data-i18n="projectMailings">Рассылки предложений</h3>
+              <div>
+                <button type="button" data-project-menu-placeholder="mailWorkOffers"><span aria-hidden="true">人</span><strong data-i18n="mailWorkOffers">Рассылка предложений на работу</strong><i aria-hidden="true">→</i></button>
+                <button type="button" data-project-menu-placeholder="mailContractOffers"><span aria-hidden="true">▣</span><strong data-i18n="mailContractOffers">Рассылка предложений взять подряд</strong><i aria-hidden="true">→</i></button>
+                <button type="button" data-project-menu-placeholder="mailSupplyOffers"><span aria-hidden="true">◇</span><strong data-i18n="mailSupplyOffers">Рассылка предложений на поставку</strong><i aria-hidden="true">→</i></button>
+              </div>
+            </div>
+          </section>
           <section class="my-projects-summary"><span>▰</span><div><small data-i18n="projectObjects">Объектов</small><strong data-my-projects-count>0</strong></div><p data-i18n="projectDocuments">Проект · Договор · Смета</p></section>
           <div class="my-projects-list" data-my-projects-list></div>
           <div class="empty-state" data-my-projects-empty><div class="empty-building" aria-hidden="true"><span></span><span></span><span></span></div><h2 data-i18n="noMyProjects">Объектов пока нет</h2><p data-i18n="noMyProjectsCopy">Создайте объект, дайте проекту понятное название и загрузите нужные документы.</p><div class="my-project-upload-actions is-empty"><button class="primary-button create-project-object-button" type="button" data-create-project-object>＋ <span data-i18n="createObject">Создать объект</span></button></div></div>
@@ -386,6 +404,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=51"></script>
+    <script type="module" src="dashboard.js?v=52"></script>
   </body>
 </html>
