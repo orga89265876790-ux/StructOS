@@ -1261,6 +1261,19 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .proposal-workspace-summary small { color: #45dca8; font-size: 7px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
 .proposal-workspace-summary strong { color: var(--text); font-size: 25px; line-height: 1; }
 .proposal-workspace-summary > p { position: relative; z-index: 1; justify-self: end; max-width: 390px; margin: 0; color: var(--muted); font-size: 9px; line-height: 1.45; text-align: right; }
+.proposal-create-actions { margin: 13px 0 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+.workflow-action-button { min-width: 0; min-height: 82px; padding: 12px 14px; display: grid; grid-template-columns: 42px minmax(0,1fr) auto; align-items: center; gap: 11px; color: var(--text); text-align: left; border: 1px solid var(--line); border-radius: 15px; background: linear-gradient(145deg,var(--surface),var(--surface-soft)); box-shadow: 0 10px 25px rgba(5,70,132,.1); cursor: pointer; transition: transform .18s ease,border-color .18s ease,box-shadow .18s ease; }
+.workflow-action-button:hover,.workflow-action-button:focus-visible { transform: translateY(-2px); border-color: rgba(52,198,255,.58); box-shadow: 0 14px 30px rgba(7,105,185,.16),0 0 22px rgba(47,189,255,.09); outline: 0; }
+.workflow-action-button > span { width: 42px; height: 42px; display: grid; place-items: center; color: var(--cyan); border: 1px solid var(--line-strong); border-radius: 12px; background: rgba(12,118,226,.1); font-size: 19px; font-weight: 850; }
+.workflow-action-button.is-project { border-top: 2px solid #36b9ff; }.workflow-action-button.is-estimate { border-top: 2px solid #e7af4f; }.workflow-action-button.is-estimate > span { color: #f0bc63; border-color: rgba(231,175,79,.4); background: rgba(196,129,23,.09); }
+.workflow-action-button > strong { font-size: 10px; line-height: 1.35; }.workflow-action-button > i { color: var(--cyan); font-size: 20px; font-style: normal; }
+.workflow-page-title { align-items: center; }.workflow-page-title > button { min-height: 42px; white-space: nowrap; }
+.workflow-action-stage { position: relative; min-height: 285px; margin-top: 13px; padding: 28px; display: grid; place-items: center; align-content: center; gap: 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg,var(--surface),color-mix(in srgb,var(--surface-soft) 94%,#087bde)); box-shadow: var(--shadow); }
+.workflow-action-stage::after { position: absolute; right: -70px; top: -90px; width: 230px; height: 230px; content: ''; border: 1px solid rgba(50,184,255,.14); border-radius: 50%; box-shadow: 0 0 0 35px rgba(41,164,242,.03),0 0 0 70px rgba(35,147,224,.02); pointer-events: none; }
+.workflow-action-stage > span { position: relative; z-index: 1; width: 64px; height: 64px; display: grid; place-items: center; color: var(--cyan); border: 1px solid var(--line-strong); border-radius: 18px; background: rgba(12,118,226,.11); box-shadow: 0 0 26px rgba(42,180,255,.13); font-size: 28px; font-weight: 850; }
+.workflow-action-stage > button { position: relative; z-index: 1; width: min(100%,420px); min-height: 52px; font-size: 10px; }
+.workflow-action-stage.is-contract { border-color: rgba(141,124,244,.35); }.workflow-action-stage.is-contract > span { color: #b7aaff; border-color: rgba(141,124,244,.4); background: rgba(108,83,213,.1); }
+.workflow-action-stage.is-estimate { border-color: rgba(231,175,79,.35); }.workflow-action-stage.is-estimate > span { color: #f0bc63; border-color: rgba(231,175,79,.4); background: rgba(196,129,23,.09); }
 .commercial-proposals-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
 .commercial-proposal-card { min-width: 0; overflow: hidden; border: 1px solid rgba(44,178,255,.34); border-radius: 16px; background: linear-gradient(145deg,var(--surface),color-mix(in srgb,var(--surface-soft) 95%,#087bdc)); box-shadow: var(--shadow); transition: transform .18s ease,border-color .18s ease,box-shadow .18s ease; }
 .commercial-proposal-card:hover { transform: translateY(-2px); border-color: rgba(59,201,255,.62); box-shadow: var(--shadow),0 0 25px rgba(34,170,255,.12); }
@@ -2097,8 +2110,11 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 }
 
 @media (max-width:720px) {
-  .proposals-page-title { align-items: stretch; flex-direction: column; }
-  .proposals-page-title > button { width: 100%; }
+  .proposals-page-title,.workflow-page-title { align-items: stretch; flex-direction: column; }
+  .proposals-page-title > button,.workflow-page-title > button { width: 100%; }
+  .proposal-create-actions { grid-template-columns: 1fr; }
+  .workflow-action-button { min-height: 72px; }
+  .workflow-action-stage { min-height: 230px; padding: 20px 13px; }
   .proposal-workspace-summary { grid-template-columns: 44px auto; min-height: 106px; }
   .proposal-workspace-summary > span { width: 44px; height: 44px; }
   .proposal-workspace-summary > p { grid-column: 1/-1; justify-self: start; max-width: none; text-align: left; }
