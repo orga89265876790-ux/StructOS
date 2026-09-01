@@ -1,6 +1,7 @@
 import { supabaseConfig } from './auth-config.js';
 import { professions } from './professions.js';
 import { metroDirectory } from './metro-directory.js';
+import { createOfflineSyncEngine } from './offline-sync.js';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -741,6 +742,55 @@ Object.assign(copy.TJ, {
   cabinetWelcomeAggregatorOne: 'Дастаҳоро тезтар ҷамъ кунед.', cabinetWelcomeAggregatorTwo: 'Одамонро дақиқтар идора кунед.'
 });
 
+Object.assign(copy.RU, {
+  syncTitle: 'СИНХРОНИЗАЦИЯ', syncSubtitle: 'Синхронизируйте данные, записав их на телефон, для работы офлайн без интернета.',
+  syncInternetAvailable: 'ИНТЕРНЕТ ЕСТЬ', syncOnlineFlow: 'Телефон ↔ StructOS Cloud', syncInternetLost: 'ИНТЕРНЕТ ПРОПАЛ', syncOfflineFlow: 'Телефон продолжает работать', syncInternetRestored: 'ИНТЕРНЕТ ПОЯВИЛСЯ', syncRestoredFlow: 'Автоматическая синхронизация',
+  syncDialogTitle: 'Что синхронизировать?', syncDialogHint: 'Выберите данные, которые нужно сохранить на телефоне и сверять с StructOS Cloud.', syncChooseData: 'Данные для синхронизации',
+  syncCategoryProjects: 'Объекты и проекты', syncCategoryProjectsHint: 'Карточки объектов, проекты и порядок', syncCategoryStaff: 'Сотрудники и табели', syncCategoryStaffHint: 'Люди, смены, переработки и выплаты', syncCategoryFinance: 'Финансы', syncCategoryFinanceHint: 'Доходы, расходы, договоры и расчёты', syncCategoryWarehouse: 'Склад и материалы', syncCategoryWarehouseHint: 'Материалы, оборудование и остатки', syncCategoryDocuments: 'Документы и отчёты', syncCategoryDocumentsHint: 'Документы, акты, отчёты и локальные файлы', syncCategoryProfile: 'Профиль и настройки', syncCategoryProfileHint: 'Паспорт, связи и рабочее пространство',
+  syncSelected: 'Синхронизировать выбранное', syncAll: 'Синхронизировать всё', syncSelectOne: 'Выберите хотя бы один раздел.',
+  syncServerOnlyNote: 'Только при наличии интернета: новый ИИ-анализ, внешние сообщения, актуальные предложения поставщиков и другие серверные функции.',
+  syncServerRole: 'SERVER', syncServerMain: 'Главный источник данных', syncDeviceRole: 'DEVICE', syncDeviceCopy: 'Рабочая локальная копия', syncEngineRole: 'SYNC ENGINE', syncEngineCopy: 'Постоянно сводит данные',
+  syncOnlineTitle: 'Интернет доступен', syncOnlineCopy: 'Данные сохранятся на телефоне и будут отправлены в облако.', syncOfflineTitle: 'Работа без интернета', syncOfflineCopy: 'Данные сохранятся на телефоне и встанут в очередь до появления сети.',
+  syncStatePreparingTitle: 'Подготовка локальной копии', syncStatePreparingCopy: 'Данные сохраняются на устройстве', syncStateOfflineTitle: 'Готово к работе офлайн', syncStateOfflineCopy: 'Изменения сохраняются на телефоне до появления сети', syncStateReadyTitle: 'Локальная копия готова', syncStateReadyCopy: 'Облачная отправка ожидает подключения сервера', syncStateSyncedTitle: 'Данные синхронизированы', syncStateSyncedCopy: 'Телефон и StructOS Cloud сверены', syncStateErrorTitle: 'Нужна повторная синхронизация', syncStateErrorCopy: 'Локальные данные сохранены и не потеряны', syncOpen: 'Открыть', syncLastSaved: 'Сохранено на телефоне',
+  syncProgressSaving: 'Записываем выбранные данные на телефон…', syncProgressCloud: 'Сверяем изменения с StructOS Cloud…', syncToastOffline: 'Данные сохранены на телефоне и готовы к работе офлайн', syncToastDevice: 'Локальная копия обновлена; отправка в облако стоит в очереди', syncToastCloud: 'Телефон и StructOS Cloud синхронизированы'
+});
+Object.assign(copy.EN, {
+  syncTitle: 'SYNC', syncSubtitle: 'Sync your data by saving it to your phone for offline work without internet access.',
+  syncInternetAvailable: 'INTERNET AVAILABLE', syncOnlineFlow: 'Phone ↔ StructOS Cloud', syncInternetLost: 'INTERNET LOST', syncOfflineFlow: 'The phone keeps working', syncInternetRestored: 'INTERNET RESTORED', syncRestoredFlow: 'Automatic synchronization',
+  syncDialogTitle: 'What should be synced?', syncDialogHint: 'Choose the data to save on this phone and reconcile with StructOS Cloud.', syncChooseData: 'Data to synchronize',
+  syncCategoryProjects: 'Objects and projects', syncCategoryProjectsHint: 'Object cards, projects and order', syncCategoryStaff: 'Staff and timesheets', syncCategoryStaffHint: 'People, shifts, overtime and payroll', syncCategoryFinance: 'Finance', syncCategoryFinanceHint: 'Income, expenses, contracts and calculations', syncCategoryWarehouse: 'Inventory and materials', syncCategoryWarehouseHint: 'Materials, equipment and stock', syncCategoryDocuments: 'Documents and reports', syncCategoryDocumentsHint: 'Documents, acts, reports and local files', syncCategoryProfile: 'Profile and settings', syncCategoryProfileHint: 'Passport, connections and workspace',
+  syncSelected: 'Sync selected', syncAll: 'Sync everything', syncSelectOne: 'Select at least one section.',
+  syncServerOnlyNote: 'Internet required: new AI analysis, external messages, current supplier offers and other server-only functions.',
+  syncServerRole: 'SERVER', syncServerMain: 'Primary data source', syncDeviceRole: 'DEVICE', syncDeviceCopy: 'Working local copy', syncEngineRole: 'SYNC ENGINE', syncEngineCopy: 'Continuously reconciles data',
+  syncOnlineTitle: 'Internet is available', syncOnlineCopy: 'Data will be saved on the phone and sent to the cloud.', syncOfflineTitle: 'Offline mode', syncOfflineCopy: 'Data will be saved on the phone and queued until the network returns.',
+  syncStatePreparingTitle: 'Preparing the local copy', syncStatePreparingCopy: 'Saving data on this device', syncStateOfflineTitle: 'Ready to work offline', syncStateOfflineCopy: 'Changes stay on the phone until the network returns', syncStateReadyTitle: 'Local copy is ready', syncStateReadyCopy: 'Cloud delivery is waiting for the server connection', syncStateSyncedTitle: 'Data synchronized', syncStateSyncedCopy: 'Phone and StructOS Cloud are reconciled', syncStateErrorTitle: 'Synchronization needs retrying', syncStateErrorCopy: 'Local data is saved and has not been lost', syncOpen: 'Open', syncLastSaved: 'Saved on phone',
+  syncProgressSaving: 'Saving selected data on the phone…', syncProgressCloud: 'Reconciling changes with StructOS Cloud…', syncToastOffline: 'Data is saved on the phone and ready for offline work', syncToastDevice: 'Local copy updated; cloud delivery is queued', syncToastCloud: 'Phone and StructOS Cloud are synchronized'
+});
+Object.assign(copy.KY, {
+  syncTitle: 'СИНХРОНДОШТУРУУ', syncSubtitle: 'Интернетсиз офлайн иштөө үчүн маалыматтарды телефонго сактап синхрондоштуруңуз.',
+  syncInternetAvailable: 'ИНТЕРНЕТ БАР', syncOnlineFlow: 'Телефон ↔ StructOS Cloud', syncInternetLost: 'ИНТЕРНЕТ ЖОГОЛДУ', syncOfflineFlow: 'Телефон ишин улантат', syncInternetRestored: 'ИНТЕРНЕТ КАЙТТЫ', syncRestoredFlow: 'Автоматтык синхрондоштуруу',
+  syncDialogTitle: 'Эмнени синхрондоштуруу керек?', syncDialogHint: 'Телефонго сакталуучу жана StructOS Cloud менен салыштырылуучу маалыматтарды тандаңыз.', syncChooseData: 'Синхрондоштуруучу маалыматтар',
+  syncCategoryProjects: 'Объекттер жана долбоорлор', syncCategoryProjectsHint: 'Объект карталары, долбоорлор жана тартип', syncCategoryStaff: 'Кызматкерлер жана табелдер', syncCategoryStaffHint: 'Адамдар, сменалар, ашыкча иш жана төлөмдөр', syncCategoryFinance: 'Каржы', syncCategoryFinanceHint: 'Киреше, чыгаша, келишим жана эсептер', syncCategoryWarehouse: 'Кампа жана материалдар', syncCategoryWarehouseHint: 'Материалдар, жабдуу жана калдыктар', syncCategoryDocuments: 'Документтер жана отчёттор', syncCategoryDocumentsHint: 'Документтер, актылар, отчёттор жана файлдар', syncCategoryProfile: 'Профиль жана жөндөөлөр', syncCategoryProfileHint: 'Паспорт, байланыштар жана иш мейкиндиги',
+  syncSelected: 'Тандалганды синхрондоштуруу', syncAll: 'Баарын синхрондоштуруу', syncSelectOne: 'Жок дегенде бир бөлүмдү тандаңыз.',
+  syncServerOnlyNote: 'Интернет менен гана: жаңы AI талдоосу, тышкы билдирүүлөр, жеткирүүчүлөрдүн учурдагы сунуштары жана башка сервердик функциялар.',
+  syncServerRole: 'SERVER', syncServerMain: 'Негизги маалымат булагы', syncDeviceRole: 'DEVICE', syncDeviceCopy: 'Жумушчу жергиликтүү көчүрмө', syncEngineRole: 'SYNC ENGINE', syncEngineCopy: 'Маалыматтарды туруктуу салыштырат',
+  syncOnlineTitle: 'Интернет жеткиликтүү', syncOnlineCopy: 'Маалымат телефонго сакталат жана булутка жөнөтүлөт.', syncOfflineTitle: 'Интернетсиз иштөө', syncOfflineCopy: 'Маалымат телефонго сакталат жана тармак келгенге чейин кезекте турат.',
+  syncStatePreparingTitle: 'Жергиликтүү көчүрмө даярдалууда', syncStatePreparingCopy: 'Маалымат түзмөккө сакталууда', syncStateOfflineTitle: 'Офлайн иштөөгө даяр', syncStateOfflineCopy: 'Өзгөртүүлөр тармак келгенге чейин телефондо сакталат', syncStateReadyTitle: 'Жергиликтүү көчүрмө даяр', syncStateReadyCopy: 'Булутка жөнөтүү сервер байланышын күтөт', syncStateSyncedTitle: 'Маалымат синхрондошту', syncStateSyncedCopy: 'Телефон менен StructOS Cloud салыштырылды', syncStateErrorTitle: 'Кайра синхрондоштуруу керек', syncStateErrorCopy: 'Жергиликтүү маалымат сакталды жана жоголгон жок', syncOpen: 'Ачуу', syncLastSaved: 'Телефонго сакталды',
+  syncProgressSaving: 'Тандалган маалымат телефонго сакталууда…', syncProgressCloud: 'Өзгөртүүлөр StructOS Cloud менен салыштырылууда…', syncToastOffline: 'Маалымат телефонго сакталды жана офлайн иштөөгө даяр', syncToastDevice: 'Жергиликтүү көчүрмө жаңырды; булутка жөнөтүү кезекте', syncToastCloud: 'Телефон жана StructOS Cloud синхрондошту'
+});
+Object.assign(copy.TJ, {
+  syncTitle: 'ҲАМОҲАНГСОЗӢ', syncSubtitle: 'Барои кори офлайн бе интернет маълумотро дар телефон нигоҳ дошта, ҳамоҳанг созед.',
+  syncInternetAvailable: 'ИНТЕРНЕТ ҲАСТ', syncOnlineFlow: 'Телефон ↔ StructOS Cloud', syncInternetLost: 'ИНТЕРНЕТ ҚАТЪ ШУД', syncOfflineFlow: 'Телефон корро идома медиҳад', syncInternetRestored: 'ИНТЕРНЕТ БАРҚАРОР ШУД', syncRestoredFlow: 'Ҳамоҳангсозии автоматӣ',
+  syncDialogTitle: 'Чиро ҳамоҳанг созем?', syncDialogHint: 'Маълумотеро интихоб кунед, ки дар телефон нигоҳ дошта ва бо StructOS Cloud муқоиса мешавад.', syncChooseData: 'Маълумот барои ҳамоҳангсозӣ',
+  syncCategoryProjects: 'Объектҳо ва лоиҳаҳо', syncCategoryProjectsHint: 'Кортҳои объект, лоиҳаҳо ва тартиб', syncCategoryStaff: 'Кормандон ва табелҳо', syncCategoryStaffHint: 'Одамон, бастҳо, изофакорӣ ва пардохт', syncCategoryFinance: 'Молия', syncCategoryFinanceHint: 'Даромад, хароҷот, шартнома ва ҳисобҳо', syncCategoryWarehouse: 'Анбор ва мавод', syncCategoryWarehouseHint: 'Мавод, таҷҳизот ва бақия', syncCategoryDocuments: 'Ҳуҷҷатҳо ва ҳисоботҳо', syncCategoryDocumentsHint: 'Ҳуҷҷатҳо, санадҳо, ҳисобот ва файлҳо', syncCategoryProfile: 'Профил ва танзимот', syncCategoryProfileHint: 'Шиноснома, алоқаҳо ва фазои корӣ',
+  syncSelected: 'Ҳамоҳангсозии интихобшуда', syncAll: 'Ҳамоҳангсозии ҳама', syncSelectOne: 'Камаш як бахшро интихоб кунед.',
+  syncServerOnlyNote: 'Танҳо бо интернет: таҳлили нави AI, паёмҳои беруна, пешниҳодҳои ҷории таъминкунандагон ва дигар вазифаҳои серверӣ.',
+  syncServerRole: 'SERVER', syncServerMain: 'Манбаи асосии маълумот', syncDeviceRole: 'DEVICE', syncDeviceCopy: 'Нусхаи маҳаллии корӣ', syncEngineRole: 'SYNC ENGINE', syncEngineCopy: 'Маълумотро пайваста муқоиса мекунад',
+  syncOnlineTitle: 'Интернет дастрас аст', syncOnlineCopy: 'Маълумот дар телефон нигоҳ дошта ва ба абр фиристода мешавад.', syncOfflineTitle: 'Кор бе интернет', syncOfflineCopy: 'Маълумот дар телефон нигоҳ дошта, то барқарории шабака дар навбат мемонад.',
+  syncStatePreparingTitle: 'Омодасозии нусхаи маҳаллӣ', syncStatePreparingCopy: 'Маълумот дар дастгоҳ нигоҳ дошта мешавад', syncStateOfflineTitle: 'Барои кори офлайн омода', syncStateOfflineCopy: 'Тағйирот то барқарории шабака дар телефон мемонад', syncStateReadyTitle: 'Нусхаи маҳаллӣ омода аст', syncStateReadyCopy: 'Фиристодан ба абр пайвасти серверро интизор аст', syncStateSyncedTitle: 'Маълумот ҳамоҳанг шуд', syncStateSyncedCopy: 'Телефон ва StructOS Cloud муқоиса шуданд', syncStateErrorTitle: 'Ҳамоҳангсозиро такрор кунед', syncStateErrorCopy: 'Маълумоти маҳаллӣ нигоҳ дошта шудааст', syncOpen: 'Кушодан', syncLastSaved: 'Дар телефон нигоҳ дошта шуд',
+  syncProgressSaving: 'Маълумоти интихобшуда дар телефон нигоҳ дошта мешавад…', syncProgressCloud: 'Тағйирот бо StructOS Cloud муқоиса мешавад…', syncToastOffline: 'Маълумот дар телефон нигоҳ дошта шуд ва барои офлайн омода аст', syncToastDevice: 'Нусхаи маҳаллӣ нав шуд; фиристодан ба абр дар навбат аст', syncToastCloud: 'Телефон ва StructOS Cloud ҳамоҳанг шуданд'
+});
+
 const CABINET_WELCOME_PROFILES = Object.freeze({
   user: { roleKey: 'cabinetWelcomeUserRole', phraseKeys: ['cabinetWelcomeUserOne', 'cabinetWelcomeUserTwo', 'cabinetWelcomeUserThree'] },
   executor: { roleKey: 'cabinetWelcomeExecutorRole', phraseKeys: ['cabinetWelcomeExecutorOne', 'cabinetWelcomeExecutorTwo', 'cabinetWelcomeExecutorThree'] },
@@ -1237,6 +1287,7 @@ function applyLanguage(next) {
   renderProfilePlan();
   renderReferral();
   renderHomeStatistics();
+  renderOfflineSyncState();
   renderAnalysisCards();
   renderObjects();
   renderWidgets();
@@ -3007,7 +3058,7 @@ function openCalendarDialog() {
 
 function showDialog(title, copyText, extra = '') {
   const dialog = $('[data-dialog]');
-  dialog.classList.remove('cash-document-dialog', 'cash-export-dialog', 'calendar-dialog', 'invited-object-dialog');
+  dialog.classList.remove('cash-document-dialog', 'cash-export-dialog', 'calendar-dialog', 'invited-object-dialog', 'sync-dialog');
   $('[data-dialog-content]').innerHTML = `<div class="dialog-content"><h2>${title}</h2><p>${copyText}</p>${extra}</div>`;
   if (!dialog.open) dialog.showModal();
 }
@@ -7669,6 +7720,306 @@ function openView(view) {
   showDialog(tr(labels[view] || 'settings'), tr('comingSoon'), `<div class="dialog-options"><div class="dialog-option"><span>StructOS</span><span>→</span></div></div>`);
 }
 
+const OFFLINE_SYNC_CATEGORIES = Object.freeze([
+  { id: 'projects', labelKey: 'syncCategoryProjects', hintKey: 'syncCategoryProjectsHint', icon: '▣' },
+  { id: 'staff', labelKey: 'syncCategoryStaff', hintKey: 'syncCategoryStaffHint', icon: '人' },
+  { id: 'finance', labelKey: 'syncCategoryFinance', hintKey: 'syncCategoryFinanceHint', icon: '₽' },
+  { id: 'warehouse', labelKey: 'syncCategoryWarehouse', hintKey: 'syncCategoryWarehouseHint', icon: '◇' },
+  { id: 'documents', labelKey: 'syncCategoryDocuments', hintKey: 'syncCategoryDocumentsHint', icon: '▤' },
+  { id: 'profile', labelKey: 'syncCategoryProfile', hintKey: 'syncCategoryProfileHint', icon: 'ID' }
+]);
+
+function offlineJsonCopy(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function cashObjectIdentitySnapshot(object) {
+  return {
+    id: object.id,
+    sourceProjectId: object.sourceProjectId,
+    name: object.name,
+    createdAt: object.createdAt,
+    completed: object.completed,
+    completedAt: object.completedAt
+  };
+}
+
+function cashFinanceSectionSnapshot(section) {
+  return {
+    id: section.id,
+    sourceProjectId: section.sourceProjectId,
+    name: section.name,
+    createdAt: section.createdAt,
+    createdManually: section.createdManually,
+    contractMode: section.contractMode,
+    factMode: section.factMode,
+    contractAmount: section.contractAmount,
+    advances: section.advances,
+    expenses: section.expenses,
+    ownInvestments: section.ownInvestments,
+    ownReturns: section.ownReturns,
+    factIncome: section.factIncome,
+    factExpenses: section.factExpenses,
+    factOwnInvestments: section.factOwnInvestments,
+    factOwnReturns: section.factOwnReturns
+  };
+}
+
+function cashDocumentSectionSnapshot(section) {
+  return {
+    id: section.id,
+    sourceProjectId: section.sourceProjectId,
+    name: section.name,
+    attachments: section.attachments,
+    statement: section.statement,
+    act: section.act,
+    reportHistory: section.reportHistory
+  };
+}
+
+async function indexedStoreKeys(databaseFactory, storeName) {
+  try {
+    const database = await databaseFactory();
+    return await new Promise((resolve, reject) => {
+      const transaction = database.transaction(storeName, 'readonly');
+      const request = transaction.objectStore(storeName).getAllKeys();
+      request.onsuccess = () => resolve(request.result.map(String).sort());
+      request.onerror = () => reject(request.error || new Error('Local file inventory failed'));
+    });
+  } catch {
+    return [];
+  }
+}
+
+async function collectOfflineSyncCategory(category) {
+  if (category === 'projects') {
+    return offlineJsonCopy({
+      schemaVersion: 1,
+      objects: objectRegistry,
+      invitedObjects,
+      objectOrder: unifiedObjectOrder,
+      currentUploads: selectedFiles,
+      collapsedProjectIds: [...collapsedProjectIds].sort()
+    });
+  }
+
+  if (category === 'staff') {
+    return offlineJsonCopy({
+      schemaVersion: 1,
+      objects: cashflowObjects.map((object) => ({
+        ...cashObjectIdentitySnapshot(object),
+        sections: object.sections
+          .filter((section) => section.staffingMode || section.staffingShifts?.length)
+          .map((section) => ({ id: section.id, name: section.name, staffingMode: section.staffingMode, staffingShifts: section.staffingShifts }))
+      })).filter((object) => object.sections.length)
+    });
+  }
+
+  if (category === 'finance') {
+    return offlineJsonCopy({
+      schemaVersion: 1,
+      account: finance,
+      objects: cashflowObjects.map((object) => ({
+        ...cashObjectIdentitySnapshot(object),
+        sections: object.sections.map(cashFinanceSectionSnapshot)
+      }))
+    });
+  }
+
+  if (category === 'warehouse') {
+    return offlineJsonCopy({
+      schemaVersion: 1,
+      projects: objectRegistry.map((object) => ({
+        id: object.id,
+        name: object.name,
+        files: object.files.map((file) => ({
+          id: file.id,
+          kind: file.kind,
+          name: file.name,
+          sourceCatalog: file.sourceCatalog,
+          materials: file.materials,
+          equipment: file.equipment,
+          specification: file.specification,
+          versions: fileVersions(file).map((version) => ({
+            id: version.id,
+            sourceCatalog: version.sourceCatalog,
+            materials: version.materials,
+            equipment: version.equipment,
+            specification: version.specification
+          }))
+        }))
+      })),
+      cashflow: cashflowObjects.map((object) => ({
+        id: object.id,
+        sections: object.sections.map((section) => ({ id: section.id, name: section.name, sourceCatalog: section.sourceCatalog }))
+      }))
+    });
+  }
+
+  if (category === 'documents') {
+    const [cashflowFileIds, drawingIds] = await Promise.all([
+      indexedStoreKeys(openCashflowFileDb, CASHFLOW_FILE_STORE),
+      indexedStoreKeys(drawingDatabase, 'drawings')
+    ]);
+    return offlineJsonCopy({
+      schemaVersion: 1,
+      projects: objectRegistry.map((object) => ({ id: object.id, name: object.name, files: object.files })),
+      cashflow: cashflowObjects.map((object) => ({
+        ...cashObjectIdentitySnapshot(object),
+        organizationDocuments: object.organizationDocuments,
+        sections: object.sections.map(cashDocumentSectionSnapshot)
+      })),
+      localFileInventory: { cashflowFileIds, drawingIds }
+    });
+  }
+
+  if (category === 'profile') {
+    return offlineJsonCopy({
+      schemaVersion: 1,
+      person: personData,
+      profile: profileData,
+      builderPassport,
+      plan: profilePlan,
+      connections: structosConnections,
+      preferences: {
+        language,
+        theme: root.dataset.theme || 'dark',
+        selectedWidgets,
+        widgetPositions,
+        widgetSizes,
+        widgetStyles,
+        todoItems,
+        activityLog
+      }
+    });
+  }
+
+  return { schemaVersion: 1 };
+}
+
+const offlineSync = createOfflineSyncEngine({
+  categories: OFFLINE_SYNC_CATEGORIES.map((category) => category.id),
+  collectCategory: collectOfflineSyncCategory
+});
+let offlineSyncState = offlineSync.getState();
+let offlineSyncNetworkMode = navigator.onLine ? 'online' : 'offline';
+let offlineSyncRestoredTimer;
+
+function offlineSyncDate(value) {
+  if (!value) return '';
+  try {
+    return new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date(value));
+  } catch {
+    return '';
+  }
+}
+
+function renderOfflineSyncState(state = offlineSyncState) {
+  const section = $('.home-sync-section');
+  const status = $('[data-sync-live-status]');
+  if (!section || !status) return;
+  section.dataset.syncNetwork = state.online ? offlineSyncNetworkMode : 'offline';
+  status.classList.remove('is-ready', 'is-synced', 'is-offline', 'is-syncing', 'is-error');
+
+  let title = tr('syncStatePreparingTitle');
+  let copyText = tr('syncStatePreparingCopy');
+  let statusClass = 'is-syncing';
+  if (!state.online) {
+    title = tr('syncStateOfflineTitle');
+    copyText = tr('syncStateOfflineCopy');
+    statusClass = 'is-offline';
+  } else if (state.phase === 'error') {
+    title = tr('syncStateErrorTitle');
+    copyText = tr('syncStateErrorCopy');
+    statusClass = 'is-error';
+  } else if (state.syncing) {
+    title = tr('syncStatePreparingTitle');
+    copyText = state.phase === 'pushing' || state.phase === 'pulling' ? tr('syncProgressCloud') : tr('syncProgressSaving');
+    statusClass = 'is-syncing';
+  } else if (state.phase === 'synced') {
+    title = tr('syncStateSyncedTitle');
+    copyText = tr('syncStateSyncedCopy');
+    statusClass = 'is-synced';
+  } else if (state.deviceReady) {
+    title = tr('syncStateReadyTitle');
+    copyText = tr('syncStateReadyCopy');
+    statusClass = 'is-ready';
+  }
+
+  const savedAt = offlineSyncDate(state.lastLocalSaveAt);
+  if (savedAt && !state.syncing) copyText = `${copyText} · ${tr('syncLastSaved')}: ${savedAt}`;
+  status.classList.add(statusClass);
+  $('[data-sync-live-title]', status).textContent = title;
+  $('[data-sync-live-copy]', status).textContent = copyText;
+  $('[data-sync-live-action]', status).textContent = tr('syncOpen');
+}
+
+function handleOfflineSyncState(nextState) {
+  const wasOnline = offlineSyncState.online;
+  offlineSyncState = nextState;
+  clearTimeout(offlineSyncRestoredTimer);
+  if (!wasOnline && nextState.online) {
+    offlineSyncNetworkMode = 'restored';
+    offlineSyncRestoredTimer = setTimeout(() => {
+      offlineSyncNetworkMode = navigator.onLine ? 'online' : 'offline';
+      renderOfflineSyncState();
+    }, 4200);
+  } else if (!nextState.online) {
+    offlineSyncNetworkMode = 'offline';
+  } else if (offlineSyncNetworkMode !== 'restored') {
+    offlineSyncNetworkMode = 'online';
+  }
+  renderOfflineSyncState(nextState);
+}
+
+function syncCategoryMarkup(category) {
+  return `<label class="sync-category-option"><input type="checkbox" value="${category.id}" data-sync-category /><span><b>${category.icon}</b><span><strong>${escapeHtml(tr(category.labelKey))}</strong><small>${escapeHtml(tr(category.hintKey))}</small></span><b class="sync-category-check">✓</b></span></label>`;
+}
+
+function openOfflineSyncDialog() {
+  const online = navigator.onLine;
+  const architecture = `<div class="sync-architecture"><div><small>${escapeHtml(tr('syncServerRole'))}</small><strong>${escapeHtml(tr('syncServerMain'))}</strong></div><div><small>${escapeHtml(tr('syncDeviceRole'))}</small><strong>${escapeHtml(tr('syncDeviceCopy'))}</strong></div><div><small>${escapeHtml(tr('syncEngineRole'))}</small><strong>${escapeHtml(tr('syncEngineCopy'))}</strong></div></div>`;
+  const extra = `<div class="sync-dialog-intro${online ? '' : ' is-offline'}"><i></i><span><strong>${escapeHtml(tr(online ? 'syncOnlineTitle' : 'syncOfflineTitle'))}</strong><small>${escapeHtml(tr(online ? 'syncOnlineCopy' : 'syncOfflineCopy'))}</small></span></div>
+    <fieldset class="sync-category-fieldset"><legend>${escapeHtml(tr('syncChooseData'))}</legend><div class="sync-category-grid">${OFFLINE_SYNC_CATEGORIES.map(syncCategoryMarkup).join('')}</div></fieldset>
+    <div class="sync-server-only-note"><b>!</b><span>${escapeHtml(tr('syncServerOnlyNote'))}</span></div>
+    ${architecture}
+    <div class="sync-dialog-progress" data-sync-progress hidden><span><i></i></span><small data-sync-progress-copy>${escapeHtml(tr('syncProgressSaving'))}</small></div>
+    <div class="sync-dialog-actions"><button class="outline-button" type="button" data-sync-selected disabled>${escapeHtml(tr('syncSelected'))}</button><button class="primary-button" type="button" data-sync-all>${escapeHtml(tr('syncAll'))}</button></div>`;
+  showDialog(escapeHtml(tr('syncDialogTitle')), escapeHtml(tr('syncDialogHint')), extra);
+  const dialog = $('[data-dialog]');
+  dialog.classList.add('sync-dialog');
+  const scope = $('[data-dialog-content]');
+  const selectedButton = $('[data-sync-selected]', scope);
+  const allButton = $('[data-sync-all]', scope);
+  const progress = $('[data-sync-progress]', scope);
+  const progressCopy = $('[data-sync-progress-copy]', scope);
+
+  const selection = () => $$('[data-sync-category]:checked', scope).map((input) => input.value);
+  const updateSelection = () => { selectedButton.disabled = selection().length === 0; };
+  $$('[data-sync-category]', scope).forEach((input) => input.addEventListener('change', updateSelection));
+
+  const synchronize = async (categories) => {
+    if (!categories.length) { showToast(tr('syncSelectOne')); return; }
+    selectedButton.disabled = true;
+    allButton.disabled = true;
+    $$('[data-sync-category]', scope).forEach((input) => { input.disabled = true; });
+    progress.hidden = false;
+    progressCopy.textContent = tr('syncProgressSaving');
+    const cloudPhaseTimer = setTimeout(() => { if (navigator.onLine) progressCopy.textContent = tr('syncProgressCloud'); }, 320);
+    const result = await offlineSync.prepare(categories);
+    clearTimeout(cloudPhaseTimer);
+    if (result?.cloud) showToast(tr('syncToastCloud'));
+    else if (result?.offline) showToast(tr('syncToastOffline'));
+    else showToast(tr('syncToastDevice'));
+    setTimeout(() => { if (dialog.open) dialog.close(); }, 260);
+  };
+
+  selectedButton.addEventListener('click', () => synchronize(selection()));
+  allButton.addEventListener('click', () => synchronize(OFFLINE_SYNC_CATEGORIES.map((category) => category.id)));
+}
+
+offlineSync.subscribe(handleOfflineSyncState);
+
 function openObjectDialog() {
   if (objectRegistry.filter((object) => object.status === 'active').length >= ACTIVE_OBJECT_LIMIT) {
     showActiveLimit();
@@ -7738,6 +8089,7 @@ $('[data-run-analysis]')?.addEventListener('click', runAnalysis);
 $$('[data-create-project-object]').forEach((button) => button.addEventListener('click', () => openProjectObjectWizard()));
 $('[data-quick-project-analysis]')?.addEventListener('click', () => openProjectObjectWizard({ quickProjectOnly: true }));
 $('[data-quick-object-start]')?.addEventListener('click', openCashObjectDialog);
+$('[data-open-sync-dialog]')?.addEventListener('click', openOfflineSyncDialog);
 $$('[data-add-object]').forEach((button) => button.addEventListener('click', openObjectDialog));
 $$('[data-add-cash-object]').forEach((button) => button.addEventListener('click', openCashObjectDialog));
 $('[data-export-all-cashflow]')?.addEventListener('click', openAllCashflowExportDialog);
@@ -7799,6 +8151,7 @@ renderObjects();
 renderCashflow();
 renderProfilePersonalData();
 renderConnectionsSummary();
+offlineSync.initialize();
 recordActivity('cabinet', 'daily-session', { daily: true });
 document.addEventListener('click', trackConstructionActivity, true);
 setPanel(location.hash.slice(1) || 'home');

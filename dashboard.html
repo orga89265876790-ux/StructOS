@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=47" />
+    <link rel="stylesheet" href="dashboard.css?v=48" />
   </head>
   <body class="is-cabinet-entering">
     <section class="cabinet-entry" data-cabinet-entry role="status" aria-live="polite" aria-label="Вход в личный кабинет">
@@ -110,6 +110,44 @@
                 <p data-i18n="profileActivityHint">Активность в StructOS усиливает ваш профиль и повышает позицию в выдаче.</p>
                 <i class="passport-activity-progress" data-activity-progress role="progressbar" aria-label="Активность" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></i>
               </aside>
+            </div>
+          </section>
+
+          <section class="section-block home-sync-section" aria-labelledby="home-sync-title">
+            <button class="home-sync-launch" type="button" data-open-sync-dialog>
+              <span class="home-sync-launch-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><rect x="8" y="5" width="20" height="38" rx="5"/><path d="M15 10h6M16 37h4M32 17a8 8 0 0 1 7 12M35 16l-3 1 1 3M35 33a8 8 0 0 1-7-12M32 34l3-1-1-3"/></svg>
+              </span>
+              <span class="home-sync-launch-copy">
+                <small>STRUCTOS OFFLINE-FIRST</small>
+                <strong id="home-sync-title" data-i18n="syncTitle">СИНХРОНИЗАЦИЯ</strong>
+                <em data-i18n="syncSubtitle">Синхронизируйте данные, записав их на телефон, для работы офлайн без интернета.</em>
+              </span>
+              <i aria-hidden="true">↔</i>
+            </button>
+
+            <div class="home-sync-scenarios" aria-label="Сценарии синхронизации">
+              <article class="home-sync-scenario is-online">
+                <span class="home-sync-scenario-icon" aria-hidden="true">↔</span>
+                <small data-i18n="syncInternetAvailable">ИНТЕРНЕТ ЕСТЬ</small>
+                <strong data-i18n="syncOnlineFlow">Телефон ↔ StructOS Cloud</strong>
+              </article>
+              <article class="home-sync-scenario is-offline">
+                <span class="home-sync-scenario-icon" aria-hidden="true">⌁</span>
+                <small data-i18n="syncInternetLost">ИНТЕРНЕТ ПРОПАЛ</small>
+                <strong data-i18n="syncOfflineFlow">Телефон продолжает работать</strong>
+              </article>
+              <article class="home-sync-scenario is-restored">
+                <span class="home-sync-scenario-icon" aria-hidden="true">⇄</span>
+                <small data-i18n="syncInternetRestored">ИНТЕРНЕТ ПОЯВИЛСЯ</small>
+                <strong data-i18n="syncRestoredFlow">Автоматическая синхронизация</strong>
+              </article>
+            </div>
+
+            <div class="home-sync-live-status" data-sync-live-status role="status" aria-live="polite">
+              <i aria-hidden="true"></i>
+              <span><strong data-sync-live-title>Подготовка локальной копии</strong><small data-sync-live-copy>Данные сохраняются на устройстве</small></span>
+              <b data-sync-live-action>Открыть</b>
             </div>
           </section>
 
@@ -336,6 +374,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=47"></script>
+    <script type="module" src="dashboard.js?v=48"></script>
   </body>
 </html>
