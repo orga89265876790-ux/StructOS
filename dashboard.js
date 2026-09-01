@@ -683,25 +683,25 @@ Object.assign(copy.RU, {
   peopleAssigned: 'Выставить людей', aggregatorWindow: 'Окно агрегатора', aggregatorWindowHint: 'Табель людей, смен, переработки и выплат', addStaffingPerson: 'Добавить человека', staffingPeople: 'Людей в табеле', activeShifts: 'Открыто смен', totalOvertime: 'Переработка', totalPayroll: 'К выплате',
   shiftDate: 'Дата', weekday: 'День недели', workerFullName: 'ФИО', structosWorkerId: 'ID StructOS', plannedShift: 'Смена по плану', actualShift: 'Фактическая смена', shiftFrom: 'С', shiftTo: 'До', shiftRate: 'Выход, ₽', overtimeHours: 'Переработка, ч', overtimePay: 'Переработка, ₽', salaryPay: 'З/П, ₽', penalty: 'Штраф, ₽', penaltyComment: 'Комментарий к штрафу',
   openShift: 'Открыть смену', closeShift: 'Закрыть смену', shiftClosed: 'Смена закрыта', shiftNotOpened: 'Ещё не открыта', shiftOpenedAt: 'Открыта', shiftClosedAt: 'Закрыта', deleteShift: 'Удалить строку', deleteShiftConfirm: 'Удалить эту смену из табеля?', noStaffingShifts: 'Добавьте первого человека в табель смен.', staffingRequiredFields: 'Заполните ФИО, 7-значный ID StructOS, дату, время смены и стоимость выхода.', shiftOpened: 'Смена открыта, время зафиксировано', shiftClosedToast: 'Смена закрыта, зарплата рассчитана', shiftDeleted: 'Смена удалена',
-  overtimeFormula: 'Переработка считается только сверх плановой смены: выход ÷ плановые часы × часы переработки.'
+  overtimeFormula: 'Переработка считается только сверх плановой смены: выход ÷ плановые часы × часы переработки.', staffingNumber: '№', startStaffingDay: 'Начать новый день', staffingDayTotal: 'Итого за день', staffingRegisterTotal: 'Итого по табелю', staffingPeopleShort: 'Людей', staffingShiftRatesTotal: 'Выходы', staffingPenaltiesTotal: 'Штрафы', staffingDayCreated: 'Новый день добавлен'
 });
 Object.assign(copy.EN, {
   aggregatorWindow: 'Aggregator window', aggregatorWindowHint: 'People, shifts, overtime and payroll register', addStaffingPerson: 'Add person', staffingPeople: 'People in register', activeShifts: 'Open shifts', totalOvertime: 'Overtime', totalPayroll: 'To be paid',
   shiftDate: 'Date', weekday: 'Weekday', workerFullName: 'Full name', structosWorkerId: 'StructOS ID', plannedShift: 'Planned shift', actualShift: 'Actual shift', shiftFrom: 'From', shiftTo: 'To', shiftRate: 'Shift rate', overtimeHours: 'Overtime, h', overtimePay: 'Overtime pay', salaryPay: 'Salary', penalty: 'Penalty', penaltyComment: 'Penalty comment',
   openShift: 'Open shift', closeShift: 'Close shift', shiftClosed: 'Shift closed', shiftNotOpened: 'Not opened yet', shiftOpenedAt: 'Opened', shiftClosedAt: 'Closed', deleteShift: 'Delete row', deleteShiftConfirm: 'Delete this shift from the register?', noStaffingShifts: 'Add the first person to the shift register.', staffingRequiredFields: 'Enter full name, a 7-digit StructOS ID, date, planned shift time and shift rate.', shiftOpened: 'Shift opened and time recorded', shiftClosedToast: 'Shift closed and salary calculated', shiftDeleted: 'Shift deleted',
-  overtimeFormula: 'Overtime is counted only beyond the planned shift: shift rate ÷ planned hours × overtime hours.'
+  overtimeFormula: 'Overtime is counted only beyond the planned shift: shift rate ÷ planned hours × overtime hours.', staffingNumber: 'No.', startStaffingDay: 'Start new day', staffingDayTotal: 'Day total', staffingRegisterTotal: 'Register total', staffingPeopleShort: 'People', staffingShiftRatesTotal: 'Shift rates', staffingPenaltiesTotal: 'Penalties', staffingDayCreated: 'New day added'
 });
 Object.assign(copy.KY, {
   aggregatorWindow: 'Агрегатор терезеси', aggregatorWindowHint: 'Адамдардын, сменалардын, ашыкча иштин жана төлөмдөрдүн табели', addStaffingPerson: 'Адам кошуу', staffingPeople: 'Табелдеги адамдар', activeShifts: 'Ачык сменалар', totalOvertime: 'Ашыкча иш', totalPayroll: 'Төлөнөт',
   shiftDate: 'Дата', weekday: 'Аптанын күнү', workerFullName: 'Аты-жөнү', structosWorkerId: 'StructOS ID', plannedShift: 'Пландагы смена', actualShift: 'Иш жүзүндөгү смена', shiftFrom: 'Башы', shiftTo: 'Аягы', shiftRate: 'Чыгуу, ₽', overtimeHours: 'Ашыкча иш, с', overtimePay: 'Ашыкча төлөм, ₽', salaryPay: 'Айлык, ₽', penalty: 'Айып, ₽', penaltyComment: 'Айыпка комментарий',
   openShift: 'Сменаны ачуу', closeShift: 'Сменаны жабуу', shiftClosed: 'Смена жабылды', shiftNotOpened: 'Али ачыла элек', shiftOpenedAt: 'Ачылды', shiftClosedAt: 'Жабылды', deleteShift: 'Сапты өчүрүү', deleteShiftConfirm: 'Бул смена табелден өчүрүлсүнбү?', noStaffingShifts: 'Смена табелине биринчи адамды кошуңуз.', staffingRequiredFields: 'Аты-жөнүн, 7 орундуу StructOS IDни, датаны, сменанын убактысын жана чыгуу баасын толтуруңуз.', shiftOpened: 'Смена ачылып, убакыт белгиленди', shiftClosedToast: 'Смена жабылып, айлык эсептелди', shiftDeleted: 'Смена өчүрүлдү',
-  overtimeFormula: 'Ашыкча иш пландагы сменадан кийин гана эсептелет: чыгуу ÷ пландагы сааттар × ашыкча сааттар.'
+  overtimeFormula: 'Ашыкча иш пландагы сменадан кийин гана эсептелет: чыгуу ÷ пландагы сааттар × ашыкча сааттар.', staffingNumber: '№', startStaffingDay: 'Жаңы күндү баштоо', staffingDayTotal: 'Күндүн жыйынтыгы', staffingRegisterTotal: 'Табелдин жыйынтыгы', staffingPeopleShort: 'Адам', staffingShiftRatesTotal: 'Чыгуулар', staffingPenaltiesTotal: 'Айыптар', staffingDayCreated: 'Жаңы күн кошулду'
 });
 Object.assign(copy.TJ, {
   aggregatorWindow: 'Равзанаи агрегатор', aggregatorWindowHint: 'Ҷадвали одамон, бастҳо, изофакорӣ ва пардохтҳо', addStaffingPerson: 'Иловаи одам', staffingPeople: 'Одамон дар ҷадвал', activeShifts: 'Бастҳои кушода', totalOvertime: 'Изофакорӣ', totalPayroll: 'Барои пардохт',
   shiftDate: 'Сана', weekday: 'Рӯзи ҳафта', workerFullName: 'Ному насаб', structosWorkerId: 'StructOS ID', plannedShift: 'Басти нақшавӣ', actualShift: 'Басти воқеӣ', shiftFrom: 'Аз', shiftTo: 'То', shiftRate: 'Баромад, ₽', overtimeHours: 'Изофакорӣ, с', overtimePay: 'Пули изофакорӣ, ₽', salaryPay: 'Музд, ₽', penalty: 'Ҷарима, ₽', penaltyComment: 'Шарҳи ҷарима',
   openShift: 'Кушодани баст', closeShift: 'Пӯшидани баст', shiftClosed: 'Баст пӯшида шуд', shiftNotOpened: 'Ҳанӯз кушода нест', shiftOpenedAt: 'Кушода шуд', shiftClosedAt: 'Пӯшида шуд', deleteShift: 'Нест кардани сатр', deleteShiftConfirm: 'Ин баст аз ҷадвал нест карда шавад?', noStaffingShifts: 'Одами аввалро ба ҷадвали бастҳо илова кунед.', staffingRequiredFields: 'Ному насаб, StructOS ID-и 7-рақама, сана, вақти баст ва арзиши баромадро пур кунед.', shiftOpened: 'Баст кушода ва вақт сабт шуд', shiftClosedToast: 'Баст пӯшида ва музд ҳисоб шуд', shiftDeleted: 'Баст нест шуд',
-  overtimeFormula: 'Изофакорӣ танҳо баъд аз басти нақшавӣ ҳисоб мешавад: баромад ÷ соатҳои нақшавӣ × соатҳои изофа.'
+  overtimeFormula: 'Изофакорӣ танҳо баъд аз басти нақшавӣ ҳисоб мешавад: баромад ÷ соатҳои нақшавӣ × соатҳои изофа.', staffingNumber: '№', startStaffingDay: 'Оғози рӯзи нав', staffingDayTotal: 'Ҷамъ барои рӯз', staffingRegisterTotal: 'Ҷамъ аз рӯи ҷадвал', staffingPeopleShort: 'Одам', staffingShiftRatesTotal: 'Баромадҳо', staffingPenaltiesTotal: 'Ҷаримаҳо', staffingDayCreated: 'Рӯзи нав илова шуд'
 });
 Object.assign(copy.RU, { declineInvitation: 'Отклонить приглашение', declineInvitationTitle: 'Отклонить приглашение?', declineInvitationHint: 'Приглашение будет удалено из входящих и объект больше не будет показываться в списке.', invitationDeclined: 'Приглашение отклонено' });
 Object.assign(copy.EN, { declineInvitation: 'Decline invitation', declineInvitationTitle: 'Decline this invitation?', declineInvitationHint: 'The invitation will be removed from your inbox and the object will no longer appear in the list.', invitationDeclined: 'Invitation declined' });
@@ -3518,15 +3518,48 @@ function cashStaffingTimestamp(value) {
   catch { return '—'; }
 }
 
-function cashStaffingTotals(section) {
-  const shifts = section?.staffingShifts || [];
+function cashStaffingTotalsForShifts(shifts = []) {
   return shifts.reduce((totals, shift) => {
     const calculation = cashStaffingCalculation(shift);
+    totals.shiftRates += shift.shiftRate;
     totals.overtimeHours += calculation.overtimeHours;
+    totals.overtimePay += calculation.overtimePay;
+    totals.penalties += shift.penalty;
     totals.payroll += calculation.salary;
     if (shift.openedAt && !shift.closedAt) totals.active += 1;
     return totals;
-  }, { people: shifts.length, active: 0, overtimeHours: 0, payroll: 0 });
+  }, { people: shifts.length, active: 0, shiftRates: 0, overtimeHours: 0, overtimePay: 0, penalties: 0, payroll: 0 });
+}
+
+function cashStaffingTotals(section) {
+  return cashStaffingTotalsForShifts(section?.staffingShifts || []);
+}
+
+function cashStaffingDayGroups(section) {
+  const groups = new Map();
+  (section?.staffingShifts || []).forEach((shift) => {
+    if (!groups.has(shift.date)) groups.set(shift.date, []);
+    groups.get(shift.date).push(shift);
+  });
+  return [...groups.entries()]
+    .sort(([dateA], [dateB]) => dateA.localeCompare(dateB))
+    .map(([date, shifts]) => ({ date, shifts }));
+}
+
+function cashStaffingLatestDate(section) {
+  const dates = cashStaffingDayGroups(section).map((group) => group.date);
+  return dates[dates.length - 1] || localDateKey();
+}
+
+function cashStaffingNextDate(section) {
+  const groups = cashStaffingDayGroups(section);
+  if (!groups.length) return localDateKey();
+  const date = new Date(`${groups[groups.length - 1].date}T12:00:00`);
+  date.setDate(date.getDate() + 1);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 function cashAttachmentCurrent(section, kind) {
@@ -4282,32 +4315,57 @@ function cashOwnFundsMarkup(section, investments, returns, investmentKind, retur
 function cashStaffingMarkup(section) {
   const shifts = section.staffingShifts || [];
   const totals = cashStaffingTotals(section);
-  const header = `<div class="cash-staffing-table-head" aria-hidden="true"><span>${tr('shiftDate')} / ${tr('weekday')}</span><span>${tr('workerFullName')} / ${tr('structosWorkerId')}</span><span>${tr('plannedShift')}</span><span>${tr('actualShift')}</span><span>${tr('shiftRate')}</span><span>${tr('overtimeHours')} / ${tr('overtimePay')}</span><span>${tr('salaryPay')}</span><span>${tr('penalty')}</span><span></span></div>`;
-  const rows = shifts.map((shift) => {
-    const calculation = cashStaffingCalculation(shift);
-    const statusClass = shift.closedAt ? ' is-closed' : shift.openedAt ? ' is-open' : '';
-    const shiftAction = !shift.openedAt
-      ? `<button class="cash-staffing-shift-button" type="button" data-open-staffing-shift>${tr('openShift')}</button>`
-      : !shift.closedAt
-        ? `<button class="cash-staffing-shift-button is-close" type="button" data-close-staffing-shift>${tr('closeShift')}</button>`
-        : `<span class="cash-staffing-closed-badge">✓ ${tr('shiftClosed')}</span>`;
-    return `<article class="cash-staffing-row${statusClass}" data-staffing-shift="${escapeHtml(shift.id)}">
-      <div class="cash-staffing-cell is-date" data-label="${escapeHtml(tr('shiftDate'))}"><input type="date" data-staffing-field="date" value="${escapeHtml(shift.date)}" /><strong data-staffing-weekday>${escapeHtml(cashStaffingWeekday(shift.date))}</strong></div>
-      <div class="cash-staffing-cell is-person" data-label="${escapeHtml(tr('workerFullName'))}"><input type="text" maxlength="160" data-staffing-field="fullName" value="${escapeHtml(shift.fullName)}" placeholder="${escapeHtml(tr('workerFullName'))}" /><input type="text" inputmode="numeric" maxlength="7" data-staffing-field="structosId" value="${escapeHtml(shift.structosId)}" placeholder="${escapeHtml(tr('structosWorkerId'))}" /></div>
-      <div class="cash-staffing-cell is-plan" data-label="${escapeHtml(tr('plannedShift'))}"><label><small>${tr('shiftFrom')}</small><input type="time" data-staffing-field="plannedFrom" value="${escapeHtml(shift.plannedFrom)}" /></label><label><small>${tr('shiftTo')}</small><input type="time" data-staffing-field="plannedTo" value="${escapeHtml(shift.plannedTo)}" /></label><em><span data-staffing-planned-hours>${calculation.plannedHours}</span> ч</em></div>
-      <div class="cash-staffing-cell is-actual" data-label="${escapeHtml(tr('actualShift'))}"><small>${tr('shiftOpenedAt')}: <b>${escapeHtml(cashStaffingTimestamp(shift.openedAt))}</b></small><small>${tr('shiftClosedAt')}: <b>${escapeHtml(cashStaffingTimestamp(shift.closedAt))}</b></small>${shiftAction}</div>
-      <div class="cash-staffing-cell is-money" data-label="${escapeHtml(tr('shiftRate'))}"><input type="number" min="0" step="0.01" inputmode="decimal" data-staffing-field="shiftRate" value="${shift.shiftRate || ''}" placeholder="0" /></div>
-      <div class="cash-staffing-cell is-calculation" data-label="${escapeHtml(tr('overtimeHours'))}"><strong><span data-staffing-overtime-hours>${calculation.overtimeHours}</span> ч</strong><small data-staffing-overtime-pay>${formatMoney(calculation.overtimePay)}</small></div>
-      <div class="cash-staffing-cell is-salary" data-label="${escapeHtml(tr('salaryPay'))}"><strong data-staffing-salary>${formatMoney(calculation.salary)}</strong></div>
-      <div class="cash-staffing-cell is-penalty" data-label="${escapeHtml(tr('penalty'))}"><input type="number" min="0" step="0.01" inputmode="decimal" data-staffing-field="penalty" value="${shift.penalty || ''}" placeholder="0" /><input type="text" maxlength="240" data-staffing-field="penaltyComment" value="${escapeHtml(shift.penaltyComment)}" placeholder="${escapeHtml(tr('penaltyComment'))}" /></div>
-      <button class="cash-staffing-delete" type="button" data-delete-staffing-shift aria-label="${escapeHtml(tr('deleteShift'))}" title="${escapeHtml(tr('deleteShift'))}">×</button>
-    </article>`;
+  const tableHeader = `<div class="cash-staffing-table-head" aria-hidden="true"><span>${tr('staffingNumber')}</span><span>${tr('workerFullName')} / ${tr('structosWorkerId')}</span><span>${tr('plannedShift')}</span><span>${tr('actualShift')}</span><span>${tr('shiftRate')}</span><span>${tr('overtimeHours')} / ${tr('overtimePay')}</span><span>${tr('salaryPay')}</span><span>${tr('penalty')}</span><span></span></div>`;
+  const days = cashStaffingDayGroups(section).map(({ date, shifts: dayShifts }) => {
+    const dayTotals = cashStaffingTotalsForShifts(dayShifts);
+    const rows = dayShifts.map((shift, index) => {
+      const calculation = cashStaffingCalculation(shift);
+      const statusClass = shift.closedAt ? ' is-closed' : shift.openedAt ? ' is-open' : '';
+      const shiftAction = !shift.openedAt
+        ? `<button class="cash-staffing-shift-button" type="button" data-open-staffing-shift>${tr('openShift')}</button>`
+        : !shift.closedAt
+          ? `<button class="cash-staffing-shift-button is-close" type="button" data-close-staffing-shift>${tr('closeShift')}</button>`
+          : `<span class="cash-staffing-closed-badge">✓ ${tr('shiftClosed')}</span>`;
+      return `<article class="cash-staffing-row${statusClass}" data-staffing-shift="${escapeHtml(shift.id)}">
+        <span class="cash-staffing-number" aria-label="${escapeHtml(`${tr('staffingNumber')} ${index + 1}`)}">${index + 1}</span>
+        <div class="cash-staffing-cell is-person" data-label="${escapeHtml(tr('workerFullName'))}"><input type="text" maxlength="160" data-staffing-field="fullName" value="${escapeHtml(shift.fullName)}" placeholder="${escapeHtml(tr('workerFullName'))}" /><input type="text" inputmode="numeric" maxlength="7" data-staffing-field="structosId" value="${escapeHtml(shift.structosId)}" placeholder="${escapeHtml(tr('structosWorkerId'))}" /></div>
+        <div class="cash-staffing-cell is-plan" data-label="${escapeHtml(tr('plannedShift'))}"><label><small>${tr('shiftFrom')}</small><input type="time" data-staffing-field="plannedFrom" value="${escapeHtml(shift.plannedFrom)}" /></label><label><small>${tr('shiftTo')}</small><input type="time" data-staffing-field="plannedTo" value="${escapeHtml(shift.plannedTo)}" /></label><em><span data-staffing-planned-hours>${calculation.plannedHours}</span> ч</em></div>
+        <div class="cash-staffing-cell is-actual" data-label="${escapeHtml(tr('actualShift'))}"><small>${tr('shiftOpenedAt')}: <b>${escapeHtml(cashStaffingTimestamp(shift.openedAt))}</b></small><small>${tr('shiftClosedAt')}: <b>${escapeHtml(cashStaffingTimestamp(shift.closedAt))}</b></small>${shiftAction}</div>
+        <div class="cash-staffing-cell is-money" data-label="${escapeHtml(tr('shiftRate'))}"><input type="number" min="0" step="0.01" inputmode="decimal" data-staffing-field="shiftRate" value="${shift.shiftRate || ''}" placeholder="0" /></div>
+        <div class="cash-staffing-cell is-calculation" data-label="${escapeHtml(tr('overtimeHours'))}"><strong><span data-staffing-overtime-hours>${calculation.overtimeHours}</span> ч</strong><small data-staffing-overtime-pay>${formatMoney(calculation.overtimePay)}</small></div>
+        <div class="cash-staffing-cell is-salary" data-label="${escapeHtml(tr('salaryPay'))}"><strong data-staffing-salary>${formatMoney(calculation.salary)}</strong></div>
+        <div class="cash-staffing-cell is-penalty" data-label="${escapeHtml(tr('penalty'))}"><input type="number" min="0" step="0.01" inputmode="decimal" data-staffing-field="penalty" value="${shift.penalty || ''}" placeholder="0" /><input type="text" maxlength="240" data-staffing-field="penaltyComment" value="${escapeHtml(shift.penaltyComment)}" placeholder="${escapeHtml(tr('penaltyComment'))}" /></div>
+        <button class="cash-staffing-delete" type="button" data-delete-staffing-shift aria-label="${escapeHtml(tr('deleteShift'))}" title="${escapeHtml(tr('deleteShift'))}">×</button>
+      </article>`;
+    }).join('');
+    return `<section class="cash-staffing-day" data-staffing-day="${escapeHtml(date)}">
+      <header class="cash-staffing-day-head">
+        <div class="cash-staffing-day-date"><label><span>${tr('shiftDate')}</span><input type="date" data-staffing-day-date value="${escapeHtml(date)}" /></label><strong><span>${tr('weekday')}</span><b data-staffing-day-weekday>${escapeHtml(cashStaffingWeekday(date))}</b></strong></div>
+        <span class="cash-staffing-day-people"><b data-staffing-day-people>${dayTotals.people}</b> ${tr('staffingPeopleShort')}</span>
+        <button class="outline-button" type="button" data-add-staffing-person-date="${escapeHtml(date)}">＋ ${tr('addStaffingPerson')}</button>
+      </header>
+      <div class="cash-staffing-day-table">${tableHeader}<div class="cash-staffing-rows">${rows}</div></div>
+      <footer class="cash-staffing-day-total"><strong>${tr('staffingDayTotal')}</strong><div>
+        <span><small>${tr('staffingPeopleShort')}</small><b data-staffing-day-summary="people">${dayTotals.people}</b></span>
+        <span><small>${tr('staffingShiftRatesTotal')}</small><b data-staffing-day-summary="rates">${formatMoney(dayTotals.shiftRates)}</b></span>
+        <span><small>${tr('totalOvertime')}</small><b><i data-staffing-day-summary="overtime">${Math.round(dayTotals.overtimeHours * 100) / 100} ч</i><i data-staffing-day-summary="overtimePay">${formatMoney(dayTotals.overtimePay)}</i></b></span>
+        <span><small>${tr('staffingPenaltiesTotal')}</small><b data-staffing-day-summary="penalties">${formatMoney(dayTotals.penalties)}</b></span>
+        <span class="is-payroll"><small>${tr('totalPayroll')}</small><b data-staffing-day-summary="payroll">${formatMoney(dayTotals.payroll)}</b></span>
+      </div></footer>
+    </section>`;
   }).join('');
+  const grandTotal = shifts.length ? `<footer class="cash-staffing-grand-total"><strong>${tr('staffingRegisterTotal')}</strong><div>
+    <span><small>${tr('staffingPeopleShort')}</small><b data-staffing-grand-summary="people">${totals.people}</b></span>
+    <span><small>${tr('staffingShiftRatesTotal')}</small><b data-staffing-grand-summary="rates">${formatMoney(totals.shiftRates)}</b></span>
+    <span><small>${tr('totalOvertime')}</small><b><i data-staffing-grand-summary="overtime">${Math.round(totals.overtimeHours * 100) / 100} ч</i><i data-staffing-grand-summary="overtimePay">${formatMoney(totals.overtimePay)}</i></b></span>
+    <span><small>${tr('staffingPenaltiesTotal')}</small><b data-staffing-grand-summary="penalties">${formatMoney(totals.penalties)}</b></span>
+    <span class="is-payroll"><small>${tr('totalPayroll')}</small><b data-staffing-grand-summary="payroll">${formatMoney(totals.payroll)}</b></span>
+  </div></footer>` : '';
   return `<section class="cash-staffing-block">
-    <header><div><span class="eyebrow">STRUCTOS STAFF</span><h4>${tr('aggregatorWindow')}</h4><p>${tr('aggregatorWindowHint')}</p></div><button class="primary-button" type="button" data-add-staffing-shift>＋ ${tr('addStaffingPerson')}</button></header>
+    <header><div><span class="eyebrow">STRUCTOS STAFF</span><h4>${tr('aggregatorWindow')}</h4><p>${tr('aggregatorWindowHint')}</p></div><div class="cash-staffing-actions"><button class="outline-button" type="button" data-add-staffing-shift>＋ ${tr('addStaffingPerson')}</button><button class="primary-button" type="button" data-add-staffing-day>＋ ${tr('startStaffingDay')}</button></div></header>
     <div class="cash-staffing-summary"><article><span>${tr('staffingPeople')}</span><strong data-staffing-summary="people">${totals.people}</strong></article><article><span>${tr('activeShifts')}</span><strong data-staffing-summary="active">${totals.active}</strong></article><article><span>${tr('totalOvertime')}</span><strong data-staffing-summary="overtime">${Math.round(totals.overtimeHours * 100) / 100} ч</strong></article><article><span>${tr('totalPayroll')}</span><strong data-staffing-summary="payroll">${formatMoney(totals.payroll)}</strong></article></div>
     <p class="cash-staffing-formula"><span>ƒ</span>${tr('overtimeFormula')}</p>
-    <div class="cash-staffing-table">${header}<div class="cash-staffing-rows">${rows || `<div class="cash-staffing-empty"><span>＋</span><p>${tr('noStaffingShifts')}</p></div>`}</div></div>
+    <div class="cash-staffing-table">${days || `<div class="cash-staffing-empty"><span>＋</span><p>${tr('noStaffingShifts')}</p></div>`}</div>${grandTotal}
   </section>`;
 }
 
@@ -4317,13 +4375,61 @@ function findCashStaffingShift(objectId, sectionId, shiftId) {
   return { object, section, shift };
 }
 
-function addCashStaffingShift(objectId, sectionId) {
+function addCashStaffingShift(objectId, sectionId, requestedDate = '') {
   const { section } = findCashSection(objectId, sectionId);
   if (!section) return;
   section.staffingShifts ||= [];
-  section.staffingShifts.push(normalizeCashStaffingShift({ date: localDateKey() }));
+  const date = /^\d{4}-\d{2}-\d{2}$/.test(String(requestedDate || '')) ? requestedDate : cashStaffingLatestDate(section);
+  section.staffingShifts.push(normalizeCashStaffingShift({ date }));
   saveCashflow();
   renderCashflow();
+}
+
+function addCashStaffingDay(objectId, sectionId) {
+  const { section } = findCashSection(objectId, sectionId);
+  if (!section) return;
+  section.staffingShifts ||= [];
+  section.staffingShifts.push(normalizeCashStaffingShift({ date: cashStaffingNextDate(section) }));
+  saveCashflow();
+  renderCashflow();
+  showToast(tr('staffingDayCreated'));
+}
+
+function updateCashStaffingDayDate(objectId, sectionId, previousDate, nextDate) {
+  const { section } = findCashSection(objectId, sectionId);
+  if (!section || !/^\d{4}-\d{2}-\d{2}$/.test(String(nextDate || ''))) return;
+  const updatedAt = new Date().toISOString();
+  section.staffingShifts.forEach((shift) => {
+    if (shift.date !== previousDate) return;
+    shift.date = nextDate;
+    shift.updatedAt = updatedAt;
+  });
+  saveCashflow();
+  renderCashflow();
+}
+
+function updateCashStaffingTotalsDisplay(section, sectionCard, date) {
+  const totals = cashStaffingTotals(section);
+  const summaryValues = { people: totals.people, active: totals.active, overtime: `${Math.round(totals.overtimeHours * 100) / 100} ч`, payroll: formatMoney(totals.payroll) };
+  Object.entries(summaryValues).forEach(([key, value]) => {
+    const target = $(`[data-staffing-summary="${key}"]`, sectionCard);
+    if (target) target.textContent = value;
+  });
+  const grandValues = { people: totals.people, rates: formatMoney(totals.shiftRates), overtime: `${Math.round(totals.overtimeHours * 100) / 100} ч`, overtimePay: formatMoney(totals.overtimePay), penalties: formatMoney(totals.penalties), payroll: formatMoney(totals.payroll) };
+  Object.entries(grandValues).forEach(([key, value]) => {
+    const target = $(`[data-staffing-grand-summary="${key}"]`, sectionCard);
+    if (target) target.textContent = value;
+  });
+  const day = $$('[data-staffing-day]', sectionCard).find((item) => item.dataset.staffingDay === date);
+  if (!day) return;
+  const dayTotals = cashStaffingTotalsForShifts(section.staffingShifts.filter((shift) => shift.date === date));
+  const people = $('[data-staffing-day-people]', day);
+  if (people) people.textContent = dayTotals.people;
+  const dayValues = { people: dayTotals.people, rates: formatMoney(dayTotals.shiftRates), overtime: `${Math.round(dayTotals.overtimeHours * 100) / 100} ч`, overtimePay: formatMoney(dayTotals.overtimePay), penalties: formatMoney(dayTotals.penalties), payroll: formatMoney(dayTotals.payroll) };
+  Object.entries(dayValues).forEach(([key, value]) => {
+    const target = $(`[data-staffing-day-summary="${key}"]`, day);
+    if (target) target.textContent = value;
+  });
 }
 
 function updateCashStaffingShift(objectId, sectionId, shiftId, field, value, row, sectionCard) {
@@ -4338,14 +4444,13 @@ function updateCashStaffingShift(objectId, sectionId, shiftId, field, value, row
   shift.updatedAt = new Date().toISOString();
   saveCashflow();
   const calculation = cashStaffingCalculation(shift);
-  $('[data-staffing-weekday]', row).textContent = cashStaffingWeekday(shift.date);
+  const weekday = $('[data-staffing-weekday]', row);
+  if (weekday) weekday.textContent = cashStaffingWeekday(shift.date);
   $('[data-staffing-planned-hours]', row).textContent = calculation.plannedHours;
   $('[data-staffing-overtime-hours]', row).textContent = calculation.overtimeHours;
   $('[data-staffing-overtime-pay]', row).textContent = formatMoney(calculation.overtimePay);
   $('[data-staffing-salary]', row).textContent = formatMoney(calculation.salary);
-  const totals = cashStaffingTotals(section);
-  const summaryValues = { people: totals.people, active: totals.active, overtime: `${Math.round(totals.overtimeHours * 100) / 100} ч`, payroll: formatMoney(totals.payroll) };
-  Object.entries(summaryValues).forEach(([key, text]) => { const target = $(`[data-staffing-summary="${key}"]`, sectionCard); if (target) target.textContent = text; });
+  updateCashStaffingTotalsDisplay(section, sectionCard, shift.date);
 }
 
 function openCashStaffingShift(objectId, sectionId, shiftId) {
@@ -4512,6 +4617,12 @@ function bindCashSectionEvents(object, scope) {
       $$('[data-open-cash-attachment-version]', sectionCard).forEach((button) => button.addEventListener('click', () => openCashSectionAttachment(object.id, section.id, button.dataset.cashAttachmentKind, button.dataset.openCashAttachmentVersion)));
       $$('[data-delete-cash-attachment]', sectionCard).forEach((button) => button.addEventListener('click', () => deleteCashSectionAttachment(object.id, section.id, button.dataset.deleteCashAttachment)));
       $('[data-add-staffing-shift]', sectionCard)?.addEventListener('click', () => addCashStaffingShift(object.id, section.id));
+      $('[data-add-staffing-day]', sectionCard)?.addEventListener('click', () => addCashStaffingDay(object.id, section.id));
+      $$('[data-add-staffing-person-date]', sectionCard).forEach((button) => button.addEventListener('click', () => addCashStaffingShift(object.id, section.id, button.dataset.addStaffingPersonDate)));
+      $$('[data-staffing-day-date]', sectionCard).forEach((input) => input.addEventListener('change', () => {
+        const day = input.closest('[data-staffing-day]');
+        if (day) updateCashStaffingDayDate(object.id, section.id, day.dataset.staffingDay, input.value);
+      }));
       $$('[data-staffing-shift]', sectionCard).forEach((row) => {
         const shiftId = row.dataset.staffingShift;
         $$('[data-staffing-field]', row).forEach((input) => input.addEventListener('input', () => {

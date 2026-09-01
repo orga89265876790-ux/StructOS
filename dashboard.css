@@ -599,25 +599,38 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .cash-staffing-block > header > div { min-width: 0; }
 .cash-staffing-block > header h4 { margin: 3px 0; color: var(--cyan); font-size: 17px; }
 .cash-staffing-block > header p { margin: 0; color: var(--muted); font-size: 8px; }
-.cash-staffing-block > header > button { min-width: 158px; min-height: 42px; font-size: 8px; }
+.cash-staffing-actions { min-width: 0; display: flex; align-items: stretch; justify-content: flex-end; gap: 7px; }
+.cash-staffing-actions button { min-width: 158px; min-height: 42px; padding-inline: 11px; font-size: 8px; white-space: nowrap; }
 .cash-staffing-summary { margin-top: 11px; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 6px; }
 .cash-staffing-summary article { min-width: 0; min-height: 62px; padding: 8px; display: grid; align-content: space-between; gap: 6px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-soft); }
 .cash-staffing-summary span { color: var(--muted); font-size: 7px; }
 .cash-staffing-summary strong { overflow: hidden; color: var(--cyan); font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
 .cash-staffing-formula { margin: 8px 0; padding: 8px 10px; display: flex; align-items: center; gap: 8px; color: var(--muted); border: 1px solid var(--line); border-radius: 10px; background: color-mix(in srgb,var(--surface-soft) 88%,#086bdc); font-size: 8px; line-height: 1.4; }
 .cash-staffing-formula > span { width: 23px; height: 23px; flex: 0 0 auto; display: grid; place-items: center; color: var(--cyan); border: 1px solid var(--line-strong); border-radius: 7px; font-size: 12px; font-weight: 800; }
-.cash-staffing-table { min-width: 0; overflow-x: auto; scrollbar-width: thin; }
-.cash-staffing-table-head, .cash-staffing-row { min-width: 1120px; display: grid; grid-template-columns: 108px minmax(190px,1.25fr) 126px 172px 92px 112px 98px minmax(160px,1fr) 32px; gap: 5px; }
+.cash-staffing-table { min-width: 0; display: grid; gap: 10px; }
+.cash-staffing-day { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 13px; background: color-mix(in srgb,var(--surface-soft) 92%,transparent); }
+.cash-staffing-day-head { min-height: 62px; padding: 8px; display: grid; grid-template-columns: minmax(260px,1fr) auto auto; align-items: center; gap: 8px; border-bottom: 1px solid var(--line); background: color-mix(in srgb,var(--surface) 88%,#086bdc); }
+.cash-staffing-day-date { min-width: 0; display: grid; grid-template-columns: minmax(150px,190px) minmax(95px,1fr); align-items: end; gap: 8px; }
+.cash-staffing-day-date label, .cash-staffing-day-date > strong { min-width: 0; display: grid; gap: 4px; }
+.cash-staffing-day-date span { color: var(--muted); font-size: 7px; font-weight: 650; text-transform: uppercase; }
+.cash-staffing-day-date input { width: 100%; min-width: 0; height: 37px; padding: 0 9px; color: var(--text); border: 1px solid var(--line); border-radius: 9px; outline: 0; background: var(--surface); font-size: 9px; }
+.cash-staffing-day-date input:focus { border-color: var(--cyan); box-shadow: 0 0 0 2px rgba(41,198,255,.1); }
+.cash-staffing-day-date b { min-height: 37px; padding: 0 9px; display: flex; align-items: center; overflow: hidden; color: var(--blue); border: 1px solid var(--line); border-radius: 9px; background: var(--surface-soft); font-size: 9px; text-transform: capitalize; text-overflow: ellipsis; white-space: nowrap; }
+.cash-staffing-day-people { min-width: 76px; min-height: 37px; padding: 0 9px; display: flex; align-items: center; justify-content: center; gap: 5px; color: var(--muted); border: 1px solid var(--line); border-radius: 9px; background: var(--surface-soft); font-size: 8px; white-space: nowrap; }
+.cash-staffing-day-people b { color: var(--cyan); font-size: 12px; }
+.cash-staffing-day-head > button { min-height: 37px; padding-inline: 10px; font-size: 8px; white-space: nowrap; }
+.cash-staffing-day-table { min-width: 0; padding: 7px; overflow-x: auto; scrollbar-width: thin; }
+.cash-staffing-table-head, .cash-staffing-row { min-width: 1000px; display: grid; grid-template-columns: 34px minmax(180px,1.25fr) 122px 160px 86px 108px 96px minmax(150px,1fr) 32px; gap: 5px; }
 .cash-staffing-table-head { padding: 0 7px 5px; color: var(--muted); font-size: 6px; font-weight: 750; line-height: 1.25; text-transform: uppercase; }
 .cash-staffing-table-head span { align-self: end; }
 .cash-staffing-rows { display: grid; gap: 6px; }
 .cash-staffing-row { position: relative; padding: 7px; align-items: stretch; border: 1px solid var(--line); border-radius: 11px; background: var(--surface-soft); }
 .cash-staffing-row.is-open { border-color: rgba(42,164,255,.58); box-shadow: inset 3px 0 0 #2aa4ff; }
 .cash-staffing-row.is-closed { border-color: rgba(48,205,148,.46); box-shadow: inset 3px 0 0 #30cd94; }
+.cash-staffing-number { width: 28px; height: 28px; align-self: center; display: grid; place-items: center; color: var(--cyan); border: 1px solid var(--line-strong); border-radius: 8px; background: var(--surface); font-size: 10px; font-weight: 800; }
 .cash-staffing-cell { min-width: 0; display: grid; align-content: center; gap: 4px; }
 .cash-staffing-cell input { min-width: 0; width: 100%; height: 31px; padding: 5px 7px; color: var(--text); border: 1px solid var(--line); border-radius: 8px; outline: 0; background: var(--surface); font-size: 7px; }
 .cash-staffing-cell input:focus { border-color: var(--cyan); box-shadow: 0 0 0 2px rgba(41,198,255,.1); }
-.cash-staffing-cell.is-date strong { overflow: hidden; color: var(--blue); font-size: 7px; text-transform: capitalize; text-overflow: ellipsis; white-space: nowrap; }
 .cash-staffing-cell.is-plan { grid-template-columns: 1fr 1fr; }
 .cash-staffing-cell.is-plan label { min-width: 0; display: grid; gap: 2px; }
 .cash-staffing-cell.is-plan label small { color: var(--muted); font-size: 6px; }
@@ -634,6 +647,17 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .cash-staffing-delete { width: 32px; min-height: 32px; align-self: center; padding: 0; color: #ff6577; border: 1px solid rgba(255,91,113,.4); border-radius: 8px; background: rgba(226,29,58,.07); font-size: 18px; cursor: pointer; transition: color .18s ease,border-color .18s ease,background .18s ease,transform .18s ease; }
 .cash-staffing-delete:hover { color: #fff; border-color: rgba(255,91,113,.75); background: rgba(226,29,58,.22); }
 .cash-staffing-delete:active { transform: scale(.94); }
+.cash-staffing-day-total, .cash-staffing-grand-total { padding: 9px; display: grid; grid-template-columns: auto minmax(0,1fr); align-items: stretch; gap: 9px; border-top: 1px solid var(--line); background: color-mix(in srgb,var(--surface) 87%,#086bdc); }
+.cash-staffing-day-total > strong, .cash-staffing-grand-total > strong { min-width: 98px; display: flex; align-items: center; color: var(--text); font-size: 9px; }
+.cash-staffing-day-total > div, .cash-staffing-grand-total > div { min-width: 0; display: grid; grid-template-columns: .55fr 1fr 1.15fr 1fr 1.15fr; gap: 5px; }
+.cash-staffing-day-total span, .cash-staffing-grand-total span { min-width: 0; min-height: 49px; padding: 6px 7px; display: grid; align-content: space-between; gap: 4px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-soft); }
+.cash-staffing-day-total small, .cash-staffing-grand-total small { overflow: hidden; color: var(--muted); font-size: 6px; text-overflow: ellipsis; white-space: nowrap; }
+.cash-staffing-day-total b, .cash-staffing-grand-total b { min-width: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 5px; overflow: hidden; color: var(--cyan); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
+.cash-staffing-day-total b i, .cash-staffing-grand-total b i { overflow: hidden; text-overflow: ellipsis; font-style: normal; }
+.cash-staffing-day-total .is-payroll, .cash-staffing-grand-total .is-payroll { border-color: rgba(48,205,148,.3); background: rgba(28,173,119,.07); }
+.cash-staffing-day-total .is-payroll b, .cash-staffing-grand-total .is-payroll b { color: #45dba6; }
+.cash-staffing-grand-total { margin-top: 10px; border: 1px solid var(--line-strong); border-radius: 12px; background: linear-gradient(135deg,color-mix(in srgb,var(--surface) 88%,#086bdc),var(--surface)); }
+.cash-staffing-grand-total > strong { color: var(--cyan); font-size: 11px; }
 .cash-staffing-empty { min-width: 0; min-height: 105px; display: grid; place-items: center; align-content: center; gap: 6px; color: var(--muted); text-align: center; border: 1px dashed var(--line); border-radius: 11px; background: var(--surface-soft); }
 .cash-staffing-empty span { color: var(--cyan); font-size: 23px; }
 .cash-staffing-empty p { margin: 0; font-size: 8px; }
@@ -943,20 +967,52 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
   .structos-connection-row { grid-template-columns: 36px minmax(0,1fr); }.structos-connection-row > button { grid-column: 1/-1; width: 100%; }.structos-connection-logo { width: 36px; height: 36px; }
 }
 
+@media (max-width:1100px) {
+  .cash-staffing-day-table { overflow: visible; }
+  .cash-staffing-table-head { display: none; }
+  .cash-staffing-row { min-width: 0; padding: 38px 10px 10px; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 9px; }
+  .cash-staffing-number { position: absolute; top: 7px; left: 9px; width: 26px; height: 26px; }
+  .cash-staffing-cell { position: relative; padding-top: 17px; }
+  .cash-staffing-cell::before { content: attr(data-label); position: absolute; top: 0; left: 0; color: var(--muted); font-size: 7px; font-weight: 750; line-height: 1.2; text-transform: uppercase; }
+  .cash-staffing-cell input { height: 38px; padding-inline: 9px; font-size: 10px; }
+  .cash-staffing-cell.is-person { grid-column: 1/3; grid-template-columns: 1.35fr .65fr; }
+  .cash-staffing-cell.is-plan { grid-column: 3/5; }
+  .cash-staffing-cell.is-actual { grid-column: 1/3; }
+  .cash-staffing-cell.is-money { grid-column: 3; }
+  .cash-staffing-cell.is-calculation { grid-column: 4; }
+  .cash-staffing-cell.is-salary { grid-column: 1/3; min-height: 54px; }
+  .cash-staffing-cell.is-penalty { grid-column: 3/5; grid-template-columns: .65fr 1.35fr; }
+  .cash-staffing-cell.is-actual small, .cash-staffing-cell.is-plan label small, .cash-staffing-cell.is-plan > em { font-size: 8px; }
+  .cash-staffing-cell.is-calculation strong, .cash-staffing-cell.is-salary strong { font-size: 12px; }
+  .cash-staffing-cell.is-calculation small { font-size: 9px; }
+  .cash-staffing-shift-button, .cash-staffing-closed-badge { min-height: 38px; font-size: 9px; }
+  .cash-staffing-delete { position: absolute; top: 7px; right: 9px; width: 28px; min-height: 28px; }
+}
 @media (max-width:700px) {
   .cash-source-files { grid-template-columns: 1fr; }
   .cash-staffing-block { padding: 10px; }
   .cash-staffing-block > header { align-items: stretch; display: grid; grid-template-columns: 1fr; }
-  .cash-staffing-block > header > button { width: 100%; min-width: 0; }
+  .cash-staffing-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .cash-staffing-actions button { width: 100%; min-width: 0; white-space: normal; }
   .cash-staffing-summary { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .cash-staffing-table { overflow: visible; }
-  .cash-staffing-table-head { display: none; }
-  .cash-staffing-row { min-width: 0; padding: 30px 8px 8px; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
-  .cash-staffing-cell { padding-top: 14px; position: relative; }
-  .cash-staffing-cell::before { content: attr(data-label); position: absolute; top: 0; left: 0; color: var(--muted); font-size: 6px; font-weight: 750; text-transform: uppercase; }
-  .cash-staffing-cell.is-person, .cash-staffing-cell.is-actual, .cash-staffing-cell.is-penalty { grid-column: 1/-1; }
-  .cash-staffing-cell.is-person, .cash-staffing-cell.is-penalty { grid-template-columns: 1fr 1fr; }
-  .cash-staffing-delete { position: absolute; top: 6px; right: 6px; }
+  .cash-staffing-day-head { grid-template-columns: minmax(0,1fr) auto; }
+  .cash-staffing-day-head > button { grid-column: 1/-1; width: 100%; }
+  .cash-staffing-row { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .cash-staffing-cell.is-person, .cash-staffing-cell.is-plan, .cash-staffing-cell.is-actual, .cash-staffing-cell.is-salary, .cash-staffing-cell.is-penalty { grid-column: 1/-1; }
+  .cash-staffing-cell.is-money { grid-column: 1; }
+  .cash-staffing-cell.is-calculation { grid-column: 2; }
+  .cash-staffing-day-total, .cash-staffing-grand-total { grid-template-columns: 1fr; }
+  .cash-staffing-day-total > strong, .cash-staffing-grand-total > strong { min-width: 0; }
+  .cash-staffing-day-total > div, .cash-staffing-grand-total > div { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .cash-staffing-day-total .is-payroll, .cash-staffing-grand-total .is-payroll { grid-column: 1/-1; }
+}
+@media (max-width:430px) {
+  .cash-staffing-actions { grid-template-columns: 1fr; }
+  .cash-staffing-day-head { grid-template-columns: 1fr; }
+  .cash-staffing-day-date { grid-template-columns: 1fr; }
+  .cash-staffing-day-people { justify-self: stretch; }
+  .cash-staffing-day-head > button { grid-column: 1; }
+  .cash-staffing-cell.is-person, .cash-staffing-cell.is-penalty { grid-template-columns: 1fr; }
 }
 @media (max-width:620px) {
   .cash-section-head { grid-template-columns: 1fr; }
