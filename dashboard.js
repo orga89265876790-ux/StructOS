@@ -8057,7 +8057,7 @@ function renderOfflineSyncState(state = offlineSyncState) {
   const pendingSections = Math.max(0, Number(state.pendingCount) || 0);
   const pendingSubsections = Math.max(0, Number(state.pendingSubsectionCount) || 0);
   if (pendingSummary) {
-    pendingSummary.classList.toggle('is-synced', pendingSections === 0);
+    pendingSummary.classList.toggle('is-synced', pendingSections === 0 && pendingSubsections === 0);
     $('[data-sync-pending-sections]', pendingSummary).textContent = String(pendingSections);
     $('[data-sync-pending-section-label]', pendingSummary).textContent = offlineSyncCountWord('syncSection', pendingSections);
     $('[data-sync-pending-subsections]', pendingSummary).textContent = String(pendingSubsections);
