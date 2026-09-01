@@ -748,6 +748,7 @@ Object.assign(copy.RU, {
   syncDialogTitle: 'Что синхронизировать?', syncDialogHint: 'Выберите данные, которые нужно сохранить на телефоне и сверять с StructOS Cloud.', syncChooseData: 'Данные для синхронизации',
   syncCategoryProjects: 'Объекты и проекты', syncCategoryProjectsHint: 'Карточки объектов, проекты и порядок', syncCategoryStaff: 'Сотрудники и табели', syncCategoryStaffHint: 'Люди, смены, переработки и выплаты', syncCategoryFinance: 'Финансы', syncCategoryFinanceHint: 'Доходы, расходы, договоры и расчёты', syncCategoryWarehouse: 'Склад и материалы', syncCategoryWarehouseHint: 'Материалы, оборудование и остатки', syncCategoryDocuments: 'Документы и отчёты', syncCategoryDocumentsHint: 'Документы, акты, отчёты и локальные файлы', syncCategoryProfile: 'Профиль и настройки', syncCategoryProfileHint: 'Паспорт, связи и рабочее пространство',
   syncSelected: 'Синхронизировать выбранное', syncAll: 'Синхронизировать всё', syncSelectOne: 'Выберите хотя бы один раздел.',
+  syncPendingTotal: 'ИТОГО НЕ СИНХРОНИЗИРОВАНО', syncSectionOne: 'раздел', syncSectionFew: 'раздела', syncSectionMany: 'разделов', syncSubsectionOne: 'подраздел', syncSubsectionFew: 'подраздела', syncSubsectionMany: 'подразделов',
   syncServerOnlyNote: 'Только при наличии интернета: новый ИИ-анализ, внешние сообщения, актуальные предложения поставщиков и другие серверные функции.',
   syncServerRole: 'SERVER', syncServerMain: 'Главный источник данных', syncDeviceRole: 'DEVICE', syncDeviceCopy: 'Рабочая локальная копия', syncEngineRole: 'SYNC ENGINE', syncEngineCopy: 'Постоянно сводит данные',
   syncOnlineTitle: 'Интернет доступен', syncOnlineCopy: 'Данные сохранятся на телефоне и будут отправлены в облако.', syncOfflineTitle: 'Работа без интернета', syncOfflineCopy: 'Данные сохранятся на телефоне и встанут в очередь до появления сети.',
@@ -760,6 +761,7 @@ Object.assign(copy.EN, {
   syncDialogTitle: 'What should be synced?', syncDialogHint: 'Choose the data to save on this phone and reconcile with StructOS Cloud.', syncChooseData: 'Data to synchronize',
   syncCategoryProjects: 'Objects and projects', syncCategoryProjectsHint: 'Object cards, projects and order', syncCategoryStaff: 'Staff and timesheets', syncCategoryStaffHint: 'People, shifts, overtime and payroll', syncCategoryFinance: 'Finance', syncCategoryFinanceHint: 'Income, expenses, contracts and calculations', syncCategoryWarehouse: 'Inventory and materials', syncCategoryWarehouseHint: 'Materials, equipment and stock', syncCategoryDocuments: 'Documents and reports', syncCategoryDocumentsHint: 'Documents, acts, reports and local files', syncCategoryProfile: 'Profile and settings', syncCategoryProfileHint: 'Passport, connections and workspace',
   syncSelected: 'Sync selected', syncAll: 'Sync everything', syncSelectOne: 'Select at least one section.',
+  syncPendingTotal: 'TOTAL NOT SYNCHRONIZED', syncSectionOne: 'section', syncSectionFew: 'sections', syncSectionMany: 'sections', syncSubsectionOne: 'subsection', syncSubsectionFew: 'subsections', syncSubsectionMany: 'subsections',
   syncServerOnlyNote: 'Internet required: new AI analysis, external messages, current supplier offers and other server-only functions.',
   syncServerRole: 'SERVER', syncServerMain: 'Primary data source', syncDeviceRole: 'DEVICE', syncDeviceCopy: 'Working local copy', syncEngineRole: 'SYNC ENGINE', syncEngineCopy: 'Continuously reconciles data',
   syncOnlineTitle: 'Internet is available', syncOnlineCopy: 'Data will be saved on the phone and sent to the cloud.', syncOfflineTitle: 'Offline mode', syncOfflineCopy: 'Data will be saved on the phone and queued until the network returns.',
@@ -772,6 +774,7 @@ Object.assign(copy.KY, {
   syncDialogTitle: 'Эмнени синхрондоштуруу керек?', syncDialogHint: 'Телефонго сакталуучу жана StructOS Cloud менен салыштырылуучу маалыматтарды тандаңыз.', syncChooseData: 'Синхрондоштуруучу маалыматтар',
   syncCategoryProjects: 'Объекттер жана долбоорлор', syncCategoryProjectsHint: 'Объект карталары, долбоорлор жана тартип', syncCategoryStaff: 'Кызматкерлер жана табелдер', syncCategoryStaffHint: 'Адамдар, сменалар, ашыкча иш жана төлөмдөр', syncCategoryFinance: 'Каржы', syncCategoryFinanceHint: 'Киреше, чыгаша, келишим жана эсептер', syncCategoryWarehouse: 'Кампа жана материалдар', syncCategoryWarehouseHint: 'Материалдар, жабдуу жана калдыктар', syncCategoryDocuments: 'Документтер жана отчёттор', syncCategoryDocumentsHint: 'Документтер, актылар, отчёттор жана файлдар', syncCategoryProfile: 'Профиль жана жөндөөлөр', syncCategoryProfileHint: 'Паспорт, байланыштар жана иш мейкиндиги',
   syncSelected: 'Тандалганды синхрондоштуруу', syncAll: 'Баарын синхрондоштуруу', syncSelectOne: 'Жок дегенде бир бөлүмдү тандаңыз.',
+  syncPendingTotal: 'БАРДЫГЫ СИНХРОНДОШТУРУЛГАН ЭМЕС', syncSectionOne: 'бөлүм', syncSectionFew: 'бөлүм', syncSectionMany: 'бөлүм', syncSubsectionOne: 'бөлүмчө', syncSubsectionFew: 'бөлүмчө', syncSubsectionMany: 'бөлүмчө',
   syncServerOnlyNote: 'Интернет менен гана: жаңы AI талдоосу, тышкы билдирүүлөр, жеткирүүчүлөрдүн учурдагы сунуштары жана башка сервердик функциялар.',
   syncServerRole: 'SERVER', syncServerMain: 'Негизги маалымат булагы', syncDeviceRole: 'DEVICE', syncDeviceCopy: 'Жумушчу жергиликтүү көчүрмө', syncEngineRole: 'SYNC ENGINE', syncEngineCopy: 'Маалыматтарды туруктуу салыштырат',
   syncOnlineTitle: 'Интернет жеткиликтүү', syncOnlineCopy: 'Маалымат телефонго сакталат жана булутка жөнөтүлөт.', syncOfflineTitle: 'Интернетсиз иштөө', syncOfflineCopy: 'Маалымат телефонго сакталат жана тармак келгенге чейин кезекте турат.',
@@ -784,6 +787,7 @@ Object.assign(copy.TJ, {
   syncDialogTitle: 'Чиро ҳамоҳанг созем?', syncDialogHint: 'Маълумотеро интихоб кунед, ки дар телефон нигоҳ дошта ва бо StructOS Cloud муқоиса мешавад.', syncChooseData: 'Маълумот барои ҳамоҳангсозӣ',
   syncCategoryProjects: 'Объектҳо ва лоиҳаҳо', syncCategoryProjectsHint: 'Кортҳои объект, лоиҳаҳо ва тартиб', syncCategoryStaff: 'Кормандон ва табелҳо', syncCategoryStaffHint: 'Одамон, бастҳо, изофакорӣ ва пардохт', syncCategoryFinance: 'Молия', syncCategoryFinanceHint: 'Даромад, хароҷот, шартнома ва ҳисобҳо', syncCategoryWarehouse: 'Анбор ва мавод', syncCategoryWarehouseHint: 'Мавод, таҷҳизот ва бақия', syncCategoryDocuments: 'Ҳуҷҷатҳо ва ҳисоботҳо', syncCategoryDocumentsHint: 'Ҳуҷҷатҳо, санадҳо, ҳисобот ва файлҳо', syncCategoryProfile: 'Профил ва танзимот', syncCategoryProfileHint: 'Шиноснома, алоқаҳо ва фазои корӣ',
   syncSelected: 'Ҳамоҳангсозии интихобшуда', syncAll: 'Ҳамоҳангсозии ҳама', syncSelectOne: 'Камаш як бахшро интихоб кунед.',
+  syncPendingTotal: 'ҲАМАИ ҲАМОҲАНГНАШУДА', syncSectionOne: 'бахш', syncSectionFew: 'бахш', syncSectionMany: 'бахш', syncSubsectionOne: 'зербахш', syncSubsectionFew: 'зербахш', syncSubsectionMany: 'зербахш',
   syncServerOnlyNote: 'Танҳо бо интернет: таҳлили нави AI, паёмҳои беруна, пешниҳодҳои ҷории таъминкунандагон ва дигар вазифаҳои серверӣ.',
   syncServerRole: 'SERVER', syncServerMain: 'Манбаи асосии маълумот', syncDeviceRole: 'DEVICE', syncDeviceCopy: 'Нусхаи маҳаллии корӣ', syncEngineRole: 'SYNC ENGINE', syncEngineCopy: 'Маълумотро пайваста муқоиса мекунад',
   syncOnlineTitle: 'Интернет дастрас аст', syncOnlineCopy: 'Маълумот дар телефон нигоҳ дошта ва ба абр фиристода мешавад.', syncOfflineTitle: 'Кор бе интернет', syncOfflineCopy: 'Маълумот дар телефон нигоҳ дошта, то барқарории шабака дар навбат мемонад.',
@@ -7897,9 +7901,63 @@ async function collectOfflineSyncCategory(category) {
   return { schemaVersion: 1 };
 }
 
+function offlineSyncHasValue(value) {
+  if (value == null) return false;
+  if (Array.isArray(value)) return value.length > 0;
+  if (typeof value === 'object') return Object.values(value).some(offlineSyncHasValue);
+  if (typeof value === 'string') return value.trim().length > 0;
+  return true;
+}
+
+function countOfflineSyncSubsections(category, payload = {}) {
+  if (category === 'projects') {
+    const objectIds = new Set([...(payload.objects || []), ...(payload.invitedObjects || [])].map((object) => object?.id).filter(Boolean));
+    const activeUploads = Object.values(payload.currentUploads || {}).filter(offlineSyncHasValue).length;
+    return objectIds.size + activeUploads;
+  }
+
+  if (category === 'staff') {
+    return (payload.objects || []).reduce((total, object) => total + (object.sections || []).length, 0);
+  }
+
+  if (category === 'finance') {
+    const financeSections = (payload.objects || []).reduce((total, object) => total + (object.sections || []).length, 0);
+    return financeSections + (offlineSyncHasValue(payload.account) ? 1 : 0);
+  }
+
+  if (category === 'warehouse') {
+    const projectFiles = (payload.projects || []).reduce((total, project) => total + (project.files || []).filter((file) =>
+      offlineSyncHasValue(file.sourceCatalog) || offlineSyncHasValue(file.materials) || offlineSyncHasValue(file.equipment) || offlineSyncHasValue(file.specification)
+    ).length, 0);
+    const cashflowSections = (payload.cashflow || []).reduce((total, object) => total + (object.sections || []).filter((section) => offlineSyncHasValue(section.sourceCatalog)).length, 0);
+    return projectFiles + cashflowSections;
+  }
+
+  if (category === 'documents') {
+    const projectFiles = (payload.projects || []).reduce((total, project) => total + (project.files || []).length, 0);
+    const cashflowDocuments = (payload.cashflow || []).reduce((total, object) => {
+      const organizationDocuments = offlineSyncHasValue(object.organizationDocuments) ? 1 : 0;
+      const sectionDocuments = (object.sections || []).filter((section) =>
+        offlineSyncHasValue(section.attachments) || offlineSyncHasValue(section.statement) || offlineSyncHasValue(section.act) || offlineSyncHasValue(section.reportHistory)
+      ).length;
+      return total + organizationDocuments + sectionDocuments;
+    }, 0);
+    const localFiles = (payload.localFileInventory?.cashflowFileIds || []).length + (payload.localFileInventory?.drawingIds || []).length;
+    return projectFiles + cashflowDocuments + localFiles;
+  }
+
+  if (category === 'profile') {
+    return ['person', 'profile', 'builderPassport', 'plan', 'connections', 'preferences']
+      .filter((key) => offlineSyncHasValue(payload[key])).length;
+  }
+
+  return 0;
+}
+
 const offlineSync = createOfflineSyncEngine({
   categories: OFFLINE_SYNC_CATEGORIES.map((category) => category.id),
-  collectCategory: collectOfflineSyncCategory
+  collectCategory: collectOfflineSyncCategory,
+  countSubsections: countOfflineSyncSubsections
 });
 let offlineSyncState = offlineSync.getState();
 let offlineSyncNetworkMode = navigator.onLine ? 'online' : 'offline';
@@ -7914,11 +7972,33 @@ function offlineSyncDate(value) {
   }
 }
 
+function offlineSyncCountWord(prefix, count) {
+  if (language === 'RU') {
+    const lastTwo = count % 100;
+    const last = count % 10;
+    if (last === 1 && lastTwo !== 11) return tr(`${prefix}One`);
+    if (last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14)) return tr(`${prefix}Few`);
+  } else if (language === 'EN' && count === 1) {
+    return tr(`${prefix}One`);
+  }
+  return tr(`${prefix}Many`);
+}
+
 function renderOfflineSyncState(state = offlineSyncState) {
   const section = $('.home-sync-section');
   const status = $('[data-sync-live-status]');
   if (!section || !status) return;
   section.dataset.syncNetwork = state.online ? offlineSyncNetworkMode : 'offline';
+  const pendingSummary = $('[data-sync-pending-summary]', section);
+  const pendingSections = Math.max(0, Number(state.pendingCount) || 0);
+  const pendingSubsections = Math.max(0, Number(state.pendingSubsectionCount) || 0);
+  if (pendingSummary) {
+    pendingSummary.classList.toggle('is-synced', pendingSections === 0);
+    $('[data-sync-pending-sections]', pendingSummary).textContent = String(pendingSections);
+    $('[data-sync-pending-section-label]', pendingSummary).textContent = offlineSyncCountWord('syncSection', pendingSections);
+    $('[data-sync-pending-subsections]', pendingSummary).textContent = String(pendingSubsections);
+    $('[data-sync-pending-subsection-label]', pendingSummary).textContent = offlineSyncCountWord('syncSubsection', pendingSubsections);
+  }
   status.classList.remove('is-ready', 'is-synced', 'is-offline', 'is-syncing', 'is-error');
 
   let title = tr('syncStatePreparingTitle');

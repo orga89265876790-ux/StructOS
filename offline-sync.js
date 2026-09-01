@@ -92,6 +92,7 @@ function normalizeSelection(selection, availableCategories) {
 export function createOfflineSyncEngine({
   categories,
   collectCategory,
+  countSubsections,
   applyServerRecord,
   transport = null,
   watchInterval = DEFAULT_WATCH_INTERVAL
@@ -109,6 +110,7 @@ export function createOfflineSyncEngine({
     syncing: false,
     phase: navigator.onLine ? 'checking' : 'offline',
     pendingCount: 0,
+    pendingSubsectionCount: 0,
     conflictCount: 0,
     lastLocalSaveAt: null,
     lastSyncAt: null,
@@ -150,7 +152,16 @@ export function createOfflineSyncEngine({
 
   async function refreshCounts() {
     const [pending, conflicts] = await Promise.all([readStore(OUTBOX_STORE), readStore(CONFLICT_STORE)]);
-    publish({ pendingCount: pending.length, conflictCount: conflicts.length });
+    const pendingSubsectionCount = pending.reduce((total, record) => {
+      if (typeof countSubsections !== 'function') return total;
+      try {
+        const count = Number(countSubsections(record.category, record.payload));
+        return total + (Number.isFinite(count) ? Math.max(0, Math.trunc(count)) : 0);
+      } catch {
+        return total;
+      }
+    }, 0);
+    publish({ pendingCount: pending.length, pendingSubsectionCount, conflictCount: conflicts.length });
     return { pending, conflicts };
   }
 
