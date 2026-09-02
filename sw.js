@@ -1,4 +1,4 @@
-const CACHE_NAME = 'structos-offline-v87';
+const CACHE_NAME = 'structos-offline-v88';
 const CORE_PAGES = ['./', './dashboard.html', './passport.html', './login.html', './manifest.webmanifest'];
 const OPTIONAL_SOURCE_ASSETS = [
   './dashboard.js',
@@ -133,6 +133,7 @@ self.addEventListener('push', (event) => {
     badge: './assets/favicon-192.png',
     tag: String(payload.tag || 'structos-notification').slice(0, 120),
     renotify: Boolean(payload.renotify),
+    vibrate: [90, 40, 90],
     data: {
       url: notificationTarget(payload.url),
       type: String(payload.type || 'notice').slice(0, 40),

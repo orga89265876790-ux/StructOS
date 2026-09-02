@@ -8223,7 +8223,7 @@ async function testPushNotification() {
       await invokePushApi({ action: 'send-test', language });
     } else {
       if (Notification.permission !== 'granted') { await enablePushNotifications(); return; }
-      await registration.showNotification(tr('pushTestTitle'), { body: tr('pushTestBody'), icon: './assets/favicon-192.png', badge: './assets/favicon-192.png', tag: 'structos-test', data: { url: new URL('./dashboard.html#notifications', location.href).href } });
+      await registration.showNotification(tr('pushTestTitle'), { body: tr('pushTestBody'), icon: './assets/favicon-192.png', badge: './assets/favicon-192.png', tag: 'structos-test', renotify: true, vibrate: [90, 40, 90], data: { url: new URL('./dashboard.html#notifications', location.href).href } });
     }
     showToast(tr('pushTestSent'));
   } catch (error) {
