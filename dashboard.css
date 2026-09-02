@@ -1354,6 +1354,21 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .proposal-price-mode-groups label > span { width: 18px; height: 18px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--surface-soft); }
 .proposal-price-mode-groups label.is-active > span { border: 5px solid var(--blue); background: #fff; }
 .proposal-price-mode-groups label > strong { min-width: 0; font-size: 11px; line-height: 1.3; }
+.commercial-proposal-labor-settings { margin: 16px 0; padding: 13px; display: grid; gap: 12px; border: 1px solid rgba(47,184,255,.38); border-radius: 14px; background: linear-gradient(135deg,var(--surface-soft),color-mix(in srgb,var(--surface-soft) 94%,#0878e9)); }
+.commercial-proposal-labor-settings > header { display: grid; grid-template-columns: 38px minmax(0,1fr); align-items: center; gap: 10px; }
+.commercial-proposal-labor-settings > header > span { width: 38px; height: 38px; display: grid; place-items: center; color: var(--cyan); border: 1px solid var(--line-strong); border-radius: 11px; background: var(--surface); font-size: 16px; font-weight: 850; }
+.commercial-proposal-labor-settings h3,.commercial-proposal-labor-settings p { margin: 0; }
+.commercial-proposal-labor-settings h3 { font-size: 15px; }
+.commercial-proposal-labor-settings p { margin-top: 3px; color: var(--muted); font-size: 11px; line-height: 1.4; }
+.commercial-proposal-labor-settings > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)) minmax(180px,.75fr); gap: 8px; }
+.commercial-proposal-labor-settings label,.commercial-proposal-labor-settings output { min-width: 0; min-height: 70px; padding: 9px; display: grid; align-content: space-between; gap: 6px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); }
+.commercial-proposal-labor-settings label > span,.commercial-proposal-labor-settings output > span { color: var(--muted); font-size: 11px; font-weight: 700; }
+.commercial-proposal-labor-settings label > div { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 6px; }
+.commercial-proposal-labor-settings input { width: 100%; min-width: 0; min-height: 38px; padding: 0 8px; color: var(--text); text-align: right; border: 1px solid var(--line); border-radius: 8px; outline: 0; background: var(--surface-soft); font-size: 13px; }
+.commercial-proposal-labor-settings input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,119,255,.1); }
+.commercial-proposal-labor-settings label b { color: var(--muted); font-size: 12px; }
+.commercial-proposal-labor-settings output { border-color: rgba(47,209,164,.4); background: color-mix(in srgb,var(--surface) 92%,#13ae83); }
+.commercial-proposal-labor-settings output strong { color: #38d9a4; font-size: 18px; }
 .commercial-proposal-table-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-soft); }
 .commercial-proposal-price-table { width: 100%; min-width: 930px; border-collapse: collapse; }
 .commercial-proposal-price-table th,.commercial-proposal-price-table td { padding: 8px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 11px; vertical-align: middle; }
@@ -1372,6 +1387,12 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .commercial-proposal-price-table td.is-money { min-width: 106px; text-align: right; white-space: nowrap; }
 .commercial-proposal-price-table td.is-tax { color: #e4a73e; font-weight: 750; }
 .commercial-proposal-price-table td.is-total { color: #3edaa7; font-weight: 850; }
+.commercial-proposal-labor-table { min-width: 830px; }
+.commercial-proposal-labor-table th:last-child { width: 126px; text-align: right; }
+.commercial-proposal-labor-table .proposal-labor-quantity { text-align: right; font-weight: 750; }
+.proposal-labor-name { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 8px; }
+.proposal-labor-name > span { min-width: 0; }
+.proposal-labor-remove { width: 30px; height: 30px; display: grid; place-items: center; color: var(--danger); border: 1px solid color-mix(in srgb,var(--danger) 40%,var(--line)); border-radius: 8px; background: color-mix(in srgb,var(--danger) 8%,transparent); font-size: 18px; cursor: pointer; }
 .proposal-line-action { text-align: center; }
 .proposal-line-controls { display: flex; align-items: center; justify-content: center; gap: 5px; }
 .proposal-send-to-my { width: 34px; height: 34px; margin: auto; display: grid; place-items: center; cursor: pointer; }
@@ -2258,6 +2279,7 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
   .commercial-proposal-editor-body > header { align-items: stretch; flex-direction: column; }
   .commercial-proposal-editor-header-actions { justify-content: stretch; }
   .commercial-proposal-add-own,.commercial-proposal-save-my { flex: 1 1 220px; }
+  .commercial-proposal-labor-settings > div { grid-template-columns: 1fr; }
   .commercial-proposal-fragment-list { grid-template-columns: 1fr; }
 }
 
