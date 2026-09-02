@@ -1351,8 +1351,9 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .proposal-price-mode-groups label:hover { border-color: var(--line); background: var(--surface-soft); }
 .proposal-price-mode-groups label.is-active { border-color: rgba(31,174,255,.42); background: rgba(13,116,229,.09); }
 .proposal-price-mode-groups input { position: absolute; opacity: 0; pointer-events: none; }
-.proposal-price-mode-groups label > span { width: 18px; height: 18px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--surface-soft); }
-.proposal-price-mode-groups label.is-active > span { border: 5px solid var(--blue); background: #fff; }
+.proposal-price-mode-groups label > span { width: 18px; height: 18px; display: grid; place-items: center; color: transparent; border: 1px solid var(--line-strong); border-radius: 5px; background: var(--surface-soft); font-size: 12px; font-weight: 900; }
+.proposal-price-mode-groups label.is-active > span { color: #fff; border-color: var(--blue); background: linear-gradient(135deg,var(--blue),var(--cyan)); }
+.proposal-price-mode-groups input:focus-visible + span { outline: 3px solid rgba(22,119,255,.2); outline-offset: 2px; }
 .proposal-price-mode-groups label > strong { min-width: 0; font-size: 11px; line-height: 1.3; }
 .commercial-proposal-labor-settings { margin: 16px 0; padding: 13px; display: grid; gap: 12px; border: 1px solid rgba(47,184,255,.38); border-radius: 14px; background: linear-gradient(135deg,var(--surface-soft),color-mix(in srgb,var(--surface-soft) 94%,#0878e9)); }
 .commercial-proposal-labor-settings > header { display: grid; grid-template-columns: 38px minmax(0,1fr); align-items: center; gap: 10px; }
@@ -1371,6 +1372,8 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .commercial-proposal-labor-settings output strong { color: #38d9a4; font-size: 18px; }
 .commercial-proposal-table-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-soft); }
 .commercial-proposal-price-table { width: 100%; min-width: 930px; border-collapse: collapse; }
+.commercial-proposal-price-table.has-1-taxes { min-width: 1040px; }
+.commercial-proposal-price-table.has-2-taxes { min-width: 1150px; }
 .commercial-proposal-price-table th,.commercial-proposal-price-table td { padding: 8px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 11px; vertical-align: middle; }
 .commercial-proposal-price-table th { color: var(--muted); text-align: left; background: var(--surface); font-size: 10px; line-height: 1.25; }
 .commercial-proposal-price-table th:first-child,.commercial-proposal-price-table td:first-child { width: 38px; text-align: center; }
