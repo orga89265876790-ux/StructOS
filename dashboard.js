@@ -698,6 +698,39 @@ Object.assign(copy.TJ, {
   proposalAssociatedForColumn: 'Кори ҳамроҳ', proposalAssociatedForPlaceholder: 'Барои кадом корҳо'
 });
 
+Object.assign(copy.RU, {
+  excludedUnitPriceWithoutTax: 'Цена за ед. без налога', excludedTotalWithoutTax: 'Итого без налога',
+  excludedUnitPriceWithTax: 'Цена за ед. с', excludedTotalWithTax: 'Итого цена с', excludedTaxTotal: 'Итого',
+  proposalSpecificationEquipmentShort: 'Оборудование по спец-ии', proposalSpecificationMaterialsShort: 'Материал по спец-ии',
+  proposalPossibleEquipmentShort: 'Возможное оборуд-ие', proposalPossibleMaterialsShort: 'Возможные материалы',
+  proposalLaborHoursHint: 'Здесь собраны все позиции спецификации и сохранённые позиции из «Моё КП». Если позиция добавлена вручную, StructOS не рассчитывает для неё часы — проставьте их самостоятельно.',
+  laborWorksFromSpecification: 'Работы из спецификации', laborWorkName: 'Наименование работ'
+});
+Object.assign(copy.EN, {
+  excludedUnitPriceWithoutTax: 'Unit price without tax', excludedTotalWithoutTax: 'Total without tax',
+  excludedUnitPriceWithTax: 'Unit price with', excludedTotalWithTax: 'Total price with', excludedTaxTotal: 'Total',
+  proposalSpecificationEquipmentShort: 'Equipment by specification', proposalSpecificationMaterialsShort: 'Materials by specification',
+  proposalPossibleEquipmentShort: 'Possible equipment', proposalPossibleMaterialsShort: 'Possible materials',
+  proposalLaborHoursHint: 'This section contains all specification lines and saved lines from “My proposal”. For a manually added line, StructOS does not calculate hours; enter them yourself.',
+  laborWorksFromSpecification: 'Works from specification', laborWorkName: 'Work name'
+});
+Object.assign(copy.KY, {
+  excludedUnitPriceWithoutTax: 'Салыксыз бирдик баасы', excludedTotalWithoutTax: 'Салыксыз жыйынтык',
+  excludedUnitPriceWithTax: 'Салык менен бирдик баасы', excludedTotalWithTax: 'Салык менен жалпы баа', excludedTaxTotal: 'Жыйынтык',
+  proposalSpecificationEquipmentShort: 'Спецификациядагы жабдуу', proposalSpecificationMaterialsShort: 'Спецификациядагы материал',
+  proposalPossibleEquipmentShort: 'Мүмкүн болгон жабдуу', proposalPossibleMaterialsShort: 'Мүмкүн болгон материалдар',
+  proposalLaborHoursHint: 'Бул жерде спецификациядагы бардык позициялар жана «Менин КПдан» сакталган позициялар чогултулган. Кол менен кошулган позициянын саатын StructOS эсептебейт — саатты өзүңүз киргизиңиз.',
+  laborWorksFromSpecification: 'Спецификациядагы иштер', laborWorkName: 'Иштин аталышы'
+});
+Object.assign(copy.TJ, {
+  excludedUnitPriceWithoutTax: 'Нархи воҳид бе андоз', excludedTotalWithoutTax: 'Ҷамъ бе андоз',
+  excludedUnitPriceWithTax: 'Нархи воҳид бо', excludedTotalWithTax: 'Нархи умумӣ бо', excludedTaxTotal: 'Ҷамъ',
+  proposalSpecificationEquipmentShort: 'Таҷҳизот аз рӯи мушаххасот', proposalSpecificationMaterialsShort: 'Мавод аз рӯи мушаххасот',
+  proposalPossibleEquipmentShort: 'Таҷҳизоти имконпазир', proposalPossibleMaterialsShort: 'Маводи имконпазир',
+  proposalLaborHoursHint: 'Дар ин ҷо ҳамаи мавқеъҳои мушаххасот ва мавқеъҳои нигоҳдошташуда аз «КП-и ман» ҷамъ шудаанд. Барои мавқеи дастӣ StructOS соатҳоро ҳисоб намекунад — онҳоро худатон ворид кунед.',
+  laborWorksFromSpecification: 'Корҳо аз мушаххасот', laborWorkName: 'Номи кор'
+});
+
 Object.assign(copy.RU, { detailedProjectAnalysis: 'Детально разобрать проект', contractsUnderReview: 'Договоры на рассмотрении', detailedContractAnalysis: 'Детально разобрать договор', estimateAnalysis: 'Анализ сметы', createProposalByProject: 'Создать КП по проекту', createProposalByEstimate: 'Создать КП по смете', turnkeyObject: 'Запустить объект в один клик', projectMailings: 'Рассылки предложений', mailWorkOffers: 'Рассылка предложений на работу (В разработке)', mailContractOffers: 'Рассылка предложений взять подряд (В разработке)', mailSupplyOffers: 'Рассылка предложений на поставку (В разработке)', projectMenuPrepared: 'Кнопка «{name}» подготовлена. Наполним этот раздел следующим этапом.' });
 Object.assign(copy.EN, { detailedProjectAnalysis: 'Detailed project analysis', contractsUnderReview: 'Contracts under review', detailedContractAnalysis: 'Analyze contract in detail', estimateAnalysis: 'Estimate analysis', createProposalByProject: 'Create proposal from project', createProposalByEstimate: 'Create proposal from estimate', turnkeyObject: 'Launch an object in one click', projectMailings: 'Offer mailings', mailWorkOffers: 'Send job offers (In development)', mailContractOffers: 'Send contract offers (In development)', mailSupplyOffers: 'Send supply offers (In development)', projectMenuPrepared: 'The “{name}” button is ready. We will build out this section next.' });
 Object.assign(copy.KY, { detailedProjectAnalysis: 'Долбоорду толук талдоо', contractsUnderReview: 'Каралуудагы келишимдер', detailedContractAnalysis: 'Келишимди толук талдоо', estimateAnalysis: 'Сметаны талдоо', createProposalByProject: 'Долбоор боюнча КП түзүү', createProposalByEstimate: 'Смета боюнча КП түзүү', turnkeyObject: 'Объектти бир чыкылдатуу менен ишке киргизүү', projectMailings: 'Сунуштарды жөнөтүү', mailWorkOffers: 'Жумуш сунуштарын жөнөтүү (Иштелип жатат)', mailContractOffers: 'Подряд алуу сунуштарын жөнөтүү (Иштелип жатат)', mailSupplyOffers: 'Жеткирүү сунуштарын жөнөтүү (Иштелип жатат)', projectMenuPrepared: '«{name}» баскычы даяр. Бул бөлүмдү кийинки этапта толтурабыз.' });
@@ -1499,8 +1532,8 @@ function normalizeCommercialProposalTaxModes(value, legacyMode = 'cash') {
 
 function normalizeCommercialProposalWorkspace(value) {
   const workspace = value && typeof value === 'object' ? value : {};
-  const sourceGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'equipment', 'materials', 'toolsAndConsumables', 'consumableMaterials', 'laborHours']);
-  const validGroups = new Set([...sourceGroups, 'my']);
+  const sourceGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'equipment', 'materials', 'possibleEquipment', 'possibleMaterials', 'toolsAndConsumables', 'consumableMaterials', 'laborHours']);
+  const validGroups = new Set([...sourceGroups, 'my', 'materialsMy']);
   const itemValues = {};
   Object.entries(workspace.itemValues && typeof workspace.itemValues === 'object' ? workspace.itemValues : {}).slice(0, 2000).forEach(([id, item]) => {
     const safeId = String(id || '').slice(0, 160);
@@ -7424,6 +7457,8 @@ const COMMERCIAL_PROPOSAL_GROUP_ALIASES = Object.freeze({
   outsideSpecificationWorks: new Set(['outsideSpecificationWorks', 'nonSpecificationWorks', 'unlistedWorks', 'unaccountedWorks', 'additionalProjectWorks', 'вне спецификации по проекту', 'вне спецификации', 'неучтенные работы', 'неучтённые работы'].map(cashSourceKey)),
   possibleWorks: new Set(['possibleWorks', 'potentialWorks', 'projectPossibleWorks', 'optionalWorks', 'worksPossibleByProject', 'работы возможные по проекту', 'возможные работы', 'предполагаемые работы'].map(cashSourceKey)),
   associatedWorks: new Set(['associatedWorks', 'companionWorks', 'relatedWorks', 'hiddenWorks', 'auxiliaryWorks', 'сопутствующие работы', 'дополнительные работы', 'скрытые работы'].map(cashSourceKey)),
+  possibleEquipment: new Set(['possibleEquipment', 'potentialEquipment', 'optionalEquipment', 'equipmentPossibleByProject', 'возможное оборудование', 'предполагаемое оборудование'].map(cashSourceKey)),
+  possibleMaterials: new Set(['possibleMaterials', 'potentialMaterials', 'optionalMaterials', 'materialsPossibleByProject', 'возможные материалы', 'предполагаемые материалы'].map(cashSourceKey)),
   equipment: new Set(['equipment', 'equipmentItems', 'devices', 'projectEquipment', 'оборудование', 'приборы', 'устройства'].map(cashSourceKey)),
   materials: new Set(['materials', 'materialItems', 'projectMaterials', 'specification', 'specifications', 'материалы', 'спецификация'].map(cashSourceKey)),
   toolsAndConsumables: new Set(['toolsAndConsumables', 'tools', 'tooling', 'instruments', 'инструмент и расходник', 'инструменты', 'оснастка'].map(cashSourceKey)),
@@ -7438,6 +7473,8 @@ const COMMERCIAL_PROPOSAL_GROUPS = Object.freeze({
   associatedWorks: { label: 'proposalAssociatedWorks', icon: '04', count: 'quantityCount' },
   equipment: { label: 'proposalEquipment', icon: 'E', count: 'quantityCount' },
   materials: { label: 'proposalMaterialItems', icon: 'M', count: 'quantityCount' },
+  possibleEquipment: { label: 'proposalPossibleEquipmentShort', icon: '+E', count: 'quantityCount' },
+  possibleMaterials: { label: 'proposalPossibleMaterialsShort', icon: '+M', count: 'quantityCount' },
   toolsAndConsumables: { label: 'toolsAndConsumables', icon: 'T', count: 'positionsCount' },
   consumableMaterials: { label: 'consumableMaterials', icon: 'R', count: 'quantityCount' },
   laborHours: { label: 'laborHourCosts', icon: 'H', count: 'quantityCount' }
@@ -7445,7 +7482,7 @@ const COMMERCIAL_PROPOSAL_GROUPS = Object.freeze({
 
 const COMMERCIAL_PROPOSAL_RESULT_TABS = Object.freeze([
   { id: 'smr', label: 'proposalSmr', icon: '⚒', groups: ['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks'] },
-  { id: 'materials', label: 'proposalMaterials', icon: '◇', groups: ['equipment', 'materials'] },
+  { id: 'materials', label: 'proposalMaterials', icon: '◇', groups: ['equipment', 'materials', 'possibleEquipment', 'possibleMaterials'] },
   { id: 'required', label: 'proposalRequired', icon: '＋', groups: ['toolsAndConsumables', 'consumableMaterials', 'laborHours'] }
 ]);
 
@@ -7463,8 +7500,11 @@ const COMMERCIAL_PROPOSAL_EDITOR_COLUMNS = Object.freeze([
   {
     id: 'materials', label: 'proposalMaterials', icon: '◇',
     groups: [
-      { id: 'equipment', label: 'proposalEquipment' },
-      { id: 'materials', label: 'proposalMaterialItems' }
+      { id: 'equipment', label: 'proposalSpecificationEquipmentShort' },
+      { id: 'materials', label: 'proposalSpecificationMaterialsShort' },
+      { id: 'possibleEquipment', label: 'proposalPossibleEquipmentShort' },
+      { id: 'possibleMaterials', label: 'proposalPossibleMaterialsShort' },
+      { id: 'materialsMy', label: 'myCommercialProposal' }
     ]
   },
   {
@@ -7513,6 +7553,8 @@ function commercialProposalCatalogGroup(entry) {
   const key = cashSourceKey(entry.name);
   if (/(человекочас|трудозатрат|laborhours?|labourhours?|manhours?|personhours?)/u.test(key)) return 'laborHours';
   if (/(внеспецификац|неучтен|неучтён|outsidespecification|nonspecification|unlisted|unaccounted)/u.test(key)) return 'outsideSpecificationWorks';
+  if (/(возможн.*(оборудован|прибор|устройств)|предполагаем.*(оборудован|прибор|устройств)|possibleequipment|potentialequipment|optionalequipment)/u.test(key)) return 'possibleEquipment';
+  if (/(возможн.*материал|предполагаем.*материал|possiblematerials?|potentialmaterials?|optionalmaterials?)/u.test(key)) return 'possibleMaterials';
   if (/(возможн|предполагаем|possiblework|potentialwork|optionalwork)/u.test(key)) return 'possibleWorks';
   if (/(сопутств|скрыт.*работ|associatedwork|companionwork|relatedwork|auxiliarywork|hiddenwork)/u.test(key)) return 'associatedWorks';
   if (/(инструмент|оснаст|tooling|tools?)/u.test(key)) return 'toolsAndConsumables';
@@ -7583,6 +7625,10 @@ function commercialProposalEditorGroupConfig(groupId) {
   return null;
 }
 
+function isCommercialProposalMyGroup(groupId) {
+  return groupId === 'my' || groupId === 'materialsMy';
+}
+
 function commercialProposalWorkspaceState(proposal) {
   if (!proposal.workspace || typeof proposal.workspace !== 'object' || !proposal.workspace.itemValues || !Array.isArray(proposal.workspace.customItems) || !Array.isArray(proposal.workspace.myItems) || !proposal.workspace.laborSettings || typeof proposal.workspace.laborSettings.itemHours !== 'object') {
     proposal.workspace = normalizeCommercialProposalWorkspace(proposal.workspace);
@@ -7623,12 +7669,24 @@ function commercialProposalEntryWithState(entry, id, sourceGroup, state) {
 
 function commercialProposalEntriesForGroup(proposal, groupId, groups = null) {
   const state = commercialProposalWorkspaceState(proposal);
-  if (groupId === 'my') return state.myItems.map((entry) => commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state));
+  if (groupId === 'my') {
+    const workGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'my']);
+    return state.myItems.filter((entry) => workGroups.has(entry.sourceGroup)).map((entry) => commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state));
+  }
+  if (groupId === 'materialsMy') {
+    const materialGroups = new Set(['equipment', 'materials', 'possibleEquipment', 'possibleMaterials', 'materialsMy']);
+    return state.myItems.filter((entry) => materialGroups.has(entry.sourceGroup)).map((entry) => commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state));
+  }
   if (groupId === 'laborHours') {
     const workGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'my']);
     const myWorkEntries = state.myItems.filter((entry) => workGroups.has(entry.sourceGroup)).map((entry) => ({ ...commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state), laborOrigin: 'my' }));
+    const sourceGroups = groups || commercialProposalBreakdown(latestDocumentVersion(proposal.file), proposal.kind);
+    const specificationEntries = commercialProposalEntriesForGroup(proposal, 'specificationWorks', sourceGroups).map((entry) => ({ ...entry, laborOrigin: 'specification' }));
+    const knownIds = new Set(specificationEntries.map((entry) => entry.id));
+    const knownLines = new Set(specificationEntries.map((entry) => `${cashSourceKey(entry.name)}\u0000${cashSourceKey(entry.unit)}`));
+    const uniqueMyWorkEntries = myWorkEntries.filter((entry) => !knownIds.has(entry.id) && !knownLines.has(`${cashSourceKey(entry.name)}\u0000${cashSourceKey(entry.unit)}`));
     const customLaborEntries = state.customItems.filter((entry) => entry.sourceGroup === groupId).map((entry) => ({ ...commercialProposalEntryWithState(entry, entry.id, groupId, state), laborOrigin: 'custom' }));
-    return [...myWorkEntries, ...customLaborEntries];
+    return [...specificationEntries, ...uniqueMyWorkEntries, ...customLaborEntries];
   }
   const sourceGroups = groups || commercialProposalBreakdown(latestDocumentVersion(proposal.file), proposal.kind);
   if (groupId === 'outsideSpecificationWorks') {
@@ -7715,7 +7773,8 @@ function commercialProposalGroupHintMarkup(groupId) {
   const hintKey = {
     outsideSpecificationWorks: 'proposalProjectGroupHint',
     possibleWorks: 'proposalAdditionalWorksHint',
-    associatedWorks: 'proposalAssociatedWorksHint'
+    associatedWorks: 'proposalAssociatedWorksHint',
+    laborHours: 'proposalLaborHoursHint'
   }[groupId];
   return hintKey ? `<div class="commercial-proposal-group-hint"><span aria-hidden="true">i</span><p>${escapeHtml(tr(hintKey))}</p></div>` : '';
 }
@@ -7729,22 +7788,27 @@ function commercialProposalTableMarkup(proposal, groupId, entries) {
   const specialHead = groupId === 'outsideSpecificationWorks'
     ? `<th>${escapeHtml(tr('proposalSpecProjectColumn'))}</th>`
     : groupId === 'associatedWorks' ? `<th>${escapeHtml(tr('proposalAssociatedForColumn'))}</th>` : '';
-  const taxHeads = selectedModeIds.map((modeId) => `<th>${escapeHtml(direction === 'subtract' ? `${tr('includedTaxTotal')} ${commercialProposalModeShortLabel(modeId)}` : commercialProposalModeShortLabel(modeId))}</th>`).join('');
+  const taxHeads = selectedModeIds.map((modeId) => `<th>${escapeHtml(direction === 'subtract'
+    ? `${tr('includedTaxTotal')} ${commercialProposalModeShortLabel(modeId)}`
+    : `${tr('excludedTaxTotal')} ${commercialProposalModeShortLabel(modeId)}`)}</th>`).join('');
   const priceHeads = direction === 'subtract'
     ? `<th>${escapeHtml(tr('includedUnitPriceWithoutTax'))}</th><th>${escapeHtml(tr('includedTotalWithoutTax'))}</th><th>${escapeHtml(`${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}`)}</th><th>${escapeHtml(`${tr('includedTotalWithTax')} ${combinedTaxLabel}`)}</th>${taxHeads}`
     : direction === 'add'
-      ? `<th>${escapeHtml(tr('price'))}</th><th>${escapeHtml(tr('priceTotalWithoutTax'))}</th>${taxHeads}<th>${escapeHtml(tr('priceTotalWithTax'))}</th>`
+      ? `<th>${escapeHtml(tr('excludedUnitPriceWithoutTax'))}</th><th>${escapeHtml(tr('excludedTotalWithoutTax'))}</th><th>${escapeHtml(`${tr('excludedUnitPriceWithTax')} ${combinedTaxLabel}`)}</th><th>${escapeHtml(`${tr('excludedTotalWithTax')} ${combinedTaxLabel}`)}</th>${taxHeads}`
       : `<th>${escapeHtml(tr('price'))}</th><th>${escapeHtml(tr('proposalGrossPrice'))}</th>`;
-  const actionHead = groupId === 'my' ? '' : escapeHtml(tr('sendToMyProposal'));
+  const actionHead = isCommercialProposalMyGroup(groupId) ? '' : escapeHtml(tr('sendToMyProposal'));
   const rows = entries.map((entry, index) => {
     const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds);
     const source = entry.custom ? tr('ownProposalPosition') : entry.sourceSheet || entry.sourceName || tr('identifiedByAnalysis');
     const taxCells = selectedModeIds.map((modeId) => `<td class="is-money is-tax" data-proposal-tax-total="${escapeHtml(modeId)}">${escapeHtml(formatMoney(commercialProposalTaxAmount(amounts, modeId)))}</td>`).join('');
-    const priceInput = `<input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.price ? escapeHtml(String(entry.price)) : ''}" placeholder="0" data-proposal-line-value="price" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(direction === 'subtract' ? `${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}` : tr('price'))}" />`;
+    const priceInputLabel = direction === 'subtract'
+      ? `${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}`
+      : direction === 'add' ? tr('excludedUnitPriceWithoutTax') : tr('price');
+    const priceInput = `<input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.price ? escapeHtml(String(entry.price)) : ''}" placeholder="0" data-proposal-line-value="price" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(priceInputLabel)}" />`;
     const priceCells = direction === 'subtract'
       ? `<td class="is-money" data-proposal-net-unit>${escapeHtml(formatMoney(amounts.unitFinal))}</td><td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td><td>${priceInput}</td><td class="is-money" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td>${taxCells}`
       : direction === 'add'
-        ? `<td>${priceInput}</td><td class="is-money" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td>${taxCells}<td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`
+        ? `<td>${priceInput}</td><td class="is-money" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td><td class="is-money" data-proposal-gross-unit>${escapeHtml(formatMoney(amounts.unitFinal))}</td><td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>${taxCells}`
         : `<td>${priceInput}</td><td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`;
     const specialCell = groupId === 'outsideSpecificationWorks'
       ? `<td class="proposal-line-meta-cell"><select data-proposal-line-meta="projectSource" data-proposal-line-meta-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('proposalSpecProjectColumn'))}"><option value="spec"${entry.projectSource === 'spec' ? ' selected' : ''}>${escapeHtml(tr('proposalSpecShort'))}</option><option value="project"${entry.projectSource !== 'spec' ? ' selected' : ''}>${escapeHtml(tr('proposalProjectShort'))}</option></select></td>`
@@ -7752,21 +7816,21 @@ function commercialProposalTableMarkup(proposal, groupId, entries) {
         ? `<td class="proposal-line-meta-cell is-associated"><input type="text" maxlength="240" value="${escapeHtml(entry.associatedFor)}" placeholder="${escapeHtml(tr('proposalAssociatedForPlaceholder'))}" data-proposal-line-meta="associatedFor" data-proposal-line-meta-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('proposalAssociatedForColumn'))}" /></td>`
         : '';
     const removeCustom = entry.custom ? `<button class="proposal-my-remove" type="button" data-remove-proposal-custom-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('deleteOwnProposalPosition'))}" title="${escapeHtml(tr('deleteOwnProposalPosition'))}">×</button>` : '';
-    const action = groupId === 'my'
+    const action = isCommercialProposalMyGroup(groupId)
       ? `<button class="proposal-my-remove" type="button" data-remove-proposal-my-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('removeFromMyProposal'))}" title="${escapeHtml(tr('removeFromMyProposal'))}">×</button>`
       : `<div class="proposal-line-controls"><label class="proposal-send-to-my"><input type="checkbox" data-proposal-send-to-my="${escapeHtml(entry.id)}"${myIds.has(entry.id) ? ' checked' : ''} aria-label="${escapeHtml(`${tr('sendToMyProposal')}: ${entry.name}`)}" /><span aria-hidden="true">✓</span></label>${removeCustom}</div>`;
     return `<tr data-proposal-line-row data-proposal-line-id="${escapeHtml(entry.id)}"><td class="proposal-line-number">${index + 1}</td><td class="proposal-line-name"><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(source)}</small></td><td>${escapeHtml(entry.unit || '—')}</td><td><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.quantity ? escapeHtml(String(entry.quantity)) : ''}" placeholder="0" data-proposal-line-value="quantity" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('quantity'))}" /></td>${specialCell}${priceCells}<td class="proposal-line-action">${action}</td></tr>`;
   }).join('');
   const specialColumnCount = specialHead ? 1 : 0;
-  const columnCount = (direction === 'subtract' ? 9 + selectedModeIds.length : direction === 'add' ? 8 + selectedModeIds.length : 7) + specialColumnCount;
+  const columnCount = (direction === 'subtract' || direction === 'add' ? 9 + selectedModeIds.length : 7) + specialColumnCount;
   if (!entries.length) {
     const emptyConfig = commercialProposalEditorGroupConfig(groupId);
-    return `<div class="commercial-proposal-table-empty"><span>◇</span><h3>${escapeHtml(tr(groupId === 'my' ? 'myCommercialProposal' : emptyConfig?.label || 'proposalWorkspaceTitle'))}</h3><p>${escapeHtml(tr(groupId === 'my' ? 'emptyMyProposal' : 'emptyProposalGroup'))}</p></div>`;
+    return `<div class="commercial-proposal-table-empty"><span>◇</span><h3>${escapeHtml(tr(isCommercialProposalMyGroup(groupId) ? 'myCommercialProposal' : emptyConfig?.label || 'proposalWorkspaceTitle'))}</h3><p>${escapeHtml(tr(isCommercialProposalMyGroup(groupId) ? 'emptyMyProposal' : 'emptyProposalGroup'))}</p></div>`;
   }
   const lineAmounts = entries.map((entry) => commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds));
   const taxSummaries = selectedModeIds.map((modeId) => `<span>${escapeHtml(commercialProposalModeShortLabel(modeId))}: <b data-proposal-tax-grand-total="${escapeHtml(modeId)}">${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + commercialProposalTaxAmount(amounts, modeId), 0)))}</b></span>`).join('');
   const totalLabel = direction === 'subtract' ? 'includedTotalWithoutTax' : direction === 'add' ? 'priceTotalWithTax' : 'totalProposalPrice';
-  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table has-${selectedModeIds.length}-taxes${direction === 'subtract' ? ' is-included-tax' : ''}${specialHead ? ' has-special-column' : ''}"><thead><tr><th>№</th><th>${escapeHtml(tr('proposalLineName'))}</th><th>${escapeHtml(tr('unit'))}</th><th>${escapeHtml(tr('quantity'))}</th>${specialHead}${priceHeads}<th>${actionHead}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="${columnCount}"><span>${escapeHtml(tr('totalWorkTypes'))}: <b data-proposal-types-total>${entries.length}</b></span>${taxSummaries}<span>${escapeHtml(tr(totalLabel))}: <b data-proposal-price-grand-total>${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + amounts.final, 0)))}</b></span></td></tr></tfoot></table></div>`;
+  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table has-${selectedModeIds.length}-taxes${direction === 'subtract' ? ' is-included-tax' : direction === 'add' ? ' is-added-tax' : ''}${specialHead ? ' has-special-column' : ''}"><thead><tr><th>№</th><th>${escapeHtml(tr('proposalLineName'))}</th><th>${escapeHtml(tr('unit'))}</th><th>${escapeHtml(tr('quantity'))}</th>${specialHead}${priceHeads}<th>${actionHead}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="${columnCount}"><span>${escapeHtml(tr('totalWorkTypes'))}: <b data-proposal-types-total>${entries.length}</b></span>${taxSummaries}<span>${escapeHtml(tr(totalLabel))}: <b data-proposal-price-grand-total>${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + amounts.final, 0)))}</b></span></td></tr></tfoot></table></div>`;
 }
 
 function commercialProposalLaborHourlyRate(state) {
@@ -7795,7 +7859,9 @@ function commercialProposalLaborTableMarkup(proposal, entries) {
   }
   const rows = entries.map((entry, index) => {
     const amounts = commercialProposalLaborLineAmounts(entry, state);
-    const source = entry.laborOrigin === 'custom' ? tr('ownProposalPosition') : tr('laborWorksFromMyProposal');
+    const source = entry.laborOrigin === 'custom'
+      ? tr('ownProposalPosition')
+      : entry.laborOrigin === 'specification' ? tr('laborWorksFromSpecification') : tr('laborWorksFromMyProposal');
     const remove = entry.laborOrigin === 'custom' ? `<button class="proposal-labor-remove" type="button" data-remove-proposal-custom-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('deleteOwnProposalPosition'))}" title="${escapeHtml(tr('deleteOwnProposalPosition'))}">×</button>` : '';
     return `<tr data-proposal-labor-row data-proposal-line-id="${escapeHtml(entry.id)}"><td>${index + 1}</td><td class="proposal-line-name"><div class="proposal-labor-name"><span><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(source)}</small></span>${remove}</div></td><td>${escapeHtml(entry.unit || '—')}</td><td class="proposal-labor-quantity">${amounts.quantity ? escapeHtml(new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(amounts.quantity)) : '—'}</td><td><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${amounts.workHours ? escapeHtml(String(amounts.workHours)) : ''}" placeholder="0" data-proposal-labor-work-hours="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('workHours'))}" /></td><td class="is-money" data-proposal-labor-row-rate>${escapeHtml(formatMoney(amounts.hourlyRate))}</td><td class="is-money is-total" data-proposal-labor-row-total>${escapeHtml(formatMoney(amounts.total))}</td></tr>`;
   }).join('');
@@ -7805,11 +7871,10 @@ function commercialProposalLaborTableMarkup(proposal, entries) {
 }
 
 function commercialProposalColumnsMarkup(proposal, groups) {
-  const state = commercialProposalWorkspaceState(proposal);
   return `<nav class="commercial-proposal-editor-columns" aria-label="${escapeHtml(tr('proposalWorkspaceTitle'))}">${COMMERCIAL_PROPOSAL_EDITOR_COLUMNS.map((column) => {
-    const columnCount = column.groups.filter((group) => group.id !== 'my').reduce((total, group) => total + commercialProposalEntriesForGroup(proposal, group.id, groups).length, 0);
+    const columnCount = column.groups.filter((group) => !isCommercialProposalMyGroup(group.id)).reduce((total, group) => total + commercialProposalEntriesForGroup(proposal, group.id, groups).length, 0);
     const buttons = column.groups.map((group) => {
-      const count = group.id === 'my' ? state.myItems.length : commercialProposalEntriesForGroup(proposal, group.id, groups).length;
+      const count = commercialProposalEntriesForGroup(proposal, group.id, groups).length;
       const active = activeCommercialProposalGroup === group.id;
       return `<button class="${active ? 'is-active' : ''}" type="button" data-proposal-workspace-group="${group.id}" data-proposal-workspace-column="${column.id}" aria-pressed="${String(active)}"><span>${escapeHtml(tr(group.label))}</span><b>${count}</b></button>`;
     }).join('');
@@ -7828,9 +7893,11 @@ function updateCommercialProposalTableCalculations(scope, proposal) {
     const price = commercialProposalWorkspaceNumber($('[data-proposal-line-value="price"]', row)?.value);
     const amounts = commercialProposalLineAmounts(quantity, price, selectedModeIds);
     const netUnitCell = $('[data-proposal-net-unit]', row);
+    const grossUnitCell = $('[data-proposal-gross-unit]', row);
     const baseCell = $('[data-proposal-base-total]', row);
     const finalCell = $('[data-proposal-final-total]', row);
     if (netUnitCell) netUnitCell.textContent = formatMoney(amounts.unitFinal);
+    if (grossUnitCell) grossUnitCell.textContent = formatMoney(amounts.unitFinal);
     if (baseCell) baseCell.textContent = formatMoney(amounts.base);
     selectedModeIds.forEach((modeId) => {
       const taxAmount = commercialProposalTaxAmount(amounts, modeId);
@@ -7937,7 +8004,7 @@ function openCommercialProposalCustomPositionDialog(proposalId, groupId) {
       custom: true
     };
     state.itemValues[id] = { quantity, price, projectSource: entry.projectSource, associatedFor: '' };
-    if (groupId === 'my') state.myItems.push(entry);
+    if (isCommercialProposalMyGroup(groupId)) state.myItems.push(entry);
     else state.customItems.push(entry);
     proposal.updatedAt = new Date().toISOString();
     saveCommercialProposalRecords();
@@ -7993,10 +8060,10 @@ function renderCommercialProposalWorkspace() {
   const entries = commercialProposalEntriesForGroup(proposal, activeCommercialProposalGroup, groups);
   const state = commercialProposalWorkspaceState(proposal);
   const isLaborHours = activeCommercialProposalGroup === 'laborHours';
-  const saveSelection = activeCommercialProposalGroup === 'my' || isLaborHours ? '' : `<button class="primary-button commercial-proposal-save-my" type="button" data-save-commercial-proposal-my${entries.length ? '' : ' disabled'}>✓ ${escapeHtml(tr('saveMyProposalSelection'))}</button>`;
+  const saveSelection = isCommercialProposalMyGroup(activeCommercialProposalGroup) || isLaborHours ? '' : `<button class="primary-button commercial-proposal-save-my" type="button" data-save-commercial-proposal-my${entries.length ? '' : ' disabled'}>✓ ${escapeHtml(tr('saveMyProposalSelection'))}</button>`;
   const positionActions = `<div class="commercial-proposal-editor-header-actions"><button class="outline-button commercial-proposal-add-own" type="button" data-add-own-proposal-position>+ ${escapeHtml(tr('addOwnProposalPosition'))}</button>${saveSelection}</div>`;
   const tableWorkspace = isLaborHours
-    ? `${commercialProposalLaborSettingsMarkup(state)}${commercialProposalLaborTableMarkup(proposal, entries)}`
+    ? `${commercialProposalGroupHintMarkup(activeCommercialProposalGroup)}${commercialProposalLaborSettingsMarkup(state)}${commercialProposalLaborTableMarkup(proposal, entries)}`
     : `${commercialProposalGroupHintMarkup(activeCommercialProposalGroup)}${commercialProposalPriceModeMarkup(state)}${commercialProposalTableMarkup(proposal, activeCommercialProposalGroup, entries)}`;
   rootElement.innerHTML = `<section class="commercial-proposal-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-back-to-commercial-proposals>← ${escapeHtml(tr('backToProposalList'))}</button><div><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h1>${escapeHtml(proposal.objectName)}</h1><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version.name)}</p></div></div><b>${escapeHtml(tr('proposalReady'))}</b></header><div class="analysis-truth-note commercial-proposal-editor-note"><span>i</span><p>${escapeHtml(tr('proposalWorkspacePageHint'))}</p></div>${commercialProposalColumnsMarkup(proposal, groups)}<section class="commercial-proposal-editor-body"><header><div><small>${escapeHtml(tr(groupConfig.columnLabel))}</small><h2>${escapeHtml(tr(groupConfig.label))}</h2><p>${entries.length} · ${escapeHtml(tr('proposalFragmentPositions'))}</p></div>${positionActions}</header>${tableWorkspace}<footer class="commercial-proposal-editor-actions"><button class="primary-button" type="button" data-commercial-proposal-action="download"><span aria-hidden="true">↓</span>${escapeHtml(tr('downloadProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="view"><span aria-hidden="true">◉</span>${escapeHtml(tr('viewProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="share"><span aria-hidden="true">↗</span>${escapeHtml(tr('shareProposal'))}</button></footer></section></section>`;
   $('[data-back-to-commercial-proposals]', rootElement)?.addEventListener('click', () => setPanel('proposals'));
@@ -8124,7 +8191,9 @@ function commercialProposalReportColumns(modeIds = [], groupId = '') {
   if (groupId === 'associatedWorks') base.push({ label: tr('proposalAssociatedForColumn'), key: 'associatedFor', width: 72 });
   if (direction === 'none') return [...base, { label: tr('price'), key: 'unitPrice', width: 54, money: true }, { label: tr('proposalGrossPrice'), key: 'finalTotal', width: 62, money: true }];
   const taxColumns = selectedModeIds.map((modeId) => ({
-    label: direction === 'subtract' ? `${tr('includedTaxTotal')} ${commercialProposalModeShortLabel(modeId)}` : commercialProposalModeShortLabel(modeId),
+    label: direction === 'subtract'
+      ? `${tr('includedTaxTotal')} ${commercialProposalModeShortLabel(modeId)}`
+      : `${tr('excludedTaxTotal')} ${commercialProposalModeShortLabel(modeId)}`,
     key: `tax_${modeId}`,
     width: 52,
     money: true
@@ -8139,7 +8208,14 @@ function commercialProposalReportColumns(modeIds = [], groupId = '') {
       ...taxColumns
     ];
   }
-  return [...base, { label: tr('price'), key: 'unitPrice', width: 54, money: true }, { label: tr('priceTotalWithoutTax'), key: 'baseTotal', width: 55, money: true }, ...taxColumns, { label: tr('priceTotalWithTax'), key: 'finalTotal', width: 62, money: true }];
+  return [
+    ...base,
+    { label: tr('excludedUnitPriceWithoutTax'), key: 'unitPrice', width: 55, money: true },
+    { label: tr('excludedTotalWithoutTax'), key: 'baseTotal', width: 58, money: true },
+    { label: `${tr('excludedUnitPriceWithTax')} ${combinedTaxLabel}`, key: 'grossUnitPrice', width: 58, money: true },
+    { label: `${tr('excludedTotalWithTax')} ${combinedTaxLabel}`, key: 'finalTotal', width: 58, money: true },
+    ...taxColumns
+  ];
 }
 
 function commercialProposalReportTable(proposal, fragment, entries) {
@@ -8164,6 +8240,7 @@ function commercialProposalReportTable(proposal, fragment, entries) {
       projectSource: entry.projectSource === 'spec' ? tr('proposalSpecShort') : tr('proposalProjectShort'),
       associatedFor: entry.associatedFor || '—',
       netUnitPrice: amounts.unitFinal,
+      grossUnitPrice: amounts.unitFinal,
       unitPrice: entry.price,
       baseTotal: amounts.base,
       ...taxValues,
