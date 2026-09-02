@@ -388,10 +388,75 @@ Object.assign(copy.EN, { openDocument: 'Open', replaceDocument: 'Replace', choos
 Object.assign(copy.KY, { openDocument: 'Ачуу', replaceDocument: 'Алмаштыруу', chooseReportDocument: 'Эмнени ачуу керек?', chooseReportDocumentHint: 'Жүктөлгөн документтердин биринин жыйынтыгын тандаңыз.', analysisNotReady: 'Документ али талдана элек', analysisNotReadyHint: 'Деталдуу баракты ачуу үчүн адегенде объектти талдаңыз.', runAnalysisNow: 'Азыр талдоо', projectAnalysis: 'Долбоорду деталдуу талдоо', backToProjects: 'Менин долбоорлорума', sourceFile: 'Булак', analyzedDataOnly: 'StructOS жүктөлгөн файлдан алынган маалыматты гана көрсөтөт. Жетишпеген маанилер ойлоп табылбайт.', commercialProposal: 'Коммерциялык сунуш', projectBySheets: 'Долбоор барактар боюнча', projectBySystems: 'Долбоор системалар боюнча', projectMaterials: 'Долбоордун материалдары', billOfQuantities: 'Иш көлөмдөрүнүн ведомосту', section: 'Бөлүм', sheetNumber: 'Барак', sheetName: 'Барактын аталышы', system: 'Система', sheets: 'Барактар', materials: 'Материалдар', materialName: 'Материалдын аталышы', works: 'Иштер', markType: 'Марка / түрү', source: 'Булак', statusLabel: 'Статус', extractionPending: 'Маалымат чыгарылышын күтүп жатат', extractionPendingCopy: 'Бөлүмдүн түзүмү даяр. Сервердик талдоо кошулгандан кийин саптар пайда болот.', analyzedDocumentPage: 'Талдоо барагы даяр', analyzedDocumentPageCopy: 'Файл сакталды жана тандалды. Бул документтин деталдуу түзүмүн кийинки этапта талкуулайбыз.' });
 Object.assign(copy.TJ, { openDocument: 'Кушодан', replaceDocument: 'Иваз кардан', chooseReportDocument: 'Чиро кушоем?', chooseReportDocumentHint: 'Натиҷаи яке аз ҳуҷҷатҳои боршударо интихоб кунед.', analysisNotReady: 'Ҳуҷҷат ҳанӯз таҳлил нашудааст', analysisNotReadyHint: 'Барои кушодани саҳифаи муфассал аввал таҳлили объектро оғоз кунед.', runAnalysisNow: 'Ҳозир таҳлил кардан', projectAnalysis: 'Таҳлили муфассали лоиҳа', backToProjects: 'Ба лоиҳаҳои ман', sourceFile: 'Манбаъ', analyzedDataOnly: 'StructOS танҳо маълумоти аз файли боршуда гирифташударо нишон медиҳад. Маълумоти набуда сохта намешавад.', commercialProposal: 'Пешниҳоди тиҷоратӣ', projectBySheets: 'Лоиҳа аз рӯи варақҳо', projectBySystems: 'Лоиҳа аз рӯи системаҳо', projectMaterials: 'Маводи лоиҳа', billOfQuantities: 'Рӯйхати ҳаҷми корҳо', section: 'Бахш', sheetNumber: 'Варақ', sheetName: 'Номи варақ', system: 'Система', sheets: 'Варақҳо', materials: 'Мавод', materialName: 'Номи мавод', works: 'Корҳо', markType: 'Тамға / навъ', source: 'Манбаъ', statusLabel: 'Ҳолат', extractionPending: 'Интизори гирифтани маълумот', extractionPendingCopy: 'Сохтори ҷадвал омода аст. Пас аз пайвасти таҳлили серверӣ сатрҳо пайдо мешаванд.', analyzedDocumentPage: 'Саҳифаи таҳлил омода аст', analyzedDocumentPageCopy: 'Файл нигоҳ дошта ва интихоб шуд. Сохтори муфассали ин ҳуҷҷатро дар марҳилаи навбатӣ муайян мекунем.' });
 
-Object.assign(copy.RU, { commercialProposals: 'Коммерческие предложения', commercialProposalsDescription: 'КП по каждому объекту, проекту и разделу работ', proposalWorkspaceHint: 'Проект или смета превращаются в понятную структуру работ и материалов', noCommercialProposals: 'Коммерческих предложений пока нет', noCommercialProposalsCopy: 'Загрузите проект или смету в объект — здесь появится подготовка КП.', buildCommercialProposal: 'Сформировать КП', openCommercialProposal: 'Открыть КП', documentsTab: 'Документы', proposalAwaitingAnalysis: 'Файл загружен и готов к формированию КП', proposalReady: 'КП подготовлено', proposalSource: 'Исходный файл', proposalObjectTabHint: 'StructOS соберёт работы, объёмы и материалы для расчёта предложения', uploadProjectOrEstimate: 'Загрузить проект или смету' });
+Object.assign(copy.RU, { commercialProposals: 'Коммерческие предложения', commercialProposalsDescription: 'КП по каждому объекту, проекту и разделу работ', proposalWorkspaceHint: 'Проект или смета превращаются в понятную структуру работ и материалов', noCommercialProposals: 'Коммерческих предложений пока нет', noCommercialProposalsCopy: 'Загрузите проект или смету в объект — здесь появится подготовка КП.', buildCommercialProposal: 'Создать КП', openCommercialProposal: 'Открыть КП', documentsTab: 'Документы', proposalAwaitingAnalysis: 'Файл загружен и готов к созданию КП', proposalReady: 'КП подготовлено', proposalSource: 'Исходный файл', proposalObjectTabHint: 'StructOS соберёт работы, объёмы и материалы для расчёта предложения', uploadProjectOrEstimate: 'Загрузить проект или смету' });
 Object.assign(copy.EN, { commercialProposals: 'Commercial proposals', commercialProposalsDescription: 'A proposal for every object, project and work section', proposalWorkspaceHint: 'A project or estimate becomes a clear structure of work and materials', noCommercialProposals: 'No commercial proposals yet', noCommercialProposalsCopy: 'Upload a project or estimate to an object and proposal preparation will appear here.', buildCommercialProposal: 'Create proposal', openCommercialProposal: 'Open proposal', documentsTab: 'Documents', proposalAwaitingAnalysis: 'The file is uploaded and ready for proposal generation', proposalReady: 'Proposal prepared', proposalSource: 'Source file', proposalObjectTabHint: 'StructOS organizes work, quantities and materials for proposal pricing', uploadProjectOrEstimate: 'Upload a project or estimate' });
 Object.assign(copy.KY, { commercialProposals: 'Коммерциялык сунуштар', commercialProposalsDescription: 'Ар бир объект, долбоор жана иш бөлүмү үчүн КП', proposalWorkspaceHint: 'Долбоор же смета иштердин жана материалдардын түшүнүктүү түзүмүнө айланат', noCommercialProposals: 'Коммерциялык сунуштар азырынча жок', noCommercialProposalsCopy: 'Объектке долбоор же смета жүктөңүз — бул жерде КП даярдоо пайда болот.', buildCommercialProposal: 'КП түзүү', openCommercialProposal: 'КПны ачуу', documentsTab: 'Документтер', proposalAwaitingAnalysis: 'Файл жүктөлдү жана КП түзүүгө даяр', proposalReady: 'КП даярдалды', proposalSource: 'Баштапкы файл', proposalObjectTabHint: 'StructOS сунушту эсептөө үчүн иштерди, көлөмдөрдү жана материалдарды чогултат', uploadProjectOrEstimate: 'Долбоор же смета жүктөө' });
 Object.assign(copy.TJ, { commercialProposals: 'Пешниҳодҳои тиҷоратӣ', commercialProposalsDescription: 'Пешниҳод барои ҳар объект, лоиҳа ва бахши кор', proposalWorkspaceHint: 'Лоиҳа ё смета ба сохтори фаҳмои корҳо ва мавод табдил меёбад', noCommercialProposals: 'Пешниҳоди тиҷоратӣ ҳоло нест', noCommercialProposalsCopy: 'Лоиҳа ё сметаро ба объект бор кунед — омодасозии пешниҳод дар ин ҷо пайдо мешавад.', buildCommercialProposal: 'Сохтани пешниҳод', openCommercialProposal: 'Кушодани пешниҳод', documentsTab: 'Ҳуҷҷатҳо', proposalAwaitingAnalysis: 'Файл бор шуд ва барои сохтани пешниҳод омода аст', proposalReady: 'Пешниҳод омода шуд', proposalSource: 'Файли аслӣ', proposalObjectTabHint: 'StructOS корҳо, ҳаҷмҳо ва маводро барои ҳисоб ҷамъ мекунад', uploadProjectOrEstimate: 'Бор кардани лоиҳа ё смета' });
+
+Object.assign(copy.RU, {
+  proposalCreateProjectHint: 'Загрузите проект — StructOS соберёт КП по работам и материалам.',
+  proposalCreateEstimateHint: 'Загрузите смету — StructOS разложит позиции для нового КП.',
+  proposalSectionField: 'Раздел', proposalSectionPlaceholder: 'Например, Электроснабжение',
+  proposalFileHint: 'Один файл для одного коммерческого предложения', createCommercialProposal: 'Создать КП',
+  creatingCommercialProposal: 'Создаём КП и запускаем анализ…', commercialProposalCreated: 'КП создано и проанализировано',
+  proposalByProject: 'КП по проекту', proposalByEstimate: 'КП по смете', foundByIntelligence: 'Найдено интеллектом',
+  proposalSmr: 'КП на СМР', proposalMaterials: 'КП материалы', proposalRequired: 'Потребуется',
+  specificationProjectWorks: 'По спецификации проекта', outsideSpecificationProjectWorks: 'Вне спецификации по проекту',
+  possibleProjectWorks: 'Работы возможные по проекту', proposalAssociatedWorks: 'Сопутствующие работы',
+  proposalEquipment: 'Оборудование', proposalMaterialItems: 'Материалы', toolsAndConsumables: 'Инструмент и расходник',
+  consumableMaterials: 'Расходные материалы', laborHourCosts: 'Затраты на человеко-часы',
+  positionsCount: 'позиций', quantityCount: 'кол-во', personHoursUnit: 'чел.-ч',
+  proposalFoundSummary: 'Структура заполняется только данными, найденными при анализе файла.'
+});
+Object.assign(copy.EN, {
+  proposalCreateProjectHint: 'Upload a project and StructOS will assemble a work and materials proposal.',
+  proposalCreateEstimateHint: 'Upload an estimate and StructOS will organize its items into a new proposal.',
+  proposalSectionField: 'Section', proposalSectionPlaceholder: 'For example, Power supply',
+  proposalFileHint: 'One file per commercial proposal', createCommercialProposal: 'Create proposal',
+  creatingCommercialProposal: 'Creating the proposal and starting analysis…', commercialProposalCreated: 'Proposal created and analyzed',
+  proposalByProject: 'Project proposal', proposalByEstimate: 'Estimate proposal', foundByIntelligence: 'Found by intelligence',
+  proposalSmr: 'Construction works proposal', proposalMaterials: 'Materials proposal', proposalRequired: 'Required',
+  specificationProjectWorks: 'From the project specification', outsideSpecificationProjectWorks: 'Outside the project specification',
+  possibleProjectWorks: 'Possible project work', proposalAssociatedWorks: 'Associated work',
+  proposalEquipment: 'Equipment', proposalMaterialItems: 'Materials', toolsAndConsumables: 'Tools and consumables',
+  consumableMaterials: 'Consumable materials', laborHourCosts: 'Labour-hour costs',
+  positionsCount: 'items', quantityCount: 'quantity', personHoursUnit: 'person-hours',
+  proposalFoundSummary: 'The structure contains only data found while analyzing the file.'
+});
+Object.assign(copy.KY, {
+  proposalCreateProjectHint: 'Долбоорду жүктөңүз — StructOS иштер жана материалдар боюнча КП түзөт.',
+  proposalCreateEstimateHint: 'Сметаны жүктөңүз — StructOS позицияларды жаңы КП үчүн бөлүштүрөт.',
+  proposalSectionField: 'Бөлүм', proposalSectionPlaceholder: 'Мисалы, Электр менен камсыздоо',
+  proposalFileHint: 'Бир коммерциялык сунуш үчүн бир файл', createCommercialProposal: 'КП түзүү',
+  creatingCommercialProposal: 'КП түзүлүп, талдоо башталууда…', commercialProposalCreated: 'КП түзүлүп, талданды',
+  proposalByProject: 'Долбоор боюнча КП', proposalByEstimate: 'Смета боюнча КП', foundByIntelligence: 'Интеллект тапты',
+  proposalSmr: 'Курулуш-монтаж иштерине КП', proposalMaterials: 'Материалдарга КП', proposalRequired: 'Керектелет',
+  specificationProjectWorks: 'Долбоордун спецификациясы боюнча', outsideSpecificationProjectWorks: 'Долбоордун спецификациясынан тышкары',
+  possibleProjectWorks: 'Долбоор боюнча мүмкүн болгон иштер', proposalAssociatedWorks: 'Коштоочу иштер',
+  proposalEquipment: 'Жабдуулар', proposalMaterialItems: 'Материалдар', toolsAndConsumables: 'Аспап жана сарпталуучу нерсе',
+  consumableMaterials: 'Сарпталуучу материалдар', laborHourCosts: 'Адам-саат чыгымдары',
+  positionsCount: 'позиция', quantityCount: 'саны', personHoursUnit: 'адам-саат',
+  proposalFoundSummary: 'Түзүм файлды талдоодо табылган маалыматтар менен гана толтурулат.'
+});
+Object.assign(copy.TJ, {
+  proposalCreateProjectHint: 'Лоиҳаро бор кунед — StructOS барои корҳо ва мавод КП месозад.',
+  proposalCreateEstimateHint: 'Сметаро бор кунед — StructOS мавқеъҳоро барои КП-и нав ҷудо мекунад.',
+  proposalSectionField: 'Бахш', proposalSectionPlaceholder: 'Масалан, Таъминоти барқ',
+  proposalFileHint: 'Барои як пешниҳоди тиҷоратӣ як файл', createCommercialProposal: 'Сохтани КП',
+  creatingCommercialProposal: 'КП сохта шуда, таҳлил оғоз меёбад…', commercialProposalCreated: 'КП сохта ва таҳлил шуд',
+  proposalByProject: 'КП аз рӯи лоиҳа', proposalByEstimate: 'КП аз рӯи смета', foundByIntelligence: 'Интеллект пайдо кард',
+  proposalSmr: 'КП барои корҳои сохтмонӣ', proposalMaterials: 'КП барои мавод', proposalRequired: 'Лозим мешавад',
+  specificationProjectWorks: 'Аз рӯи мушаххасоти лоиҳа', outsideSpecificationProjectWorks: 'Берун аз мушаххасоти лоиҳа',
+  possibleProjectWorks: 'Корҳои эҳтимолии лоиҳа', proposalAssociatedWorks: 'Корҳои ҳамроҳ',
+  proposalEquipment: 'Таҷҳизот', proposalMaterialItems: 'Мавод', toolsAndConsumables: 'Асбоб ва масрафшаванда',
+  consumableMaterials: 'Маводи масрафшаванда', laborHourCosts: 'Хароҷоти одам-соат',
+  positionsCount: 'мавқеъ', quantityCount: 'миқдор', personHoursUnit: 'одам-соат',
+  proposalFoundSummary: 'Сохтор танҳо бо маълумоти ҳангоми таҳлили файл ёфташуда пур мешавад.'
+});
+Object.assign(copy.RU, { proposalCreateFailed: 'Не удалось создать КП' });
+Object.assign(copy.EN, { proposalCreateFailed: 'Could not create the proposal' });
+Object.assign(copy.KY, { proposalCreateFailed: 'КП түзүү мүмкүн болгон жок' });
+Object.assign(copy.TJ, { proposalCreateFailed: 'КП сохта нашуд' });
 
 Object.assign(copy.RU, { detailedProjectAnalysis: 'Детально разобрать проект', contractsUnderReview: 'Договоры на рассмотрении', detailedContractAnalysis: 'Детально разобрать договор', estimateAnalysis: 'Анализ сметы', createProposalByProject: 'Создать КП по проекту', createProposalByEstimate: 'Создать КП по смете', turnkeyObject: 'Запустить объект в один клик', projectMailings: 'Рассылки предложений', mailWorkOffers: 'Рассылка предложений на работу (В разработке)', mailContractOffers: 'Рассылка предложений взять подряд (В разработке)', mailSupplyOffers: 'Рассылка предложений на поставку (В разработке)', projectMenuPrepared: 'Кнопка «{name}» подготовлена. Наполним этот раздел следующим этапом.' });
 Object.assign(copy.EN, { detailedProjectAnalysis: 'Detailed project analysis', contractsUnderReview: 'Contracts under review', detailedContractAnalysis: 'Analyze contract in detail', estimateAnalysis: 'Estimate analysis', createProposalByProject: 'Create proposal from project', createProposalByEstimate: 'Create proposal from estimate', turnkeyObject: 'Launch an object in one click', projectMailings: 'Offer mailings', mailWorkOffers: 'Send job offers (In development)', mailContractOffers: 'Send contract offers (In development)', mailSupplyOffers: 'Send supply offers (In development)', projectMenuPrepared: 'The “{name}” button is ready. We will build out this section next.' });
@@ -878,6 +943,12 @@ let activeAnalysisDocument = { objectId: null, kind: 'project', versionId: null 
 let activeProjectAnalysisTab = 'proposal';
 let activeObjectDialogId = null;
 let activeObjectDialogTab = 'documents';
+let activeCommercialProposalResultTab = 'smr';
+let activeCommercialProposalSource = { objectId: null, kind: null, versionId: null };
+const commercialProposalDrafts = {
+  project: { objectName: '', sectionName: '', file: null, sourceFile: null, busy: false },
+  estimate: { objectName: '', sectionName: '', file: null, sourceFile: null, busy: false }
+};
 const widgetColors = ['#0b63ce', '#00a9df', '#04a77b', '#41a447', '#d5a800', '#e87919', '#d64254', '#7957d5', '#c04ea3', '#44546a'];
 
 function loadFinance() {
@@ -1021,7 +1092,7 @@ function fileVersionSnapshot(file) {
   const size = Number(file?.size) || 0;
   const lastModified = Number(file?.lastModified) || Number(new Date(addedAt)) || Date.now();
   const structuredFields = {};
-  ['analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'].forEach((key) => {
+  ['analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'commercialProposal', 'proposalBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'].forEach((key) => {
     if (file?.[key] != null) structuredFields[key] = file[key];
   });
   return {
@@ -1094,7 +1165,7 @@ function isDocumentVersionAnalyzed(version) {
 function syncLatestDocumentVersion(file, versions) {
   if (!file || !Array.isArray(versions) || !versions.length) return file;
   const latest = fileVersionSnapshot(versions[versions.length - 1]);
-  const syncedFields = ['id', 'name', 'size', 'type', 'lastModified', 'addedAt', 'analyzedAt', 'analysisPending', 'contractNumber', 'projectSection', 'sourceCatalog', 'sourceCatalogScanned', 'analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'];
+  const syncedFields = ['id', 'name', 'size', 'type', 'lastModified', 'addedAt', 'analyzedAt', 'analysisPending', 'contractNumber', 'projectSection', 'sourceCatalog', 'sourceCatalogScanned', 'analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'commercialProposal', 'proposalBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'];
   syncedFields.forEach((key) => {
     if (Object.prototype.hasOwnProperty.call(latest, key)) file[key] = latest[key];
     else if (key !== 'projectSection') delete file[key];
@@ -6616,29 +6687,165 @@ function renderMyProjects() {
   $$('[data-my-projects-empty]').forEach((empty) => { empty.hidden = projects.length > 0; });
 }
 
-function commercialProposalSource(object) {
-  const kind = objectFile(object, 'project') ? 'project' : objectFile(object, 'estimate') ? 'estimate' : null;
-  const file = kind ? objectFile(object, kind) : null;
-  const version = latestDocumentVersion(file);
-  return kind && file && version ? { kind, file, version } : null;
+function commercialProposalCreationCardMarkup(kind) {
+  const draft = commercialProposalDrafts[kind];
+  const rule = uploadRules[kind];
+  const isProject = kind === 'project';
+  const titleKey = isProject ? 'createProposalByProject' : 'createProposalByEstimate';
+  const hintKey = isProject ? 'proposalCreateProjectHint' : 'proposalCreateEstimateHint';
+  const selectedFile = draft.file
+    ? `<div class="proposal-create-selected-file"><span aria-hidden="true">${isProject ? '▤' : 'Σ'}</span><div><strong>${escapeHtml(draft.file.name)}</strong><small>${escapeHtml(fileFormatLabel(draft.file))} · ${escapeHtml(fileSize(draft.file.size))}</small></div><button type="button" data-proposal-replace-file="${kind}">${escapeHtml(tr('replace'))}</button><button class="proposal-create-delete-file" type="button" data-proposal-delete-file="${kind}" aria-label="${escapeHtml(tr('deleteFile'))}" title="${escapeHtml(tr('deleteFile'))}">×</button></div>`
+    : `<div class="proposal-create-dropzone" data-proposal-dropzone="${kind}" role="button" tabindex="0"><span aria-hidden="true">↑</span><div><strong>${escapeHtml(tr('selectFile'))}</strong><small>${escapeHtml(tr('dropFile'))} · ${escapeHtml(rule.formats)} · ${rule.maxMb} МБ</small></div></div>`;
+  const createAction = draft.file
+    ? `<button class="primary-button proposal-create-submit" type="button" data-create-commercial-proposal="${kind}"${draft.busy || !draft.objectName.trim() || !draft.sectionName.trim() ? ' disabled' : ''}>${escapeHtml(tr(draft.busy ? 'creatingCommercialProposal' : 'createCommercialProposal'))}</button>`
+    : '';
+  return `<article class="proposal-create-card is-${kind}${draft.busy ? ' is-busy' : ''}" data-commercial-proposal-create-card="${kind}"><header><span aria-hidden="true">${isProject ? '▤' : 'Σ'}</span><div><h2>${escapeHtml(tr(titleKey))}</h2><p>${escapeHtml(tr(hintKey))}</p></div></header><div class="proposal-create-fields"><label><span>${escapeHtml(tr('objectName'))} <em>*</em></span><input type="text" maxlength="100" data-proposal-object-name="${kind}" value="${escapeHtml(draft.objectName)}" placeholder="${escapeHtml(tr('objectPlaceholder'))}" autocomplete="organization" /></label><label><span>${escapeHtml(tr('proposalSectionField'))} <em>*</em></span><input type="text" maxlength="140" data-proposal-section-name="${kind}" value="${escapeHtml(draft.sectionName)}" placeholder="${escapeHtml(tr('proposalSectionPlaceholder'))}" /></label></div><input class="hidden-file-input" type="file" data-proposal-file-input="${kind}" accept="${escapeHtml(rule.accept)}" />${selectedFile}<small class="proposal-create-file-hint">${escapeHtml(tr('proposalFileHint'))}</small>${createAction}</article>`;
 }
 
-function commercialProposalCardMarkup(object) {
-  const source = commercialProposalSource(object);
-  if (!source) return '';
+function updateCommercialProposalCreateButton(card, kind) {
+  const draft = commercialProposalDrafts[kind];
+  const button = $('[data-create-commercial-proposal]', card);
+  if (button) button.disabled = draft.busy || !draft.file || !draft.objectName.trim() || !draft.sectionName.trim();
+}
+
+function chooseCommercialProposalFile(kind, file) {
+  if (!file || !commercialProposalDrafts[kind]) return;
+  const rule = uploadRules[kind];
+  if (file.size > rule.maxMb * 1024 * 1024) { showToast(`${tr('fileTooLarge')}: ${rule.maxMb} МБ`); return; }
+  if (!isAllowedFile(file, rule)) { showToast(`${tr('unsupportedFormat')}: ${rule.formats}`); return; }
+  const draft = commercialProposalDrafts[kind];
+  draft.file = fileMetadata(file);
+  draft.sourceFile = file;
+  renderCommercialProposalCreators();
+  showToast(`${tr('fileSelected')}: ${file.name}`);
+}
+
+function renderCommercialProposalCreators() {
+  $$('[data-proposal-create-actions]').forEach((rootElement) => {
+    rootElement.innerHTML = ['project', 'estimate'].map(commercialProposalCreationCardMarkup).join('');
+    $$('[data-commercial-proposal-create-card]', rootElement).forEach((card) => {
+      const kind = card.dataset.commercialProposalCreateCard;
+      const draft = commercialProposalDrafts[kind];
+      const objectInput = $('[data-proposal-object-name]', card);
+      const sectionInput = $('[data-proposal-section-name]', card);
+      const fileInput = $('[data-proposal-file-input]', card);
+      objectInput?.addEventListener('input', () => { draft.objectName = objectInput.value.slice(0, 100); objectInput.removeAttribute('aria-invalid'); updateCommercialProposalCreateButton(card, kind); });
+      sectionInput?.addEventListener('input', () => { draft.sectionName = sectionInput.value.slice(0, 140); sectionInput.removeAttribute('aria-invalid'); updateCommercialProposalCreateButton(card, kind); });
+      fileInput?.addEventListener('change', () => { chooseCommercialProposalFile(kind, fileInput.files?.[0]); fileInput.value = ''; });
+      $('[data-proposal-replace-file]', card)?.addEventListener('click', () => fileInput?.click());
+      $('[data-proposal-delete-file]', card)?.addEventListener('click', () => {
+        draft.file = null;
+        draft.sourceFile = null;
+        renderCommercialProposalCreators();
+        showToast(tr('fileDeleted'));
+      });
+      const dropzone = $('[data-proposal-dropzone]', card);
+      dropzone?.addEventListener('click', () => fileInput?.click());
+      dropzone?.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); fileInput?.click(); } });
+      ['dragenter', 'dragover'].forEach((type) => dropzone?.addEventListener(type, (event) => { event.preventDefault(); dropzone.classList.add('is-dragging'); }));
+      ['dragleave', 'drop'].forEach((type) => dropzone?.addEventListener(type, (event) => { event.preventDefault(); dropzone.classList.remove('is-dragging'); }));
+      dropzone?.addEventListener('drop', (event) => {
+        if (event.dataTransfer.files.length > 1) showToast(tr('onlyOneFile'));
+        chooseCommercialProposalFile(kind, event.dataTransfer.files?.[0]);
+      });
+      $('[data-create-commercial-proposal]', card)?.addEventListener('click', () => createCommercialProposalFromDraft(kind));
+    });
+  });
+}
+
+async function createCommercialProposalFromDraft(kind) {
+  const draft = commercialProposalDrafts[kind];
+  const card = $(`[data-commercial-proposal-create-card="${kind}"]`);
+  const objectInput = $('[data-proposal-object-name]', card);
+  const sectionInput = $('[data-proposal-section-name]', card);
+  draft.objectName = objectInput?.value.trim().slice(0, 100) || draft.objectName.trim().slice(0, 100);
+  draft.sectionName = sectionInput?.value.trim().slice(0, 140) || draft.sectionName.trim().slice(0, 140);
+  if (!draft.objectName) { objectInput?.setAttribute('aria-invalid', 'true'); objectInput?.focus(); showToast(tr('objectRequired')); return; }
+  if (!draft.sectionName) { sectionInput?.setAttribute('aria-invalid', 'true'); sectionInput?.focus(); showToast(tr('projectNameRequired')); return; }
+  if (!draft.file) { showToast(tr('selectFile')); return; }
+  draft.busy = true;
+  renderCommercialProposalCreators();
+  try {
+    const uploadedAt = new Date().toISOString();
+    const sourceCatalog = draft.sourceFile ? await extractCashSourceCatalogFromFile(draft.sourceFile, kind) : [];
+    let destination = objectRegistry.find((object) => object.name.trim().toLocaleLowerCase() === draft.objectName.toLocaleLowerCase() && projectSectionFor(object).toLocaleLowerCase() === draft.sectionName.toLocaleLowerCase());
+    if (!destination) {
+      destination = { id: createObjectId(), name: draft.objectName, projectTitle: draft.sectionName, projectSection: draft.sectionName, documentTitles: normalizeProjectDocumentTitles(), contractNumber: '', status: 'uploaded', createdAt: uploadedAt, updatedAt: uploadedAt, uploadedAt, analyzedAt: null, startedAt: null, files: [] };
+      objectRegistry.unshift(destination);
+    }
+    const previousFile = objectFile(destination, kind);
+    let uploadedFile = { ...draft.file, kind, projectSection: draft.sectionName, addedAt: uploadedAt, analysisPending: true, analyzedAt: null, sourceCatalog, sourceCatalogScanned: Boolean(draft.sourceFile) };
+    if (previousFile && sameFileMetadata(latestDocumentVersion(previousFile), uploadedFile)) {
+      uploadedFile = normalizeFileRecord(previousFile);
+    } else if (previousFile) {
+      const versions = fileVersions(normalizeFileRecord(previousFile));
+      versions.push(fileVersionSnapshot(uploadedFile));
+      uploadedFile = { ...uploadedFile, versions, comparison: null };
+    } else {
+      uploadedFile = { ...uploadedFile, versions: [fileVersionSnapshot(uploadedFile)], comparison: null };
+    }
+    destination.files = [...(destination.files || []).filter((file) => file.kind !== kind), uploadedFile];
+    destination.projectTitle ||= draft.sectionName;
+    destination.projectSection = draft.sectionName;
+    destination.documentTitles = normalizeProjectDocumentTitles(destination.documentTitles);
+    destination.updatedAt = uploadedAt;
+    destination.uploadedAt = uploadedAt;
+    if (destination.status === 'ready' && !isDocumentVersionAnalyzed(latestDocumentVersion(uploadedFile))) destination.status = 'uploaded';
+    const version = latestDocumentVersion(uploadedFile);
+    activeCommercialProposalSource = { objectId: destination.id, kind, versionId: version?.id || null };
+    activeCommercialProposalResultTab = 'smr';
+    selectObjectForAnalysis(destination);
+    saveObjects();
+    const source = { objectId: destination.id, kind, versionId: version?.id || null };
+    commercialProposalDrafts[kind] = { objectName: '', sectionName: '', file: null, sourceFile: null, busy: false };
+    renderObjects();
+    analyzeObjectDocument(source.objectId, source.kind, source.versionId, { returnToProposals: true });
+  } catch (error) {
+    console.warn('StructOS commercial proposal creation failed:', error);
+    draft.busy = false;
+    renderCommercialProposalCreators();
+    showToast(tr('proposalCreateFailed'));
+  }
+}
+
+function commercialProposalSources(object) {
+  return ['project', 'estimate'].flatMap((kind) => {
+    const file = objectFile(object, kind);
+    const version = latestDocumentVersion(file);
+    return file && version ? [{ kind, file, version }] : [];
+  });
+}
+
+function commercialProposalSource(object, preferredKind = null, versionId = null) {
+  const sources = commercialProposalSources(object);
+  if (!sources.length) return null;
+  const preferred = sources.find((source) => source.kind === preferredKind);
+  if (!preferred) return sources[0];
+  return { ...preferred, version: documentVersionById(preferred.file, versionId) || preferred.version };
+}
+
+function commercialProposalCardMarkup(object, source) {
   const ready = isDocumentVersionAnalyzed(source.version);
-  return `<article class="commercial-proposal-card${ready ? ' is-ready' : ' is-pending'}"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(projectSectionFor(object))}</small><h2>${escapeHtml(object.name)}</h2><p>${escapeHtml(tr('proposalSource'))}: ${escapeHtml(source.version.name)}</p></div><b>${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header><footer><span>${escapeHtml(formatObjectDate(source.version.addedAt))}</span><button class="${ready ? 'outline-button' : 'primary-button'}" type="button" data-open-commercial-proposal="${escapeHtml(object.id)}">${escapeHtml(tr(ready ? 'openCommercialProposal' : 'buildCommercialProposal'))} →</button></footer></article>`;
+  const sourceLabel = tr(source.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
+  return `<article class="commercial-proposal-card${ready ? ' is-ready' : ' is-pending'}"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(projectSectionFor(object))}</small><h2>${escapeHtml(object.name)}</h2><p>${escapeHtml(sourceLabel)} · ${escapeHtml(source.version.name)}</p></div><b>${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header><footer><span>${escapeHtml(formatObjectDate(source.version.addedAt))}</span><button class="${ready ? 'outline-button' : 'primary-button'}" type="button" data-open-commercial-proposal="${escapeHtml(object.id)}" data-proposal-kind="${escapeHtml(source.kind)}" data-proposal-version="${escapeHtml(source.version.id)}">${escapeHtml(tr(ready ? 'openCommercialProposal' : 'buildCommercialProposal'))} →</button></footer></article>`;
+}
+
+function openCommercialProposalCard(objectId, kind, versionId) {
+  activeCommercialProposalSource = { objectId, kind, versionId };
+  activeCommercialProposalResultTab = 'smr';
+  openObjectCard(objectId, 'proposal');
 }
 
 function renderCommercialProposals() {
-  const objects = myProjectObjects().filter((object) => commercialProposalSource(object));
-  const markup = objects.map(commercialProposalCardMarkup).join('');
+  renderCommercialProposalCreators();
+  const proposals = myProjectObjects().flatMap((object) => commercialProposalSources(object).map((source) => ({ object, source })));
+  const markup = proposals.map(({ object, source }) => commercialProposalCardMarkup(object, source)).join('');
   $$('[data-commercial-proposals-list]').forEach((list) => {
     list.innerHTML = markup;
-    $$('[data-open-commercial-proposal]', list).forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openCommercialProposal, 'proposal')));
+    $$('[data-open-commercial-proposal]', list).forEach((button) => button.addEventListener('click', () => openCommercialProposalCard(button.dataset.openCommercialProposal, button.dataset.proposalKind, button.dataset.proposalVersion)));
   });
-  $$('[data-commercial-proposals-count]').forEach((count) => { count.textContent = String(objects.length); });
-  $$('[data-commercial-proposals-empty]').forEach((empty) => { empty.hidden = objects.length > 0; });
+  $$('[data-commercial-proposals-count]').forEach((count) => { count.textContent = String(proposals.length); });
+  $$('[data-commercial-proposals-empty]').forEach((empty) => { empty.hidden = proposals.length > 0; });
 }
 
 const projectAnalysisTabs = [
@@ -6783,6 +6990,134 @@ function projectEstimateBreakdownMarkup(version, kind = 'project') {
   return `<section class="project-estimate-breakdown"><header><div><span class="eyebrow">STRUCTOS ESTIMATE</span><h3>${escapeHtml(tr('projectEstimate'))}</h3><p>${escapeHtml(tr('estimateAnalysisSummary'))}</p></div><div><b>${worksCount}</b><small>${escapeHtml(tr('works'))}</small><b>${materialsCount}</b><small>${escapeHtml(tr('materials'))}</small></div></header><div class="project-estimate-columns"><article class="project-estimate-column is-works"><header><span>⚒</span><div><h3>${escapeHtml(tr('installationEstimate'))}</h3><small>${worksCount} · ${escapeHtml(tr('works'))}</small></div></header>${projectEstimateGroupMarkup('installationWorks', groups.installationWorks, 'W')}${projectEstimateGroupMarkup('associatedWorks', groups.associatedWorks, '+')}</article><article class="project-estimate-column is-materials"><header><span>◇</span><div><h3>${escapeHtml(tr('projectMaterialsEquipment'))}</h3><small>${materialsCount} · ${escapeHtml(tr('materials'))}</small></div></header>${projectEstimateGroupMarkup('projectMaterials', groups.projectMaterials, 'M')}${projectEstimateGroupMarkup('associatedMaterials', groups.associatedMaterials, '+')}</article></div></section>`;
 }
 
+const COMMERCIAL_PROPOSAL_GROUP_ALIASES = Object.freeze({
+  specificationWorks: new Set(['specificationWorks', 'worksBySpecification', 'projectSpecificationWorks', 'installationWorks', 'mountingWorks', 'works', 'workItems', 'services', 'по спецификации проекта', 'работы по спецификации', 'монтажные работы', 'работы', 'услуги'].map(cashSourceKey)),
+  outsideSpecificationWorks: new Set(['outsideSpecificationWorks', 'nonSpecificationWorks', 'unlistedWorks', 'unaccountedWorks', 'additionalProjectWorks', 'вне спецификации по проекту', 'вне спецификации', 'неучтенные работы', 'неучтённые работы'].map(cashSourceKey)),
+  possibleWorks: new Set(['possibleWorks', 'potentialWorks', 'projectPossibleWorks', 'optionalWorks', 'worksPossibleByProject', 'работы возможные по проекту', 'возможные работы', 'предполагаемые работы'].map(cashSourceKey)),
+  associatedWorks: new Set(['associatedWorks', 'companionWorks', 'relatedWorks', 'hiddenWorks', 'auxiliaryWorks', 'сопутствующие работы', 'дополнительные работы', 'скрытые работы'].map(cashSourceKey)),
+  equipment: new Set(['equipment', 'equipmentItems', 'devices', 'projectEquipment', 'оборудование', 'приборы', 'устройства'].map(cashSourceKey)),
+  materials: new Set(['materials', 'materialItems', 'projectMaterials', 'specification', 'specifications', 'материалы', 'спецификация'].map(cashSourceKey)),
+  toolsAndConsumables: new Set(['toolsAndConsumables', 'tools', 'tooling', 'instruments', 'инструмент и расходник', 'инструменты', 'оснастка'].map(cashSourceKey)),
+  consumableMaterials: new Set(['consumableMaterials', 'consumables', 'associatedMaterials', 'mountingMaterials', 'расходные материалы', 'сопутствующие материалы', 'монтажные материалы'].map(cashSourceKey)),
+  laborHours: new Set(['laborHours', 'labourHours', 'manHours', 'personHours', 'workHours', 'laborCosts', 'человеко часы', 'человеко-часы', 'трудозатраты'].map(cashSourceKey))
+});
+
+const COMMERCIAL_PROPOSAL_GROUPS = Object.freeze({
+  specificationWorks: { label: 'specificationProjectWorks', icon: '01', count: 'quantityCount' },
+  outsideSpecificationWorks: { label: 'outsideSpecificationProjectWorks', icon: '02', count: 'quantityCount' },
+  possibleWorks: { label: 'possibleProjectWorks', icon: '03', count: 'quantityCount' },
+  associatedWorks: { label: 'proposalAssociatedWorks', icon: '04', count: 'quantityCount' },
+  equipment: { label: 'proposalEquipment', icon: 'E', count: 'quantityCount' },
+  materials: { label: 'proposalMaterialItems', icon: 'M', count: 'quantityCount' },
+  toolsAndConsumables: { label: 'toolsAndConsumables', icon: 'T', count: 'positionsCount' },
+  consumableMaterials: { label: 'consumableMaterials', icon: 'R', count: 'quantityCount' },
+  laborHours: { label: 'laborHourCosts', icon: 'H', count: 'quantityCount' }
+});
+
+const COMMERCIAL_PROPOSAL_RESULT_TABS = Object.freeze([
+  { id: 'smr', label: 'proposalSmr', icon: '⚒', groups: ['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks'] },
+  { id: 'materials', label: 'proposalMaterials', icon: '◇', groups: ['equipment', 'materials'] },
+  { id: 'required', label: 'proposalRequired', icon: '＋', groups: ['toolsAndConsumables', 'consumableMaterials', 'laborHours'] }
+]);
+
+function commercialProposalEntriesFromValue(value, groupKey, kind = 'project') {
+  const isWork = ['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'laborHours'].includes(groupKey);
+  const isProjectSource = ['specificationWorks', 'equipment', 'materials'].includes(groupKey);
+  const defaults = {
+    sourceKind: kind,
+    sourceName: tr(isProjectSource ? 'proposalSource' : 'identifiedByAnalysis'),
+    category: isWork ? 'work' : 'material',
+    origin: isProjectSource ? 'project' : 'analysis'
+  };
+  if (groupKey === 'laborHours') {
+    const rawTotal = typeof value === 'number' || typeof value === 'string'
+      ? value
+      : cashSourceProperty(value, ['total', 'hours', 'quantity', 'amount', 'часы', 'количество', 'трудозатраты']);
+    const total = cashSourceNumber(rawTotal);
+    if (total > 0) {
+      const entry = normalizeCashSourceCatalogEntry({ name: tr('laborHourCosts'), quantity: total, unit: tr('personHoursUnit') }, defaults);
+      return entry ? [{ ...entry, origin: 'analysis' }] : [];
+    }
+  }
+  return projectEstimateEntriesFromValue(value, defaults);
+}
+
+function collectCommercialProposalGroups(rootValue, groups, kind = 'project', depth = 0) {
+  if (!rootValue || typeof rootValue !== 'object' || depth > 7) return;
+  Object.entries(rootValue).forEach(([key, child]) => {
+    const normalizedKey = cashSourceKey(key);
+    const groupKey = Object.entries(COMMERCIAL_PROPOSAL_GROUP_ALIASES).find(([, aliases]) => aliases.has(normalizedKey))?.[0];
+    if (groupKey) groups[groupKey].push(...commercialProposalEntriesFromValue(child, groupKey, kind));
+    if (child && typeof child === 'object') collectCommercialProposalGroups(child, groups, kind, depth + 1);
+  });
+}
+
+function commercialProposalCatalogGroup(entry) {
+  const key = cashSourceKey(entry.name);
+  if (/(человекочас|трудозатрат|laborhours?|labourhours?|manhours?|personhours?)/u.test(key)) return 'laborHours';
+  if (/(внеспецификац|неучтен|неучтён|outsidespecification|nonspecification|unlisted|unaccounted)/u.test(key)) return 'outsideSpecificationWorks';
+  if (/(возможн|предполагаем|possiblework|potentialwork|optionalwork)/u.test(key)) return 'possibleWorks';
+  if (/(сопутств|скрыт.*работ|associatedwork|companionwork|relatedwork|auxiliarywork|hiddenwork)/u.test(key)) return 'associatedWorks';
+  if (/(инструмент|оснаст|tooling|tools?)/u.test(key)) return 'toolsAndConsumables';
+  if (/(расходн|крепеж|крепёж|герметик|изолент|consumable)/u.test(key)) return 'consumableMaterials';
+  if (/(оборудован|прибор|устройств|светильник|шкаф|щит|насос|вентилятор|equipment|device|fixture|panel|pump|fan)/u.test(key)) return 'equipment';
+  if (entry.category === 'work' || /(монтаж|установ|проклад|демонтаж|пусконалад|испытан|настрой|подключ|работ|услуг|install|mount|laying|testing|commission|service)/u.test(key)) return 'specificationWorks';
+  return 'materials';
+}
+
+function commercialProposalBreakdown(version, kind = 'project') {
+  const groups = Object.fromEntries(Object.keys(COMMERCIAL_PROPOSAL_GROUPS).map((key) => [key, []]));
+  const roots = [
+    version?.commercialProposal,
+    version?.proposalBreakdown,
+    version?.estimateBreakdown,
+    version?.analysisData,
+    version?.analysisResult,
+    version?.result,
+    version?.extractedData,
+    version?.extraction,
+    { works: version?.works, services: version?.services, materials: version?.materials, equipment: version?.equipment, specification: version?.specification }
+  ];
+  roots.forEach((rootValue) => collectCommercialProposalGroups(rootValue, groups, kind));
+  const claimedEntries = new Set(Object.values(groups).flat().map((entry) => cashSourceKey(entry.name)));
+  cashSourceCatalogFromFileRecord(version, kind).forEach((entry) => {
+    const entryKey = cashSourceKey(entry.name);
+    if (claimedEntries.has(entryKey)) return;
+    groups[commercialProposalCatalogGroup(entry)].push(entry);
+    claimedEntries.add(entryKey);
+  });
+  Object.keys(groups).forEach((groupKey) => { groups[groupKey] = mergeProjectEstimateItems(groups[groupKey]); });
+  return groups;
+}
+
+function commercialProposalGroupMetric(groupKey, entries) {
+  if (groupKey !== 'laborHours') return entries.length;
+  const hours = entries.reduce((total, entry) => total + (Number(entry.quantity) || 0), 0);
+  return hours > 0 ? Math.round(hours * 100) / 100 : entries.length;
+}
+
+function commercialProposalGroupMarkup(groupKey, entries) {
+  const config = COMMERCIAL_PROPOSAL_GROUPS[groupKey];
+  const count = commercialProposalGroupMetric(groupKey, entries);
+  const body = entries.length
+    ? `<div class="project-estimate-list">${entries.slice(0, 200).map((entry) => `<article><span>${escapeHtml(config.icon)}</span><div><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(entry.sourceSheet || entry.sourceName || tr('identifiedByAnalysis'))}</small></div><b>${entry.quantity ? escapeHtml(String(entry.quantity)) : '—'}${entry.unit ? ` ${escapeHtml(entry.unit)}` : ''}</b></article>`).join('')}</div>`
+    : `<div class="project-estimate-empty"><span>◇</span><p>${escapeHtml(tr('estimateGroupPending'))}</p></div>`;
+  return `<section class="project-estimate-group commercial-proposal-result-group"><header><span>${escapeHtml(config.icon)}</span><div><h4>${escapeHtml(tr(config.label))}</h4><small>${escapeHtml(tr(config.count))}: ${escapeHtml(String(count))}</small></div><b>${escapeHtml(String(count))}</b></header>${body}</section>`;
+}
+
+function commercialProposalResultMarkup(version, kind = 'project') {
+  const groups = commercialProposalBreakdown(version, kind);
+  const activeTab = COMMERCIAL_PROPOSAL_RESULT_TABS.find((tab) => tab.id === activeCommercialProposalResultTab) || COMMERCIAL_PROPOSAL_RESULT_TABS[0];
+  const summary = {
+    smr: COMMERCIAL_PROPOSAL_RESULT_TABS[0].groups.reduce((total, key) => total + groups[key].length, 0),
+    materials: COMMERCIAL_PROPOSAL_RESULT_TABS[1].groups.reduce((total, key) => total + groups[key].length, 0),
+    required: COMMERCIAL_PROPOSAL_RESULT_TABS[2].groups.reduce((total, key) => total + groups[key].length, 0)
+  };
+  const tabs = COMMERCIAL_PROPOSAL_RESULT_TABS.map((tab) => `<button class="${tab.id === activeTab.id ? 'is-active' : ''}" type="button" data-commercial-proposal-result-tab="${tab.id}" aria-selected="${String(tab.id === activeTab.id)}"><span>${tab.icon}</span><strong>${escapeHtml(tr(tab.label))}</strong><b>${summary[tab.id]}</b></button>`).join('');
+  const totals = COMMERCIAL_PROPOSAL_RESULT_TABS.map((tab) => `<span><b>${summary[tab.id]}</b><small>${escapeHtml(tr(tab.label))}</small></span>`).join('');
+  return `<section class="commercial-proposal-intelligence"><header><div><span class="eyebrow">STRUCTOS INTELLIGENCE</span><h3>${escapeHtml(tr('foundByIntelligence'))}</h3><p>${escapeHtml(tr('proposalFoundSummary'))}</p></div><div>${totals}</div></header><nav class="commercial-proposal-result-tabs" aria-label="${escapeHtml(tr('commercialProposal'))}">${tabs}</nav><div class="commercial-proposal-result-groups is-${activeTab.id}">${activeTab.groups.map((groupKey) => commercialProposalGroupMarkup(groupKey, groups[groupKey])).join('')}</div></section>`;
+}
+
 function projectAnalysisTabContent(tab, version = null, kind = 'project') {
   if (tab === 'proposal' && kind === 'project') return projectEstimateBreakdownMarkup(version, kind);
   const catalog = version ? cashSourceCatalogFromFileRecord(version, kind) : [];
@@ -6913,9 +7248,14 @@ function analyzeObjectDocument(objectId, kind, versionId = null, options = {}) {
   const version = documentVersionById(file, versionId);
   if (!object || !file || !version) return;
   if (isDocumentVersionAnalyzed(version)) {
-    if (options.inline || options.dialog) {
+    if (options.returnToProposals) {
+      activeCommercialProposalSource = { objectId, kind, versionId: version.id };
+      renderObjects();
+      setPanel('proposals');
+      showToast(tr('commercialProposalCreated'));
+    } else if (options.inline || options.dialog) {
       selectedProjectVersionIds.set(projectDocumentGroupKey(objectId, kind), version.id);
-      if (options.dialog) openObjectCard(objectId);
+      if (options.dialog) openObjectCard(objectId, 'proposal');
       else renderMyProjects();
     } else openAnalyzedDocument(objectId, kind, version.id);
     return;
@@ -6941,10 +7281,15 @@ function analyzeObjectDocument(objectId, kind, versionId = null, options = {}) {
     activeAnalysisDocument = { objectId, kind, versionId: currentVersion.id };
     activeProjectAnalysisTab = 'proposal';
     $('[data-dialog]')?.close();
-    if (options.inline || options.dialog) {
+    if (options.returnToProposals) {
+      activeCommercialProposalSource = { objectId, kind, versionId: currentVersion.id };
+      renderObjects();
+      setPanel('proposals');
+      showToast(tr('commercialProposalCreated'));
+    } else if (options.inline || options.dialog) {
       selectedProjectVersionIds.set(projectDocumentGroupKey(objectId, kind), currentVersion.id);
       renderObjects();
-      if (options.dialog) openObjectCard(objectId);
+      if (options.dialog) openObjectCard(objectId, 'proposal');
       else setPanel('projects');
     } else {
       renderObjects();
@@ -7274,15 +7619,17 @@ function renderObjects() {
 }
 
 function objectCommercialProposalMarkup(object) {
-  const source = commercialProposalSource(object);
+  const selectedSource = activeCommercialProposalSource.objectId === object.id ? activeCommercialProposalSource : null;
+  const source = commercialProposalSource(object, selectedSource?.kind, selectedSource?.versionId);
   if (!source) {
     return `<section class="object-proposal-empty"><span aria-hidden="true">₽</span><h2>${escapeHtml(tr('commercialProposal'))}</h2><p>${escapeHtml(tr('noCommercialProposalsCopy'))}</p><div><button class="primary-button" type="button" data-proposal-upload-kind="project">＋ ${escapeHtml(tr('uploadProject'))}</button><button class="outline-button" type="button" data-proposal-upload-kind="estimate">＋ ${escapeHtml(tr('uploadEstimate'))}</button></div></section>`;
   }
   const ready = isDocumentVersionAnalyzed(source.version);
+  const sourceLabel = tr(source.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
   const result = ready
-    ? `<section class="object-proposal-result"><div class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></div>${projectAnalysisTabContent('proposal', source.version, source.kind)}</section>`
+    ? `<section class="object-proposal-result"><div class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></div>${commercialProposalResultMarkup(source.version, source.kind)}</section>`
     : `<section class="object-proposal-pending"><span aria-hidden="true">⌛</span><div><strong>${escapeHtml(tr('proposalAwaitingAnalysis'))}</strong><p>${escapeHtml(tr('proposalObjectTabHint'))}</p></div><button class="primary-button" type="button" data-build-object-proposal data-object-id="${escapeHtml(object.id)}" data-kind="${escapeHtml(source.kind)}" data-version-id="${escapeHtml(source.version.id)}">${escapeHtml(tr('buildCommercialProposal'))} →</button></section>`;
-  return `<section class="object-proposal-workspace"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(projectSectionFor(object))}</small><h2>${escapeHtml(tr('commercialProposal'))}</h2><p>${escapeHtml(tr('proposalSource'))}: ${escapeHtml(source.version.name)}</p></div><b class="${ready ? 'is-ready' : 'is-pending'}">${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header>${result}</section>`;
+  return `<section class="object-proposal-workspace"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(projectSectionFor(object))}</small><h2>${escapeHtml(sourceLabel)}</h2><p>${escapeHtml(tr('proposalSource'))}: ${escapeHtml(source.version.name)}</p></div><b class="${ready ? 'is-ready' : 'is-pending'}">${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header>${result}</section>`;
 }
 
 function openObjectCard(id, requestedTab = null) {
@@ -7308,8 +7655,13 @@ function openObjectCard(id, requestedTab = null) {
   $$('[data-proposal-upload-kind]', scope).forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.proposalUploadKind, object.id, 'standard')));
   $('[data-build-object-proposal]', scope)?.addEventListener('click', (event) => {
     activeObjectDialogTab = 'proposal';
+    activeCommercialProposalSource = { objectId: object.id, kind: event.currentTarget.dataset.kind, versionId: event.currentTarget.dataset.versionId };
     analyzeObjectDocument(event.currentTarget.dataset.objectId, event.currentTarget.dataset.kind, event.currentTarget.dataset.versionId, { dialog: true });
   });
+  $$('[data-commercial-proposal-result-tab]', scope).forEach((button) => button.addEventListener('click', () => {
+    activeCommercialProposalResultTab = button.dataset.commercialProposalResultTab;
+    openObjectCard(object.id, 'proposal');
+  }));
   $('[data-launch-project]', scope)?.addEventListener('click', () => openProjectLaunchDialog(object.id));
   $$('[data-my-project-rename-document]', scope).forEach((button) => button.addEventListener('click', () => renameProjectDocument(button.dataset.objectId, button.dataset.myProjectRenameDocument)));
   $$('[data-my-project-upload]', scope).forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.myProjectUpload, button.dataset.objectId, button.dataset.versionMode)));

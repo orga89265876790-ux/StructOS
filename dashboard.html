@@ -274,10 +274,7 @@
 
         <section class="tab-panel proposals-panel" data-panel="proposals" aria-label="Коммерческие предложения" hidden>
           <div class="page-title proposals-page-title"><div><span class="eyebrow">STRUCTOS PROPOSALS</span><h1 data-i18n="commercialProposals">Коммерческие предложения</h1><p data-i18n="commercialProposalsDescription">КП по каждому объекту, проекту и разделу работ</p></div><button class="outline-button" type="button" data-open-panel="projects">← <span data-i18n="myProjects">Мои проекты</span></button></div>
-          <div class="proposal-create-actions" aria-label="Создание коммерческого предложения">
-            <button class="workflow-action-button is-project" type="button" data-project-menu-placeholder="createProposalByProject"><span aria-hidden="true">▤</span><strong data-i18n="createProposalByProject">Создать КП по проекту</strong><i aria-hidden="true">→</i></button>
-            <button class="workflow-action-button is-estimate" type="button" data-project-menu-placeholder="createProposalByEstimate"><span aria-hidden="true">Σ</span><strong data-i18n="createProposalByEstimate">Создать КП по смете</strong><i aria-hidden="true">→</i></button>
-          </div>
+          <div class="proposal-create-actions" data-proposal-create-actions aria-label="Создание коммерческого предложения"></div>
           <section class="proposal-workspace-summary"><span>₽</span><div><small data-i18n="commercialProposals">Коммерческие предложения</small><strong data-commercial-proposals-count>0</strong></div><p data-i18n="proposalWorkspaceHint">Проект или смета превращаются в понятную структуру работ и материалов</p></section>
           <div class="commercial-proposals-list" data-commercial-proposals-list></div>
           <div class="empty-state" data-commercial-proposals-empty><span class="proposal-empty-mark">₽</span><h2 data-i18n="noCommercialProposals">Коммерческих предложений пока нет</h2><p data-i18n="noCommercialProposalsCopy">Загрузите проект или смету в объект — здесь появится подготовка КП.</p><button class="primary-button" type="button" data-open-panel="projects">＋ <span data-i18n="createObject">Создать объект</span></button></div>
