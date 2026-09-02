@@ -249,7 +249,7 @@
         </section>
 
         <section class="tab-panel projects-panel" data-panel="projects" aria-label="Мои проекты" hidden>
-          <div class="page-title my-projects-page-title"><div><span class="eyebrow">STRUCTOS PROJECTS</span><h1 data-i18n="myProjects">Проекты</h1><p data-i18n="myProjectsDescription">Объекты, проекты, договоры и сметы в одной структуре</p></div><div class="my-project-upload-actions"><button class="primary-button create-project-object-button" type="button" data-create-project-object>＋ <span data-i18n="createObject">Создать объект</span></button></div></div>
+          <div class="page-title my-projects-page-title"><div><span class="eyebrow">STRUCTOS PROJECTS</span><h1 data-i18n="myProjects">Проекты</h1><p data-i18n="myProjectsDescription">Четыре независимых рабочих раздела и запуск объекта в один клик</p></div><div class="my-project-upload-actions"><button class="primary-button create-project-object-button" type="button" data-create-project-object>＋ <span data-i18n="createObject">Создать объект</span></button></div></div>
           <section class="projects-entry-menu" aria-label="Разделы проектов">
             <div class="projects-entry-primary">
               <button class="project-entry-button is-proposal" type="button" data-open-panel="proposals"><span aria-hidden="true">₽</span><strong data-i18n="commercialProposals">Коммерческие предложения</strong><i aria-hidden="true">→</i></button>
@@ -257,7 +257,7 @@
               <button class="project-entry-button is-contract" type="button" data-open-panel="contract-review"><span aria-hidden="true">≡</span><strong data-i18n="contractsUnderReview">Договоры на рассмотрении</strong><i aria-hidden="true">→</i></button>
               <button class="project-entry-button is-estimate" type="button" data-open-panel="estimate-analysis"><span aria-hidden="true">Σ</span><strong data-i18n="estimateAnalysis">Анализ сметы</strong><i aria-hidden="true">→</i></button>
             </div>
-            <button class="project-turnkey-button" type="button" data-project-menu-placeholder="turnkeyObject"><span aria-hidden="true">⌂</span><strong data-i18n="turnkeyObject">Запустить объект в один клик</strong><i aria-hidden="true">→</i></button>
+            <button class="project-turnkey-button" type="button" data-launch-turnkey-object><span aria-hidden="true">⌂</span><strong data-i18n="turnkeyObject">Запустить объект в один клик</strong><i aria-hidden="true">→</i></button>
             <div class="project-mailings">
               <h3 data-i18n="projectMailings">Рассылки предложений</h3>
               <div>
@@ -277,7 +277,7 @@
           <div class="proposal-create-actions" data-proposal-create-actions aria-label="Создание коммерческого предложения"></div>
           <section class="proposal-workspace-summary"><span>₽</span><div><small data-i18n="commercialProposals">Коммерческие предложения</small><strong data-commercial-proposals-count>0</strong></div><p data-i18n="proposalWorkspaceHint">Проект или смета превращаются в понятную структуру работ и материалов</p></section>
           <div class="commercial-proposals-list" data-commercial-proposals-list></div>
-          <div class="empty-state" data-commercial-proposals-empty><span class="proposal-empty-mark">₽</span><h2 data-i18n="noCommercialProposals">Коммерческих предложений пока нет</h2><p data-i18n="noCommercialProposalsCopy">Загрузите проект или смету в объект — здесь появится подготовка КП.</p><button class="primary-button" type="button" data-open-panel="projects">＋ <span data-i18n="createObject">Создать объект</span></button></div>
+          <div class="empty-state" data-commercial-proposals-empty><span class="proposal-empty-mark">₽</span><h2 data-i18n="noCommercialProposals">Коммерческих предложений пока нет</h2><p data-i18n="noCommercialProposalsCopy">Заполните один из блоков выше — созданное КП сохранится только в этом разделе.</p></div>
         </section>
 
         <section class="tab-panel project-workflow-panel" data-panel="project-analysis" aria-label="Детально разобрать проект" hidden>
@@ -419,6 +419,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=55"></script>
+    <script type="module" src="dashboard.js?v=56"></script>
   </body>
 </html>

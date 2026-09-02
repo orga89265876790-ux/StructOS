@@ -458,6 +458,39 @@ Object.assign(copy.EN, { proposalCreateFailed: 'Could not create the proposal' }
 Object.assign(copy.KY, { proposalCreateFailed: 'КП түзүү мүмкүн болгон жок' });
 Object.assign(copy.TJ, { proposalCreateFailed: 'КП сохта нашуд' });
 
+Object.assign(copy.RU, {
+  myProjectsDescription: 'Четыре независимых рабочих раздела и запуск объекта в один клик',
+  commercialProposalsDescription: 'Самостоятельный раздел для создания и хранения КП',
+  proposalWorkspaceHint: 'Файлы и результаты хранятся только здесь и не создают объект',
+  noCommercialProposalsCopy: 'Заполните один из блоков выше — созданное КП сохранится только в этом разделе.',
+  commercialProposalCreated: 'КП создано, проанализировано и сохранено в этом разделе',
+  proposalSectionStorage: 'Отдельный раздел · объект не создаётся'
+});
+Object.assign(copy.EN, {
+  myProjectsDescription: 'Four independent workspaces and one-click object launch',
+  commercialProposalsDescription: 'An independent workspace for creating and storing proposals',
+  proposalWorkspaceHint: 'Files and results stay here and do not create an object',
+  noCommercialProposalsCopy: 'Complete either form above. The proposal will be stored only in this workspace.',
+  commercialProposalCreated: 'Proposal created, analyzed, and saved in this workspace',
+  proposalSectionStorage: 'Independent workspace · no object is created'
+});
+Object.assign(copy.KY, {
+  myProjectsDescription: 'Төрт өз алдынча иш бөлүмү жана объектти бир чыкылдатуу менен ишке киргизүү',
+  commercialProposalsDescription: 'КП түзүү жана сактоо үчүн өз алдынча бөлүм',
+  proposalWorkspaceHint: 'Файлдар жана жыйынтыктар ушул жерде гана сакталат, объект түзүлбөйт',
+  noCommercialProposalsCopy: 'Жогорудагы блоктордун бирин толтуруңуз — КП ушул бөлүмдө гана сакталат.',
+  commercialProposalCreated: 'КП түзүлүп, талданып, ушул бөлүмдө сакталды',
+  proposalSectionStorage: 'Өз алдынча бөлүм · объект түзүлбөйт'
+});
+Object.assign(copy.TJ, {
+  myProjectsDescription: 'Чор бахши мустақили корӣ ва оғози объект бо як клик',
+  commercialProposalsDescription: 'Бахши мустақил барои сохтан ва нигоҳ доштани КП',
+  proposalWorkspaceHint: 'Файлҳо ва натиҷаҳо танҳо дар ҳамин ҷо мемонанд ва объект намесозанд',
+  noCommercialProposalsCopy: 'Яке аз блокҳои болоро пур кунед — КП танҳо дар ҳамин бахш нигоҳ дошта мешавад.',
+  commercialProposalCreated: 'КП сохта, таҳлил ва дар ҳамин бахш нигоҳ дошта шуд',
+  proposalSectionStorage: 'Бахши мустақил · объект сохта намешавад'
+});
+
 Object.assign(copy.RU, { detailedProjectAnalysis: 'Детально разобрать проект', contractsUnderReview: 'Договоры на рассмотрении', detailedContractAnalysis: 'Детально разобрать договор', estimateAnalysis: 'Анализ сметы', createProposalByProject: 'Создать КП по проекту', createProposalByEstimate: 'Создать КП по смете', turnkeyObject: 'Запустить объект в один клик', projectMailings: 'Рассылки предложений', mailWorkOffers: 'Рассылка предложений на работу (В разработке)', mailContractOffers: 'Рассылка предложений взять подряд (В разработке)', mailSupplyOffers: 'Рассылка предложений на поставку (В разработке)', projectMenuPrepared: 'Кнопка «{name}» подготовлена. Наполним этот раздел следующим этапом.' });
 Object.assign(copy.EN, { detailedProjectAnalysis: 'Detailed project analysis', contractsUnderReview: 'Contracts under review', detailedContractAnalysis: 'Analyze contract in detail', estimateAnalysis: 'Estimate analysis', createProposalByProject: 'Create proposal from project', createProposalByEstimate: 'Create proposal from estimate', turnkeyObject: 'Launch an object in one click', projectMailings: 'Offer mailings', mailWorkOffers: 'Send job offers (In development)', mailContractOffers: 'Send contract offers (In development)', mailSupplyOffers: 'Send supply offers (In development)', projectMenuPrepared: 'The “{name}” button is ready. We will build out this section next.' });
 Object.assign(copy.KY, { detailedProjectAnalysis: 'Долбоорду толук талдоо', contractsUnderReview: 'Каралуудагы келишимдер', detailedContractAnalysis: 'Келишимди толук талдоо', estimateAnalysis: 'Сметаны талдоо', createProposalByProject: 'Долбоор боюнча КП түзүү', createProposalByEstimate: 'Смета боюнча КП түзүү', turnkeyObject: 'Объектти бир чыкылдатуу менен ишке киргизүү', projectMailings: 'Сунуштарды жөнөтүү', mailWorkOffers: 'Жумуш сунуштарын жөнөтүү (Иштелип жатат)', mailContractOffers: 'Подряд алуу сунуштарын жөнөтүү (Иштелип жатат)', mailSupplyOffers: 'Жеткирүү сунуштарын жөнөтүү (Иштелип жатат)', projectMenuPrepared: '«{name}» баскычы даяр. Бул бөлүмдү кийинки этапта толтурабыз.' });
@@ -898,6 +931,7 @@ const PROFILE_PLAN_KEY = 'structos-profile-plan-v1';
 const UPLOADS_KEY = 'structos-analysis-uploads-v1';
 const OBJECT_NAME_KEY = 'structos-analysis-object-name';
 const OBJECTS_KEY = 'structos-objects-v1';
+const COMMERCIAL_PROPOSALS_KEY = 'structos-commercial-proposals-v2';
 const OBJECT_ORDER_KEY = 'structos-object-order-v1';
 const INVITED_OBJECTS_KEY = 'structos-invited-objects-v1';
 const HOME_NOTIFICATION_READ_KEY = 'structos-home-notification-read-v1';
@@ -941,10 +975,8 @@ let revisionAnalysisTimer;
 let activeRevisionComparisonId = null;
 let activeAnalysisDocument = { objectId: null, kind: 'project', versionId: null };
 let activeProjectAnalysisTab = 'proposal';
-let activeObjectDialogId = null;
-let activeObjectDialogTab = 'documents';
 let activeCommercialProposalResultTab = 'smr';
-let activeCommercialProposalSource = { objectId: null, kind: null, versionId: null };
+let commercialProposalAnalysisTimer;
 const commercialProposalDrafts = {
   project: { objectName: '', sectionName: '', file: null, sourceFile: null, busy: false },
   estimate: { objectName: '', sectionName: '', file: null, sourceFile: null, busy: false }
@@ -1226,6 +1258,43 @@ function normalizeProjectDocumentTitles(value) {
   };
 }
 
+function normalizeCommercialProposalRecord(record) {
+  if (!record || typeof record !== 'object') return null;
+  const kind = record.kind === 'estimate' ? 'estimate' : 'project';
+  const objectName = String(record.objectName || '').trim().slice(0, 100);
+  const sectionName = String(record.sectionName || '').trim().slice(0, 140);
+  if (!objectName || !sectionName || !record.file?.name) return null;
+  const file = normalizeFileRecord({ ...record.file, kind });
+  const latest = latestDocumentVersion(file);
+  const recoveredAt = record.analyzedAt || record.updatedAt || new Date().toISOString();
+  if (latest && !isDocumentVersionAnalyzed(latest)) {
+    updateDocumentVersion(file, latest.id, { analysisPending: false, analyzedAt: recoveredAt });
+  }
+  return {
+    id: String(record.id || `proposal-${createObjectId()}`),
+    objectName,
+    sectionName,
+    kind,
+    status: 'ready',
+    createdAt: record.createdAt || record.updatedAt || recoveredAt,
+    updatedAt: record.updatedAt || recoveredAt,
+    analyzedAt: record.analyzedAt || recoveredAt,
+    file: normalizeFileRecord(file)
+  };
+}
+
+function loadCommercialProposalRecords() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(COMMERCIAL_PROPOSALS_KEY) || '[]');
+    if (Array.isArray(saved)) return saved.map(normalizeCommercialProposalRecord).filter(Boolean);
+  } catch {}
+  return [];
+}
+
+function saveCommercialProposalRecords() {
+  localStorage.setItem(COMMERCIAL_PROPOSALS_KEY, JSON.stringify(commercialProposalRecords));
+}
+
 function loadObjectRegistry() {
   try {
     const saved = JSON.parse(localStorage.getItem(OBJECTS_KEY) || '[]');
@@ -1239,6 +1308,7 @@ function loadObjectRegistry() {
           projectSection: String(object.projectSection || object.projectTitle || object.name || '').trim().slice(0, 140),
           documentTitles: normalizeProjectDocumentTitles(object.documentTitles),
           contractNumber: String(object.contractNumber || '').trim().slice(0, 60),
+          workspaceOrigin: object.workspaceOrigin === 'turnkey' ? 'turnkey' : 'manual',
           status: object.status,
           createdAt: object.createdAt || object.uploadedAt || object.analyzedAt || new Date().toISOString(),
           updatedAt: object.updatedAt || null,
@@ -1254,6 +1324,7 @@ function loadObjectRegistry() {
 }
 
 let objectRegistry = loadObjectRegistry();
+let commercialProposalRecords = loadCommercialProposalRecords();
 let collapsedProjectIds = new Set((() => {
   const stored = readStoredJSON(PROJECT_CARD_STATE_KEY, []);
   return Array.isArray(stored) ? stored.map(String) : [];
@@ -6181,6 +6252,7 @@ function openProjectObjectWizard(options = {}) {
   projectObjectWizardDraft = {
     step: 1,
     quickProjectOnly: Boolean(options.quickProjectOnly),
+    workspaceOrigin: options.workspaceOrigin === 'turnkey' ? 'turnkey' : 'manual',
     objectName: '',
     projectSection: '',
     files: { project: null, contract: null, estimate: null },
@@ -6295,6 +6367,7 @@ async function finishProjectObjectWizard(analyzeKind) {
     projectSection: draft.projectSection,
     documentTitles: normalizeProjectDocumentTitles(),
     contractNumber: String(draft.files.contract?.contractNumber || ''),
+    workspaceOrigin: draft.workspaceOrigin,
     status: 'uploaded',
     createdAt: now,
     updatedAt: now,
@@ -6768,38 +6841,53 @@ async function createCommercialProposalFromDraft(kind) {
   try {
     const uploadedAt = new Date().toISOString();
     const sourceCatalog = draft.sourceFile ? await extractCashSourceCatalogFromFile(draft.sourceFile, kind) : [];
-    let destination = objectRegistry.find((object) => object.name.trim().toLocaleLowerCase() === draft.objectName.toLocaleLowerCase() && projectSectionFor(object).toLocaleLowerCase() === draft.sectionName.toLocaleLowerCase());
-    if (!destination) {
-      destination = { id: createObjectId(), name: draft.objectName, projectTitle: draft.sectionName, projectSection: draft.sectionName, documentTitles: normalizeProjectDocumentTitles(), contractNumber: '', status: 'uploaded', createdAt: uploadedAt, updatedAt: uploadedAt, uploadedAt, analyzedAt: null, startedAt: null, files: [] };
-      objectRegistry.unshift(destination);
-    }
-    const previousFile = objectFile(destination, kind);
-    let uploadedFile = { ...draft.file, kind, projectSection: draft.sectionName, addedAt: uploadedAt, analysisPending: true, analyzedAt: null, sourceCatalog, sourceCatalogScanned: Boolean(draft.sourceFile) };
-    if (previousFile && sameFileMetadata(latestDocumentVersion(previousFile), uploadedFile)) {
-      uploadedFile = normalizeFileRecord(previousFile);
-    } else if (previousFile) {
-      const versions = fileVersions(normalizeFileRecord(previousFile));
-      versions.push(fileVersionSnapshot(uploadedFile));
-      uploadedFile = { ...uploadedFile, versions, comparison: null };
-    } else {
-      uploadedFile = { ...uploadedFile, versions: [fileVersionSnapshot(uploadedFile)], comparison: null };
-    }
-    destination.files = [...(destination.files || []).filter((file) => file.kind !== kind), uploadedFile];
-    destination.projectTitle ||= draft.sectionName;
-    destination.projectSection = draft.sectionName;
-    destination.documentTitles = normalizeProjectDocumentTitles(destination.documentTitles);
-    destination.updatedAt = uploadedAt;
-    destination.uploadedAt = uploadedAt;
-    if (destination.status === 'ready' && !isDocumentVersionAnalyzed(latestDocumentVersion(uploadedFile))) destination.status = 'uploaded';
-    const version = latestDocumentVersion(uploadedFile);
-    activeCommercialProposalSource = { objectId: destination.id, kind, versionId: version?.id || null };
+    const sourceFile = {
+      ...draft.file,
+      kind,
+      projectSection: draft.sectionName,
+      addedAt: uploadedAt,
+      analysisPending: true,
+      analyzedAt: null,
+      sourceCatalog,
+      sourceCatalogScanned: Boolean(draft.sourceFile)
+    };
+    const storedFile = normalizeFileRecord({ ...sourceFile, versions: [fileVersionSnapshot(sourceFile)], comparison: null });
+    const proposal = {
+      id: `proposal-${createObjectId()}`,
+      objectName: draft.objectName,
+      sectionName: draft.sectionName,
+      kind,
+      status: 'analyzing',
+      createdAt: uploadedAt,
+      updatedAt: uploadedAt,
+      analyzedAt: null,
+      file: storedFile
+    };
+    commercialProposalRecords.unshift(proposal);
     activeCommercialProposalResultTab = 'smr';
-    selectObjectForAnalysis(destination);
-    saveObjects();
-    const source = { objectId: destination.id, kind, versionId: version?.id || null };
+    saveCommercialProposalRecords();
     commercialProposalDrafts[kind] = { objectName: '', sectionName: '', file: null, sourceFile: null, busy: false };
-    renderObjects();
-    analyzeObjectDocument(source.objectId, source.kind, source.versionId, { returnToProposals: true });
+    renderCommercialProposals();
+    clearTimeout(commercialProposalAnalysisTimer);
+    showDialog(escapeHtml(tr('creatingCommercialProposal')), escapeHtml(tr('proposalSectionStorage')), `<div class="analysis-loader" data-proposal-analysis-id="${escapeHtml(proposal.id)}"><span></span><span></span><span></span></div>`);
+    commercialProposalAnalysisTimer = setTimeout(() => {
+      const storedProposal = commercialProposalRecords.find((item) => item.id === proposal.id);
+      const version = latestDocumentVersion(storedProposal?.file);
+      if (!storedProposal || !version) return;
+      const analyzedAt = new Date().toISOString();
+      const patch = { analysisPending: false, analyzedAt };
+      if (storedProposal.kind === 'project') patch.estimateBreakdown = projectEstimateSnapshot(version);
+      updateDocumentVersion(storedProposal.file, version.id, patch);
+      storedProposal.file = normalizeFileRecord(storedProposal.file);
+      storedProposal.status = 'ready';
+      storedProposal.analyzedAt = analyzedAt;
+      storedProposal.updatedAt = analyzedAt;
+      saveCommercialProposalRecords();
+      renderCommercialProposals();
+      if ($(`[data-proposal-analysis-id="${proposal.id}"]`)) $('[data-dialog]')?.close();
+      setPanel('proposals');
+      showToast(tr('commercialProposalCreated'));
+    }, 1100);
   } catch (error) {
     console.warn('StructOS commercial proposal creation failed:', error);
     draft.busy = false;
@@ -6808,41 +6896,38 @@ async function createCommercialProposalFromDraft(kind) {
   }
 }
 
-function commercialProposalSources(object) {
-  return ['project', 'estimate'].flatMap((kind) => {
-    const file = objectFile(object, kind);
-    const version = latestDocumentVersion(file);
-    return file && version ? [{ kind, file, version }] : [];
-  });
+function commercialProposalCardMarkup(proposal) {
+  const version = latestDocumentVersion(proposal.file);
+  const ready = proposal.status === 'ready' && isDocumentVersionAnalyzed(version);
+  const sourceLabel = tr(proposal.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
+  return `<article class="commercial-proposal-card${ready ? ' is-ready' : ' is-pending'}"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h2>${escapeHtml(proposal.objectName)}</h2><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version?.name || '')}</p></div><b>${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header><footer><span>${escapeHtml(formatObjectDate(proposal.createdAt))} · ${escapeHtml(tr('proposalSectionStorage'))}</span><button class="${ready ? 'outline-button' : 'primary-button'}" type="button" data-open-commercial-proposal="${escapeHtml(proposal.id)}">${escapeHtml(tr(ready ? 'openCommercialProposal' : 'proposalAwaitingAnalysis'))} →</button></footer></article>`;
 }
 
-function commercialProposalSource(object, preferredKind = null, versionId = null) {
-  const sources = commercialProposalSources(object);
-  if (!sources.length) return null;
-  const preferred = sources.find((source) => source.kind === preferredKind);
-  if (!preferred) return sources[0];
-  return { ...preferred, version: documentVersionById(preferred.file, versionId) || preferred.version };
-}
-
-function commercialProposalCardMarkup(object, source) {
-  const ready = isDocumentVersionAnalyzed(source.version);
-  const sourceLabel = tr(source.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
-  return `<article class="commercial-proposal-card${ready ? ' is-ready' : ' is-pending'}"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(projectSectionFor(object))}</small><h2>${escapeHtml(object.name)}</h2><p>${escapeHtml(sourceLabel)} · ${escapeHtml(source.version.name)}</p></div><b>${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header><footer><span>${escapeHtml(formatObjectDate(source.version.addedAt))}</span><button class="${ready ? 'outline-button' : 'primary-button'}" type="button" data-open-commercial-proposal="${escapeHtml(object.id)}" data-proposal-kind="${escapeHtml(source.kind)}" data-proposal-version="${escapeHtml(source.version.id)}">${escapeHtml(tr(ready ? 'openCommercialProposal' : 'buildCommercialProposal'))} →</button></footer></article>`;
-}
-
-function openCommercialProposalCard(objectId, kind, versionId) {
-  activeCommercialProposalSource = { objectId, kind, versionId };
-  activeCommercialProposalResultTab = 'smr';
-  openObjectCard(objectId, 'proposal');
+function openCommercialProposalCard(proposalId, preserveTab = false) {
+  const proposal = commercialProposalRecords.find((item) => item.id === proposalId);
+  const version = latestDocumentVersion(proposal?.file);
+  if (!proposal || !version) return;
+  if (!preserveTab) activeCommercialProposalResultTab = 'smr';
+  const ready = proposal.status === 'ready' && isDocumentVersionAnalyzed(version);
+  const sourceLabel = tr(proposal.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
+  const result = ready
+    ? `<section class="object-proposal-result"><div class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></div>${commercialProposalResultMarkup(version, proposal.kind)}</section>`
+    : `<section class="object-proposal-pending"><span aria-hidden="true">⌛</span><div><strong>${escapeHtml(tr('proposalAwaitingAnalysis'))}</strong><p>${escapeHtml(tr('creatingCommercialProposal'))}</p></div></section>`;
+  const markup = `<section class="object-proposal-workspace"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h2>${escapeHtml(sourceLabel)}</h2><p>${escapeHtml(tr('proposalSource'))}: ${escapeHtml(version.name)}</p></div><b class="${ready ? 'is-ready' : 'is-pending'}">${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header><div class="analysis-truth-note"><span>i</span><p>${escapeHtml(tr('proposalSectionStorage'))}</p></div>${result}</section>`;
+  showDialog(escapeHtml(proposal.objectName), escapeHtml(proposal.sectionName), markup);
+  $$('[data-commercial-proposal-result-tab]', $('[data-dialog-content]')).forEach((button) => button.addEventListener('click', () => {
+    activeCommercialProposalResultTab = button.dataset.commercialProposalResultTab;
+    openCommercialProposalCard(proposal.id, true);
+  }));
 }
 
 function renderCommercialProposals() {
   renderCommercialProposalCreators();
-  const proposals = myProjectObjects().flatMap((object) => commercialProposalSources(object).map((source) => ({ object, source })));
-  const markup = proposals.map(({ object, source }) => commercialProposalCardMarkup(object, source)).join('');
+  const proposals = commercialProposalRecords.slice().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  const markup = proposals.map(commercialProposalCardMarkup).join('');
   $$('[data-commercial-proposals-list]').forEach((list) => {
     list.innerHTML = markup;
-    $$('[data-open-commercial-proposal]', list).forEach((button) => button.addEventListener('click', () => openCommercialProposalCard(button.dataset.openCommercialProposal, button.dataset.proposalKind, button.dataset.proposalVersion)));
+    $$('[data-open-commercial-proposal]', list).forEach((button) => button.addEventListener('click', () => openCommercialProposalCard(button.dataset.openCommercialProposal)));
   });
   $$('[data-commercial-proposals-count]').forEach((count) => { count.textContent = String(proposals.length); });
   $$('[data-commercial-proposals-empty]').forEach((empty) => { empty.hidden = proposals.length > 0; });
@@ -7248,14 +7333,9 @@ function analyzeObjectDocument(objectId, kind, versionId = null, options = {}) {
   const version = documentVersionById(file, versionId);
   if (!object || !file || !version) return;
   if (isDocumentVersionAnalyzed(version)) {
-    if (options.returnToProposals) {
-      activeCommercialProposalSource = { objectId, kind, versionId: version.id };
-      renderObjects();
-      setPanel('proposals');
-      showToast(tr('commercialProposalCreated'));
-    } else if (options.inline || options.dialog) {
+    if (options.inline || options.dialog) {
       selectedProjectVersionIds.set(projectDocumentGroupKey(objectId, kind), version.id);
-      if (options.dialog) openObjectCard(objectId, 'proposal');
+      if (options.dialog) openObjectCard(objectId);
       else renderMyProjects();
     } else openAnalyzedDocument(objectId, kind, version.id);
     return;
@@ -7281,15 +7361,10 @@ function analyzeObjectDocument(objectId, kind, versionId = null, options = {}) {
     activeAnalysisDocument = { objectId, kind, versionId: currentVersion.id };
     activeProjectAnalysisTab = 'proposal';
     $('[data-dialog]')?.close();
-    if (options.returnToProposals) {
-      activeCommercialProposalSource = { objectId, kind, versionId: currentVersion.id };
-      renderObjects();
-      setPanel('proposals');
-      showToast(tr('commercialProposalCreated'));
-    } else if (options.inline || options.dialog) {
+    if (options.inline || options.dialog) {
       selectedProjectVersionIds.set(projectDocumentGroupKey(objectId, kind), currentVersion.id);
       renderObjects();
-      if (options.dialog) openObjectCard(objectId, 'proposal');
+      if (options.dialog) openObjectCard(objectId);
       else setPanel('projects');
     } else {
       renderObjects();
@@ -7618,27 +7693,9 @@ function renderObjects() {
   renderHomeInbox();
 }
 
-function objectCommercialProposalMarkup(object) {
-  const selectedSource = activeCommercialProposalSource.objectId === object.id ? activeCommercialProposalSource : null;
-  const source = commercialProposalSource(object, selectedSource?.kind, selectedSource?.versionId);
-  if (!source) {
-    return `<section class="object-proposal-empty"><span aria-hidden="true">₽</span><h2>${escapeHtml(tr('commercialProposal'))}</h2><p>${escapeHtml(tr('noCommercialProposalsCopy'))}</p><div><button class="primary-button" type="button" data-proposal-upload-kind="project">＋ ${escapeHtml(tr('uploadProject'))}</button><button class="outline-button" type="button" data-proposal-upload-kind="estimate">＋ ${escapeHtml(tr('uploadEstimate'))}</button></div></section>`;
-  }
-  const ready = isDocumentVersionAnalyzed(source.version);
-  const sourceLabel = tr(source.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
-  const result = ready
-    ? `<section class="object-proposal-result"><div class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></div>${commercialProposalResultMarkup(source.version, source.kind)}</section>`
-    : `<section class="object-proposal-pending"><span aria-hidden="true">⌛</span><div><strong>${escapeHtml(tr('proposalAwaitingAnalysis'))}</strong><p>${escapeHtml(tr('proposalObjectTabHint'))}</p></div><button class="primary-button" type="button" data-build-object-proposal data-object-id="${escapeHtml(object.id)}" data-kind="${escapeHtml(source.kind)}" data-version-id="${escapeHtml(source.version.id)}">${escapeHtml(tr('buildCommercialProposal'))} →</button></section>`;
-  return `<section class="object-proposal-workspace"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(projectSectionFor(object))}</small><h2>${escapeHtml(sourceLabel)}</h2><p>${escapeHtml(tr('proposalSource'))}: ${escapeHtml(source.version.name)}</p></div><b class="${ready ? 'is-ready' : 'is-pending'}">${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header>${result}</section>`;
-}
-
-function openObjectCard(id, requestedTab = null) {
+function openObjectCard(id) {
   const object = objectRegistry.find((item) => item.id === id);
   if (!object) return;
-  const currentDialog = $('[data-dialog]');
-  if (requestedTab) activeObjectDialogTab = requestedTab === 'proposal' ? 'proposal' : 'documents';
-  else if (activeObjectDialogId !== id || !currentDialog?.open) activeObjectDialogTab = 'documents';
-  activeObjectDialogId = id;
   const documentChoices = Object.keys(uploadRules).map((kind) => myProjectDocumentGroupMarkup(object, kind)).join('');
   const lifecycleAction = ['active', 'completed'].includes(object.status)
     ? `<button class="outline-button object-lifecycle-button${object.status === 'active' ? ' is-danger' : ''}" type="button" data-toggle-core-object>${escapeHtml(tr(object.status === 'active' ? 'finishObject' : 'reopenObject'))}</button>`
@@ -7647,21 +7704,8 @@ function openObjectCard(id, requestedTab = null) {
       : '';
   const reportAction = object.files?.length ? `<button class="outline-button object-view-report" type="button" data-view-object-report>${escapeHtml(tr('viewReport'))}</button>` : '';
   const documentsContent = `<div class="object-document-chooser is-versioned my-project-documents">${documentChoices}</div><div class="object-card-actions">${reportAction}<button class="outline-button object-rename-button" type="button" data-rename-core-object>${escapeHtml(tr('rename'))}</button>${lifecycleAction}</div>`;
-  const tabs = `<nav class="object-workspace-tabs" aria-label="${escapeHtml(tr('chooseObjectDocument'))}"><button class="${activeObjectDialogTab === 'documents' ? 'is-active' : ''}" type="button" data-object-workspace-tab="documents" aria-selected="${String(activeObjectDialogTab === 'documents')}"><span>▤</span><strong>${escapeHtml(tr('documentsTab'))}</strong></button><button class="${activeObjectDialogTab === 'proposal' ? 'is-active' : ''}" type="button" data-object-workspace-tab="proposal" aria-selected="${String(activeObjectDialogTab === 'proposal')}"><span>₽</span><strong>${escapeHtml(tr('commercialProposal'))}</strong></button></nav>`;
-  const activeContent = activeObjectDialogTab === 'proposal' ? objectCommercialProposalMarkup(object) : documentsContent;
-  showDialog(escapeHtml(object.name), tr(activeObjectDialogTab === 'proposal' ? 'proposalObjectTabHint' : 'chooseObjectDocument'), `${tabs}<div class="object-workspace-content">${activeContent}</div>`);
+  showDialog(escapeHtml(object.name), escapeHtml(tr('chooseObjectDocument')), documentsContent);
   const scope = $('[data-dialog-content]');
-  $$('[data-object-workspace-tab]', scope).forEach((button) => button.addEventListener('click', () => openObjectCard(object.id, button.dataset.objectWorkspaceTab)));
-  $$('[data-proposal-upload-kind]', scope).forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.proposalUploadKind, object.id, 'standard')));
-  $('[data-build-object-proposal]', scope)?.addEventListener('click', (event) => {
-    activeObjectDialogTab = 'proposal';
-    activeCommercialProposalSource = { objectId: object.id, kind: event.currentTarget.dataset.kind, versionId: event.currentTarget.dataset.versionId };
-    analyzeObjectDocument(event.currentTarget.dataset.objectId, event.currentTarget.dataset.kind, event.currentTarget.dataset.versionId, { dialog: true });
-  });
-  $$('[data-commercial-proposal-result-tab]', scope).forEach((button) => button.addEventListener('click', () => {
-    activeCommercialProposalResultTab = button.dataset.commercialProposalResultTab;
-    openObjectCard(object.id, 'proposal');
-  }));
   $('[data-launch-project]', scope)?.addEventListener('click', () => openProjectLaunchDialog(object.id));
   $$('[data-my-project-rename-document]', scope).forEach((button) => button.addEventListener('click', () => renameProjectDocument(button.dataset.objectId, button.dataset.myProjectRenameDocument)));
   $$('[data-my-project-upload]', scope).forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.myProjectUpload, button.dataset.objectId, button.dataset.versionMode)));
@@ -8361,6 +8405,7 @@ async function collectOfflineSyncCategory(category) {
     return offlineJsonCopy({
       schemaVersion: 1,
       objects: objectRegistry,
+      commercialProposals: commercialProposalRecords,
       invitedObjects,
       objectOrder: unifiedObjectOrder,
       currentUploads: selectedFiles,
@@ -8429,6 +8474,7 @@ async function collectOfflineSyncCategory(category) {
     return offlineJsonCopy({
       schemaVersion: 1,
       projects: objectRegistry.map((object) => ({ id: object.id, name: object.name, files: object.files })),
+      commercialProposals: commercialProposalRecords,
       cashflow: cashflowObjects.map((object) => ({
         ...cashObjectIdentitySnapshot(object),
         organizationDocuments: object.organizationDocuments,
@@ -8727,6 +8773,7 @@ $$('[data-project-menu-placeholder]').forEach((button) => button.addEventListene
   const label = tr(button.dataset.projectMenuPlaceholder);
   showToast(tr('projectMenuPrepared').replace('{name}', label));
 }));
+$$('[data-launch-turnkey-object]').forEach((button) => button.addEventListener('click', () => openProjectObjectWizard({ workspaceOrigin: 'turnkey' })));
 $$('[data-open-view]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.openView)));
 $$('[data-action]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.action)));
 $$('[data-analysis-type]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.analysisType)));
