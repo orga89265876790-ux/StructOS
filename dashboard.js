@@ -520,6 +520,95 @@ Object.assign(copy.TJ, {
   commercialProposalDeleted: 'КП нест карда шуд'
 });
 
+Object.assign(copy.RU, {
+  proposalWorkspaceTitle: 'Коммерческое предложение', backToProposalList: 'К списку КП',
+  proposalWorkspacePageHint: 'Выберите раздел, заполните цены и соберите нужные позиции в своё КП.',
+  proposalOtherExpenses: 'Прочие расходы', proposalBySpecificationShort: 'По спецификации',
+  proposalByProjectShort: 'По проекту', proposalAdditionalWorksShort: 'Доп. работы',
+  proposalAssociatedShort: 'Сопутствующие', myCommercialProposal: 'Моё КП',
+  proposalLineName: 'Наименование работ (услуг)', sendToMyProposal: 'Отправить в «Моё КП»',
+  saveMyProposalSelection: 'Сохранить в «Моё КП»', myProposalSelectionSaved: 'Выбранные позиции сохранены в «Моё КП»',
+  removeFromMyProposal: 'Удалить из «Моё КП»', emptyProposalGroup: 'В этом разделе позиции пока не найдены',
+  emptyMyProposal: 'Отметьте нужные строки в других разделах и сохраните их в «Моё КП».',
+  totalWorkTypes: 'Итого видов работ', totalProposalPrice: 'Итого цена', totalTax: 'Итого налог',
+  proposalPriceMode: 'Расчёт цены', pricesWithTax: 'Цена включает налог — вычесть из стоимости',
+  pricesWithoutTax: 'Цена без налога — добавить к стоимости', priceCash: 'Цена: наличными',
+  priceIncludesVat22: 'Цены: С НДС 22%', priceIncludesTax6: 'Цены: С налогом 6%',
+  priceIncludesVat5: 'Цены: С НДС 5%', priceExcludesVat22: 'Цены: Без НДС 22%',
+  priceExcludesVat5: 'Цены: Без НДС 5%', priceExcludesTax6: 'Цены: Без налога 6%',
+  priceBeforeTax: 'Итого без налога', taxAmount: 'Налог', priceWithTax: 'Цена с налогом',
+  downloadProposal: 'Скачать', viewProposal: 'Посмотреть', shareProposal: 'Поделиться',
+  chooseProposalFragments: 'Какие фрагменты КП использовать?',
+  chooseProposalFragmentsHint: 'Отметьте разделы, которые войдут в выбранное действие.',
+  selectProposalFragments: 'Выберите хотя бы один фрагмент КП', proposalFragmentPositions: 'позиций'
+});
+Object.assign(copy.EN, {
+  proposalWorkspaceTitle: 'Commercial proposal', backToProposalList: 'Back to proposals',
+  proposalWorkspacePageHint: 'Choose a section, enter prices, and collect the required lines in your proposal.',
+  proposalOtherExpenses: 'Other expenses', proposalBySpecificationShort: 'By specification',
+  proposalByProjectShort: 'By project', proposalAdditionalWorksShort: 'Additional works',
+  proposalAssociatedShort: 'Associated works', myCommercialProposal: 'My proposal',
+  proposalLineName: 'Work or service name', sendToMyProposal: 'Send to “My proposal”',
+  saveMyProposalSelection: 'Save to “My proposal”', myProposalSelectionSaved: 'Selected lines saved to “My proposal”',
+  removeFromMyProposal: 'Remove from “My proposal”', emptyProposalGroup: 'No lines were found in this section yet',
+  emptyMyProposal: 'Select lines in the other sections and save them to “My proposal”.',
+  totalWorkTypes: 'Total work types', totalProposalPrice: 'Total price', totalTax: 'Total tax',
+  proposalPriceMode: 'Price calculation', pricesWithTax: 'Tax included — subtract it from the price',
+  pricesWithoutTax: 'Tax excluded — add it to the price', priceCash: 'Price: cash',
+  priceIncludesVat22: 'Prices: VAT 22% included', priceIncludesTax6: 'Prices: 6% tax included',
+  priceIncludesVat5: 'Prices: VAT 5% included', priceExcludesVat22: 'Prices: VAT 22% excluded',
+  priceExcludesVat5: 'Prices: VAT 5% excluded', priceExcludesTax6: 'Prices: 6% tax excluded',
+  priceBeforeTax: 'Total before tax', taxAmount: 'Tax', priceWithTax: 'Price with tax',
+  downloadProposal: 'Download', viewProposal: 'View', shareProposal: 'Share',
+  chooseProposalFragments: 'Which proposal fragments should be used?',
+  chooseProposalFragmentsHint: 'Select the sections to include in this action.',
+  selectProposalFragments: 'Select at least one proposal fragment', proposalFragmentPositions: 'lines'
+});
+Object.assign(copy.KY, {
+  proposalWorkspaceTitle: 'Коммерциялык сунуш', backToProposalList: 'КП тизмесине',
+  proposalWorkspacePageHint: 'Бөлүмдү тандап, бааларды толтуруп, керектүү позицияларды өз КПңызга чогултуңуз.',
+  proposalOtherExpenses: 'Башка чыгымдар', proposalBySpecificationShort: 'Спецификация боюнча',
+  proposalByProjectShort: 'Долбоор боюнча', proposalAdditionalWorksShort: 'Кошумча иштер',
+  proposalAssociatedShort: 'Коштоочу иштер', myCommercialProposal: 'Менин КП',
+  proposalLineName: 'Иштин (кызматтын) аталышы', sendToMyProposal: '«Менин КПга» жөнөтүү',
+  saveMyProposalSelection: '«Менин КПга» сактоо', myProposalSelectionSaved: 'Тандалган позициялар «Менин КПга» сакталды',
+  removeFromMyProposal: '«Менин КПдан» өчүрүү', emptyProposalGroup: 'Бул бөлүмдө позициялар азырынча табылган жок',
+  emptyMyProposal: 'Башка бөлүмдөрдөн саптарды белгилеп, «Менин КПга» сактаңыз.',
+  totalWorkTypes: 'Иш түрлөрүнүн жыйынтыгы', totalProposalPrice: 'Жалпы баа', totalTax: 'Жалпы салык',
+  proposalPriceMode: 'Бааны эсептөө', pricesWithTax: 'Салык баага кирет — нарктан алып салуу',
+  pricesWithoutTax: 'Салык баага кирбейт — наркка кошуу', priceCash: 'Баасы: накталай',
+  priceIncludesVat22: 'Баалар: КНС 22% менен', priceIncludesTax6: 'Баалар: салык 6% менен',
+  priceIncludesVat5: 'Баалар: КНС 5% менен', priceExcludesVat22: 'Баалар: КНС 22% жок',
+  priceExcludesVat5: 'Баалар: КНС 5% жок', priceExcludesTax6: 'Баалар: салык 6% жок',
+  priceBeforeTax: 'Салыксыз жыйынтык', taxAmount: 'Салык', priceWithTax: 'Салык менен баа',
+  downloadProposal: 'Жүктөө', viewProposal: 'Көрүү', shareProposal: 'Бөлүшүү',
+  chooseProposalFragments: 'КПнын кайсы бөлүктөрү колдонулсун?',
+  chooseProposalFragmentsHint: 'Бул аракетке кире турган бөлүмдөрдү белгилеңиз.',
+  selectProposalFragments: 'КПнын жок дегенде бир бөлүгүн тандаңыз', proposalFragmentPositions: 'позиция'
+});
+Object.assign(copy.TJ, {
+  proposalWorkspaceTitle: 'Пешниҳоди тиҷоратӣ', backToProposalList: 'Ба рӯйхати КП',
+  proposalWorkspacePageHint: 'Бахшро интихоб кунед, нархҳоро ворид кунед ва мавқеъҳои лозимро дар КП-и худ ҷамъ намоед.',
+  proposalOtherExpenses: 'Хароҷоти дигар', proposalBySpecificationShort: 'Аз рӯи мушаххасот',
+  proposalByProjectShort: 'Аз рӯи лоиҳа', proposalAdditionalWorksShort: 'Корҳои иловагӣ',
+  proposalAssociatedShort: 'Корҳои ҳамроҳ', myCommercialProposal: 'КП-и ман',
+  proposalLineName: 'Номи кор (хизмат)', sendToMyProposal: 'Ба «КП-и ман» фиристодан',
+  saveMyProposalSelection: 'Дар «КП-и ман» нигоҳ доштан', myProposalSelectionSaved: 'Мавқеъҳои интихобшуда дар «КП-и ман» нигоҳ дошта шуданд',
+  removeFromMyProposal: 'Аз «КП-и ман» нест кардан', emptyProposalGroup: 'Дар ин бахш ҳоло мавқеъ ёфт нашуд',
+  emptyMyProposal: 'Сатрҳоро дар бахшҳои дигар интихоб карда, дар «КП-и ман» нигоҳ доред.',
+  totalWorkTypes: 'Ҷамъи намудҳои кор', totalProposalPrice: 'Нархи умумӣ', totalTax: 'Андози умумӣ',
+  proposalPriceMode: 'Ҳисоби нарх', pricesWithTax: 'Андоз дар нарх аст — аз арзиш тарҳ кардан',
+  pricesWithoutTax: 'Андоз дар нарх нест — ба арзиш илова кардан', priceCash: 'Нарх: нақдӣ',
+  priceIncludesVat22: 'Нархҳо: бо ААИ 22%', priceIncludesTax6: 'Нархҳо: бо андози 6%',
+  priceIncludesVat5: 'Нархҳо: бо ААИ 5%', priceExcludesVat22: 'Нархҳо: бе ААИ 22%',
+  priceExcludesVat5: 'Нархҳо: бе ААИ 5%', priceExcludesTax6: 'Нархҳо: бе андози 6%',
+  priceBeforeTax: 'Ҷамъ бе андоз', taxAmount: 'Андоз', priceWithTax: 'Нарх бо андоз',
+  downloadProposal: 'Бор кардан', viewProposal: 'Дидан', shareProposal: 'Мубодила',
+  chooseProposalFragments: 'Кадом қисмҳои КП истифода шаванд?',
+  chooseProposalFragmentsHint: 'Бахшҳоеро, ки ба ин амал дохил мешаванд, интихоб кунед.',
+  selectProposalFragments: 'Ҳадди ақал як қисми КП-ро интихоб кунед', proposalFragmentPositions: 'мавқеъ'
+});
+
 Object.assign(copy.RU, { detailedProjectAnalysis: 'Детально разобрать проект', contractsUnderReview: 'Договоры на рассмотрении', detailedContractAnalysis: 'Детально разобрать договор', estimateAnalysis: 'Анализ сметы', createProposalByProject: 'Создать КП по проекту', createProposalByEstimate: 'Создать КП по смете', turnkeyObject: 'Запустить объект в один клик', projectMailings: 'Рассылки предложений', mailWorkOffers: 'Рассылка предложений на работу (В разработке)', mailContractOffers: 'Рассылка предложений взять подряд (В разработке)', mailSupplyOffers: 'Рассылка предложений на поставку (В разработке)', projectMenuPrepared: 'Кнопка «{name}» подготовлена. Наполним этот раздел следующим этапом.' });
 Object.assign(copy.EN, { detailedProjectAnalysis: 'Detailed project analysis', contractsUnderReview: 'Contracts under review', detailedContractAnalysis: 'Analyze contract in detail', estimateAnalysis: 'Estimate analysis', createProposalByProject: 'Create proposal from project', createProposalByEstimate: 'Create proposal from estimate', turnkeyObject: 'Launch an object in one click', projectMailings: 'Offer mailings', mailWorkOffers: 'Send job offers (In development)', mailContractOffers: 'Send contract offers (In development)', mailSupplyOffers: 'Send supply offers (In development)', projectMenuPrepared: 'The “{name}” button is ready. We will build out this section next.' });
 Object.assign(copy.KY, { detailedProjectAnalysis: 'Долбоорду толук талдоо', contractsUnderReview: 'Каралуудагы келишимдер', detailedContractAnalysis: 'Келишимди толук талдоо', estimateAnalysis: 'Сметаны талдоо', createProposalByProject: 'Долбоор боюнча КП түзүү', createProposalByEstimate: 'Смета боюнча КП түзүү', turnkeyObject: 'Объектти бир чыкылдатуу менен ишке киргизүү', projectMailings: 'Сунуштарды жөнөтүү', mailWorkOffers: 'Жумуш сунуштарын жөнөтүү (Иштелип жатат)', mailContractOffers: 'Подряд алуу сунуштарын жөнөтүү (Иштелип жатат)', mailSupplyOffers: 'Жеткирүү сунуштарын жөнөтүү (Иштелип жатат)', projectMenuPrepared: '«{name}» баскычы даяр. Бул бөлүмдү кийинки этапта толтурабыз.' });
@@ -1005,11 +1094,23 @@ let activeRevisionComparisonId = null;
 let activeAnalysisDocument = { objectId: null, kind: 'project', versionId: null };
 let activeProjectAnalysisTab = 'proposal';
 let activeCommercialProposalResultTab = 'smr';
+let activeCommercialProposalId = null;
+let activeCommercialProposalColumn = 'smr';
+let activeCommercialProposalGroup = 'specificationWorks';
 let commercialProposalAnalysisTimer;
 const commercialProposalDrafts = {
   project: { objectName: '', sectionName: '', file: null, sourceFile: null, busy: false },
   estimate: { objectName: '', sectionName: '', file: null, sourceFile: null, busy: false }
 };
+const COMMERCIAL_PROPOSAL_PRICE_MODES = Object.freeze({
+  cash: { label: 'priceCash', direction: 'none', rate: 0 },
+  includedVat22: { label: 'priceIncludesVat22', direction: 'subtract', rate: .22 },
+  includedTax6: { label: 'priceIncludesTax6', direction: 'subtract', rate: .06 },
+  includedVat5: { label: 'priceIncludesVat5', direction: 'subtract', rate: .05 },
+  excludedVat22: { label: 'priceExcludesVat22', direction: 'add', rate: .22 },
+  excludedVat5: { label: 'priceExcludesVat5', direction: 'add', rate: .05 },
+  excludedTax6: { label: 'priceExcludesTax6', direction: 'add', rate: .06 }
+});
 const widgetColors = ['#0b63ce', '#00a9df', '#04a77b', '#41a447', '#d5a800', '#e87919', '#d64254', '#7957d5', '#c04ea3', '#44546a'];
 
 function loadFinance() {
@@ -1287,6 +1388,47 @@ function normalizeProjectDocumentTitles(value) {
   };
 }
 
+function commercialProposalWorkspaceNumber(value) {
+  const normalized = String(value ?? '').replace(/\s+/g, '').replace(',', '.').replace(/[^\d.-]+/g, '');
+  const number = Number(normalized);
+  return Number.isFinite(number) ? Math.max(0, Math.min(number, 1_000_000_000)) : 0;
+}
+
+function normalizeCommercialProposalWorkspace(value) {
+  const workspace = value && typeof value === 'object' ? value : {};
+  const validGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'equipment', 'materials', 'toolsAndConsumables', 'consumableMaterials', 'laborHours']);
+  const itemValues = {};
+  Object.entries(workspace.itemValues && typeof workspace.itemValues === 'object' ? workspace.itemValues : {}).slice(0, 2000).forEach(([id, item]) => {
+    const safeId = String(id || '').slice(0, 160);
+    if (!safeId) return;
+    itemValues[safeId] = {
+      quantity: commercialProposalWorkspaceNumber(item?.quantity),
+      price: commercialProposalWorkspaceNumber(item?.price)
+    };
+  });
+  const myItems = Array.isArray(workspace.myItems) ? workspace.myItems.slice(0, 1000).map((item) => {
+    const id = String(item?.id || '').slice(0, 160);
+    const name = String(item?.name || '').trim().slice(0, 240);
+    const sourceGroup = validGroups.has(item?.sourceGroup) ? item.sourceGroup : 'specificationWorks';
+    if (!id || !name) return null;
+    return {
+      id,
+      sourceGroup,
+      name,
+      unit: String(item?.unit || '').trim().slice(0, 40),
+      quantity: commercialProposalWorkspaceNumber(item?.quantity),
+      price: commercialProposalWorkspaceNumber(item?.price),
+      sourceName: String(item?.sourceName || '').trim().slice(0, 240),
+      sourceSheet: String(item?.sourceSheet || '').trim().slice(0, 120)
+    };
+  }).filter(Boolean) : [];
+  return {
+    taxMode: Object.prototype.hasOwnProperty.call(COMMERCIAL_PROPOSAL_PRICE_MODES, workspace.taxMode) ? workspace.taxMode : 'cash',
+    itemValues,
+    myItems
+  };
+}
+
 function normalizeCommercialProposalRecord(record) {
   if (!record || typeof record !== 'object') return null;
   const kind = record.kind === 'estimate' ? 'estimate' : 'project';
@@ -1308,7 +1450,8 @@ function normalizeCommercialProposalRecord(record) {
     createdAt: record.createdAt || record.updatedAt || recoveredAt,
     updatedAt: record.updatedAt || recoveredAt,
     analyzedAt: record.analyzedAt || recoveredAt,
-    file: normalizeFileRecord(file)
+    file: normalizeFileRecord(file),
+    workspace: normalizeCommercialProposalWorkspace(record.workspace)
   };
 }
 
@@ -1493,6 +1636,8 @@ function applyLanguage(next) {
   renderPassportProgress();
   renderConstructionActivity();
   updateBottomMenuAccessibility();
+  if ($('[data-panel="proposals"]')?.classList.contains('is-active')) renderCommercialProposals();
+  if ($('[data-panel="proposal-detail"]')?.classList.contains('is-active')) renderCommercialProposalWorkspace();
   if ($('[data-panel="analysis-detail"]')?.classList.contains('is-active')) renderAnalysisDetail();
 }
 
@@ -2455,8 +2600,14 @@ async function initAuth() {
 }
 
 function setPanel(name) {
-  const projectPanels = ['proposals', 'project-analysis', 'contract-review', 'estimate-analysis', 'analysis-detail'];
-  const next = ['home', 'projects', ...projectPanels, 'space', 'objects', 'cashflow', 'profile', 'passport'].includes(name) ? name : 'home';
+  const requested = String(name || 'home');
+  const [requestedPanel, ...pathParts] = requested.split('/');
+  if (requestedPanel === 'proposal-detail' && pathParts.length) {
+    try { activeCommercialProposalId = decodeURIComponent(pathParts.join('/')); }
+    catch { activeCommercialProposalId = pathParts.join('/'); }
+  }
+  const projectPanels = ['proposals', 'proposal-detail', 'project-analysis', 'contract-review', 'estimate-analysis', 'analysis-detail'];
+  const next = ['home', 'projects', ...projectPanels, 'space', 'objects', 'cashflow', 'profile', 'passport'].includes(requestedPanel) ? requestedPanel : 'home';
   $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
   if (next !== 'space') {
     $('[data-space-toolbar]').hidden = true;
@@ -2464,11 +2615,15 @@ function setPanel(name) {
   }
   $$('[data-panel]').forEach((panel) => { panel.hidden = panel.dataset.panel !== next; panel.classList.toggle('is-active', panel.dataset.panel === next); });
   $$('[data-tab]').forEach((button) => { button.classList.toggle('is-active', button.dataset.tab === next || (projectPanels.includes(next) && button.dataset.tab === 'projects') || (next === 'passport' && button.dataset.tab === 'profile')); });
-  history.replaceState(null, '', `#${next}`);
+  const panelHash = next === 'proposal-detail' && activeCommercialProposalId
+    ? `#proposal-detail/${encodeURIComponent(activeCommercialProposalId)}`
+    : `#${next}`;
+  history.replaceState(null, '', panelHash);
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (next === 'space') requestAnimationFrame(renderWidgets);
   if (next === 'projects') renderMyProjects();
   if (next === 'proposals') renderCommercialProposals();
+  if (next === 'proposal-detail') renderCommercialProposalWorkspace();
   if (next === 'analysis-detail') renderAnalysisDetail();
   if (next === 'objects') renderObjects();
   if (next === 'cashflow') renderCashflow();
@@ -6890,7 +7045,8 @@ async function createCommercialProposalFromDraft(kind) {
       createdAt: uploadedAt,
       updatedAt: uploadedAt,
       analyzedAt: null,
-      file: storedFile
+      file: storedFile,
+      workspace: normalizeCommercialProposalWorkspace(null)
     };
     commercialProposalRecords.unshift(proposal);
     activeCommercialProposalResultTab = 'smr';
@@ -6929,7 +7085,7 @@ function commercialProposalCardMarkup(proposal) {
   const version = latestDocumentVersion(proposal.file);
   const ready = proposal.status === 'ready' && isDocumentVersionAnalyzed(version);
   const sourceLabel = tr(proposal.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
-  return `<article class="commercial-proposal-card${ready ? ' is-ready' : ' is-pending'}"><header><span aria-hidden="true">₽</span><div class="commercial-proposal-card-copy"><small>${escapeHtml(proposal.sectionName)}</small><h2>${escapeHtml(proposal.objectName)}</h2><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version?.name || '')}</p></div><div class="commercial-proposal-card-side"><div class="commercial-proposal-card-actions"><button type="button" data-rename-commercial-proposal="${escapeHtml(proposal.id)}" aria-label="${escapeHtml(tr('renameCommercialProposal'))}" title="${escapeHtml(tr('renameCommercialProposal'))}"><span aria-hidden="true">✎</span><strong>${escapeHtml(tr('rename'))}</strong></button><button class="is-delete" type="button" data-delete-commercial-proposal="${escapeHtml(proposal.id)}" aria-label="${escapeHtml(tr('deleteCommercialProposal'))}" title="${escapeHtml(tr('deleteCommercialProposal'))}">×</button></div><b>${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></div></header><footer><span>${escapeHtml(formatObjectDate(proposal.createdAt))} · ${escapeHtml(tr('proposalSectionStorage'))}</span><button class="${ready ? 'outline-button' : 'primary-button'}" type="button" data-open-commercial-proposal="${escapeHtml(proposal.id)}">${escapeHtml(tr(ready ? 'openCommercialProposal' : 'proposalAwaitingAnalysis'))} →</button></footer></article>`;
+  return `<article class="commercial-proposal-card${ready ? ' is-ready' : ' is-pending'}"><header><span aria-hidden="true">₽</span><button class="commercial-proposal-card-copy" type="button" data-open-commercial-proposal="${escapeHtml(proposal.id)}"><small>${escapeHtml(proposal.sectionName)}</small><h2>${escapeHtml(proposal.objectName)}</h2><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version?.name || '')}</p></button><div class="commercial-proposal-card-side"><div class="commercial-proposal-card-actions"><button type="button" data-rename-commercial-proposal="${escapeHtml(proposal.id)}" aria-label="${escapeHtml(tr('renameCommercialProposal'))}" title="${escapeHtml(tr('renameCommercialProposal'))}"><span aria-hidden="true">✎</span><strong>${escapeHtml(tr('rename'))}</strong></button><button class="is-delete" type="button" data-delete-commercial-proposal="${escapeHtml(proposal.id)}" aria-label="${escapeHtml(tr('deleteCommercialProposal'))}" title="${escapeHtml(tr('deleteCommercialProposal'))}">×</button></div><b>${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></div></header><footer><span>${escapeHtml(formatObjectDate(proposal.createdAt))} · ${escapeHtml(tr('proposalSectionStorage'))}</span><button class="${ready ? 'outline-button' : 'primary-button'}" type="button" data-open-commercial-proposal="${escapeHtml(proposal.id)}">${escapeHtml(tr(ready ? 'openCommercialProposal' : 'proposalAwaitingAnalysis'))} →</button></footer></article>`;
 }
 
 function renameCommercialProposal(proposalId) {
@@ -6974,22 +7130,14 @@ function deleteCommercialProposal(proposalId) {
   });
 }
 
-function openCommercialProposalCard(proposalId, preserveTab = false) {
+function openCommercialProposalCard(proposalId) {
   const proposal = commercialProposalRecords.find((item) => item.id === proposalId);
   const version = latestDocumentVersion(proposal?.file);
   if (!proposal || !version) return;
-  if (!preserveTab) activeCommercialProposalResultTab = 'smr';
-  const ready = proposal.status === 'ready' && isDocumentVersionAnalyzed(version);
-  const sourceLabel = tr(proposal.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
-  const result = ready
-    ? `<section class="object-proposal-result"><div class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></div>${commercialProposalResultMarkup(version, proposal.kind)}</section>`
-    : `<section class="object-proposal-pending"><span aria-hidden="true">⌛</span><div><strong>${escapeHtml(tr('proposalAwaitingAnalysis'))}</strong><p>${escapeHtml(tr('creatingCommercialProposal'))}</p></div></section>`;
-  const markup = `<section class="object-proposal-workspace"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h2>${escapeHtml(sourceLabel)}</h2><p>${escapeHtml(tr('proposalSource'))}: ${escapeHtml(version.name)}</p></div><b class="${ready ? 'is-ready' : 'is-pending'}">${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header><div class="analysis-truth-note"><span>i</span><p>${escapeHtml(tr('proposalSectionStorage'))}</p></div>${result}</section>`;
-  showDialog(escapeHtml(proposal.objectName), escapeHtml(proposal.sectionName), markup);
-  $$('[data-commercial-proposal-result-tab]', $('[data-dialog-content]')).forEach((button) => button.addEventListener('click', () => {
-    activeCommercialProposalResultTab = button.dataset.commercialProposalResultTab;
-    openCommercialProposalCard(proposal.id, true);
-  }));
+  activeCommercialProposalId = proposal.id;
+  activeCommercialProposalColumn = 'smr';
+  activeCommercialProposalGroup = 'specificationWorks';
+  setPanel(`proposal-detail/${encodeURIComponent(proposal.id)}`);
 }
 
 function renderCommercialProposals() {
@@ -7178,6 +7326,34 @@ const COMMERCIAL_PROPOSAL_RESULT_TABS = Object.freeze([
   { id: 'required', label: 'proposalRequired', icon: '＋', groups: ['toolsAndConsumables', 'consumableMaterials', 'laborHours'] }
 ]);
 
+const COMMERCIAL_PROPOSAL_EDITOR_COLUMNS = Object.freeze([
+  {
+    id: 'smr', label: 'proposalSmr', icon: '⚒',
+    groups: [
+      { id: 'specificationWorks', label: 'proposalBySpecificationShort' },
+      { id: 'outsideSpecificationWorks', label: 'proposalByProjectShort' },
+      { id: 'possibleWorks', label: 'proposalAdditionalWorksShort' },
+      { id: 'associatedWorks', label: 'proposalAssociatedShort' },
+      { id: 'my', label: 'myCommercialProposal' }
+    ]
+  },
+  {
+    id: 'materials', label: 'proposalMaterials', icon: '◇',
+    groups: [
+      { id: 'equipment', label: 'proposalEquipment' },
+      { id: 'materials', label: 'proposalMaterialItems' }
+    ]
+  },
+  {
+    id: 'expenses', label: 'proposalOtherExpenses', icon: '＋',
+    groups: [
+      { id: 'toolsAndConsumables', label: 'toolsAndConsumables' },
+      { id: 'consumableMaterials', label: 'consumableMaterials' },
+      { id: 'laborHours', label: 'laborHourCosts' }
+    ]
+  }
+]);
+
 function commercialProposalEntriesFromValue(value, groupKey, kind = 'project') {
   const isWork = ['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'laborHours'].includes(groupKey);
   const isProjectSource = ['specificationWorks', 'equipment', 'materials'].includes(groupKey);
@@ -7274,6 +7450,355 @@ function commercialProposalResultMarkup(version, kind = 'project') {
   const tabs = COMMERCIAL_PROPOSAL_RESULT_TABS.map((tab) => `<button class="${tab.id === activeTab.id ? 'is-active' : ''}" type="button" data-commercial-proposal-result-tab="${tab.id}" aria-selected="${String(tab.id === activeTab.id)}"><span>${tab.icon}</span><strong>${escapeHtml(tr(tab.label))}</strong><b>${summary[tab.id]}</b></button>`).join('');
   const totals = COMMERCIAL_PROPOSAL_RESULT_TABS.map((tab) => `<span><b>${summary[tab.id]}</b><small>${escapeHtml(tr(tab.label))}</small></span>`).join('');
   return `<section class="commercial-proposal-intelligence"><header><div><span class="eyebrow">STRUCTOS INTELLIGENCE</span><h3>${escapeHtml(tr('foundByIntelligence'))}</h3><p>${escapeHtml(tr('proposalFoundSummary'))}</p></div><div>${totals}</div></header><nav class="commercial-proposal-result-tabs" aria-label="${escapeHtml(tr('commercialProposal'))}">${tabs}</nav><div class="commercial-proposal-result-groups is-${activeTab.id}">${activeTab.groups.map((groupKey) => commercialProposalGroupMarkup(groupKey, groups[groupKey])).join('')}</div></section>`;
+}
+
+function commercialProposalEditorGroupConfig(groupId) {
+  for (const column of COMMERCIAL_PROPOSAL_EDITOR_COLUMNS) {
+    const group = column.groups.find((item) => item.id === groupId);
+    if (group) return { ...group, columnId: column.id, columnLabel: column.label };
+  }
+  return null;
+}
+
+function commercialProposalWorkspaceState(proposal) {
+  if (!proposal.workspace || typeof proposal.workspace !== 'object' || !proposal.workspace.itemValues || !Array.isArray(proposal.workspace.myItems)) {
+    proposal.workspace = normalizeCommercialProposalWorkspace(proposal.workspace);
+  }
+  return proposal.workspace;
+}
+
+function commercialProposalLineId(groupId, entry, index) {
+  const source = `${groupId}\u0000${entry?.name || ''}\u0000${entry?.unit || ''}\u0000${entry?.sourceSheet || ''}\u0000${entry?.sourceName || ''}`;
+  let hash = 2166136261;
+  for (let position = 0; position < source.length; position += 1) {
+    hash ^= source.charCodeAt(position);
+    hash = Math.imul(hash, 16777619);
+  }
+  return `cp-${groupId}-${(hash >>> 0).toString(36)}-${index}`;
+}
+
+function commercialProposalEntryWithState(entry, id, sourceGroup, state) {
+  const saved = state.itemValues[id];
+  const hasQuantity = saved && Object.prototype.hasOwnProperty.call(saved, 'quantity');
+  const hasPrice = saved && Object.prototype.hasOwnProperty.call(saved, 'price');
+  return {
+    id,
+    sourceGroup,
+    name: String(entry?.name || '').trim(),
+    unit: String(entry?.unit || '').trim(),
+    quantity: hasQuantity ? commercialProposalWorkspaceNumber(saved.quantity) : commercialProposalWorkspaceNumber(entry?.quantity),
+    price: hasPrice ? commercialProposalWorkspaceNumber(saved.price) : commercialProposalWorkspaceNumber(entry?.price),
+    sourceName: String(entry?.sourceName || '').trim(),
+    sourceSheet: String(entry?.sourceSheet || '').trim()
+  };
+}
+
+function commercialProposalEntriesForGroup(proposal, groupId, groups = null) {
+  const state = commercialProposalWorkspaceState(proposal);
+  if (groupId === 'my') return state.myItems.map((entry) => commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state));
+  const sourceGroups = groups || commercialProposalBreakdown(latestDocumentVersion(proposal.file), proposal.kind);
+  return (sourceGroups[groupId] || []).map((entry, index) => commercialProposalEntryWithState(entry, commercialProposalLineId(groupId, entry, index), groupId, state));
+}
+
+function commercialProposalRoundMoney(value) {
+  return Math.round(((Number(value) || 0) + Number.EPSILON) * 100) / 100;
+}
+
+function commercialProposalLineAmounts(quantity, price, modeId) {
+  const mode = COMMERCIAL_PROPOSAL_PRICE_MODES[modeId] || COMMERCIAL_PROPOSAL_PRICE_MODES.cash;
+  const base = commercialProposalRoundMoney(commercialProposalWorkspaceNumber(quantity) * commercialProposalWorkspaceNumber(price));
+  const tax = mode.direction === 'subtract'
+    ? commercialProposalRoundMoney(base * mode.rate / (1 + mode.rate))
+    : mode.direction === 'add'
+      ? commercialProposalRoundMoney(base * mode.rate)
+      : 0;
+  const final = mode.direction === 'subtract'
+    ? commercialProposalRoundMoney(base - tax)
+    : mode.direction === 'add'
+      ? commercialProposalRoundMoney(base + tax)
+      : base;
+  return { base, tax, final };
+}
+
+function commercialProposalModeShortLabel(modeId) {
+  const label = tr((COMMERCIAL_PROPOSAL_PRICE_MODES[modeId] || COMMERCIAL_PROPOSAL_PRICE_MODES.cash).label);
+  return label.includes(':') ? label.slice(label.indexOf(':') + 1).trim() : label;
+}
+
+function commercialProposalPriceModeMarkup(state) {
+  const option = (id) => `<label class="${state.taxMode === id ? 'is-active' : ''}"><input type="radio" name="commercial-proposal-price-mode" value="${id}" data-proposal-price-mode${state.taxMode === id ? ' checked' : ''} /><span aria-hidden="true"></span><strong>${escapeHtml(tr(COMMERCIAL_PROPOSAL_PRICE_MODES[id].label))}</strong></label>`;
+  return `<fieldset class="commercial-proposal-price-modes"><legend>${escapeHtml(tr('proposalPriceMode'))}</legend><div class="proposal-price-mode-groups"><section class="is-cash">${option('cash')}</section><section><h3>${escapeHtml(tr('pricesWithTax'))}</h3>${option('includedVat22')}${option('includedTax6')}${option('includedVat5')}</section><section><h3>${escapeHtml(tr('pricesWithoutTax'))}</h3>${option('excludedVat22')}${option('excludedVat5')}${option('excludedTax6')}</section></div></fieldset>`;
+}
+
+function commercialProposalTableMarkup(proposal, groupId, entries) {
+  const state = commercialProposalWorkspaceState(proposal);
+  const mode = COMMERCIAL_PROPOSAL_PRICE_MODES[state.taxMode] || COMMERCIAL_PROPOSAL_PRICE_MODES.cash;
+  const myIds = new Set(state.myItems.map((item) => item.id));
+  const dynamicHead = mode.direction === 'subtract'
+    ? `<th>${escapeHtml(commercialProposalModeShortLabel(state.taxMode))}</th><th>${escapeHtml(tr('rowTotal'))}</th>`
+    : mode.direction === 'add'
+      ? `<th>${escapeHtml(tr('priceBeforeTax'))}</th><th>${escapeHtml(tr('taxAmount'))}</th><th>${escapeHtml(tr('priceWithTax'))}</th>`
+      : `<th>${escapeHtml(tr('rowTotal'))}</th>`;
+  const actionHead = groupId === 'my' ? '' : escapeHtml(tr('sendToMyProposal'));
+  const rows = entries.map((entry, index) => {
+    const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, state.taxMode);
+    const source = entry.sourceSheet || entry.sourceName || tr('identifiedByAnalysis');
+    const dynamicCells = mode.direction === 'subtract'
+      ? `<td class="is-money is-tax" data-proposal-tax-total>${escapeHtml(formatSignedMoney(-amounts.tax))}</td><td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`
+      : mode.direction === 'add'
+        ? `<td class="is-money" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td><td class="is-money is-tax" data-proposal-tax-total>${escapeHtml(formatMoney(amounts.tax))}</td><td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`
+        : `<td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`;
+    const action = groupId === 'my'
+      ? `<button class="proposal-my-remove" type="button" data-remove-proposal-my-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('removeFromMyProposal'))}" title="${escapeHtml(tr('removeFromMyProposal'))}">×</button>`
+      : `<label class="proposal-send-to-my"><input type="checkbox" data-proposal-send-to-my="${escapeHtml(entry.id)}"${myIds.has(entry.id) ? ' checked' : ''} aria-label="${escapeHtml(`${tr('sendToMyProposal')}: ${entry.name}`)}" /><span aria-hidden="true">✓</span></label>`;
+    return `<tr data-proposal-line-row data-proposal-line-id="${escapeHtml(entry.id)}"><td class="proposal-line-number">${index + 1}</td><td class="proposal-line-name"><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(source)}</small></td><td>${escapeHtml(entry.unit || '—')}</td><td><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.quantity ? escapeHtml(String(entry.quantity)) : ''}" placeholder="0" data-proposal-line-value="quantity" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('quantity'))}" /></td><td><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.price ? escapeHtml(String(entry.price)) : ''}" placeholder="0" data-proposal-line-value="price" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('price'))}" /></td>${dynamicCells}<td class="proposal-line-action">${action}</td></tr>`;
+  }).join('');
+  const columnCount = 7 + (mode.direction === 'subtract' ? 1 : mode.direction === 'add' ? 2 : 0);
+  if (!entries.length) {
+    const emptyConfig = commercialProposalEditorGroupConfig(groupId);
+    return `<div class="commercial-proposal-table-empty"><span>◇</span><h3>${escapeHtml(tr(groupId === 'my' ? 'myCommercialProposal' : emptyConfig?.label || 'proposalWorkspaceTitle'))}</h3><p>${escapeHtml(tr(groupId === 'my' ? 'emptyMyProposal' : 'emptyProposalGroup'))}</p></div>`;
+  }
+  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table"><thead><tr><th>№</th><th>${escapeHtml(tr('proposalLineName'))}</th><th>${escapeHtml(tr('unit'))}</th><th>${escapeHtml(tr('quantity'))}</th><th>${escapeHtml(tr('price'))}</th>${dynamicHead}<th>${actionHead}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="${columnCount}"><span>${escapeHtml(tr('totalWorkTypes'))}: <b data-proposal-types-total>${entries.length}</b></span><span data-proposal-tax-summary${mode.direction === 'none' ? ' hidden' : ''}>${escapeHtml(tr('totalTax'))}: <b data-proposal-tax-grand-total>${escapeHtml(formatMoney(entries.reduce((total, entry) => total + commercialProposalLineAmounts(entry.quantity, entry.price, state.taxMode).tax, 0)))}</b></span><span>${escapeHtml(tr('totalProposalPrice'))}: <b data-proposal-price-grand-total>${escapeHtml(formatMoney(entries.reduce((total, entry) => total + commercialProposalLineAmounts(entry.quantity, entry.price, state.taxMode).final, 0)))}</b></span></td></tr></tfoot></table></div>`;
+}
+
+function commercialProposalColumnsMarkup(proposal, groups) {
+  const state = commercialProposalWorkspaceState(proposal);
+  return `<nav class="commercial-proposal-editor-columns" aria-label="${escapeHtml(tr('proposalWorkspaceTitle'))}">${COMMERCIAL_PROPOSAL_EDITOR_COLUMNS.map((column) => {
+    const columnCount = column.groups.filter((group) => group.id !== 'my').reduce((total, group) => total + (groups[group.id] || []).length, 0);
+    const buttons = column.groups.map((group) => {
+      const count = group.id === 'my' ? state.myItems.length : (groups[group.id] || []).length;
+      const active = activeCommercialProposalGroup === group.id;
+      return `<button class="${active ? 'is-active' : ''}" type="button" data-proposal-workspace-group="${group.id}" data-proposal-workspace-column="${column.id}" aria-pressed="${String(active)}"><span>${escapeHtml(tr(group.label))}</span><b>${count}</b></button>`;
+    }).join('');
+    return `<section class="commercial-proposal-editor-column is-${column.id}${activeCommercialProposalColumn === column.id ? ' is-active' : ''}"><header><span aria-hidden="true">${column.icon}</span><div><strong>${escapeHtml(tr(column.label))}</strong><small>${columnCount} · ${escapeHtml(tr('proposalFragmentPositions'))}</small></div></header><div>${buttons}</div></section>`;
+  }).join('')}</nav>`;
+}
+
+function updateCommercialProposalTableCalculations(scope, proposal) {
+  const state = commercialProposalWorkspaceState(proposal);
+  const mode = COMMERCIAL_PROPOSAL_PRICE_MODES[state.taxMode] || COMMERCIAL_PROPOSAL_PRICE_MODES.cash;
+  let taxTotal = 0;
+  let priceTotal = 0;
+  const rows = $$('[data-proposal-line-row]', scope);
+  rows.forEach((row) => {
+    const quantity = commercialProposalWorkspaceNumber($('[data-proposal-line-value="quantity"]', row)?.value);
+    const price = commercialProposalWorkspaceNumber($('[data-proposal-line-value="price"]', row)?.value);
+    const amounts = commercialProposalLineAmounts(quantity, price, state.taxMode);
+    const baseCell = $('[data-proposal-base-total]', row);
+    const taxCell = $('[data-proposal-tax-total]', row);
+    const finalCell = $('[data-proposal-final-total]', row);
+    if (baseCell) baseCell.textContent = formatMoney(amounts.base);
+    if (taxCell) taxCell.textContent = mode.direction === 'subtract' ? formatSignedMoney(-amounts.tax) : formatMoney(amounts.tax);
+    if (finalCell) finalCell.textContent = formatMoney(amounts.final);
+    taxTotal += amounts.tax;
+    priceTotal += amounts.final;
+  });
+  const typesTotal = $('[data-proposal-types-total]', scope);
+  const taxGrandTotal = $('[data-proposal-tax-grand-total]', scope);
+  const priceGrandTotal = $('[data-proposal-price-grand-total]', scope);
+  if (typesTotal) typesTotal.textContent = String(rows.length);
+  if (taxGrandTotal) taxGrandTotal.textContent = formatMoney(commercialProposalRoundMoney(taxTotal));
+  if (priceGrandTotal) priceGrandTotal.textContent = formatMoney(commercialProposalRoundMoney(priceTotal));
+}
+
+function saveCommercialProposalMySelection(proposal, groupId, entries, scope) {
+  const state = commercialProposalWorkspaceState(proposal);
+  const selectedIds = new Set($$('[data-proposal-send-to-my]:checked', scope).map((input) => input.dataset.proposalSendToMy));
+  const selectedEntries = entries.filter((entry) => selectedIds.has(entry.id)).map((entry) => {
+    const values = state.itemValues[entry.id];
+    return {
+      ...entry,
+      quantity: values ? commercialProposalWorkspaceNumber(values.quantity) : entry.quantity,
+      price: values ? commercialProposalWorkspaceNumber(values.price) : entry.price
+    };
+  });
+  state.myItems = [...state.myItems.filter((item) => item.sourceGroup !== groupId), ...selectedEntries];
+  proposal.updatedAt = new Date().toISOString();
+  saveCommercialProposalRecords();
+  renderCommercialProposalWorkspace();
+  showToast(tr('myProposalSelectionSaved'));
+}
+
+function renderCommercialProposalWorkspace() {
+  const rootElement = $('[data-commercial-proposal-workspace]');
+  if (!rootElement) return;
+  const proposal = commercialProposalRecords.find((item) => item.id === activeCommercialProposalId);
+  const version = latestDocumentVersion(proposal?.file);
+  if (!proposal || !version) {
+    rootElement.innerHTML = `<div class="empty-state"><span class="proposal-empty-mark">₽</span><h2>${escapeHtml(tr('noCommercialProposals'))}</h2><button class="outline-button" type="button" data-back-to-commercial-proposals>← ${escapeHtml(tr('backToProposalList'))}</button></div>`;
+    $('[data-back-to-commercial-proposals]', rootElement)?.addEventListener('click', () => setPanel('proposals'));
+    return;
+  }
+  const ready = proposal.status === 'ready' && isDocumentVersionAnalyzed(version);
+  const sourceLabel = tr(proposal.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
+  if (!ready) {
+    rootElement.innerHTML = `<section class="commercial-proposal-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-back-to-commercial-proposals>← ${escapeHtml(tr('backToProposalList'))}</button><div><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h1>${escapeHtml(proposal.objectName)}</h1><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version.name)}</p></div></div><b>${escapeHtml(tr('proposalAwaitingAnalysis'))}</b></header><section class="object-proposal-pending"><span aria-hidden="true">⌛</span><div><strong>${escapeHtml(tr('proposalAwaitingAnalysis'))}</strong><p>${escapeHtml(tr('creatingCommercialProposal'))}</p></div></section></section>`;
+    $('[data-back-to-commercial-proposals]', rootElement)?.addEventListener('click', () => setPanel('proposals'));
+    return;
+  }
+  const groupConfig = commercialProposalEditorGroupConfig(activeCommercialProposalGroup) || commercialProposalEditorGroupConfig('specificationWorks');
+  activeCommercialProposalGroup = groupConfig.id;
+  activeCommercialProposalColumn = groupConfig.columnId;
+  const groups = commercialProposalBreakdown(version, proposal.kind);
+  const entries = commercialProposalEntriesForGroup(proposal, activeCommercialProposalGroup, groups);
+  const state = commercialProposalWorkspaceState(proposal);
+  const saveSelection = activeCommercialProposalGroup === 'my' ? '' : `<button class="primary-button commercial-proposal-save-my" type="button" data-save-commercial-proposal-my${entries.length ? '' : ' disabled'}>✓ ${escapeHtml(tr('saveMyProposalSelection'))}</button>`;
+  rootElement.innerHTML = `<section class="commercial-proposal-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-back-to-commercial-proposals>← ${escapeHtml(tr('backToProposalList'))}</button><div><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h1>${escapeHtml(proposal.objectName)}</h1><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version.name)}</p></div></div><b>${escapeHtml(tr('proposalReady'))}</b></header><div class="analysis-truth-note commercial-proposal-editor-note"><span>i</span><p>${escapeHtml(tr('proposalWorkspacePageHint'))}</p></div>${commercialProposalColumnsMarkup(proposal, groups)}<section class="commercial-proposal-editor-body"><header><div><small>${escapeHtml(tr(groupConfig.columnLabel))}</small><h2>${escapeHtml(tr(groupConfig.label))}</h2><p>${entries.length} · ${escapeHtml(tr('proposalFragmentPositions'))}</p></div>${saveSelection}</header>${commercialProposalPriceModeMarkup(state)}${commercialProposalTableMarkup(proposal, activeCommercialProposalGroup, entries)}<footer class="commercial-proposal-editor-actions"><button class="primary-button" type="button" data-commercial-proposal-action="download"><span aria-hidden="true">↓</span>${escapeHtml(tr('downloadProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="view"><span aria-hidden="true">◉</span>${escapeHtml(tr('viewProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="share"><span aria-hidden="true">↗</span>${escapeHtml(tr('shareProposal'))}</button></footer></section></section>`;
+  $('[data-back-to-commercial-proposals]', rootElement)?.addEventListener('click', () => setPanel('proposals'));
+  $$('[data-proposal-workspace-group]', rootElement).forEach((button) => button.addEventListener('click', () => {
+    activeCommercialProposalGroup = button.dataset.proposalWorkspaceGroup;
+    activeCommercialProposalColumn = button.dataset.proposalWorkspaceColumn;
+    renderCommercialProposalWorkspace();
+  }));
+  $$('[data-proposal-price-mode]', rootElement).forEach((input) => input.addEventListener('change', () => {
+    state.taxMode = input.value;
+    proposal.updatedAt = new Date().toISOString();
+    saveCommercialProposalRecords();
+    renderCommercialProposalWorkspace();
+  }));
+  $$('[data-proposal-line-value]', rootElement).forEach((input) => {
+    const updateValue = () => {
+      const id = input.dataset.proposalLineValueId;
+      const field = input.dataset.proposalLineValue;
+      const row = input.closest('[data-proposal-line-row]');
+      const current = state.itemValues[id] || {
+        quantity: commercialProposalWorkspaceNumber($('[data-proposal-line-value="quantity"]', row)?.value),
+        price: commercialProposalWorkspaceNumber($('[data-proposal-line-value="price"]', row)?.value)
+      };
+      current[field] = commercialProposalWorkspaceNumber(input.value);
+      state.itemValues[id] = current;
+      updateCommercialProposalTableCalculations(rootElement, proposal);
+    };
+    input.addEventListener('input', updateValue);
+    input.addEventListener('change', () => {
+      updateValue();
+      proposal.updatedAt = new Date().toISOString();
+      saveCommercialProposalRecords();
+    });
+  });
+  $('[data-save-commercial-proposal-my]', rootElement)?.addEventListener('click', () => saveCommercialProposalMySelection(proposal, activeCommercialProposalGroup, entries, rootElement));
+  $$('[data-remove-proposal-my-item]', rootElement).forEach((button) => button.addEventListener('click', () => {
+    state.myItems = state.myItems.filter((item) => item.id !== button.dataset.removeProposalMyItem);
+    proposal.updatedAt = new Date().toISOString();
+    saveCommercialProposalRecords();
+    renderCommercialProposalWorkspace();
+  }));
+  $$('[data-commercial-proposal-action]', rootElement).forEach((button) => button.addEventListener('click', () => openCommercialProposalFragmentDialog(proposal.id, button.dataset.commercialProposalAction)));
+}
+
+function commercialProposalReportColumns(modeId) {
+  const mode = COMMERCIAL_PROPOSAL_PRICE_MODES[modeId] || COMMERCIAL_PROPOSAL_PRICE_MODES.cash;
+  const base = [
+    { label: '№', key: 'number', width: 24, number: true },
+    { label: tr('proposalLineName'), key: 'name', width: '*' },
+    { label: tr('unit'), key: 'unit', width: 38 },
+    { label: tr('quantity'), key: 'quantity', width: 42, number: true },
+    { label: tr('price'), key: 'unitPrice', width: 54, money: true }
+  ];
+  if (mode.direction === 'subtract') return [...base, { label: commercialProposalModeShortLabel(modeId), key: 'taxAdjustment', width: 55, money: true, signed: true }, { label: tr('rowTotal'), key: 'finalTotal', width: 58, money: true }];
+  if (mode.direction === 'add') return [...base, { label: tr('priceBeforeTax'), key: 'baseTotal', width: 54, money: true }, { label: tr('taxAmount'), key: 'taxAmount', width: 48, money: true }, { label: tr('priceWithTax'), key: 'finalTotal', width: 58, money: true }];
+  return [...base, { label: tr('rowTotal'), key: 'finalTotal', width: 62, money: true }];
+}
+
+function commercialProposalReportTable(proposal, fragment, entries) {
+  const state = commercialProposalWorkspaceState(proposal);
+  const mode = COMMERCIAL_PROPOSAL_PRICE_MODES[state.taxMode] || COMMERCIAL_PROPOSAL_PRICE_MODES.cash;
+  let taxTotal = 0;
+  let priceTotal = 0;
+  const rows = entries.map((entry, index) => {
+    const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, state.taxMode);
+    taxTotal += amounts.tax;
+    priceTotal += amounts.final;
+    return {
+      number: index + 1,
+      name: entry.name,
+      unit: entry.unit || '—',
+      quantity: entry.quantity,
+      unitPrice: entry.price,
+      baseTotal: amounts.base,
+      taxAdjustment: -amounts.tax,
+      taxAmount: amounts.tax,
+      finalTotal: amounts.final
+    };
+  });
+  const summaries = [
+    `${tr('proposalPriceMode')}: ${tr(mode.label)}`,
+    `${tr('totalWorkTypes')}: ${entries.length}`
+  ];
+  if (mode.direction !== 'none') summaries.push(`${tr('totalTax')}: ${formatMoney(commercialProposalRoundMoney(taxTotal))}`);
+  summaries.push(`${tr('totalProposalPrice')}: ${formatMoney(commercialProposalRoundMoney(priceTotal))}`);
+  return { title: tr(fragment.label), columns: commercialProposalReportColumns(state.taxMode), rows, summaries };
+}
+
+function commercialProposalFragmentConfigs() {
+  return COMMERCIAL_PROPOSAL_EDITOR_COLUMNS.flatMap((column) => column.groups.map((group) => ({ ...group, columnId: column.id, columnLabel: column.label })));
+}
+
+function commercialProposalReport(proposal, fragmentIds) {
+  const version = latestDocumentVersion(proposal.file);
+  const groups = commercialProposalBreakdown(version, proposal.kind);
+  const selected = new Set(fragmentIds);
+  const tables = commercialProposalFragmentConfigs().filter((fragment) => selected.has(fragment.id)).map((fragment) => {
+    const entries = commercialProposalEntriesForGroup(proposal, fragment.id, groups);
+    return entries.length ? commercialProposalReportTable(proposal, fragment, entries) : null;
+  }).filter(Boolean);
+  return {
+    title: tr('proposalWorkspaceTitle'),
+    objectName: proposal.objectName,
+    sectionName: proposal.sectionName,
+    objectLabel: tr('objectName'),
+    sectionLabel: tr('proposalSectionField'),
+    tables,
+    parties: null
+  };
+}
+
+function openCommercialProposalReportPreview(report) {
+  const dialog = $('[data-report-preview-dialog]');
+  if (!dialog) return;
+  releaseCashOrganizationPreview();
+  $('[data-report-preview-title]', dialog).textContent = tr('proposalWorkspaceTitle');
+  $('[data-report-preview-hint]', dialog).textContent = `${report.objectName} · ${report.sectionName}`;
+  $('[data-report-preview-content]', dialog).innerHTML = reportPreviewMarkup(report);
+  $('[data-report-preview-actions]', dialog).innerHTML = '';
+  if (!dialog.open) dialog.showModal();
+}
+
+function openCommercialProposalFragmentDialog(proposalId, action) {
+  const proposal = commercialProposalRecords.find((item) => item.id === proposalId);
+  const version = latestDocumentVersion(proposal?.file);
+  if (!proposal || !version) return;
+  const groups = commercialProposalBreakdown(version, proposal.kind);
+  const fragments = commercialProposalFragmentConfigs().map((fragment) => ({
+    ...fragment,
+    count: commercialProposalEntriesForGroup(proposal, fragment.id, groups).length
+  }));
+  const actionKey = { download: 'downloadProposal', view: 'viewProposal', share: 'shareProposal' }[action] || 'viewProposal';
+  const fragmentMarkup = fragments.map((fragment) => `<label class="${fragment.count ? '' : 'is-empty'}"><input type="checkbox" value="${fragment.id}" data-commercial-proposal-fragment${fragment.count ? '' : ' disabled'} /><span><strong>${escapeHtml(tr(fragment.label))}</strong><small>${escapeHtml(tr(fragment.columnLabel))} · ${fragment.count} ${escapeHtml(tr('proposalFragmentPositions'))}</small></span></label>`).join('');
+  showDialog(escapeHtml(tr('chooseProposalFragments')), escapeHtml(tr('chooseProposalFragmentsHint')), `<div class="commercial-proposal-fragment-list">${fragmentMarkup}</div><div class="result-actions"><button class="outline-button" type="button" data-cancel-commercial-proposal-fragments>${escapeHtml(tr('cancel'))}</button><button class="primary-button" type="button" data-confirm-commercial-proposal-fragments>${escapeHtml(tr(actionKey))}</button></div>`);
+  const scope = $('[data-dialog-content]');
+  $('[data-cancel-commercial-proposal-fragments]', scope)?.addEventListener('click', () => $('[data-dialog]')?.close());
+  $('[data-confirm-commercial-proposal-fragments]', scope)?.addEventListener('click', async (event) => {
+    const fragmentIds = $$('[data-commercial-proposal-fragment]:checked', scope).map((input) => input.value);
+    if (!fragmentIds.length) { showToast(tr('selectProposalFragments')); return; }
+    const report = commercialProposalReport(proposal, fragmentIds);
+    if (!report.tables.length) { showToast(tr('selectProposalFragments')); return; }
+    if (action === 'view') {
+      $('[data-dialog]')?.close();
+      openCommercialProposalReportPreview(report);
+      return;
+    }
+    const button = event.currentTarget;
+    button.disabled = true;
+    try {
+      await deliverCashReport(report, 'pdf', action === 'share');
+      $('[data-dialog]')?.close();
+    } catch (error) {
+      if (error?.name !== 'AbortError') { console.error(error); showToast(tr('comingSoon')); }
+    } finally {
+      button.disabled = false;
+    }
+  });
 }
 
 function projectAnalysisTabContent(tab, version = null, kind = 'project') {

@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=54" />
+    <link rel="stylesheet" href="dashboard.css?v=55" />
   </head>
   <body class="is-cabinet-entering">
     <section class="cabinet-entry" data-cabinet-entry role="status" aria-live="polite" aria-label="Вход в личный кабинет">
@@ -280,6 +280,10 @@
           <div class="empty-state" data-commercial-proposals-empty><span class="proposal-empty-mark">₽</span><h2 data-i18n="noCommercialProposals">Коммерческих предложений пока нет</h2><p data-i18n="noCommercialProposalsCopy">Заполните один из блоков выше — созданное КП сохранится только в этом разделе.</p></div>
         </section>
 
+        <section class="tab-panel proposal-detail-panel" data-panel="proposal-detail" aria-label="Коммерческое предложение" hidden>
+          <div data-commercial-proposal-workspace></div>
+        </section>
+
         <section class="tab-panel project-workflow-panel" data-panel="project-analysis" aria-label="Детально разобрать проект" hidden>
           <div class="page-title workflow-page-title"><div><span class="eyebrow">STRUCTOS PROJECT ANALYSIS</span><h1 data-i18n="detailedProjectAnalysis">Детально разобрать проект</h1></div><button class="outline-button" type="button" data-open-panel="projects">← <span data-i18n="myProjects">Мои проекты</span></button></div>
           <section class="workflow-action-stage is-project"><span aria-hidden="true">▤</span><button class="primary-button" type="button" data-project-menu-placeholder="detailedProjectAnalysis" data-i18n="detailedProjectAnalysis">Детально разобрать проект</button></section>
@@ -419,6 +423,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=57"></script>
+    <script type="module" src="dashboard.js?v=58"></script>
   </body>
 </html>
