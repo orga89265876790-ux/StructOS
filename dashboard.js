@@ -540,7 +540,12 @@ Object.assign(copy.RU, {
   downloadProposal: 'Скачать', viewProposal: 'Посмотреть', shareProposal: 'Поделиться',
   chooseProposalFragments: 'Какие фрагменты КП использовать?',
   chooseProposalFragmentsHint: 'Отметьте разделы, которые войдут в выбранное действие.',
-  selectProposalFragments: 'Выберите хотя бы один фрагмент КП', proposalFragmentPositions: 'позиций'
+  selectProposalFragments: 'Выберите хотя бы один фрагмент КП', proposalFragmentPositions: 'позиций',
+  addOwnProposalPosition: 'Добавить свою позицию', ownProposalPosition: 'Своя позиция',
+  ownProposalPositionHint: 'Добавьте строку вручную в выбранный раздел коммерческого предложения.',
+  ownProposalPositionName: 'Наименование работы, услуги или материала', ownProposalPositionNamePlaceholder: 'Например: Монтаж кабельного лотка',
+  saveProposalPosition: 'Добавить позицию', proposalPositionAdded: 'Своя позиция добавлена',
+  deleteOwnProposalPosition: 'Удалить свою позицию', ownProposalPositionDeleted: 'Своя позиция удалена'
 });
 Object.assign(copy.EN, {
   proposalWorkspaceTitle: 'Commercial proposal', backToProposalList: 'Back to proposals',
@@ -562,7 +567,12 @@ Object.assign(copy.EN, {
   downloadProposal: 'Download', viewProposal: 'View', shareProposal: 'Share',
   chooseProposalFragments: 'Which proposal fragments should be used?',
   chooseProposalFragmentsHint: 'Select the sections to include in this action.',
-  selectProposalFragments: 'Select at least one proposal fragment', proposalFragmentPositions: 'lines'
+  selectProposalFragments: 'Select at least one proposal fragment', proposalFragmentPositions: 'lines',
+  addOwnProposalPosition: 'Add your own line', ownProposalPosition: 'Custom line',
+  ownProposalPositionHint: 'Add a line manually to the selected commercial proposal section.',
+  ownProposalPositionName: 'Work, service, or material name', ownProposalPositionNamePlaceholder: 'For example: Cable tray installation',
+  saveProposalPosition: 'Add line', proposalPositionAdded: 'Custom line added',
+  deleteOwnProposalPosition: 'Delete custom line', ownProposalPositionDeleted: 'Custom line deleted'
 });
 Object.assign(copy.KY, {
   proposalWorkspaceTitle: 'Коммерциялык сунуш', backToProposalList: 'КП тизмесине',
@@ -584,7 +594,12 @@ Object.assign(copy.KY, {
   downloadProposal: 'Жүктөө', viewProposal: 'Көрүү', shareProposal: 'Бөлүшүү',
   chooseProposalFragments: 'КПнын кайсы бөлүктөрү колдонулсун?',
   chooseProposalFragmentsHint: 'Бул аракетке кире турган бөлүмдөрдү белгилеңиз.',
-  selectProposalFragments: 'КПнын жок дегенде бир бөлүгүн тандаңыз', proposalFragmentPositions: 'позиция'
+  selectProposalFragments: 'КПнын жок дегенде бир бөлүгүн тандаңыз', proposalFragmentPositions: 'позиция',
+  addOwnProposalPosition: 'Өз позицияңызды кошуу', ownProposalPosition: 'Өз позициясы',
+  ownProposalPositionHint: 'Тандалган коммерциялык сунуш бөлүмүнө сапты кол менен кошуңуз.',
+  ownProposalPositionName: 'Иштин, кызматтын же материалдын аталышы', ownProposalPositionNamePlaceholder: 'Мисалы: Кабелдик лотокту орнотуу',
+  saveProposalPosition: 'Позицияны кошуу', proposalPositionAdded: 'Өз позициясы кошулду',
+  deleteOwnProposalPosition: 'Өз позициясын өчүрүү', ownProposalPositionDeleted: 'Өз позициясы өчүрүлдү'
 });
 Object.assign(copy.TJ, {
   proposalWorkspaceTitle: 'Пешниҳоди тиҷоратӣ', backToProposalList: 'Ба рӯйхати КП',
@@ -606,7 +621,12 @@ Object.assign(copy.TJ, {
   downloadProposal: 'Бор кардан', viewProposal: 'Дидан', shareProposal: 'Мубодила',
   chooseProposalFragments: 'Кадом қисмҳои КП истифода шаванд?',
   chooseProposalFragmentsHint: 'Бахшҳоеро, ки ба ин амал дохил мешаванд, интихоб кунед.',
-  selectProposalFragments: 'Ҳадди ақал як қисми КП-ро интихоб кунед', proposalFragmentPositions: 'мавқеъ'
+  selectProposalFragments: 'Ҳадди ақал як қисми КП-ро интихоб кунед', proposalFragmentPositions: 'мавқеъ',
+  addOwnProposalPosition: 'Илова кардани мавқеи худ', ownProposalPosition: 'Мавқеи худ',
+  ownProposalPositionHint: 'Сатрро дастӣ ба бахши интихобшудаи пешниҳоди тиҷоратӣ илова кунед.',
+  ownProposalPositionName: 'Номи кор, хизмат ё мавод', ownProposalPositionNamePlaceholder: 'Масалан: Насби новаи кабелӣ',
+  saveProposalPosition: 'Илова кардани мавқеъ', proposalPositionAdded: 'Мавқеи худ илова шуд',
+  deleteOwnProposalPosition: 'Нест кардани мавқеи худ', ownProposalPositionDeleted: 'Мавқеи худ нест шуд'
 });
 
 Object.assign(copy.RU, { detailedProjectAnalysis: 'Детально разобрать проект', contractsUnderReview: 'Договоры на рассмотрении', detailedContractAnalysis: 'Детально разобрать договор', estimateAnalysis: 'Анализ сметы', createProposalByProject: 'Создать КП по проекту', createProposalByEstimate: 'Создать КП по смете', turnkeyObject: 'Запустить объект в один клик', projectMailings: 'Рассылки предложений', mailWorkOffers: 'Рассылка предложений на работу (В разработке)', mailContractOffers: 'Рассылка предложений взять подряд (В разработке)', mailSupplyOffers: 'Рассылка предложений на поставку (В разработке)', projectMenuPrepared: 'Кнопка «{name}» подготовлена. Наполним этот раздел следующим этапом.' });
@@ -1396,7 +1416,8 @@ function commercialProposalWorkspaceNumber(value) {
 
 function normalizeCommercialProposalWorkspace(value) {
   const workspace = value && typeof value === 'object' ? value : {};
-  const validGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'equipment', 'materials', 'toolsAndConsumables', 'consumableMaterials', 'laborHours']);
+  const sourceGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'equipment', 'materials', 'toolsAndConsumables', 'consumableMaterials', 'laborHours']);
+  const validGroups = new Set([...sourceGroups, 'my']);
   const itemValues = {};
   Object.entries(workspace.itemValues && typeof workspace.itemValues === 'object' ? workspace.itemValues : {}).slice(0, 2000).forEach(([id, item]) => {
     const safeId = String(id || '').slice(0, 160);
@@ -1406,10 +1427,10 @@ function normalizeCommercialProposalWorkspace(value) {
       price: commercialProposalWorkspaceNumber(item?.price)
     };
   });
-  const myItems = Array.isArray(workspace.myItems) ? workspace.myItems.slice(0, 1000).map((item) => {
+  const normalizeWorkspaceItem = (item, allowMy = false) => {
     const id = String(item?.id || '').slice(0, 160);
     const name = String(item?.name || '').trim().slice(0, 240);
-    const sourceGroup = validGroups.has(item?.sourceGroup) ? item.sourceGroup : 'specificationWorks';
+    const sourceGroup = validGroups.has(item?.sourceGroup) && (allowMy || sourceGroups.has(item?.sourceGroup)) ? item.sourceGroup : 'specificationWorks';
     if (!id || !name) return null;
     return {
       id,
@@ -1419,12 +1440,16 @@ function normalizeCommercialProposalWorkspace(value) {
       quantity: commercialProposalWorkspaceNumber(item?.quantity),
       price: commercialProposalWorkspaceNumber(item?.price),
       sourceName: String(item?.sourceName || '').trim().slice(0, 240),
-      sourceSheet: String(item?.sourceSheet || '').trim().slice(0, 120)
+      sourceSheet: String(item?.sourceSheet || '').trim().slice(0, 120),
+      custom: Boolean(item?.custom)
     };
-  }).filter(Boolean) : [];
+  };
+  const customItems = Array.isArray(workspace.customItems) ? workspace.customItems.slice(0, 1000).map((item) => normalizeWorkspaceItem(item)).filter(Boolean) : [];
+  const myItems = Array.isArray(workspace.myItems) ? workspace.myItems.slice(0, 1000).map((item) => normalizeWorkspaceItem(item, true)).filter(Boolean) : [];
   return {
     taxMode: Object.prototype.hasOwnProperty.call(COMMERCIAL_PROPOSAL_PRICE_MODES, workspace.taxMode) ? workspace.taxMode : 'cash',
     itemValues,
+    customItems,
     myItems
   };
 }
@@ -7461,7 +7486,7 @@ function commercialProposalEditorGroupConfig(groupId) {
 }
 
 function commercialProposalWorkspaceState(proposal) {
-  if (!proposal.workspace || typeof proposal.workspace !== 'object' || !proposal.workspace.itemValues || !Array.isArray(proposal.workspace.myItems)) {
+  if (!proposal.workspace || typeof proposal.workspace !== 'object' || !proposal.workspace.itemValues || !Array.isArray(proposal.workspace.customItems) || !Array.isArray(proposal.workspace.myItems)) {
     proposal.workspace = normalizeCommercialProposalWorkspace(proposal.workspace);
   }
   return proposal.workspace;
@@ -7489,7 +7514,8 @@ function commercialProposalEntryWithState(entry, id, sourceGroup, state) {
     quantity: hasQuantity ? commercialProposalWorkspaceNumber(saved.quantity) : commercialProposalWorkspaceNumber(entry?.quantity),
     price: hasPrice ? commercialProposalWorkspaceNumber(saved.price) : commercialProposalWorkspaceNumber(entry?.price),
     sourceName: String(entry?.sourceName || '').trim(),
-    sourceSheet: String(entry?.sourceSheet || '').trim()
+    sourceSheet: String(entry?.sourceSheet || '').trim(),
+    custom: Boolean(entry?.custom)
   };
 }
 
@@ -7497,7 +7523,9 @@ function commercialProposalEntriesForGroup(proposal, groupId, groups = null) {
   const state = commercialProposalWorkspaceState(proposal);
   if (groupId === 'my') return state.myItems.map((entry) => commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state));
   const sourceGroups = groups || commercialProposalBreakdown(latestDocumentVersion(proposal.file), proposal.kind);
-  return (sourceGroups[groupId] || []).map((entry, index) => commercialProposalEntryWithState(entry, commercialProposalLineId(groupId, entry, index), groupId, state));
+  const extractedEntries = (sourceGroups[groupId] || []).map((entry, index) => commercialProposalEntryWithState(entry, commercialProposalLineId(groupId, entry, index), groupId, state));
+  const customEntries = state.customItems.filter((entry) => entry.sourceGroup === groupId).map((entry) => commercialProposalEntryWithState(entry, entry.id, groupId, state));
+  return [...extractedEntries, ...customEntries];
 }
 
 function commercialProposalRoundMoney(value) {
@@ -7542,15 +7570,16 @@ function commercialProposalTableMarkup(proposal, groupId, entries) {
   const actionHead = groupId === 'my' ? '' : escapeHtml(tr('sendToMyProposal'));
   const rows = entries.map((entry, index) => {
     const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, state.taxMode);
-    const source = entry.sourceSheet || entry.sourceName || tr('identifiedByAnalysis');
+    const source = entry.custom ? tr('ownProposalPosition') : entry.sourceSheet || entry.sourceName || tr('identifiedByAnalysis');
     const dynamicCells = mode.direction === 'subtract'
       ? `<td class="is-money is-tax" data-proposal-tax-total>${escapeHtml(formatSignedMoney(-amounts.tax))}</td><td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`
       : mode.direction === 'add'
         ? `<td class="is-money" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td><td class="is-money is-tax" data-proposal-tax-total>${escapeHtml(formatMoney(amounts.tax))}</td><td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`
         : `<td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`;
+    const removeCustom = entry.custom ? `<button class="proposal-my-remove" type="button" data-remove-proposal-custom-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('deleteOwnProposalPosition'))}" title="${escapeHtml(tr('deleteOwnProposalPosition'))}">×</button>` : '';
     const action = groupId === 'my'
       ? `<button class="proposal-my-remove" type="button" data-remove-proposal-my-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('removeFromMyProposal'))}" title="${escapeHtml(tr('removeFromMyProposal'))}">×</button>`
-      : `<label class="proposal-send-to-my"><input type="checkbox" data-proposal-send-to-my="${escapeHtml(entry.id)}"${myIds.has(entry.id) ? ' checked' : ''} aria-label="${escapeHtml(`${tr('sendToMyProposal')}: ${entry.name}`)}" /><span aria-hidden="true">✓</span></label>`;
+      : `<div class="proposal-line-controls"><label class="proposal-send-to-my"><input type="checkbox" data-proposal-send-to-my="${escapeHtml(entry.id)}"${myIds.has(entry.id) ? ' checked' : ''} aria-label="${escapeHtml(`${tr('sendToMyProposal')}: ${entry.name}`)}" /><span aria-hidden="true">✓</span></label>${removeCustom}</div>`;
     return `<tr data-proposal-line-row data-proposal-line-id="${escapeHtml(entry.id)}"><td class="proposal-line-number">${index + 1}</td><td class="proposal-line-name"><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(source)}</small></td><td>${escapeHtml(entry.unit || '—')}</td><td><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.quantity ? escapeHtml(String(entry.quantity)) : ''}" placeholder="0" data-proposal-line-value="quantity" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('quantity'))}" /></td><td><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.price ? escapeHtml(String(entry.price)) : ''}" placeholder="0" data-proposal-line-value="price" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('price'))}" /></td>${dynamicCells}<td class="proposal-line-action">${action}</td></tr>`;
   }).join('');
   const columnCount = 7 + (mode.direction === 'subtract' ? 1 : mode.direction === 'add' ? 2 : 0);
@@ -7564,9 +7593,9 @@ function commercialProposalTableMarkup(proposal, groupId, entries) {
 function commercialProposalColumnsMarkup(proposal, groups) {
   const state = commercialProposalWorkspaceState(proposal);
   return `<nav class="commercial-proposal-editor-columns" aria-label="${escapeHtml(tr('proposalWorkspaceTitle'))}">${COMMERCIAL_PROPOSAL_EDITOR_COLUMNS.map((column) => {
-    const columnCount = column.groups.filter((group) => group.id !== 'my').reduce((total, group) => total + (groups[group.id] || []).length, 0);
+    const columnCount = column.groups.filter((group) => group.id !== 'my').reduce((total, group) => total + commercialProposalEntriesForGroup(proposal, group.id, groups).length, 0);
     const buttons = column.groups.map((group) => {
-      const count = group.id === 'my' ? state.myItems.length : (groups[group.id] || []).length;
+      const count = group.id === 'my' ? state.myItems.length : commercialProposalEntriesForGroup(proposal, group.id, groups).length;
       const active = activeCommercialProposalGroup === group.id;
       return `<button class="${active ? 'is-active' : ''}" type="button" data-proposal-workspace-group="${group.id}" data-proposal-workspace-column="${column.id}" aria-pressed="${String(active)}"><span>${escapeHtml(tr(group.label))}</span><b>${count}</b></button>`;
     }).join('');
@@ -7619,6 +7648,68 @@ function saveCommercialProposalMySelection(proposal, groupId, entries, scope) {
   showToast(tr('myProposalSelectionSaved'));
 }
 
+function openCommercialProposalCustomPositionDialog(proposalId, groupId) {
+  const proposal = commercialProposalRecords.find((item) => item.id === proposalId);
+  const groupConfig = commercialProposalEditorGroupConfig(groupId);
+  if (!proposal || !groupConfig) return;
+  const groupLabel = `${tr(groupConfig.columnLabel)} · ${tr(groupConfig.label)}`;
+  showDialog(
+    escapeHtml(tr('addOwnProposalPosition')),
+    escapeHtml(`${tr('ownProposalPositionHint')} ${groupLabel}`),
+    `<form class="commercial-proposal-custom-form" data-commercial-proposal-custom-form><label class="is-wide"><span>${escapeHtml(tr('ownProposalPositionName'))} <em>*</em></span><input type="text" maxlength="240" placeholder="${escapeHtml(tr('ownProposalPositionNamePlaceholder'))}" autocomplete="off" data-custom-proposal-position-name /></label><label><span>${escapeHtml(tr('unit'))}</span><input type="text" maxlength="40" placeholder="—" autocomplete="off" data-custom-proposal-position-unit /></label><label><span>${escapeHtml(tr('quantity'))}</span><input type="number" min="0" step="0.01" inputmode="decimal" value="1" data-custom-proposal-position-quantity /></label><label><span>${escapeHtml(tr('price'))}</span><input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0" data-custom-proposal-position-price /></label><div class="result-actions is-wide"><button class="outline-button" type="button" data-cancel-custom-proposal-position>${escapeHtml(tr('cancel'))}</button><button class="primary-button" type="submit">+ ${escapeHtml(tr('saveProposalPosition'))}</button></div></form>`
+  );
+  const scope = $('[data-dialog-content]');
+  const form = $('[data-commercial-proposal-custom-form]', scope);
+  const nameInput = $('[data-custom-proposal-position-name]', form);
+  $('[data-cancel-custom-proposal-position]', form)?.addEventListener('click', () => $('[data-dialog]')?.close());
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const name = String(nameInput?.value || '').trim().slice(0, 240);
+    if (!name) {
+      nameInput?.setAttribute('aria-invalid', 'true');
+      nameInput?.focus();
+      return;
+    }
+    const state = commercialProposalWorkspaceState(proposal);
+    const id = `cp-custom-${createObjectId()}`;
+    const quantity = commercialProposalWorkspaceNumber($('[data-custom-proposal-position-quantity]', form)?.value);
+    const price = commercialProposalWorkspaceNumber($('[data-custom-proposal-position-price]', form)?.value);
+    const entry = {
+      id,
+      sourceGroup: groupId,
+      name,
+      unit: String($('[data-custom-proposal-position-unit]', form)?.value || '').trim().slice(0, 40),
+      quantity,
+      price,
+      sourceName: '',
+      sourceSheet: '',
+      custom: true
+    };
+    state.itemValues[id] = { quantity, price };
+    if (groupId === 'my') state.myItems.push(entry);
+    else state.customItems.push(entry);
+    proposal.updatedAt = new Date().toISOString();
+    saveCommercialProposalRecords();
+    $('[data-dialog]')?.close();
+    renderCommercialProposalWorkspace();
+    showToast(tr('proposalPositionAdded'));
+  });
+  nameInput?.focus();
+}
+
+function removeCommercialProposalCustomPosition(proposal, itemId) {
+  const state = commercialProposalWorkspaceState(proposal);
+  const exists = state.customItems.some((item) => item.id === itemId);
+  if (!exists || !window.confirm(`${tr('deleteOwnProposalPosition')}?`)) return;
+  state.customItems = state.customItems.filter((item) => item.id !== itemId);
+  state.myItems = state.myItems.filter((item) => item.id !== itemId);
+  delete state.itemValues[itemId];
+  proposal.updatedAt = new Date().toISOString();
+  saveCommercialProposalRecords();
+  renderCommercialProposalWorkspace();
+  showToast(tr('ownProposalPositionDeleted'));
+}
+
 function renderCommercialProposalWorkspace() {
   const rootElement = $('[data-commercial-proposal-workspace]');
   if (!rootElement) return;
@@ -7643,7 +7734,8 @@ function renderCommercialProposalWorkspace() {
   const entries = commercialProposalEntriesForGroup(proposal, activeCommercialProposalGroup, groups);
   const state = commercialProposalWorkspaceState(proposal);
   const saveSelection = activeCommercialProposalGroup === 'my' ? '' : `<button class="primary-button commercial-proposal-save-my" type="button" data-save-commercial-proposal-my${entries.length ? '' : ' disabled'}>✓ ${escapeHtml(tr('saveMyProposalSelection'))}</button>`;
-  rootElement.innerHTML = `<section class="commercial-proposal-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-back-to-commercial-proposals>← ${escapeHtml(tr('backToProposalList'))}</button><div><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h1>${escapeHtml(proposal.objectName)}</h1><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version.name)}</p></div></div><b>${escapeHtml(tr('proposalReady'))}</b></header><div class="analysis-truth-note commercial-proposal-editor-note"><span>i</span><p>${escapeHtml(tr('proposalWorkspacePageHint'))}</p></div>${commercialProposalColumnsMarkup(proposal, groups)}<section class="commercial-proposal-editor-body"><header><div><small>${escapeHtml(tr(groupConfig.columnLabel))}</small><h2>${escapeHtml(tr(groupConfig.label))}</h2><p>${entries.length} · ${escapeHtml(tr('proposalFragmentPositions'))}</p></div>${saveSelection}</header>${commercialProposalPriceModeMarkup(state)}${commercialProposalTableMarkup(proposal, activeCommercialProposalGroup, entries)}<footer class="commercial-proposal-editor-actions"><button class="primary-button" type="button" data-commercial-proposal-action="download"><span aria-hidden="true">↓</span>${escapeHtml(tr('downloadProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="view"><span aria-hidden="true">◉</span>${escapeHtml(tr('viewProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="share"><span aria-hidden="true">↗</span>${escapeHtml(tr('shareProposal'))}</button></footer></section></section>`;
+  const positionActions = `<div class="commercial-proposal-editor-header-actions"><button class="outline-button commercial-proposal-add-own" type="button" data-add-own-proposal-position>+ ${escapeHtml(tr('addOwnProposalPosition'))}</button>${saveSelection}</div>`;
+  rootElement.innerHTML = `<section class="commercial-proposal-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-back-to-commercial-proposals>← ${escapeHtml(tr('backToProposalList'))}</button><div><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h1>${escapeHtml(proposal.objectName)}</h1><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version.name)}</p></div></div><b>${escapeHtml(tr('proposalReady'))}</b></header><div class="analysis-truth-note commercial-proposal-editor-note"><span>i</span><p>${escapeHtml(tr('proposalWorkspacePageHint'))}</p></div>${commercialProposalColumnsMarkup(proposal, groups)}<section class="commercial-proposal-editor-body"><header><div><small>${escapeHtml(tr(groupConfig.columnLabel))}</small><h2>${escapeHtml(tr(groupConfig.label))}</h2><p>${entries.length} · ${escapeHtml(tr('proposalFragmentPositions'))}</p></div>${positionActions}</header>${commercialProposalPriceModeMarkup(state)}${commercialProposalTableMarkup(proposal, activeCommercialProposalGroup, entries)}<footer class="commercial-proposal-editor-actions"><button class="primary-button" type="button" data-commercial-proposal-action="download"><span aria-hidden="true">↓</span>${escapeHtml(tr('downloadProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="view"><span aria-hidden="true">◉</span>${escapeHtml(tr('viewProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="share"><span aria-hidden="true">↗</span>${escapeHtml(tr('shareProposal'))}</button></footer></section></section>`;
   $('[data-back-to-commercial-proposals]', rootElement)?.addEventListener('click', () => setPanel('proposals'));
   $$('[data-proposal-workspace-group]', rootElement).forEach((button) => button.addEventListener('click', () => {
     activeCommercialProposalGroup = button.dataset.proposalWorkspaceGroup;
@@ -7676,9 +7768,13 @@ function renderCommercialProposalWorkspace() {
       saveCommercialProposalRecords();
     });
   });
+  $('[data-add-own-proposal-position]', rootElement)?.addEventListener('click', () => openCommercialProposalCustomPositionDialog(proposal.id, activeCommercialProposalGroup));
   $('[data-save-commercial-proposal-my]', rootElement)?.addEventListener('click', () => saveCommercialProposalMySelection(proposal, activeCommercialProposalGroup, entries, rootElement));
+  $$('[data-remove-proposal-custom-item]', rootElement).forEach((button) => button.addEventListener('click', () => removeCommercialProposalCustomPosition(proposal, button.dataset.removeProposalCustomItem)));
   $$('[data-remove-proposal-my-item]', rootElement).forEach((button) => button.addEventListener('click', () => {
+    const removed = state.myItems.find((item) => item.id === button.dataset.removeProposalMyItem);
     state.myItems = state.myItems.filter((item) => item.id !== button.dataset.removeProposalMyItem);
+    if (removed?.sourceGroup === 'my') delete state.itemValues[removed.id];
     proposal.updatedAt = new Date().toISOString();
     saveCommercialProposalRecords();
     renderCommercialProposalWorkspace();

@@ -1338,7 +1338,9 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .commercial-proposal-editor-body > header small { color: var(--cyan); font-size: 11px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
 .commercial-proposal-editor-body > header h2 { margin: 4px 0 2px; font-size: clamp(19px,2vw,26px); }
 .commercial-proposal-editor-body > header p { margin: 0; color: var(--muted); font-size: 12px; }
-.commercial-proposal-save-my { min-height: 44px; padding: 8px 13px; white-space: nowrap; }
+.commercial-proposal-editor-header-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 7px; }
+.commercial-proposal-add-own,.commercial-proposal-save-my { min-height: 44px; padding: 8px 13px; white-space: nowrap; }
+.commercial-proposal-add-own { color: var(--cyan); border-color: rgba(36,181,255,.42); background: rgba(13,116,229,.07); }
 .commercial-proposal-price-modes { min-width: 0; margin: 16px 0; padding: 13px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-soft); }
 .commercial-proposal-price-modes legend { padding: 0 7px; color: var(--text); font-size: 14px; font-weight: 800; }
 .proposal-price-mode-groups { display: grid; grid-template-columns: .75fr 1.2fr 1.2fr; gap: 8px; }
@@ -1371,11 +1373,13 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .commercial-proposal-price-table td.is-tax { color: #e4a73e; font-weight: 750; }
 .commercial-proposal-price-table td.is-total { color: #3edaa7; font-weight: 850; }
 .proposal-line-action { text-align: center; }
+.proposal-line-controls { display: flex; align-items: center; justify-content: center; gap: 5px; }
 .proposal-send-to-my { width: 34px; height: 34px; margin: auto; display: grid; place-items: center; cursor: pointer; }
 .proposal-send-to-my input { position: absolute; opacity: 0; pointer-events: none; }
 .proposal-send-to-my span { width: 30px; height: 30px; display: grid; place-items: center; color: transparent; border: 1px solid var(--line-strong); border-radius: 9px; background: var(--surface); font-size: 16px; font-weight: 900; }
 .proposal-send-to-my input:checked + span { color: #fff; border-color: #17ae7c; background: linear-gradient(135deg,#0878e9,#15b47e); }
-.proposal-my-remove { width: 32px; height: 32px; display: grid; place-items: center; color: var(--danger); border: 1px solid color-mix(in srgb,var(--danger) 40%,var(--line)); border-radius: 9px; background: color-mix(in srgb,var(--danger) 8%,transparent); font-size: 20px; cursor: pointer; }
+.proposal-my-remove { width: 32px; height: 32px; margin: auto; display: grid; place-items: center; color: var(--danger); border: 1px solid color-mix(in srgb,var(--danger) 40%,var(--line)); border-radius: 9px; background: color-mix(in srgb,var(--danger) 8%,transparent); font-size: 20px; cursor: pointer; }
+.proposal-line-controls .proposal-send-to-my,.proposal-line-controls .proposal-my-remove { margin: 0; }
 .commercial-proposal-price-table tfoot td { padding: 11px; border-top: 1px solid var(--line-strong); background: var(--surface); }
 .commercial-proposal-price-table tfoot td > span { margin-right: 18px; display: inline-flex; gap: 5px; color: var(--muted); }
 .commercial-proposal-price-table tfoot b { color: var(--text); }
@@ -1394,6 +1398,14 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .commercial-proposal-fragment-list label > span { min-width: 0; display: grid; gap: 4px; }
 .commercial-proposal-fragment-list strong { overflow: hidden; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
 .commercial-proposal-fragment-list small { color: var(--muted); font-size: 9px; line-height: 1.3; }
+.commercial-proposal-custom-form { margin-top: 16px; display: grid; grid-template-columns: 1.2fr .9fr .9fr; gap: 10px; }
+.commercial-proposal-custom-form label { min-width: 0; display: grid; gap: 6px; }
+.commercial-proposal-custom-form label.is-wide,.commercial-proposal-custom-form .is-wide { grid-column: 1/-1; }
+.commercial-proposal-custom-form label > span { color: var(--muted); font-size: 12px; font-weight: 700; }
+.commercial-proposal-custom-form label > span em { color: var(--danger); font-style: normal; }
+.commercial-proposal-custom-form input { width: 100%; min-width: 0; min-height: 46px; padding: 0 11px; color: var(--text); border: 1px solid var(--line); border-radius: 10px; outline: 0; background: var(--surface-soft); font: inherit; }
+.commercial-proposal-custom-form input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,119,255,.11); }
+.commercial-proposal-custom-form input[aria-invalid="true"] { border-color: var(--danger); }
 .proposal-empty-mark { width: 58px; height: 58px; display: grid; place-items: center; color: #43dda8; border: 1px solid rgba(49,210,156,.4); border-radius: 16px; background: rgba(18,165,111,.1); box-shadow: 0 0 23px rgba(33,201,147,.12); font-size: 27px; font-weight: 850; }
 .drawer-proposal-icon { color: #41dca8!important; border-color: rgba(52,212,158,.4)!important; background: rgba(18,165,111,.1)!important; font-size: 18px!important; font-weight: 850; }
 .revision-content-summary { margin: 9px 0; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 7px; }.revision-content-summary article { min-width: 0; min-height: 60px; padding: 9px; display: grid; align-content: space-between; gap: 6px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface-soft); }.revision-content-summary span { color: var(--muted); font-size: 7px; }.revision-content-summary b { color: var(--cyan); font-size: 17px; }.revision-catalog-differences { margin-top: 10px; }.revision-no-content-differences { margin: 9px 0 0; padding: 12px; color: #45dba8; text-align: center; border: 1px solid rgba(69,219,168,.3); border-radius: 10px; background: rgba(18,164,109,.08); font-size: 8px; }
@@ -2244,7 +2256,8 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
   .commercial-proposals-list { grid-template-columns: 1fr; }
   .commercial-proposal-editor-columns { grid-template-columns: 1fr; }
   .commercial-proposal-editor-body > header { align-items: stretch; flex-direction: column; }
-  .commercial-proposal-save-my { width: 100%; }
+  .commercial-proposal-editor-header-actions { justify-content: stretch; }
+  .commercial-proposal-add-own,.commercial-proposal-save-my { flex: 1 1 220px; }
   .commercial-proposal-fragment-list { grid-template-columns: 1fr; }
 }
 
@@ -2269,6 +2282,8 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
   .commercial-proposal-price-modes { padding: 9px; }
   .commercial-proposal-price-table tfoot td > span { margin: 3px 12px 3px 0; }
   .commercial-proposal-editor-actions { grid-template-columns: 1fr; }
+  .commercial-proposal-custom-form { grid-template-columns: 1fr; }
+  .commercial-proposal-custom-form label.is-wide,.commercial-proposal-custom-form .is-wide { grid-column: 1; }
 }
 
 .proposal-create-card { min-width: 0; padding: 15px; display: grid; align-content: start; gap: 12px; border: 1px solid rgba(49,184,255,.34); border-top: 2px solid #36b9ff; border-radius: 16px; background: linear-gradient(145deg,var(--surface),color-mix(in srgb,var(--surface-soft) 94%,#087bdc)); box-shadow: 0 12px 30px rgba(5,70,132,.11); }
