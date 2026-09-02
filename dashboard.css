@@ -1342,6 +1342,10 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .commercial-proposal-add-own,.commercial-proposal-save-my { min-height: 44px; padding: 8px 13px; white-space: nowrap; }
 .commercial-proposal-add-own { color: var(--cyan); border-color: rgba(36,181,255,.42); background: rgba(13,116,229,.07); }
 .commercial-proposal-price-modes { min-width: 0; margin: 16px 0; padding: 13px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-soft); }
+.commercial-proposal-group-hint { min-height: 54px; margin: 16px 0 0; padding: 10px 12px; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(42,171,255,.34); border-radius: 13px; background: rgba(18,117,210,.07); }
+.commercial-proposal-group-hint > span { width: 30px; height: 30px; display: grid; place-items: center; flex: 0 0 auto; color: var(--cyan); border: 1px solid currentColor; border-radius: 9px; font-size: 14px; font-weight: 850; }
+.commercial-proposal-group-hint p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.commercial-proposal-group-hint + .commercial-proposal-price-modes { margin-top: 10px; }
 .commercial-proposal-price-modes legend { padding: 0 7px; color: var(--text); font-size: 14px; font-weight: 800; }
 .proposal-price-mode-groups { display: grid; grid-template-columns: .75fr 1.2fr 1.2fr; gap: 8px; }
 .proposal-price-mode-groups > section { min-width: 0; padding: 9px; display: grid; align-content: start; gap: 6px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); }
@@ -1376,6 +1380,11 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .commercial-proposal-price-table.has-2-taxes { min-width: 1150px; }
 .commercial-proposal-price-table.is-included-tax.has-1-taxes { min-width: 1350px; }
 .commercial-proposal-price-table.is-included-tax.has-2-taxes { min-width: 1470px; }
+.commercial-proposal-price-table.has-special-column { min-width: 1110px; }
+.commercial-proposal-price-table.has-special-column.has-1-taxes { min-width: 1220px; }
+.commercial-proposal-price-table.has-special-column.has-2-taxes { min-width: 1330px; }
+.commercial-proposal-price-table.has-special-column.is-included-tax.has-1-taxes { min-width: 1530px; }
+.commercial-proposal-price-table.has-special-column.is-included-tax.has-2-taxes { min-width: 1650px; }
 .commercial-proposal-price-table th,.commercial-proposal-price-table td { padding: 8px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 11px; vertical-align: middle; }
 .commercial-proposal-price-table th { color: var(--muted); text-align: left; background: var(--surface); font-size: 10px; line-height: 1.25; }
 .commercial-proposal-price-table th:first-child,.commercial-proposal-price-table td:first-child { width: 38px; text-align: center; }
@@ -1389,6 +1398,10 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .proposal-line-name small { margin-top: 4px; color: var(--muted); font-size: 9px; line-height: 1.3; }
 .proposal-number-input { width: 100%; min-height: 38px; padding: 0 8px; color: var(--text); text-align: right; border: 1px solid var(--line); border-radius: 8px; outline: 0; background: var(--surface); font-size: 12px; }
 .proposal-number-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,119,255,.1); }
+.proposal-line-meta-cell { min-width: 132px; }
+.proposal-line-meta-cell.is-associated { min-width: 210px; }
+.proposal-line-meta-cell select,.proposal-line-meta-cell input { width: 100%; min-width: 0; min-height: 38px; padding: 0 8px; color: var(--text); border: 1px solid var(--line); border-radius: 8px; outline: 0; background: var(--surface); font: inherit; font-size: 12px; }
+.proposal-line-meta-cell select:focus,.proposal-line-meta-cell input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,119,255,.1); }
 .commercial-proposal-price-table td.is-money { min-width: 106px; text-align: right; white-space: nowrap; }
 .commercial-proposal-price-table td.is-tax { color: #e4a73e; font-weight: 750; }
 .commercial-proposal-price-table td.is-total { color: #3edaa7; font-weight: 850; }
