@@ -491,6 +491,35 @@ Object.assign(copy.TJ, {
   proposalSectionStorage: 'Бахши мустақил · объект сохта намешавад'
 });
 
+Object.assign(copy.RU, {
+  renameCommercialProposal: 'Переименовать КП', deleteCommercialProposal: 'Удалить КП',
+  renameCommercialProposalHint: 'Измените название объекта и раздел. Файл и результаты анализа сохранятся.',
+  commercialProposalRenamed: 'Название КП изменено',
+  deleteCommercialProposalHint: 'Файл и результаты анализа будут удалены только из раздела КП.',
+  commercialProposalDeleted: 'КП удалено'
+});
+Object.assign(copy.EN, {
+  renameCommercialProposal: 'Rename proposal', deleteCommercialProposal: 'Delete proposal',
+  renameCommercialProposalHint: 'Change the object name and section. The file and analysis results will remain saved.',
+  commercialProposalRenamed: 'Proposal name updated',
+  deleteCommercialProposalHint: 'The file and analysis results will be deleted only from the proposals workspace.',
+  commercialProposalDeleted: 'Proposal deleted'
+});
+Object.assign(copy.KY, {
+  renameCommercialProposal: 'КП атын өзгөртүү', deleteCommercialProposal: 'КП өчүрүү',
+  renameCommercialProposalHint: 'Объекттин жана бөлүмдүн атын өзгөртүңүз. Файл жана талдоо жыйынтыгы сакталат.',
+  commercialProposalRenamed: 'КП аталышы өзгөртүлдү',
+  deleteCommercialProposalHint: 'Файл жана талдоо жыйынтыгы КП бөлүмүнөн гана өчүрүлөт.',
+  commercialProposalDeleted: 'КП өчүрүлдү'
+});
+Object.assign(copy.TJ, {
+  renameCommercialProposal: 'Иваз кардани номи КП', deleteCommercialProposal: 'Нест кардани КП',
+  renameCommercialProposalHint: 'Номи объект ва бахшро иваз кунед. Файл ва натиҷаҳои таҳлил нигоҳ дошта мешаванд.',
+  commercialProposalRenamed: 'Номи КП иваз шуд',
+  deleteCommercialProposalHint: 'Файл ва натиҷаҳои таҳлил танҳо аз бахши КП нест карда мешаванд.',
+  commercialProposalDeleted: 'КП нест карда шуд'
+});
+
 Object.assign(copy.RU, { detailedProjectAnalysis: 'Детально разобрать проект', contractsUnderReview: 'Договоры на рассмотрении', detailedContractAnalysis: 'Детально разобрать договор', estimateAnalysis: 'Анализ сметы', createProposalByProject: 'Создать КП по проекту', createProposalByEstimate: 'Создать КП по смете', turnkeyObject: 'Запустить объект в один клик', projectMailings: 'Рассылки предложений', mailWorkOffers: 'Рассылка предложений на работу (В разработке)', mailContractOffers: 'Рассылка предложений взять подряд (В разработке)', mailSupplyOffers: 'Рассылка предложений на поставку (В разработке)', projectMenuPrepared: 'Кнопка «{name}» подготовлена. Наполним этот раздел следующим этапом.' });
 Object.assign(copy.EN, { detailedProjectAnalysis: 'Detailed project analysis', contractsUnderReview: 'Contracts under review', detailedContractAnalysis: 'Analyze contract in detail', estimateAnalysis: 'Estimate analysis', createProposalByProject: 'Create proposal from project', createProposalByEstimate: 'Create proposal from estimate', turnkeyObject: 'Launch an object in one click', projectMailings: 'Offer mailings', mailWorkOffers: 'Send job offers (In development)', mailContractOffers: 'Send contract offers (In development)', mailSupplyOffers: 'Send supply offers (In development)', projectMenuPrepared: 'The “{name}” button is ready. We will build out this section next.' });
 Object.assign(copy.KY, { detailedProjectAnalysis: 'Долбоорду толук талдоо', contractsUnderReview: 'Каралуудагы келишимдер', detailedContractAnalysis: 'Келишимди толук талдоо', estimateAnalysis: 'Сметаны талдоо', createProposalByProject: 'Долбоор боюнча КП түзүү', createProposalByEstimate: 'Смета боюнча КП түзүү', turnkeyObject: 'Объектти бир чыкылдатуу менен ишке киргизүү', projectMailings: 'Сунуштарды жөнөтүү', mailWorkOffers: 'Жумуш сунуштарын жөнөтүү (Иштелип жатат)', mailContractOffers: 'Подряд алуу сунуштарын жөнөтүү (Иштелип жатат)', mailSupplyOffers: 'Жеткирүү сунуштарын жөнөтүү (Иштелип жатат)', projectMenuPrepared: '«{name}» баскычы даяр. Бул бөлүмдү кийинки этапта толтурабыз.' });
@@ -6900,7 +6929,49 @@ function commercialProposalCardMarkup(proposal) {
   const version = latestDocumentVersion(proposal.file);
   const ready = proposal.status === 'ready' && isDocumentVersionAnalyzed(version);
   const sourceLabel = tr(proposal.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
-  return `<article class="commercial-proposal-card${ready ? ' is-ready' : ' is-pending'}"><header><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h2>${escapeHtml(proposal.objectName)}</h2><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version?.name || '')}</p></div><b>${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></header><footer><span>${escapeHtml(formatObjectDate(proposal.createdAt))} · ${escapeHtml(tr('proposalSectionStorage'))}</span><button class="${ready ? 'outline-button' : 'primary-button'}" type="button" data-open-commercial-proposal="${escapeHtml(proposal.id)}">${escapeHtml(tr(ready ? 'openCommercialProposal' : 'proposalAwaitingAnalysis'))} →</button></footer></article>`;
+  return `<article class="commercial-proposal-card${ready ? ' is-ready' : ' is-pending'}"><header><span aria-hidden="true">₽</span><div class="commercial-proposal-card-copy"><small>${escapeHtml(proposal.sectionName)}</small><h2>${escapeHtml(proposal.objectName)}</h2><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version?.name || '')}</p></div><div class="commercial-proposal-card-side"><div class="commercial-proposal-card-actions"><button type="button" data-rename-commercial-proposal="${escapeHtml(proposal.id)}" aria-label="${escapeHtml(tr('renameCommercialProposal'))}" title="${escapeHtml(tr('renameCommercialProposal'))}"><span aria-hidden="true">✎</span><strong>${escapeHtml(tr('rename'))}</strong></button><button class="is-delete" type="button" data-delete-commercial-proposal="${escapeHtml(proposal.id)}" aria-label="${escapeHtml(tr('deleteCommercialProposal'))}" title="${escapeHtml(tr('deleteCommercialProposal'))}">×</button></div><b>${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></div></header><footer><span>${escapeHtml(formatObjectDate(proposal.createdAt))} · ${escapeHtml(tr('proposalSectionStorage'))}</span><button class="${ready ? 'outline-button' : 'primary-button'}" type="button" data-open-commercial-proposal="${escapeHtml(proposal.id)}">${escapeHtml(tr(ready ? 'openCommercialProposal' : 'proposalAwaitingAnalysis'))} →</button></footer></article>`;
+}
+
+function renameCommercialProposal(proposalId) {
+  const proposal = commercialProposalRecords.find((item) => item.id === proposalId);
+  if (!proposal) return;
+  showDialog(escapeHtml(tr('renameCommercialProposal')), escapeHtml(tr('renameCommercialProposalHint')), `<div class="object-form commercial-proposal-rename-form"><label><span>${escapeHtml(tr('objectName'))}</span><input type="text" maxlength="100" value="${escapeHtml(proposal.objectName)}" data-rename-commercial-proposal-object /></label><label><span>${escapeHtml(tr('proposalSectionField'))}</span><input type="text" maxlength="140" value="${escapeHtml(proposal.sectionName)}" data-rename-commercial-proposal-section /></label><button class="primary-button" type="button" data-confirm-commercial-proposal-rename>${escapeHtml(tr('save'))}</button></div>`);
+  const scope = $('[data-dialog-content]');
+  const objectInput = $('[data-rename-commercial-proposal-object]', scope);
+  const sectionInput = $('[data-rename-commercial-proposal-section]', scope);
+  const saveProposalName = () => {
+    const objectName = objectInput?.value.trim().slice(0, 100) || '';
+    const sectionName = sectionInput?.value.trim().slice(0, 140) || '';
+    if (!objectName) { objectInput?.focus(); return; }
+    if (!sectionName) { sectionInput?.focus(); return; }
+    proposal.objectName = objectName;
+    proposal.sectionName = sectionName;
+    proposal.updatedAt = new Date().toISOString();
+    saveCommercialProposalRecords();
+    renderCommercialProposals();
+    $('[data-dialog]')?.close();
+    showToast(tr('commercialProposalRenamed'));
+  };
+  $('[data-confirm-commercial-proposal-rename]', scope)?.addEventListener('click', saveProposalName);
+  [objectInput, sectionInput].forEach((input) => input?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') { event.preventDefault(); saveProposalName(); }
+  }));
+  setTimeout(() => { objectInput?.focus(); objectInput?.select(); }, 40);
+}
+
+function deleteCommercialProposal(proposalId) {
+  const proposal = commercialProposalRecords.find((item) => item.id === proposalId);
+  if (!proposal) return;
+  showDialog(escapeHtml(tr('deleteCommercialProposal')), escapeHtml(tr('deleteCommercialProposalHint')), `<div class="result-actions"><button class="outline-button" type="button" data-cancel-commercial-proposal-delete>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-commercial-proposal-delete>${escapeHtml(tr('deleteCommercialProposal'))}</button></div>`);
+  const scope = $('[data-dialog-content]');
+  $('[data-cancel-commercial-proposal-delete]', scope)?.addEventListener('click', () => $('[data-dialog]')?.close());
+  $('[data-confirm-commercial-proposal-delete]', scope)?.addEventListener('click', () => {
+    commercialProposalRecords = commercialProposalRecords.filter((item) => item.id !== proposal.id);
+    saveCommercialProposalRecords();
+    renderCommercialProposals();
+    $('[data-dialog]')?.close();
+    showToast(tr('commercialProposalDeleted'));
+  });
 }
 
 function openCommercialProposalCard(proposalId, preserveTab = false) {
@@ -6928,6 +6999,8 @@ function renderCommercialProposals() {
   $$('[data-commercial-proposals-list]').forEach((list) => {
     list.innerHTML = markup;
     $$('[data-open-commercial-proposal]', list).forEach((button) => button.addEventListener('click', () => openCommercialProposalCard(button.dataset.openCommercialProposal)));
+    $$('[data-rename-commercial-proposal]', list).forEach((button) => button.addEventListener('click', () => renameCommercialProposal(button.dataset.renameCommercialProposal)));
+    $$('[data-delete-commercial-proposal]', list).forEach((button) => button.addEventListener('click', () => deleteCommercialProposal(button.dataset.deleteCommercialProposal)));
   });
   $$('[data-commercial-proposals-count]').forEach((count) => { count.textContent = String(proposals.length); });
   $$('[data-commercial-proposals-empty]').forEach((empty) => { empty.hidden = proposals.length > 0; });
