@@ -3,6 +3,7 @@
   "short_name": "StructOS",
   "description": "Анализ строительных проектов, договоров и смет.",
   "lang": "ru",
+  "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

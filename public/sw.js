@@ -1,4 +1,4 @@
-const CACHE_NAME = 'structos-offline-v86';
+const CACHE_NAME = 'structos-offline-v87';
 const CORE_PAGES = ['./', './dashboard.html', './passport.html', './login.html', './manifest.webmanifest'];
 const OPTIONAL_SOURCE_ASSETS = [
   './dashboard.js',
@@ -105,4 +105,56 @@ self.addEventListener('fetch', (event) => {
 
 self.addEventListener('message', (event) => {
   if (event.data?.type === 'SKIP_WAITING') self.skipWaiting();
+});
+
+function pushPayload(event) {
+  if (!event.data) return {};
+  try { return event.data.json(); }
+  catch { return { body: event.data.text() }; }
+}
+
+function notificationTarget(value) {
+  const fallback = new URL('./dashboard.html#notifications', self.location.href);
+  try {
+    const target = new URL(String(value || fallback.href), self.location.href);
+    return target.origin === self.location.origin ? target.href : fallback.href;
+  } catch {
+    return fallback.href;
+  }
+}
+
+self.addEventListener('push', (event) => {
+  const payload = pushPayload(event);
+  const title = String(payload.title || 'StructOS').slice(0, 90);
+  const body = String(payload.body || 'У вас новое уведомление').slice(0, 240);
+  const options = {
+    body,
+    icon: './assets/favicon-192.png',
+    badge: './assets/favicon-192.png',
+    tag: String(payload.tag || 'structos-notification').slice(0, 120),
+    renotify: Boolean(payload.renotify),
+    data: {
+      url: notificationTarget(payload.url),
+      type: String(payload.type || 'notice').slice(0, 40),
+      createdAt: payload.createdAt || new Date().toISOString()
+    }
+  };
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const targetUrl = notificationTarget(event.notification.data?.url);
+  event.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(async (windows) => {
+    const current = windows.find((client) => {
+      try { return new URL(client.url).origin === self.location.origin; }
+      catch { return false; }
+    });
+    if (current) {
+      await current.focus();
+      if ('navigate' in current) await current.navigate(targetUrl);
+      return;
+    }
+    await self.clients.openWindow(targetUrl);
+  }));
 });

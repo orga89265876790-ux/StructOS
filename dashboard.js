@@ -398,6 +398,11 @@ Object.assign(copy.EN, { detailedProjectAnalysis: 'Detailed project analysis', c
 Object.assign(copy.KY, { detailedProjectAnalysis: 'Долбоорду толук талдоо', contractsUnderReview: 'Каралуудагы келишимдер', detailedContractAnalysis: 'Келишимди толук талдоо', estimateAnalysis: 'Сметаны талдоо', createProposalByProject: 'Долбоор боюнча КП түзүү', createProposalByEstimate: 'Смета боюнча КП түзүү', turnkeyObject: 'Объектти бир чыкылдатуу менен ишке киргизүү', projectMailings: 'Сунуштарды жөнөтүү', mailWorkOffers: 'Жумуш сунуштарын жөнөтүү (Иштелип жатат)', mailContractOffers: 'Подряд алуу сунуштарын жөнөтүү (Иштелип жатат)', mailSupplyOffers: 'Жеткирүү сунуштарын жөнөтүү (Иштелип жатат)', projectMenuPrepared: '«{name}» баскычы даяр. Бул бөлүмдү кийинки этапта толтурабыз.' });
 Object.assign(copy.TJ, { detailedProjectAnalysis: 'Таҳлили муфассали лоиҳа', contractsUnderReview: 'Шартномаҳо дар баррасӣ', detailedContractAnalysis: 'Таҳлили муфассали шартнома', estimateAnalysis: 'Таҳлили смета', createProposalByProject: 'Сохтани пешниҳод аз рӯи лоиҳа', createProposalByEstimate: 'Сохтани пешниҳод аз рӯи смета', turnkeyObject: 'Оғози объект бо як клик', projectMailings: 'Фиристодани пешниҳодҳо', mailWorkOffers: 'Фиристодани пешниҳодҳои корӣ (Дар таҳия)', mailContractOffers: 'Фиристодани пешниҳодҳои пудратӣ (Дар таҳия)', mailSupplyOffers: 'Фиристодани пешниҳодҳои таъминот (Дар таҳия)', projectMenuPrepared: 'Тугмаи «{name}» омода аст. Ин бахшро дар марҳилаи навбатӣ пур мекунем.' });
 
+Object.assign(copy.RU, { pushNotificationsTitle: 'Уведомления на телефоне', pushNotificationsHint: 'Получайте важные события StructOS, даже когда веб-приложение закрыто.', pushEnabled: 'Push-уведомления подключены', pushLocalOnly: 'Уведомления разрешены на этом устройстве', pushDisabled: 'Push-уведомления не подключены', pushDenied: 'Уведомления заблокированы в настройках телефона', pushInstallRequired: 'Добавьте StructOS на экран «Домой»', pushUnsupported: 'Этот браузер не поддерживает push-уведомления', enablePush: 'Включить уведомления', disablePush: 'Отключить', testPush: 'Проверить уведомление', pushEnabledToast: 'Уведомления StructOS подключены', pushDisabledToast: 'Уведомления отключены на этом устройстве', pushTestSent: 'Проверочное уведомление отправлено', pushInstallHint: 'На iPhone нажмите «Поделиться» → «На экран Домой», откройте StructOS с нового значка и включите уведомления.', pushDeniedHint: 'Разрешите уведомления для StructOS в настройках телефона.', pushAccountHint: 'Для серверных уведомлений войдите в личный аккаунт StructOS. Локальная проверка уже доступна.', pushError: 'Не удалось подключить уведомления. Попробуйте ещё раз.', pushTestTitle: 'StructOS на связи', pushTestBody: 'Уведомления работают. Важные события по объектам появятся здесь.' });
+Object.assign(copy.EN, { pushNotificationsTitle: 'Phone notifications', pushNotificationsHint: 'Receive important StructOS events even when the web app is closed.', pushEnabled: 'Push notifications are connected', pushLocalOnly: 'Notifications are allowed on this device', pushDisabled: 'Push notifications are not connected', pushDenied: 'Notifications are blocked in the phone settings', pushInstallRequired: 'Add StructOS to your Home Screen', pushUnsupported: 'This browser does not support push notifications', enablePush: 'Enable notifications', disablePush: 'Disable', testPush: 'Test notification', pushEnabledToast: 'StructOS notifications are connected', pushDisabledToast: 'Notifications are disabled on this device', pushTestSent: 'Test notification sent', pushInstallHint: 'On iPhone, tap Share → Add to Home Screen, open StructOS from its new icon, then enable notifications.', pushDeniedHint: 'Allow notifications for StructOS in your phone settings.', pushAccountHint: 'Sign in to your StructOS account for server notifications. Local testing is already available.', pushError: 'Notifications could not be connected. Try again.', pushTestTitle: 'StructOS is connected', pushTestBody: 'Notifications work. Important project events will appear here.' });
+Object.assign(copy.KY, { pushNotificationsTitle: 'Телефондогу билдирүүлөр', pushNotificationsHint: 'Веб-тиркеме жабык болгондо да StructOS окуяларын алыңыз.', pushEnabled: 'Push-билдирүүлөр туташты', pushLocalOnly: 'Бул түзмөктө билдирүүлөргө уруксат берилди', pushDisabled: 'Push-билдирүүлөр туташкан жок', pushDenied: 'Билдирүүлөр телефондун жөндөөлөрүндө бөгөттөлгөн', pushInstallRequired: 'StructOSту башкы экранга кошуңуз', pushUnsupported: 'Бул браузер push-билдирүүлөрдү колдобойт', enablePush: 'Билдирүүлөрдү күйгүзүү', disablePush: 'Өчүрүү', testPush: 'Билдирүүнү текшерүү', pushEnabledToast: 'StructOS билдирүүлөрү туташты', pushDisabledToast: 'Бул түзмөктө билдирүүлөр өчүрүлдү', pushTestSent: 'Текшерүү билдирүүсү жөнөтүлдү', pushInstallHint: 'iPhoneдо «Бөлүшүү» → «Башкы экранга» басып, StructOSту жаңы белгиден ачыңыз.', pushDeniedHint: 'Телефондун жөндөөлөрүндө StructOS билдирүүлөрүнө уруксат бериңиз.', pushAccountHint: 'Сервердик билдирүүлөр үчүн StructOS аккаунтуңузга кириңиз.', pushError: 'Билдирүүлөрдү туташтыруу мүмкүн болгон жок.', pushTestTitle: 'StructOS байланышта', pushTestBody: 'Билдирүүлөр иштейт. Маанилүү объект окуялары ушул жерде чыгат.' });
+Object.assign(copy.TJ, { pushNotificationsTitle: 'Огоҳиҳо дар телефон', pushNotificationsHint: 'Ҳатто ҳангоми пӯшида будани веб-барнома рӯйдодҳои StructOS-ро гиред.', pushEnabled: 'Push-огоҳиҳо пайваст шуданд', pushLocalOnly: 'Огоҳиҳо дар ин дастгоҳ иҷозат дода шудаанд', pushDisabled: 'Push-огоҳиҳо пайваст нестанд', pushDenied: 'Огоҳиҳо дар танзимоти телефон баста шудаанд', pushInstallRequired: 'StructOS-ро ба экрани асосӣ илова кунед', pushUnsupported: 'Ин браузер push-огоҳиҳоро дастгирӣ намекунад', enablePush: 'Фаъол кардани огоҳиҳо', disablePush: 'Хомӯш кардан', testPush: 'Санҷидани огоҳӣ', pushEnabledToast: 'Огоҳиҳои StructOS пайваст шуданд', pushDisabledToast: 'Огоҳиҳо дар ин дастгоҳ хомӯш шуданд', pushTestSent: 'Огоҳии санҷишӣ фиристода шуд', pushInstallHint: 'Дар iPhone «Мубодила» → «Ба экрани асосӣ»-ро пахш карда, StructOS-ро аз нишонаи нав кушоед.', pushDeniedHint: 'Дар танзимоти телефон огоҳиҳои StructOS-ро иҷозат диҳед.', pushAccountHint: 'Барои огоҳиҳои серверӣ ба ҳисоби StructOS ворид шавед.', pushError: 'Огоҳиҳо пайваст нашуданд. Боз кӯшиш кунед.', pushTestTitle: 'StructOS дар алоқа', pushTestBody: 'Огоҳиҳо кор мекунанд. Рӯйдодҳои муҳими объектҳо дар ин ҷо пайдо мешаванд.' });
+
 Object.assign(copy.RU, {
   editContractAmount: 'Изменить общую стоимость договора', contractAmountSaved: 'Общая стоимость договора изменена',
   sectionSourceDocuments: 'Проект, договор и смета', sectionSourceDocumentsHint: 'Исходные файлы сохраняются без редактора. Их можно открыть или добавить новой версией.',
@@ -7755,12 +7760,146 @@ function openInvitationsCenter() {
   $$('[data-open-home-invitation]').forEach((button) => button.addEventListener('click', () => openInvitedObjectCard(button.dataset.openHomeInvitation)));
 }
 
-function openNotificationsCenter() {
+function isAppleMobileDevice() {
+  return /iPad|iPhone|iPod/i.test(navigator.userAgent)
+    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+
+function isInstalledWebApp() {
+  return window.matchMedia?.('(display-mode: standalone)').matches || navigator.standalone === true;
+}
+
+function supportsPushNotifications() {
+  return 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
+}
+
+function isDemoAccount() {
+  try { return JSON.parse(localStorage.getItem(DEMO_SESSION_KEY) || 'null')?.email === 'str@str.com'; }
+  catch { return false; }
+}
+
+async function pushRegistration() {
+  const current = await navigator.serviceWorker.getRegistration();
+  if (current) return current;
+  return navigator.serviceWorker.register('./sw.js');
+}
+
+async function pushNotificationState() {
+  if (!supportsPushNotifications()) return 'unsupported';
+  if (isAppleMobileDevice() && !isInstalledWebApp()) return 'install';
+  if (Notification.permission === 'denied') return 'denied';
+  const registration = await pushRegistration();
+  const subscription = await registration.pushManager.getSubscription();
+  if (Notification.permission === 'granted' && subscription) return 'enabled';
+  if (Notification.permission === 'granted') return 'local';
+  return 'disabled';
+}
+
+function base64UrlBytes(value) {
+  const padding = '='.repeat((4 - (value.length % 4)) % 4);
+  const binary = atob((value + padding).replace(/-/g, '+').replace(/_/g, '/'));
+  return Uint8Array.from(binary, (character) => character.charCodeAt(0));
+}
+
+async function invokePushApi(body) {
+  if (!authClient) throw new Error('StructOS account required');
+  const { data, error } = await authClient.functions.invoke('structos-push', { body });
+  if (error) throw error;
+  if (!data?.ok) throw new Error(data?.error || tr('pushError'));
+  return data;
+}
+
+function pushDeviceName() {
+  if (isAppleMobileDevice()) return navigator.maxTouchPoints > 1 && !/iPhone/i.test(navigator.userAgent) ? 'iPad' : 'iPhone';
+  if (/Android/i.test(navigator.userAgent)) return 'Android';
+  return 'Web';
+}
+
+async function enablePushNotifications() {
+  if (!supportsPushNotifications()) { showToast(tr('pushUnsupported')); return; }
+  if (isAppleMobileDevice() && !isInstalledWebApp()) { showToast(tr('pushInstallRequired')); return; }
+  try {
+    const permission = Notification.permission === 'default' ? await Notification.requestPermission() : Notification.permission;
+    if (permission !== 'granted') { await openNotificationsCenter(); return; }
+    const registration = await pushRegistration();
+    await registration.update().catch(() => {});
+    if (!authClient || isDemoAccount()) {
+      showToast(tr('pushLocalOnly'));
+      await openNotificationsCenter();
+      return;
+    }
+    const { publicKey } = await invokePushApi({ action: 'public-key' });
+    let subscription = await registration.pushManager.getSubscription();
+    if (!subscription) {
+      subscription = await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: base64UrlBytes(publicKey) });
+    }
+    try {
+      await invokePushApi({ action: 'subscribe', subscription: subscription.toJSON(), deviceName: pushDeviceName(), language });
+    } catch (error) {
+      await subscription.unsubscribe().catch(() => {});
+      throw error;
+    }
+    showToast(tr('pushEnabledToast'));
+    await openNotificationsCenter();
+  } catch (error) {
+    console.error('StructOS push setup failed:', error);
+    showToast(tr('pushError'));
+  }
+}
+
+async function disablePushNotifications() {
+  try {
+    const registration = await pushRegistration();
+    const subscription = await registration.pushManager.getSubscription();
+    if (subscription && authClient && !isDemoAccount()) {
+      await invokePushApi({ action: 'unsubscribe', endpoint: subscription.endpoint }).catch(() => {});
+    }
+    await subscription?.unsubscribe();
+    showToast(tr('pushDisabledToast'));
+    await openNotificationsCenter();
+  } catch (error) {
+    console.error('StructOS push disable failed:', error);
+    showToast(tr('pushError'));
+  }
+}
+
+async function testPushNotification() {
+  try {
+    const registration = await pushRegistration();
+    const subscription = await registration.pushManager.getSubscription();
+    if (subscription && authClient && !isDemoAccount()) {
+      await invokePushApi({ action: 'send-test', language });
+    } else {
+      if (Notification.permission !== 'granted') { await enablePushNotifications(); return; }
+      await registration.showNotification(tr('pushTestTitle'), { body: tr('pushTestBody'), icon: './assets/favicon-192.png', badge: './assets/favicon-192.png', tag: 'structos-test', data: { url: new URL('./dashboard.html#notifications', location.href).href } });
+    }
+    showToast(tr('pushTestSent'));
+  } catch (error) {
+    console.error('StructOS push test failed:', error);
+    showToast(tr('pushError'));
+  }
+}
+
+function pushSettingsMarkup(state) {
+  const labels = { enabled: 'pushEnabled', local: 'pushLocalOnly', disabled: 'pushDisabled', denied: 'pushDenied', install: 'pushInstallRequired', unsupported: 'pushUnsupported' };
+  const hints = state === 'install' ? tr('pushInstallHint') : state === 'denied' ? tr('pushDeniedHint') : state === 'local' && (!authClient || isDemoAccount()) ? tr('pushAccountHint') : tr('pushNotificationsHint');
+  const enable = state === 'disabled' || (state === 'local' && authClient && !isDemoAccount());
+  const test = state === 'enabled' || state === 'local';
+  return `<section class="push-settings-card is-${state}"><header><span aria-hidden="true">${state === 'enabled' || state === 'local' ? '✓' : '!'}</span><div><small>STRUCTOS PUSH</small><strong>${escapeHtml(tr('pushNotificationsTitle'))}</strong><em>${escapeHtml(tr(labels[state]))}</em></div></header><p>${escapeHtml(hints)}</p><div class="push-settings-actions">${enable ? `<button class="primary-button" type="button" data-enable-push>${escapeHtml(tr('enablePush'))}</button>` : ''}${test ? `<button class="outline-button" type="button" data-test-push>${escapeHtml(tr('testPush'))}</button>` : ''}${state === 'enabled' ? `<button class="outline-button is-danger" type="button" data-disable-push>${escapeHtml(tr('disablePush'))}</button>` : ''}</div></section>`;
+}
+
+async function openNotificationsCenter() {
   const notifications = homePendingNotifications();
+  let pushState = 'unsupported';
+  try { pushState = await pushNotificationState(); }
+  catch (error) { console.warn('StructOS push state unavailable:', error); }
   const markup = notifications.length
     ? `<div class="home-invitation-list home-notification-list">${notifications.map(({ object, file }) => `<button type="button" data-open-home-notification="${escapeHtml(object.id)}"><span>!</span><span><strong>${escapeHtml(object.projectTitle || object.name)}</strong><small>${escapeHtml(tr(file.kind))} · ${escapeHtml(tr('pendingAnalysis'))}</small></span><i>›</i></button>`).join('')}</div>`
     : `<section class="home-notifications-empty"><span>✓</span><strong>${escapeHtml(tr('noNewNotifications'))}</strong><small>${escapeHtml(tr('noNewNotificationsHint'))}</small></section>`;
-  showDialog(escapeHtml(tr('notifications')), `${notifications.length} · ${escapeHtml(tr('notifications'))}`, markup);
+  showDialog(escapeHtml(tr('notifications')), `${notifications.length} · ${escapeHtml(tr('notifications'))}`, `${pushSettingsMarkup(pushState)}${markup}`);
+  $('[data-enable-push]')?.addEventListener('click', enablePushNotifications);
+  $('[data-disable-push]')?.addEventListener('click', disablePushNotifications);
+  $('[data-test-push]')?.addEventListener('click', testPushNotification);
   $$('[data-open-home-notification]').forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openHomeNotification)));
   markHomeNotificationsRead(notifications);
 }
