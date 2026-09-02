@@ -703,6 +703,16 @@ Object.assign(copy.RU, {
   excludedUnitPriceWithTax: 'Цена за ед. с', excludedTotalWithTax: 'Итого цена с', excludedTaxTotal: 'Итого',
   proposalSpecificationEquipmentShort: 'Оборудование по спец-ии', proposalSpecificationMaterialsShort: 'Материал по спец-ии',
   proposalPossibleEquipmentShort: 'Возможное оборуд-ие', proposalPossibleMaterialsShort: 'Возможные материалы',
+  proposalSpecificationWorksHint: 'Здесь находятся все работы, указанные в спецификации.',
+  proposalProjectGroupHint: 'Здесь находятся все работы из спецификации, а также работы по проекту, пропущенные в спецификации.',
+  proposalAssociatedWorksHint: 'Здесь находятся работы, сопутствующие монтажу материалов и оборудования по спецификации, а также работам из вкладок «Доп. работы» и «По проекту».',
+  proposalMyWorksHint: 'Здесь находятся все работы, добавленные вами для формирования собственного КП.',
+  proposalEquipmentHint: 'Здесь находится всё необходимое для выполнения работ оборудование.',
+  proposalMaterialsHint: 'Здесь находятся все необходимые для выполнения работ материалы.',
+  proposalPossibleEquipmentHint: 'Здесь находится оборудование, необходимое для выполнения работ и, возможно, пропущенное в проекте и спецификации.',
+  proposalPossibleMaterialsHint: 'Здесь находятся материалы, необходимые для выполнения работ и, возможно, пропущенные в проекте и спецификации.',
+  proposalToolsHint: 'Здесь находятся все инструменты, электроинструменты и расходники к ним, которые потребуются для работы. Количество вы указываете самостоятельно.',
+  proposalConsumableMaterialsHint: 'Здесь находятся все возможные расходные материалы для монтажа оборудования и материалов по спецификации.',
   proposalLaborHoursHint: 'Здесь собраны все позиции спецификации и сохранённые позиции из «Моё КП». Если позиция добавлена вручную, StructOS не рассчитывает для неё часы — проставьте их самостоятельно.',
   laborWorksFromSpecification: 'Работы из спецификации', laborWorkName: 'Наименование работ'
 });
@@ -711,6 +721,16 @@ Object.assign(copy.EN, {
   excludedUnitPriceWithTax: 'Unit price with', excludedTotalWithTax: 'Total price with', excludedTaxTotal: 'Total',
   proposalSpecificationEquipmentShort: 'Equipment by specification', proposalSpecificationMaterialsShort: 'Materials by specification',
   proposalPossibleEquipmentShort: 'Possible equipment', proposalPossibleMaterialsShort: 'Possible materials',
+  proposalSpecificationWorksHint: 'This section contains all works listed in the specification.',
+  proposalProjectGroupHint: 'This section contains all works from the specification and project works omitted from the specification.',
+  proposalAssociatedWorksHint: 'This section contains works associated with installing specification materials and equipment, as well as works from “Additional works” and “By project”.',
+  proposalMyWorksHint: 'This section contains all works you added to create your own commercial proposal.',
+  proposalEquipmentHint: 'This section contains all equipment required to perform the works.',
+  proposalMaterialsHint: 'This section contains all materials required to perform the works.',
+  proposalPossibleEquipmentHint: 'This section contains equipment required for the works that may have been omitted from the project and specification.',
+  proposalPossibleMaterialsHint: 'This section contains materials required for the works that may have been omitted from the project and specification.',
+  proposalToolsHint: 'This section contains all tools, power tools, and their consumables required for the works. Enter the quantities yourself.',
+  proposalConsumableMaterialsHint: 'This section contains all possible consumable materials for installing specification equipment and materials.',
   proposalLaborHoursHint: 'This section contains all specification lines and saved lines from “My proposal”. For a manually added line, StructOS does not calculate hours; enter them yourself.',
   laborWorksFromSpecification: 'Works from specification', laborWorkName: 'Work name'
 });
@@ -719,6 +739,16 @@ Object.assign(copy.KY, {
   excludedUnitPriceWithTax: 'Салык менен бирдик баасы', excludedTotalWithTax: 'Салык менен жалпы баа', excludedTaxTotal: 'Жыйынтык',
   proposalSpecificationEquipmentShort: 'Спецификациядагы жабдуу', proposalSpecificationMaterialsShort: 'Спецификациядагы материал',
   proposalPossibleEquipmentShort: 'Мүмкүн болгон жабдуу', proposalPossibleMaterialsShort: 'Мүмкүн болгон материалдар',
+  proposalSpecificationWorksHint: 'Бул жерде спецификацияда көрсөтүлгөн бардык иштер жайгашкан.',
+  proposalProjectGroupHint: 'Бул жерде спецификациядагы бардык иштер жана спецификацияда өткөрүлүп кеткен долбоордук иштер жайгашкан.',
+  proposalAssociatedWorksHint: 'Бул жерде спецификациядагы материалдарды жана жабдууларды монтаждоого, ошондой эле «Кошумча иштер» жана «Долбоор боюнча» бөлүмдөрүндөгү иштерге коштоочу иштер жайгашкан.',
+  proposalMyWorksHint: 'Бул жерде өзүңүздүн КПңызды түзүү үчүн сиз кошкон бардык иштер жайгашкан.',
+  proposalEquipmentHint: 'Бул жерде иштерди аткарууга керектүү бардык жабдуулар жайгашкан.',
+  proposalMaterialsHint: 'Бул жерде иштерди аткарууга керектүү бардык материалдар жайгашкан.',
+  proposalPossibleEquipmentHint: 'Бул жерде иштерге керектүү жана долбоордо же спецификацияда өткөрүлүп кетиши мүмкүн болгон жабдуулар жайгашкан.',
+  proposalPossibleMaterialsHint: 'Бул жерде иштерге керектүү жана долбоордо же спецификацияда өткөрүлүп кетиши мүмкүн болгон материалдар жайгашкан.',
+  proposalToolsHint: 'Бул жерде иштерге керектүү бардык аспаптар, электр аспаптары жана алардын сарпталуучу бөлүктөрү жайгашкан. Санды өзүңүз көрсөтөсүз.',
+  proposalConsumableMaterialsHint: 'Бул жерде спецификациядагы жабдууларды жана материалдарды монтаждоого керектүү бардык мүмкүн болгон сарпталуучу материалдар жайгашкан.',
   proposalLaborHoursHint: 'Бул жерде спецификациядагы бардык позициялар жана «Менин КПдан» сакталган позициялар чогултулган. Кол менен кошулган позициянын саатын StructOS эсептебейт — саатты өзүңүз киргизиңиз.',
   laborWorksFromSpecification: 'Спецификациядагы иштер', laborWorkName: 'Иштин аталышы'
 });
@@ -727,6 +757,16 @@ Object.assign(copy.TJ, {
   excludedUnitPriceWithTax: 'Нархи воҳид бо', excludedTotalWithTax: 'Нархи умумӣ бо', excludedTaxTotal: 'Ҷамъ',
   proposalSpecificationEquipmentShort: 'Таҷҳизот аз рӯи мушаххасот', proposalSpecificationMaterialsShort: 'Мавод аз рӯи мушаххасот',
   proposalPossibleEquipmentShort: 'Таҷҳизоти имконпазир', proposalPossibleMaterialsShort: 'Маводи имконпазир',
+  proposalSpecificationWorksHint: 'Дар ин ҷо ҳамаи корҳои дар мушаххасот зикршуда ҷойгиранд.',
+  proposalProjectGroupHint: 'Дар ин ҷо ҳамаи корҳои мушаххасот ва корҳои лоиҳа, ки дар мушаххасот гузаронда шудаанд, ҷойгиранд.',
+  proposalAssociatedWorksHint: 'Дар ин ҷо корҳои ҳамроҳи монтажи мавод ва таҷҳизоти мушаххасот, инчунин корҳои бахшҳои «Корҳои иловагӣ» ва «Аз рӯи лоиҳа» ҷойгиранд.',
+  proposalMyWorksHint: 'Дар ин ҷо ҳамаи корҳое, ки шумо барои сохтани КП-и худ илова кардаед, ҷойгиранд.',
+  proposalEquipmentHint: 'Дар ин ҷо тамоми таҷҳизоти барои иҷрои кор зарур ҷойгир аст.',
+  proposalMaterialsHint: 'Дар ин ҷо ҳамаи маводи барои иҷрои кор зарур ҷойгиранд.',
+  proposalPossibleEquipmentHint: 'Дар ин ҷо таҷҳизоти барои кор зарур ва эҳтимол дар лоиҳа ё мушаххасот гузаронда ҷойгир аст.',
+  proposalPossibleMaterialsHint: 'Дар ин ҷо маводи барои кор зарур ва эҳтимол дар лоиҳа ё мушаххасот гузаронда ҷойгиранд.',
+  proposalToolsHint: 'Дар ин ҷо ҳамаи асбобҳо, асбобҳои барқӣ ва масрафшавандаҳои онҳо барои кор ҷойгиранд. Миқдорро худатон нишон медиҳед.',
+  proposalConsumableMaterialsHint: 'Дар ин ҷо ҳамаи маводи масрафшавандаи эҳтимолӣ барои монтажи таҷҳизот ва маводи мушаххасот ҷойгиранд.',
   proposalLaborHoursHint: 'Дар ин ҷо ҳамаи мавқеъҳои мушаххасот ва мавқеъҳои нигоҳдошташуда аз «КП-и ман» ҷамъ шудаанд. Барои мавқеи дастӣ StructOS соатҳоро ҳисоб намекунад — онҳоро худатон ворид кунед.',
   laborWorksFromSpecification: 'Корҳо аз мушаххасот', laborWorkName: 'Номи кор'
 });
@@ -7771,9 +7811,18 @@ function commercialProposalPriceModeMarkup(state) {
 
 function commercialProposalGroupHintMarkup(groupId) {
   const hintKey = {
+    specificationWorks: 'proposalSpecificationWorksHint',
     outsideSpecificationWorks: 'proposalProjectGroupHint',
     possibleWorks: 'proposalAdditionalWorksHint',
     associatedWorks: 'proposalAssociatedWorksHint',
+    my: 'proposalMyWorksHint',
+    equipment: 'proposalEquipmentHint',
+    materials: 'proposalMaterialsHint',
+    possibleEquipment: 'proposalPossibleEquipmentHint',
+    possibleMaterials: 'proposalPossibleMaterialsHint',
+    materialsMy: 'proposalMyWorksHint',
+    toolsAndConsumables: 'proposalToolsHint',
+    consumableMaterials: 'proposalConsumableMaterialsHint',
     laborHours: 'proposalLaborHoursHint'
   }[groupId];
   return hintKey ? `<div class="commercial-proposal-group-hint"><span aria-hidden="true">i</span><p>${escapeHtml(tr(hintKey))}</p></div>` : '';
