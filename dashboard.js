@@ -7757,18 +7757,17 @@ function openCommercialProposalCustomPositionDialog(proposalId, groupId) {
   const groupConfig = commercialProposalEditorGroupConfig(groupId);
   if (!proposal || !groupConfig) return;
   const groupLabel = `${tr(groupConfig.columnLabel)} · ${tr(groupConfig.label)}`;
-  const priceField = groupId === 'laborHours' ? '' : `<label><span>${escapeHtml(tr('price'))}</span><input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0" data-custom-proposal-position-price /></label>`;
+  const priceField = groupId === 'laborHours' ? '' : `<label class="is-wide"><span>${escapeHtml(tr('price'))}</span><input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0" data-custom-proposal-position-price /></label>`;
   showDialog(
     escapeHtml(tr('addOwnProposalPosition')),
     escapeHtml(`${tr('ownProposalPositionHint')} ${groupLabel}`),
-    `<form class="commercial-proposal-custom-form" data-commercial-proposal-custom-form><label class="is-wide"><span>${escapeHtml(tr('ownProposalPositionName'))} <em>*</em></span><input type="text" maxlength="240" placeholder="${escapeHtml(tr('ownProposalPositionNamePlaceholder'))}" autocomplete="off" data-custom-proposal-position-name /></label><label><span>${escapeHtml(tr('unit'))}</span><input type="text" maxlength="40" placeholder="—" autocomplete="off" data-custom-proposal-position-unit /></label><label><span>${escapeHtml(tr('quantity'))}</span><input type="number" min="0" step="0.01" inputmode="decimal" value="1" data-custom-proposal-position-quantity /></label>${priceField}<div class="result-actions is-wide"><button class="outline-button" type="button" data-cancel-custom-proposal-position>${escapeHtml(tr('cancel'))}</button><button class="primary-button" type="submit">+ ${escapeHtml(tr('saveProposalPosition'))}</button></div></form>`
+    `<div class="commercial-proposal-custom-form" role="form" data-commercial-proposal-custom-form><label class="is-wide"><span>${escapeHtml(tr('ownProposalPositionName'))} <em>*</em></span><input type="text" maxlength="240" placeholder="${escapeHtml(tr('ownProposalPositionNamePlaceholder'))}" autocomplete="off" data-custom-proposal-position-name /></label><label><span>${escapeHtml(tr('unit'))}</span><input type="text" maxlength="40" placeholder="—" autocomplete="off" data-custom-proposal-position-unit /></label><label><span>${escapeHtml(tr('quantity'))}</span><input type="number" min="0" step="0.01" inputmode="decimal" value="1" data-custom-proposal-position-quantity /></label>${priceField}<div class="result-actions is-wide"><button class="outline-button" type="button" data-cancel-custom-proposal-position>${escapeHtml(tr('cancel'))}</button><button class="primary-button" type="button" data-save-custom-proposal-position>+ ${escapeHtml(tr('saveProposalPosition'))}</button></div></div>`
   );
   const scope = $('[data-dialog-content]');
   const form = $('[data-commercial-proposal-custom-form]', scope);
   const nameInput = $('[data-custom-proposal-position-name]', form);
   $('[data-cancel-custom-proposal-position]', form)?.addEventListener('click', () => $('[data-dialog]')?.close());
-  form?.addEventListener('submit', (event) => {
-    event.preventDefault();
+  const savePosition = () => {
     const name = String(nameInput?.value || '').trim().slice(0, 240);
     if (!name) {
       nameInput?.setAttribute('aria-invalid', 'true');
@@ -7798,7 +7797,14 @@ function openCommercialProposalCustomPositionDialog(proposalId, groupId) {
     $('[data-dialog]')?.close();
     renderCommercialProposalWorkspace();
     showToast(tr('proposalPositionAdded'));
+  };
+  $('[data-save-custom-proposal-position]', form)?.addEventListener('click', savePosition);
+  form?.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter') return;
+    event.preventDefault();
+    savePosition();
   });
+  nameInput?.addEventListener('input', () => nameInput.removeAttribute('aria-invalid'));
   nameInput?.focus();
 }
 

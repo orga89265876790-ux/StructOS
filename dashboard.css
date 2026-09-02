@@ -1419,12 +1419,13 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .commercial-proposal-fragment-list label > span { min-width: 0; display: grid; gap: 4px; }
 .commercial-proposal-fragment-list strong { overflow: hidden; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
 .commercial-proposal-fragment-list small { color: var(--muted); font-size: 9px; line-height: 1.3; }
-.commercial-proposal-custom-form { margin-top: 16px; display: grid; grid-template-columns: 1.2fr .9fr .9fr; gap: 10px; }
+.commercial-proposal-custom-form { width: 100%; min-width: 0; margin-top: 16px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: start; gap: 10px; }
+.commercial-proposal-custom-form > * { min-width: 0; }
 .commercial-proposal-custom-form label { min-width: 0; display: grid; gap: 6px; }
 .commercial-proposal-custom-form label.is-wide,.commercial-proposal-custom-form .is-wide { grid-column: 1/-1; }
 .commercial-proposal-custom-form label > span { color: var(--muted); font-size: 12px; font-weight: 700; }
 .commercial-proposal-custom-form label > span em { color: var(--danger); font-style: normal; }
-.commercial-proposal-custom-form input { width: 100%; min-width: 0; min-height: 46px; padding: 0 11px; color: var(--text); border: 1px solid var(--line); border-radius: 10px; outline: 0; background: var(--surface-soft); font: inherit; }
+.commercial-proposal-custom-form input { width: 100%; min-width: 0; max-width: 100%; min-height: 46px; padding: 0 11px; color: var(--text); border: 1px solid var(--line); border-radius: 10px; outline: 0; background: var(--surface-soft); font: inherit; }
 .commercial-proposal-custom-form input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,119,255,.11); }
 .commercial-proposal-custom-form input[aria-invalid="true"] { border-color: var(--danger); }
 .proposal-empty-mark { width: 58px; height: 58px; display: grid; place-items: center; color: #43dda8; border: 1px solid rgba(49,210,156,.4); border-radius: 16px; background: rgba(18,165,111,.1); box-shadow: 0 0 23px rgba(33,201,147,.12); font-size: 27px; font-weight: 850; }
