@@ -538,6 +538,8 @@ Object.assign(copy.RU, {
   priceExcludesVat5: 'Цены: НДС 5%', priceExcludesTax6: 'Цены: Налог 6%',
   priceBeforeTax: 'Итого без налога', taxAmount: 'Налог', priceWithTax: 'Цена с налогом',
   proposalGrossPrice: 'Общая цена', priceTotalWithoutTax: 'Цена итого без налога', priceTotalWithTax: 'Цена итого с налогом',
+  includedUnitPriceWithoutTax: 'Цена б/налога', includedTotalWithoutTax: 'Итого б/налога',
+  includedUnitPriceWithTax: 'Цена за ед. с', includedTotalWithTax: 'Итого с', includedTaxTotal: 'Итого налог',
   selectUpToTwoTaxModes: 'Можно выбрать не более двух режимов налогообложения',
   downloadProposal: 'Скачать', viewProposal: 'Посмотреть', shareProposal: 'Поделиться',
   chooseProposalFragments: 'Какие фрагменты КП использовать?',
@@ -573,6 +575,8 @@ Object.assign(copy.EN, {
   priceExcludesVat5: 'Prices: VAT 5% excluded', priceExcludesTax6: 'Prices: 6% tax excluded',
   priceBeforeTax: 'Total before tax', taxAmount: 'Tax', priceWithTax: 'Price with tax',
   proposalGrossPrice: 'Total price', priceTotalWithoutTax: 'Final price without tax', priceTotalWithTax: 'Final price with tax',
+  includedUnitPriceWithoutTax: 'Unit price without tax', includedTotalWithoutTax: 'Total without tax',
+  includedUnitPriceWithTax: 'Unit price with', includedTotalWithTax: 'Total with', includedTaxTotal: 'Total tax',
   selectUpToTwoTaxModes: 'You can select no more than two tax modes',
   downloadProposal: 'Download', viewProposal: 'View', shareProposal: 'Share',
   chooseProposalFragments: 'Which proposal fragments should be used?',
@@ -608,6 +612,8 @@ Object.assign(copy.KY, {
   priceExcludesVat5: 'Баалар: КНС 5% жок', priceExcludesTax6: 'Баалар: салык 6% жок',
   priceBeforeTax: 'Салыксыз жыйынтык', taxAmount: 'Салык', priceWithTax: 'Салык менен баа',
   proposalGrossPrice: 'Жалпы баа', priceTotalWithoutTax: 'Салыксыз акыркы баа', priceTotalWithTax: 'Салык менен акыркы баа',
+  includedUnitPriceWithoutTax: 'Салыксыз бирдик баасы', includedTotalWithoutTax: 'Салыксыз жыйынтык',
+  includedUnitPriceWithTax: 'Бирдик баасы, салык менен', includedTotalWithTax: 'Салык менен жыйынтык', includedTaxTotal: 'Салыктын жыйынтыгы',
   selectUpToTwoTaxModes: 'Экиден ашык салык режимин тандоого болбойт',
   downloadProposal: 'Жүктөө', viewProposal: 'Көрүү', shareProposal: 'Бөлүшүү',
   chooseProposalFragments: 'КПнын кайсы бөлүктөрү колдонулсун?',
@@ -643,6 +649,8 @@ Object.assign(copy.TJ, {
   priceExcludesVat5: 'Нархҳо: бе ААИ 5%', priceExcludesTax6: 'Нархҳо: бе андози 6%',
   priceBeforeTax: 'Ҷамъ бе андоз', taxAmount: 'Андоз', priceWithTax: 'Нарх бо андоз',
   proposalGrossPrice: 'Нархи умумӣ', priceTotalWithoutTax: 'Нархи ниҳоӣ бе андоз', priceTotalWithTax: 'Нархи ниҳоӣ бо андоз',
+  includedUnitPriceWithoutTax: 'Нархи воҳид бе андоз', includedTotalWithoutTax: 'Ҷамъ бе андоз',
+  includedUnitPriceWithTax: 'Нархи воҳид бо', includedTotalWithTax: 'Ҷамъ бо', includedTaxTotal: 'Ҷамъи андоз',
   selectUpToTwoTaxModes: 'На бештар аз ду реҷаи андозро интихоб кардан мумкин аст',
   downloadProposal: 'Бор кардан', viewProposal: 'Дидан', shareProposal: 'Мубодила',
   chooseProposalFragments: 'Кадом қисмҳои КП истифода шаванд?',
@@ -7599,7 +7607,20 @@ function commercialProposalLineAmounts(quantity, price, modeIds = []) {
   const selectedModeIds = normalizeCommercialProposalTaxModes(modeIds);
   const modes = selectedModeIds.map((id) => ({ id, ...COMMERCIAL_PROPOSAL_PRICE_MODES[id] }));
   const direction = modes[0]?.direction || 'none';
-  const base = commercialProposalRoundMoney(commercialProposalWorkspaceNumber(quantity) * commercialProposalWorkspaceNumber(price));
+  const unitBase = commercialProposalWorkspaceNumber(price);
+  const base = commercialProposalRoundMoney(commercialProposalWorkspaceNumber(quantity) * unitBase);
+  const unitTaxes = modes.map((mode) => ({
+    id: mode.id,
+    amount: mode.direction === 'subtract'
+      ? commercialProposalRoundMoney(unitBase * mode.rate / (1 + mode.rate))
+      : commercialProposalRoundMoney(unitBase * mode.rate)
+  }));
+  const unitTax = commercialProposalRoundMoney(unitTaxes.reduce((total, item) => total + item.amount, 0));
+  const unitFinal = direction === 'subtract'
+    ? commercialProposalRoundMoney(unitBase - unitTax)
+    : direction === 'add'
+      ? commercialProposalRoundMoney(unitBase + unitTax)
+      : unitBase;
   const taxes = modes.map((mode) => ({
     id: mode.id,
     amount: mode.direction === 'subtract'
@@ -7612,12 +7633,16 @@ function commercialProposalLineAmounts(quantity, price, modeIds = []) {
     : direction === 'add'
       ? commercialProposalRoundMoney(base + tax)
       : base;
-  return { base, taxes, tax, final, direction };
+  return { unitBase, unitTaxes, unitTax, unitFinal, base, taxes, tax, final, direction };
 }
 
 function commercialProposalModeShortLabel(modeId) {
   const label = tr((COMMERCIAL_PROPOSAL_PRICE_MODES[modeId] || COMMERCIAL_PROPOSAL_PRICE_MODES.cash).label);
   return label.includes(':') ? label.slice(label.indexOf(':') + 1).trim() : label;
+}
+
+function commercialProposalCombinedTaxLabel(modeIds) {
+  return normalizeCommercialProposalTaxModes(modeIds).map((modeId) => commercialProposalModeShortLabel(modeId)).join(' + ');
 }
 
 function commercialProposalTaxAmount(amounts, modeId) {
@@ -7638,35 +7663,39 @@ function commercialProposalTableMarkup(proposal, groupId, entries) {
   const selectedModeIds = normalizeCommercialProposalTaxModes(state.taxModes);
   const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[selectedModeIds[0]]?.direction || 'none';
   const myIds = new Set(state.myItems.map((item) => item.id));
-  const taxHeads = selectedModeIds.map((modeId) => `<th>${escapeHtml(commercialProposalModeShortLabel(modeId))}</th>`).join('');
-  const dynamicHead = direction === 'subtract'
-    ? `<th>${escapeHtml(tr('proposalGrossPrice'))}</th>${taxHeads}<th>${escapeHtml(tr('priceTotalWithoutTax'))}</th>`
+  const combinedTaxLabel = commercialProposalCombinedTaxLabel(selectedModeIds);
+  const taxHeads = selectedModeIds.map((modeId) => `<th>${escapeHtml(direction === 'subtract' ? `${tr('includedTaxTotal')} ${commercialProposalModeShortLabel(modeId)}` : commercialProposalModeShortLabel(modeId))}</th>`).join('');
+  const priceHeads = direction === 'subtract'
+    ? `<th>${escapeHtml(tr('includedUnitPriceWithoutTax'))}</th><th>${escapeHtml(tr('includedTotalWithoutTax'))}</th><th>${escapeHtml(`${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}`)}</th><th>${escapeHtml(`${tr('includedTotalWithTax')} ${combinedTaxLabel}`)}</th>${taxHeads}`
     : direction === 'add'
-      ? `<th>${escapeHtml(tr('priceTotalWithoutTax'))}</th>${taxHeads}<th>${escapeHtml(tr('priceTotalWithTax'))}</th>`
-      : `<th>${escapeHtml(tr('proposalGrossPrice'))}</th>`;
+      ? `<th>${escapeHtml(tr('price'))}</th><th>${escapeHtml(tr('priceTotalWithoutTax'))}</th>${taxHeads}<th>${escapeHtml(tr('priceTotalWithTax'))}</th>`
+      : `<th>${escapeHtml(tr('price'))}</th><th>${escapeHtml(tr('proposalGrossPrice'))}</th>`;
   const actionHead = groupId === 'my' ? '' : escapeHtml(tr('sendToMyProposal'));
   const rows = entries.map((entry, index) => {
     const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds);
     const source = entry.custom ? tr('ownProposalPosition') : entry.sourceSheet || entry.sourceName || tr('identifiedByAnalysis');
     const taxCells = selectedModeIds.map((modeId) => `<td class="is-money is-tax" data-proposal-tax-total="${escapeHtml(modeId)}">${escapeHtml(formatMoney(commercialProposalTaxAmount(amounts, modeId)))}</td>`).join('');
-    const dynamicCells = direction === 'none'
-      ? `<td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`
-      : `<td class="is-money" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td>${taxCells}<td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`;
+    const priceInput = `<input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.price ? escapeHtml(String(entry.price)) : ''}" placeholder="0" data-proposal-line-value="price" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(direction === 'subtract' ? `${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}` : tr('price'))}" />`;
+    const priceCells = direction === 'subtract'
+      ? `<td class="is-money" data-proposal-net-unit>${escapeHtml(formatMoney(amounts.unitFinal))}</td><td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td><td>${priceInput}</td><td class="is-money" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td>${taxCells}`
+      : direction === 'add'
+        ? `<td>${priceInput}</td><td class="is-money" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td>${taxCells}<td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`
+        : `<td>${priceInput}</td><td class="is-money is-total" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`;
     const removeCustom = entry.custom ? `<button class="proposal-my-remove" type="button" data-remove-proposal-custom-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('deleteOwnProposalPosition'))}" title="${escapeHtml(tr('deleteOwnProposalPosition'))}">×</button>` : '';
     const action = groupId === 'my'
       ? `<button class="proposal-my-remove" type="button" data-remove-proposal-my-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('removeFromMyProposal'))}" title="${escapeHtml(tr('removeFromMyProposal'))}">×</button>`
       : `<div class="proposal-line-controls"><label class="proposal-send-to-my"><input type="checkbox" data-proposal-send-to-my="${escapeHtml(entry.id)}"${myIds.has(entry.id) ? ' checked' : ''} aria-label="${escapeHtml(`${tr('sendToMyProposal')}: ${entry.name}`)}" /><span aria-hidden="true">✓</span></label>${removeCustom}</div>`;
-    return `<tr data-proposal-line-row data-proposal-line-id="${escapeHtml(entry.id)}"><td class="proposal-line-number">${index + 1}</td><td class="proposal-line-name"><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(source)}</small></td><td>${escapeHtml(entry.unit || '—')}</td><td><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.quantity ? escapeHtml(String(entry.quantity)) : ''}" placeholder="0" data-proposal-line-value="quantity" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('quantity'))}" /></td><td><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.price ? escapeHtml(String(entry.price)) : ''}" placeholder="0" data-proposal-line-value="price" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('price'))}" /></td>${dynamicCells}<td class="proposal-line-action">${action}</td></tr>`;
+    return `<tr data-proposal-line-row data-proposal-line-id="${escapeHtml(entry.id)}"><td class="proposal-line-number">${index + 1}</td><td class="proposal-line-name"><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(source)}</small></td><td>${escapeHtml(entry.unit || '—')}</td><td><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.quantity ? escapeHtml(String(entry.quantity)) : ''}" placeholder="0" data-proposal-line-value="quantity" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('quantity'))}" /></td>${priceCells}<td class="proposal-line-action">${action}</td></tr>`;
   }).join('');
-  const columnCount = 7 + selectedModeIds.length;
+  const columnCount = direction === 'subtract' ? 9 + selectedModeIds.length : direction === 'add' ? 8 + selectedModeIds.length : 7;
   if (!entries.length) {
     const emptyConfig = commercialProposalEditorGroupConfig(groupId);
     return `<div class="commercial-proposal-table-empty"><span>◇</span><h3>${escapeHtml(tr(groupId === 'my' ? 'myCommercialProposal' : emptyConfig?.label || 'proposalWorkspaceTitle'))}</h3><p>${escapeHtml(tr(groupId === 'my' ? 'emptyMyProposal' : 'emptyProposalGroup'))}</p></div>`;
   }
   const lineAmounts = entries.map((entry) => commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds));
   const taxSummaries = selectedModeIds.map((modeId) => `<span>${escapeHtml(commercialProposalModeShortLabel(modeId))}: <b data-proposal-tax-grand-total="${escapeHtml(modeId)}">${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + commercialProposalTaxAmount(amounts, modeId), 0)))}</b></span>`).join('');
-  const totalLabel = direction === 'subtract' ? 'priceTotalWithoutTax' : direction === 'add' ? 'priceTotalWithTax' : 'totalProposalPrice';
-  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table has-${selectedModeIds.length}-taxes"><thead><tr><th>№</th><th>${escapeHtml(tr('proposalLineName'))}</th><th>${escapeHtml(tr('unit'))}</th><th>${escapeHtml(tr('quantity'))}</th><th>${escapeHtml(tr('price'))}</th>${dynamicHead}<th>${actionHead}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="${columnCount}"><span>${escapeHtml(tr('totalWorkTypes'))}: <b data-proposal-types-total>${entries.length}</b></span>${taxSummaries}<span>${escapeHtml(tr(totalLabel))}: <b data-proposal-price-grand-total>${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + amounts.final, 0)))}</b></span></td></tr></tfoot></table></div>`;
+  const totalLabel = direction === 'subtract' ? 'includedTotalWithoutTax' : direction === 'add' ? 'priceTotalWithTax' : 'totalProposalPrice';
+  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table has-${selectedModeIds.length}-taxes${direction === 'subtract' ? ' is-included-tax' : ''}"><thead><tr><th>№</th><th>${escapeHtml(tr('proposalLineName'))}</th><th>${escapeHtml(tr('unit'))}</th><th>${escapeHtml(tr('quantity'))}</th>${priceHeads}<th>${actionHead}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="${columnCount}"><span>${escapeHtml(tr('totalWorkTypes'))}: <b data-proposal-types-total>${entries.length}</b></span>${taxSummaries}<span>${escapeHtml(tr(totalLabel))}: <b data-proposal-price-grand-total>${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + amounts.final, 0)))}</b></span></td></tr></tfoot></table></div>`;
 }
 
 function commercialProposalLaborHourlyRate(state) {
@@ -7727,8 +7756,10 @@ function updateCommercialProposalTableCalculations(scope, proposal) {
     const quantity = commercialProposalWorkspaceNumber($('[data-proposal-line-value="quantity"]', row)?.value);
     const price = commercialProposalWorkspaceNumber($('[data-proposal-line-value="price"]', row)?.value);
     const amounts = commercialProposalLineAmounts(quantity, price, selectedModeIds);
+    const netUnitCell = $('[data-proposal-net-unit]', row);
     const baseCell = $('[data-proposal-base-total]', row);
     const finalCell = $('[data-proposal-final-total]', row);
+    if (netUnitCell) netUnitCell.textContent = formatMoney(amounts.unitFinal);
     if (baseCell) baseCell.textContent = formatMoney(amounts.base);
     selectedModeIds.forEach((modeId) => {
       const taxAmount = commercialProposalTaxAmount(amounts, modeId);
@@ -7984,18 +8015,31 @@ function renderCommercialProposalWorkspace() {
 function commercialProposalReportColumns(modeIds = []) {
   const selectedModeIds = normalizeCommercialProposalTaxModes(modeIds);
   const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[selectedModeIds[0]]?.direction || 'none';
+  const combinedTaxLabel = commercialProposalCombinedTaxLabel(selectedModeIds);
   const base = [
     { label: '№', key: 'number', width: 24, number: true },
     { label: tr('proposalLineName'), key: 'name', width: '*' },
     { label: tr('unit'), key: 'unit', width: 38 },
-    { label: tr('quantity'), key: 'quantity', width: 42, number: true },
-    { label: tr('price'), key: 'unitPrice', width: 54, money: true }
+    { label: tr('quantity'), key: 'quantity', width: 42, number: true }
   ];
-  if (direction === 'none') return [...base, { label: tr('proposalGrossPrice'), key: 'finalTotal', width: 62, money: true }];
-  const taxColumns = selectedModeIds.map((modeId) => ({ label: commercialProposalModeShortLabel(modeId), key: `tax_${modeId}`, width: 52, money: true }));
-  const baseLabel = direction === 'subtract' ? 'proposalGrossPrice' : 'priceTotalWithoutTax';
-  const finalLabel = direction === 'subtract' ? 'priceTotalWithoutTax' : 'priceTotalWithTax';
-  return [...base, { label: tr(baseLabel), key: 'baseTotal', width: 55, money: true }, ...taxColumns, { label: tr(finalLabel), key: 'finalTotal', width: 62, money: true }];
+  if (direction === 'none') return [...base, { label: tr('price'), key: 'unitPrice', width: 54, money: true }, { label: tr('proposalGrossPrice'), key: 'finalTotal', width: 62, money: true }];
+  const taxColumns = selectedModeIds.map((modeId) => ({
+    label: direction === 'subtract' ? `${tr('includedTaxTotal')} ${commercialProposalModeShortLabel(modeId)}` : commercialProposalModeShortLabel(modeId),
+    key: `tax_${modeId}`,
+    width: 52,
+    money: true
+  }));
+  if (direction === 'subtract') {
+    return [
+      ...base,
+      { label: tr('includedUnitPriceWithoutTax'), key: 'netUnitPrice', width: 55, money: true },
+      { label: tr('includedTotalWithoutTax'), key: 'finalTotal', width: 58, money: true },
+      { label: `${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}`, key: 'unitPrice', width: 58, money: true },
+      { label: `${tr('includedTotalWithTax')} ${combinedTaxLabel}`, key: 'baseTotal', width: 58, money: true },
+      ...taxColumns
+    ];
+  }
+  return [...base, { label: tr('price'), key: 'unitPrice', width: 54, money: true }, { label: tr('priceTotalWithoutTax'), key: 'baseTotal', width: 55, money: true }, ...taxColumns, { label: tr('priceTotalWithTax'), key: 'finalTotal', width: 62, money: true }];
 }
 
 function commercialProposalReportTable(proposal, fragment, entries) {
@@ -8017,6 +8061,7 @@ function commercialProposalReportTable(proposal, fragment, entries) {
       name: entry.name,
       unit: entry.unit || '—',
       quantity: entry.quantity,
+      netUnitPrice: amounts.unitFinal,
       unitPrice: entry.price,
       baseTotal: amounts.base,
       ...taxValues,
@@ -8031,7 +8076,7 @@ function commercialProposalReportTable(proposal, fragment, entries) {
     `${tr('totalWorkTypes')}: ${entries.length}`
   ];
   selectedModeIds.forEach((modeId) => summaries.push(`${commercialProposalModeShortLabel(modeId)}: ${formatMoney(commercialProposalRoundMoney(taxTotals[modeId]))}`));
-  const totalLabel = direction === 'subtract' ? 'priceTotalWithoutTax' : direction === 'add' ? 'priceTotalWithTax' : 'totalProposalPrice';
+  const totalLabel = direction === 'subtract' ? 'includedTotalWithoutTax' : direction === 'add' ? 'priceTotalWithTax' : 'totalProposalPrice';
   summaries.push(`${tr(totalLabel)}: ${formatMoney(commercialProposalRoundMoney(priceTotal))}`);
   return { title: tr(fragment.label), columns: commercialProposalReportColumns(selectedModeIds), rows, summaries };
 }

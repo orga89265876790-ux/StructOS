@@ -1374,6 +1374,8 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .commercial-proposal-price-table { width: 100%; min-width: 930px; border-collapse: collapse; }
 .commercial-proposal-price-table.has-1-taxes { min-width: 1040px; }
 .commercial-proposal-price-table.has-2-taxes { min-width: 1150px; }
+.commercial-proposal-price-table.is-included-tax.has-1-taxes { min-width: 1350px; }
+.commercial-proposal-price-table.is-included-tax.has-2-taxes { min-width: 1470px; }
 .commercial-proposal-price-table th,.commercial-proposal-price-table td { padding: 8px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 11px; vertical-align: middle; }
 .commercial-proposal-price-table th { color: var(--muted); text-align: left; background: var(--surface); font-size: 10px; line-height: 1.25; }
 .commercial-proposal-price-table th:first-child,.commercial-proposal-price-table td:first-child { width: 38px; text-align: center; }
