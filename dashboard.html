@@ -444,6 +444,13 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js?v=95', { updateViaCache: 'none' })
+          .then((registration) => registration.update())
+          .catch(() => {});
+      }
+    </script>
     <script type="module" src="dashboard.js?v=65"></script>
   </body>
 </html>
