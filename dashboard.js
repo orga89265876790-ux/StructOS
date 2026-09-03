@@ -555,7 +555,15 @@ Object.assign(copy.RU, {
   laborCalculationFormula: 'Стоимость 1 часа = стоимость сотрудника в день ÷ рабочих часов. Итого = часов работы × стоимость 1 часа.',
   workHours: 'Часов работы', totalLaborCost: 'Итого стоимость', totalManHours: 'Итого человеко-часов',
   laborWorkName: 'Наименование работ (из «Моё КП»)', laborWorksFromMyProposal: 'Работы из «Моё КП»',
-  emptyLaborProposal: 'Добавьте работы в «Моё КП» или создайте свою позицию в этом разделе.'
+  emptyLaborProposal: 'Добавьте работы в «Моё КП» или создайте свою позицию в этом разделе.',
+  proposalPartiesHeading: 'Участники коммерческого предложения', proposalSender: 'Отправитель', proposalRecipient: 'Получатель', proposalOrganization: 'Организация', proposalSectionNameLabel: 'Название раздела',
+  proposalSenderName: 'ФИО отправителя', proposalSenderOrganization: 'Организация отправителя', proposalSenderPhone: 'Телефон отправителя',
+  proposalRecipientName: 'ФИО получателя', proposalRecipientOrganization: 'Организация получателя',
+  proposalGreeting: 'Здравствуйте.', proposalIntro: 'Благодарим за проявленный интерес, предлагаем Вам рассмотреть наше коммерческое предложение.',
+  proposalClosing: 'Будем рады сотрудничеству и готовы обсудить условия и сроки.', proposalRespectfully: 'С уважением,',
+  proposalFinalSummary: 'Итоги коммерческого предложения', proposalSummaryPriceTotal: 'Цена итого',
+  proposalSummaryPriceWithTax: 'Цена итого ({tax})', proposalSummaryTaxTotal: 'Итого ({tax})',
+  proposalSummaryPositions: 'Всего позиций в КП', proposalTaxNotSelected: 'налог не выбран'
 });
 Object.assign(copy.EN, {
   proposalWorkspaceTitle: 'Commercial proposal', backToProposalList: 'Back to proposals',
@@ -592,7 +600,15 @@ Object.assign(copy.EN, {
   laborCalculationFormula: 'Cost per hour = employee daily cost ÷ working hours. Total = work hours × cost per hour.',
   workHours: 'Work hours', totalLaborCost: 'Total cost', totalManHours: 'Total labor hours',
   laborWorkName: 'Work name (from “My proposal”)', laborWorksFromMyProposal: 'Works from “My proposal”',
-  emptyLaborProposal: 'Add works to “My proposal” or create a custom line in this section.'
+  emptyLaborProposal: 'Add works to “My proposal” or create a custom line in this section.',
+  proposalPartiesHeading: 'Commercial proposal parties', proposalSender: 'Sender', proposalRecipient: 'Recipient', proposalOrganization: 'Organization', proposalSectionNameLabel: 'Section name',
+  proposalSenderName: 'Sender full name', proposalSenderOrganization: 'Sender organization', proposalSenderPhone: 'Sender phone',
+  proposalRecipientName: 'Recipient full name', proposalRecipientOrganization: 'Recipient organization',
+  proposalGreeting: 'Hello.', proposalIntro: 'Thank you for your interest. Please consider our commercial proposal.',
+  proposalClosing: 'We will be glad to cooperate and are ready to discuss the terms and schedule.', proposalRespectfully: 'Sincerely,',
+  proposalFinalSummary: 'Commercial proposal totals', proposalSummaryPriceTotal: 'Total price',
+  proposalSummaryPriceWithTax: 'Total price ({tax})', proposalSummaryTaxTotal: 'Total ({tax})',
+  proposalSummaryPositions: 'Total proposal lines', proposalTaxNotSelected: 'tax not selected'
 });
 Object.assign(copy.KY, {
   proposalWorkspaceTitle: 'Коммерциялык сунуш', backToProposalList: 'КП тизмесине',
@@ -629,7 +645,15 @@ Object.assign(copy.KY, {
   laborCalculationFormula: '1 сааттын баасы = кызматкердин бир күндүк баасы ÷ жумуш сааты. Жыйынтык = жумуш сааты × 1 сааттын баасы.',
   workHours: 'Жумуш сааты', totalLaborCost: 'Жалпы нарк', totalManHours: 'Жалпы адам-саат',
   laborWorkName: 'Иштин аталышы («Менин КПдан»)', laborWorksFromMyProposal: '«Менин КПдагы» иштер',
-  emptyLaborProposal: 'Иштерди «Менин КПга» кошуңуз же бул бөлүмдө өз позицияңызды түзүңүз.'
+  emptyLaborProposal: 'Иштерди «Менин КПга» кошуңуз же бул бөлүмдө өз позицияңызды түзүңүз.',
+  proposalPartiesHeading: 'Коммерциялык сунуштун тараптары', proposalSender: 'Жөнөтүүчү', proposalRecipient: 'Алуучу', proposalOrganization: 'Уюм', proposalSectionNameLabel: 'Бөлүмдүн аталышы',
+  proposalSenderName: 'Жөнөтүүчүнүн аты-жөнү', proposalSenderOrganization: 'Жөнөтүүчүнүн уюму', proposalSenderPhone: 'Жөнөтүүчүнүн телефону',
+  proposalRecipientName: 'Алуучунун аты-жөнү', proposalRecipientOrganization: 'Алуучунун уюму',
+  proposalGreeting: 'Саламатсызбы.', proposalIntro: 'Кызыгуу көрсөткөнүңүз үчүн ыраазычылык билдиребиз жана коммерциялык сунушубузду карап чыгууну сунуштайбыз.',
+  proposalClosing: 'Кызматташууга кубанычта болобуз жана шарттар менен мөөнөттөрдү талкуулоого даярбыз.', proposalRespectfully: 'Урматтоо менен,',
+  proposalFinalSummary: 'Коммерциялык сунуштун жыйынтыгы', proposalSummaryPriceTotal: 'Жыйынтык баа',
+  proposalSummaryPriceWithTax: 'Жыйынтык баа ({tax})', proposalSummaryTaxTotal: 'Жыйынтык ({tax})',
+  proposalSummaryPositions: 'КПдагы позициялардын саны', proposalTaxNotSelected: 'салык тандалган жок'
 });
 Object.assign(copy.TJ, {
   proposalWorkspaceTitle: 'Пешниҳоди тиҷоратӣ', backToProposalList: 'Ба рӯйхати КП',
@@ -666,7 +690,15 @@ Object.assign(copy.TJ, {
   laborCalculationFormula: 'Арзиши 1 соат = арзиши якрӯзаи корманд ÷ соатҳои корӣ. Ҷамъ = соатҳои кор × арзиши 1 соат.',
   workHours: 'Соатҳои кор', totalLaborCost: 'Арзиши умумӣ', totalManHours: 'Ҷамъи одам-соат',
   laborWorkName: 'Номи кор (аз «КП-и ман»)', laborWorksFromMyProposal: 'Корҳо аз «КП-и ман»',
-  emptyLaborProposal: 'Корҳоро ба «КП-и ман» илова кунед ё дар ин бахш мавқеи худро созед.'
+  emptyLaborProposal: 'Корҳоро ба «КП-и ман» илова кунед ё дар ин бахш мавқеи худро созед.',
+  proposalPartiesHeading: 'Тарафҳои пешниҳоди тиҷоратӣ', proposalSender: 'Фиристанда', proposalRecipient: 'Қабулкунанда', proposalOrganization: 'Ташкилот', proposalSectionNameLabel: 'Номи бахш',
+  proposalSenderName: 'Ному насаби фиристанда', proposalSenderOrganization: 'Ташкилоти фиристанда', proposalSenderPhone: 'Телефони фиристанда',
+  proposalRecipientName: 'Ному насаби қабулкунанда', proposalRecipientOrganization: 'Ташкилоти қабулкунанда',
+  proposalGreeting: 'Салом.', proposalIntro: 'Барои таваҷҷуҳатон ташаккур мегӯем ва пешниҳод мекунем, ки пешниҳоди тиҷоратии моро баррасӣ намоед.',
+  proposalClosing: 'Мо аз ҳамкорӣ шод хоҳем шуд ва омодаем шартҳо ва муҳлатҳоро баррасӣ кунем.', proposalRespectfully: 'Бо эҳтиром,',
+  proposalFinalSummary: 'Ҷамъбасти пешниҳоди тиҷоратӣ', proposalSummaryPriceTotal: 'Нархи ҷамъбастӣ',
+  proposalSummaryPriceWithTax: 'Нархи ҷамъбастӣ ({tax})', proposalSummaryTaxTotal: 'Ҷамъ ({tax})',
+  proposalSummaryPositions: 'Шумораи мавқеъҳо дар КП', proposalTaxNotSelected: 'андоз интихоб нашудааст'
 });
 
 Object.assign(copy.RU, { proposalUnitShort: 'Ед. изм.', proposalQuantityShort: 'Кол-во' });
@@ -1596,6 +1628,7 @@ function normalizeCommercialProposalWorkspace(value) {
     };
   });
   const savedLaborSettings = workspace.laborSettings && typeof workspace.laborSettings === 'object' ? workspace.laborSettings : {};
+  const savedContacts = workspace.contacts && typeof workspace.contacts === 'object' ? workspace.contacts : {};
   const laborItemHours = {};
   Object.entries(savedLaborSettings.itemHours && typeof savedLaborSettings.itemHours === 'object' ? savedLaborSettings.itemHours : {}).slice(0, 2000).forEach(([id, hours]) => {
     const safeId = String(id || '').slice(0, 160);
@@ -1627,6 +1660,13 @@ function normalizeCommercialProposalWorkspace(value) {
     itemValues,
     customItems,
     myItems,
+    contacts: {
+      senderName: String(savedContacts.senderName || '').trim().slice(0, 160),
+      senderOrganization: String(savedContacts.senderOrganization || '').trim().slice(0, 200),
+      senderPhone: String(savedContacts.senderPhone || '').trim().slice(0, 60),
+      recipientName: String(savedContacts.recipientName || '').trim().slice(0, 160),
+      recipientOrganization: String(savedContacts.recipientOrganization || '').trim().slice(0, 200)
+    },
     laborSettings: {
       dailyCost: commercialProposalWorkspaceNumber(savedLaborSettings.dailyCost),
       workdayHours: commercialProposalWorkspaceNumber(savedLaborSettings.workdayHours),
@@ -5724,6 +5764,21 @@ function reportPreviewPartiesMarkup(parties, partyRoles) {
   return `<section class="report-preview-parties"><div>${rows.map(([label, party]) => `<article><strong>${escapeHtml(label)}</strong><span>${tr('fullName')}: ${escapeHtml(party?.name || '—')}</span><span>${tr('signature')}: ${escapeHtml(party?.signature || '—')}</span><span>${tr('seal')}: ${escapeHtml(party?.seal || '—')}<small>${tr('documentDate')}: ${escapeHtml(parties.date || localDateKey())}</small></span></article>`).join('')}</div></section>`;
 }
 
+function reportPreviewProposalOpeningMarkup(document) {
+  if (!document) return '';
+  const sender = document.contacts?.sender || {};
+  const recipient = document.contacts?.recipient || {};
+  const contactCard = (contact, fields) => `<article><strong>${escapeHtml(contact.title || '')}</strong>${fields.map(([label, value]) => `<span><b>${escapeHtml(label)}:</b> ${escapeHtml(value || '—')}</span>`).join('')}</article>`;
+  return `<section class="report-preview-proposal-opening"><p><strong>${escapeHtml(document.greeting || '')}</strong></p><p>${escapeHtml(document.intro || '')}</p><div>${contactCard(sender, [[tr('fullName'), sender.name], [tr('proposalOrganization'), sender.organization], [tr('phone'), sender.phone]])}${contactCard(recipient, [[tr('fullName'), recipient.name], [tr('proposalOrganization'), recipient.organization]])}</div></section>`;
+}
+
+function reportPreviewProposalClosingMarkup(document) {
+  if (!document) return '';
+  const summary = document.finalSummary;
+  const summaryMarkup = summary?.rows?.length ? `<section class="report-preview-proposal-summary"><h3>${escapeHtml(summary.title || '')}</h3><table><tbody>${summary.rows.map((row) => `<tr><th>${escapeHtml(row.label || '')}</th><td>${escapeHtml(row.value || '')}</td></tr>`).join('')}</tbody></table></section>` : '';
+  return `${summaryMarkup}<section class="report-preview-proposal-closing"><p>${escapeHtml(document.closing || '')}</p><p>${escapeHtml(document.respectfully || '')}<br /><strong>${escapeHtml(document.signature || '—')}</strong></p></section>`;
+}
+
 function cashReportPages(report) {
   const pages = Array.isArray(report?.pages) && report.pages.length ? report.pages : [report];
   return pages.map((page) => ({
@@ -5738,12 +5793,13 @@ function cashReportPages(report) {
     tables: Array.isArray(page.tables) ? page.tables : [],
     parties: page.parties || null,
     partyRoles: cashReportPartyRoles(page),
-    organizations: page.organizations || null
+    organizations: page.organizations || null,
+    proposalDocument: page.proposalDocument || report.proposalDocument || null
   }));
 }
 
 function reportPreviewPageMarkup(report) {
-  return `<article class="report-preview-sheet"><header><div><span>STRUCTOS REPORT</span><h2>${escapeHtml(report.title)}</h2>${report.documentNumber ? `<p>${escapeHtml(report.numberLabel || tr('documentNumber'))}: ${escapeHtml(report.documentNumber)}</p>` : ''}</div><img src="${reportPreviewLogoUrl}" alt="StructOS" /></header><div class="report-preview-meta"><p><strong>${escapeHtml(report.objectLabel)}:</strong> ${escapeHtml(report.objectName)}</p><p><strong>${escapeHtml(report.sectionLabel)}:</strong> ${escapeHtml(report.sectionName)}</p></div>${reportPreviewOrganizationsMarkup(report.organizations)}${report.tables.map(reportPreviewTableMarkup).join('')}${reportPreviewPartiesMarkup(report.parties, report.partyRoles)}<footer><img src="${reportPreviewLogoUrl}" alt="" /><div><strong>${STRUCTOS_DOCUMENT_BRAND.name}</strong><span>${STRUCTOS_DOCUMENT_BRAND.made}</span><span>${STRUCTOS_DOCUMENT_BRAND.site}</span><span>${STRUCTOS_DOCUMENT_BRAND.slogan}</span></div></footer></article>`;
+  return `<article class="report-preview-sheet"><header><div><span>STRUCTOS REPORT</span><h2>${escapeHtml(report.title)}</h2>${report.documentNumber ? `<p>${escapeHtml(report.numberLabel || tr('documentNumber'))}: ${escapeHtml(report.documentNumber)}</p>` : ''}</div><img src="${reportPreviewLogoUrl}" alt="StructOS" /></header><div class="report-preview-meta"><p><strong>${escapeHtml(report.objectLabel)}:</strong> ${escapeHtml(report.objectName)}</p><p><strong>${escapeHtml(report.sectionLabel)}:</strong> ${escapeHtml(report.sectionName)}</p></div>${reportPreviewProposalOpeningMarkup(report.proposalDocument)}${reportPreviewOrganizationsMarkup(report.organizations)}${report.tables.map(reportPreviewTableMarkup).join('')}${reportPreviewProposalClosingMarkup(report.proposalDocument)}${reportPreviewPartiesMarkup(report.parties, report.partyRoles)}<footer><img src="${reportPreviewLogoUrl}" alt="" /><div><strong>${STRUCTOS_DOCUMENT_BRAND.name}</strong><span>${STRUCTOS_DOCUMENT_BRAND.made}</span><span>${STRUCTOS_DOCUMENT_BRAND.site}</span><span>${STRUCTOS_DOCUMENT_BRAND.slogan}</span></div></footer></article>`;
 }
 
 function reportPreviewMarkup(report) {
@@ -5781,6 +5837,17 @@ async function createPdfReport(report) {
       { text: `${page.objectLabel}: ${page.objectName}`, style: 'meta' },
       { text: `${page.sectionLabel}: ${page.sectionName}`, style: 'meta', margin: [0, 0, 0, 14] }
     );
+    if (page.proposalDocument) {
+      const sender = page.proposalDocument.contacts?.sender || {};
+      const recipient = page.proposalDocument.contacts?.recipient || {};
+      const senderDetails = [`${tr('fullName')}: ${sender.name || '—'}`, `${tr('proposalOrganization')}: ${sender.organization || '—'}`, `${tr('phone')}: ${sender.phone || '—'}`].join('\n');
+      const recipientDetails = [`${tr('fullName')}: ${recipient.name || '—'}`, `${tr('proposalOrganization')}: ${recipient.organization || '—'}`].join('\n');
+      content.push(
+        { text: page.proposalDocument.greeting || '', bold: true, fontSize: 10, margin: [0, 0, 0, 4] },
+        { text: page.proposalDocument.intro || '', fontSize: 9, lineHeight: 1.25, margin: [0, 0, 0, 10] },
+        { table: { widths: [62, '*', 62, '*'], body: [[{ text: sender.title || tr('proposalSender'), bold: true, color: '#075cd3' }, { text: senderDetails }, { text: recipient.title || tr('proposalRecipient'), bold: true, color: '#075cd3' }, { text: recipientDetails }]] }, layout: { hLineColor: '#c7d5e5', vLineColor: '#c7d5e5', paddingLeft: () => 5, paddingRight: () => 5, paddingTop: () => 5, paddingBottom: () => 5 }, fontSize: 8, margin: [0, 0, 0, 10] }
+      );
+    }
     if (page.organizations) {
       const organizationRows = [[tr('reportType'), tr('partyType'), tr('manualDetails'), tr('uploadedDocuments')], ...CASH_ORGANIZATION_ROLES.map((role) => {
         const card = page.organizations[role] || {};
@@ -5800,6 +5867,20 @@ async function createPdfReport(report) {
       if (Number.isFinite(table.total)) content.push({ text: `${tr('rowTotal')}: ${formatMoney(table.total)}`, bold: true, alignment: 'right', margin: [0, 7, 0, 4] });
       if (table.summaries?.length) content.push({ ul: table.summaries.map((summary) => ({ text: cashReportSummaryText(summary), bold: Boolean(summary?.tone), color: summary?.tone === 'is-negative' ? '#d9384b' : summary?.tone === 'is-positive' ? '#138a5b' : '#14213d' })), margin: [10, 7, 0, 5], fontSize: 9 });
     });
+    if (page.proposalDocument) {
+      const summary = page.proposalDocument.finalSummary;
+      if (summary?.rows?.length) {
+        content.push(
+          { text: summary.title || tr('proposalFinalSummary'), style: 'sectionTitle', margin: [0, 15, 0, 6] },
+          { table: { widths: ['*', 125], body: summary.rows.map((row) => [{ text: row.label || '', bold: true }, { text: row.value || '', bold: true, alignment: 'right' }]) }, layout: { fillColor: (rowIndex) => rowIndex === summary.rows.length - 1 ? '#eaf8f2' : rowIndex % 2 ? '#f6f9fc' : null, hLineColor: '#b8c9dc', vLineColor: '#b8c9dc', paddingLeft: () => 6, paddingRight: () => 6, paddingTop: () => 5, paddingBottom: () => 5 }, fontSize: 9, margin: [0, 0, 0, 14] }
+        );
+      }
+      content.push(
+        { text: page.proposalDocument.closing || '', fontSize: 10, margin: [0, 0, 0, 12] },
+        { text: page.proposalDocument.respectfully || '', fontSize: 9, margin: [0, 0, 0, 3] },
+        { text: page.proposalDocument.signature || '—', bold: true, fontSize: 10, margin: [0, 0, 0, 6] }
+      );
+    }
     if (page.parties && !repeatingPartyPage) {
       const partyRows = [['', tr('fullName'), tr('signature'), tr('seal')], ...page.partyRoles.map((role) => [cashPartyRoleLabel(role), page.parties[role]?.name || '', page.parties[role]?.signature || '', page.parties[role]?.seal || ''])];
       content.push({ text: tr('documentDate'), style: 'sectionTitle', margin: [0, 16, 0, 6] }, { text: page.parties.date || localDateKey(), margin: [0, 0, 0, 8] }, { table: { widths: [80, '*', '*', '*'], body: partyRows }, layout: 'lightHorizontalLines', fontSize: 9 });
@@ -5866,6 +5947,17 @@ async function createExcelReport(report) {
     worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${page.objectLabel}: ${page.objectName}`; metaRow += 1;
     worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${page.sectionLabel}: ${page.sectionName}`;
     let cursor = metaRow + 2;
+    if (page.proposalDocument) {
+      const sender = page.proposalDocument.contacts?.sender || {};
+      const recipient = page.proposalDocument.contacts?.recipient || {};
+      worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = page.proposalDocument.greeting || ''; worksheet.getCell(cursor, 1).font = { bold: true, size: 11 }; cursor += 1;
+      worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = page.proposalDocument.intro || ''; worksheet.getCell(cursor, 1).alignment = { wrapText: true, vertical: 'top' }; worksheet.getRow(cursor).height = 30; cursor += 2;
+      worksheet.getCell(cursor, 1).value = sender.title || tr('proposalSender'); worksheet.getCell(cursor, 1).font = { bold: true, color: { argb: 'FF075CD3' } };
+      worksheet.mergeCells(cursor, 2, cursor, Math.max(2, Math.floor(maxColumns / 2))); worksheet.getCell(cursor, 2).value = `${tr('fullName')}: ${sender.name || '—'}\n${tr('proposalOrganization')}: ${sender.organization || '—'}\n${tr('phone')}: ${sender.phone || '—'}`; worksheet.getCell(cursor, 2).alignment = { wrapText: true, vertical: 'top' };
+      const recipientLabelColumn = Math.max(3, Math.floor(maxColumns / 2) + 1); worksheet.getCell(cursor, recipientLabelColumn).value = recipient.title || tr('proposalRecipient'); worksheet.getCell(cursor, recipientLabelColumn).font = { bold: true, color: { argb: 'FF075CD3' } };
+      if (recipientLabelColumn < maxColumns) { worksheet.mergeCells(cursor, recipientLabelColumn + 1, cursor, maxColumns); worksheet.getCell(cursor, recipientLabelColumn + 1).value = `${tr('fullName')}: ${recipient.name || '—'}\n${tr('proposalOrganization')}: ${recipient.organization || '—'}`; worksheet.getCell(cursor, recipientLabelColumn + 1).alignment = { wrapText: true, vertical: 'top' }; }
+      worksheet.getRow(cursor).height = 46; cursor += 2;
+    }
     if (page.organizations) {
       worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = tr('organizationDocuments'); worksheet.getCell(cursor, 1).font = { bold: true, size: 12, color: { argb: 'FF075CD3' } }; cursor += 1;
       CASH_ORGANIZATION_ROLES.forEach((role) => {
@@ -5895,6 +5987,21 @@ async function createExcelReport(report) {
       });
       cursor += 2;
     });
+    if (page.proposalDocument) {
+      const summary = page.proposalDocument.finalSummary;
+      if (summary?.rows?.length) {
+        worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = summary.title || tr('proposalFinalSummary'); worksheet.getCell(cursor, 1).font = { bold: true, size: 12, color: { argb: 'FF075CD3' } }; cursor += 1;
+        summary.rows.forEach((row, rowIndex) => {
+          worksheet.mergeCells(cursor, 1, cursor, maxColumns - 1); const labelCell = worksheet.getCell(cursor, 1); labelCell.value = row.label || ''; labelCell.font = { bold: true };
+          const valueCell = worksheet.getCell(cursor, maxColumns); valueCell.value = row.value || ''; valueCell.font = { bold: true, ...(rowIndex === summary.rows.length - 1 ? { color: { argb: 'FF138A5B' } } : {}) }; valueCell.alignment = { horizontal: 'right' };
+          [labelCell, valueCell].forEach((cell) => { cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: rowIndex === summary.rows.length - 1 ? 'FFEAF8F2' : rowIndex % 2 ? 'FFF6F9FC' : 'FFFFFFFF' } }; cell.border = { top: { style: 'thin', color: { argb: 'FFB8C9DC' } }, left: { style: 'thin', color: { argb: 'FFB8C9DC' } }, bottom: { style: 'thin', color: { argb: 'FFB8C9DC' } }, right: { style: 'thin', color: { argb: 'FFB8C9DC' } } }; });
+          cursor += 1;
+        });
+        cursor += 1;
+      }
+      worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = page.proposalDocument.closing || ''; worksheet.getCell(cursor, 1).alignment = { wrapText: true }; cursor += 2;
+      worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = `${page.proposalDocument.respectfully || ''}\n${page.proposalDocument.signature || '—'}`; worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, 1).alignment = { wrapText: true }; worksheet.getRow(cursor).height = 32; cursor += 2;
+    }
     if (page.parties) {
       const documentDate = page.parties.date || localDateKey();
       page.partyRoles.forEach((role) => { const party = page.parties[role] || {}; worksheet.getCell(cursor, 1).value = cashPartyRoleLabel(role); worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, 2).value = `${tr('fullName')}: ${party.name || ''}`; worksheet.getCell(cursor, 4).value = `${tr('signature')}: ${party.signature || ''}`; worksheet.getCell(cursor, 6).value = `${tr('seal')}: ${party.seal || ''}\n${tr('documentDate')}: ${documentDate}`; worksheet.getCell(cursor, 6).alignment = { wrapText: true, vertical: 'top' }; cursor += 1; }); cursor += 2;
@@ -7680,7 +7787,7 @@ function isCommercialProposalMyGroup(groupId) {
 }
 
 function commercialProposalWorkspaceState(proposal) {
-  if (!proposal.workspace || typeof proposal.workspace !== 'object' || !proposal.workspace.itemValues || !Array.isArray(proposal.workspace.customItems) || !Array.isArray(proposal.workspace.myItems) || !proposal.workspace.laborSettings || typeof proposal.workspace.laborSettings.itemHours !== 'object') {
+  if (!proposal.workspace || typeof proposal.workspace !== 'object' || !proposal.workspace.itemValues || !Array.isArray(proposal.workspace.customItems) || !Array.isArray(proposal.workspace.myItems) || !proposal.workspace.contacts || !proposal.workspace.laborSettings || typeof proposal.workspace.laborSettings.itemHours !== 'object') {
     proposal.workspace = normalizeCommercialProposalWorkspace(proposal.workspace);
   }
   return proposal.workspace;
@@ -7860,6 +7967,12 @@ function commercialProposalGroupHintMarkup(groupId) {
     laborHours: 'proposalLaborHoursHint'
   }[groupId];
   return hintKey ? `<div class="commercial-proposal-group-hint"><span aria-hidden="true">i</span><p>${escapeHtml(tr(hintKey))}</p></div>` : '';
+}
+
+function commercialProposalContactsMarkup(state) {
+  const contacts = state.contacts || normalizeCommercialProposalWorkspace(null).contacts;
+  const field = (key, labelKey, value, options = {}) => `<label><span>${escapeHtml(tr(labelKey))}</span><input type="${options.type || 'text'}" maxlength="${options.maxlength || 160}" value="${escapeHtml(value || '')}" placeholder="${escapeHtml(tr(labelKey))}" autocomplete="${options.autocomplete || 'off'}" data-proposal-contact="${key}" /></label>`;
+  return `<section class="commercial-proposal-contacts"><header><span aria-hidden="true">✦</span><div><small>КП</small><h2>${escapeHtml(tr('proposalPartiesHeading'))}</h2></div></header><div><article><h3>${escapeHtml(tr('proposalSender'))}</h3>${field('senderName', 'proposalSenderName', contacts.senderName, { autocomplete: 'name' })}${field('senderOrganization', 'proposalSenderOrganization', contacts.senderOrganization, { maxlength: 200, autocomplete: 'organization' })}${field('senderPhone', 'proposalSenderPhone', contacts.senderPhone, { type: 'tel', maxlength: 60, autocomplete: 'tel' })}</article><article><h3>${escapeHtml(tr('proposalRecipient'))}</h3>${field('recipientName', 'proposalRecipientName', contacts.recipientName)}${field('recipientOrganization', 'proposalRecipientOrganization', contacts.recipientOrganization, { maxlength: 200 })}</article></div></section>`;
 }
 
 function commercialProposalTableMarkup(proposal, groupId, entries) {
@@ -8178,8 +8291,15 @@ function renderCommercialProposalWorkspace() {
   const tableWorkspace = isLaborHours
     ? `${commercialProposalGroupHintMarkup(activeCommercialProposalGroup)}${commercialProposalLaborSettingsMarkup(state)}${commercialProposalLaborTableMarkup(proposal, entries)}`
     : `${commercialProposalGroupHintMarkup(activeCommercialProposalGroup)}${commercialProposalPriceModeMarkup(state)}${commercialProposalTableMarkup(proposal, activeCommercialProposalGroup, entries)}`;
-  rootElement.innerHTML = `<section class="commercial-proposal-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-back-to-commercial-proposals>← ${escapeHtml(tr('backToProposalList'))}</button><div><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h1>${escapeHtml(proposal.objectName)}</h1><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version.name)}</p></div></div><b>${escapeHtml(tr('proposalReady'))}</b></header><div class="analysis-truth-note commercial-proposal-editor-note"><span>i</span><p>${escapeHtml(tr('proposalWorkspacePageHint'))}</p></div>${commercialProposalColumnsMarkup(proposal, groups)}<section class="commercial-proposal-editor-body"><header><div><small>${escapeHtml(tr(groupConfig.columnLabel))}</small><h2>${escapeHtml(tr(groupConfig.label))}</h2><p>${entries.length} · ${escapeHtml(tr('proposalFragmentPositions'))}</p></div>${positionActions}</header>${tableWorkspace}<footer class="commercial-proposal-editor-actions"><button class="primary-button" type="button" data-commercial-proposal-action="download"><span aria-hidden="true">↓</span>${escapeHtml(tr('downloadProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="view"><span aria-hidden="true">◉</span>${escapeHtml(tr('viewProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="share"><span aria-hidden="true">↗</span>${escapeHtml(tr('shareProposal'))}</button></footer></section></section>`;
+  rootElement.innerHTML = `<section class="commercial-proposal-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-back-to-commercial-proposals>← ${escapeHtml(tr('backToProposalList'))}</button><div><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h1>${escapeHtml(proposal.objectName)}</h1><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version.name)}</p></div></div><b>${escapeHtml(tr('proposalReady'))}</b></header><div class="analysis-truth-note commercial-proposal-editor-note"><span>i</span><p>${escapeHtml(tr('proposalWorkspacePageHint'))}</p></div>${commercialProposalContactsMarkup(state)}${commercialProposalColumnsMarkup(proposal, groups)}<section class="commercial-proposal-editor-body"><header><div><small>${escapeHtml(tr(groupConfig.columnLabel))}</small><h2>${escapeHtml(tr(groupConfig.label))}</h2><p>${entries.length} · ${escapeHtml(tr('proposalFragmentPositions'))}</p></div>${positionActions}</header>${tableWorkspace}<footer class="commercial-proposal-editor-actions"><button class="primary-button" type="button" data-commercial-proposal-action="download"><span aria-hidden="true">↓</span>${escapeHtml(tr('downloadProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="view"><span aria-hidden="true">◉</span>${escapeHtml(tr('viewProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="share"><span aria-hidden="true">↗</span>${escapeHtml(tr('shareProposal'))}</button></footer></section></section>`;
   $('[data-back-to-commercial-proposals]', rootElement)?.addEventListener('click', () => setPanel('proposals'));
+  $$('[data-proposal-contact]', rootElement).forEach((input) => input.addEventListener('input', () => {
+    const field = input.dataset.proposalContact;
+    if (!Object.prototype.hasOwnProperty.call(state.contacts, field)) return;
+    state.contacts[field] = String(input.value || '').slice(0, Number(input.maxLength) || 200);
+    proposal.updatedAt = new Date().toISOString();
+    saveCommercialProposalRecords();
+  }));
   $$('[data-proposal-workspace-group]', rootElement).forEach((button) => button.addEventListener('click', () => {
     activeCommercialProposalGroup = button.dataset.proposalWorkspaceGroup;
     activeCommercialProposalColumn = button.dataset.proposalWorkspaceColumn;
@@ -8332,6 +8452,8 @@ function commercialProposalReportTable(proposal, fragment, entries) {
   const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[selectedModeIds[0]]?.direction || 'none';
   const taxTotals = Object.fromEntries(selectedModeIds.map((modeId) => [modeId, 0]));
   let priceTotal = 0;
+  let netTotal = 0;
+  let grossTotal = 0;
   const rows = entries.map((entry, index) => {
     const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds);
     const taxValues = Object.fromEntries(selectedModeIds.map((modeId) => {
@@ -8340,6 +8462,8 @@ function commercialProposalReportTable(proposal, fragment, entries) {
       return [`tax_${modeId}`, amount];
     }));
     priceTotal += amounts.final;
+    netTotal += direction === 'subtract' ? amounts.final : amounts.base;
+    grossTotal += direction === 'subtract' ? amounts.base : amounts.final;
     return {
       number: index + 1,
       name: entry.name,
@@ -8365,7 +8489,18 @@ function commercialProposalReportTable(proposal, fragment, entries) {
   selectedModeIds.forEach((modeId) => summaries.push(`${commercialProposalModeShortLabel(modeId)}: ${formatMoney(commercialProposalRoundMoney(taxTotals[modeId]))}`));
   const totalLabel = direction === 'subtract' ? 'includedTotalWithoutTax' : direction === 'add' ? 'priceTotalWithTax' : 'totalProposalPrice';
   summaries.push(`${tr(totalLabel)}: ${formatMoney(commercialProposalRoundMoney(priceTotal))}`);
-  return { title: tr(fragment.label), columns: commercialProposalReportColumns(selectedModeIds, fragment.id, rows), rows, summaries };
+  return {
+    title: tr(fragment.label),
+    columns: commercialProposalReportColumns(selectedModeIds, fragment.id, rows),
+    rows,
+    summaries,
+    proposalTotals: {
+      netTotal: commercialProposalRoundMoney(netTotal),
+      grossTotal: commercialProposalRoundMoney(grossTotal),
+      taxTotal: commercialProposalRoundMoney(Object.values(taxTotals).reduce((total, value) => total + value, 0)),
+      positionCount: entries.length
+    }
+  };
 }
 
 function commercialProposalLaborReportTable(proposal, fragment, entries) {
@@ -8406,7 +8541,13 @@ function commercialProposalLaborReportTable(proposal, fragment, entries) {
       `${tr('totalWorkTypes')}: ${entries.length}`,
       `${tr('totalManHours')}: ${numberFormat.format(commercialProposalRoundMoney(totalHours))}`,
       `${tr('totalLaborCost')}: ${formatMoney(commercialProposalRoundMoney(totalCost))}`
-    ]
+    ],
+    proposalTotals: {
+      netTotal: commercialProposalRoundMoney(totalCost),
+      grossTotal: commercialProposalRoundMoney(totalCost),
+      taxTotal: 0,
+      positionCount: entries.length
+    }
   };
 }
 
@@ -8423,14 +8564,49 @@ function commercialProposalReport(proposal, fragmentIds) {
     if (!entries.length) return null;
     return fragment.id === 'laborHours' ? commercialProposalLaborReportTable(proposal, fragment, entries) : commercialProposalReportTable(proposal, fragment, entries);
   }).filter(Boolean);
+  const state = commercialProposalWorkspaceState(proposal);
+  const contacts = state.contacts || normalizeCommercialProposalWorkspace(null).contacts;
+  const totals = tables.reduce((result, table) => {
+    const tableTotals = table.proposalTotals || {};
+    result.netTotal += Number(tableTotals.netTotal) || 0;
+    result.grossTotal += Number(tableTotals.grossTotal) || 0;
+    result.taxTotal += Number(tableTotals.taxTotal) || 0;
+    result.positionCount += Number(tableTotals.positionCount) || 0;
+    return result;
+  }, { netTotal: 0, grossTotal: 0, taxTotal: 0, positionCount: 0 });
+  const selectedModeIds = normalizeCommercialProposalTaxModes(state.taxModes);
+  const taxLabel = commercialProposalCombinedTaxLabel(selectedModeIds) || tr('proposalTaxNotSelected');
+  const withTaxLabel = tr('proposalSummaryPriceWithTax').replace('{tax}', taxLabel);
+  const taxTotalLabel = tr('proposalSummaryTaxTotal').replace('{tax}', taxLabel);
+  const senderSignature = [contacts.senderName, contacts.senderPhone].map((value) => String(value || '').trim()).filter(Boolean).join(', ') || '—';
   return {
     title: tr('proposalWorkspaceTitle'),
     objectName: proposal.objectName,
     sectionName: proposal.sectionName,
     objectLabel: tr('objectName'),
-    sectionLabel: tr('proposalSectionField'),
+    sectionLabel: tr('proposalSectionNameLabel'),
     tables,
-    parties: null
+    parties: null,
+    proposalDocument: {
+      greeting: tr('proposalGreeting'),
+      intro: tr('proposalIntro'),
+      contacts: {
+        sender: { title: tr('proposalSender'), name: contacts.senderName, organization: contacts.senderOrganization, phone: contacts.senderPhone },
+        recipient: { title: tr('proposalRecipient'), name: contacts.recipientName, organization: contacts.recipientOrganization }
+      },
+      finalSummary: {
+        title: tr('proposalFinalSummary'),
+        rows: [
+          { label: tr('proposalSummaryPriceTotal'), value: formatMoney(commercialProposalRoundMoney(totals.netTotal)) },
+          { label: withTaxLabel, value: formatMoney(commercialProposalRoundMoney(totals.grossTotal)) },
+          { label: taxTotalLabel, value: formatMoney(commercialProposalRoundMoney(totals.taxTotal)) },
+          { label: tr('proposalSummaryPositions'), value: String(totals.positionCount) }
+        ]
+      },
+      closing: tr('proposalClosing'),
+      respectfully: tr('proposalRespectfully'),
+      signature: senderSignature
+    }
   };
 }
 
