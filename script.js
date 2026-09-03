@@ -756,4 +756,4 @@ $('.native-install-button').addEventListener('click', async () => { if (!deferre
 window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); deferredInstallPrompt = event; });
 window.addEventListener('appinstalled', () => { localStorage.setItem('structos-installed', 'true'); $$('.install-app-button').forEach((button) => { button.hidden = true; }); showToast('StructOS установлен ✓'); });
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=95', { updateViaCache: 'none' }).catch(() => {}));
