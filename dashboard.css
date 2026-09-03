@@ -2587,3 +2587,108 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
     font-size: 12px;
   }
 }
+
+
+/* Commercial proposal proportional columns */
+.commercial-proposal-price-table:not(.commercial-proposal-labor-table) {
+  width: 100%;
+  min-width: 100% !important;
+  table-layout: auto;
+}
+
+.commercial-proposal-price-table th.proposal-line-number,
+.commercial-proposal-price-table td.proposal-line-number {
+  width: 38px;
+  min-width: 38px;
+  white-space: nowrap;
+}
+
+.commercial-proposal-price-table th.proposal-line-name-head,
+.commercial-proposal-price-table td.proposal-line-name {
+  width: 100%;
+  min-width: clamp(300px, 44vw, 700px);
+}
+
+.commercial-proposal-price-table th.proposal-line-unit-head,
+.commercial-proposal-price-table td.proposal-line-unit {
+  width: 1%;
+  min-width: 62px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.commercial-proposal-price-table th.proposal-line-quantity-head,
+.commercial-proposal-price-table td.proposal-line-quantity {
+  width: 1%;
+  min-width: 76px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.commercial-proposal-price-table .proposal-quantity-input {
+  width: 72px;
+  min-width: 72px;
+}
+
+.commercial-proposal-price-table th.proposal-price-column-head {
+  width: 1%;
+  min-width: 84px;
+  max-width: 132px;
+  text-align: right;
+}
+
+.commercial-proposal-price-table td.proposal-price-input-cell,
+.commercial-proposal-price-table td.proposal-price-value-cell,
+.commercial-proposal-price-table td.is-money {
+  width: 1%;
+  min-width: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.commercial-proposal-price-table .proposal-price-input-cell .proposal-number-input {
+  width: calc(var(--proposal-price-ch, 6) * 1ch + 22px);
+  min-width: calc(var(--proposal-price-ch, 6) * 1ch + 22px);
+  max-width: none;
+}
+
+.commercial-proposal-price-table th.proposal-line-action-head,
+.commercial-proposal-price-table td.proposal-line-action {
+  width: 1%;
+  min-width: 112px;
+}
+
+.commercial-proposal-labor-table {
+  width: 100%;
+  min-width: 100%;
+  table-layout: auto;
+}
+
+.commercial-proposal-labor-table th:nth-last-child(-n + 3),
+.commercial-proposal-labor-table td:nth-last-child(-n + 3) {
+  width: 1%;
+  min-width: 92px;
+  white-space: nowrap;
+}
+
+@media (max-width: 620px) {
+  .commercial-proposal-price-table th.proposal-line-name-head,
+  .commercial-proposal-price-table td.proposal-line-name {
+    min-width: 240px;
+  }
+
+  .commercial-proposal-price-table th.proposal-line-unit-head,
+  .commercial-proposal-price-table td.proposal-line-unit {
+    min-width: 58px;
+  }
+
+  .commercial-proposal-price-table th.proposal-line-quantity-head,
+  .commercial-proposal-price-table td.proposal-line-quantity {
+    min-width: 70px;
+  }
+
+  .commercial-proposal-price-table th.proposal-price-column-head {
+    min-width: 78px;
+    max-width: 112px;
+  }
+}
