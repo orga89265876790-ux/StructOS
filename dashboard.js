@@ -7812,7 +7812,26 @@ function commercialProposalTaxAmount(amounts, modeId) {
 
 function commercialProposalPriceCharacterWidth(value) {
   const length = String(value ?? '').replace(/[^0-9.,-]/g, '').length;
-  return Math.min(20, Math.max(6, length + 1));
+  return Math.min(20, Math.max(4, length + 1));
+}
+
+function commercialProposalCompactColumnWidth(values = []) {
+  const longest = values.reduce((maximum, value) => Math.max(maximum, String(value ?? '').replace(/\s+/g, ' ').trim().length), 1);
+  return Math.min(118, Math.max(48, Math.ceil(16 + longest * 6.4)));
+}
+
+function commercialProposalRefreshRenderedPriceColumns(table) {
+  if (!table) return;
+  const priceColumns = $$('col[data-proposal-price-column]', table);
+  const priceWidth = priceColumns.reduce((total, column) => {
+    const index = column.dataset.proposalPriceColumn;
+    const values = $$('[data-proposal-price-column-index="' + index + '"]', table).map((cell) => $('input', cell)?.value || cell.textContent || '');
+    const width = commercialProposalCompactColumnWidth(values);
+    column.style.width = width + 'px';
+    return total + width;
+  }, 0);
+  const fixedWidth = Number(table.dataset.proposalFixedWidth) || 0;
+  table.style.setProperty('--proposal-table-min-width', Math.ceil(fixedWidth + priceWidth) + 'px');
 }
 
 function commercialProposalPriceModeMarkup(state) {
@@ -7850,8 +7869,8 @@ function commercialProposalTableMarkup(proposal, groupId, entries) {
   const myIds = new Set(state.myItems.map((item) => item.id));
   const combinedTaxLabel = commercialProposalCombinedTaxLabel(selectedModeIds);
   const specialHead = groupId === 'outsideSpecificationWorks'
-    ? `<th>${escapeHtml(tr('proposalSpecProjectColumn'))}</th>`
-    : groupId === 'associatedWorks' ? `<th>${escapeHtml(tr('proposalAssociatedForColumn'))}</th>` : '';
+    ? `<th class="proposal-line-meta-head">${escapeHtml(tr('proposalSpecProjectColumn'))}</th>`
+    : groupId === 'associatedWorks' ? `<th class="proposal-line-meta-head">${escapeHtml(tr('proposalAssociatedForColumn'))}</th>` : '';
   const priceHeads = direction === 'subtract'
     ? `<th class="proposal-price-column-head">${escapeHtml(tr('includedUnitPriceWithoutTax'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('includedTotalWithoutTax'))}</th><th class="proposal-price-column-head">${escapeHtml(`${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}`)}</th><th class="proposal-price-column-head">${escapeHtml(`${tr('includedTotalWithTax')} ${combinedTaxLabel}`)}</th>`
     : direction === 'add'
@@ -7866,10 +7885,10 @@ function commercialProposalTableMarkup(proposal, groupId, entries) {
       : direction === 'add' ? tr('excludedUnitPriceWithoutTax') : tr('price');
     const priceInput = `<input class="proposal-number-input" style="--proposal-price-ch:${commercialProposalPriceCharacterWidth(entry.price)}" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.price ? escapeHtml(String(entry.price)) : ''}" placeholder="0" data-proposal-line-value="price" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(priceInputLabel)}" />`;
     const priceCells = direction === 'subtract'
-      ? `<td class="is-money proposal-price-value-cell" data-proposal-net-unit>${escapeHtml(formatMoney(amounts.unitFinal))}</td><td class="is-money is-total proposal-price-value-cell" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td><td class="proposal-price-input-cell">${priceInput}</td><td class="is-money proposal-price-value-cell" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td>`
+      ? `<td class="is-money proposal-price-value-cell" data-proposal-price-column-index="0" data-proposal-net-unit>${escapeHtml(formatMoney(amounts.unitFinal))}</td><td class="is-money is-total proposal-price-value-cell" data-proposal-price-column-index="1" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td><td class="proposal-price-input-cell" data-proposal-price-column-index="2">${priceInput}</td><td class="is-money proposal-price-value-cell" data-proposal-price-column-index="3" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td>`
       : direction === 'add'
-        ? `<td class="proposal-price-input-cell">${priceInput}</td><td class="is-money proposal-price-value-cell" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td><td class="is-money proposal-price-value-cell" data-proposal-gross-unit>${escapeHtml(formatMoney(amounts.unitFinal))}</td><td class="is-money is-total proposal-price-value-cell" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`
-        : `<td class="proposal-price-input-cell">${priceInput}</td><td class="is-money is-total proposal-price-value-cell" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`;
+        ? `<td class="proposal-price-input-cell" data-proposal-price-column-index="0">${priceInput}</td><td class="is-money proposal-price-value-cell" data-proposal-price-column-index="1" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td><td class="is-money proposal-price-value-cell" data-proposal-price-column-index="2" data-proposal-gross-unit>${escapeHtml(formatMoney(amounts.unitFinal))}</td><td class="is-money is-total proposal-price-value-cell" data-proposal-price-column-index="3" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`
+        : `<td class="proposal-price-input-cell" data-proposal-price-column-index="0">${priceInput}</td><td class="is-money is-total proposal-price-value-cell" data-proposal-price-column-index="1" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`;
     const specialCell = groupId === 'outsideSpecificationWorks'
       ? `<td class="proposal-line-meta-cell"><select data-proposal-line-meta="projectSource" data-proposal-line-meta-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('proposalSpecProjectColumn'))}"><option value="spec"${entry.projectSource === 'spec' ? ' selected' : ''}>${escapeHtml(tr('proposalSpecShort'))}</option><option value="project"${entry.projectSource !== 'spec' ? ' selected' : ''}>${escapeHtml(tr('proposalProjectShort'))}</option></select></td>`
       : groupId === 'associatedWorks'
@@ -7888,9 +7907,33 @@ function commercialProposalTableMarkup(proposal, groupId, entries) {
     return `<div class="commercial-proposal-table-empty"><span>◇</span><h3>${escapeHtml(tr(isCommercialProposalMyGroup(groupId) ? 'myCommercialProposal' : emptyConfig?.label || 'proposalWorkspaceTitle'))}</h3><p>${escapeHtml(tr(isCommercialProposalMyGroup(groupId) ? 'emptyMyProposal' : 'emptyProposalGroup'))}</p></div>`;
   }
   const lineAmounts = entries.map((entry) => commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds));
+  const priceColumnValues = direction === 'subtract'
+    ? [
+        lineAmounts.map((amounts) => formatMoney(amounts.unitFinal)),
+        lineAmounts.map((amounts) => formatMoney(amounts.final)),
+        entries.map((entry) => entry.price || ''),
+        lineAmounts.map((amounts) => formatMoney(amounts.base))
+      ]
+    : direction === 'add'
+      ? [
+          entries.map((entry) => entry.price || ''),
+          lineAmounts.map((amounts) => formatMoney(amounts.base)),
+          lineAmounts.map((amounts) => formatMoney(amounts.unitFinal)),
+          lineAmounts.map((amounts) => formatMoney(amounts.final))
+        ]
+      : [
+          entries.map((entry) => entry.price || ''),
+          lineAmounts.map((amounts) => formatMoney(amounts.final))
+        ];
+  const priceColumnWidths = priceColumnValues.map((values) => commercialProposalCompactColumnWidth(values));
+  const specialColumnWidth = groupId === 'associatedWorks' ? 168 : groupId === 'outsideSpecificationWorks' ? 96 : 0;
+  const actionColumnWidth = isCommercialProposalMyGroup(groupId) ? 52 : 82;
+  const fixedColumnWidth = 38 + 58 + 68 + specialColumnWidth + actionColumnWidth + 320;
+  const tableMinWidth = fixedColumnWidth + priceColumnWidths.reduce((total, width) => total + width, 0);
+  const columnLayout = `<colgroup><col style="width:38px" /><col /><col style="width:58px" /><col style="width:68px" />${specialColumnWidth ? `<col style="width:${specialColumnWidth}px" />` : ''}${priceColumnWidths.map((width, index) => `<col data-proposal-price-column="${index}" style="width:${width}px" />`).join('')}<col style="width:${actionColumnWidth}px" /></colgroup>`;
   const taxSummaries = selectedModeIds.map((modeId) => `<span>${escapeHtml(commercialProposalModeShortLabel(modeId))}: <b data-proposal-tax-grand-total="${escapeHtml(modeId)}">${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + commercialProposalTaxAmount(amounts, modeId), 0)))}</b></span>`).join('');
   const totalLabel = direction === 'subtract' ? 'includedTotalWithoutTax' : direction === 'add' ? 'priceTotalWithTax' : 'totalProposalPrice';
-  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table has-${selectedModeIds.length}-taxes${direction === 'subtract' ? ' is-included-tax' : direction === 'add' ? ' is-added-tax' : ''}${specialHead ? ' has-special-column' : ''}"><thead><tr><th class="proposal-line-number">№</th><th class="proposal-line-name-head">${escapeHtml(tr('proposalLineName'))}</th><th class="proposal-line-unit-head">${escapeHtml(tr('proposalUnitShort'))}</th><th class="proposal-line-quantity-head">${escapeHtml(tr('proposalQuantityShort'))}</th>${specialHead}${priceHeads}<th class="proposal-line-action-head">${actionHead}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="${columnCount}"><span>${escapeHtml(tr('totalWorkTypes'))}: <b data-proposal-types-total>${entries.length}</b></span>${taxSummaries}<span>${escapeHtml(tr(totalLabel))}: <b data-proposal-price-grand-total>${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + amounts.final, 0)))}</b></span></td></tr></tfoot></table></div>`;
+  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table is-compact-proposal-table has-${selectedModeIds.length}-taxes${direction === 'subtract' ? ' is-included-tax' : direction === 'add' ? ' is-added-tax' : ''}${specialHead ? ' has-special-column' : ''}" data-proposal-compact-table data-proposal-fixed-width="${fixedColumnWidth}" style="--proposal-table-min-width:${tableMinWidth}px">${columnLayout}<thead><tr><th class="proposal-line-number">№</th><th class="proposal-line-name-head">${escapeHtml(tr('proposalLineName'))}</th><th class="proposal-line-unit-head">${escapeHtml(tr('proposalUnitShort'))}</th><th class="proposal-line-quantity-head">${escapeHtml(tr('proposalQuantityShort'))}</th>${specialHead}${priceHeads}<th class="proposal-line-action-head">${actionHead}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="${columnCount}"><span>${escapeHtml(tr('totalWorkTypes'))}: <b data-proposal-types-total>${entries.length}</b></span>${taxSummaries}<span>${escapeHtml(tr(totalLabel))}: <b data-proposal-price-grand-total>${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + amounts.final, 0)))}</b></span></td></tr></tfoot></table></div>`;
 }
 
 function commercialProposalLaborHourlyRate(state) {
@@ -7923,11 +7966,19 @@ function commercialProposalLaborTableMarkup(proposal, entries) {
       ? tr('ownProposalPosition')
       : entry.laborOrigin === 'specification' ? tr('laborWorksFromSpecification') : tr('laborWorksFromMyProposal');
     const remove = entry.laborOrigin === 'custom' ? `<button class="proposal-labor-remove" type="button" data-remove-proposal-custom-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('deleteOwnProposalPosition'))}" title="${escapeHtml(tr('deleteOwnProposalPosition'))}">×</button>` : '';
-    return `<tr data-proposal-labor-row data-proposal-line-id="${escapeHtml(entry.id)}"><td class="proposal-line-number">${index + 1}</td><td class="proposal-line-name"><div class="proposal-labor-name"><span><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(source)}</small></span>${remove}</div></td><td class="proposal-line-unit">${escapeHtml(entry.unit || '—')}</td><td class="proposal-labor-quantity proposal-line-quantity">${amounts.quantity ? escapeHtml(new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(amounts.quantity)) : '—'}</td><td><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${amounts.workHours ? escapeHtml(String(amounts.workHours)) : ''}" placeholder="0" data-proposal-labor-work-hours="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('workHours'))}" /></td><td class="is-money" data-proposal-labor-row-rate>${escapeHtml(formatMoney(amounts.hourlyRate))}</td><td class="is-money is-total" data-proposal-labor-row-total>${escapeHtml(formatMoney(amounts.total))}</td></tr>`;
+    return `<tr data-proposal-labor-row data-proposal-line-id="${escapeHtml(entry.id)}"><td class="proposal-line-number">${index + 1}</td><td class="proposal-line-name"><div class="proposal-labor-name"><span><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(source)}</small></span>${remove}</div></td><td class="proposal-line-unit">${escapeHtml(entry.unit || '—')}</td><td class="proposal-labor-quantity proposal-line-quantity">${amounts.quantity ? escapeHtml(new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(amounts.quantity)) : '—'}</td><td class="proposal-labor-hours"><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${amounts.workHours ? escapeHtml(String(amounts.workHours)) : ''}" placeholder="0" data-proposal-labor-work-hours="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('workHours'))}" /></td><td class="is-money" data-proposal-price-column-index="0" data-proposal-labor-row-rate>${escapeHtml(formatMoney(amounts.hourlyRate))}</td><td class="is-money is-total" data-proposal-price-column-index="1" data-proposal-labor-row-total>${escapeHtml(formatMoney(amounts.total))}</td></tr>`;
   }).join('');
   const totalHours = entries.reduce((total, entry) => total + commercialProposalLaborLineAmounts(entry, state).totalHours, 0);
   const totalCost = entries.reduce((total, entry) => total + commercialProposalLaborLineAmounts(entry, state).total, 0);
-  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table commercial-proposal-labor-table"><thead><tr><th class="proposal-line-number">№</th><th class="proposal-line-name-head">${escapeHtml(tr('laborWorkName'))}</th><th class="proposal-line-unit-head">${escapeHtml(tr('proposalUnitShort'))}</th><th class="proposal-line-quantity-head">${escapeHtml(tr('proposalQuantityShort'))}</th><th>${escapeHtml(tr('workHours'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('hourlyEmployeeCost'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('totalLaborCost'))}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="7"><span>${escapeHtml(tr('totalWorkTypes'))}: <b>${entries.length}</b></span><span>${escapeHtml(tr('totalManHours'))}: <b data-proposal-labor-total-hours>${escapeHtml(new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(totalHours))}</b></span><span>${escapeHtml(tr('totalLaborCost'))}: <b data-proposal-labor-grand-total>${escapeHtml(formatMoney(commercialProposalRoundMoney(totalCost)))}</b></span></td></tr></tfoot></table></div>`;
+  const laborAmounts = entries.map((entry) => commercialProposalLaborLineAmounts(entry, state));
+  const laborPriceWidths = [
+    commercialProposalCompactColumnWidth(laborAmounts.map((amounts) => formatMoney(amounts.hourlyRate))),
+    commercialProposalCompactColumnWidth(laborAmounts.map((amounts) => formatMoney(amounts.total)))
+  ];
+  const laborFixedWidth = 38 + 58 + 68 + 68 + 320;
+  const laborTableMinWidth = laborFixedWidth + laborPriceWidths.reduce((total, width) => total + width, 0);
+  const laborColumnLayout = `<colgroup><col style="width:38px" /><col /><col style="width:58px" /><col style="width:68px" /><col style="width:68px" />${laborPriceWidths.map((width, index) => `<col data-proposal-price-column="${index}" style="width:${width}px" />`).join('')}</colgroup>`;
+  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table commercial-proposal-labor-table is-compact-proposal-table" data-proposal-compact-table data-proposal-fixed-width="${laborFixedWidth}" style="--proposal-table-min-width:${laborTableMinWidth}px">${laborColumnLayout}<thead><tr><th class="proposal-line-number">№</th><th class="proposal-line-name-head">${escapeHtml(tr('laborWorkName'))}</th><th class="proposal-line-unit-head">${escapeHtml(tr('proposalUnitShort'))}</th><th class="proposal-line-quantity-head">${escapeHtml(tr('proposalQuantityShort'))}</th><th>${escapeHtml(tr('workHours'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('hourlyEmployeeCost'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('totalLaborCost'))}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="7"><span>${escapeHtml(tr('totalWorkTypes'))}: <b>${entries.length}</b></span><span>${escapeHtml(tr('totalManHours'))}: <b data-proposal-labor-total-hours>${escapeHtml(new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(totalHours))}</b></span><span>${escapeHtml(tr('totalLaborCost'))}: <b data-proposal-labor-grand-total>${escapeHtml(formatMoney(commercialProposalRoundMoney(totalCost)))}</b></span></td></tr></tfoot></table></div>`;
 }
 
 function commercialProposalColumnsMarkup(proposal, groups) {
@@ -7976,6 +8027,7 @@ function updateCommercialProposalTableCalculations(scope, proposal) {
     if (taxGrandTotal) taxGrandTotal.textContent = formatMoney(commercialProposalRoundMoney(taxTotals[modeId]));
   });
   if (priceGrandTotal) priceGrandTotal.textContent = formatMoney(commercialProposalRoundMoney(priceTotal));
+  $$('[data-proposal-compact-table]', scope).forEach((table) => commercialProposalRefreshRenderedPriceColumns(table));
 }
 
 function updateCommercialProposalLaborCalculations(scope, proposal) {
@@ -8002,6 +8054,7 @@ function updateCommercialProposalLaborCalculations(scope, proposal) {
   if (hourlyRateOutput) hourlyRateOutput.textContent = formatMoney(hourlyRate);
   if (totalHoursOutput) totalHoursOutput.textContent = new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(commercialProposalRoundMoney(totalHours));
   if (totalCostOutput) totalCostOutput.textContent = formatMoney(commercialProposalRoundMoney(totalCost));
+  $$('[data-proposal-compact-table]', scope).forEach((table) => commercialProposalRefreshRenderedPriceColumns(table));
 }
 
 function saveCommercialProposalMySelection(proposal, groupId, entries, scope) {
@@ -8242,8 +8295,10 @@ function commercialProposalReportColumns(modeIds = [], groupId = '', rows = []) 
   const selectedModeIds = normalizeCommercialProposalTaxModes(modeIds);
   const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[selectedModeIds[0]]?.direction || 'none';
   const combinedTaxLabel = commercialProposalCombinedTaxLabel(selectedModeIds);
-  const priceCharacters = rows.reduce((maximum, row) => Math.max(maximum, ...['unitPrice', 'netUnitPrice', 'grossUnitPrice', 'baseTotal', 'finalTotal'].map((key) => new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(Math.abs(Number(row?.[key]) || 0)).length)), 1);
-  const moneyColumnWidth = Math.min(82, Math.max(46, Math.ceil(24 + priceCharacters * 3.3)));
+  const moneyColumnWidth = (key) => {
+    const priceCharacters = rows.reduce((maximum, row) => Math.max(maximum, new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(Math.abs(Number(row?.[key]) || 0)).length), 1);
+    return Math.min(72, Math.max(38, Math.ceil(18 + priceCharacters * 2.8)));
+  };
   const base = [
     { label: '№', key: 'number', width: 20, number: true },
     { label: tr('proposalLineName'), key: 'name', width: '*' },
@@ -8252,22 +8307,22 @@ function commercialProposalReportColumns(modeIds = [], groupId = '', rows = []) 
   ];
   if (groupId === 'outsideSpecificationWorks') base.push({ label: tr('proposalSpecProjectColumn'), key: 'projectSource', width: 48 });
   if (groupId === 'associatedWorks') base.push({ label: tr('proposalAssociatedForColumn'), key: 'associatedFor', width: 72 });
-  if (direction === 'none') return [...base, { label: tr('price'), key: 'unitPrice', width: moneyColumnWidth, money: true }, { label: tr('proposalGrossPrice'), key: 'finalTotal', width: moneyColumnWidth + 4, money: true }];
+  if (direction === 'none') return [...base, { label: tr('price'), key: 'unitPrice', width: moneyColumnWidth('unitPrice'), money: true }, { label: tr('proposalGrossPrice'), key: 'finalTotal', width: moneyColumnWidth('finalTotal'), money: true }];
   if (direction === 'subtract') {
     return [
       ...base,
-      { label: tr('includedUnitPriceWithoutTax'), key: 'netUnitPrice', width: moneyColumnWidth, money: true },
-      { label: tr('includedTotalWithoutTax'), key: 'finalTotal', width: moneyColumnWidth + 4, money: true },
-      { label: `${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}`, key: 'unitPrice', width: moneyColumnWidth + 4, money: true },
-      { label: `${tr('includedTotalWithTax')} ${combinedTaxLabel}`, key: 'baseTotal', width: moneyColumnWidth + 4, money: true },
+      { label: tr('includedUnitPriceWithoutTax'), key: 'netUnitPrice', width: moneyColumnWidth('netUnitPrice'), money: true },
+      { label: tr('includedTotalWithoutTax'), key: 'finalTotal', width: moneyColumnWidth('finalTotal'), money: true },
+      { label: `${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}`, key: 'unitPrice', width: moneyColumnWidth('unitPrice'), money: true },
+      { label: `${tr('includedTotalWithTax')} ${combinedTaxLabel}`, key: 'baseTotal', width: moneyColumnWidth('baseTotal'), money: true },
     ];
   }
   return [
     ...base,
-    { label: tr('excludedUnitPriceWithoutTax'), key: 'unitPrice', width: moneyColumnWidth, money: true },
-    { label: tr('excludedTotalWithoutTax'), key: 'baseTotal', width: moneyColumnWidth + 4, money: true },
-    { label: `${tr('excludedUnitPriceWithTax')} ${combinedTaxLabel}`, key: 'grossUnitPrice', width: moneyColumnWidth + 4, money: true },
-    { label: `${tr('excludedTotalWithTax')} ${combinedTaxLabel}`, key: 'finalTotal', width: moneyColumnWidth + 4, money: true },
+    { label: tr('excludedUnitPriceWithoutTax'), key: 'unitPrice', width: moneyColumnWidth('unitPrice'), money: true },
+    { label: tr('excludedTotalWithoutTax'), key: 'baseTotal', width: moneyColumnWidth('baseTotal'), money: true },
+    { label: `${tr('excludedUnitPriceWithTax')} ${combinedTaxLabel}`, key: 'grossUnitPrice', width: moneyColumnWidth('grossUnitPrice'), money: true },
+    { label: `${tr('excludedTotalWithTax')} ${combinedTaxLabel}`, key: 'finalTotal', width: moneyColumnWidth('finalTotal'), money: true },
   ];
 }
 
