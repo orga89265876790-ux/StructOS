@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=58" />
+    <link rel="stylesheet" href="dashboard.css?v=59" />
   </head>
   <body class="is-cabinet-entering">
     <section class="cabinet-entry" data-cabinet-entry role="status" aria-live="polite" aria-label="Вход в личный кабинет">
@@ -213,6 +213,27 @@
                 <span><strong data-i18n="quickObjectStart">Быстрый старт объекта</strong><small data-i18n="quickObjectStartHint">Создать короткий объект для доходов, расходов и отчётов</small></span><i aria-hidden="true">→</i>
               </button>
             </div>
+          </section>
+
+          <section class="section-block home-rental-section" aria-labelledby="home-rental-title">
+            <div class="section-heading home-rental-heading">
+              <div><span class="eyebrow">STRUCTOS RENT</span><h2 id="home-rental-title" data-i18n="ourRental">Наша Аренда</h2></div>
+            </div>
+            <div class="home-rental-grid">
+              <article class="home-rental-card is-fleet" aria-disabled="true">
+                <span class="home-rental-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48"><path d="M8 31v-8l5-9h19l8 9v8M6 31h36v7H6z"/><circle cx="14" cy="38" r="4"/><circle cx="34" cy="38" r="4"/><path d="M14 14l3 9h18l-5-9"/></svg>
+                </span>
+                <strong data-i18n="vehicleFleet">Автопарк</strong>
+              </article>
+              <article class="home-rental-card is-tools" aria-disabled="true">
+                <span class="home-rental-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48"><path d="m29 8-8 8 5 5 8-8a10 10 0 0 1-12 13L10 38l-4-4 12-12A10 10 0 0 1 29 8Z"/><path d="m31 29 11 11M36 27l-9 9"/></svg>
+                </span>
+                <strong data-i18n="rentalTools">Инструмент</strong>
+              </article>
+            </div>
+            <p class="home-rental-status"><i aria-hidden="true"></i><span data-i18n="rentalPreparingLaunch">Блок готовится к запуску</span></p>
           </section>
 
           <section class="object-status-block ready-objects-block">
@@ -423,6 +444,6 @@
       </dialog>
       <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
     </div>
-    <script type="module" src="dashboard.js?v=61"></script>
+    <script type="module" src="dashboard.js?v=62"></script>
   </body>
 </html>
