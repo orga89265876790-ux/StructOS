@@ -9456,7 +9456,7 @@ function isDemoAccount() {
 async function pushRegistration() {
   const current = await navigator.serviceWorker.getRegistration();
   if (current) return current;
-  return navigator.serviceWorker.register('./sw.js');
+  return navigator.serviceWorker.register('./sw.js?v=95', { updateViaCache: 'none' });
 }
 
 async function pushNotificationState() {
@@ -10131,4 +10131,4 @@ const cabinetRole = await initAuth();
 if (cabinetRole) playCabinetWelcome(cabinetRole);
 if (pendingTransferImport?.intent === 'commercial-proposal' || location.hash === '#proposals') localStorage.removeItem(AUTH_RETURN_KEY);
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=95', { updateViaCache: 'none' }).catch(() => {}));
