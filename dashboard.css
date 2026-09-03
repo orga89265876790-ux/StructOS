@@ -2692,3 +2692,76 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
     max-width: 112px;
   }
 }
+
+
+/* Compact fixed proposal columns v2 */
+table.is-compact-proposal-table {
+  width: 100%;
+  min-width: var(--proposal-table-min-width, 760px) !important;
+  table-layout: fixed !important;
+}
+
+table.is-compact-proposal-table th.proposal-line-name-head,
+table.is-compact-proposal-table td.proposal-line-name,
+table.is-compact-proposal-table th.proposal-line-unit-head,
+table.is-compact-proposal-table td.proposal-line-unit,
+table.is-compact-proposal-table th.proposal-line-quantity-head,
+table.is-compact-proposal-table td.proposal-line-quantity,
+table.is-compact-proposal-table th.proposal-price-column-head,
+table.is-compact-proposal-table td.proposal-price-input-cell,
+table.is-compact-proposal-table td.proposal-price-value-cell,
+table.is-compact-proposal-table th.proposal-line-action-head,
+table.is-compact-proposal-table td.proposal-line-action,
+table.is-compact-proposal-table th.proposal-line-meta-head,
+table.is-compact-proposal-table td.proposal-line-meta-cell {
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+
+table.is-compact-proposal-table th.proposal-price-column-head {
+  padding-inline: 5px;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.15;
+}
+
+table.is-compact-proposal-table td.proposal-price-input-cell,
+table.is-compact-proposal-table td.proposal-price-value-cell,
+table.is-compact-proposal-table td.is-money {
+  padding-inline: 5px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+table.is-compact-proposal-table .proposal-price-input-cell .proposal-number-input,
+table.is-compact-proposal-table .proposal-quantity-input,
+table.is-compact-proposal-table .proposal-labor-hours .proposal-number-input {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  padding-inline: 5px;
+}
+
+table.is-compact-proposal-table th.proposal-line-unit-head,
+table.is-compact-proposal-table td.proposal-line-unit,
+table.is-compact-proposal-table th.proposal-line-quantity-head,
+table.is-compact-proposal-table td.proposal-line-quantity {
+  padding-inline: 5px;
+  white-space: nowrap;
+}
+
+table.is-compact-proposal-table th.proposal-line-name-head,
+table.is-compact-proposal-table td.proposal-line-name {
+  min-width: 0 !important;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+table.commercial-proposal-labor-table.is-compact-proposal-table th:nth-last-child(-n + 3),
+table.commercial-proposal-labor-table.is-compact-proposal-table td:nth-last-child(-n + 3) {
+  width: auto;
+  min-width: 0;
+  max-width: none;
+}
