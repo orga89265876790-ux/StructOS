@@ -10,6 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="dashboard.css?v=61" />
+    <link rel="stylesheet" href="home-dashboard.css?v=1" />
   </head>
   <body class="is-cabinet-entering">
     <section class="cabinet-entry" data-cabinet-entry role="status" aria-live="polite" aria-label="Вход в личный кабинет">
@@ -89,6 +90,10 @@
                 <span>ID <span data-user-id>4 820 197</span></span>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg>
               </button>
+              <span class="identity-online" aria-live="polite">
+                <span><i class="home-stat-dot" aria-hidden="true"></i><span data-i18n="online">online</span></span>
+                <strong data-stat-online>—</strong>
+              </span>
               <button class="passport-inline-link" type="button" data-open-view="passport"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"/></svg><span data-i18n="passportLink">Паспорт</span></button>
             </div>
           </section>
@@ -111,74 +116,16 @@
                 <i class="passport-activity-progress" data-activity-progress role="progressbar" aria-label="Активность" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></i>
               </aside>
             </div>
-          </section>
-
-          <section class="section-block home-sync-section" aria-labelledby="home-sync-title">
-            <div class="home-sync-pending-summary" data-sync-pending-summary role="status" aria-live="polite">
-              <span data-i18n="syncPendingTotal">ИТОГО НЕ СИНХРОНИЗИРОВАНО</span>
-              <strong data-sync-pending-counts><b data-sync-pending-sections>0</b> <span data-sync-pending-section-label>разделов</span> · <b data-sync-pending-subsections>0</b> <span data-sync-pending-subsection-label>подразделов</span></strong>
-            </div>
-            <button class="home-sync-launch" type="button" data-open-sync-dialog>
-              <span class="home-sync-launch-icon" aria-hidden="true">
-                <svg viewBox="0 0 48 48"><rect x="8" y="5" width="20" height="38" rx="5"/><path d="M15 10h6M16 37h4M32 17a8 8 0 0 1 7 12M35 16l-3 1 1 3M35 33a8 8 0 0 1-7-12M32 34l3-1-1-3"/></svg>
-              </span>
-              <span class="home-sync-launch-copy">
-                <small>STRUCTOS OFFLINE-FIRST</small>
-                <strong id="home-sync-title" data-i18n="syncTitle">СИНХРОНИЗАЦИЯ</strong>
-                <em data-i18n="syncSubtitle">Синхронизируйте данные, записав их на телефон, для работы офлайн без интернета.</em>
-              </span>
-              <i aria-hidden="true">↔</i>
-            </button>
-
-            <div class="home-sync-scenarios" aria-label="Сценарии синхронизации">
-              <article class="home-sync-scenario is-online">
-                <span class="home-sync-scenario-icon" aria-hidden="true">↔</span>
-                <small data-i18n="syncInternetAvailable">ИНТЕРНЕТ ЕСТЬ</small>
-                <strong data-i18n="syncOnlineFlow">Телефон ↔ StructOS Cloud</strong>
-              </article>
-              <article class="home-sync-scenario is-offline">
-                <span class="home-sync-scenario-icon" aria-hidden="true">⌁</span>
-                <small data-i18n="syncInternetLost">ИНТЕРНЕТ ПРОПАЛ</small>
-                <strong data-i18n="syncOfflineFlow">Телефон продолжает работать</strong>
-              </article>
-              <article class="home-sync-scenario is-restored">
-                <span class="home-sync-scenario-icon" aria-hidden="true">⇄</span>
-                <small data-i18n="syncInternetRestored">ИНТЕРНЕТ ПОЯВИЛСЯ</small>
-                <strong data-i18n="syncRestoredFlow">Автоматическая синхронизация</strong>
-              </article>
-            </div>
-
-            <div class="home-sync-live-status" data-sync-live-status role="status" aria-live="polite">
-              <i aria-hidden="true"></i>
-              <span><strong data-sync-live-title>Подготовка локальной копии</strong><small data-sync-live-copy>Данные сохраняются на устройстве</small></span>
-              <b data-sync-live-action>Открыть</b>
-            </div>
-          </section>
-
-          <section class="section-block home-statistics" aria-labelledby="home-statistics-title">
-            <div class="section-heading home-statistics-heading">
-              <div><span class="eyebrow">STRUCTOS LIVE</span><h2 id="home-statistics-title" data-i18n="statistics">Статистика</h2></div>
-            </div>
-            <div class="home-statistics-grid">
-              <article class="home-stat-card is-online">
-                <span class="home-stat-label"><i class="home-stat-dot" aria-hidden="true"></i><span data-i18n="online">online</span></span>
-                <strong data-stat-online>—</strong>
-              </article>
-              <article class="home-stat-card">
-                <span class="home-stat-label" data-i18n="registeredUsers">Зарегистрировано пользователей</span>
-                <strong data-stat-users>1324</strong>
-              </article>
-              <article class="home-stat-card">
-                <span class="home-stat-label" data-i18n="referralContribution">Ваш вклад по ссылке</span>
-                <strong data-stat-referrals>0</strong>
-              </article>
-            </div>
-            <section class="referral-card" aria-label="Личная реферальная ссылка">
+            <section class="referral-card passport-referral-card" aria-label="Личная реферальная ссылка">
               <div class="referral-icon" aria-hidden="true">+</div>
               <div class="referral-copy">
                 <strong data-i18n="personalReferralLink">Личная реферальная ссылка</strong>
                 <button type="button" data-copy-referral><span data-referral-short>StructOS · r/4820197</span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button>
                 <small data-i18n="referralRecommendationReward">+150 рублей за рекомендацию</small>
+              </div>
+              <div class="referral-contribution">
+                <span data-i18n="referralContribution">Ваш вклад по ссылке</span>
+                <strong data-stat-referrals>0</strong>
               </div>
               <button class="referral-share" type="button" data-share-referral data-i18n="share">Поделиться</button>
             </section>
@@ -195,6 +142,41 @@
               <span class="home-inbox-copy"><small>STRUCTOS NOTICE</small><strong data-i18n="notifications">Уведомления</strong><em data-i18n="notificationsHomeHint">Важные события по вашим объектам</em></span>
               <b data-home-notifications-count>0</b>
             </button>
+          </section>
+
+          <section class="section-block home-sync-section" aria-labelledby="home-sync-title">
+            <div class="home-sync-heading">
+              <span class="eyebrow">STRUCTOS OFFLINE-FIRST</span>
+              <h2 id="home-sync-title" data-i18n="syncTitle">СИНХРОНИЗАЦИЯ</h2>
+              <p data-i18n="syncSubtitle">Синхронизируйте данные, записав их на телефон, для работы офлайн без интернета.</p>
+            </div>
+            <div class="home-sync-controls">
+              <button class="home-sync-action is-primary" type="button" data-open-sync-dialog>
+                <span aria-hidden="true">↔</span>
+                <strong data-home-i18n="syncNow">Синхронизировать</strong>
+              </button>
+              <button class="home-sync-action is-pending" type="button" data-open-sync-dialog data-sync-pending-summary aria-live="polite">
+                <span aria-hidden="true">!</span>
+                <span><strong data-home-i18n="notSynchronized">Не синхронизировано</strong><small data-sync-pending-counts><b data-sync-pending-sections>0</b> <span data-sync-pending-section-label>разделов</span> · <b data-sync-pending-subsections>0</b> <span data-sync-pending-subsection-label>подразделов</span></small></span>
+              </button>
+            </div>
+            <div class="home-sync-network" role="status" aria-live="polite">
+              <span class="is-online" data-sync-network-online><i aria-hidden="true"></i><span data-home-i18n="networkAvailable">Сеть есть</span></span>
+              <span class="is-offline" data-sync-network-offline><i aria-hidden="true"></i><span data-home-i18n="networkUnavailable">Сети нет</span></span>
+            </div>
+            <div class="home-sync-live-status" data-sync-live-status hidden aria-hidden="true"><i></i><span><strong data-sync-live-title></strong><small data-sync-live-copy></small></span><b data-sync-live-action></b></div>
+          </section>
+
+          <section class="section-block home-statistics" aria-labelledby="home-statistics-title">
+            <div class="section-heading home-statistics-heading">
+              <div><span class="eyebrow">STRUCTOS LIVE</span><h2 id="home-statistics-title" data-i18n="statistics">Статистика</h2></div>
+            </div>
+            <div class="home-statistics-grid">
+              <article class="home-stat-card">
+                <span class="home-stat-label" data-i18n="registeredUsers">Зарегистрировано пользователей</span>
+                <strong data-stat-users>1324</strong>
+              </article>
+            </div>
           </section>
 
           <section class="section-block quick-start-section">
@@ -224,27 +206,15 @@
                 <span class="home-rental-icon" aria-hidden="true">
                   <svg viewBox="0 0 48 48"><path d="M8 31v-8l5-9h19l8 9v8M6 31h36v7H6z"/><circle cx="14" cy="38" r="4"/><circle cx="34" cy="38" r="4"/><path d="M14 14l3 9h18l-5-9"/></svg>
                 </span>
-                <strong data-i18n="vehicleFleet">Автопарк</strong>
+                <span><strong data-i18n="vehicleFleet">Автопарк</strong><small data-i18n="inDevelopment">В разработке</small></span>
               </article>
               <article class="home-rental-card is-tools" aria-disabled="true">
                 <span class="home-rental-icon" aria-hidden="true">
                   <svg viewBox="0 0 48 48"><path d="m29 8-8 8 5 5 8-8a10 10 0 0 1-12 13L10 38l-4-4 12-12A10 10 0 0 1 29 8Z"/><path d="m31 29 11 11M36 27l-9 9"/></svg>
                 </span>
-                <strong data-i18n="rentalTools">Инструмент</strong>
+                <span><strong data-i18n="rentalTools">Инструмент</strong><small data-i18n="inDevelopment">В разработке</small></span>
               </article>
             </div>
-            <p class="home-rental-status"><i aria-hidden="true"></i><span data-i18n="rentalPreparingLaunch">Блок готовится к запуску</span></p>
-          </section>
-
-          <section class="object-status-block ready-objects-block">
-            <header><div><span class="eyebrow">STRUCTOS READY</span><h2 data-i18n="readyObjects">Готовые к запуску объекты</h2></div><strong class="object-count" data-ready-count>0</strong></header>
-            <div class="status-object-list" data-ready-objects-list></div>
-            <div class="object-list-empty" data-ready-empty><span>◇</span><p data-i18n="noReadyObjects">После анализа проекты появятся здесь</p></div>
-          </section>
-
-          <section class="attention-card">
-            <div class="attention-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></div>
-            <div><h2 data-i18n="attention">Требует внимания</h2><p data-i18n="allGood">Всё в порядке</p></div>
           </section>
         </section>
 
@@ -452,5 +422,6 @@
       }
     </script>
     <script type="module" src="dashboard.js?v=65"></script>
+    <script type="module" src="home-dashboard.js?v=1"></script>
   </body>
 </html>
