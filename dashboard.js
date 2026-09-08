@@ -1230,6 +1230,25 @@ Object.assign(copy.TJ, {
   syncProgressSaving: 'Маълумоти интихобшуда дар телефон нигоҳ дошта мешавад…', syncProgressCloud: 'Тағйирот бо StructOS Cloud муқоиса мешавад…', syncToastOffline: 'Маълумот дар телефон нигоҳ дошта шуд ва барои офлайн омода аст', syncToastDevice: 'Нусхаи маҳаллӣ нав шуд; фиристодан ба абр дар навбат аст', syncToastCloud: 'Телефон ва StructOS Cloud ҳамоҳанг шуданд'
 });
 
+Object.assign(copy.RU, {
+  games: 'Игры', gamesDescription: 'Настоящие мини-игры для короткого перерыва. Сетевая игра появится позже.', gameBonusBalance: 'Бонусы',
+  gameSnake: 'Змейка', gameSnakeHint: 'Наберите 10 очков и получите бонус', gameTetris: 'Тетрис', gameTetrisHint: 'Собирайте линии', gameBlaster: 'Взрыватель', gameBlasterHint: 'Найдите безопасные клетки', gamePoker: 'Покер', gamePokerHint: 'Партия против компьютера', gameChess: 'Шахматы', gameCheckers: 'Шашки', gameBackgammon: 'Нарды', gameLocalTwo: 'Игра вдвоём на одном устройстве', chooseGame: 'Выберите игру', chooseGameHint: 'Игра откроется здесь и сохранит оформление StructOS.',
+  earnWithStructos: 'Заработай со StructOS', earnWithStructosHint: 'Получайте бонусы за полезные действия и активность в приложении.', activityAccrual: 'Начислено за активность', fillBuilderPassport: 'Заполнить Паспорт строителя', linkSocialNetworks: 'Привязать соцсети и контакты', inviteFriend: 'Пригласить по личной ссылке', winBonus: 'Бонус за победу', playGames: 'Играть в StructOS', dailyLoginBonus: 'Ежедневный бонус за вход', monthlyActivityBonus: 'До 750 ₽ в месяц начисляется во время использования приложения', accruesEverySecond: 'Начисляются каждую секунду',
+  dailyLoginReward: 'Ежедневный вход', dailyBonusTitle: 'Ежедневный бонус StructOS', dailyBonusCopy: 'Вам начислено 25 ₽ за непрерывный вход в приложение. Начисление выполняется один раз в день.', dailyBonusButton: 'Отлично', activityMonthlyAccrual: 'Активность в StructOS', gameWinReward: 'Победа в «Змейке»', gameRewardToast: 'За победу начислено 10 ₽',
+  pushPermissionQuestion: 'Разрешить уведомления?', pushPermissionLoginHint: 'Получайте приглашения и важные события, даже когда StructOS закрыт.', yes: 'Да', no: 'Нет',
+  connectionsWarningTitle: 'Вы теряете предложения', connectionsWarningCopy: 'Привяжите соцсети и мессенджеры, чтобы получать все приглашения и предложения.', linkNow: 'Привязать', later: 'Позже', byInvitation: 'По приглашению'
+});
+Object.assign(copy.EN, {
+  games: 'Games', gamesDescription: 'Real mini-games for a short break. Online play is coming later.', gameBonusBalance: 'Bonuses', gameSnake: 'Snake', gameSnakeHint: 'Score 10 points to earn a bonus', gameTetris: 'Tetris', gameTetrisHint: 'Complete lines', gameBlaster: 'Minesweeper', gameBlasterHint: 'Find the safe cells', gamePoker: 'Poker', gamePokerHint: 'Play against the computer', gameChess: 'Chess', gameCheckers: 'Checkers', gameBackgammon: 'Backgammon', gameLocalTwo: 'Two players on one device', chooseGame: 'Choose a game', chooseGameHint: 'The game will open here in the StructOS style.',
+  earnWithStructos: 'Earn with StructOS', earnWithStructosHint: 'Earn bonuses for useful actions and activity in the app.', activityAccrual: 'Activity earned', fillBuilderPassport: 'Complete Builder Passport', linkSocialNetworks: 'Link social networks and contacts', inviteFriend: 'Invite with your personal link', winBonus: 'Win bonus', playGames: 'Play in StructOS', dailyLoginBonus: 'Daily sign-in bonus', monthlyActivityBonus: 'Earn up to ₽750 per month while using the app', accruesEverySecond: 'Earned every second', dailyLoginReward: 'Daily sign-in', dailyBonusTitle: 'Daily StructOS bonus', dailyBonusCopy: 'You received ₽25 for signing in today.', dailyBonusButton: 'Great', activityMonthlyAccrual: 'StructOS activity', gameWinReward: 'Snake win', gameRewardToast: 'You earned ₽10 for winning', pushPermissionQuestion: 'Allow notifications?', pushPermissionLoginHint: 'Receive invitations and important updates even when StructOS is closed.', yes: 'Yes', no: 'No', connectionsWarningTitle: 'You are missing offers', connectionsWarningCopy: 'Link social networks and messengers to receive every invitation and offer.', linkNow: 'Link now', later: 'Later', byInvitation: 'By invitation'
+});
+Object.assign(copy.KY, {
+  games: 'Оюндар', gamesDescription: 'Кыска тыныгуу үчүн чыныгы мини-оюндар. Тармактык оюн кийин кошулат.', gameBonusBalance: 'Бонустар', gameSnake: 'Жылан', gameSnakeHint: '10 упай топтоп бонус алыңыз', gameTetris: 'Тетрис', gameTetrisHint: 'Саптарды толтуруңуз', gameBlaster: 'Мина талаасы', gameBlasterHint: 'Коопсуз уячаларды табыңыз', gamePoker: 'Покер', gamePokerHint: 'Компьютерге каршы оюн', gameChess: 'Шахмат', gameCheckers: 'Дойбу', gameBackgammon: 'Нарды', gameLocalTwo: 'Бир түзмөктө эки оюнчу', chooseGame: 'Оюнду тандаңыз', chooseGameHint: 'Оюн ушул жерде StructOS стилинде ачылат.', earnWithStructos: 'StructOS менен тап', earnWithStructosHint: 'Пайдалуу аракеттер жана активдүүлүк үчүн бонус алыңыз.', activityAccrual: 'Активдүүлүк үчүн', fillBuilderPassport: 'Куруучунун паспортун толтуруу', linkSocialNetworks: 'Соцтармактарды жана байланыштарды кошуу', inviteFriend: 'Жеке шилтеме менен чакыруу', winBonus: 'Жеңиш бонусу', playGames: 'StructOS оюндарын ойноо', dailyLoginBonus: 'Күнүмдүк кирүү бонусу', monthlyActivityBonus: 'Тиркемени колдонууда айына 750 ₽ чейин', accruesEverySecond: 'Ар секунд сайын эсептелет', dailyLoginReward: 'Күнүмдүк кирүү', dailyBonusTitle: 'StructOS күнүмдүк бонусу', dailyBonusCopy: 'Бүгүн киргениңиз үчүн 25 ₽ кошулду.', dailyBonusButton: 'Жакшы', activityMonthlyAccrual: 'StructOS активдүүлүгү', gameWinReward: '«Жылан» оюнунда жеңиш', gameRewardToast: 'Жеңиш үчүн 10 ₽ кошулду', pushPermissionQuestion: 'Билдирмелерге уруксат бересизби?', pushPermissionLoginHint: 'StructOS жабык болсо да чакырууларды жана маанилүү окуяларды алыңыз.', yes: 'Ооба', no: 'Жок', connectionsWarningTitle: 'Сиз сунуштарды жоготуп жатасыз', connectionsWarningCopy: 'Бардык чакыруулар үчүн соцтармактарды жана мессенжерлерди кошуңуз.', linkNow: 'Кошуу', later: 'Кийин', byInvitation: 'Чакыруу боюнча'
+});
+Object.assign(copy.TJ, {
+  games: 'Бозиҳо', gamesDescription: 'Мини-бозиҳои воқеӣ барои танаффуси кӯтоҳ. Бозии шабакавӣ баъдтар илова мешавад.', gameBonusBalance: 'Бонусҳо', gameSnake: 'Морча', gameSnakeHint: '10 хол гиред ва бонус ба даст оред', gameTetris: 'Тетрис', gameTetrisHint: 'Қаторҳоро пур кунед', gameBlaster: 'Минаҷӯй', gameBlasterHint: 'Ҳуҷайраҳои бехатарро ёбед', gamePoker: 'Покер', gamePokerHint: 'Бозӣ бар зидди компютер', gameChess: 'Шоҳмот', gameCheckers: 'Шашка', gameBackgammon: 'Нард', gameLocalTwo: 'Ду бозигар дар як дастгоҳ', chooseGame: 'Бозиро интихоб кунед', chooseGameHint: 'Бозӣ дар ин ҷо бо услуби StructOS кушода мешавад.', earnWithStructos: 'Бо StructOS даромад гиред', earnWithStructosHint: 'Барои амалҳои муфид ва фаъолият бонус гиред.', activityAccrual: 'Барои фаъолият', fillBuilderPassport: 'Шиносномаи бинокорро пур кунед', linkSocialNetworks: 'Шабакаҳо ва алоқаҳоро пайваст кунед', inviteFriend: 'Бо пайванди шахсӣ даъват кунед', winBonus: 'Бонус барои ғалаба', playGames: 'Дар StructOS бозӣ кунед', dailyLoginBonus: 'Бонуси ҳаррӯзаи воридшавӣ', monthlyActivityBonus: 'Ҳангоми истифода то 750 ₽ дар як моҳ', accruesEverySecond: 'Ҳар сония ҳисоб мешавад', dailyLoginReward: 'Воридшавии ҳаррӯза', dailyBonusTitle: 'Бонуси ҳаррӯзаи StructOS', dailyBonusCopy: 'Барои воридшавии имрӯз 25 ₽ илова шуд.', dailyBonusButton: 'Олиҷаноб', activityMonthlyAccrual: 'Фаъолият дар StructOS', gameWinReward: 'Ғалаба дар «Морча»', gameRewardToast: 'Барои ғалаба 10 ₽ илова шуд', pushPermissionQuestion: 'Ба огоҳиномаҳо иҷозат медиҳед?', pushPermissionLoginHint: 'Ҳатто ҳангоми баста будани StructOS даъватҳо ва рӯйдодҳои муҳимро гиред.', yes: 'Ҳа', no: 'Не', connectionsWarningTitle: 'Шумо пешниҳодҳоро аз даст медиҳед', connectionsWarningCopy: 'Барои гирифтани ҳамаи даъватҳо шабакаҳо ва мессенҷерҳоро пайваст кунед.', linkNow: 'Пайваст кардан', later: 'Баъдтар', byInvitation: 'Бо даъват'
+});
+
 const CABINET_WELCOME_PROFILES = Object.freeze({
   user: { roleKey: 'cabinetWelcomeUserRole', phraseKeys: ['cabinetWelcomeUserOne', 'cabinetWelcomeUserTwo', 'cabinetWelcomeUserThree'] },
   executor: { roleKey: 'cabinetWelcomeExecutorRole', phraseKeys: ['cabinetWelcomeExecutorOne', 'cabinetWelcomeExecutorTwo', 'cabinetWelcomeExecutorThree'] },
@@ -1249,6 +1268,11 @@ const STATISTICS_HOUR_FORMATTER = new Intl.DateTimeFormat('en-GB', { timeZone: '
 let serverReferralCount = 0;
 const DEMO_SESSION_KEY = 'structos-demo-session';
 const FINANCE_KEY = 'structos-finance-v1';
+const PUSH_REMINDER_KEY = 'structos-push-reminder-next-v1';
+const ACTIVE_BONUS_MONTHLY = 750;
+const ACTIVE_BONUS_RATE = ACTIVE_BONUS_MONTHLY / (30 * 24 * 60 * 60);
+const DAILY_LOGIN_REWARD = 25;
+const SNAKE_WIN_REWARD = 10;
 const PROFILE_PLAN_KEY = 'structos-profile-plan-v1';
 const UPLOADS_KEY = 'structos-analysis-uploads-v1';
 const OBJECT_NAME_KEY = 'structos-analysis-object-name';
@@ -1321,11 +1345,15 @@ function loadFinance() {
   try {
     const saved = JSON.parse(localStorage.getItem(FINANCE_KEY) || 'null');
     if (saved && Number.isFinite(saved.balance) && Number.isFinite(saved.bonuses)) {
+      saved.balanceHistory = Array.isArray(saved.balanceHistory) ? saved.balanceHistory : [];
+      saved.bonusHistory = Array.isArray(saved.bonusHistory) ? saved.bonusHistory : [];
       saved.rewards ||= {};
       saved.rewards.passportFirst = Boolean(saved.rewards.passportFirst);
       saved.rewards.passport65 = Boolean(saved.rewards.passport65 || saved.rewards.passportFull);
       saved.rewards.profileFull = Boolean(saved.rewards.profileFull);
       saved.rewards.accountLinks = saved.rewards.accountLinks && typeof saved.rewards.accountLinks === 'object' ? saved.rewards.accountLinks : {};
+      saved.rewards.dailyLoginDate = String(saved.rewards.dailyLoginDate || '');
+      saved.rewards.gameWins = saved.rewards.gameWins && typeof saved.rewards.gameWins === 'object' ? saved.rewards.gameWins : {};
       return saved;
     }
   } catch {}
@@ -1334,7 +1362,7 @@ function loadFinance() {
     bonuses: 200,
     balanceHistory: [],
     bonusHistory: [{ key: 'passportFirstReward', amount: 200, date: new Date().toISOString() }],
-    rewards: { passportFirst: true, passport65: false, profileFull: false, accountLinks: {} }
+    rewards: { passportFirst: true, passport65: false, profileFull: false, accountLinks: {}, dailyLoginDate: '', gameWins: {} }
   };
 }
 
@@ -2030,6 +2058,7 @@ async function shareResume() {
 
 function saveFinance() {
   localStorage.setItem(FINANCE_KEY, JSON.stringify(finance));
+  renderFinance();
   renderHomeStatistics();
 }
 
@@ -2699,8 +2728,88 @@ function formatMoney(value) {
 
 function renderFinance() {
   $$('[data-balance-value]').forEach((item) => { item.textContent = formatMoney(finance.balance); });
-  $$('[data-bonus-value]').forEach((item) => { item.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(finance.bonuses); });
-  $$('[data-finance-summary]').forEach((item) => { item.textContent = `${formatMoney(finance.balance)} · ${finance.bonuses}`; });
+  const bonusValue = new Intl.NumberFormat(root.lang || 'ru-RU', { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(finance.bonuses);
+  $$('[data-bonus-value]').forEach((item) => { item.textContent = bonusValue; });
+  $$('[data-finance-summary]').forEach((item) => { item.textContent = `${formatMoney(finance.balance)} · ${bonusValue}`; });
+  renderLiveBonusState();
+}
+
+function localRewardDate(date = new Date()) {
+  const pad = (value) => String(value).padStart(2, '0');
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+}
+
+function currentActivityBonus() {
+  const now = new Date();
+  const month = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+  return (finance.bonusHistory || [])
+    .filter((entry) => entry.key === 'activityMonthlyAccrual' && String(entry.detail || '').startsWith(month))
+    .reduce((total, entry) => total + (Number(entry.amount) || 0), 0);
+}
+
+function renderLiveBonusState() {
+  const value = new Intl.NumberFormat(root.lang || 'ru-RU', { minimumFractionDigits: 5, maximumFractionDigits: 5 }).format(currentActivityBonus());
+  $$('[data-bonus-accrual-value]').forEach((item) => { item.textContent = `${value} ₽`; });
+}
+
+function awardDailyLoginReward() {
+  finance.rewards ||= {};
+  const today = localRewardDate();
+  if (finance.rewards.dailyLoginDate === today) return false;
+  finance.rewards.dailyLoginDate = today;
+  finance.bonuses += DAILY_LOGIN_REWARD;
+  finance.bonusHistory.unshift({ key: 'dailyLoginReward', amount: DAILY_LOGIN_REWARD, date: new Date().toISOString() });
+  saveFinance();
+  return true;
+}
+
+let activeBonusTimer = null;
+let activeBonusLastTick = performance.now();
+let activeBonusUnsavedSeconds = 0;
+
+function accrueActiveBonus() {
+  const now = performance.now();
+  const elapsedSeconds = Math.min(2, Math.max(0, (now - activeBonusLastTick) / 1000));
+  activeBonusLastTick = now;
+  if (document.hidden || elapsedSeconds <= 0) return;
+  const amount = Math.min(elapsedSeconds * ACTIVE_BONUS_RATE, Math.max(0, ACTIVE_BONUS_MONTHLY - currentActivityBonus()));
+  if (amount <= 0) return;
+  const today = localRewardDate();
+  finance.bonuses += amount;
+  let entry = finance.bonusHistory.find((item) => item.key === 'activityMonthlyAccrual' && item.detail === today);
+  if (!entry) {
+    entry = { key: 'activityMonthlyAccrual', detail: today, amount: 0, date: new Date().toISOString() };
+    finance.bonusHistory.unshift(entry);
+  }
+  entry.amount += amount;
+  activeBonusUnsavedSeconds += elapsedSeconds;
+  renderFinance();
+  if (activeBonusUnsavedSeconds >= 15) {
+    activeBonusUnsavedSeconds = 0;
+    localStorage.setItem(FINANCE_KEY, JSON.stringify(finance));
+  }
+}
+
+function startActiveBonusAccrual() {
+  if (activeBonusTimer) return;
+  activeBonusLastTick = performance.now();
+  activeBonusTimer = window.setInterval(accrueActiveBonus, 1000);
+  document.addEventListener('visibilitychange', () => { activeBonusLastTick = performance.now(); });
+  window.addEventListener('pagehide', () => localStorage.setItem(FINANCE_KEY, JSON.stringify(finance)));
+  renderFinance();
+}
+
+function awardGameWin(game) {
+  if (game !== 'snake') return;
+  finance.rewards ||= {};
+  finance.rewards.gameWins ||= {};
+  const rewardKey = `${game}:${localRewardDate()}`;
+  if (finance.rewards.gameWins[rewardKey]) return;
+  finance.rewards.gameWins[rewardKey] = true;
+  finance.bonuses += SNAKE_WIN_REWARD;
+  finance.bonusHistory.unshift({ key: 'gameWinReward', amount: SNAKE_WIN_REWARD, date: new Date().toISOString() });
+  saveFinance();
+  showToast(tr('gameRewardToast'));
 }
 
 function currentProfilePlan() {
@@ -2857,7 +2966,7 @@ function setPanel(name) {
     catch { activeCommercialProposalId = pathParts.join('/'); }
   }
   const projectPanels = ['proposals', 'proposal-detail', 'project-analysis', 'contract-review', 'estimate-analysis', 'analysis-detail'];
-  const next = ['home', 'projects', ...projectPanels, 'space', 'objects', 'cashflow', 'profile', 'passport'].includes(requestedPanel) ? requestedPanel : 'home';
+  const next = ['home', 'projects', ...projectPanels, 'space', 'games', 'objects', 'cashflow', 'profile', 'passport'].includes(requestedPanel) ? requestedPanel : 'home';
   $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
   if (next !== 'space') {
     $('[data-space-toolbar]').hidden = true;
@@ -2871,6 +2980,7 @@ function setPanel(name) {
   history.replaceState(null, '', panelHash);
   window.scrollTo({ top: 0, behavior: 'smooth' });
   if (next === 'space') requestAnimationFrame(renderWidgets);
+  if (next === 'games') window.dispatchEvent(new CustomEvent('structos:games-visible'));
   if (next === 'projects') renderMyProjects();
   if (next === 'proposals') renderCommercialProposals();
   if (next === 'proposal-detail') renderCommercialProposalWorkspace();
@@ -3658,19 +3768,81 @@ function openCalendarDialog() {
 
 function showDialog(title, copyText, extra = '') {
   const dialog = $('[data-dialog]');
-  dialog.classList.remove('cash-document-dialog', 'cash-export-dialog', 'calendar-dialog', 'invited-object-dialog', 'sync-dialog');
+  dialog.classList.remove('cash-document-dialog', 'cash-export-dialog', 'calendar-dialog', 'invited-object-dialog', 'sync-dialog', 'session-prompt-dialog');
   $('[data-dialog-content]').innerHTML = `<div class="dialog-content"><h2>${title}</h2><p>${copyText}</p>${extra}</div>`;
   if (!dialog.open) dialog.showModal();
+}
+
+function waitForDialogToClose() {
+  const dialog = $('[data-dialog]');
+  if (!dialog?.open) return Promise.resolve();
+  return new Promise((resolve) => dialog.addEventListener('close', resolve, { once: true }));
+}
+
+async function sessionPrompt(title, copyText, actions, tone = '') {
+  await waitForDialogToClose();
+  const buttons = actions.map((action) => `<button class="${action.primary ? 'primary-button' : 'outline-button'}" type="button" data-session-prompt-action="${escapeHtml(action.value)}">${escapeHtml(action.label)}</button>`).join('');
+  showDialog(escapeHtml(title), escapeHtml(copyText), `<div class="session-prompt-visual ${escapeHtml(tone)}" aria-hidden="true"><span></span><i></i></div><div class="session-prompt-actions">${buttons}</div>`);
+  const dialog = $('[data-dialog]');
+  dialog.classList.add('session-prompt-dialog');
+  return new Promise((resolve) => {
+    let selection = 'dismiss';
+    $$('[data-session-prompt-action]', dialog).forEach((button) => button.addEventListener('click', () => {
+      selection = button.dataset.sessionPromptAction;
+      dialog.close();
+    }));
+    dialog.addEventListener('close', () => resolve(selection), { once: true });
+  });
+}
+
+function shouldOfferPushPermission() {
+  if (!supportsPushNotifications() || Notification.permission === 'granted') return false;
+  return Date.now() >= Number(localStorage.getItem(PUSH_REMINDER_KEY) || 0);
+}
+
+function schedulePushReminder() {
+  localStorage.setItem(PUSH_REMINDER_KEY, String(Date.now() + (7 * 24 * 60 * 60 * 1000)));
+}
+
+function missingSocialConnections() {
+  return ['vk', 'telegram', 'whatsapp', 'max'].filter((key) => !structosConnections[key]);
+}
+
+async function runLoginPrompts(dailyRewarded) {
+  if (dailyRewarded) {
+    await sessionPrompt(tr('dailyBonusTitle'), tr('dailyBonusCopy'), [{ value: 'ok', label: tr('dailyBonusButton'), primary: true }], 'is-bonus');
+  }
+  if (shouldOfferPushPermission()) {
+    const permissionChoice = await sessionPrompt(tr('pushPermissionQuestion'), tr('pushPermissionLoginHint'), [
+      { value: 'yes', label: tr('yes'), primary: true },
+      { value: 'no', label: tr('no') }
+    ], 'is-push');
+    if (permissionChoice === 'yes') {
+      await enablePushNotifications({ reopenCenter: false });
+      if (Notification.permission === 'granted') localStorage.removeItem(PUSH_REMINDER_KEY);
+      else schedulePushReminder();
+    } else {
+      schedulePushReminder();
+    }
+  }
+  if (missingSocialConnections().length) {
+    const connectionChoice = await sessionPrompt(tr('connectionsWarningTitle'), tr('connectionsWarningCopy'), [
+      { value: 'link', label: tr('linkNow'), primary: true },
+      { value: 'later', label: tr('later') }
+    ], 'is-connections');
+    if (connectionChoice === 'link') openConnectionsDialog();
+  }
 }
 
 function historyMarkup(items, bonus = false) {
   if (!items.length) return `<div class="history-empty">${tr('noOperations')}</div>`;
   const formatter = new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric' });
-  return `<div class="transaction-list">${items.map((item) => `<div class="transaction-row"><span><strong>${tr(item.key)}${item.detail ? ` · ${escapeHtml(item.detail)}` : ''}</strong><small>${formatter.format(new Date(item.date))}</small></span><b>+${bonus ? item.amount : formatMoney(item.amount)}</b></div>`).join('')}</div>`;
+  const bonusFormatter = new Intl.NumberFormat(root.lang || 'ru-RU', { minimumFractionDigits: 1, maximumFractionDigits: 5 });
+  return `<div class="transaction-list">${items.map((item) => `<div class="transaction-row"><span><strong>${tr(item.key)}${item.detail ? ` · ${escapeHtml(item.detail)}` : ''}</strong><small>${formatter.format(new Date(item.date))}</small></span><b>+${bonus ? bonusFormatter.format(item.amount) : formatMoney(item.amount)}</b></div>`).join('')}</div>`;
 }
 
 function bonusRulesMarkup() {
-  return `<section class="finance-bonus-rules"><header><h3>${tr('bonusRules')}</h3><p>${tr('newBonusRulesHint')}</p></header><div class="bonus-rules"><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+150 ₽</b><span>${tr('referralReward')}</span></div><div><b>+150</b><span>${tr('accountLinkReward')} · ${tr('rewardOnce')}</span></div></div></section>`;
+  return `<section class="finance-bonus-rules"><header><h3>${tr('bonusRules')}</h3><p>${tr('newBonusRulesHint')}</p></header><div class="bonus-rules"><div><b>+25 ₽</b><span>${tr('dailyLoginReward')}</span></div><div><b>+750 ₽</b><span>${tr('activityMonthlyAccrual')}</span></div><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+150 ₽</b><span>${tr('referralReward')}</span></div><div><b>+150</b><span>${tr('accountLinkReward')} · ${tr('rewardOnce')}</span></div><div><b>+10 ₽</b><span>${tr('gameWinReward')}</span></div></div></section>`;
 }
 
 function processBalanceTopUp(input, reopen) {
@@ -3710,7 +3882,7 @@ function setFinanceHubTab(tab) {
 
 function openFinanceHubDialog(activeTab = 'balance') {
   const balanceValue = formatMoney(finance.balance);
-  const bonusValue = new Intl.NumberFormat(root.lang || 'ru-RU').format(finance.bonuses);
+  const bonusValue = new Intl.NumberFormat(root.lang || 'ru-RU', { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(finance.bonuses);
   const markup = `<section class="finance-hub"><div class="finance-hub-balances"><button type="button" data-finance-hub-tab="balance"><span>${tr('moneyBalance')}</span><strong>${balanceValue}</strong><small>${tr('balanceHistory')}</small></button><button type="button" data-finance-hub-tab="bonuses"><span>${tr('bonusBalance')}</span><strong>${bonusValue}</strong><small>${tr('bonusHistory')}</small></button></div>${bonusRulesMarkup()}<div class="finance-hub-pane" data-finance-hub-pane="balance"><div class="topup-form"><label><span>${tr('topUpAmount')}</span><input data-topup-amount type="number" inputmode="decimal" min="1" step="1" placeholder="1000" /></label><button class="primary-button" type="button" data-topup>${tr('topUp')}</button></div><section class="history-section"><h3>${tr('balanceHistory')}</h3>${historyMarkup(finance.balanceHistory)}</section></div><div class="finance-hub-pane" data-finance-hub-pane="bonuses" hidden><section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section></div></section>`;
   showDialog(tr('balanceBonuses'), tr('financeHubHint'), markup);
   const scope = $('[data-dialog-content]');
@@ -9029,7 +9201,8 @@ function unifiedObjectRowMarkup(object) {
   const handle = object.completed
     ? '<span class="unified-drag-placeholder" aria-hidden="true">✓</span>'
     : `<button class="unified-drag-handle" type="button" data-unified-drag aria-label="${escapeHtml(`${tr('dragObject')}: ${object.name}`)}" title="${escapeHtml(tr('dragObject'))}"><span></span><span></span><span></span></button>`;
-  return `<article class="unified-object-row is-${object.source}${object.completed ? ' is-completed' : ''}" data-unified-object="${escapeHtml(object.key)}" data-open-unified="${escapeHtml(object.key)}" role="button" tabindex="0" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}">${handle}<div class="unified-object-open"><span class="unified-object-icon" aria-hidden="true">${object.source === 'quick' ? '+₽−' : object.source === 'invited' ? '↗' : '⌂'}</span><span class="unified-object-copy"><strong>${escapeHtml(object.name)}</strong><span class="unified-object-badges"><b class="is-${object.source}">${escapeHtml(object.typeLabel)}</b><b class="is-status">${escapeHtml(status)}</b></span><small>${escapeHtml(meta)}</small></span><span class="unified-object-arrow" aria-hidden="true">›</span></div></article>`;
+  const invitationBadge = object.source === 'invited' ? `<span class="invited-object-ribbon"><i aria-hidden="true"></i>${escapeHtml(tr('byInvitation'))}</span>` : '';
+  return `<article class="unified-object-row is-${object.source}${object.completed ? ' is-completed' : ''}" data-unified-object="${escapeHtml(object.key)}" data-open-unified="${escapeHtml(object.key)}" role="button" tabindex="0" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}">${invitationBadge}${handle}<div class="unified-object-open"><span class="unified-object-icon" aria-hidden="true">${object.source === 'quick' ? '+₽−' : object.source === 'invited' ? '↗' : '⌂'}</span><span class="unified-object-copy"><strong>${escapeHtml(object.name)}</strong><span class="unified-object-badges"><b class="is-${object.source}">${escapeHtml(object.typeLabel)}</b><b class="is-status">${escapeHtml(status)}</b></span><small>${escapeHtml(meta)}</small></span><span class="unified-object-arrow" aria-hidden="true">›</span></div></article>`;
 }
 
 function openUnifiedObject(key) {
@@ -9661,7 +9834,7 @@ function isDemoAccount() {
 async function pushRegistration() {
   const current = await navigator.serviceWorker.getRegistration();
   if (current) return current;
-  return navigator.serviceWorker.register('./sw.js?v=95', { updateViaCache: 'none' });
+  return navigator.serviceWorker.register('./sw.js?v=99', { updateViaCache: 'none' });
 }
 
 async function pushNotificationState() {
@@ -9695,18 +9868,18 @@ function pushDeviceName() {
   return 'Web';
 }
 
-async function enablePushNotifications() {
-  if (!supportsPushNotifications()) { showToast(tr('pushUnsupported')); return; }
-  if (isAppleMobileDevice() && !isInstalledWebApp()) { showToast(tr('pushInstallRequired')); return; }
+async function enablePushNotifications({ reopenCenter = true } = {}) {
+  if (!supportsPushNotifications()) { showToast(tr('pushUnsupported')); return false; }
+  if (isAppleMobileDevice() && !isInstalledWebApp()) { showToast(tr('pushInstallRequired')); return false; }
   try {
     const permission = Notification.permission === 'default' ? await Notification.requestPermission() : Notification.permission;
-    if (permission !== 'granted') { await openNotificationsCenter(); return; }
+    if (permission !== 'granted') { if (reopenCenter) await openNotificationsCenter(); return false; }
     const registration = await pushRegistration();
     await registration.update().catch(() => {});
     if (!authClient || isDemoAccount()) {
       showToast(tr('pushLocalOnly'));
-      await openNotificationsCenter();
-      return;
+      if (reopenCenter) await openNotificationsCenter();
+      return true;
     }
     const { publicKey } = await invokePushApi({ action: 'public-key' });
     let subscription = await registration.pushManager.getSubscription();
@@ -9720,10 +9893,12 @@ async function enablePushNotifications() {
       throw error;
     }
     showToast(tr('pushEnabledToast'));
-    await openNotificationsCenter();
+    if (reopenCenter) await openNotificationsCenter();
+    return true;
   } catch (error) {
     console.error('StructOS push setup failed:', error);
     showToast(tr('pushError'));
+    return false;
   }
 }
 
@@ -9789,6 +9964,7 @@ function openView(view) {
   if (view === 'passport') { setPanel('passport'); return; }
   if (view === 'projects') { setPanel('projects'); return; }
   if (view === 'proposals') { setPanel('proposals'); return; }
+  if (view === 'games') { setPanel('games'); return; }
   if (view === 'objects') { setPanel('objects'); return; }
   if (view === 'invitations') { openInvitationsCenter(); return; }
   if (view === 'notifications') { openNotificationsCenter(); return; }
@@ -10260,6 +10436,14 @@ $$('[data-project-menu-placeholder]').forEach((button) => button.addEventListene
 $$('[data-launch-turnkey-object]').forEach((button) => button.addEventListener('click', () => openProjectObjectWizard({ workspaceOrigin: 'turnkey' })));
 $$('[data-open-view]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.openView)));
 $$('[data-action]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.action)));
+$$('[data-earn-action]').forEach((button) => button.addEventListener('click', () => {
+  const action = button.dataset.earnAction;
+  if (action === 'passport') setPanel('passport');
+  if (action === 'connections') openConnectionsDialog();
+  if (action === 'referral') shareReferral();
+  if (action === 'games') setPanel('games');
+}));
+window.addEventListener('structos:game-reward', (event) => awardGameWin(event.detail?.game));
 $$('[data-analysis-type]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.analysisType)));
 $('[data-run-analysis]')?.addEventListener('click', runAnalysis);
 $$('[data-create-project-object]').forEach((button) => button.addEventListener('click', () => openProjectObjectWizard()));
@@ -10334,6 +10518,9 @@ setPanel(pendingTransferImport?.intent === 'commercial-proposal' ? 'proposals' :
 restoreBottomMenuState();
 const cabinetRole = await initAuth();
 if (cabinetRole) playCabinetWelcome(cabinetRole);
+const dailyRewarded = awardDailyLoginReward();
+startActiveBonusAccrual();
+window.setTimeout(() => runLoginPrompts(dailyRewarded), window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1100 : 3750);
 if (pendingTransferImport?.intent === 'commercial-proposal' || location.hash === '#proposals') localStorage.removeItem(AUTH_RETURN_KEY);
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=95', { updateViaCache: 'none' }).catch(() => {}));
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=99', { updateViaCache: 'none' }).catch(() => {}));

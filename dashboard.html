@@ -9,8 +9,9 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=61" />
+    <link rel="stylesheet" href="dashboard.css?v=62" />
     <link rel="stylesheet" href="home-dashboard.css?v=1" />
+    <link rel="stylesheet" href="games.css?v=1" />
   </head>
   <body class="is-cabinet-entering">
     <section class="cabinet-entry" data-cabinet-entry role="status" aria-live="polite" aria-label="Вход в личный кабинет">
@@ -77,7 +78,8 @@
             </button>
             <button class="metric-card" type="button" data-open-view="bonuses">
               <span class="metric-label" data-i18n="bonuses">Бонусы</span>
-              <strong data-bonus-value>200</strong>
+              <strong data-bonus-value>200,0</strong>
+              <small class="metric-live-bonus"><i aria-hidden="true"></i><span data-i18n="accruesEverySecond">Начисляются каждую секунду</span></small>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 2.8Z"/></svg>
             </button>
           </div>
@@ -144,6 +146,39 @@
             </button>
           </section>
 
+          <section class="section-block quick-start-section">
+            <div class="section-heading quick-start-heading"><div><h2 data-i18n="quickStart">Быстрый старт</h2><span data-i18n="chooseAction">Выберите действие</span></div></div>
+            <div class="quick-start-grid">
+              <button class="quick-start-card is-project-analysis" type="button" data-quick-project-analysis>
+                <span class="quick-start-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M6 39h36M10 39V18h25v21M15 18V9h17v9M18 26h4M27 26h4M18 32h4M27 32h4"/><path d="m9 13 7-5 7 5 7-5 7 5"/></svg></span>
+                <span><strong data-i18n="quickProjectAnalysis">Быстрый анализ проекта</strong><small data-i18n="quickProjectAnalysisHint">Создать объект, загрузить проект и запустить анализ</small></span><i aria-hidden="true">→</i>
+              </button>
+              <button class="quick-start-card is-development" type="button" disabled aria-disabled="true">
+                <span class="quick-start-icon" aria-hidden="true">▶</span>
+                <span><strong data-i18n="quickProjectStart">Быстрый старт проекта</strong><small data-i18n="inDevelopment">В разработке</small></span><i class="development-badge" data-i18n="inDevelopment">В разработке</i>
+              </button>
+              <button class="quick-start-card is-quick-object" type="button" data-quick-object-start>
+                <span class="quick-start-icon" aria-hidden="true">+₽−</span>
+                <span><strong data-i18n="quickObjectStart">Быстрый старт объекта</strong><small data-i18n="quickObjectStartHint">Создать короткий объект для доходов, расходов и отчётов</small></span><i aria-hidden="true">→</i>
+              </button>
+            </div>
+          </section>
+
+          <section class="section-block earn-structos-section" aria-labelledby="earn-structos-title">
+            <div class="earn-structos-head">
+              <div><span class="eyebrow">STRUCTOS REWARDS</span><h2 id="earn-structos-title" data-i18n="earnWithStructos">Заработай со StructOS</h2><p data-i18n="earnWithStructosHint">Получайте бонусы за полезные действия и активность в приложении.</p></div>
+              <div class="live-bonus-counter" aria-live="polite"><small data-i18n="activityAccrual">Начислено за активность</small><strong data-bonus-accrual-value>0,00000 ₽</strong></div>
+            </div>
+            <div class="live-bonus-runner" aria-hidden="true"><span></span><i></i></div>
+            <div class="earn-actions">
+              <button type="button" data-earn-action="passport"><span><b>+200 / +300</b><strong data-i18n="fillBuilderPassport">Заполнить Паспорт строителя</strong></span><i>→</i></button>
+              <button type="button" data-earn-action="connections"><span><b>+150</b><strong data-i18n="linkSocialNetworks">Привязать соцсети и контакты</strong></span><i>→</i></button>
+              <button type="button" data-earn-action="referral"><span><b>+150 ₽</b><strong data-i18n="inviteFriend">Пригласить по личной ссылке</strong></span><i>→</i></button>
+              <button type="button" data-earn-action="games"><span><b data-i18n="winBonus">Бонус за победу</b><strong data-i18n="playGames">Играть в StructOS</strong></span><i>→</i></button>
+            </div>
+            <div class="earn-daily-note"><span>+25 ₽</span><p><strong data-i18n="dailyLoginBonus">Ежедневный бонус за вход</strong><small data-i18n="monthlyActivityBonus">До 750 ₽ в месяц начисляется во время использования приложения</small></p></div>
+          </section>
+
           <section class="section-block home-sync-section" aria-labelledby="home-sync-title">
             <div class="home-sync-heading">
               <span class="eyebrow">STRUCTOS OFFLINE-FIRST</span>
@@ -176,24 +211,6 @@
                 <span class="home-stat-label" data-i18n="registeredUsers">Зарегистрировано пользователей</span>
                 <strong data-stat-users>1324</strong>
               </article>
-            </div>
-          </section>
-
-          <section class="section-block quick-start-section">
-            <div class="section-heading quick-start-heading"><div><h2 data-i18n="quickStart">Быстрый старт</h2><span data-i18n="chooseAction">Выберите действие</span></div></div>
-            <div class="quick-start-grid">
-              <button class="quick-start-card is-project-analysis" type="button" data-quick-project-analysis>
-                <span class="quick-start-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M6 39h36M10 39V18h25v21M15 18V9h17v9M18 26h4M27 26h4M18 32h4M27 32h4"/><path d="m9 13 7-5 7 5 7-5 7 5"/></svg></span>
-                <span><strong data-i18n="quickProjectAnalysis">Быстрый анализ проекта</strong><small data-i18n="quickProjectAnalysisHint">Создать объект, загрузить проект и запустить анализ</small></span><i aria-hidden="true">→</i>
-              </button>
-              <button class="quick-start-card is-development" type="button" disabled aria-disabled="true">
-                <span class="quick-start-icon" aria-hidden="true">▶</span>
-                <span><strong data-i18n="quickProjectStart">Быстрый старт проекта</strong><small data-i18n="inDevelopment">В разработке</small></span><i class="development-badge" data-i18n="inDevelopment">В разработке</i>
-              </button>
-              <button class="quick-start-card is-quick-object" type="button" data-quick-object-start>
-                <span class="quick-start-icon" aria-hidden="true">+₽−</span>
-                <span><strong data-i18n="quickObjectStart">Быстрый старт объекта</strong><small data-i18n="quickObjectStartHint">Создать короткий объект для доходов, расходов и отчётов</small></span><i aria-hidden="true">→</i>
-              </button>
             </div>
           </section>
 
@@ -237,6 +254,20 @@
             </div>
             <p class="space-hint" data-i18n="dragHint">Удерживайте и перемещайте карточки</p>
           </div>
+        </section>
+
+        <section class="tab-panel games-panel" data-panel="games" aria-label="Игры" hidden>
+          <div class="page-title games-page-title"><div><span class="eyebrow">STRUCTOS GAMES</span><h1 data-i18n="games">Игры</h1><p data-i18n="gamesDescription">Настоящие мини-игры для короткого перерыва. Сетевая игра появится позже.</p></div><strong class="games-bonus-badge"><span data-i18n="gameBonusBalance">Бонусы</span><b data-bonus-value>200,0</b></strong></div>
+          <div class="games-library" role="list">
+            <button type="button" data-game-card="snake"><span aria-hidden="true">⌁</span><strong data-i18n="gameSnake">Змейка</strong><small data-i18n="gameSnakeHint">Наберите 10 очков и получите бонус</small></button>
+            <button type="button" data-game-card="tetris"><span aria-hidden="true">▦</span><strong data-i18n="gameTetris">Тетрис</strong><small data-i18n="gameTetrisHint">Собирайте линии</small></button>
+            <button type="button" data-game-card="mines"><span aria-hidden="true">✹</span><strong data-i18n="gameBlaster">Взрыватель</strong><small data-i18n="gameBlasterHint">Найдите безопасные клетки</small></button>
+            <button type="button" data-game-card="poker"><span aria-hidden="true">♠</span><strong data-i18n="gamePoker">Покер</strong><small data-i18n="gamePokerHint">Партия против компьютера</small></button>
+            <button type="button" data-game-card="chess"><span aria-hidden="true">♞</span><strong data-i18n="gameChess">Шахматы</strong><small data-i18n="gameLocalTwo">Игра вдвоём на одном устройстве</small></button>
+            <button type="button" data-game-card="checkers"><span aria-hidden="true">⛀</span><strong data-i18n="gameCheckers">Шашки</strong><small data-i18n="gameLocalTwo">Игра вдвоём на одном устройстве</small></button>
+            <button type="button" data-game-card="backgammon"><span aria-hidden="true">⚄</span><strong data-i18n="gameBackgammon">Нарды</strong><small data-i18n="gameLocalTwo">Игра вдвоём на одном устройстве</small></button>
+          </div>
+          <section class="game-stage" data-game-stage><div class="game-stage-empty"><span>▶</span><strong data-i18n="chooseGame">Выберите игру</strong><small data-i18n="chooseGameHint">Игра откроется здесь и сохранит оформление StructOS.</small></div></section>
         </section>
 
         <section class="tab-panel projects-panel" data-panel="projects" aria-label="Мои проекты" hidden>
@@ -342,6 +373,7 @@
             <button class="is-active" type="button" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v10h-6v-6H9v6H3V11Z"/></svg><span data-i18n="home">Главная</span></button>
             <button type="button" data-tab="projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h7l2 2h9v11H3zM3 7V4h7l2 3"/></svg><span data-i18n="myProjects">Мои проекты</span></button>
             <button type="button" data-tab="space"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span data-i18n="space">Пространство</span></button>
+            <button type="button" data-tab="games"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h10a5 5 0 0 1 4.7 6.7l-1.2 3.4a2.4 2.4 0 0 1-4.1.7L14.8 17H9.2l-1.6 1.8a2.4 2.4 0 0 1-4.1-.7l-1.2-3.4A5 5 0 0 1 7 8Z"/><path d="M7 11v4M5 13h4M16.5 12.2h.1M18.5 14.2h.1"/></svg><span data-i18n="games">Игры</span></button>
             <button type="button" data-tab="objects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h2M14 10h2"/></svg><span data-i18n="objects">Объекты</span></button>
             <button type="button" data-tab="cashflow"><span class="cashflow-nav-icon" aria-hidden="true">+₽−</span><span data-i18n="money">Быстрый объект</span></button>
             <button type="button" data-tab="profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="profile">Профиль</span></button>
@@ -362,6 +394,7 @@
           <nav class="drawer-nav">
             <button type="button" data-open-view="projects"><svg viewBox="0 0 24 24"><path d="M3 7h7l2 2h9v11H3zM3 7V4h7l2 3"/></svg><span data-i18n="myProjects">Мои проекты</span></button>
             <button type="button" data-open-view="proposals"><span class="drawer-proposal-icon" aria-hidden="true">₽</span><span data-i18n="commercialProposals">Коммерческие предложения</span></button>
+            <button type="button" data-open-view="games"><svg viewBox="0 0 24 24"><path d="M7 8h10a5 5 0 0 1 4.7 6.7l-1.2 3.4a2.4 2.4 0 0 1-4.1.7L14.8 17H9.2l-1.6 1.8a2.4 2.4 0 0 1-4.1-.7l-1.2-3.4A5 5 0 0 1 7 8Z"/><path d="M7 11v4M5 13h4M16.5 12.2h.1M18.5 14.2h.1"/></svg><span data-i18n="games">Игры</span></button>
             <div class="drawer-group is-open"><button type="button" data-profile-menu><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="myProfile">Мой профиль</span><i>⌃</i></button><div class="drawer-submenu"><button type="button" data-open-view="profile"><span class="submenu-dot"></span><span data-i18n="myProfile">Мой профиль</span></button><button type="button" data-open-view="subscription"><span class="submenu-dot"></span><span data-i18n="tariffSubscription">Тарифы и подписка</span></button><button type="button" data-open-view="balanceBonuses"><span class="submenu-dot"></span><span data-i18n="balanceBonuses">Баланс и бонусы</span></button></div></div>
             <button type="button" data-open-view="invitations"><svg viewBox="0 0 24 24"><path d="M3 6h18v14H3zM3 7l9 7 9-7"/></svg><span data-i18n="invitations">Приглашения</span></button>
             <button type="button" data-open-view="invite"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M19 9v6M16 12h6"/></svg><span data-i18n="invite">Пригласить</span></button>
@@ -416,12 +449,13 @@
     </div>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js?v=96', { updateViaCache: 'none' })
+        navigator.serviceWorker.register('./sw.js?v=99', { updateViaCache: 'none' })
           .then((registration) => registration.update())
           .catch(() => {});
       }
     </script>
-    <script type="module" src="dashboard.js?v=65"></script>
+    <script type="module" src="dashboard.js?v=66"></script>
     <script type="module" src="home-dashboard.js?v=1"></script>
+    <script type="module" src="games.js?v=1"></script>
   </body>
 </html>
