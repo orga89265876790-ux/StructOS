@@ -1139,10 +1139,10 @@ Object.assign(copy.TJ, {
   openShift: 'Кушодани баст', closeShift: 'Пӯшидани баст', shiftClosed: 'Баст пӯшида шуд', shiftNotOpened: 'Ҳанӯз кушода нест', shiftOpenedAt: 'Кушода шуд', shiftClosedAt: 'Пӯшида шуд', deleteShift: 'Нест кардани сатр', deleteShiftConfirm: 'Ин баст аз ҷадвал нест карда шавад?', noStaffingShifts: 'Одами аввалро ба ҷадвали бастҳо илова кунед.', staffingRequiredFields: 'Ному насаб, StructOS ID-и 7-рақама, сана, вақти баст ва арзиши баромадро пур кунед.', shiftOpened: 'Баст кушода ва вақт сабт шуд', shiftClosedToast: 'Баст пӯшида ва музд ҳисоб шуд', shiftDeleted: 'Баст нест шуд',
   overtimeFormula: 'Изофакорӣ танҳо баъд аз басти нақшавӣ ҳисоб мешавад: баромад ÷ соатҳои нақшавӣ × соатҳои изофа.', staffingNumber: '№', startStaffingDay: 'Оғози рӯзи нав', staffingDayTotal: 'Ҷамъ барои рӯз', staffingRegisterTotal: 'Ҷамъ аз рӯи ҷадвал', staffingPeopleShort: 'Одам', staffingShiftRatesTotal: 'Баромадҳо', staffingPenaltiesTotal: 'Ҷаримаҳо', staffingDayCreated: 'Рӯзи нав илова шуд'
 });
-Object.assign(copy.RU, { declineInvitation: 'Отклонить приглашение', declineInvitationTitle: 'Отклонить приглашение?', declineInvitationHint: 'Приглашение будет удалено из входящих и объект больше не будет показываться в списке.', invitationDeclined: 'Приглашение отклонено' });
-Object.assign(copy.EN, { declineInvitation: 'Decline invitation', declineInvitationTitle: 'Decline this invitation?', declineInvitationHint: 'The invitation will be removed from your inbox and the object will no longer appear in the list.', invitationDeclined: 'Invitation declined' });
-Object.assign(copy.KY, { declineInvitation: 'Чакырууну четке кагуу', declineInvitationTitle: 'Чакыруу четке кагылсынбы?', declineInvitationHint: 'Чакыруу киргендерден өчүрүлөт жана объект тизмеде мындан ары көрүнбөйт.', invitationDeclined: 'Чакыруу четке кагылды' });
-Object.assign(copy.TJ, { declineInvitation: 'Рад кардани даъват', declineInvitationTitle: 'Даъват рад карда шавад?', declineInvitationHint: 'Даъват аз воридот хориҷ мешавад ва объект дигар дар рӯйхат намоиш дода намешавад.', invitationDeclined: 'Даъват рад карда шуд' });
+Object.assign(copy.RU, { acceptInvitation: 'Принять приглашение', invitationAccepted: 'Приглашение принято', invitationPending: 'Ожидает решения', declineInvitation: 'Отклонить приглашение', declineInvitationTitle: 'Отклонить приглашение?', declineInvitationHint: 'Приглашение будет удалено из входящих и объект больше не будет показываться в списке.', invitationDeclined: 'Приглашение отклонено', expandExplanation: 'Развернуть поле пояснений', collapseExplanation: 'Свернуть поле пояснений' });
+Object.assign(copy.EN, { acceptInvitation: 'Accept invitation', invitationAccepted: 'Invitation accepted', invitationPending: 'Awaiting your response', declineInvitation: 'Decline invitation', declineInvitationTitle: 'Decline this invitation?', declineInvitationHint: 'The invitation will be removed from your inbox and the object will no longer appear in the list.', invitationDeclined: 'Invitation declined', expandExplanation: 'Expand explanation field', collapseExplanation: 'Collapse explanation field' });
+Object.assign(copy.KY, { acceptInvitation: 'Чакырууну кабыл алуу', invitationAccepted: 'Чакыруу кабыл алынды', invitationPending: 'Чечим күтүлүүдө', declineInvitation: 'Чакырууну четке кагуу', declineInvitationTitle: 'Чакыруу четке кагылсынбы?', declineInvitationHint: 'Чакыруу киргендерден өчүрүлөт жана объект тизмеде мындан ары көрүнбөйт.', invitationDeclined: 'Чакыруу четке кагылды', expandExplanation: 'Түшүндүрмө талаасын кеңейтүү', collapseExplanation: 'Түшүндүрмө талаасын жыйноо' });
+Object.assign(copy.TJ, { acceptInvitation: 'Қабули даъват', invitationAccepted: 'Даъват қабул шуд', invitationPending: 'Дар интизори қарор', declineInvitation: 'Рад кардани даъват', declineInvitationTitle: 'Даъват рад карда шавад?', declineInvitationHint: 'Даъват аз воридот хориҷ мешавад ва объект дигар дар рӯйхат намоиш дода намешавад.', invitationDeclined: 'Даъват рад карда шуд', expandExplanation: 'Кушодани майдони тавзеҳот', collapseExplanation: 'Пӯшидани майдони тавзеҳот' });
 
 Object.assign(copy.RU, {
   cabinetWelcomeTagline: 'ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ', cabinetWelcomeA11y: 'Вход в личный кабинет',
@@ -1757,9 +1757,10 @@ function demoInvitedObject() {
     id: 'demo-invited-severny-kvartal',
     nameKey: 'demoInvitedObjectName',
     name: '',
-    status: 'active',
+    status: 'pending',
     invitedAt: '2026-08-25T06:45:00.000Z',
     completedAt: null,
+    acceptedAt: null,
     invitedBy: 'StructOS Demo',
     roleKey: 'objectParticipant',
     files: []
@@ -1772,9 +1773,10 @@ function loadInvitedObjects() {
     id: String(object.id),
     nameKey: String(object.nameKey || ''),
     name: String(object.name || '').trim().slice(0, 120),
-    status: ['completed', 'declined'].includes(object.status) ? object.status : 'active',
+    status: ['pending', 'active', 'completed', 'declined'].includes(object.status) ? object.status : 'pending',
     invitedAt: object.invitedAt || new Date().toISOString(),
     completedAt: object.completedAt || null,
+    acceptedAt: object.acceptedAt || null,
     declinedAt: object.declinedAt || null,
     invitedBy: String(object.invitedBy || 'StructOS').slice(0, 120),
     roleKey: String(object.roleKey || 'objectParticipant'),
@@ -1782,6 +1784,8 @@ function loadInvitedObjects() {
   })) : [];
   const demo = demoInvitedObject();
   if (!objects.some((object) => object.id === demo.id)) objects.unshift(demo);
+  const storedDemo = objects.find((object) => object.id === demo.id);
+  if (storedDemo?.status === 'active' && !storedDemo.acceptedAt) storedDemo.status = 'pending';
   localStorage.setItem(INVITED_OBJECTS_KEY, JSON.stringify(objects));
   return objects;
 }
@@ -5401,7 +5405,7 @@ function renderCashDocumentSourceCatalog(scope, catalog, section, loading = fals
 
 function cashWorkRowsMarkup(rows, priced, sourceListId = '') {
   const listAttribute = sourceListId ? ` list="${escapeHtml(sourceListId)}" autocomplete="off"` : '';
-  return rows.map((row, index) => `<tr data-cash-work-row="${escapeHtml(row.id)}"><td>${index + 1}</td><td><input data-work-field="name" maxlength="240" value="${escapeHtml(row.name)}" placeholder="${tr('workOrMaterialName')}"${listAttribute} /></td><td><input data-work-field="unit" maxlength="40" value="${escapeHtml(row.unit)}" placeholder="${tr('unit')}" /></td><td><input data-work-field="quantity" type="number" min="0" step="0.001" inputmode="decimal" value="${row.quantity || ''}" placeholder="0" /></td>${priced ? `<td><input data-work-field="price" type="number" min="0" step="0.01" inputmode="decimal" value="${row.price || ''}" placeholder="0 ₽" /></td><td data-work-total>${formatMoney(row.quantity * row.price)}</td>` : `<td><input data-work-field="basis" maxlength="240" value="${escapeHtml(row.basis)}" placeholder="${tr('justification')}" /></td>`}<td><button type="button" data-remove-work-row aria-label="${tr('removeRow')}">×</button></td></tr>`).join('');
+  return rows.map((row, index) => `<tr data-cash-work-row="${escapeHtml(row.id)}"><td>${index + 1}</td><td><input data-work-field="name" maxlength="240" value="${escapeHtml(row.name)}" placeholder="${tr('workOrMaterialName')}"${listAttribute} /></td><td><input data-work-field="unit" maxlength="40" value="${escapeHtml(row.unit)}" placeholder="${tr('unit')}" /></td><td><input data-work-field="quantity" type="number" min="0" step="0.001" inputmode="decimal" value="${row.quantity || ''}" placeholder="0" /></td>${priced ? `<td><input data-work-field="price" type="number" min="0" step="0.01" inputmode="decimal" value="${row.price || ''}" placeholder="0 ₽" /></td><td data-work-total>${formatMoney(row.quantity * row.price)}</td>` : `<td><div class="cash-explanation-field" data-cash-explanation><textarea data-work-field="basis" maxlength="240" rows="1" placeholder="${tr('justification')}">${escapeHtml(row.basis)}</textarea><button type="button" data-toggle-explanation aria-expanded="false" aria-label="${tr('expandExplanation')}" title="${tr('expandExplanation')}"><span aria-hidden="true">↗</span></button></div></td>`}<td><button type="button" data-remove-work-row aria-label="${tr('removeRow')}">×</button></td></tr>`).join('');
 }
 
 function cashPartyMarkup(key, label, party) {
@@ -5423,6 +5427,17 @@ function bindCashDocumentRows(scope, draft, priced, sourceCatalog = [], sourceLi
   body.innerHTML = cashWorkRowsMarkup(draft.rows, priced, sourceListId);
   $$('[data-cash-work-row]', body).forEach((rowElement, index) => {
     const row = draft.rows[index];
+    $('[data-toggle-explanation]', rowElement)?.addEventListener('click', (event) => {
+      const control = event.currentTarget;
+      const field = $('[data-cash-explanation]', rowElement);
+      const expanded = field?.classList.toggle('is-expanded') || false;
+      control.setAttribute('aria-expanded', String(expanded));
+      control.setAttribute('aria-label', tr(expanded ? 'collapseExplanation' : 'expandExplanation'));
+      control.title = tr(expanded ? 'collapseExplanation' : 'expandExplanation');
+      const icon = $('span', control);
+      if (icon) icon.textContent = expanded ? '↙' : '↗';
+      if (expanded) $('[data-work-field="basis"]', rowElement)?.focus();
+    });
     $$('[data-work-field]', rowElement).forEach((input) => input.addEventListener('input', () => {
       const field = input.dataset.workField;
       row[field] = ['quantity', 'price'].includes(field) ? Math.max(0, Number(input.value) || 0) : input.value.slice(0, ['name', 'basis'].includes(field) ? 240 : 40);
@@ -6615,7 +6630,7 @@ function homeNotificationKey({ object, file }) {
 }
 
 function homePendingInvitations() {
-  return invitedObjects.filter((object) => object.status === 'active');
+  return invitedObjects.filter((object) => object.status === 'pending');
 }
 
 function homeUnreadNotifications() {
@@ -8982,7 +8997,7 @@ function combinedManagedObjects() {
     completedAt: object.completedAt || null,
     details: `${object.sections.length} ${tr('sectionCalculations')}`
   }));
-  const invitedManagedObjects = invitedObjects.filter((object) => object.status !== 'declined').map((object) => ({
+  const invitedManagedObjects = invitedObjects.filter((object) => ['active', 'completed'].includes(object.status)).map((object) => ({
     key: `invited:${object.id}`,
     id: object.id,
     source: 'invited',
@@ -9030,7 +9045,7 @@ function openUnifiedObject(key) {
 }
 
 function confirmDeclineInvitation(id) {
-  const object = invitedObjects.find((item) => item.id === id && item.status === 'active');
+  const object = invitedObjects.find((item) => item.id === id && ['pending', 'active'].includes(item.status));
   if (!object) return;
   showDialog(escapeHtml(tr('declineInvitationTitle')), tr('declineInvitationHint'), `<div class="result-actions"><button class="outline-button" type="button" data-cancel-invitation-decline>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-invitation-decline>${escapeHtml(tr('declineInvitation'))}</button></div>`);
   $('[data-cancel-invitation-decline]')?.addEventListener('click', () => $('[data-dialog]')?.close());
@@ -9045,6 +9060,18 @@ function confirmDeclineInvitation(id) {
   });
 }
 
+function acceptInvitation(id) {
+  const object = invitedObjects.find((item) => item.id === id && item.status === 'pending');
+  if (!object) return;
+  object.status = 'active';
+  object.acceptedAt = new Date().toISOString();
+  saveInvitedObjects();
+  renderHomeInbox();
+  renderObjects();
+  $('[data-dialog]')?.close();
+  showToast(tr('invitationAccepted'));
+}
+
 function openInvitedObjectCard(id) {
   const object = invitedObjects.find((item) => item.id === id);
   if (!object) return;
@@ -9053,10 +9080,12 @@ function openInvitedObjectCard(id) {
     const file = object.files.find((item) => item.kind === kind);
     return `<button class="object-document-choice${file ? ' has-file' : ''}" type="button" data-invited-document><span>${file ? '✓' : '+'}</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file?.name || tr('ownerWillShare'))}</small></button>`;
   }).join('');
-  const declineAction = object.status === 'active' ? `<div class="result-actions"><button class="outline-button is-danger" type="button" data-decline-invitation>${escapeHtml(tr('declineInvitation'))}</button></div>` : '';
-  showDialog(escapeHtml(name), tr('invitedToObject'), `<section class="invited-object-card"><div class="invited-object-status"><span>↗</span><div><b>${tr('invitedObject')}</b><small>${tr('inWork')}</small></div></div><dl><div><dt>${tr('invitedRole')}</dt><dd>${tr(object.roleKey || 'objectParticipant')}</dd></div><div><dt>${tr('invitedBy')}</dt><dd>${escapeHtml(object.invitedBy)}</dd></div><div><dt>${tr('invitedAt')}</dt><dd>${escapeHtml(formatObjectDate(object.invitedAt))}</dd></div></dl><p>${tr('invitedDocumentsHint')}</p><div class="object-document-chooser">${documents}</div>${declineAction}</section>`);
+  const isPending = object.status === 'pending';
+  const invitationActions = ['pending', 'active'].includes(object.status) ? `<div class="result-actions invited-object-actions">${isPending ? `<button class="primary-button" type="button" data-accept-invitation>${escapeHtml(tr('acceptInvitation'))}</button>` : ''}<button class="outline-button is-danger" type="button" data-decline-invitation>${escapeHtml(tr('declineInvitation'))}</button></div>` : '';
+  showDialog(escapeHtml(name), tr('invitedToObject'), `<section class="invited-object-card"><div class="invited-object-status"><span>↗</span><div><b>${tr('invitedObject')}</b><small>${tr(isPending ? 'invitationPending' : 'inWork')}</small></div></div><dl><div><dt>${tr('invitedRole')}</dt><dd>${tr(object.roleKey || 'objectParticipant')}</dd></div><div><dt>${tr('invitedBy')}</dt><dd>${escapeHtml(object.invitedBy)}</dd></div><div><dt>${tr('invitedAt')}</dt><dd>${escapeHtml(formatObjectDate(object.invitedAt))}</dd></div></dl><p>${tr('invitedDocumentsHint')}</p><div class="object-document-chooser">${documents}</div>${invitationActions}</section>`);
   $('[data-dialog]')?.classList.add('invited-object-dialog');
   $$('[data-invited-document]', $('[data-dialog-content]')).forEach((button) => button.addEventListener('click', () => showToast(tr('ownerWillShare'))));
+  $('[data-accept-invitation]')?.addEventListener('click', () => acceptInvitation(object.id));
   $('[data-decline-invitation]')?.addEventListener('click', () => confirmDeclineInvitation(object.id));
 }
 
