@@ -11,7 +11,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="dashboard.css?v=62" />
     <link rel="stylesheet" href="home-dashboard.css?v=1" />
-    <link rel="stylesheet" href="games.css?v=1" />
+    <link rel="stylesheet" href="games.css?v=2" />
   </head>
   <body class="is-cabinet-entering">
     <section class="cabinet-entry" data-cabinet-entry role="status" aria-live="polite" aria-label="Вход в личный кабинет">
@@ -262,6 +262,7 @@
             <button type="button" data-game-card="snake"><span aria-hidden="true">⌁</span><strong data-i18n="gameSnake">Змейка</strong><small data-i18n="gameSnakeHint">Наберите 10 очков и получите бонус</small></button>
             <button type="button" data-game-card="tetris"><span aria-hidden="true">▦</span><strong data-i18n="gameTetris">Тетрис</strong><small data-i18n="gameTetrisHint">Собирайте линии</small></button>
             <button type="button" data-game-card="mines"><span aria-hidden="true">✹</span><strong data-i18n="gameBlaster">Взрыватель</strong><small data-i18n="gameBlasterHint">Найдите безопасные клетки</small></button>
+            <button type="button" data-game-card="battleship"><span aria-hidden="true">⚓</span><strong data-i18n="gameBattleship">Морской бой</strong><small data-i18n="gameBattleshipHint">Потопите флот компьютера</small></button>
             <button type="button" data-game-card="poker"><span aria-hidden="true">♠</span><strong data-i18n="gamePoker">Покер</strong><small data-i18n="gamePokerHint">Партия против компьютера</small></button>
             <button type="button" data-game-card="chess"><span aria-hidden="true">♞</span><strong data-i18n="gameChess">Шахматы</strong><small data-i18n="gameLocalTwo">Игра вдвоём на одном устройстве</small></button>
             <button type="button" data-game-card="checkers"><span aria-hidden="true">⛀</span><strong data-i18n="gameCheckers">Шашки</strong><small data-i18n="gameLocalTwo">Игра вдвоём на одном устройстве</small></button>
@@ -449,13 +450,13 @@
     </div>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js?v=99', { updateViaCache: 'none' })
+        navigator.serviceWorker.register('./sw.js?v=100', { updateViaCache: 'none' })
           .then((registration) => registration.update())
           .catch(() => {});
       }
     </script>
-    <script type="module" src="dashboard.js?v=66"></script>
+    <script type="module" src="dashboard.js?v=67"></script>
     <script type="module" src="home-dashboard.js?v=1"></script>
-    <script type="module" src="games.js?v=1"></script>
+    <script type="module" src="games.js?v=2"></script>
   </body>
 </html>

@@ -10,6 +10,7 @@ if (gameStage && gameButtons.length) {
     snakeHelp: 'Стрелки на клавиатуре или кнопки. 10 очков — победа и бонус +10 ₽ один раз в день.',
     tetrisHelp: 'Собирайте заполненные линии. Фигуру можно двигать и поворачивать.',
     minesHelp: 'Откройте все безопасные клетки. Режим флага удобен на телефоне.',
+    battleshipHelp: 'Стреляйте по полю соперника. Попали — ходите ещё; промах — отвечает компьютер.',
     pokerHelp: 'Выберите карты для замены. Соперник — компьютер.',
     futurePoker: 'В будущем здесь можно будет играть с пользователями StructOS на бонусы.',
     chessHelp: 'Полноценные ходы фигур, шах и мат. Рокировка и взятие на проходе пока не используются.',
@@ -33,7 +34,7 @@ if (gameStage && gameButtons.length) {
     stopCurrentGame();
     currentGame = name;
     gameButtons.forEach((button) => button.classList.toggle('is-selected', button.dataset.gameCard === name));
-    const games = { snake: renderSnake, tetris: renderTetris, mines: renderMines, poker: renderPoker, chess: renderChess, checkers: renderCheckers, backgammon: renderBackgammon };
+    const games = { snake: renderSnake, tetris: renderTetris, mines: renderMines, battleship: renderBattleship, poker: renderPoker, chess: renderChess, checkers: renderCheckers, backgammon: renderBackgammon };
     games[name]?.();
   }
 
@@ -143,6 +144,175 @@ if (gameStage && gameButtons.length) {
     const choose=(index,event)=>{if(ended)return;if(flagMode||event?.type==='contextmenu'){cells[index].flag=!cells[index].flag;render();return;}reveal(index);};
     const reset=()=>{cells=Array.from({length:81},()=>({mine:false,count:0,open:false,flag:false}));placed=false;ended=false;flagMode=false;message.textContent='';gameStage.querySelector('[data-mine-mode]').textContent='⚑ Флаг: выкл.';render();};
     boardNode.addEventListener('click',(event)=>{const button=event.target.closest('[data-mine-cell]');if(button)choose(Number(button.dataset.mineCell),event);});boardNode.addEventListener('contextmenu',(event)=>{const button=event.target.closest('[data-mine-cell]');if(button){event.preventDefault();choose(Number(button.dataset.mineCell),event);}});gameStage.querySelector('[data-mine-mode]').addEventListener('click',(event)=>{flagMode=!flagMode;event.currentTarget.textContent=`⚑ Флаг: ${flagMode?'вкл.':'выкл.'}`;});gameStage.querySelector('[data-game-restart]').addEventListener('click',reset);reset();
+  }
+
+  function renderBattleship() {
+    gameStage.innerHTML = gameShell(
+      'Морской бой',
+      ui.battleshipHelp,
+      '<div class="sea-battle"><section class="sea-field-card"><header><strong>Поле компьютера</strong><small>Выберите цель</small></header><div class="sea-board" data-sea-enemy role="grid" aria-label="Поле компьютера"></div></section><section class="sea-field-card"><header><strong>Ваш флот</strong><small>Расставлен автоматически</small></header><div class="sea-board is-own" data-sea-player role="grid" aria-label="Ваше поле"></div></section></div><p class="game-message" data-game-message aria-live="polite"></p><button class="game-action" type="button" data-game-restart>Новая расстановка</button>',
+      '<span><small>Ваши корабли</small><b data-sea-player-ships>10</b></span><span><small>Флот соперника</small><b data-sea-enemy-ships>10</b></span>'
+    );
+
+    const fleet = [4, 3, 3, 2, 2, 2, 1, 1, 1, 1];
+    const letters = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К'];
+    const enemyNode = gameStage.querySelector('[data-sea-enemy]');
+    const playerNode = gameStage.querySelector('[data-sea-player]');
+    const message = gameStage.querySelector('[data-game-message]');
+    let playerSea;
+    let computerSea;
+    let turn;
+    let ended;
+    let computerQueue;
+    let computerTimer;
+
+    const shuffle = (items) => {
+      for (let index = items.length - 1; index > 0; index -= 1) {
+        const other = Math.floor(Math.random() * (index + 1));
+        [items[index], items[other]] = [items[other], items[index]];
+      }
+      return items;
+    };
+    const neighbors = (index, diagonal = false) => {
+      const row = Math.floor(index / 10);
+      const column = index % 10;
+      const result = [];
+      for (let rowShift = -1; rowShift <= 1; rowShift += 1) {
+        for (let columnShift = -1; columnShift <= 1; columnShift += 1) {
+          if ((!rowShift && !columnShift) || (!diagonal && Math.abs(rowShift) + Math.abs(columnShift) !== 1)) continue;
+          const nextRow = row + rowShift;
+          const nextColumn = column + columnShift;
+          if (nextRow >= 0 && nextRow < 10 && nextColumn >= 0 && nextColumn < 10) result.push(nextRow * 10 + nextColumn);
+        }
+      }
+      return result;
+    };
+    const createSea = () => {
+      for (let layoutAttempt = 0; layoutAttempt < 100; layoutAttempt += 1) {
+        const sea = { cells: Array.from({ length: 100 }, () => ({ ship: -1, shot: false })), ships: [] };
+        let complete = true;
+        for (const length of fleet) {
+          let placed = false;
+          for (let attempt = 0; attempt < 500 && !placed; attempt += 1) {
+            const horizontal = Math.random() < .5;
+            const row = Math.floor(Math.random() * (horizontal ? 10 : 11 - length));
+            const column = Math.floor(Math.random() * (horizontal ? 11 - length : 10));
+            const cells = Array.from({ length }, (_, offset) => (row + (horizontal ? 0 : offset)) * 10 + column + (horizontal ? offset : 0));
+            const clear = cells.every((cellIndex) => sea.cells[cellIndex].ship < 0 && neighbors(cellIndex, true).every((nearby) => sea.cells[nearby].ship < 0));
+            if (!clear) continue;
+            const shipIndex = sea.ships.length;
+            sea.ships.push({ cells, hits: 0, sunk: false });
+            cells.forEach((cellIndex) => { sea.cells[cellIndex].ship = shipIndex; });
+            placed = true;
+          }
+          if (!placed) { complete = false; break; }
+        }
+        if (complete) return sea;
+      }
+      throw new Error('Не удалось расставить флот');
+    };
+    const coordinate = (index) => `${letters[index % 10]}${Math.floor(index / 10) + 1}`;
+    const shipsLeft = (sea) => sea.ships.filter((ship) => !ship.sunk).length;
+    const fire = (sea, index) => {
+      const cell = sea.cells[index];
+      if (cell.shot) return { repeated: true };
+      cell.shot = true;
+      if (cell.ship < 0) return { hit: false, sunk: false, win: false };
+      const ship = sea.ships[cell.ship];
+      ship.hits += 1;
+      ship.sunk = ship.hits === ship.cells.length;
+      return { hit: true, sunk: ship.sunk, win: sea.ships.every((item) => item.sunk) };
+    };
+    const boardMarkup = (sea, enemy = false) => {
+      const heading = `<span class="sea-axis is-corner" aria-hidden="true"></span>${letters.map((letter) => `<span class="sea-axis is-column" aria-hidden="true">${letter}</span>`).join('')}`;
+      const rows = Array.from({ length: 10 }, (_, row) => {
+        const rowLabel = `<span class="sea-axis" aria-hidden="true">${row + 1}</span>`;
+        const cells = Array.from({ length: 10 }, (_, column) => {
+          const index = row * 10 + column;
+          const cell = sea.cells[index];
+          const ship = cell.ship >= 0 ? sea.ships[cell.ship] : null;
+          const visibleShip = Boolean(ship && (!enemy || ship.sunk || ended));
+          const classes = ['sea-cell'];
+          if (visibleShip) classes.push('is-ship');
+          if (cell.shot && cell.ship < 0) classes.push('is-miss');
+          if (cell.shot && cell.ship >= 0) classes.push('is-hit');
+          if (ship?.sunk) classes.push('is-sunk');
+          const state = cell.shot ? (cell.ship >= 0 ? 'попадание' : 'промах') : visibleShip ? 'корабль' : 'не открыта';
+          const disabled = !enemy || ended || turn !== 'player' || cell.shot;
+          return `<button class="${classes.join(' ')}" type="button" ${enemy ? `data-sea-shot="${index}"` : ''} ${disabled ? 'disabled' : ''} role="gridcell" aria-label="${coordinate(index)}: ${state}">${cell.shot ? (cell.ship >= 0 ? '×' : '•') : ''}</button>`;
+        }).join('');
+        return rowLabel + cells;
+      }).join('');
+      return heading + rows;
+    };
+    const render = () => {
+      enemyNode.innerHTML = boardMarkup(computerSea, true);
+      playerNode.innerHTML = boardMarkup(playerSea);
+      gameStage.querySelector('[data-sea-player-ships]').textContent = shipsLeft(playerSea);
+      gameStage.querySelector('[data-sea-enemy-ships]').textContent = shipsLeft(computerSea);
+    };
+    const finish = (playerWon) => {
+      ended = true;
+      turn = '';
+      clearTimeout(computerTimer);
+      message.textContent = playerWon ? 'Победа! Флот компьютера уничтожен.' : 'Компьютер победил. Ваш флот уничтожен.';
+      render();
+    };
+    const queueComputerTargets = (index) => {
+      const newTargets = shuffle(neighbors(index).filter((target) => !playerSea.cells[target].shot));
+      newTargets.forEach((target) => { if (!computerQueue.includes(target)) computerQueue.push(target); });
+    };
+    const computerMove = () => {
+      if (ended || turn !== 'computer') return;
+      computerQueue = computerQueue.filter((index) => !playerSea.cells[index].shot);
+      const available = playerSea.cells.map((cell, index) => cell.shot ? -1 : index).filter((index) => index >= 0);
+      const target = computerQueue.shift() ?? available[Math.floor(Math.random() * available.length)];
+      const result = fire(playerSea, target);
+      if (result.win) { finish(false); return; }
+      if (result.hit) {
+        if (result.sunk) computerQueue = [];
+        else queueComputerTargets(target);
+        message.textContent = result.sunk ? `Компьютер потопил ваш корабль у ${coordinate(target)}.` : `Компьютер попал по ${coordinate(target)} и стреляет ещё.`;
+        render();
+        computerTimer = window.setTimeout(computerMove, 650);
+        return;
+      }
+      turn = 'player';
+      message.textContent = `Компьютер промахнулся по ${coordinate(target)}. Ваш ход.`;
+      render();
+    };
+    const playerMove = (index) => {
+      if (ended || turn !== 'player' || computerSea.cells[index].shot) return;
+      const result = fire(computerSea, index);
+      if (result.win) { finish(true); return; }
+      if (result.hit) {
+        message.textContent = result.sunk ? `Корабль компьютера потоплен у ${coordinate(index)}! Стреляйте ещё.` : `Попадание по ${coordinate(index)}! Стреляйте ещё.`;
+        render();
+        return;
+      }
+      turn = 'computer';
+      message.textContent = `Промах по ${coordinate(index)}. Ход компьютера…`;
+      render();
+      computerTimer = window.setTimeout(computerMove, 650);
+    };
+    const reset = () => {
+      clearTimeout(computerTimer);
+      playerSea = createSea();
+      computerSea = createSea();
+      computerQueue = [];
+      turn = 'player';
+      ended = false;
+      message.textContent = 'Ваш ход. Выберите клетку на поле компьютера.';
+      render();
+    };
+
+    enemyNode.addEventListener('click', (event) => {
+      const cell = event.target.closest('[data-sea-shot]');
+      if (cell) playerMove(Number(cell.dataset.seaShot));
+    });
+    gameStage.querySelector('[data-game-restart]').addEventListener('click', reset);
+    reset();
+    disposeGame = () => clearTimeout(computerTimer);
   }
 
   function renderPoker() {

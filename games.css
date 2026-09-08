@@ -85,6 +85,22 @@
 .mine-cell.is-flag { color: #ffce65; }
 .mine-cell[data-count="1"] { color:#67b7ff; }.mine-cell[data-count="2"] { color:#5beaac; }.mine-cell[data-count="3"] { color:#ff9a79; }.mine-cell[data-count="4"],.mine-cell[data-count="5"] { color:#c795ff; }
 
+.sea-battle { width:100%; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.sea-field-card { min-width:0; padding:12px; border:1px solid rgba(61,176,255,.25); border-radius:16px; background:linear-gradient(155deg,rgba(9,49,92,.72),rgba(3,25,54,.58)); box-shadow:inset 0 0 24px rgba(27,135,236,.08); }
+.sea-field-card header { margin-bottom:8px; display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.sea-field-card header strong { font-size:11px; }
+.sea-field-card header small { color:var(--muted); font-size:7px; text-align:right; }
+.sea-board { width:100%; display:grid; grid-template-columns:18px repeat(10,minmax(0,1fr)); gap:2px; }
+.sea-axis { min-width:0; display:grid; place-items:center; color:#7ba4cb; font-size:7px; font-weight:800; }
+.sea-axis.is-column { padding-bottom:2px; }
+.sea-cell { min-width:0; aspect-ratio:1; padding:0; display:grid; place-items:center; color:#dcefff; border:1px solid rgba(77,172,255,.2); border-radius:4px; background:linear-gradient(145deg,rgba(17,78,137,.92),rgba(7,43,84,.94)); box-shadow:inset 0 0 8px rgba(48,174,255,.05); cursor:crosshair; font-size:clamp(10px,2.7vw,17px); font-weight:950; line-height:1; touch-action:manipulation; }
+.sea-cell:not(:disabled):hover { border-color:#67dfff; background:linear-gradient(145deg,#1765ad,#0c417e); box-shadow:0 0 10px rgba(62,195,255,.34),inset 0 0 9px rgba(90,219,255,.12); }
+.sea-cell:disabled { opacity:1; cursor:default; }
+.sea-cell.is-ship { border-color:rgba(97,227,255,.58); background:linear-gradient(145deg,#218ab0,#12657e); box-shadow:inset 0 0 8px rgba(166,246,255,.22),0 0 5px rgba(55,207,247,.15); }
+.sea-cell.is-miss { color:#84c9f4; background:rgba(7,35,68,.72); }
+.sea-cell.is-hit { color:#fff; border-color:#ff7186; background:radial-gradient(circle,#ff526d 0 22%,#8d1f3b 24% 48%,#32142a 50%); text-shadow:0 0 8px #fff; box-shadow:0 0 9px rgba(255,64,96,.55),inset 0 0 8px rgba(255,202,210,.25); }
+.sea-cell.is-sunk { border-color:#ff8c9d; background:radial-gradient(circle,#ff526d 0 20%,#6d1a36 22% 50%,#241124 52%); }
+
 .poker-table { width: 100%; padding: 16px; display: grid; gap: 14px; border: 1px solid rgba(48,211,164,.28); border-radius: 50px; background: radial-gradient(ellipse at center,#0a765d,#064d43 68%,#05352f); box-shadow: inset 0 0 40px rgba(0,0,0,.3),0 0 28px rgba(22,163,127,.12); }
 .poker-hand { display: flex; justify-content: center; gap: 7px; }
 .playing-card { width: clamp(46px,10vw,78px); aspect-ratio: .7; padding: 6px; display: grid; align-content: space-between; color: #132038; text-align: left; border: 2px solid transparent; border-radius: 9px; background: #f8fbff; box-shadow: 0 7px 13px rgba(0,0,0,.24); cursor: pointer; font-weight: 850; }
@@ -124,6 +140,7 @@
   .games-library { gap:6px; }.games-library > button { min-height:92px; padding:9px; grid-template-columns:34px minmax(0,1fr); gap:3px 8px; }.games-library > button > span { width:34px; height:34px; font-size:18px; }.games-library > button strong { font-size:10px; }.games-library > button small { font-size:7px; }
   .game-stage { min-height:340px; padding:10px; border-radius:15px; }.game-stats { width:100%; }.game-stats span { flex:1; text-align:left; }
   .mine-board { gap:2px; }.mine-cell { border-radius:4px; font-size:10px; }
+  .sea-battle { grid-template-columns:1fr; gap:9px; }.sea-field-card { padding:9px; }.sea-board { grid-template-columns:16px repeat(10,minmax(0,1fr)); gap:2px; }.sea-field-card header strong { font-size:10px; }
   .backgammon-point { min-height:72px; }.backgammon-chip { border-width:1px; }
   .session-prompt-actions { grid-template-columns:1fr; }
 }
@@ -132,5 +149,9 @@
 :root[data-theme="light"] .game-canvas { background:#eaf5ff; }
 :root[data-theme="light"] .mine-cell { color:#102e55; background:linear-gradient(145deg,#d8ebff,#b7d8fb); }
 :root[data-theme="light"] .mine-cell.is-open { background:#f4f9ff; }
+:root[data-theme="light"] .sea-field-card { background:linear-gradient(155deg,rgba(224,243,255,.9),rgba(200,229,252,.72)); }
+:root[data-theme="light"] .sea-cell { color:#16385e; border-color:rgba(32,119,192,.24); background:linear-gradient(145deg,#cceaff,#a9d4f4); }
+:root[data-theme="light"] .sea-cell.is-ship { color:#073658; background:linear-gradient(145deg,#68cbe2,#3ea4c3); }
+:root[data-theme="light"] .sea-cell.is-hit,:root[data-theme="light"] .sea-cell.is-sunk { color:#fff; }
 
 @media (prefers-reduced-motion:reduce) { .metric-live-bonus::before,.live-bonus-runner span,.live-bonus-runner i,.unified-object-row.is-invited,.session-prompt-visual span,.session-prompt-visual i { animation:none!important; } .live-bonus-runner span { transform:scaleX(1); }.live-bonus-runner i { left:100%; } }
