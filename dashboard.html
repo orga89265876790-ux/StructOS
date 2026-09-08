@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="dashboard.css?v=62" />
-    <link rel="stylesheet" href="home-dashboard.css?v=1" />
+    <link rel="stylesheet" href="home-dashboard.css?v=2" />
     <link rel="stylesheet" href="games.css?v=3" />
   </head>
   <body class="is-cabinet-entering">
@@ -70,18 +70,26 @@
 
       <main class="app-main">
         <section class="tab-panel is-active" data-panel="home" aria-label="Главная">
-          <div class="balance-grid">
-            <button class="metric-card" type="button" data-open-view="balance">
-              <span class="metric-label" data-i18n="balance">Баланс</span>
-              <strong data-balance-value>0 ₽</strong>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5h15a3 3 0 0 1 3 3V19H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12v4.5"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4Z"/></svg>
-            </button>
-            <button class="metric-card" type="button" data-open-view="bonuses">
-              <span class="metric-label" data-i18n="bonuses">Бонусы</span>
-              <strong data-bonus-value>200,0</strong>
-              <small class="metric-live-bonus"><i aria-hidden="true"></i><span data-i18n="accruesEverySecond">Начисляются каждую секунду</span></small>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 2.8Z"/></svg>
-            </button>
+          <div class="balance-grid home-finance-grid">
+            <div class="home-brand-card" aria-label="StructOS — Единый строительный интеллект в России номер один">
+              <span class="home-brand-mark" aria-hidden="true"><img src="assets/structos-building-mark.svg" alt="" /></span>
+              <span class="home-brand-wordmark">Struct<span>OS</span></span>
+              <p>Единый строительный интеллект в России №1</p>
+            </div>
+            <div class="home-finance-stack">
+              <button class="metric-card" type="button" data-open-view="balance">
+                <span class="metric-label" data-i18n="balance">Баланс</span>
+                <strong data-balance-value>0 ₽</strong>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5h15a3 3 0 0 1 3 3V19H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12v4.5"/><path d="M16 12h5v4h-5a2 2 0 0 1 0-4Z"/></svg>
+              </button>
+              <button class="metric-card home-bonus-card" type="button" data-open-view="bonuses">
+                <span class="metric-label" data-i18n="bonuses">Бонусы</span>
+                <strong data-bonus-value>200,0</strong>
+                <span class="metric-activity-accrual" aria-live="polite"><small data-i18n="activityAccrual">Начислено за активность</small><b data-bonus-accrual-value>0,00000 ₽</b></span>
+                <small class="metric-live-bonus"><i aria-hidden="true"></i><span data-i18n="accruesEverySecond">Начисляются каждую секунду</span></small>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.8 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 2.8Z"/></svg>
+              </button>
+            </div>
           </div>
 
           <section class="welcome-block">
@@ -89,7 +97,7 @@
             <h1 data-user-name>Александр</h1>
             <div class="identity-links">
               <button class="user-id" type="button" data-copy-id aria-label="Скопировать ID">
-                <span>ID <span data-user-id>4 820 197</span></span>
+                <span>StructOS ID: <span data-user-id>4 820 197</span></span>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg>
               </button>
               <span class="identity-online" aria-live="polite">
@@ -164,21 +172,6 @@
             </div>
           </section>
 
-          <section class="section-block earn-structos-section" aria-labelledby="earn-structos-title">
-            <div class="earn-structos-head">
-              <div><span class="eyebrow">STRUCTOS REWARDS</span><h2 id="earn-structos-title" data-i18n="earnWithStructos">Заработай со StructOS</h2><p data-i18n="earnWithStructosHint">Получайте бонусы за полезные действия и активность в приложении.</p></div>
-              <div class="live-bonus-counter" aria-live="polite"><small data-i18n="activityAccrual">Начислено за активность</small><strong data-bonus-accrual-value>0,00000 ₽</strong></div>
-            </div>
-            <div class="live-bonus-runner" aria-hidden="true"><span></span><i></i></div>
-            <div class="earn-actions">
-              <button type="button" data-earn-action="passport"><span><b>+200 / +300</b><strong data-i18n="fillBuilderPassport">Заполнить Паспорт строителя</strong></span><i>→</i></button>
-              <button type="button" data-earn-action="connections"><span><b>+150</b><strong data-i18n="linkSocialNetworks">Привязать соцсети и контакты</strong></span><i>→</i></button>
-              <button type="button" data-earn-action="referral"><span><b>+150 ₽</b><strong data-i18n="inviteFriend">Пригласить по личной ссылке</strong></span><i>→</i></button>
-              <button type="button" data-earn-action="games"><span><b data-i18n="winBonus">Бонус за победу</b><strong data-i18n="playGames">Играть в StructOS</strong></span><i>→</i></button>
-            </div>
-            <div class="earn-daily-note"><span>+25 ₽</span><p><strong data-i18n="dailyLoginBonus">Ежедневный бонус за вход</strong><small data-i18n="monthlyActivityBonus">До 750 ₽ в месяц начисляется во время использования приложения</small></p></div>
-          </section>
-
           <section class="section-block home-sync-section" aria-labelledby="home-sync-title">
             <div class="home-sync-heading">
               <span class="eyebrow">STRUCTOS OFFLINE-FIRST</span>
@@ -204,12 +197,11 @@
 
           <section class="section-block home-statistics" aria-labelledby="home-statistics-title">
             <div class="section-heading home-statistics-heading">
-              <div><div class="home-live-label"><span class="eyebrow">STRUCTOS LIVE</span><small data-i18n="inDevelopment">В разработке</small></div><h2 id="home-statistics-title" data-i18n="statistics">Статистика</h2></div>
+              <div><h2 id="home-statistics-title">StructOS LIVE</h2></div>
             </div>
             <div class="home-statistics-grid">
-              <article class="home-stat-card">
-                <span class="home-stat-label" data-i18n="registeredUsers">Зарегистрировано пользователей</span>
-                <strong data-stat-users>1324</strong>
+              <article class="home-stat-card is-development">
+                <strong data-i18n="inDevelopment">В разработке</strong>
               </article>
             </div>
           </section>
@@ -449,12 +441,12 @@
     </div>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js?v=101', { updateViaCache: 'none' })
+        navigator.serviceWorker.register('./sw.js?v=102', { updateViaCache: 'none' })
           .then((registration) => registration.update())
           .catch(() => {});
       }
     </script>
-    <script type="module" src="dashboard.js?v=68"></script>
+    <script type="module" src="dashboard.js?v=69"></script>
     <script type="module" src="home-dashboard.js?v=1"></script>
     <script type="module" src="games.js?v=2"></script>
   </body>

@@ -1,3 +1,60 @@
+.home-finance-grid {
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  align-items: stretch;
+}
+.home-brand-card {
+  position: relative;
+  min-width: 0;
+  min-height: 178px;
+  padding: 20px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 8px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: radial-gradient(circle at 50% 20%,rgba(36,174,255,.16),transparent 46%),linear-gradient(145deg,var(--surface),var(--surface-soft));
+  box-shadow: var(--shadow),inset 0 0 30px rgba(18,120,221,.06);
+}
+.home-brand-card::after {
+  position: absolute;
+  right: -45px;
+  bottom: -70px;
+  width: 150px;
+  height: 150px;
+  content: '';
+  border: 1px solid rgba(59,199,255,.12);
+  border-radius: 50%;
+  box-shadow: 0 0 45px rgba(20,137,255,.11);
+  pointer-events: none;
+}
+.home-brand-mark {
+  position: relative;
+  z-index: 1;
+  width: 58px;
+  height: 58px;
+  padding: 7px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(74,205,255,.38);
+  border-radius: 17px;
+  background: rgba(10,80,149,.17);
+  box-shadow: 0 0 24px rgba(34,170,255,.19),inset 0 0 18px rgba(70,211,255,.08);
+}
+.home-brand-mark img { width: 100%; height: 100%; object-fit: contain; }
+.home-brand-wordmark { position: relative; z-index: 1; color: var(--text); font-size: clamp(24px,3.4vw,36px); font-weight: 760; line-height: 1; letter-spacing: -.055em; }
+.home-brand-wordmark > span { color: var(--cyan); }
+.home-brand-card p { position: relative; z-index: 1; max-width: 290px; margin: 1px 0 0; color: var(--muted); font-size: 9px; font-weight: 650; line-height: 1.4; }
+.home-finance-stack { min-width: 0; display: grid; grid-template-rows: repeat(2,minmax(0,1fr)); gap: 10px; }
+.home-finance-stack .metric-card { min-width: 0; min-height: 84px; }
+.home-bonus-card { padding-bottom: 12px; }
+.metric-activity-accrual { min-width: 0; margin-top: 5px; padding-right: 32px; display: flex; align-items: baseline; gap: 6px; overflow: hidden; }
+.metric-activity-accrual small { min-width: 0; color: var(--muted); font-size: 7px; font-weight: 700; letter-spacing: .02em; line-height: 1.2; }
+.metric-activity-accrual b { color: #62eabe; font-size: 10px; font-variant-numeric: tabular-nums; font-weight: 750; line-height: 1; white-space: nowrap; text-shadow: 0 0 11px rgba(74,238,190,.25); }
+.home-bonus-card .metric-live-bonus { margin-top: 4px; }
+
 .identity-online {
   min-height: 29px;
   padding: 4px 9px;
@@ -27,6 +84,8 @@
 .referral-contribution > strong { color: #48dda9; font-size: 22px; font-weight: 650; line-height: 1; text-shadow: 0 0 13px rgba(47,218,158,.22); }
 
 .home-statistics-grid { grid-template-columns: minmax(0,1fr); }
+.home-statistics .home-stat-card.is-development { min-height: 88px; align-items: center; justify-content: center; border-top-color: rgba(56,201,255,.72); }
+.home-statistics .home-stat-card.is-development strong { margin: 0; color: #6bdcff; font-size: clamp(20px,3.4vw,30px); font-weight: 750; letter-spacing: -.02em; text-shadow: 0 0 18px rgba(49,193,255,.25); }
 .home-rental-card > span:last-child { min-width: 0; display: grid; gap: 6px; }
 .home-rental-card > span:last-child small {
   width: max-content;
@@ -102,6 +161,20 @@
 [data-sync-live-status][hidden] { display: none !important; }
 
 @media (max-width:620px) {
+  .home-finance-grid { grid-template-columns: minmax(0,.82fr) minmax(0,1.18fr); gap: 7px; }
+  .home-brand-card { min-height: 168px; padding: 12px 8px; gap: 7px; border-radius: 15px; }
+  .home-brand-mark { width: 46px; height: 46px; padding: 6px; border-radius: 14px; }
+  .home-brand-wordmark { font-size: clamp(20px,6.2vw,28px); }
+  .home-brand-card p { max-width: 150px; font-size: 7px; line-height: 1.35; }
+  .home-finance-stack { gap: 7px; }
+  .home-finance-stack .metric-card { min-height: 80px; padding: 11px 9px; border-radius: 15px; }
+  .home-finance-stack .metric-card .metric-label { margin-bottom: 4px; font-size: 9px; }
+  .home-finance-stack .metric-card > strong { padding-right: 24px; font-size: clamp(17px,5.4vw,22px); }
+  .home-finance-stack .metric-card svg { width: 19px; height: 19px; right: 9px; top: 24px; }
+  .metric-activity-accrual { margin-top: 3px; padding-right: 0; align-items: flex-start; flex-direction: column; gap: 2px; }
+  .metric-activity-accrual small { font-size: 6px; }
+  .metric-activity-accrual b { font-size: 8px; }
+  .home-bonus-card .metric-live-bonus { margin-top: 3px; font-size: 6px; white-space: normal; }
   .identity-links { gap: 7px; }
   .identity-online { padding-inline: 8px; gap: 7px; }
   .identity-online > span { font-size: 8px; }

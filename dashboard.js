@@ -1147,7 +1147,7 @@ Object.assign(copy.TJ, { acceptInvitation: 'ÒšÐ°Ð±ÑƒÐ»Ð¸ Ð´Ð°ÑŠÐ²Ð°Ñ‚', invitati
 Object.assign(copy.RU, {
   cabinetWelcomeTagline: 'Ð•Ð”Ð˜ÐÐ«Ð™ Ð¡Ð¢Ð ÐžÐ˜Ð¢Ð•Ð›Ð¬ÐÐ«Ð™ Ð˜ÐÐ¢Ð•Ð›Ð›Ð•ÐšÐ¢', cabinetWelcomeA11y: 'Ð’Ñ…Ð¾Ð´ Ð² Ð»Ð¸Ñ‡Ð½Ñ‹Ð¹ ÐºÐ°Ð±Ð¸Ð½ÐµÑ‚',
   cabinetWelcomeUserRole: 'ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ', cabinetWelcomeExecutorRole: 'Ð˜ÑÐ¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑŒ', cabinetWelcomeSupplierRole: 'ÐŸÐ¾ÑÑ‚Ð°Ð²Ñ‰Ð¸Ðº', cabinetWelcomeAggregatorRole: 'ÐÐ³Ñ€ÐµÐ³Ð°Ñ‚Ð¾Ñ€',
-  cabinetWelcomeUserOne: 'Ð’ÑÑ‘ Ð¿Ð¾Ð½ÑÑ‚Ð½Ð¾.', cabinetWelcomeUserTwo: 'Ð’ÑÑ‘ Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð½Ð¾.', cabinetWelcomeUserThree: 'Ð›ÑŽÐ±Ð°Ñ Ð·Ð°Ð´Ð°Ñ‡Ð° Ð±ÑƒÐ´ÐµÑ‚ Ð’Ð°Ð¼Ð¸ Ñ€ÐµÑˆÐµÐ½Ð°.',
+  cabinetWelcomeUserOne: 'Ð•Ð´Ð¸Ð½Ñ‹Ð¹', cabinetWelcomeUserTwo: 'Ð¡Ñ‚Ñ€Ð¾Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¹', cabinetWelcomeUserThree: 'Ð˜Ð½Ñ‚ÐµÐ»Ð»ÐµÐºÑ‚ Ð² Ð Ð¾ÑÑÐ¸Ð¸ â„–1',
   cabinetWelcomeExecutorOne: 'Ð¡Ð¾Ð·Ð´Ð°Ð²Ð°Ð¹Ñ‚Ðµ ÐšÐŸ Ð¿ÐµÑ€Ð²Ñ‹Ð¼.', cabinetWelcomeExecutorTwo: 'Ð—Ð°Ð¿ÑƒÑÐºÐ°Ð¹Ñ‚Ðµ Ð¿Ñ€Ð¾ÐµÐºÑ‚ Ð² Ð¾Ð´Ð¸Ð½ ÐºÐ»Ð¸Ðº.', cabinetWelcomeExecutorThree: 'Ð¡Ð¾Ð·Ð´Ð°Ð²Ð°Ð¹Ñ‚Ðµ ÑÐ²Ð¾ÑŽ Ñ€ÐµÐ¿ÑƒÑ‚Ð°Ñ†Ð¸ÑŽ.',
   cabinetWelcomeSupplierOne: 'ÐŸÑ€ÐµÐ´Ð»Ð°Ð³Ð°Ð¹Ñ‚Ðµ Ð±Ñ‹ÑÑ‚Ñ€ÐµÐµ.', cabinetWelcomeSupplierTwo: 'Ð‘ÑƒÐ´ÑŒÑ‚Ðµ Ñ‚Ð°Ð¼, Ð³Ð´Ðµ ÐµÑÑ‚ÑŒ Ñ€ÐµÐ°Ð»ÑŒÐ½Ð°Ñ Ð¿Ð¾Ñ‚Ñ€ÐµÐ±Ð½Ð¾ÑÑ‚ÑŒ.',
   cabinetWelcomeAggregatorOne: 'Ð¡Ð¾Ð±Ð¸Ñ€Ð°Ð¹Ñ‚Ðµ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹ Ð±Ñ‹ÑÑ‚Ñ€ÐµÐµ.', cabinetWelcomeAggregatorTwo: 'Ð£Ð¿Ñ€Ð°Ð²Ð»ÑÐ¹Ñ‚Ðµ Ð»ÑŽÐ´ÑŒÐ¼Ð¸ Ñ‚Ð¾Ñ‡Ð½ÐµÐµ.'
@@ -1155,7 +1155,7 @@ Object.assign(copy.RU, {
 Object.assign(copy.EN, {
   cabinetWelcomeTagline: 'UNIFIED CONSTRUCTION INTELLIGENCE', cabinetWelcomeA11y: 'Entering your account',
   cabinetWelcomeUserRole: 'User', cabinetWelcomeExecutorRole: 'Contractor', cabinetWelcomeSupplierRole: 'Supplier', cabinetWelcomeAggregatorRole: 'Aggregator',
-  cabinetWelcomeUserOne: 'Everything is clear.', cabinetWelcomeUserTwo: 'Everything is accessible.', cabinetWelcomeUserThree: 'You can solve any task.',
+  cabinetWelcomeUserOne: 'Unified', cabinetWelcomeUserTwo: 'Construction', cabinetWelcomeUserThree: 'Intelligence in Russia No. 1',
   cabinetWelcomeExecutorOne: 'Create proposals first.', cabinetWelcomeExecutorTwo: 'Launch a project in one click.', cabinetWelcomeExecutorThree: 'Build your reputation.',
   cabinetWelcomeSupplierOne: 'Make offers faster.', cabinetWelcomeSupplierTwo: 'Be where there is real demand.',
   cabinetWelcomeAggregatorOne: 'Build teams faster.', cabinetWelcomeAggregatorTwo: 'Manage people with greater precision.'
@@ -1163,7 +1163,7 @@ Object.assign(copy.EN, {
 Object.assign(copy.KY, {
   cabinetWelcomeTagline: 'Ð‘Ð˜Ð Ð”Ð˜ÐšÐ¢Ò®Ò® ÐšÐ£Ð Ð£Ð›Ð£Ð¨ Ð˜ÐÐ¢Ð•Ð›Ð›Ð•ÐšÐ¢Ð˜', cabinetWelcomeA11y: 'Ð–ÐµÐºÐµ ÐºÐ°Ð±Ð¸Ð½ÐµÑ‚ÐºÐµ ÐºÐ¸Ñ€Ò¯Ò¯',
   cabinetWelcomeUserRole: 'ÐšÐ¾Ð»Ð´Ð¾Ð½ÑƒÑƒÑ‡Ñƒ', cabinetWelcomeExecutorRole: 'ÐÑ‚ÐºÐ°Ñ€ÑƒÑƒÑ‡Ñƒ', cabinetWelcomeSupplierRole: 'Ð–ÐµÑ‚ÐºÐ¸Ñ€Ò¯Ò¯Ñ‡Ò¯', cabinetWelcomeAggregatorRole: 'ÐÐ³Ñ€ÐµÐ³Ð°Ñ‚Ð¾Ñ€',
-  cabinetWelcomeUserOne: 'Ð‘Ð°Ð°Ñ€Ñ‹ Ñ‚Ò¯ÑˆÒ¯Ð½Ò¯ÐºÑ‚Ò¯Ò¯.', cabinetWelcomeUserTwo: 'Ð‘Ð°Ð°Ñ€Ñ‹ Ð¶ÐµÑ‚ÐºÐ¸Ð»Ð¸ÐºÑ‚Ò¯Ò¯.', cabinetWelcomeUserThree: 'ÐÑ€ ÐºÐ°Ð½Ð´Ð°Ð¹ Ð¼Ð¸Ð»Ð´ÐµÑ‚Ñ‚Ð¸ Ð¡Ð¸Ð· Ñ‡ÐµÑ‡Ðµ Ð°Ð»Ð°ÑÑ‹Ð·.',
+  cabinetWelcomeUserOne: 'Ð‘Ð¸Ñ€Ð´Ð¸ÐºÑ‚Ò¯Ò¯', cabinetWelcomeUserTwo: 'ÐšÑƒÑ€ÑƒÐ»ÑƒÑˆ', cabinetWelcomeUserThree: 'Ð Ð¾ÑÑÐ¸ÑÐ´Ð°Ð³Ñ‹ â„–1 Ð¸Ð½Ñ‚ÐµÐ»Ð»ÐµÐºÑ‚',
   cabinetWelcomeExecutorOne: 'ÐšÐŸÐ½Ñ‹ Ð±Ð¸Ñ€Ð¸Ð½Ñ‡Ð¸ Ñ‚Ò¯Ð·Ò¯Ò£Ò¯Ð·.', cabinetWelcomeExecutorTwo: 'Ð”Ð¾Ð»Ð±Ð¾Ð¾Ñ€Ð´Ñƒ Ð±Ð¸Ñ€ Ð±Ð°ÑÐºÑ‹Ñ‡ Ð¼ÐµÐ½ÐµÐ½ Ð¸ÑˆÐºÐµ ÐºÐ¸Ñ€Ð³Ð¸Ð·Ð¸Ò£Ð¸Ð·.', cabinetWelcomeExecutorThree: 'Ó¨Ð· Ð°Ð±Ñ€Ð¾ÑŽÒ£ÑƒÐ·Ð´Ñƒ Ñ‚Ò¯Ð·Ò¯Ò£Ò¯Ð·.',
   cabinetWelcomeSupplierOne: 'Ð¡ÑƒÐ½ÑƒÑˆÑ‚Ð°Ñ€Ð´Ñ‹ Ñ‚ÐµÐ·Ð¸Ñ€ÑÑÐº Ð±ÐµÑ€Ð¸Ò£Ð¸Ð·.', cabinetWelcomeSupplierTwo: 'Ð§Ñ‹Ð½Ñ‹Ð³Ñ‹ Ð¼ÑƒÐºÑ‚Ð°Ð¶Ð´Ñ‹Ðº Ð±Ð°Ñ€ Ð¶ÐµÑ€Ð´Ðµ Ð±Ð¾Ð»ÑƒÒ£ÑƒÐ·.',
   cabinetWelcomeAggregatorOne: 'ÐšÐ¾Ð¼Ð°Ð½Ð´Ð°Ð»Ð°Ñ€Ð´Ñ‹ Ñ‚ÐµÐ·Ð¸Ñ€ÑÑÐº Ñ‡Ð¾Ð³ÑƒÐ»Ñ‚ÑƒÒ£ÑƒÐ·.', cabinetWelcomeAggregatorTwo: 'ÐÐ´Ð°Ð¼Ð´Ð°Ñ€Ð´Ñ‹ Ñ‚Ð°Ðº Ð±Ð°ÑˆÐºÐ°Ñ€Ñ‹Ò£Ñ‹Ð·.'
@@ -1171,7 +1171,7 @@ Object.assign(copy.KY, {
 Object.assign(copy.TJ, {
   cabinetWelcomeTagline: 'Ð—Ð•Ò²ÐÐ˜ Ð¯Ð“ÐžÐÐÐ˜ Ð¡ÐžÐ¥Ð¢ÐœÐžÐÓ¢', cabinetWelcomeA11y: 'Ð’Ð¾Ñ€Ð¸Ð´ÑˆÐ°Ð²Ó£ Ð±Ð° ÐºÐ°Ð±Ð¸Ð½ÐµÑ‚Ð¸ ÑˆÐ°Ñ…ÑÓ£',
   cabinetWelcomeUserRole: 'Ð˜ÑÑ‚Ð¸Ñ„Ð¾Ð´Ð°Ð±Ð°Ñ€Ð°Ð½Ð´Ð°', cabinetWelcomeExecutorRole: 'Ð˜Ò·Ñ€Ð¾ÐºÑƒÐ½Ð°Ð½Ð´Ð°', cabinetWelcomeSupplierRole: 'Ð¢Ð°ÑŠÐ¼Ð¸Ð½ÐºÑƒÐ½Ð°Ð½Ð´Ð°', cabinetWelcomeAggregatorRole: 'ÐÐ³Ñ€ÐµÐ³Ð°Ñ‚Ð¾Ñ€',
-  cabinetWelcomeUserOne: 'Ò²Ð°Ð¼Ð° Ñ‡Ð¸Ð· Ñ„Ð°Ò³Ð¼Ð¾.', cabinetWelcomeUserTwo: 'Ò²Ð°Ð¼Ð° Ñ‡Ð¸Ð· Ð´Ð°ÑÑ‚Ñ€Ð°Ñ.', cabinetWelcomeUserThree: 'Ð¨ÑƒÐ¼Ð¾ Ð¼ÐµÑ‚Ð°Ð²Ð¾Ð½ÐµÐ´ Ò³Ð°Ñ€ Ð²Ð°Ð·Ð¸Ñ„Ð°Ñ€Ð¾ Ò³Ð°Ð» ÐºÑƒÐ½ÐµÐ´.',
+  cabinetWelcomeUserOne: 'Ð¯Ð³Ð¾Ð½Ð°', cabinetWelcomeUserTwo: 'Ð¡Ð¾Ñ…Ñ‚Ð¼Ð¾Ð½Ó£', cabinetWelcomeUserThree: 'Ð—ÐµÒ³Ð½ Ð´Ð°Ñ€ Ð ÑƒÑÐ¸Ñ â„–1',
   cabinetWelcomeExecutorOne: 'ÐŸÐµÑˆÐ½Ð¸Ò³Ð¾Ð´Ð¸ Ñ‚Ð¸Ò·Ð¾Ñ€Ð°Ñ‚Ð¸Ñ€Ð¾ Ð°Ð²Ð²Ð°Ð» ÑÐ¾Ð·ÐµÐ´.', cabinetWelcomeExecutorTwo: 'Ð›Ð¾Ð¸Ò³Ð°Ñ€Ð¾ Ð±Ð¾ ÑÐº Ð¿Ð°Ñ…Ñˆ Ð¾Ò“Ð¾Ð· ÐºÑƒÐ½ÐµÐ´.', cabinetWelcomeExecutorThree: 'ÐžÐ±Ñ€Ó¯Ð¸ Ñ…ÑƒÐ´Ñ€Ð¾ ÑÐ¾Ð·ÐµÐ´.',
   cabinetWelcomeSupplierOne: 'Ð¢ÐµÐ·Ñ‚Ð°Ñ€ Ð¿ÐµÑˆÐ½Ð¸Ò³Ð¾Ð´ ÐºÑƒÐ½ÐµÐ´.', cabinetWelcomeSupplierTwo: 'Ð”Ð°Ñ€ Ò·Ð¾Ðµ Ð±Ð¾ÑˆÐµÐ´, ÐºÐ¸ Ñ‚Ð°Ð»Ð°Ð±Ð¾Ñ‚Ð¸ Ð²Ð¾Ò›ÐµÓ£ Ò³Ð°ÑÑ‚.',
   cabinetWelcomeAggregatorOne: 'Ð”Ð°ÑÑ‚Ð°Ò³Ð¾Ñ€Ð¾ Ñ‚ÐµÐ·Ñ‚Ð°Ñ€ Ò·Ð°Ð¼ÑŠ ÐºÑƒÐ½ÐµÐ´.', cabinetWelcomeAggregatorTwo: 'ÐžÐ´Ð°Ð¼Ð¾Ð½Ñ€Ð¾ Ð´Ð°Ò›Ð¸Ò›Ñ‚Ð°Ñ€ Ð¸Ð´Ð¾Ñ€Ð° ÐºÑƒÐ½ÐµÐ´.'
@@ -1251,9 +1251,9 @@ Object.assign(copy.TJ, {
 
 const CABINET_WELCOME_PROFILES = Object.freeze({
   user: { roleKey: 'cabinetWelcomeUserRole', phraseKeys: ['cabinetWelcomeUserOne', 'cabinetWelcomeUserTwo', 'cabinetWelcomeUserThree'] },
-  executor: { roleKey: 'cabinetWelcomeExecutorRole', phraseKeys: ['cabinetWelcomeExecutorOne', 'cabinetWelcomeExecutorTwo', 'cabinetWelcomeExecutorThree'] },
-  supplier: { roleKey: 'cabinetWelcomeSupplierRole', phraseKeys: ['cabinetWelcomeSupplierOne', 'cabinetWelcomeSupplierTwo'] },
-  aggregator: { roleKey: 'cabinetWelcomeAggregatorRole', phraseKeys: ['cabinetWelcomeAggregatorOne', 'cabinetWelcomeAggregatorTwo'] }
+  executor: { roleKey: 'cabinetWelcomeExecutorRole', phraseKeys: ['cabinetWelcomeUserOne', 'cabinetWelcomeUserTwo', 'cabinetWelcomeUserThree'] },
+  supplier: { roleKey: 'cabinetWelcomeSupplierRole', phraseKeys: ['cabinetWelcomeUserOne', 'cabinetWelcomeUserTwo', 'cabinetWelcomeUserThree'] },
+  aggregator: { roleKey: 'cabinetWelcomeAggregatorRole', phraseKeys: ['cabinetWelcomeUserOne', 'cabinetWelcomeUserTwo', 'cabinetWelcomeUserThree'] }
 });
 
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
@@ -2456,8071 +2456,9 @@ async function resizePersonPhoto(file) {
   if (!file?.type.startsWith('image/') || file.size > 8 * 1024 * 1024) throw new Error('invalid-photo');
   const source = await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = reject; reader.readAsDataURL(file); });
   const image = await new Promise((resolve, reject) => { const value = new Image(); value.onload = () => resolve(value); value.onerror = reject; value.src = source; });
-  const size = Math.min(720, Math.max(image.naturalWidth, image.naturalHeight));
-  const scale = Math.min(1, size / Math.max(image.naturalWidth, image.naturalHeight));
-  const canvas = document.createElement('canvas'); canvas.width = Math.max(1, Math.round(image.naturalWidth * scale)); canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
-  canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
-  return canvas.toDataURL('image/jpeg', .84);
-}
-
-function bindPersonPhotoControls(scope, onUpdate) {
-  const input = $('[data-person-photo-input]', scope);
-  $('[data-person-photo-select]', scope)?.addEventListener('click', () => input?.click());
-  input?.addEventListener('change', async () => {
-    try { personData.photo = await resizePersonPhoto(input.files?.[0]); saveIdentityState(); onUpdate?.(); }
-    catch { showToast(tr('photoError')); }
-    input.value = '';
-  });
-  $('[data-person-photo-remove]', scope)?.addEventListener('click', () => { personData.photo = ''; saveIdentityState(); onUpdate?.(); });
-}
-
-function openPassportScheduleDialog() {
-  const selected = new Set(builderPassport.scheduleDays);
-  const buttons = passportWeekdays.map((day) => `<button type="button" data-schedule-day="${day}" class="${selected.has(day) ? 'is-selected' : ''}"><span>âœ“</span><strong>${tr(`weekday${day[0].toUpperCase()}${day.slice(1)}`)}</strong></button>`).join('');
-  showDialog(tr('scheduleDaysTitle'), tr('scheduleDaysHint'), `<div class="passport-weekday-picker">${buttons}</div><button class="primary-button" type="button" data-save-schedule-days>${tr('done')}</button>`);
-  const scope = $('[data-dialog-content]');
-  $$('[data-schedule-day]', scope).forEach((button) => button.addEventListener('click', () => {
-    const day = button.dataset.scheduleDay;
-    if (selected.has(day)) selected.delete(day); else selected.add(day);
-    button.classList.toggle('is-selected', selected.has(day));
-  }));
-  $('[data-save-schedule-days]', scope)?.addEventListener('click', () => {
-    builderPassport.scheduleDays = passportWeekdays.filter((day) => selected.has(day));
-    saveIdentityState(false);
-    $('[data-dialog]')?.close();
-    renderPassportEditor();
-  });
-}
-
-function renderPassportEditor() {
-  const rootElement = $('[data-passport-editor]');
-  if (!rootElement) return;
-  rootElement.innerHTML = passportEditorMarkup();
-  const form = $('[data-passport-form]', rootElement);
-  $$('[data-person-field]', form).forEach((input) => input.addEventListener('input', () => {
-    personData[input.dataset.personField] = input.value.slice(0, 100);
-    if (input.dataset.personField === 'citizenship') updateForeignDocumentVisibility(form);
-    if (input.dataset.personField === 'birthDate') $('[data-person-age]', form).value = fullYears(input.value);
-    queueIdentityAutosave();
-  }));
-  $$('[data-profile-field]', form).forEach((input) => input.addEventListener('input', () => { profileData[input.dataset.profileField] = input.value.slice(0, 140); queueIdentityAutosave(); }));
-  bindPassportSmartSelects(form, (field) => {
-    if (field === 'citizenship') updateForeignDocumentVisibility(form);
-    if (field === 'residenceCountry') { profileData.city = ''; profileData.metro = ''; renderPassportEditor(); }
-    if (field === 'city') renderPassportEditor();
-  });
-  $$('[data-passport-field]', form).forEach((input) => input.addEventListener('change', () => { builderPassport[input.dataset.passportField] = input.checked; queueIdentityAutosave(); }));
-  $$('[data-passport-business-trips]', form).forEach((input) => input.addEventListener('change', () => { if (input.checked) { builderPassport.businessTrips = input.value === 'yes'; queueIdentityAutosave(); } }));
-  $$('[data-messenger-linked]', form).forEach((input) => input.addEventListener('change', () => {
-    if (!input.checked) return;
-    builderPassport.messengerLinked = input.value === 'yes';
-    saveIdentityState(false);
-    renderPassportEditor();
-  }));
-  $$('[data-passport-messenger]', form).forEach((input) => input.addEventListener('change', () => {
-    builderPassport.messengers[input.dataset.passportMessenger] = input.checked;
-    saveIdentityState(false);
-    renderPassportEditor();
-  }));
-  $('[data-passport-any-schedule]', form)?.addEventListener('change', (event) => { builderPassport.anySchedule = event.currentTarget.checked; saveIdentityState(false); renderPassportEditor(); });
-  $$('[data-passport-night-shifts]', form).forEach((input) => input.addEventListener('change', () => { if (input.checked) { builderPassport.nightShifts = input.value === 'yes'; saveIdentityState(false); renderPassportEditor(); } }));
-  $$('[data-passport-call]', form).forEach((input) => input.addEventListener('input', () => { builderPassport[input.dataset.passportCall === 'from' ? 'callFrom' : 'callTo'] = input.value; queueIdentityAutosave(); }));
-  $('[data-open-schedule-days]', form)?.addEventListener('click', openPassportScheduleDialog);
-  $$('[data-passport-profession]', form).forEach((row) => {
-    const item = builderPassport.professions.find((profession) => profession.id === row.dataset.passportProfession);
-    if (!item) return;
-    $('[data-profession-experience]', row)?.addEventListener('input', (event) => { item.experience = Math.max(0, Math.min(70, Number(event.currentTarget.value) || 0)); queueIdentityAutosave(); });
-    $('[data-remove-profession]', row)?.addEventListener('click', () => {
-      builderPassport.professions = builderPassport.professions.filter((profession) => profession.id !== item.id);
-      if (!builderPassport.professions.length) builderPassport.professions.push({ id: `profession-${Date.now()}`, name: '', experience: 0 });
-      profileData.profession = builderPassport.professions.find((profession) => profession.name)?.name || '';
-      saveIdentityState(false);
-      renderPassportEditor();
-    });
-  });
-  $('[data-add-profession]', form)?.addEventListener('click', () => {
-    if (builderPassport.professions.length >= 50) return;
-    builderPassport.professions.push({ id: `profession-${Date.now()}-${Math.random().toString(16).slice(2)}`, name: '', experience: 0 });
-    saveIdentityState(false);
-    renderPassportEditor();
-  });
-  const addSkill = () => {
-    const input = $('[data-new-skill]', form);
-    const value = input?.value.trim().slice(0, 120);
-    if (!value) { input?.focus(); return; }
-    if (builderPassport.skills.some((skill) => normalizeDirectoryValue(skill) === normalizeDirectoryValue(value))) { showToast(tr('duplicateSkill')); return; }
-    if (builderPassport.skills.length >= 80) return;
-    builderPassport.skills.push(value);
-    saveIdentityState(false);
-    renderPassportEditor();
-  };
-  $('[data-add-skill]', form)?.addEventListener('click', addSkill);
-  $('[data-new-skill]', form)?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); addSkill(); } });
-  $$('[data-remove-skill]', form).forEach((button) => button.addEventListener('click', () => { builderPassport.skills.splice(Number(button.dataset.removeSkill), 1); saveIdentityState(false); renderPassportEditor(); }));
-  $('[data-copy-passport-id]', form)?.addEventListener('click', copyId);
-  $('[data-share-resume]', form)?.addEventListener('click', shareResume);
-  $('[data-share-passport]', form)?.addEventListener('click', sharePassport);
-  $('[data-passport-important-toggle]', form)?.addEventListener('click', () => { passportImportantExpanded = !passportImportantExpanded; renderPassportEditor(); });
-  $$('[data-passport-important]', form).forEach((input) => input.addEventListener('change', () => {
-    builderPassport.important[input.dataset.passportImportant] = input.checked;
-    saveIdentityState(false);
-    if (input.dataset.passportImportant === 'passportAvailable') {
-      passportAccessListExpanded = input.checked;
-      renderPassportEditor();
-    }
-  }));
-  $('[data-passport-access-toggle]', form)?.addEventListener('click', () => { passportAccessListExpanded = !passportAccessListExpanded; renderPassportEditor(); });
-  $$('[data-passport-visible]', form).forEach((input) => input.addEventListener('change', () => { builderPassport.visibleFields[input.dataset.passportVisible] = input.checked; saveIdentityState(false); }));
-  $$('[data-passport-location]', form).forEach((row) => {
-    const item = builderPassport.workLocations.find((entry) => entry.id === row.dataset.passportLocation);
-    if (!item) return;
-    $('[data-remove-location]', row)?.addEventListener('click', () => {
-      builderPassport.workLocations = builderPassport.workLocations.filter((entry) => entry.id !== item.id);
-      if (!builderPassport.workLocations.length) builderPassport.workLocations.push({ id: `place-${Date.now()}`, country: '', city: '' });
-      saveIdentityState(false);
-      renderPassportEditor();
-    });
-  });
-  $('[data-add-passport-location]', form)?.addEventListener('click', () => {
-    if (builderPassport.workLocations.length >= 12) return;
-    builderPassport.workLocations.push({ id: `place-${Date.now()}-${Math.random().toString(16).slice(2)}`, country: '', city: '' });
-    saveIdentityState(false);
-    renderPassportEditor();
-  });
-  bindPersonPhotoControls(form, renderPassportEditor);
-  form.addEventListener('submit', (event) => { event.preventDefault(); if (!validatePassportSmartSelects(form)) return; saveIdentityState(); renderPassportEditor(); showToast(tr('passportSaved')); });
-  renderPassportProgress();
-}
-
-function profileEditorMarkup() {
-  return `<div class="profile-edit-form" data-profile-edit-form>
-    ${passportPhotoMarkup(false)}
-    <section><h3>${tr('personalData')}</h3><p>${tr('personalDataMirrorHint')}</p><div class="profile-edit-grid">
-      <label><span>${tr('surname')}</span><input type="text" maxlength="80" data-person-field="lastName" value="${escapeHtml(personData.lastName)}" /></label>
-      <label><span>${tr('givenName')}</span><input type="text" maxlength="80" data-person-field="firstName" value="${escapeHtml(personData.firstName)}" /></label>
-      <label><span>${tr('patronymic')}</span><input type="text" maxlength="80" data-person-field="patronymic" value="${escapeHtml(personData.patronymic)}" /></label>
-      <label><span>${tr('birthDate')}</span>${passportBirthAgeMarkup()}</label>
-      <label><span>${tr('maritalStatus')}</span><select data-person-field="maritalStatus">${maritalOptionsMarkup()}</select></label>
-      <label><span>${tr('nationality')}</span>${passportSmartSelectMarkup({ kind: 'nationality', value: personData.nationality, placeholder: tr('selectNationality'), personField: 'nationality' })}</label>
-      <label><span>${tr('citizenship')}</span>${passportSmartSelectMarkup({ kind: 'country', value: personData.citizenship, placeholder: tr('selectCountry'), personField: 'citizenship' })}</label>
-      <label><span>${tr('permanentResidence')}</span>${passportSmartSelectMarkup({ kind: 'country', value: personData.residenceCountry, placeholder: tr('selectCountry'), personField: 'residenceCountry' })}</label>
-      <label><span>${tr('residenceCity')}</span>${passportSmartSelectMarkup({ kind: 'city', value: profileData.city, placeholder: countryByValue(personData.residenceCountry) ? tr('enterCity') : tr('selectCountryFirst'), profileField: 'city', country: personData.residenceCountry })}</label>
-      <label><span>${tr('nearestMetro')}</span>${passportSmartSelectMarkup({ kind: 'metro', value: profileData.metro, placeholder: tr('selectMetro'), profileField: 'metro', city: profileData.city })}</label>
-      <label><span>${tr('contactPhone')}</span><input type="tel" maxlength="60" autocomplete="tel" data-profile-field="phone" value="${escapeHtml(profileData.phone)}" /></label>
-      <label><span>${tr('contactEmail')}</span><input type="email" maxlength="120" autocomplete="email" data-profile-field="email" value="${escapeHtml(profileData.email)}" /></label>
-    </div></section>
-    <section><h3>${tr('professionalData')}</h3><div class="profile-edit-grid"><label><span>${tr('profession')}</span>${passportSmartSelectMarkup({ kind: 'profession', value: profileData.profession, placeholder: tr('selectProfession'), profileField: 'profession' })}</label></div></section>
-    <button class="primary-button" type="button" data-save-profile>${tr('saveChanges')}</button>
-  </div>`;
-}
-
-function openProfileEditor() {
-  showDialog(tr('profileEditorTitle'), tr('profileEditorHint'), profileEditorMarkup());
-  const scope = $('[data-dialog-content]');
-  $$('[data-person-field]', scope).forEach((input) => input.addEventListener('input', () => {
-    personData[input.dataset.personField] = input.value.slice(0, 100);
-    if (input.dataset.personField === 'birthDate') $('[data-person-age]', scope).value = fullYears(input.value);
-    queueIdentityAutosave();
-  }));
-  bindPassportSmartSelects(scope, (field) => {
-    if (field === 'residenceCountry') {
-      profileData.city = '';
-      profileData.metro = '';
-      const cityControl = $('[data-smart-profile-field="city"]', scope);
-      const metroControl = $('[data-smart-profile-field="metro"]', scope);
-      if (cityControl) { cityControl.dataset.smartCountry = personData.residenceCountry; cityControl.dataset.smartValue = ''; $('[data-smart-input]', cityControl).value = ''; }
-      if (metroControl) { metroControl.dataset.smartCity = ''; metroControl.dataset.smartValue = ''; $('[data-smart-input]', metroControl).value = ''; }
-    }
-    if (field === 'city') {
-      const metroControl = $('[data-smart-profile-field="metro"]', scope);
-      if (metroControl) { metroControl.dataset.smartCity = profileData.city; metroControl.dataset.smartValue = ''; $('[data-smart-input]', metroControl).value = ''; }
-    }
-  });
-  $$('[data-profile-field]', scope).forEach((input) => input.addEventListener('input', () => { profileData[input.dataset.profileField] = input.value.slice(0, 140); queueIdentityAutosave(); }));
-  bindPersonPhotoControls(scope, () => { $('[data-dialog]').close(); openProfileEditor(); });
-  $('[data-save-profile]', scope)?.addEventListener('click', () => { if (!validatePassportSmartSelects(scope)) return; builderPassport.professions[0] ||= { id: `profession-${Date.now()}`, name: '', experience: 0 }; builderPassport.professions[0].name = profileData.profession; saveIdentityState(); renderPassportEditor(); $('[data-dialog]').close(); showToast(tr('profileSaved')); });
-}
-
-function profileDateOfBirthValue() {
-  if (!personData.birthDate) return '';
-  const date = new Date(`${personData.birthDate}T12:00:00`);
-  const formatted = Number.isNaN(date.getTime()) ? personData.birthDate : new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(date);
-  const age = fullYears(personData.birthDate);
-  return age ? `${formatted} Â· ${age}` : formatted;
-}
-
-function renderProfilePersonalData() {
-  const container = $('[data-profile-personal]');
-  if (!container) return;
-  const rows = [
-    [tr('fullName'), [personData.lastName, personData.firstName, personData.patronymic].filter(Boolean).join(' ')],
-    [tr('birthDate'), profileDateOfBirthValue()],
-    [tr('maritalStatus'), personData.maritalStatus ? tr(`${personData.maritalStatus}Status`) : ''],
-    [tr('nationality'), personData.nationality],
-    [tr('citizenship'), personData.citizenship],
-    [tr('permanentResidence'), personData.residenceCountry],
-    [tr('residenceCity'), profileData.city],
-    [tr('nearestMetro'), profileData.metro],
-    [tr('contactPhone'), profileData.phone],
-    [tr('contactEmail'), profileData.email],
-    [tr('profession'), profileData.profession]
-  ];
-  container.innerHTML = rows.map(([label, value]) => `<article><span>${escapeHtml(label)}</span><strong class="${value ? '' : 'is-empty'}">${escapeHtml(value || tr('notSpecified'))}</strong></article>`).join('');
-}
-
-function renderConnectionsSummary() {
-  const linked = structosConnectionProviders.filter(({ key }) => structosConnections[key]).length;
-  $$('[data-connections-summary]').forEach((item) => { item.textContent = `${tr('linkedCount')}: ${linked} / ${structosConnectionProviders.length}`; });
-}
-
-function connectionProviderMarkup(provider) {
-  const linked = Boolean(structosConnections[provider.key]);
-  const profileValue = provider.profileField ? profileData[provider.profileField] : '';
-  return `<article class="structos-connection-row${linked ? ' is-linked' : ''}"><span class="structos-connection-logo ${provider.className}" aria-hidden="true">${escapeHtml(provider.icon)}</span><div><strong>${tr(provider.labelKey)}</strong>${profileValue ? `<small>${escapeHtml(profileValue)}</small>` : ''}<em>${tr('accountReward')} Â· ${tr('rewardOnce')}</em></div><button type="button" data-link-structos-account="${provider.key}"${linked ? ' disabled' : ''}><span>${tr(linked ? 'linkedAccount' : 'linkAccount')}</span>${linked ? '<i>âœ“</i>' : ''}</button></article>`;
-}
-
-function connectionsDialogMarkup() {
-  const linked = structosConnectionProviders.filter(({ key }) => structosConnections[key]).length;
-  const available = (structosConnectionProviders.length - linked) * 150;
-  return `<section class="structos-connections"><header><span>${tr('linkedCount')}</span><strong>${linked} / ${structosConnectionProviders.length}</strong><small>${tr('availableAccountBonus')}: +${available}</small></header><div class="structos-connection-list">${structosConnectionProviders.map(connectionProviderMarkup).join('')}</div><section class="merge-accounts-card"><div><span>STRUCTOS ID</span><h3>${tr('mergeAccounts')}</h3><p>${tr('mergeAccountsHint')}</p></div><button type="button" disabled aria-disabled="true"><span>${tr('mergeAccounts')}</span><small>${tr('inDevelopment')}</small></button></section></section>`;
-}
-
-function openConnectionsDialog() {
-  showDialog(tr('connections'), tr('connectionsHint'), connectionsDialogMarkup());
-  const scope = $('[data-dialog-content]');
-  $$('[data-link-structos-account]', scope).forEach((button) => button.addEventListener('click', () => requestStructosConnection(button.dataset.linkStructosAccount)));
-}
-
-function completeStructosConnection(provider) {
-  if (structosConnections[provider.key]) { showToast(tr('accountAlreadyLinked')); return; }
-  structosConnections[provider.key] = true;
-  finance.rewards ||= {};
-  finance.rewards.accountLinks ||= {};
-  const firstReward = !finance.rewards.accountLinks[provider.key];
-  if (firstReward) {
-    finance.rewards.accountLinks[provider.key] = true;
-    finance.bonuses += 150;
-    finance.bonusHistory.unshift({ key: 'accountLinkReward', detail: tr(provider.labelKey), amount: 150, date: new Date().toISOString() });
-    saveFinance();
-    renderFinance();
-  }
-  saveStructosConnections();
-  openConnectionsDialog();
-  showToast(firstReward ? tr('accountLinked') : tr('accountAlreadyLinked'));
-}
-
-function requestStructosConnection(key) {
-  const provider = structosConnectionProviders.find((item) => item.key === key);
-  if (!provider) return;
-  if (structosConnections[key]) { showToast(tr('accountAlreadyLinked')); return; }
-  if (provider.profileField && !profileData[provider.profileField]) {
-    showDialog(`${tr('connections')}: ${tr(provider.labelKey)}`, tr('missingConnectionData'), `<button class="primary-button structos-connection-action" type="button" data-fill-connection-data>${tr('fillPersonalData')}</button>`);
-    $('[data-fill-connection-data]')?.addEventListener('click', () => { $('[data-dialog]')?.close(); openProfileEditor(); });
-    return;
-  }
-  showDialog(`${tr('testConnectionTitle')}: ${tr(provider.labelKey)}`, tr('testConnectionHint'), `<div class="connection-confirm"><span class="structos-connection-logo ${provider.className}" aria-hidden="true">${escapeHtml(provider.icon)}</span><div><strong>${tr(provider.labelKey)}</strong><small>${tr('accountReward')} Â· ${tr('rewardOnce')}</small></div></div><button class="primary-button structos-connection-action" type="button" data-confirm-structos-connection>${tr('confirmTestConnection')}</button>`);
-  $('[data-confirm-structos-connection]')?.addEventListener('click', () => completeStructosConnection(provider));
-}
-
-function formatMoney(value) {
-  return `${new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(value)} â‚½`;
-}
-
-function renderFinance() {
-  $$('[data-balance-value]').forEach((item) => { item.textContent = formatMoney(finance.balance); });
-  const bonusValue = new Intl.NumberFormat(root.lang || 'ru-RU', { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(finance.bonuses);
-  $$('[data-bonus-value]').forEach((item) => { item.textContent = bonusValue; });
-  $$('[data-finance-summary]').forEach((item) => { item.textContent = `${formatMoney(finance.balance)} Â· ${bonusValue}`; });
-  renderLiveBonusState();
-}
-
-function localRewardDate(date = new Date()) {
-  const pad = (value) => String(value).padStart(2, '0');
-  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
-}
-
-function currentActivityBonus() {
-  const now = new Date();
-  const month = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
-  return (finance.bonusHistory || [])
-    .filter((entry) => entry.key === 'activityMonthlyAccrual' && String(entry.detail || '').startsWith(month))
-    .reduce((total, entry) => total + (Number(entry.amount) || 0), 0);
-}
-
-function renderLiveBonusState() {
-  const value = new Intl.NumberFormat(root.lang || 'ru-RU', { minimumFractionDigits: 5, maximumFractionDigits: 5 }).format(currentActivityBonus());
-  $$('[data-bonus-accrual-value]').forEach((item) => { item.textContent = `${value} â‚½`; });
-}
-
-function awardDailyLoginReward() {
-  finance.rewards ||= {};
-  const today = localRewardDate();
-  if (finance.rewards.dailyLoginDate === today) return false;
-  finance.rewards.dailyLoginDate = today;
-  finance.bonuses += DAILY_LOGIN_REWARD;
-  finance.bonusHistory.unshift({ key: 'dailyLoginReward', amount: DAILY_LOGIN_REWARD, date: new Date().toISOString() });
-  saveFinance();
-  return true;
-}
-
-let activeBonusTimer = null;
-let activeBonusLastTick = performance.now();
-let activeBonusUnsavedSeconds = 0;
-
-function accrueActiveBonus() {
-  const now = performance.now();
-  const elapsedSeconds = Math.min(2, Math.max(0, (now - activeBonusLastTick) / 1000));
-  activeBonusLastTick = now;
-  if (document.hidden || elapsedSeconds <= 0) return;
-  const amount = Math.min(elapsedSeconds * ACTIVE_BONUS_RATE, Math.max(0, ACTIVE_BONUS_MONTHLY - currentActivityBonus()));
-  if (amount <= 0) return;
-  const today = localRewardDate();
-  finance.bonuses += amount;
-  let entry = finance.bonusHistory.find((item) => item.key === 'activityMonthlyAccrual' && item.detail === today);
-  if (!entry) {
-    entry = { key: 'activityMonthlyAccrual', detail: today, amount: 0, date: new Date().toISOString() };
-    finance.bonusHistory.unshift(entry);
-  }
-  entry.amount += amount;
-  activeBonusUnsavedSeconds += elapsedSeconds;
-  renderFinance();
-  if (activeBonusUnsavedSeconds >= 15) {
-    activeBonusUnsavedSeconds = 0;
-    localStorage.setItem(FINANCE_KEY, JSON.stringify(finance));
-  }
-}
-
-function startActiveBonusAccrual() {
-  if (activeBonusTimer) return;
-  activeBonusLastTick = performance.now();
-  activeBonusTimer = window.setInterval(accrueActiveBonus, 1000);
-  document.addEventListener('visibilitychange', () => { activeBonusLastTick = performance.now(); });
-  window.addEventListener('pagehide', () => localStorage.setItem(FINANCE_KEY, JSON.stringify(finance)));
-  renderFinance();
-}
-
-function awardGameWin(game) {
-  if (game !== 'snake') return;
-  finance.rewards ||= {};
-  finance.rewards.gameWins ||= {};
-  const rewardKey = `${game}:${localRewardDate()}`;
-  if (finance.rewards.gameWins[rewardKey]) return;
-  finance.rewards.gameWins[rewardKey] = true;
-  finance.bonuses += SNAKE_WIN_REWARD;
-  finance.bonusHistory.unshift({ key: 'gameWinReward', amount: SNAKE_WIN_REWARD, date: new Date().toISOString() });
-  saveFinance();
-  showToast(tr('gameRewardToast'));
-}
-
-function currentProfilePlan() {
-  return profilePlans.find((plan) => plan.key === profilePlan) || profilePlans[1];
-}
-
-function renderProfilePlan() {
-  const label = tr(currentProfilePlan().labelKey);
-  $$('[data-plan-summary]').forEach((item) => { item.textContent = label; });
-}
-
-function profilePlansMarkup() {
-  return `<section class="profile-plan-list">${profilePlans.map((plan) => {
-    const selected = plan.key === profilePlan;
-    return `<button class="profile-plan-option${selected ? ' is-selected' : ''}" type="button" data-select-profile-plan="${plan.key}" aria-pressed="${selected}"><span><small>STRUCTOS</small><strong>${escapeHtml(tr(plan.labelKey))}</strong></span><i>${selected ? `âœ“ ${escapeHtml(tr('currentPlan'))}` : 'â€º'}</i></button>`;
-  }).join('')}</section>`;
-}
-
-function openSubscriptionDialog() {
-  showDialog(tr('tariffSubscription'), tr('planSelectionHint'), profilePlansMarkup());
-  const scope = $('[data-dialog-content]');
-  $$('[data-select-profile-plan]', scope).forEach((button) => button.addEventListener('click', () => {
-    profilePlan = profilePlans.some((plan) => plan.key === button.dataset.selectProfilePlan) ? button.dataset.selectProfilePlan : 'user';
-    localStorage.setItem(PROFILE_PLAN_KEY, profilePlan);
-    renderProfilePlan();
-    openSubscriptionDialog();
-    showToast(tr('planSelected'));
-  }));
-}
-
-function referralUrl() {
-  const url = new URL('./', window.location.href);
-  url.searchParams.set('r', currentId.replaceAll(' ', ''));
-  url.hash = '';
-  return url.href;
-}
-
-function renderReferral() {
-  $$('[data-referral-short]').forEach((item) => { item.textContent = `StructOS Â· r/${currentId.replaceAll(' ', '')}`; });
-}
-
-function onlineRangeForHour(hour) {
-  if (hour >= 22 || hour < 8) return [70, 120];
-  if (hour < 19) return [310, 450];
-  return [100, 130];
-}
-
-function statisticsSeed(bucket) {
-  let value = bucket | 0;
-  value = Math.imul(value ^ (value >>> 16), 0x45d9f3b);
-  value = Math.imul(value ^ (value >>> 16), 0x45d9f3b);
-  return (value ^ (value >>> 16)) >>> 0;
-}
-
-function sharedOnlineCount(now = Date.now()) {
-  const hour = Number(STATISTICS_HOUR_FORMATTER.format(new Date(now)));
-  const [minimum, maximum] = onlineRangeForHour(hour);
-  const span = maximum - minimum + 1;
-  const bucket = Math.floor(now / STATISTICS_ONLINE_STEP);
-  let count = minimum + (statisticsSeed(bucket) % span);
-  const previous = minimum + (statisticsSeed(bucket - 1) % span);
-  if (count === previous) count = minimum + ((count - minimum + 1) % span);
-  return count;
-}
-
-function statisticsUsersCount(now = Date.now()) {
-  const elapsed = Math.max(0, now - STATISTICS_USERS_EPOCH);
-  return STATISTICS_USERS_BASE + Math.floor(elapsed / STATISTICS_USERS_STEP);
-}
-
-function referralContributionCount() {
-  const localCount = (finance.bonusHistory || []).filter((entry) => entry.key === 'referralReward').length;
-  return Math.max(serverReferralCount, localCount);
-}
-
-function renderHomeStatistics() {
-  const online = $('[data-stat-online]');
-  const users = $('[data-stat-users]');
-  const referrals = $('[data-stat-referrals]');
-  if (online) online.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(sharedOnlineCount());
-  if (users) users.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(statisticsUsersCount());
-  if (referrals) referrals.textContent = new Intl.NumberFormat(root.lang || 'ru-RU').format(referralContributionCount());
-}
-
-function startHomeStatisticsClock() {
-  renderHomeStatistics();
-  const delay = STATISTICS_ONLINE_STEP - (Date.now() % STATISTICS_ONLINE_STEP) + 20;
-  setTimeout(() => {
-    renderHomeStatistics();
-    setInterval(renderHomeStatistics, STATISTICS_ONLINE_STEP);
-  }, delay);
-}
-
-async function copyReferral() {
-  try { await navigator.clipboard.writeText(referralUrl()); }
-  catch {
-    const input = document.createElement('input'); input.value = referralUrl(); document.body.append(input); input.select(); document.execCommand('copy'); input.remove();
-  }
-  showToast(tr('referralCopied'));
-}
-
-async function shareReferral() {
-  if (navigator.share) {
-    try { await navigator.share({ title: 'StructOS', text: tr('shareEarn'), url: referralUrl() }); return; }
-    catch (error) { if (error?.name === 'AbortError') return; }
-  }
-  await copyReferral();
-}
-
-async function initAuth() {
-  const demoSession = JSON.parse(localStorage.getItem(DEMO_SESSION_KEY) || 'null');
-  if (demoSession?.email === 'str@str.com') {
-    const role = demoSession.role || tr('userTariff');
-    currentId = formattedId(demoSession.id || '4820197');
-    serverReferralCount = Math.max(0, Math.floor(Number(demoSession.referralCount) || 0));
-    $$('[data-user-role]').forEach((item) => { item.textContent = role; });
-    $$('[data-user-id]').forEach((item) => { item.textContent = currentId; });
-    seedIdentityFromAuth(demoSession.name || 'StructOS', {});
-    renderReferral();
-    renderHomeStatistics();
-    return role;
-  }
-  const supabaseUrl = supabaseConfig.url || import.meta.env?.VITE_SUPABASE_URL;
-  const supabaseKey = supabaseConfig.publishableKey || import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env?.VITE_SUPABASE_ANON_KEY;
-  if (!supabaseUrl || !supabaseKey) { window.location.replace('login.html#login'); return null; }
-  try {
-    const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.112.3/+esm');
-    authClient = createClient(supabaseUrl, supabaseKey, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
-    const { data, error } = await authClient.auth.getUser();
-    if (error || !data?.user) { window.location.replace('login.html#login'); return null; }
-    const user = data.user;
-    const meta = user.user_metadata || {};
-    const fullName = String(meta.full_name || user.email?.split('@')[0] || 'ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ').trim();
-    const role = String(meta.primary_role || tr('userTariff'));
-    serverReferralCount = Math.max(0, Math.floor(Number(user.app_metadata?.referral_count) || 0));
-    currentId = formattedId(meta.structos_id || idFromUuid(user.id));
-    $$('[data-user-role]').forEach((item) => { item.textContent = role; });
-    $$('[data-user-id]').forEach((item) => { item.textContent = currentId; });
-    seedIdentityFromAuth(fullName, { ...meta, email: user.email || '' });
-    renderReferral();
-    renderHomeStatistics();
-    return role;
-  } catch (error) {
-    console.warn('StructOS auth is unavailable:', error);
-    return tr('userTariff');
-  }
-}
-
-function setPanel(name) {
-  const requested = String(name || 'home');
-  const [requestedPanel, ...pathParts] = requested.split('/');
-  if (requestedPanel === 'proposal-detail' && pathParts.length) {
-    try { activeCommercialProposalId = decodeURIComponent(pathParts.join('/')); }
-    catch { activeCommercialProposalId = pathParts.join('/'); }
-  }
-  const projectPanels = ['proposals', 'proposal-detail', 'project-analysis', 'contract-review', 'estimate-analysis', 'analysis-detail'];
-  const next = ['home', 'projects', ...projectPanels, 'space', 'games', 'objects', 'cashflow', 'profile', 'passport'].includes(requestedPanel) ? requestedPanel : 'home';
-  $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
-  if (next !== 'space') {
-    $('[data-space-toolbar]').hidden = true;
-    $('[data-space-settings]').setAttribute('aria-expanded', 'false');
-  }
-  $$('[data-panel]').forEach((panel) => { panel.hidden = panel.dataset.panel !== next; panel.classList.toggle('is-active', panel.dataset.panel === next); });
-  $$('[data-tab]').forEach((button) => { button.classList.toggle('is-active', button.dataset.tab === next || (projectPanels.includes(next) && button.dataset.tab === 'projects') || (next === 'passport' && button.dataset.tab === 'profile')); });
-  const panelHash = next === 'proposal-detail' && activeCommercialProposalId
-    ? `#proposal-detail/${encodeURIComponent(activeCommercialProposalId)}`
-    : `#${next}`;
-  history.replaceState(null, '', panelHash);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  if (next === 'space') requestAnimationFrame(renderWidgets);
-  if (next === 'games') window.dispatchEvent(new CustomEvent('structos:games-visible'));
-  if (next === 'projects') renderMyProjects();
-  if (next === 'proposals') renderCommercialProposals();
-  if (next === 'proposal-detail') renderCommercialProposalWorkspace();
-  if (next === 'analysis-detail') renderAnalysisDetail();
-  if (next === 'objects') renderObjects();
-  if (next === 'cashflow') renderCashflow();
-  if (next === 'profile') { renderProfilePersonalData(); renderConnectionsSummary(); }
-  if (next === 'passport') renderPassportEditor();
-  closeMenu();
-}
-
-let bottomMenuAnimationTimer = null;
-
-function updateBottomMenuAccessibility() {
-  const menu = $('[data-bottom-menu]');
-  const toggle = $('[data-bottom-menu-toggle]');
-  if (!menu || !toggle) return;
-  const open = menu.classList.contains('is-open');
-  toggle.setAttribute('aria-expanded', String(open));
-  toggle.setAttribute('aria-label', tr(open ? 'collapseMenu' : 'menu'));
-  toggle.setAttribute('title', tr(open ? 'collapseMenu' : 'menu'));
-}
-
-function setBottomMenu(open, options = {}) {
-  const menu = $('[data-bottom-menu]');
-  const nav = $('[data-bottom-nav]');
-  const items = nav ? $('.bottom-nav-items', nav) : null;
-  if (!menu || !nav || !items) return;
-  const shouldAnimate = options.animate !== false;
-  menu.classList.toggle('is-open', open);
-  menu.classList.toggle('is-collapsed', !open);
-  nav.hidden = false;
-  items.setAttribute('aria-hidden', String(!open));
-  $$('[data-tab]', items).forEach((button) => { button.tabIndex = open ? 0 : -1; });
-  updateBottomMenuAccessibility();
-  if (options.persist !== false) localStorage.setItem(BOTTOM_MENU_STATE_KEY, String(open));
-  clearTimeout(bottomMenuAnimationTimer);
-  menu.classList.remove('is-building');
-  if (open && shouldAnimate) {
-    requestAnimationFrame(() => {
-      if (!menu.classList.contains('is-open')) return;
-      menu.classList.add('is-building');
-      bottomMenuAnimationTimer = setTimeout(() => menu.classList.remove('is-building'), 1250);
-    });
-  }
-}
-
-function restoreBottomMenuState() {
-  const saved = localStorage.getItem(BOTTOM_MENU_STATE_KEY);
-  setBottomMenu(saved !== 'false', { animate: false, persist: false });
-}
-
-function openMenu() {
-  const drawer = $('#side-drawer');
-  drawer.classList.add('is-open'); drawer.setAttribute('aria-hidden', 'false');
-  $('[data-menu-open]').setAttribute('aria-expanded', 'true');
-  $('.drawer-backdrop').hidden = false;
-  document.body.style.overflow = 'hidden';
-}
-function closeMenu() {
-  const drawer = $('#side-drawer');
-  drawer.classList.remove('is-open'); drawer.setAttribute('aria-hidden', 'true');
-  $('[data-menu-open]').setAttribute('aria-expanded', 'false');
-  $('.drawer-backdrop').hidden = true;
-  document.body.style.overflow = '';
-}
-
-const widgetDefinitions = {
-  analysis: { label: 'widgetAnalysis', icon: 'âŒ', hint: '3' },
-  objects: { label: 'widgetObjects', icon: 'âŒ‚', hint: '0 / 1' },
-  documents: { label: 'widgetDocuments', icon: 'â–¤', hint: '0' },
-  acts: { label: 'widgetActs', icon: 'âœ“', hint: 'âˆž' },
-  attention: { label: 'widgetAttention', icon: '!', hint: '0' },
-  passport: { label: 'widgetPassport', icon: 'â—‡', hint: '40%' },
-  project: { label: 'project', icon: 'â–±', hint: '1' },
-  contract: { label: 'contract', icon: 'Â§', hint: '1' },
-  estimate: { label: 'estimate', icon: 'â‚½', hint: '1' },
-  tasks: { label: 'widgetTasks', icon: 'â˜‘', hint: '0' },
-  team: { label: 'widgetTeam', icon: 'â—Ž', hint: '0' },
-  finance: { label: 'widgetFinance', icon: 'â‚½', hint: '0 â‚½' },
-  drawing: { label: 'widgetDrawing', icon: 'âœŽ', hint: 'âˆž' },
-  calendar: { label: 'widgetCalendar', icon: 'â–¦', hint: '' }
-};
-const defaultWidgets = Object.keys(widgetDefinitions);
-const WIDGETS_VERSION_KEY = 'structos-space-widgets-version';
-
-function readStoredJSON(key, fallback) {
-  try { return JSON.parse(localStorage.getItem(key) || 'null') ?? fallback; }
-  catch { return fallback; }
-}
-
-const passportCountryDirectory = [
-  { code: 'RU', names: { RU: 'Ð Ð¾ÑÑÐ¸Ñ', EN: 'Russia', KY: 'Ð Ð¾ÑÑÐ¸Ñ', TJ: 'Ð ÑƒÑÐ¸Ñ' }, cities: ['ÐœÐ¾ÑÐºÐ²Ð°', 'Ð¡Ð°Ð½ÐºÑ‚-ÐŸÐµÑ‚ÐµÑ€Ð±ÑƒÑ€Ð³', 'ÐšÐ°Ð·Ð°Ð½ÑŒ', 'Ð•ÐºÐ°Ñ‚ÐµÑ€Ð¸Ð½Ð±ÑƒÑ€Ð³', 'ÐÐ¾Ð²Ð¾ÑÐ¸Ð±Ð¸Ñ€ÑÐº', 'ÐÐ¸Ð¶Ð½Ð¸Ð¹ ÐÐ¾Ð²Ð³Ð¾Ñ€Ð¾Ð´', 'Ð¡Ð°Ð¼Ð°Ñ€Ð°', 'ÐšÑ€Ð°ÑÐ½Ð¾Ð´Ð°Ñ€', 'Ð¡Ð¾Ñ‡Ð¸', 'Ð¢ÑŽÐ¼ÐµÐ½ÑŒ', 'Ð’Ð»Ð°Ð´Ð¸Ð²Ð¾ÑÑ‚Ð¾Ðº'] },
-  { code: 'KG', names: { RU: 'ÐšÑ‹Ñ€Ð³Ñ‹Ð·ÑÑ‚Ð°Ð½', EN: 'Kyrgyzstan', KY: 'ÐšÑ‹Ñ€Ð³Ñ‹Ð·ÑÑ‚Ð°Ð½', TJ: 'ÒšÐ¸Ñ€Ò“Ð¸Ð·Ð¸ÑÑ‚Ð¾Ð½' }, cities: ['Ð‘Ð¸ÑˆÐºÐµÐº', 'ÐžÑˆ', 'Ð”Ð¶Ð°Ð»Ð°Ð»-ÐÐ±Ð°Ð´', 'ÐšÐ°Ñ€Ð°ÐºÐ¾Ð»'] },
-  { code: 'TJ', names: { RU: 'Ð¢Ð°Ð´Ð¶Ð¸ÐºÐ¸ÑÑ‚Ð°Ð½', EN: 'Tajikistan', KY: 'Ð¢Ð°Ð¶Ð¸ÐºÑÑ‚Ð°Ð½', TJ: 'Ð¢Ð¾Ò·Ð¸ÐºÐ¸ÑÑ‚Ð¾Ð½' }, cities: ['Ð”ÑƒÑˆÐ°Ð½Ð±Ðµ', 'Ð¥ÑƒÐ´Ð¶Ð°Ð½Ð´', 'Ð‘Ð¾Ñ…Ñ‚Ð°Ñ€', 'ÐšÑƒÐ»ÑÐ±'] },
-  { code: 'UZ', names: { RU: 'Ð£Ð·Ð±ÐµÐºÐ¸ÑÑ‚Ð°Ð½', EN: 'Uzbekistan', KY: 'Ó¨Ð·Ð±ÐµÐºÑÑ‚Ð°Ð½', TJ: 'Ó®Ð·Ð±ÐµÐºÐ¸ÑÑ‚Ð¾Ð½' }, cities: ['Ð¢Ð°ÑˆÐºÐµÐ½Ñ‚', 'Ð¡Ð°Ð¼Ð°Ñ€ÐºÐ°Ð½Ð´', 'Ð‘ÑƒÑ…Ð°Ñ€Ð°', 'ÐÐ°Ð¼Ð°Ð½Ð³Ð°Ð½', 'ÐÐ½Ð´Ð¸Ð¶Ð°Ð½'] },
-  { code: 'KZ', names: { RU: 'ÐšÐ°Ð·Ð°Ñ…ÑÑ‚Ð°Ð½', EN: 'Kazakhstan', KY: 'ÐšÐ°Ð·Ð°ÐºÑÑ‚Ð°Ð½', TJ: 'ÒšÐ°Ð·Ð¾Ò›Ð¸ÑÑ‚Ð¾Ð½' }, cities: ['ÐÑÑ‚Ð°Ð½Ð°', 'ÐÐ»Ð¼Ð°Ñ‚Ñ‹', 'Ð¨Ñ‹Ð¼ÐºÐµÐ½Ñ‚', 'ÐšÐ°Ñ€Ð°Ð³Ð°Ð½Ð´Ð°', 'ÐÑ‚Ñ‹Ñ€Ð°Ñƒ'] },
-  { code: 'BY', names: { RU: 'Ð‘ÐµÐ»Ð°Ñ€ÑƒÑÑŒ', EN: 'Belarus', KY: 'Ð‘ÐµÐ»Ð°Ñ€ÑƒÑÑŒ', TJ: 'Ð‘ÐµÐ»Ð°Ñ€ÑƒÑ' }, cities: ['ÐœÐ¸Ð½ÑÐº', 'Ð‘Ñ€ÐµÑÑ‚', 'Ð“Ð¾Ð¼ÐµÐ»ÑŒ', 'Ð“Ñ€Ð¾Ð´Ð½Ð¾'] },
-  { code: 'AM', names: { RU: 'ÐÑ€Ð¼ÐµÐ½Ð¸Ñ', EN: 'Armenia', KY: 'ÐÑ€Ð¼ÐµÐ½Ð¸Ñ', TJ: 'ÐÑ€Ð¼Ð°Ð½Ð¸ÑÑ‚Ð¾Ð½' }, cities: ['Ð•Ñ€ÐµÐ²Ð°Ð½', 'Ð“ÑŽÐ¼Ñ€Ð¸', 'Ð’Ð°Ð½Ð°Ð´Ð·Ð¾Ñ€'] },
-  { code: 'AZ', names: { RU: 'ÐÐ·ÐµÑ€Ð±Ð°Ð¹Ð´Ð¶Ð°Ð½', EN: 'Azerbaijan', KY: 'ÐÐ·ÐµÑ€Ð±Ð°Ð¹Ð¶Ð°Ð½', TJ: 'ÐžÐ·Ð°Ñ€Ð±Ð¾Ð¹Ò·Ð¾Ð½' }, cities: ['Ð‘Ð°ÐºÑƒ', 'Ð“ÑÐ½Ð´Ð¶Ð°', 'Ð¡ÑƒÐ¼Ð³Ð°Ð¸Ñ‚'] },
-  { code: 'GE', names: { RU: 'Ð“Ñ€ÑƒÐ·Ð¸Ñ', EN: 'Georgia', KY: 'Ð“Ñ€ÑƒÐ·Ð¸Ñ', TJ: 'Ð“ÑƒÑ€Ò·Ð¸ÑÑ‚Ð¾Ð½' }, cities: ['Ð¢Ð±Ð¸Ð»Ð¸ÑÐ¸', 'Ð‘Ð°Ñ‚ÑƒÐ¼Ð¸', 'ÐšÑƒÑ‚Ð°Ð¸ÑÐ¸'] },
-  { code: 'MD', names: { RU: 'ÐœÐ¾Ð»Ð´Ð¾Ð²Ð°', EN: 'Moldova', KY: 'ÐœÐ¾Ð»Ð´Ð¾Ð²Ð°', TJ: 'ÐœÐ¾Ð»Ð´Ð¾Ð²Ð°' }, cities: ['ÐšÐ¸ÑˆÐ¸Ð½Ñ‘Ð²', 'Ð‘ÐµÐ»ÑŒÑ†Ñ‹', 'Ð¢Ð¸Ñ€Ð°ÑÐ¿Ð¾Ð»ÑŒ'] },
-  { code: 'TM', names: { RU: 'Ð¢ÑƒÑ€ÐºÐ¼ÐµÐ½Ð¸ÑÑ‚Ð°Ð½', EN: 'Turkmenistan', KY: 'Ð¢Ò¯Ñ€ÐºÐ¼Ó©Ð½ÑÑ‚Ð°Ð½', TJ: 'Ð¢ÑƒÑ€ÐºÐ¼Ð°Ð½Ð¸ÑÑ‚Ð¾Ð½' }, cities: ['ÐÑˆÑ…Ð°Ð±Ð°Ð´', 'Ð¢ÑƒÑ€ÐºÐ¼ÐµÐ½Ð°Ð±Ð°Ð´', 'Ð”Ð°ÑˆÐ¾Ð³ÑƒÐ·'] },
-  { code: 'TR', names: { RU: 'Ð¢ÑƒÑ€Ñ†Ð¸Ñ', EN: 'TÃ¼rkiye', KY: 'Ð¢Ò¯Ñ€ÐºÐ¸Ñ', TJ: 'Ð¢ÑƒÑ€ÐºÐ¸Ñ' }, cities: ['Ð¡Ñ‚Ð°Ð¼Ð±ÑƒÐ»', 'ÐÐ½ÐºÐ°Ñ€Ð°', 'ÐÐ½Ñ‚Ð°Ð»ÑŒÑ', 'Ð˜Ð·Ð¼Ð¸Ñ€'] },
-  { code: 'NL', names: { RU: 'ÐÐ¸Ð´ÐµÑ€Ð»Ð°Ð½Ð´Ñ‹', EN: 'Netherlands', KY: 'ÐÐ¸Ð´ÐµÑ€Ð»Ð°Ð½Ð´Ð´Ð°Ñ€', TJ: 'ÐÐ¸Ð´ÐµÑ€Ð»Ð°Ð½Ð´' }, cities: ['ÐÐ¼ÑÑ‚ÐµÑ€Ð´Ð°Ð¼', 'Ð Ð¾Ñ‚Ñ‚ÐµÑ€Ð´Ð°Ð¼', 'Ð“Ð°Ð°Ð³Ð°', 'Ð£Ñ‚Ñ€ÐµÑ…Ñ‚'] },
-  { code: 'DE', names: { RU: 'Ð“ÐµÑ€Ð¼Ð°Ð½Ð¸Ñ', EN: 'Germany', KY: 'Ð“ÐµÑ€Ð¼Ð°Ð½Ð¸Ñ', TJ: 'ÐžÐ»Ð¼Ð¾Ð½' }, cities: ['Ð‘ÐµÑ€Ð»Ð¸Ð½', 'ÐœÑŽÐ½Ñ…ÐµÐ½', 'Ð“Ð°Ð¼Ð±ÑƒÑ€Ð³', 'Ð¤Ñ€Ð°Ð½ÐºÑ„ÑƒÑ€Ñ‚'] },
-  { code: 'UA', names: { RU: 'Ð£ÐºÑ€Ð°Ð¸Ð½Ð°', EN: 'Ukraine', KY: 'Ð£ÐºÑ€Ð°Ð¸Ð½Ð°', TJ: 'Ð£ÐºÑ€Ð°Ð¸Ð½Ð°' }, cities: ['ÐšÐ¸ÐµÐ²', 'Ð¥Ð°Ñ€ÑŒÐºÐ¾Ð²', 'ÐžÐ´ÐµÑÑÐ°', 'Ð”Ð½ÐµÐ¿Ñ€', 'Ð›ÑŒÐ²Ð¾Ð²'] },
-  { code: 'PL', names: { RU: 'ÐŸÐ¾Ð»ÑŒÑˆÐ°', EN: 'Poland', KY: 'ÐŸÐ¾Ð»ÑŒÑˆÐ°', TJ: 'Ð›Ð°Ò³Ð¸ÑÑ‚Ð¾Ð½' }, cities: ['Ð’Ð°Ñ€ÑˆÐ°Ð²Ð°', 'ÐšÑ€Ð°ÐºÐ¾Ð²', 'Ð’Ñ€Ð¾Ñ†Ð»Ð°Ð²', 'Ð“Ð´Ð°Ð½ÑŒÑÐº'] },
-  { code: 'CZ', names: { RU: 'Ð§ÐµÑ…Ð¸Ñ', EN: 'Czechia', KY: 'Ð§ÐµÑ…Ð¸Ñ', TJ: 'Ð§ÐµÑ…Ð¸Ñ' }, cities: ['ÐŸÑ€Ð°Ð³Ð°', 'Ð‘Ñ€Ð½Ð¾', 'ÐžÑÑ‚Ñ€Ð°Ð²Ð°'] },
-  { code: 'GB', names: { RU: 'Ð’ÐµÐ»Ð¸ÐºÐ¾Ð±Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ', EN: 'United Kingdom', KY: 'Ð£Ð»ÑƒÑƒ Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ', TJ: 'Ð‘Ñ€Ð¸Ñ‚Ð°Ð½Ð¸ÑÐ¸ ÐšÐ°Ð±Ð¸Ñ€' }, cities: ['Ð›Ð¾Ð½Ð´Ð¾Ð½', 'ÐœÐ°Ð½Ñ‡ÐµÑÑ‚ÐµÑ€', 'Ð‘Ð¸Ñ€Ð¼Ð¸Ð½Ð³ÐµÐ¼', 'Ð›Ð¸Ð²ÐµÑ€Ð¿ÑƒÐ»ÑŒ'] },
-  { code: 'FR', names: { RU: 'Ð¤Ñ€Ð°Ð½Ñ†Ð¸Ñ', EN: 'France', KY: 'Ð¤Ñ€Ð°Ð½Ñ†Ð¸Ñ', TJ: 'Ð¤Ð°Ñ€Ð¾Ð½ÑÐ°' }, cities: ['ÐŸÐ°Ñ€Ð¸Ð¶', 'ÐœÐ°Ñ€ÑÐµÐ»ÑŒ', 'Ð›Ð¸Ð¾Ð½', 'Ð¢ÑƒÐ»ÑƒÐ·Ð°'] },
-  { code: 'IT', names: { RU: 'Ð˜Ñ‚Ð°Ð»Ð¸Ñ', EN: 'Italy', KY: 'Ð˜Ñ‚Ð°Ð»Ð¸Ñ', TJ: 'Ð˜Ñ‚Ð°Ð»Ð¸Ñ' }, cities: ['Ð Ð¸Ð¼', 'ÐœÐ¸Ð»Ð°Ð½', 'ÐÐµÐ°Ð¿Ð¾Ð»ÑŒ', 'Ð¢ÑƒÑ€Ð¸Ð½'] },
-  { code: 'ES', names: { RU: 'Ð˜ÑÐ¿Ð°Ð½Ð¸Ñ', EN: 'Spain', KY: 'Ð˜ÑÐ¿Ð°Ð½Ð¸Ñ', TJ: 'Ð˜ÑÐ¿Ð°Ð½Ð¸Ñ' }, cities: ['ÐœÐ°Ð´Ñ€Ð¸Ð´', 'Ð‘Ð°Ñ€ÑÐµÐ»Ð¾Ð½Ð°', 'Ð’Ð°Ð»ÐµÐ½ÑÐ¸Ñ', 'Ð¡ÐµÐ²Ð¸Ð»ÑŒÑ'] },
-  { code: 'US', names: { RU: 'Ð¡Ð¨Ð', EN: 'United States', KY: 'ÐÐšÐ¨', TJ: 'Ð˜ÐœÐ' }, cities: ['ÐÑŒÑŽ-Ð™Ð¾Ñ€Ðº', 'Ð›Ð¾Ñ-ÐÐ½Ð´Ð¶ÐµÐ»ÐµÑ', 'Ð§Ð¸ÐºÐ°Ð³Ð¾', 'Ð¥ÑŒÑŽÑÑ‚Ð¾Ð½'] },
-  { code: 'AE', names: { RU: 'ÐžÐÐ­', EN: 'United Arab Emirates', KY: 'Ð‘ÐÐ­', TJ: 'ÐÐœÐ' }, cities: ['Ð”ÑƒÐ±Ð°Ð¹', 'ÐÐ±Ñƒ-Ð”Ð°Ð±Ð¸', 'Ð¨Ð°Ñ€Ð´Ð¶Ð°'] },
-  { code: 'CN', names: { RU: 'ÐšÐ¸Ñ‚Ð°Ð¹', EN: 'China', KY: 'ÐšÑ‹Ñ‚Ð°Ð¹', TJ: 'Ð§Ð¸Ð½' }, cities: ['ÐŸÐµÐºÐ¸Ð½', 'Ð¨Ð°Ð½Ñ…Ð°Ð¹', 'Ð“ÑƒÐ°Ð½Ñ‡Ð¶Ð¾Ñƒ', 'Ð¨ÑÐ½ÑŒÑ‡Ð¶ÑÐ½ÑŒ'] },
-  { code: 'IN', names: { RU: 'Ð˜Ð½Ð´Ð¸Ñ', EN: 'India', KY: 'Ð˜Ð½Ð´Ð¸Ñ', TJ: 'Ò²Ð¸Ð½Ð´ÑƒÑÑ‚Ð¾Ð½' }, cities: ['Ð”ÐµÐ»Ð¸', 'ÐœÑƒÐ¼Ð±Ð°Ð¸', 'Ð‘Ð°Ð½Ð³Ð°Ð»Ð¾Ñ€', 'Ð¥Ð°Ð¹Ð´Ð°Ñ€Ð°Ð±Ð°Ð´'] },
-  { code: 'AF', names: { RU: 'ÐÑ„Ð³Ð°Ð½Ð¸ÑÑ‚Ð°Ð½', EN: 'Afghanistan', KY: 'ÐžÐ¾Ð³Ð°Ð½ÑÑ‚Ð°Ð½', TJ: 'ÐÑ„Ò“Ð¾Ð½Ð¸ÑÑ‚Ð¾Ð½' }, cities: ['ÐšÐ°Ð±ÑƒÐ»', 'Ð“ÐµÑ€Ð°Ñ‚', 'ÐšÐ°Ð½Ð´Ð°Ð³Ð°Ñ€', 'ÐœÐ°Ð·Ð°Ñ€Ð¸-Ð¨Ð°Ñ€Ð¸Ñ„'] },
-  { code: 'PK', names: { RU: 'ÐŸÐ°ÐºÐ¸ÑÑ‚Ð°Ð½', EN: 'Pakistan', KY: 'ÐŸÐ°ÐºÐ¸ÑÑ‚Ð°Ð½', TJ: 'ÐŸÐ¾ÐºÐ¸ÑÑ‚Ð¾Ð½' }, cities: ['Ð˜ÑÐ»Ð°Ð¼Ð°Ð±Ð°Ð´', 'ÐšÐ°Ñ€Ð°Ñ‡Ð¸', 'Ð›Ð°Ñ…Ð¾Ñ€', 'ÐŸÐµÑˆÐ°Ð²Ð°Ñ€'] },
-  { code: 'MN', names: { RU: 'ÐœÐ¾Ð½Ð³Ð¾Ð»Ð¸Ñ', EN: 'Mongolia', KY: 'ÐœÐ¾Ð½Ð³Ð¾Ð»Ð¸Ñ', TJ: 'ÐœÑƒÒ“ÑƒÐ»Ð¸ÑÑ‚Ð¾Ð½' }, cities: ['Ð£Ð»Ð°Ð½-Ð‘Ð°Ñ‚Ð¾Ñ€', 'Ð­Ñ€Ð´ÑÐ½ÑÑ‚', 'Ð”Ð°Ñ€Ñ…Ð°Ð½'] }
-];
-
-const passportNationalityDirectory = [
-  { code: 'RU', names: { RU: 'Ð ÑƒÑÑÐºÐ¸Ð¹', EN: 'Russian', KY: 'ÐžÑ€ÑƒÑ', TJ: 'Ð ÑƒÑ' } },
-  { code: 'KG', names: { RU: 'ÐšÑ‹Ñ€Ð³Ñ‹Ð·', EN: 'Kyrgyz', KY: 'ÐšÑ‹Ñ€Ð³Ñ‹Ð·', TJ: 'ÒšÐ¸Ñ€Ò“Ð¸Ð·' } },
-  { code: 'TJ', names: { RU: 'Ð¢Ð°Ð´Ð¶Ð¸Ðº', EN: 'Tajik', KY: 'Ð¢Ð°Ð¶Ð¸Ðº', TJ: 'Ð¢Ð¾Ò·Ð¸Ðº' } },
-  { code: 'UZ', names: { RU: 'Ð£Ð·Ð±ÐµÐº', EN: 'Uzbek', KY: 'Ó¨Ð·Ð±ÐµÐº', TJ: 'Ó®Ð·Ð±ÐµÐº' } },
-  { code: 'KZ', names: { RU: 'ÐšÐ°Ð·Ð°Ñ…', EN: 'Kazakh', KY: 'ÐšÐ°Ð·Ð°Ðº', TJ: 'ÒšÐ°Ð·Ð¾Ò›' } },
-  { code: 'BY', names: { RU: 'Ð‘ÐµÐ»Ð¾Ñ€ÑƒÑ', EN: 'Belarusian', KY: 'Ð‘ÐµÐ»Ð°Ñ€ÑƒÑ', TJ: 'Ð‘ÐµÐ»Ð¾Ñ€ÑƒÑ' } },
-  { code: 'AM', names: { RU: 'ÐÑ€Ð¼ÑÐ½Ð¸Ð½', EN: 'Armenian', KY: 'ÐÑ€Ð¼ÑÐ½', TJ: 'ÐÑ€Ð¼Ð°Ð½Ó£' } },
-  { code: 'AZ', names: { RU: 'ÐÐ·ÐµÑ€Ð±Ð°Ð¹Ð´Ð¶Ð°Ð½ÐµÑ†', EN: 'Azerbaijani', KY: 'ÐÐ·ÐµÑ€Ð±Ð°Ð¹Ð¶Ð°Ð½', TJ: 'ÐžÐ·Ð°Ñ€Ð±Ð¾Ð¹Ò·Ð¾Ð½Ó£' } },
-  { code: 'GE', names: { RU: 'Ð“Ñ€ÑƒÐ·Ð¸Ð½', EN: 'Georgian', KY: 'Ð“Ñ€ÑƒÐ·Ð¸Ð½', TJ: 'Ð“ÑƒÑ€Ò·Ó£' } },
-  { code: 'MD', names: { RU: 'ÐœÐ¾Ð»Ð´Ð°Ð²Ð°Ð½Ð¸Ð½', EN: 'Moldovan', KY: 'ÐœÐ¾Ð»Ð´Ð¾Ð²Ð°Ð½', TJ: 'ÐœÐ¾Ð»Ð´Ð°Ð²Ð°Ð½' } },
-  { code: 'TM', names: { RU: 'Ð¢ÑƒÑ€ÐºÐ¼ÐµÐ½', EN: 'Turkmen', KY: 'Ð¢Ò¯Ñ€ÐºÐ¼Ó©Ð½', TJ: 'Ð¢ÑƒÑ€ÐºÐ¼Ð°Ð½' } },
-  { code: 'TR', names: { RU: 'Ð¢ÑƒÑ€Ð¾Ðº', EN: 'Turkish', KY: 'Ð¢Ò¯Ñ€Ðº', TJ: 'Ð¢ÑƒÑ€Ðº' } },
-  { code: 'NL', names: { RU: 'ÐÐ¸Ð´ÐµÑ€Ð»Ð°Ð½Ð´ÐµÑ†', EN: 'Dutch', KY: 'ÐÐ¸Ð´ÐµÑ€Ð»Ð°Ð½Ð´', TJ: 'ÐÐ¸Ð´ÐµÑ€Ð»Ð°Ð½Ð´Ó£' } },
-  { code: 'DE', names: { RU: 'ÐÐµÐ¼ÐµÑ†', EN: 'German', KY: 'ÐÐµÐ¼Ð¸Ñ', TJ: 'ÐžÐ»Ð¼Ð¾Ð½Ó£' } },
-  { code: 'UA', names: { RU: 'Ð£ÐºÑ€Ð°Ð¸Ð½ÐµÑ†', EN: 'Ukrainian', KY: 'Ð£ÐºÑ€Ð°Ð¸Ð½', TJ: 'Ð£ÐºÑ€Ð°Ð¸Ð½Ó£' } },
-  { code: 'PL', names: { RU: 'ÐŸÐ¾Ð»ÑÐº', EN: 'Polish', KY: 'ÐŸÐ¾Ð»ÑÐº', TJ: 'Ð›Ð°Ò³Ð¸ÑÑ‚Ð¾Ð½Ó£' } },
-  { code: 'CZ', names: { RU: 'Ð§ÐµÑ…', EN: 'Czech', KY: 'Ð§ÐµÑ…', TJ: 'Ð§ÐµÑ…' } },
-  { code: 'GB', names: { RU: 'Ð‘Ñ€Ð¸Ñ‚Ð°Ð½ÐµÑ†', EN: 'British', KY: 'Ð‘Ñ€Ð¸Ñ‚Ð°Ð½', TJ: 'Ð‘Ñ€Ð¸Ñ‚Ð¾Ð½Ð¸Ñ‘Ó£' } },
-  { code: 'FR', names: { RU: 'Ð¤Ñ€Ð°Ð½Ñ†ÑƒÐ·', EN: 'French', KY: 'Ð¤Ñ€Ð°Ð½Ñ†ÑƒÐ·', TJ: 'Ð¤Ð°Ñ€Ð¾Ð½ÑÐ°Ð²Ó£' } },
-  { code: 'IT', names: { RU: 'Ð˜Ñ‚Ð°Ð»ÑŒÑÐ½ÐµÑ†', EN: 'Italian', KY: 'Ð˜Ñ‚Ð°Ð»Ð¸ÑÐ»Ñ‹Ðº', TJ: 'Ð˜Ñ‚Ð¾Ð»Ð¸Ñ‘Ó£' } },
-  { code: 'ES', names: { RU: 'Ð˜ÑÐ¿Ð°Ð½ÐµÑ†', EN: 'Spanish', KY: 'Ð˜ÑÐ¿Ð°Ð½', TJ: 'Ð˜ÑÐ¿Ð°Ð½Ó£' } },
-  { code: 'US', names: { RU: 'ÐÐ¼ÐµÑ€Ð¸ÐºÐ°Ð½ÐµÑ†', EN: 'American', KY: 'ÐÐ¼ÐµÑ€Ð¸ÐºÐ°Ð»Ñ‹Ðº', TJ: 'ÐÐ¼Ñ€Ð¸ÐºÐ¾Ó£' } },
-  { code: 'AE', names: { RU: 'ÐÑ€Ð°Ð±', EN: 'Arab', KY: 'ÐÑ€Ð°Ð±', TJ: 'ÐÑ€Ð°Ð±' } },
-  { code: 'CN', names: { RU: 'ÐšÐ¸Ñ‚Ð°ÐµÑ†', EN: 'Chinese', KY: 'ÐšÑ‹Ñ‚Ð°Ð¹', TJ: 'Ð§Ð¸Ð½Ó£' } },
-  { code: 'IN', names: { RU: 'Ð˜Ð½Ð´Ð¸ÐµÑ†', EN: 'Indian', KY: 'Ð˜Ð½Ð´Ð¸ÑÐ»Ñ‹Ðº', TJ: 'Ò²Ð¸Ð½Ð´Ñƒ' } },
-  { code: 'AF', names: { RU: 'ÐÑ„Ð³Ð°Ð½ÐµÑ†', EN: 'Afghan', KY: 'ÐžÐ¾Ð³Ð°Ð½', TJ: 'ÐÑ„Ò“Ð¾Ð½' } },
-  { code: 'PK', names: { RU: 'ÐŸÐ°ÐºÐ¸ÑÑ‚Ð°Ð½ÐµÑ†', EN: 'Pakistani', KY: 'ÐŸÐ°ÐºÐ¸ÑÑ‚Ð°Ð½Ð´Ñ‹Ðº', TJ: 'ÐŸÐ¾ÐºÐ¸ÑÑ‚Ð¾Ð½Ó£' } },
-  { code: 'MN', names: { RU: 'ÐœÐ¾Ð½Ð³Ð¾Ð»', EN: 'Mongolian', KY: 'ÐœÐ¾Ð½Ð³Ð¾Ð»', TJ: 'ÐœÑƒÒ“ÑƒÐ»' } }
-];
-
-const countryDirectoryAliases = {
-  RU: ['Ð Ð¤', 'Ð Ð¾ÑÑÐ¸Ð¹ÑÐºÐ°Ñ Ð¤ÐµÐ´ÐµÑ€Ð°Ñ†Ð¸Ñ', 'Russia', 'Russian Federation'], KG: ['ÐšÐ¸Ñ€Ð³Ð¸Ð·Ð¸Ñ', 'ÐšÑ‹Ñ€Ð³Ñ‹Ð·ÑÐºÐ°Ñ Ð ÐµÑÐ¿ÑƒÐ±Ð»Ð¸ÐºÐ°', 'Kyrgyzstan'], TJ: ['Ð ÐµÑÐ¿ÑƒÐ±Ð»Ð¸ÐºÐ° Ð¢Ð°Ð´Ð¶Ð¸ÐºÐ¸ÑÑ‚Ð°Ð½', 'Tajikistan'], UZ: ['Ð ÐµÑÐ¿ÑƒÐ±Ð»Ð¸ÐºÐ° Ð£Ð·Ð±ÐµÐºÐ¸ÑÑ‚Ð°Ð½', 'Uzbekistan'], KZ: ['Ð ÐµÑÐ¿ÑƒÐ±Ð»Ð¸ÐºÐ° ÐšÐ°Ð·Ð°Ñ…ÑÑ‚Ð°Ð½', 'Kazakhstan'], BY: ['Ð ÐµÑÐ¿ÑƒÐ±Ð»Ð¸ÐºÐ° Ð‘ÐµÐ»Ð°Ñ€ÑƒÑÑŒ', 'Ð‘ÐµÐ»Ð¾Ñ€ÑƒÑÑÐ¸Ñ', 'Belarus'], AE: ['Ð­Ð¼Ð¸Ñ€Ð°Ñ‚Ñ‹', 'United Arab Emirates', 'UAE'], US: ['Ð¡Ð¾ÐµÐ´Ð¸Ð½Ñ‘Ð½Ð½Ñ‹Ðµ Ð¨Ñ‚Ð°Ñ‚Ñ‹', 'Ð¡Ð¾ÐµÐ´Ð¸Ð½Ñ‘Ð½Ð½Ñ‹Ðµ Ð¨Ñ‚Ð°Ñ‚Ñ‹ ÐÐ¼ÐµÑ€Ð¸ÐºÐ¸', 'United States', 'USA'], GB: ['Ð’ÐµÐ»Ð¸ÐºÐ¾Ð±Ñ€Ð¸Ñ‚Ð°Ð½Ð¸Ñ', 'ÐÐ½Ð³Ð»Ð¸Ñ', 'United Kingdom', 'UK']
-};
-const cityDirectoryAliases = {
-  'ÐœÐ¾ÑÐºÐ²Ð°': ['ÐœÐ¡Ðš', 'Moscow', 'Moskva'], 'Ð¡Ð°Ð½ÐºÑ‚-ÐŸÐµÑ‚ÐµÑ€Ð±ÑƒÑ€Ð³': ['Ð¡ÐŸÐ±', 'ÐŸÐ¸Ñ‚ÐµÑ€', 'ÐŸÐµÑ‚ÐµÑ€Ð±ÑƒÑ€Ð³', 'Saint Petersburg', 'St Petersburg', 'Sankt Peterburg'], 'ÐÐ¸Ð¶Ð½Ð¸Ð¹ ÐÐ¾Ð²Ð³Ð¾Ñ€Ð¾Ð´': ['ÐÐ¸Ð¶Ð½Ð¸Ð¹', 'ÐÐ', 'Nizhny Novgorod'], 'Ð•ÐºÐ°Ñ‚ÐµÑ€Ð¸Ð½Ð±ÑƒÑ€Ð³': ['Ð•ÐºÐ±', 'Yekaterinburg', 'Ekaterinburg'], 'ÐÐ¾Ð²Ð¾ÑÐ¸Ð±Ð¸Ñ€ÑÐº': ['ÐÑÐº', 'Novosibirsk'], 'ÐšÐ°Ð·Ð°Ð½ÑŒ': ['Kazan'], 'Ð¡Ð°Ð¼Ð°Ñ€Ð°': ['Samara'], 'ÐÐ»Ð¼Ð°Ñ‚Ñ‹': ['ÐÐ»Ð¼Ð°-ÐÑ‚Ð°', 'Almaty'], 'ÐÑÑ‚Ð°Ð½Ð°': ['ÐÑƒÑ€-Ð¡ÑƒÐ»Ñ‚Ð°Ð½', 'Nur-Sultan', 'Astana'], 'ÐšÐ¸ÑˆÐ¸Ð½Ñ‘Ð²': ['ÐšÐ¸ÑˆÐ¸Ð½ÐµÐ²', 'Chisinau'], 'Ð”Ð½ÐµÐ¿Ñ€': ['Ð”Ð½ÐµÐ¿Ñ€Ð¾Ð¿ÐµÑ‚Ñ€Ð¾Ð²ÑÐº', 'Dnipro', 'Dnepropetrovsk']
-};
-const nationalityDirectoryAliases = { RU: ['Ð Ð¾ÑÑÐ¸ÑÐ½Ð¸Ð½', 'Ð Ð¾ÑÑÐ¸ÑÐ½ÐºÐ°', 'Ð ÑƒÑÑÐºÐ°Ñ'], KG: ['ÐšÐ¸Ñ€Ð³Ð¸Ð·', 'ÐšÐ¸Ñ€Ð³Ð¸Ð·ÐºÐ°', 'ÐšÑ‹Ñ€Ð³Ñ‹Ð·ÐºÐ°'], TJ: ['Ð¢Ð°Ð´Ð¶Ð¸Ñ‡ÐºÐ°'], UZ: ['Ð£Ð·Ð±ÐµÑ‡ÐºÐ°'], KZ: ['ÐšÐ°Ð·Ð°ÑˆÐºÐ°'], BY: ['Ð‘ÐµÐ»Ð¾Ñ€ÑƒÑÐºÐ°', 'Ð‘ÐµÐ»Ð¾Ñ€ÑƒÑÑÐºÐ¸Ð¹'], UA: ['Ð£ÐºÑ€Ð°Ð¸Ð½ÐºÐ°'] };
-
-const passportVisibilityKeys = ['photo', 'id', 'lastName', 'firstName', 'patronymic', 'birthDate', 'maritalStatus', 'nationality', 'citizenship', 'businessTrips', 'patent', 'workPermit', 'residenceCountry', 'residenceCity', 'nearestMetro', 'phone', 'email', 'messengers', 'schedule', 'professions', 'skills', 'workLocations'];
-
-function defaultPassportVisibility() {
-  return Object.fromEntries(passportVisibilityKeys.map((key) => [key, true]));
-}
-
-function loadPersonData() {
-  const saved = readStoredJSON(PERSON_DATA_KEY, {});
-  return {
-    photo: typeof saved.photo === 'string' ? saved.photo : '',
-    lastName: String(saved.lastName || '').slice(0, 80),
-    firstName: String(saved.firstName || '').slice(0, 80),
-    patronymic: String(saved.patronymic || '').slice(0, 80),
-    birthDate: /^\d{4}-\d{2}-\d{2}$/.test(String(saved.birthDate || '')) ? saved.birthDate : '',
-    maritalStatus: ['single', 'married', 'divorced', 'widowed'].includes(saved.maritalStatus) ? saved.maritalStatus : '',
-    nationality: String(saved.nationality || '').slice(0, 100),
-    citizenship: String(saved.citizenship || '').slice(0, 100),
-    residenceCountry: String(saved.residenceCountry || '').slice(0, 100)
-  };
-}
-
-function loadProfileData() {
-  const saved = readStoredJSON(PROFILE_DATA_KEY, {});
-  return { phone: String(saved.phone || '').slice(0, 60), email: String(saved.email || '').slice(0, 120), city: String(saved.city || '').slice(0, 100), metro: String(saved.metro || '').slice(0, 100), profession: String(saved.profession || '').slice(0, 140) };
-}
-
-function loadBuilderPassport() {
-  const saved = readStoredJSON(BUILDER_PASSPORT_KEY, {});
-  const defaults = defaultPassportVisibility();
-  const visibleFields = Object.fromEntries(passportVisibilityKeys.map((key) => [key,
-    typeof saved.visibleFields?.[key] === 'boolean'
-      ? saved.visibleFields[key]
-      : saved.privacy?.[key]?.public !== false && saved.privacy?.[key]?.link !== false
-  ]));
-  const workLocations = Array.isArray(saved.workLocations) ? saved.workLocations.filter(Boolean).slice(0, 12).map((item) => ({ id: String(item.id || `place-${Date.now()}-${Math.random().toString(16).slice(2)}`), country: String(item.country || '').slice(0, 100), city: String(item.city || '').slice(0, 100) })) : [];
-  const professions = Array.isArray(saved.professions) ? saved.professions.filter(Boolean).slice(0, 50).map((item) => ({ id: String(item.id || `profession-${Date.now()}-${Math.random().toString(16).slice(2)}`), name: String(item.name || '').slice(0, 140), experience: Math.max(0, Math.min(70, Number(item.experience) || 0)) })) : [];
-  const scheduleDays = Array.isArray(saved.scheduleDays) ? saved.scheduleDays.filter((day) => ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'].includes(day)) : [];
-  const skills = Array.isArray(saved.skills) ? saved.skills.filter((value) => typeof value === 'string' && value.trim()).slice(0, 80).map((value) => value.trim().slice(0, 120)) : [];
-  return {
-    patent: Boolean(saved.patent),
-    workPermit: Boolean(saved.workPermit),
-    businessTrips: typeof saved.businessTrips === 'boolean' ? saved.businessTrips : null,
-    messengerLinked: typeof saved.messengerLinked === 'boolean' ? saved.messengerLinked : null,
-    messengers: { max: Boolean(saved.messengers?.max), telegram: Boolean(saved.messengers?.telegram), whatsapp: Boolean(saved.messengers?.whatsapp) },
-    anySchedule: Boolean(saved.anySchedule),
-    scheduleDays,
-    nightShifts: Boolean(saved.nightShifts),
-    callFrom: /^\d{2}:\d{2}$/.test(String(saved.callFrom || '')) ? saved.callFrom : '',
-    callTo: /^\d{2}:\d{2}$/.test(String(saved.callTo || '')) ? saved.callTo : '',
-    professions: professions.length ? professions : [{ id: `profession-${Date.now()}`, name: '', experience: 0 }],
-    skills,
-    workLocations: workLocations.length ? workLocations : [{ id: `place-${Date.now()}`, country: '', city: '' }],
-    important: {
-      contractorSearch: Boolean(saved.important?.contractorSearch ?? saved.preferences?.participateSearch),
-      employeeSearch: Boolean(saved.important?.employeeSearch),
-      tenderParticipation: Boolean(saved.important?.tenderParticipation),
-      employmentOffers: Boolean(saved.important?.employmentOffers ?? saved.preferences?.receiveJobOffers),
-      objectOffers: Boolean(saved.important?.objectOffers ?? saved.preferences?.receiveVolumeOffers),
-      passportAvailable: Boolean(saved.important?.passportAvailable ?? saved.preferences?.passportAvailable)
-    },
-    visibleFields: { ...defaults, ...visibleFields }
-  };
-}
-
-let personData = loadPersonData();
-let profileData = loadProfileData();
-let builderPassport = loadBuilderPassport();
-if (!builderPassport.professions.some((item) => item.name) && profileData.profession) builderPassport.professions[0].name = profileData.profession;
-let authSeedName = '';
-let passportImportantExpanded = false;
-let passportAccessListExpanded = false;
-
-function localizedCountryName(country) { return country.names[language] || country.names.RU; }
-
-function localizedNationalityName(nationality) { return nationality.names[language] || nationality.names.RU; }
-
-function normalizeDirectoryValue(value) {
-  return String(value || '')
-    .trim()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLocaleLowerCase(root.lang || 'ru')
-    .replace(/Ñ‘/g, 'Ðµ')
-    .replace(/â„–/g, ' Ð½Ð¾Ð¼ÐµÑ€ ')
-    .replace(/&/g, ' Ð¸ ')
-    .replace(/[^\p{L}\p{N}]+/gu, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-const russianKeyboardCharacters = Object.freeze({ q: 'Ð¹', w: 'Ñ†', e: 'Ñƒ', r: 'Ðº', t: 'Ðµ', y: 'Ð½', u: 'Ð³', i: 'Ñˆ', o: 'Ñ‰', p: 'Ð·', '[': 'Ñ…', ']': 'ÑŠ', a: 'Ñ„', s: 'Ñ‹', d: 'Ð²', f: 'Ð°', g: 'Ð¿', h: 'Ñ€', j: 'Ð¾', k: 'Ð»', l: 'Ð´', ';': 'Ð¶', "'": 'Ñ', z: 'Ñ', x: 'Ñ‡', c: 'Ñ', v: 'Ð¼', b: 'Ð¸', n: 'Ñ‚', m: 'ÑŒ', ',': 'Ð±', '.': 'ÑŽ' });
-
-function russianKeyboardValue(value) {
-  return String(value || '').toLocaleLowerCase('en').replace(/[qwertyuiop\[\]asdfghjkl;'zxcvbnm,.]/g, (character) => russianKeyboardCharacters[character] || character);
-}
-
-function latinTransliterationValue(value) {
-  let result = String(value || '').toLocaleLowerCase('en');
-  const combinations = [['shch', 'Ñ‰'], ['sch', 'Ñ‰'], ['yo', 'Ñ‘'], ['jo', 'Ñ‘'], ['zh', 'Ð¶'], ['kh', 'Ñ…'], ['ts', 'Ñ†'], ['ch', 'Ñ‡'], ['sh', 'Ñˆ'], ['yu', 'ÑŽ'], ['ju', 'ÑŽ'], ['ya', 'Ñ'], ['ja', 'Ñ'], ['ye', 'Ðµ']];
-  combinations.forEach(([latin, cyrillic]) => { result = result.replaceAll(latin, cyrillic); });
-  const characters = { a: 'Ð°', b: 'Ð±', c: 'Ðº', d: 'Ð´', e: 'Ðµ', f: 'Ñ„', g: 'Ð³', h: 'Ñ…', i: 'Ð¸', j: 'Ð¹', k: 'Ðº', l: 'Ð»', m: 'Ð¼', n: 'Ð½', o: 'Ð¾', p: 'Ð¿', q: 'Ðº', r: 'Ñ€', s: 'Ñ', t: 'Ñ‚', u: 'Ñƒ', v: 'Ð²', w: 'Ð²', x: 'ÐºÑ', y: 'Ñ‹', z: 'Ð·' };
-  return result.replace(/[a-z]/g, (character) => characters[character] || character);
-}
-
-function directorySearchForms(value) {
-  const source = String(value || '').trim();
-  if (!source) return [];
-  const rawVariants = [source, source.replace(/\(([^)]+)\)/g, ' $1 '), source.replace(/\([^)]*\)/g, ' '), russianKeyboardValue(source), latinTransliterationValue(source)];
-  const forms = new Set();
-  rawVariants.forEach((variant) => {
-    const normalized = normalizeDirectoryValue(variant);
-    if (!normalized) return;
-    forms.add(normalized);
-    forms.add(normalized.replace(/^(?:ÑÑ‚Ð°Ð½Ñ†Ð¸Ñ\s+)?(?:Ð¼ÐµÑ‚Ñ€Ð¾|Ð¼)\s+/, '').trim());
-    forms.add(normalized.replace(/\bÐ¸Ð¼\b/g, 'Ð¸Ð¼ÐµÐ½Ð¸').trim());
-    forms.add(normalized.replace(/\s+[12]$/, '').trim());
-  });
-  return [...forms].filter(Boolean);
-}
-
-function directoryValuesEquivalent(left, right) {
-  const rightForms = new Set(directorySearchForms(right));
-  return directorySearchForms(left).some((form) => rightForms.has(form));
-}
-
-function boundedEditDistance(left, right, limit) {
-  if (Math.abs(left.length - right.length) > limit) return limit + 1;
-  let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
-  for (let row = 1; row <= left.length; row += 1) {
-    const current = [row];
-    let rowMinimum = current[0];
-    for (let column = 1; column <= right.length; column += 1) {
-      current[column] = Math.min(current[column - 1] + 1, previous[column] + 1, previous[column - 1] + (left[row - 1] === right[column - 1] ? 0 : 1));
-      rowMinimum = Math.min(rowMinimum, current[column]);
-    }
-    if (rowMinimum > limit) return limit + 1;
-    previous = current;
-  }
-  return previous[right.length];
-}
-
-function directoryTokenStemMatch(candidate, query) {
-  if (candidate.startsWith(query) || query.startsWith(candidate)) return true;
-  const minimumLength = Math.min(candidate.length, query.length);
-  if (minimumLength < 6) return false;
-  let common = 0;
-  while (common < minimumLength && candidate[common] === query[common]) common += 1;
-  return common >= Math.max(5, Math.floor(minimumLength * .68));
-}
-
-function directoryMatchScore(keywords, query) {
-  const queryForms = directorySearchForms(query);
-  if (!queryForms.length) return 0;
-  const candidateForms = [...new Set(keywords.flatMap(directorySearchForms))];
-  let best = -1;
-  queryForms.forEach((queryForm) => {
-    const queryTokens = queryForm.split(' ').filter(Boolean);
-    candidateForms.forEach((candidate) => {
-      let score = -1;
-      if (candidate === queryForm) score = 0;
-      else if (candidate.startsWith(queryForm)) score = 1;
-      else {
-        const candidateTokens = candidate.split(' ').filter(Boolean);
-        if (queryTokens.every((queryToken) => candidateTokens.some((token) => directoryTokenStemMatch(token, queryToken)))) score = 2;
-        else if (candidate.includes(queryForm)) score = 3;
-        else if (queryTokens.every((queryToken) => queryToken.length >= 4 && candidateTokens.some((token) => boundedEditDistance(token, queryToken, queryToken.length >= 6 ? 2 : 1) <= (queryToken.length >= 6 ? 2 : 1)))) score = 4;
-      }
-      if (score >= 0 && (best < 0 || score < best)) best = score;
-    });
-  });
-  return best;
-}
-
-function metroStationSearchKeywords(station) {
-  const parenthetical = [...String(station).matchAll(/\(([^)]+)\)/g)].map((match) => match[1]);
-  return [...new Set([station, station.replace(/\([^)]*\)/g, '').trim(), station.replace(/\bÐ¸Ð¼\.?\s*/i, 'Ð¸Ð¼ÐµÐ½Ð¸ '), station.replace(/\s+[12]$/, '').trim(), ...parenthetical])].filter(Boolean);
-}
-
-function metroCityByValue(value) {
-  return Object.keys(metroDirectory).find((city) => [city, ...(cityDirectoryAliases[city] || [])].some((alias) => directoryValuesEquivalent(alias, value)));
-}
-
-function countryByValue(value) {
-  return passportCountryDirectory.find((country) => [country.code, ...Object.values(country.names), ...(countryDirectoryAliases[country.code] || [])].some((name) => directoryValuesEquivalent(name, value)));
-}
-
-function nationalityByValue(value) {
-  return passportNationalityDirectory.find((nationality) => [nationality.code, ...Object.values(nationality.names), ...(nationalityDirectoryAliases[nationality.code] || [])].some((name) => directoryValuesEquivalent(name, value)));
-}
-
-function personFullName() {
-  return [personData.lastName, personData.firstName, personData.patronymic].filter(Boolean).join(' ').trim() || authSeedName || tr('userTariff');
-}
-
-function isForeignCitizen() {
-  const value = personData.citizenship.trim();
-  if (!value) return false;
-  const country = countryByValue(value);
-  if (country) return country.code !== 'RU';
-  const normalized = value.toLocaleLowerCase(root.lang || 'ru');
-  const russia = passportCountryDirectory.find((country) => country.code === 'RU');
-  return !['Ñ€Ñ„', 'Ñ€Ð¾ÑÑÐ¸Ð¹ÑÐºÐ°Ñ Ñ„ÐµÐ´ÐµÑ€Ð°Ñ†Ð¸Ñ', 'russian federation'].includes(normalized) && !Object.values(russia.names).some((name) => name.toLocaleLowerCase(root.lang || 'ru') === normalized);
-}
-
-function passportCompletion() {
-  const values = [true, personData.photo, personData.lastName, personData.firstName, personData.patronymic, personData.birthDate, personData.maritalStatus, personData.nationality, personData.citizenship, personData.residenceCountry, profileData.city, profileData.metro, profileData.phone, profileData.email, typeof builderPassport.messengerLinked === 'boolean', typeof builderPassport.businessTrips === 'boolean', builderPassport.professions.some((item) => item.name), builderPassport.skills.length > 0, builderPassport.workLocations.some((item) => item.country.trim() && item.city.trim())];
-  return Math.round(values.filter(Boolean).length / values.length * 100);
-}
-
-function calculatedProfileCompletion() {
-  const values = [personData.photo, personData.lastName, personData.firstName, personData.patronymic, personData.birthDate, personData.maritalStatus, personData.nationality, personData.citizenship, personData.residenceCountry, profileData.phone, profileData.email, profileData.city, profileData.metro, profileData.profession];
-  return Math.round(values.filter(Boolean).length / values.length * 100);
-}
-
-function localDateKey(value = new Date()) {
-  let date = value instanceof Date ? value : new Date(value);
-  if (Number.isNaN(date.getTime())) date = new Date();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
-  return `${date.getFullYear()}-${month}-${day}`;
-}
-
-function validTodoDate(value, fallback = localDateKey()) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ''))) return fallback;
-  return Number.isNaN(new Date(`${value}T12:00:00`).getTime()) ? fallback : value;
-}
-
-const storedWidgets = readStoredJSON('structos-space-widgets', defaultWidgets);
-let selectedWidgets = (Array.isArray(storedWidgets) ? storedWidgets : defaultWidgets).filter((id) => widgetDefinitions[id]);
-if (localStorage.getItem(WIDGETS_VERSION_KEY) !== '4') {
-  if (!selectedWidgets.includes('calendar')) selectedWidgets.push('calendar');
-  localStorage.setItem('structos-space-widgets', JSON.stringify(selectedWidgets));
-  localStorage.setItem(WIDGETS_VERSION_KEY, '4');
-}
-let widgetPositions = readStoredJSON('structos-space-positions', {});
-let widgetSizes = readStoredJSON('structos-space-sizes', {});
-let widgetStyles = readStoredJSON(WIDGET_STYLES_KEY, {});
-let todoItems = readStoredJSON(TODO_KEY, []);
-if (!todoItems || !Array.isArray(todoItems)) todoItems = [];
-todoItems = todoItems
-  .filter((item) => item && typeof item.text === 'string')
-  .map((item) => {
-    const createdAt = item.createdAt || new Date().toISOString();
-    const done = Boolean(item.done);
-    return {
-      id: String(item.id || `task-${Date.now()}-${Math.random().toString(16).slice(2)}`),
-      text: item.text.slice(0, 160),
-      done,
-      dueDate: validTodoDate(item.dueDate, localDateKey(createdAt)),
-      createdAt,
-      completedAt: done ? (item.completedAt || createdAt) : null
-    };
-  });
-
-function defaultPosition(index) {
-  const cols = window.innerWidth >= 900 ? 4 : window.innerWidth >= 620 ? 3 : 2;
-  return { x: 16 + (index % cols) * (window.innerWidth >= 620 ? 160 : 148), y: 70 + Math.floor(index / cols) * 108 };
-}
-
-function constrainedWidgetSize(width, height, canvas) {
-  const maxWidth = Math.max(108, Math.min(320, canvas.clientWidth - 16));
-  const maxHeight = Math.max(82, Math.min(260, canvas.clientHeight - 110));
-  return {
-    width: Math.max(108, Math.min(maxWidth, Number(width) || 138)),
-    height: Math.max(82, Math.min(maxHeight, Number(height) || 96))
-  };
-}
-
-function applyWidgetDimensions(card, width, height, canvas) {
-  const size = constrainedWidgetSize(width, height, canvas);
-  const scale = Math.max(.72, Math.min(1.7, Math.min(size.width / 138, size.height / 96)));
-  card.style.width = `${size.width}px`;
-  card.style.height = `${size.height}px`;
-  card.style.setProperty('--widget-scale', scale.toFixed(3));
-  return size;
-}
-
-function keepWidgetInsideCanvas(card, canvas) {
-  const bottomClearance = $('[data-dashboard]').classList.contains('is-space-mode') ? 96 : 28;
-  const x = Math.max(0, Math.min(canvas.clientWidth - card.offsetWidth, card.offsetLeft));
-  const y = Math.max(0, Math.min(canvas.clientHeight - card.offsetHeight - bottomClearance, card.offsetTop));
-  card.style.left = `${x}px`;
-  card.style.top = `${y}px`;
-}
-
-function renderWidgets() {
-  const canvas = $('[data-space-canvas]');
-  if (!canvas) return;
-  $$('.space-widget', canvas).forEach((item) => item.remove());
-  selectedWidgets.forEach((id, index) => {
-    const definition = widgetDefinitions[id]; if (!definition) return;
-    const position = widgetPositions[id] || defaultPosition(index);
-    const card = document.createElement('button');
-    card.type = 'button'; card.className = 'space-widget'; card.dataset.widget = id;
-    card.style.left = `${position.x}px`; card.style.top = `${position.y}px`;
-    const style = widgetStyles[id] || {};
-    if (widgetColors.includes(style.color)) card.style.setProperty('--widget-color', style.color);
-    card.classList.toggle('is-pulsing', Boolean(style.pulse));
-    const size = widgetSizes[id] || { width: 138, height: 96 };
-    applyWidgetDimensions(card, size.width, size.height, canvas);
-    const hint = id === 'objects'
-      ? `${combinedManagedObjects().filter((object) => !object.completed).length}`
-      : id === 'tasks' ? `${todoItems.filter((item) => !item.done).length} / ${todoItems.length}`
-        : id === 'finance' ? `${cashflowObjects.length}`
-          : id === 'passport' ? `${passportCompletion()}%`
-          : id === 'calendar' ? new Intl.DateTimeFormat(root.lang || 'ru', { day: 'numeric', month: 'short' }).format(new Date()) : definition.hint;
-    card.innerHTML = `<span class="space-widget-icon">${definition.icon}</span><strong>${tr(definition.label)}</strong><small>${hint} Â· ${tr('quickFunction')}</small><i class="widget-resize-handle" aria-hidden="true"></i>`;
-    let tapTimer = 0;
-    let lastTap = 0;
-    card.addEventListener('click', (event) => {
-      if (Date.now() < Number(card.dataset.suppressClickUntil || 0) || event.target.closest('.widget-resize-handle')) return;
-      const now = Date.now();
-      if (now - lastTap < 330) {
-        clearTimeout(tapTimer);
-        lastTap = 0;
-        openWidgetAppearance(id);
-        return;
-      }
-      lastTap = now;
-      tapTimer = window.setTimeout(() => {
-        lastTap = 0;
-        openView(id === 'analysis' ? 'project' : id);
-      }, 330);
-    });
-    enableWidgetInteraction(card, canvas);
-    canvas.append(card);
-    keepWidgetInsideCanvas(card, canvas);
-  });
-}
-
-function enableWidgetInteraction(card, canvas) {
-  const pointers = new Map();
-  let mode = 'idle';
-  let startX = 0, startY = 0, originX = 0, originY = 0;
-  let startWidth = 0, startHeight = 0, pinchDistance = 1;
-  let moved = false;
-
-  const beginPinch = () => {
-    const points = [...pointers.values()];
-    if (points.length < 2) return;
-    mode = 'pinch';
-    pinchDistance = Math.max(1, Math.hypot(points[0].x - points[1].x, points[0].y - points[1].y));
-    startWidth = card.offsetWidth;
-    startHeight = card.offsetHeight;
-    moved = true;
-    card.classList.remove('is-dragging');
-    card.classList.add('is-resizing');
-  };
-
-  card.addEventListener('pointerdown', (event) => {
-    event.preventDefault();
-    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
-    card.setPointerCapture(event.pointerId);
-    if (pointers.size >= 2) { beginPinch(); return; }
-    startX = event.clientX; startY = event.clientY;
-    startWidth = card.offsetWidth; startHeight = card.offsetHeight;
-    moved = false;
-    if (event.target.closest('.widget-resize-handle')) {
-      mode = 'resize';
-      card.classList.add('is-resizing');
-    } else {
-      mode = 'drag';
-      originX = card.offsetLeft; originY = card.offsetTop;
-      card.classList.add('is-dragging');
-    }
-  });
-
-  card.addEventListener('pointermove', (event) => {
-    if (!pointers.has(event.pointerId)) return;
-    event.preventDefault();
-    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
-    if (pointers.size >= 2) {
-      if (mode !== 'pinch') beginPinch();
-      const points = [...pointers.values()];
-      const distance = Math.max(1, Math.hypot(points[0].x - points[1].x, points[0].y - points[1].y));
-      const scale = distance / pinchDistance;
-      applyWidgetDimensions(card, startWidth * scale, startHeight * scale, canvas);
-      keepWidgetInsideCanvas(card, canvas);
-      return;
-    }
-    const dx = event.clientX - startX, dy = event.clientY - startY;
-    moved ||= Math.abs(dx) + Math.abs(dy) > 5;
-    if (mode === 'resize') {
-      applyWidgetDimensions(card, startWidth + dx, startHeight + dy, canvas);
-      keepWidgetInsideCanvas(card, canvas);
-      return;
-    }
-    if (mode === 'drag') {
-      card.style.left = `${originX + dx}px`;
-      card.style.top = `${originY + dy}px`;
-      keepWidgetInsideCanvas(card, canvas);
-    }
-  });
-
-  const finishPointer = (event) => {
-    pointers.delete(event.pointerId);
-    if (card.hasPointerCapture(event.pointerId)) card.releasePointerCapture(event.pointerId);
-    if (pointers.size) { mode = 'idle'; return; }
-    card.classList.remove('is-dragging'); card.dataset.moved = moved ? 'true' : '';
-    card.classList.remove('is-resizing');
-    if (moved) card.dataset.suppressClickUntil = String(Date.now() + 450);
-    widgetPositions[card.dataset.widget] = { x: card.offsetLeft, y: card.offsetTop };
-    widgetSizes[card.dataset.widget] = { width: card.offsetWidth, height: card.offsetHeight };
-    localStorage.setItem('structos-space-positions', JSON.stringify(widgetPositions));
-    localStorage.setItem('structos-space-sizes', JSON.stringify(widgetSizes));
-    mode = 'idle';
-    setTimeout(() => { delete card.dataset.moved; }, 0);
-  };
-  card.addEventListener('pointerup', finishPointer);
-  card.addEventListener('pointercancel', finishPointer);
-}
-
-function renderWidgetPicker() {
-  const picker = $('[data-widget-picker]'); if (!picker) return;
-  picker.replaceChildren(...Object.entries(widgetDefinitions).map(([id, definition]) => {
-    const selected = selectedWidgets.includes(id);
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = `widget-choice${selected ? ' is-selected' : ''}`;
-    button.innerHTML = `<span class="widget-choice-icon">${definition.icon}</span><span class="widget-choice-copy"><strong>${tr(definition.label)}</strong><small>${tr(selected ? 'onField' : 'addToField')}</small></span><b class="widget-choice-state">${selected ? 'âœ“' : '+'}</b>`;
-    button.addEventListener('click', () => { selectedWidgets = selectedWidgets.includes(id) ? selectedWidgets.filter((item) => item !== id) : [...selectedWidgets, id]; localStorage.setItem('structos-space-widgets', JSON.stringify(selectedWidgets)); renderWidgetPicker(); renderWidgets(); });
-    return button;
-  }));
-}
-
-function saveWidgetStyles() {
-  localStorage.setItem(WIDGET_STYLES_KEY, JSON.stringify(widgetStyles));
-}
-
-function openWidgetAppearance(id) {
-  const definition = widgetDefinitions[id];
-  if (!definition) return;
-  const current = widgetStyles[id] || {};
-  const hasColor = widgetColors.includes(current.color);
-  const colors = widgetColors.map((color, index) => `<button class="widget-color-swatch${current.color === color ? ' is-selected' : ''}" type="button" data-widget-color="${color}" style="--swatch:${color}" aria-label="${tr('blockColor')} ${index + 1}"></button>`).join('');
-  const noColor = `<button class="widget-color-swatch is-none${hasColor ? '' : ' is-selected'}" type="button" data-widget-no-color aria-label="${tr('noColor')}" title="${tr('noColor')}"><span>${tr('noColor')}</span></button>`;
-  showDialog(tr('widgetAppearance'), tr('doubleTapHint'), `<section class="widget-appearance"><h3>${tr(definition.label)} Â· ${tr('blockColor')}</h3><div class="widget-color-grid">${noColor}${colors}</div><button class="widget-pulse-toggle${current.pulse ? ' is-on' : ''}" type="button" data-widget-pulse aria-pressed="${Boolean(current.pulse)}"><span>${tr('pulseBlock')}</span><i aria-hidden="true"></i></button></section>`);
-
-  $$('[data-widget-color]', $('[data-dialog-content]')).forEach((button) => button.addEventListener('click', () => {
-    widgetStyles[id] = { ...(widgetStyles[id] || {}), color: button.dataset.widgetColor };
-    saveWidgetStyles();
-    $$('.widget-color-swatch', $('[data-dialog-content]')).forEach((swatch) => swatch.classList.toggle('is-selected', swatch === button));
-    const card = $(`.space-widget[data-widget="${id}"]`);
-    card?.style.setProperty('--widget-color', button.dataset.widgetColor);
-  }));
-  $('[data-widget-no-color]', $('[data-dialog-content]'))?.addEventListener('click', (event) => {
-    widgetStyles[id] = { ...(widgetStyles[id] || {}) };
-    delete widgetStyles[id].color;
-    saveWidgetStyles();
-    $$('.widget-color-swatch', $('[data-dialog-content]')).forEach((swatch) => swatch.classList.toggle('is-selected', swatch === event.currentTarget));
-    $(`.space-widget[data-widget="${id}"]`)?.style.removeProperty('--widget-color');
-  });
-  $('[data-widget-pulse]', $('[data-dialog-content]'))?.addEventListener('click', (event) => {
-    const pulse = !Boolean(widgetStyles[id]?.pulse);
-    widgetStyles[id] = { ...(widgetStyles[id] || {}), pulse };
-    saveWidgetStyles();
-    event.currentTarget.classList.toggle('is-on', pulse);
-    event.currentTarget.setAttribute('aria-pressed', String(pulse));
-    $(`.space-widget[data-widget="${id}"]`)?.classList.toggle('is-pulsing', pulse);
-  });
-}
-
-function saveTodoItems() {
-  localStorage.setItem(TODO_KEY, JSON.stringify(todoItems));
-}
-
-function todoDateLabel(value) {
-  try { return new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric' }).format(new Date(`${value}T12:00:00`)); }
-  catch { return value; }
-}
-
-function sortedTodoItems() {
-  const today = localDateKey();
-  const byDueDate = (left, right) => left.dueDate.localeCompare(right.dueDate) || String(left.createdAt).localeCompare(String(right.createdAt));
-  const active = todoItems.filter((item) => !item.done).sort(byDueDate);
-  const overdue = active.filter((item) => item.dueDate < today);
-  const current = active.filter((item) => item.dueDate === today);
-  const future = active.filter((item) => item.dueDate > today);
-  const completed = todoItems
-    .filter((item) => item.done)
-    .sort((left, right) => String(right.completedAt || '').localeCompare(String(left.completedAt || '')));
-  return { items: [...overdue, ...current, ...future, ...completed], today, nextFutureId: future[0]?.id || null };
-}
-
-function renderTodoList() {
-  const list = $('[data-todo-list]', $('[data-dialog-content]'));
-  if (!list) return;
-  if (!todoItems.length) {
-    list.innerHTML = `<div class="todo-empty">${tr('todoEmpty')}</div>`;
-    return;
-  }
-  const { items, today, nextFutureId } = sortedTodoItems();
-  list.innerHTML = items.map((item) => {
-    const state = item.done ? 'done' : item.dueDate < today ? 'overdue' : item.dueDate === today ? 'today' : item.id === nextFutureId ? 'next' : 'future';
-    const statusKey = { done: 'completedTask', overdue: 'overdueTask', today: 'todayTask', next: 'nextTask', future: 'futureTask' }[state];
-    return `<article class="todo-row is-${state}" data-todo-row="${escapeHtml(item.id)}"><input class="todo-check" type="checkbox" data-todo-id="${escapeHtml(item.id)}" aria-label="${tr('completedTask')}"${item.done ? ' checked' : ''} /><div class="todo-copy"><strong>${escapeHtml(item.text)}</strong><small>${tr(statusKey)} Â· ${todoDateLabel(item.dueDate)}</small><input class="todo-date" type="date" value="${item.dueDate}" data-todo-date="${escapeHtml(item.id)}" aria-label="${tr('dueDate')}" /></div><button class="todo-delete" type="button" data-todo-delete="${escapeHtml(item.id)}" aria-label="${tr('deleteTask')}">Ã—</button></article>`;
-  }).join('');
-  $$('[data-todo-id]', list).forEach((checkbox) => checkbox.addEventListener('change', () => {
-    const task = todoItems.find((item) => item.id === checkbox.dataset.todoId);
-    if (!task) return;
-    task.done = checkbox.checked;
-    task.completedAt = task.done ? new Date().toISOString() : null;
-    saveTodoItems();
-    renderTodoList();
-    renderWidgets();
-  }));
-  $$('[data-todo-date]', list).forEach((input) => input.addEventListener('change', () => {
-    const task = todoItems.find((item) => item.id === input.dataset.todoDate);
-    if (!task) return;
-    task.dueDate = validTodoDate(input.value);
-    saveTodoItems();
-    renderTodoList();
-  }));
-  $$('[data-todo-delete]', list).forEach((button) => button.addEventListener('click', () => {
-    if (!window.confirm(tr('deleteTaskConfirm'))) return;
-    todoItems = todoItems.filter((item) => item.id !== button.dataset.todoDelete);
-    saveTodoItems();
-    renderTodoList();
-    renderWidgets();
-    showToast(tr('taskDeleted'));
-  }));
-}
-
-function openTodoDialog() {
-  const today = localDateKey();
-  showDialog(tr('todoList'), tr('todoEmpty'), `<div class="todo-create"><input data-todo-input maxlength="160" placeholder="${tr('newTask')}" /><input class="todo-new-date" type="date" value="${today}" data-todo-new-date aria-label="${tr('dueDate')}" /><button class="primary-button todo-add-button" type="button" data-todo-add aria-label="${tr('addTask')}">+</button></div><div class="todo-list" data-todo-list></div>`);
-  renderTodoList();
-  const input = $('[data-todo-input]', $('[data-dialog-content]'));
-  const dateInput = $('[data-todo-new-date]', $('[data-dialog-content]'));
-  const addTask = () => {
-    const text = input.value.trim();
-    if (!text) { input.focus(); return; }
-    todoItems.unshift({ id: `task-${Date.now()}-${Math.random().toString(16).slice(2)}`, text: text.slice(0, 160), done: false, dueDate: validTodoDate(dateInput.value), createdAt: new Date().toISOString(), completedAt: null });
-    saveTodoItems();
-    input.value = '';
-    dateInput.value = localDateKey();
-    renderTodoList();
-    renderWidgets();
-    showToast(tr('taskAdded'));
-  };
-  $('[data-todo-add]', $('[data-dialog-content]'))?.addEventListener('click', addTask);
-  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); addTask(); } });
-  setTimeout(() => input?.focus(), 40);
-}
-
-let selectedCalendarDate = localDateKey();
-let calendarMonthCursor = new Date(`${selectedCalendarDate}T12:00:00`);
-
-function calendarMonthTitle(date) {
-  return new Intl.DateTimeFormat(root.lang || 'ru', { month: 'long', year: 'numeric' }).format(date);
-}
-
-function calendarWeekdays() {
-  const monday = new Date(2026, 0, 5, 12);
-  return Array.from({ length: 7 }, (_, index) => new Intl.DateTimeFormat(root.lang || 'ru', { weekday: 'short' }).format(new Date(2026, 0, 5 + index, 12)).replace('.', ''));
-}
-
-function calendarDayTasks(dateKey) {
-  return todoItems.filter((item) => item.dueDate === dateKey);
-}
-
-function calendarGridMarkup() {
-  const year = calendarMonthCursor.getFullYear();
-  const month = calendarMonthCursor.getMonth();
-  const firstDay = new Date(year, month, 1, 12);
-  const offset = (firstDay.getDay() + 6) % 7;
-  const start = new Date(year, month, 1 - offset, 12);
-  const today = localDateKey();
-  return Array.from({ length: 42 }, (_, index) => {
-    const date = new Date(start.getFullYear(), start.getMonth(), start.getDate() + index, 12);
-    const dateKey = localDateKey(date);
-    const tasks = calendarDayTasks(dateKey);
-    const activeCount = tasks.filter((item) => !item.done).length;
-    const completedCount = tasks.length - activeCount;
-    const classes = [date.getMonth() !== month ? 'is-outside' : '', dateKey === today ? 'is-today' : '', dateKey === selectedCalendarDate ? 'is-selected' : '', tasks.length ? 'has-tasks' : ''].filter(Boolean).join(' ');
-    return `<button class="calendar-day ${classes}" type="button" data-calendar-date="${dateKey}" aria-label="${escapeHtml(todoDateLabel(dateKey))}"><span>${date.getDate()}</span>${tasks.length ? `<i aria-hidden="true">${activeCount ? `<b>${activeCount}</b>` : ''}${completedCount ? '<em></em>' : ''}</i>` : ''}</button>`;
-  }).join('');
-}
-
-function calendarTasksMarkup() {
-  const items = calendarDayTasks(selectedCalendarDate).sort((left, right) => Number(left.done) - Number(right.done) || String(left.createdAt).localeCompare(String(right.createdAt)));
-  if (!items.length) return `<div class="calendar-empty">${tr('noCalendarEvents')}</div>`;
-  return items.map((item) => `<label class="calendar-task${item.done ? ' is-done' : ''}"><input type="checkbox" data-calendar-task="${escapeHtml(item.id)}"${item.done ? ' checked' : ''} /><span>${escapeHtml(item.text)}</span></label>`).join('');
-}
-
-function renderCalendarDialog() {
-  const rootElement = $('[data-calendar-root]', $('[data-dialog-content]'));
-  if (!rootElement) return;
-  rootElement.innerHTML = `<div class="calendar-toolbar"><button type="button" data-calendar-previous aria-label="${tr('previousMonth')}">â€¹</button><strong>${escapeHtml(calendarMonthTitle(calendarMonthCursor))}</strong><button type="button" data-calendar-next aria-label="${tr('nextMonth')}">â€º</button></div><button class="calendar-today" type="button" data-calendar-today>${tr('today')}</button><div class="calendar-weekdays">${calendarWeekdays().map((day) => `<span>${escapeHtml(day)}</span>`).join('')}</div><div class="calendar-grid">${calendarGridMarkup()}</div><section class="calendar-selected"><header><span>${tr('selectedDate')}</span><strong>${escapeHtml(todoDateLabel(selectedCalendarDate))}</strong></header><div class="calendar-task-list">${calendarTasksMarkup()}</div><div class="calendar-add"><input type="text" maxlength="160" data-calendar-task-input placeholder="${tr('addTaskForDate')}" /><button class="primary-button" type="button" data-calendar-task-add aria-label="${tr('addTask')}">+</button></div></section>`;
-  $('[data-calendar-previous]', rootElement)?.addEventListener('click', () => { calendarMonthCursor = new Date(calendarMonthCursor.getFullYear(), calendarMonthCursor.getMonth() - 1, 1, 12); renderCalendarDialog(); });
-  $('[data-calendar-next]', rootElement)?.addEventListener('click', () => { calendarMonthCursor = new Date(calendarMonthCursor.getFullYear(), calendarMonthCursor.getMonth() + 1, 1, 12); renderCalendarDialog(); });
-  $('[data-calendar-today]', rootElement)?.addEventListener('click', () => { selectedCalendarDate = localDateKey(); calendarMonthCursor = new Date(`${selectedCalendarDate}T12:00:00`); renderCalendarDialog(); });
-  $$('[data-calendar-date]', rootElement).forEach((button) => button.addEventListener('click', () => {
-    selectedCalendarDate = button.dataset.calendarDate;
-    const selected = new Date(`${selectedCalendarDate}T12:00:00`);
-    if (selected.getMonth() !== calendarMonthCursor.getMonth() || selected.getFullYear() !== calendarMonthCursor.getFullYear()) calendarMonthCursor = new Date(selected.getFullYear(), selected.getMonth(), 1, 12);
-    renderCalendarDialog();
-  }));
-  $$('[data-calendar-task]', rootElement).forEach((checkbox) => checkbox.addEventListener('change', () => {
-    const task = todoItems.find((item) => item.id === checkbox.dataset.calendarTask);
-    if (!task) return;
-    task.done = checkbox.checked;
-    task.completedAt = task.done ? new Date().toISOString() : null;
-    saveTodoItems(); renderCalendarDialog(); renderWidgets();
-  }));
-  const input = $('[data-calendar-task-input]', rootElement);
-  const addTask = () => {
-    const text = input?.value.trim();
-    if (!text) { input?.focus(); return; }
-    todoItems.unshift({ id: `task-${Date.now()}-${Math.random().toString(16).slice(2)}`, text: text.slice(0, 160), done: false, dueDate: selectedCalendarDate, createdAt: new Date().toISOString(), completedAt: null });
-    saveTodoItems(); renderCalendarDialog(); renderWidgets(); showToast(tr('taskAdded'));
-  };
-  $('[data-calendar-task-add]', rootElement)?.addEventListener('click', addTask);
-  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); addTask(); } });
-}
-
-function openCalendarDialog() {
-  const selected = new Date(`${selectedCalendarDate}T12:00:00`);
-  calendarMonthCursor = new Date(selected.getFullYear(), selected.getMonth(), 1, 12);
-  showDialog(tr('calendar'), tr('calendarHint'), '<div data-calendar-root></div>');
-  $('[data-dialog]')?.classList.add('calendar-dialog');
-  renderCalendarDialog();
-}
-
-function showDialog(title, copyText, extra = '') {
-  const dialog = $('[data-dialog]');
-  dialog.classList.remove('cash-document-dialog', 'cash-export-dialog', 'calendar-dialog', 'invited-object-dialog', 'sync-dialog', 'session-prompt-dialog');
-  $('[data-dialog-content]').innerHTML = `<div class="dialog-content"><h2>${title}</h2><p>${copyText}</p>${extra}</div>`;
-  if (!dialog.open) dialog.showModal();
-}
-
-function waitForDialogToClose() {
-  const dialog = $('[data-dialog]');
-  if (!dialog?.open) return Promise.resolve();
-  return new Promise((resolve) => dialog.addEventListener('close', resolve, { once: true }));
-}
-
-async function sessionPrompt(title, copyText, actions, tone = '') {
-  await waitForDialogToClose();
-  const buttons = actions.map((action) => `<button class="${action.primary ? 'primary-button' : 'outline-button'}" type="button" data-session-prompt-action="${escapeHtml(action.value)}">${escapeHtml(action.label)}</button>`).join('');
-  showDialog(escapeHtml(title), escapeHtml(copyText), `<div class="session-prompt-visual ${escapeHtml(tone)}" aria-hidden="true"><span></span><i></i></div><div class="session-prompt-actions">${buttons}</div>`);
-  const dialog = $('[data-dialog]');
-  dialog.classList.add('session-prompt-dialog');
-  return new Promise((resolve) => {
-    let selection = 'dismiss';
-    $$('[data-session-prompt-action]', dialog).forEach((button) => button.addEventListener('click', () => {
-      selection = button.dataset.sessionPromptAction;
-      dialog.close();
-    }));
-    dialog.addEventListener('close', () => resolve(selection), { once: true });
-  });
-}
-
-function shouldOfferPushPermission() {
-  if (!supportsPushNotifications() || Notification.permission === 'granted') return false;
-  return Date.now() >= Number(localStorage.getItem(PUSH_REMINDER_KEY) || 0);
-}
-
-function schedulePushReminder() {
-  localStorage.setItem(PUSH_REMINDER_KEY, String(Date.now() + (7 * 24 * 60 * 60 * 1000)));
-}
-
-function missingSocialConnections() {
-  return ['vk', 'telegram', 'whatsapp', 'max'].filter((key) => !structosConnections[key]);
-}
-
-async function runLoginPrompts(dailyRewarded) {
-  if (dailyRewarded) {
-    await sessionPrompt(tr('dailyBonusTitle'), tr('dailyBonusCopy'), [{ value: 'ok', label: tr('dailyBonusButton'), primary: true }], 'is-bonus');
-  }
-  if (shouldOfferPushPermission()) {
-    const permissionChoice = await sessionPrompt(tr('pushPermissionQuestion'), tr('pushPermissionLoginHint'), [
-      { value: 'yes', label: tr('yes'), primary: true },
-      { value: 'no', label: tr('no') }
-    ], 'is-push');
-    if (permissionChoice === 'yes') {
-      await enablePushNotifications({ reopenCenter: false });
-      if (Notification.permission === 'granted') localStorage.removeItem(PUSH_REMINDER_KEY);
-      else schedulePushReminder();
-    } else {
-      schedulePushReminder();
-    }
-  }
-  if (missingSocialConnections().length) {
-    const connectionChoice = await sessionPrompt(tr('connectionsWarningTitle'), tr('connectionsWarningCopy'), [
-      { value: 'link', label: tr('linkNow'), primary: true },
-      { value: 'later', label: tr('later') }
-    ], 'is-connections');
-    if (connectionChoice === 'link') openConnectionsDialog();
-  }
-}
-
-function historyMarkup(items, bonus = false) {
-  if (!items.length) return `<div class="history-empty">${tr('noOperations')}</div>`;
-  const formatter = new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric' });
-  const bonusFormatter = new Intl.NumberFormat(root.lang || 'ru-RU', { minimumFractionDigits: 1, maximumFractionDigits: 5 });
-  return `<div class="transaction-list">${items.map((item) => `<div class="transaction-row"><span><strong>${tr(item.key)}${item.detail ? ` Â· ${escapeHtml(item.detail)}` : ''}</strong><small>${formatter.format(new Date(item.date))}</small></span><b>+${bonus ? bonusFormatter.format(item.amount) : formatMoney(item.amount)}</b></div>`).join('')}</div>`;
-}
-
-function bonusRulesMarkup() {
-  return `<section class="finance-bonus-rules"><header><h3>${tr('bonusRules')}</h3><p>${tr('newBonusRulesHint')}</p></header><div class="bonus-rules"><div><b>+25 â‚½</b><span>${tr('dailyLoginReward')}</span></div><div><b>+750 â‚½</b><span>${tr('activityMonthlyAccrual')}</span></div><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+150 â‚½</b><span>${tr('referralReward')}</span></div><div><b>+150</b><span>${tr('accountLinkReward')} Â· ${tr('rewardOnce')}</span></div><div><b>+10 â‚½</b><span>${tr('gameWinReward')}</span></div></div></section>`;
-}
-
-function processBalanceTopUp(input, reopen) {
-  const amount = Math.round(Number(input?.value) * 100) / 100;
-  if (!Number.isFinite(amount) || amount <= 0) { input?.focus(); showToast(tr('invalidAmount')); return; }
-  const bonus = Math.round(amount * 10) / 100;
-  const date = new Date().toISOString();
-  finance.balance += amount;
-  finance.bonuses = Math.round((finance.bonuses + bonus) * 100) / 100;
-  finance.balanceHistory.unshift({ key: 'balanceTopUp', amount, date });
-  finance.bonusHistory.unshift({ key: 'topUpBonus', amount: bonus, date });
-  saveFinance();
-  renderFinance();
-  $('[data-dialog]')?.close();
-  showToast(tr('credited'));
-  reopen();
-}
-
-function openBalanceDialog() {
-  showDialog(tr('balance'), tr('topUpHint'), `<div class="topup-form"><label><span>${tr('topUpAmount')}</span><input data-topup-amount type="number" inputmode="decimal" min="1" step="1" placeholder="1000" /></label><button class="primary-button" type="button" data-topup>${tr('topUp')}</button></div><section class="history-section"><h3>${tr('balanceHistory')}</h3>${historyMarkup(finance.balanceHistory)}</section>`);
-  $('[data-topup]')?.addEventListener('click', () => processBalanceTopUp($('[data-topup-amount]'), openBalanceDialog));
-}
-
-function openBonusDialog() {
-  showDialog(tr('bonuses'), tr('bonusRules'), `${bonusRulesMarkup()}<section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section>`);
-}
-
-function setFinanceHubTab(tab) {
-  const next = tab === 'bonuses' ? 'bonuses' : 'balance';
-  $$('[data-finance-hub-tab]').forEach((button) => {
-    const active = button.dataset.financeHubTab === next;
-    button.classList.toggle('is-active', active);
-    button.setAttribute('aria-pressed', String(active));
-  });
-  $$('[data-finance-hub-pane]').forEach((pane) => { pane.hidden = pane.dataset.financeHubPane !== next; });
-}
-
-function openFinanceHubDialog(activeTab = 'balance') {
-  const balanceValue = formatMoney(finance.balance);
-  const bonusValue = new Intl.NumberFormat(root.lang || 'ru-RU', { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(finance.bonuses);
-  const markup = `<section class="finance-hub"><div class="finance-hub-balances"><button type="button" data-finance-hub-tab="balance"><span>${tr('moneyBalance')}</span><strong>${balanceValue}</strong><small>${tr('balanceHistory')}</small></button><button type="button" data-finance-hub-tab="bonuses"><span>${tr('bonusBalance')}</span><strong>${bonusValue}</strong><small>${tr('bonusHistory')}</small></button></div>${bonusRulesMarkup()}<div class="finance-hub-pane" data-finance-hub-pane="balance"><div class="topup-form"><label><span>${tr('topUpAmount')}</span><input data-topup-amount type="number" inputmode="decimal" min="1" step="1" placeholder="1000" /></label><button class="primary-button" type="button" data-topup>${tr('topUp')}</button></div><section class="history-section"><h3>${tr('balanceHistory')}</h3>${historyMarkup(finance.balanceHistory)}</section></div><div class="finance-hub-pane" data-finance-hub-pane="bonuses" hidden><section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section></div></section>`;
-  showDialog(tr('balanceBonuses'), tr('financeHubHint'), markup);
-  const scope = $('[data-dialog-content]');
-  $$('[data-finance-hub-tab]', scope).forEach((button) => button.addEventListener('click', () => setFinanceHubTab(button.dataset.financeHubTab)));
-  $('[data-topup]', scope)?.addEventListener('click', () => processBalanceTopUp($('[data-topup-amount]', scope), () => openFinanceHubDialog('balance')));
-  setFinanceHubTab(activeTab);
-}
-
-function escapeHtml(value) {
-  return String(value ?? '').replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
-}
-
-function openRenameDialog(title, currentName, maxLength, onSave) {
-  showDialog(title, tr('enterNewName'), `<div class="object-form"><label><span class="sr-only">${escapeHtml(title)}</span><input data-rename-input maxlength="${maxLength}" value="${escapeHtml(currentName)}" /></label><button class="primary-button" type="button" data-confirm-rename>${tr('save')}</button></div>`);
-  const scope = $('[data-dialog-content]');
-  const input = $('[data-rename-input]', scope);
-  const saveName = () => {
-    const name = input?.value.trim().slice(0, maxLength) || '';
-    if (!name) { input?.focus(); return; }
-    onSave(name);
-    $('[data-dialog]')?.close();
-    showToast(tr('nameUpdated'));
-  };
-  $('[data-confirm-rename]', scope)?.addEventListener('click', saveName);
-  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); saveName(); } });
-  setTimeout(() => { input?.focus(); input?.select(); }, 40);
-}
-
-function normalizeCashEntries(value) {
-  if (!Array.isArray(value)) return [];
-  return value
-    .filter((entry) => entry && Number.isFinite(Number(entry.amount)) && Number(entry.amount) > 0)
-    .map((entry) => ({
-      id: String(entry.id || `entry-${Date.now()}-${Math.random().toString(16).slice(2)}`),
-      amount: Math.round(Number(entry.amount) * 100) / 100,
-      comment: String(entry.comment || '').slice(0, 240),
-      date: entry.date || new Date().toISOString()
-    }));
-}
-
-function cashDocumentParties(value) {
-  const normalizeParty = (party) => ({
-    name: String(party?.name || '').slice(0, 160),
-    signature: String(party?.signature || '').slice(0, 160),
-    seal: String(party?.seal || '').slice(0, 160)
-  });
-  return {
-    prepared: normalizeParty(value?.prepared),
-    confirmed: normalizeParty(value?.confirmed),
-    performed: normalizeParty(value?.performed),
-    accepted: normalizeParty(value?.accepted),
-    date: /^\d{4}-\d{2}-\d{2}$/.test(value?.date || '') ? value.date : localDateKey()
-  };
-}
-
-function cashSourceKey(value) {
-  return String(value || '').trim().toLocaleLowerCase('ru').replace(/Ñ‘/g, 'Ðµ').replace(/[^a-zÐ°-Ñ0-9]+/giu, '');
-}
-
-function cashSourceCellText(value) {
-  if (value == null) return '';
-  if (typeof value === 'string' || typeof value === 'number') return String(value).trim();
-  if (typeof value !== 'object') return '';
-  if (typeof value.text === 'string') return value.text.trim();
-  if (value.result != null) return cashSourceCellText(value.result);
-  if (Array.isArray(value.richText)) return value.richText.map((part) => part?.text || '').join('').trim();
-  return '';
-}
-
-function cashSourceProperty(record, aliases) {
-  if (!record || typeof record !== 'object') return '';
-  const wanted = new Set(aliases.map(cashSourceKey));
-  const found = Object.entries(record).find(([key]) => wanted.has(cashSourceKey(key)));
-  return found ? found[1] : '';
-}
-
-function cashSourceNumber(value) {
-  if (Number.isFinite(Number(value))) return Math.max(0, Number(value));
-  const normalized = cashSourceCellText(value).replace(/\s+/g, '').replace(',', '.').replace(/[^\d.-]+/g, '');
-  const number = Number(normalized);
-  return Number.isFinite(number) ? Math.max(0, number) : 0;
-}
-
-function cashSourceCategoryFromKey(value) {
-  const key = cashSourceKey(value);
-  if (/(material|Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»|Ð¾Ð±Ð¾Ñ€ÑƒÐ´|equipment)/u.test(key)) return 'material';
-  if (/(work|Ñ€Ð°Ð±Ð¾Ñ‚|service|ÑƒÑÐ»ÑƒÐ³)/u.test(key)) return 'work';
-  return 'position';
-}
-
-function normalizeCashSourceCatalogEntry(value, defaults = {}) {
-  const record = value && typeof value === 'object' ? value : null;
-  const nameValue = record
-    ? cashSourceProperty(record, ['name', 'title', 'description', 'item', 'itemName', 'position', 'workName', 'materialName', 'serviceName', 'Ð½Ð°Ð¸Ð¼ÐµÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ', 'Ð½Ð°Ð¸Ð¼ÐµÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ Ñ€Ð°Ð±Ð¾Ñ‚', 'Ð½Ð°Ð¸Ð¼ÐµÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ð°', 'Ñ€Ð°Ð±Ð¾Ñ‚Ð°', 'Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»', 'ÑƒÑÐ»ÑƒÐ³Ð°', 'Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ñ', 'Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ðµ'])
-    : value;
-  const name = cashSourceCellText(nameValue).replace(/\s+/g, ' ').trim().slice(0, 240);
-  if (!name || /^(Ð¸Ñ‚Ð¾Ð³Ð¾|Ð²ÑÐµÐ³Ð¾|total|subtotal)$/iu.test(name)) return null;
-  const unit = cashSourceCellText(record && cashSourceProperty(record, ['unit', 'measure', 'unitName', 'uom', 'ÐµÐ´', 'ÐµÐ´. Ð¸Ð·Ð¼.', 'ÐµÐ´Ð¸Ð½Ð¸Ñ†Ð° Ð¸Ð·Ð¼ÐµÑ€ÐµÐ½Ð¸Ñ'])).replace(/\s+/g, ' ').trim().slice(0, 40);
-  const quantity = cashSourceNumber(record && cashSourceProperty(record, ['quantity', 'qty', 'volume', 'amount', 'ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾', 'Ð¾Ð±ÑŠÐµÐ¼', 'Ð¾Ð±ÑŠÑ‘Ð¼', 'ÐºÐ¾Ð»-Ð²Ð¾']));
-  const price = cashSourceNumber(record && cashSourceProperty(record, ['price', 'unitPrice', 'rate', 'cost', 'Ñ†ÐµÐ½Ð°', 'ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒ ÐµÐ´Ð¸Ð½Ð¸Ñ†Ñ‹', 'Ñ€Ð°ÑÑ†ÐµÐ½ÐºÐ°']));
-  const sourceKind = CASH_SOURCE_DOCUMENT_KINDS.includes(defaults.sourceKind) ? defaults.sourceKind : 'project';
-  return {
-    name,
-    unit,
-    quantity,
-    price,
-    category: ['work', 'material', 'position'].includes(defaults.category) ? defaults.category : 'position',
-    sourceKind,
-    sourceName: String(defaults.sourceName || tr(sourceKind)).trim().slice(0, 240),
-    sourceSheet: String(defaults.sourceSheet || '').trim().slice(0, 120)
-  };
-}
-
-function mergeCashSourceCatalog(entries) {
-  const priority = (entry) => (entry.sourceKind === 'estimate' ? 10 : 0) + Boolean(entry.unit) * 2 + Boolean(entry.price) * 2 + Boolean(entry.quantity);
-  const ordered = (Array.isArray(entries) ? entries : []).filter(Boolean).sort((left, right) => priority(right) - priority(left));
-  const merged = new Map();
-  ordered.forEach((entry) => {
-    const normalized = normalizeCashSourceCatalogEntry(entry, entry);
-    if (!normalized) return;
-    const key = cashSourceKey(normalized.name);
-    const current = merged.get(key);
-    if (!current) merged.set(key, normalized);
-    else merged.set(key, { ...current, unit: current.unit || normalized.unit, quantity: current.quantity || normalized.quantity, price: current.price || normalized.price });
-  });
-  return [...merged.values()].sort((left, right) => left.name.localeCompare(right.name, root.lang || 'ru')).slice(0, 2000);
-}
-
-function normalizeCashSourceCatalog(value, defaults = {}) {
-  if (!Array.isArray(value)) return [];
-  return mergeCashSourceCatalog(value.map((entry) => normalizeCashSourceCatalogEntry(entry, defaults)));
-}
-
-function cashSourceCatalogFromStructuredData(value, defaults = {}) {
-  const collected = [];
-  const collectionKeys = new Set(['rows', 'items', 'positions', 'works', 'workitems', 'materials', 'materialitems', 'services', 'equipment', 'specification', 'specifications', 'boq', 'estimerows', 'projectrows', 'data', 'result', 'results', 'analysis', 'analysisdata', 'extracted', 'extracteddata', 'Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð°', 'ÑÑ‚Ñ€Ð¾ÐºÐ¸', 'Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ð¸', 'Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹', 'Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ñ‹', 'ÑƒÑÐ»ÑƒÐ³Ð¸', 'Ð¾Ð±Ð¾Ñ€ÑƒÐ´Ð¾Ð²Ð°Ð½Ð¸Ðµ', 'ÑÐ¿ÐµÑ†Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ñ', 'Ð²ÐµÐ´Ð¾Ð¼Ð¾ÑÑ‚ÑŒÐ¾Ð±ÑŠÐµÐ¼Ð¾Ð²Ñ€Ð°Ð±Ð¾Ñ‚']);
-  const walk = (node, context, depth = 0, collection = false) => {
-    if (node == null || depth > 7 || collected.length >= 2000) return;
-    if (Array.isArray(node)) {
-      node.forEach((item) => {
-        const entry = normalizeCashSourceCatalogEntry(item, context);
-        if (entry) collected.push(entry);
-        if (item && typeof item === 'object') walk(item, context, depth + 1, false);
-      });
-      return;
-    }
-    if (typeof node !== 'object') {
-      if (collection) {
-        const entry = normalizeCashSourceCatalogEntry(node, context);
-        if (entry) collected.push(entry);
-      }
-      return;
-    }
-    Object.entries(node).forEach(([key, child]) => {
-      const normalizedKey = cashSourceKey(key);
-      if (!collectionKeys.has(normalizedKey)) return;
-      walk(child, { ...context, category: cashSourceCategoryFromKey(key) }, depth + 1, true);
-    });
-  };
-  walk(value, defaults, 0, Array.isArray(value));
-  return mergeCashSourceCatalog(collected);
-}
-
-function cashSourceCatalogFromFileRecord(file, kind) {
-  if (!file || !CASH_SOURCE_DOCUMENT_KINDS.includes(kind)) return [];
-  const defaults = { sourceKind: kind, sourceName: file.name || tr(kind) };
-  const entries = [...normalizeCashSourceCatalog(file.sourceCatalog, defaults)];
-  ['analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'].forEach((key) => {
-    if (file[key] != null) entries.push(...cashSourceCatalogFromStructuredData(file[key], { ...defaults, category: cashSourceCategoryFromKey(key) }));
-  });
-  return mergeCashSourceCatalog(entries);
-}
-
-function cashSourceHeaderIndex(headers, patterns) {
-  const keys = headers.map(cashSourceKey);
-  return keys.findIndex((key) => patterns.some((pattern) => key.includes(pattern)));
-}
-
-function cashSourceCatalogFromTabularRows(rows, defaults = {}) {
-  const safeRows = Array.isArray(rows) ? rows : [];
-  let headerIndex = -1;
-  let columns = null;
-  let bestScore = -1;
-  safeRows.slice(0, 40).forEach((row, index) => {
-    const headers = (Array.isArray(row) ? row : []).map(cashSourceCellText);
-    const candidate = {
-      name: cashSourceHeaderIndex(headers, ['Ð½Ð°Ð¸Ð¼ÐµÐ½Ð¾Ð²Ð°Ð½', 'Ð¾Ð¿Ð¸ÑÐ°Ð½', 'workname', 'materialname', 'servicename', 'description', 'position', 'Ð¿Ð¾Ð·Ð¸Ñ†Ð¸', 'Ñ€Ð°Ð±Ð¾Ñ‚', 'Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»', 'ÑƒÑÐ»ÑƒÐ³']),
-      unit: cashSourceHeaderIndex(headers, ['ÐµÐ´Ð¸Ð·Ð¼', 'ÐµÐ´Ð¸Ð½Ð¸Ñ†Ð°Ð¸Ð·Ð¼ÐµÑ€', 'unit', 'measure', 'uom']),
-      quantity: cashSourceHeaderIndex(headers, ['ÐºÐ¾Ð»Ð¸Ñ‡', 'ÐºÐ¾Ð»Ð²Ð¾', 'Ð¾Ð±ÑŠÐµÐ¼', 'Ð¾Ð±ÑŠÑ‘Ð¼', 'quantity', 'qty', 'volume']),
-      price: cashSourceHeaderIndex(headers, ['Ñ†ÐµÐ½Ð°', 'ÑÑ‚Ð¾Ð¸Ð¼Ð¾ÑÑ‚ÑŒÐµÐ´', 'Ñ€Ð°ÑÑ†ÐµÐ½', 'unitprice', 'price', 'rate'])
-    };
-    const score = (candidate.name >= 0 ? 5 : 0) + (candidate.unit >= 0 ? 1 : 0) + (candidate.quantity >= 0 ? 1 : 0) + (candidate.price >= 0 ? 1 : 0);
-    if (candidate.name >= 0 && score > bestScore) { headerIndex = index; columns = candidate; bestScore = score; }
-  });
-  if (headerIndex < 0 || !columns) return [];
-  const headerName = cashSourceCellText(safeRows[headerIndex]?.[columns.name]);
-  const category = cashSourceCategoryFromKey(headerName);
-  const collected = [];
-  let blankRows = 0;
-  for (let index = headerIndex + 1; index < safeRows.length && collected.length < 2000; index += 1) {
-    const row = Array.isArray(safeRows[index]) ? safeRows[index] : [];
-    const name = cashSourceCellText(row[columns.name]);
-    if (!name) { blankRows += 1; if (blankRows > 30) break; continue; }
-    blankRows = 0;
-    const entry = normalizeCashSourceCatalogEntry({
-      name,
-      unit: columns.unit >= 0 ? row[columns.unit] : '',
-      quantity: columns.quantity >= 0 ? row[columns.quantity] : 0,
-      price: columns.price >= 0 ? row[columns.price] : 0
-    }, { ...defaults, category });
-    if (entry) collected.push(entry);
-  }
-  return mergeCashSourceCatalog(collected);
-}
-
-function parseCashDelimitedLine(line, delimiter) {
-  const cells = [];
-  let value = '';
-  let quoted = false;
-  for (let index = 0; index < line.length; index += 1) {
-    const character = line[index];
-    if (character === '"' && quoted && line[index + 1] === '"') { value += '"'; index += 1; }
-    else if (character === '"') quoted = !quoted;
-    else if (character === delimiter && !quoted) { cells.push(value.trim()); value = ''; }
-    else value += character;
-  }
-  cells.push(value.trim());
-  return cells;
-}
-
-async function extractCashSourceCatalogFromFile(file, kind) {
-  if (!file || !CASH_SOURCE_DOCUMENT_KINDS.includes(kind)) return [];
-  const extension = String(file.name || '').split('.').pop()?.toLowerCase();
-  const defaults = { sourceKind: kind, sourceName: file.name || tr(kind) };
-  try {
-    if (extension === 'csv') {
-      const lines = (await file.text()).replace(/^\uFEFF/, '').split(/\r?\n/);
-      const delimiters = [';', ',', '\t'];
-      const delimiter = delimiters.map((value) => ({ value, score: lines.slice(0, 12).reduce((sum, line) => sum + Math.max(0, parseCashDelimitedLine(line, value).length - 1), 0) })).sort((left, right) => right.score - left.score)[0].value;
-      return cashSourceCatalogFromTabularRows(lines.map((line) => parseCashDelimitedLine(line, delimiter)), defaults);
-    }
-    if (extension === 'xlsx' || extension === 'xls') {
-      const { default: ExcelJS } = await import('exceljs');
-      const workbook = new ExcelJS.Workbook();
-      await workbook.xlsx.load(await file.arrayBuffer());
-      const entries = [];
-      workbook.worksheets.forEach((worksheet) => {
-        const rows = [];
-        worksheet.eachRow({ includeEmpty: false }, (row) => {
-          if (rows.length < 6000) rows.push(Array.from({ length: row.cellCount }, (_, index) => row.getCell(index + 1).text));
-        });
-        entries.push(...cashSourceCatalogFromTabularRows(rows, { ...defaults, sourceSheet: worksheet.name }));
-      });
-      return mergeCashSourceCatalog(entries);
-    }
-  } catch (error) {
-    console.warn('StructOS source catalog extraction failed:', error);
-  }
-  return [];
-}
-
-function normalizeCashWorkRows(value, priced = false) {
-  const rows = Array.isArray(value) ? value : [];
-  const normalized = rows.map((row) => ({
-    id: String(row?.id || `work-${Date.now()}-${Math.random().toString(16).slice(2)}`),
-    name: String(row?.name || '').slice(0, 240),
-    unit: String(row?.unit || '').slice(0, 40),
-    quantity: Math.max(0, Number(row?.quantity) || 0),
-    sourceKind: CASH_SOURCE_DOCUMENT_KINDS.includes(row?.sourceKind) ? row.sourceKind : null,
-    sourceName: String(row?.sourceName || '').slice(0, 240),
-    ...(priced ? { price: Math.max(0, Number(row?.price) || 0) } : { basis: String(row?.basis || '').slice(0, 240) })
-  }));
-  return normalized.length ? normalized : [{ id: `work-${Date.now()}-${Math.random().toString(16).slice(2)}`, name: '', unit: '', quantity: 0, ...(priced ? { price: 0 } : { basis: '' }) }];
-}
-
-function cashPassportParts(value = {}) {
-  const legacy = String(value?.passport || '').trim();
-  let series = String(value?.passportSeries || '').trim();
-  let number = String(value?.passportNumber || '').trim();
-  if (!series && !number && legacy) {
-    const digits = legacy.replace(/\D+/g, '');
-    const spaced = legacy.match(/^(.{1,20}?)[\s-]+(.+)$/u);
-    if (digits.length === 10) {
-      series = digits.slice(0, 4);
-      number = digits.slice(4);
-    } else if (spaced) {
-      series = spaced[1].trim();
-      number = spaced[2].trim();
-    } else number = legacy;
-  }
-  series = series.slice(0, 20);
-  number = number.slice(0, 40);
-  return { series, number, combined: [series, number].filter(Boolean).join(' ').slice(0, 80) };
-}
-
-function normalizeCashDocumentOrganizations(value) {
-  return Object.fromEntries(CASH_ORGANIZATION_ROLES.map((role) => {
-    const card = value?.[role] || {};
-    const passport = cashPassportParts(card);
-    return [role, {
-      type: card.type === 'individual' ? 'individual' : 'organization',
-      company: String(card.company || '').trim().slice(0, 200),
-      inn: String(card.inn || '').replace(/\D+/g, '').slice(0, 12),
-      kpp: String(card.kpp || '').replace(/\D+/g, '').slice(0, 9),
-      fullName: String(card.fullName || '').trim().slice(0, 200),
-      passportSeries: passport.series,
-      passportNumber: passport.number,
-      passport: passport.combined,
-      fileName: String(card.fileName || '').slice(0, 240)
-    }];
-  }));
-}
-
-function normalizeCashDocument(value, priced = false, defaultTitle = '') {
-  const savedTitle = String(value?.title || '').trim();
-  return {
-    title: String(!priced && LEGACY_STATEMENT_TITLES.has(savedTitle) ? defaultTitle : savedTitle || defaultTitle).trim().slice(0, 160),
-    number: String(value?.number || '').trim().slice(0, 80),
-    objectName: String(value?.objectName || '').trim().slice(0, 160),
-    sectionName: String(value?.sectionName || '').trim().slice(0, 160),
-    rows: normalizeCashWorkRows(value?.rows, priced),
-    parties: cashDocumentParties(value?.parties),
-    organizations: normalizeCashDocumentOrganizations(value?.organizations),
-    updatedAt: value?.updatedAt || null
-  };
-}
-
-function normalizeCashReportHistory(value) {
-  if (!Array.isArray(value)) return [];
-  return value.filter((item) => item?.report?.title).slice(0, 50).map((item) => ({
-    id: String(item.id || `report-${Date.now()}-${Math.random().toString(16).slice(2)}`),
-    type: ['statement', 'act', 'finance'].includes(item.type) ? item.type : 'finance',
-    title: String(item.title || item.report.title).slice(0, 160),
-    createdAt: item.createdAt || new Date().toISOString(),
-    updatedAt: item.updatedAt || item.createdAt || new Date().toISOString(),
-    report: item.report
-  }));
-}
-
-function normalizeCashAttachmentVersion(value, kind) {
-  if (!value?.name) return null;
-  return {
-    id: String(value.id || value.storageKey || `cash-file-${Date.now()}-${Math.random().toString(16).slice(2)}`),
-    kind,
-    name: String(value.name).slice(0, 240),
-    size: Math.max(0, Number(value.size) || 0),
-    type: String(value.type || ''),
-    lastModified: Number(value.lastModified) || Date.now(),
-    addedAt: value.addedAt || new Date().toISOString(),
-    sourceObjectId: value.sourceObjectId ? String(value.sourceObjectId) : null,
-    sourceDocumentKind: CASH_ATTACHMENT_KINDS.includes(value.sourceDocumentKind) ? value.sourceDocumentKind : null,
-    sourceDocumentTitle: String(value.sourceDocumentTitle || '').trim().slice(0, 180),
-    linkedFromProject: Boolean(value.linkedFromProject || value.sourceObjectId),
-    sourceCatalog: normalizeCashSourceCatalog(value.sourceCatalog, { sourceKind: kind, sourceName: value.name }),
-    sourceCatalogScanned: Boolean(value.sourceCatalogScanned || Array.isArray(value.sourceCatalog))
-  };
-}
-
-function normalizeCashAttachment(value, kind) {
-  const source = Array.isArray(value?.versions) ? value.versions : value?.name ? [value] : [];
-  const versions = source.map((version) => normalizeCashAttachmentVersion(version, kind)).filter(Boolean);
-  return versions.length ? { kind, versions } : null;
-}
-
-function normalizeCashOrganizationCard(value, role) {
-  const type = value?.type === 'individual' ? 'individual' : 'organization';
-  const passport = cashPassportParts(value);
-  return {
-    role,
-    type,
-    company: String(value?.company || '').trim().slice(0, 200),
-    inn: String(value?.inn || '').replace(/\D+/g, '').slice(0, 12),
-    kpp: String(value?.kpp || '').replace(/\D+/g, '').slice(0, 9),
-    fullName: String(value?.fullName || '').trim().slice(0, 200),
-    passportSeries: passport.series,
-    passportNumber: passport.number,
-    passport: passport.combined,
-    attachment: normalizeCashAttachment(value?.attachment, `organization-${role}`),
-    updatedAt: value?.updatedAt || null
-  };
-}
-
-function normalizeCashOrganizationDocuments(value) {
-  return Object.fromEntries(CASH_ORGANIZATION_ROLES.map((role) => [role, normalizeCashOrganizationCard(value?.[role], role)]));
-}
-
-function normalizeCashStaffingShift(value = {}) {
-  const date = /^\d{4}-\d{2}-\d{2}$/.test(String(value.date || '')) ? String(value.date) : localDateKey();
-  const cleanTime = (time) => /^\d{2}:\d{2}$/.test(String(time || '')) ? String(time) : '';
-  const cleanTimestamp = (timestamp) => {
-    if (!timestamp || Number.isNaN(new Date(timestamp).getTime())) return null;
-    return new Date(timestamp).toISOString();
-  };
-  return {
-    id: String(value.id || `staffing-${Date.now()}-${Math.random().toString(16).slice(2)}`),
-    date,
-    fullName: String(value.fullName || '').trim().slice(0, 160),
-    structosId: String(value.structosId || '').replace(/\D+/g, '').slice(0, 7),
-    plannedFrom: cleanTime(value.plannedFrom),
-    plannedTo: cleanTime(value.plannedTo),
-    openedAt: cleanTimestamp(value.openedAt),
-    closedAt: cleanTimestamp(value.closedAt),
-    shiftRate: Math.max(0, Math.round((Number(value.shiftRate) || 0) * 100) / 100),
-    penalty: Math.max(0, Math.round((Number(value.penalty) || 0) * 100) / 100),
-    penaltyComment: String(value.penaltyComment || '').trim().slice(0, 240),
-    createdAt: value.createdAt || new Date().toISOString(),
-    updatedAt: value.updatedAt || value.createdAt || new Date().toISOString()
-  };
-}
-
-function normalizeCashStaffingShifts(value) {
-  return Array.isArray(value) ? value.slice(0, 500).map((shift) => normalizeCashStaffingShift(shift)) : [];
-}
-
-function cashStaffingPlannedHours(shift) {
-  const minutes = (time) => {
-    if (!/^\d{2}:\d{2}$/.test(String(time || ''))) return null;
-    const [hours, mins] = time.split(':').map(Number);
-    if (hours > 23 || mins > 59) return null;
-    return hours * 60 + mins;
-  };
-  const from = minutes(shift?.plannedFrom);
-  let to = minutes(shift?.plannedTo);
-  if (from === null || to === null || from === to) return 0;
-  if (to < from) to += 24 * 60;
-  return Math.round(((to - from) / 60) * 100) / 100;
-}
-
-function cashStaffingCalculation(shift, now = Date.now()) {
-  const plannedHours = cashStaffingPlannedHours(shift);
-  const openedAt = shift?.openedAt ? new Date(shift.openedAt).getTime() : 0;
-  const closedAt = shift?.closedAt ? new Date(shift.closedAt).getTime() : now;
-  const actualHours = openedAt && closedAt >= openedAt ? Math.max(0, (closedAt - openedAt) / 3600000) : 0;
-  const overtimeHours = plannedHours > 0 ? Math.max(0, actualHours - plannedHours) : 0;
-  const hourlyRate = plannedHours > 0 ? shift.shiftRate / plannedHours : 0;
-  const overtimePay = Math.round(hourlyRate * overtimeHours * 100) / 100;
-  const salary = shift.openedAt ? Math.max(0, Math.round((shift.shiftRate + overtimePay - shift.penalty) * 100) / 100) : 0;
-  return {
-    plannedHours,
-    actualHours: Math.round(actualHours * 100) / 100,
-    overtimeHours: Math.round(overtimeHours * 100) / 100,
-    overtimePay,
-    salary
-  };
-}
-
-function cashStaffingWeekday(date) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(date || ''))) return 'â€”';
-  try { return new Intl.DateTimeFormat(String(root.lang || 'ru').toLowerCase(), { weekday: 'long' }).format(new Date(`${date}T12:00:00`)); }
-  catch { return 'â€”'; }
-}
-
-function cashStaffingTimestamp(value) {
-  if (!value) return 'â€”';
-  try { return new Intl.DateTimeFormat(String(root.lang || 'ru').toLowerCase(), { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }).format(new Date(value)); }
-  catch { return 'â€”'; }
-}
-
-function cashStaffingTotalsForShifts(shifts = []) {
-  return shifts.reduce((totals, shift) => {
-    const calculation = cashStaffingCalculation(shift);
-    totals.shiftRates += shift.shiftRate;
-    totals.overtimeHours += calculation.overtimeHours;
-    totals.overtimePay += calculation.overtimePay;
-    totals.penalties += shift.penalty;
-    totals.payroll += calculation.salary;
-    if (shift.openedAt && !shift.closedAt) totals.active += 1;
-    return totals;
-  }, { people: shifts.length, active: 0, shiftRates: 0, overtimeHours: 0, overtimePay: 0, penalties: 0, payroll: 0 });
-}
-
-function cashStaffingTotals(section) {
-  return cashStaffingTotalsForShifts(section?.staffingShifts || []);
-}
-
-function cashStaffingDayGroups(section) {
-  const groups = new Map();
-  (section?.staffingShifts || []).forEach((shift) => {
-    if (!groups.has(shift.date)) groups.set(shift.date, []);
-    groups.get(shift.date).push(shift);
-  });
-  return [...groups.entries()]
-    .sort(([dateA], [dateB]) => dateA.localeCompare(dateB))
-    .map(([date, shifts]) => ({ date, shifts }));
-}
-
-function cashStaffingLatestDate(section) {
-  const dates = cashStaffingDayGroups(section).map((group) => group.date);
-  return dates[dates.length - 1] || localDateKey();
-}
-
-function cashStaffingNextDate(section) {
-  const groups = cashStaffingDayGroups(section);
-  if (!groups.length) return localDateKey();
-  const date = new Date(`${groups[groups.length - 1].date}T12:00:00`);
-  date.setDate(date.getDate() + 1);
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
-}
-
-function cashAttachmentCurrent(section, kind) {
-  const versions = section?.attachments?.[kind]?.versions;
-  return Array.isArray(versions) && versions.length ? versions[versions.length - 1] : null;
-}
-
-function cashSectionHasSourceDocuments(section) {
-  if (CASH_SOURCE_DOCUMENT_KINDS.some((kind) => cashAttachmentCurrent(section, kind))) return true;
-  if (CASH_ATTACHMENT_KINDS.some((kind) => cashAttachmentCurrent(section, kind))) return false;
-  const sourceObject = section?.sourceProjectId && objectRegistry.find((object) => object.id === section.sourceProjectId);
-  return Boolean(sourceObject && CASH_SOURCE_DOCUMENT_KINDS.some((kind) => objectFile(sourceObject, kind)));
-}
-
-function cashSectionSourceCatalog(section) {
-  if (!section) return [];
-  const entries = [...normalizeCashSourceCatalog(section.sourceCatalog)];
-  const hasAttachmentVersions = CASH_ATTACHMENT_KINDS.some((kind) => (section.attachments?.[kind]?.versions || []).length);
-  CASH_SOURCE_DOCUMENT_KINDS.forEach((kind) => {
-    const versions = section.attachments?.[kind]?.versions || [];
-    versions.forEach((version) => {
-      entries.push(...normalizeCashSourceCatalog(version.sourceCatalog, { sourceKind: kind, sourceName: version.name }));
-      const sourceObject = version.sourceObjectId && objectRegistry.find((object) => object.id === version.sourceObjectId);
-      if (sourceObject) entries.push(...cashSourceCatalogFromFileRecord(objectFile(sourceObject, kind), kind));
-    });
-  });
-  if (!hasAttachmentVersions && section.sourceProjectId) {
-    const sourceObject = objectRegistry.find((object) => object.id === section.sourceProjectId);
-    if (sourceObject) {
-    CASH_SOURCE_DOCUMENT_KINDS.forEach((kind) => entries.push(...cashSourceCatalogFromFileRecord(objectFile(sourceObject, kind), kind)));
-    }
-  }
-  return mergeCashSourceCatalog(entries);
-}
-
-async function hydrateCashSectionSourceCatalog(section) {
-  if (!section) return [];
-  let changed = false;
-  for (const kind of CASH_SOURCE_DOCUMENT_KINDS) {
-    const version = cashAttachmentCurrent(section, kind);
-    if (!version || version.linkedFromProject || version.sourceCatalogScanned) continue;
-    let catalog = [];
-    try {
-      const blob = await readCashflowFile(version.id);
-      if (blob) {
-        const file = new File([blob], version.name, { type: version.type || blob.type, lastModified: version.lastModified });
-        catalog = await extractCashSourceCatalogFromFile(file, kind);
-      }
-    } catch (error) {
-      console.warn('StructOS source document could not be checked:', error);
-    }
-    version.sourceCatalog = catalog;
-    version.sourceCatalogScanned = true;
-    changed = true;
-  }
-  if (changed) saveCashflow();
-  return cashSectionSourceCatalog(section);
-}
-
-function cashSectionHasData(section) {
-  const entries = ['advances', 'expenses', 'ownInvestments', 'ownReturns', 'factIncome', 'factExpenses', 'factOwnInvestments', 'factOwnReturns', 'staffingShifts'].some((key) => section[key]?.length);
-  const documents = Boolean(section.statement?.updatedAt || section.act?.updatedAt || section.reportHistory?.length || CASH_ATTACHMENT_KINDS.some((kind) => cashAttachmentCurrent(section, kind)));
-  return entries || documents || section.contractAmount > 0 || section.staffingMode;
-}
-
-function normalizeCashSection(section, legacyObject = {}) {
-  const contractAmount = Math.max(0, Number(section?.contractAmount ?? legacyObject.cost) || 0);
-  const normalized = {
-    id: String(section?.id || `section-${Date.now()}-${Math.random().toString(16).slice(2)}`),
-    sourceProjectId: section?.sourceProjectId ? String(section.sourceProjectId) : null,
-    name: String(section?.name || tr('sectionName')).trim().slice(0, 120) || tr('sectionName'),
-    createdAt: section?.createdAt || new Date().toISOString(),
-    createdManually: Boolean(section?.createdManually),
-    contractMode: Boolean(section?.contractMode ?? (contractAmount > 0 || section?.received?.length || section?.advances?.length || section?.expenses?.length)),
-    factMode: Boolean(section?.factMode ?? legacyObject.factMode),
-    staffingMode: Boolean(section?.staffingMode),
-    staffingShifts: normalizeCashStaffingShifts(section?.staffingShifts),
-    contractAmount,
-    advances: normalizeCashEntries(section?.advances || section?.received),
-    expenses: normalizeCashEntries(section?.expenses),
-    ownInvestments: normalizeCashEntries(section?.ownInvestments),
-    ownReturns: normalizeCashEntries(section?.ownReturns),
-    factIncome: normalizeCashEntries(section?.factIncome),
-    factExpenses: normalizeCashEntries(section?.factExpenses),
-    factOwnInvestments: normalizeCashEntries(section?.factOwnInvestments),
-    factOwnReturns: normalizeCashEntries(section?.factOwnReturns),
-    sourceCatalog: normalizeCashSourceCatalog(section?.sourceCatalog),
-    attachments: Object.fromEntries(CASH_ATTACHMENT_KINDS.map((kind) => [kind, normalizeCashAttachment(section?.attachments?.[kind], kind)])),
-    statement: normalizeCashDocument(section?.statement, false, tr('workStatement')),
-    act: normalizeCashDocument(section?.act, true, tr('workAct')),
-    reportHistory: normalizeCashReportHistory(section?.reportHistory)
-  };
-  return normalized;
-}
-
-function loadCashflow() {
-  const saved = readStoredJSON(CASHFLOW_KEY, []);
-  if (!Array.isArray(saved)) return [];
-  return saved.filter((object) => object && typeof object.name === 'string').map((object) => {
-    let sections = Array.isArray(object.sections) ? object.sections.map((section) => normalizeCashSection(section, object)) : [];
-    if (!object.sections && [object.received, object.expenses, object.factIncome, object.factExpenses].some((entries) => Array.isArray(entries) && entries.length)) {
-      sections = [normalizeCashSection({ name: tr('mainSection'), received: object.received, expenses: object.expenses, factIncome: object.factIncome, factExpenses: object.factExpenses }, object)];
-    }
-    const automaticSectionNames = new Set(Object.values(copy).map((dictionary) => dictionary.mainSection).filter(Boolean));
-    sections = sections.filter((section) => section.createdManually || !automaticSectionNames.has(section.name) || cashSectionHasData(section));
-    return {
-      id: String(object.id || `cash-${Date.now()}-${Math.random().toString(16).slice(2)}`),
-      sourceProjectId: object.sourceProjectId ? String(object.sourceProjectId) : null,
-      name: object.name.trim().slice(0, 100) || tr('objects'),
-      createdAt: object.createdAt || new Date().toISOString(),
-      completed: Boolean(object.completed),
-      completedAt: object.completedAt || null,
-      organizationDocumentsCollapsed: Boolean(object.organizationDocumentsCollapsed),
-      organizationDocuments: normalizeCashOrganizationDocuments(object.organizationDocuments),
-      sections
-    };
-  });
-}
-
-let cashflowObjects = loadCashflow();
-let unifiedObjectOrder = readStoredJSON(OBJECT_ORDER_KEY, []);
-if (!Array.isArray(unifiedObjectOrder)) unifiedObjectOrder = [];
-unifiedObjectOrder = unifiedObjectOrder.filter((key) => typeof key === 'string');
-let activeCashObjectId = null;
-const expandedCashSections = new Set();
-const expandedCashReportHistory = new Set();
-const expandedCashEntryHistories = new Set();
-let cashflowFileDbPromise;
-let reportLogoDataUrl = '';
-const reportPreviewLogoUrl = new URL('./assets/favicon-192.png', import.meta.url).href;
-let activeCashOrganizationPreview = null;
-
-function saveCashflow() {
-  localStorage.setItem(CASHFLOW_KEY, JSON.stringify(cashflowObjects));
-  renderObjects();
-  renderWidgets();
-}
-
-function openCashflowFileDb() {
-  if (cashflowFileDbPromise) return cashflowFileDbPromise;
-  cashflowFileDbPromise = new Promise((resolve, reject) => {
-    if (!('indexedDB' in window)) { reject(new Error('IndexedDB unavailable')); return; }
-    const request = indexedDB.open(CASHFLOW_FILE_DB, 1);
-    request.onupgradeneeded = () => {
-      const db = request.result;
-      if (!db.objectStoreNames.contains(CASHFLOW_FILE_STORE)) db.createObjectStore(CASHFLOW_FILE_STORE, { keyPath: 'id' });
-    };
-    request.onsuccess = () => resolve(request.result);
-    request.onerror = () => reject(request.error || new Error('Cashflow file database unavailable'));
-  });
-  return cashflowFileDbPromise;
-}
-
-async function storeCashflowFile(id, file) {
-  const db = await openCashflowFileDb();
-  return new Promise((resolve, reject) => {
-    const transaction = db.transaction(CASHFLOW_FILE_STORE, 'readwrite');
-    transaction.objectStore(CASHFLOW_FILE_STORE).put({ id, blob: file });
-    transaction.oncomplete = () => resolve();
-    transaction.onerror = () => reject(transaction.error || new Error('Cashflow file save failed'));
-    transaction.onabort = () => reject(transaction.error || new Error('Cashflow file save aborted'));
-  });
-}
-
-async function readCashflowFile(id) {
-  const db = await openCashflowFileDb();
-  return new Promise((resolve, reject) => {
-    const transaction = db.transaction(CASHFLOW_FILE_STORE, 'readonly');
-    const request = transaction.objectStore(CASHFLOW_FILE_STORE).get(id);
-    request.onsuccess = () => resolve(request.result?.blob || null);
-    request.onerror = () => reject(request.error || new Error('Cashflow file read failed'));
-  });
-}
-
-async function deleteCashflowFileVersions(versions) {
-  const ids = (Array.isArray(versions) ? versions : []).filter((version) => !version?.linkedFromProject).map((version) => version?.id).filter(Boolean);
-  if (!ids.length) return;
-  const db = await openCashflowFileDb();
-  await new Promise((resolve, reject) => {
-    const transaction = db.transaction(CASHFLOW_FILE_STORE, 'readwrite');
-    const store = transaction.objectStore(CASHFLOW_FILE_STORE);
-    ids.forEach((id) => store.delete(id));
-    transaction.oncomplete = () => resolve();
-    transaction.onerror = () => reject(transaction.error || new Error('Cashflow file deletion failed'));
-    transaction.onabort = () => reject(transaction.error || new Error('Cashflow file deletion aborted'));
-  });
-}
-
-async function deleteCashflowFiles(sectionOrSections) {
-  const sections = Array.isArray(sectionOrSections) ? sectionOrSections : [sectionOrSections];
-  const versions = sections.flatMap((section) => [
-    ...CASH_ATTACHMENT_KINDS.flatMap((kind) => section?.attachments?.[kind]?.versions || []),
-    ...CASH_ORGANIZATION_ROLES.flatMap((role) => section?.organizationDocuments?.[role]?.attachment?.versions || [])
-  ]);
-  await deleteCashflowFileVersions(versions);
-}
-
-function cashTotal(entries) {
-  const safeEntries = Array.isArray(entries) ? entries : [];
-  return Math.round(safeEntries.reduce((sum, entry) => sum + (Number(entry?.amount) || 0), 0) * 100) / 100;
-}
-
-function cashSectionFinancials(section) {
-  const advances = cashTotal(section.advances);
-  const expenses = cashTotal(section.expenses);
-  const factIncome = cashTotal(section.factIncome);
-  const factExpenses = cashTotal(section.factExpenses);
-  const contractBalance = section.contractMode ? Math.round((advances - expenses) * 100) / 100 : 0;
-  const factBalance = section.factMode ? Math.round((factIncome - factExpenses) * 100) / 100 : 0;
-  return { advances, expenses, factIncome, factExpenses, contractBalance, factBalance, balance: Math.round((contractBalance + factBalance) * 100) / 100 };
-}
-
-function cashObjectFinancials(object) {
-  const sections = Array.isArray(object?.sections) ? object.sections : [];
-  const totals = sections.reduce((total, section) => {
-    const values = cashSectionFinancials(section);
-    total.contractBalance += values.contractBalance;
-    total.factBalance += values.factBalance;
-    total.balance += values.balance;
-    return total;
-  }, { contractBalance: 0, factBalance: 0, balance: 0 });
-  Object.keys(totals).forEach((key) => { totals[key] = Math.round(totals[key] * 100) / 100; });
-  return totals;
-}
-
-function cashObjectReportTotals(object) {
-  const sections = Array.isArray(object?.sections) ? object.sections : [];
-  const totals = sections.reduce((total, section) => {
-    if (section.contractMode) {
-      total.contractAmount += section.contractAmount;
-      total.contractProduction += cashTotal(section.expenses);
-      total.contractReceived += cashTotal(section.advances);
-      total.contractOwnInvested += cashTotal(section.ownInvestments);
-    }
-    if (section.factMode) {
-      total.factIncome += cashTotal(section.factIncome);
-      total.factExpense += cashTotal(section.factExpenses);
-      total.factOwnInvested += cashTotal(section.factOwnInvestments);
-    }
-    return total;
-  }, {
-    contractAmount: 0,
-    contractProduction: 0,
-    contractReceived: 0,
-    contractOwnInvested: 0,
-    factIncome: 0,
-    factExpense: 0,
-    factOwnInvested: 0
-  });
-  Object.keys(totals).forEach((key) => { totals[key] = Math.round(totals[key] * 100) / 100; });
-  totals.contractRemaining = Math.round((totals.contractAmount - totals.contractProduction) * 100) / 100;
-  totals.paidProductionRemaining = Math.round((totals.contractProduction - totals.contractReceived) * 100) / 100;
-  totals.factRemaining = Math.round((totals.factIncome - totals.factExpense) * 100) / 100;
-  return totals;
-}
-
-function formatSignedMoney(value) {
-  const rounded = Math.round((Number(value) || 0) * 100) / 100;
-  return `${rounded > 0 ? '+' : ''}${formatMoney(rounded)}`;
-}
-
-function cashBalanceClass(value) {
-  return value < 0 ? 'is-negative' : value > 0 ? 'is-positive' : 'is-zero';
-}
-
-function cashReportSummary(label, value, colored = false, toneValue = value) {
-  return { text: `${label}: ${formatMoney(value)}`, tone: colored ? cashBalanceClass(toneValue) : '' };
-}
-
-function cashReportSummaryText(summary) {
-  return typeof summary === 'string' ? summary : String(summary?.text || '');
-}
-
-function cashDate(value) {
-  try { return new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(value)); }
-  catch { return ''; }
-}
-
-function cashDateInputValue(value) {
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return localDateKey();
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
-}
-
-function cashEntryDateWithNewDay(currentValue, dayValue) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(dayValue || '')) return null;
-  const [year, month, day] = dayValue.split('-').map(Number);
-  const current = new Date(currentValue);
-  const hours = Number.isNaN(current.getTime()) ? 12 : current.getHours();
-  const minutes = Number.isNaN(current.getTime()) ? 0 : current.getMinutes();
-  const seconds = Number.isNaN(current.getTime()) ? 0 : current.getSeconds();
-  const milliseconds = Number.isNaN(current.getTime()) ? 0 : current.getMilliseconds();
-  const next = new Date(year, month - 1, day, hours, minutes, seconds, milliseconds);
-  if (next.getFullYear() !== year || next.getMonth() !== month - 1 || next.getDate() !== day) return null;
-  return next.toISOString();
-}
-
-function cashEntryCollection(section, kind) {
-  return { advances: section.advances, expenses: section.expenses, ownInvestments: section.ownInvestments, ownReturns: section.ownReturns, factIncome: section.factIncome, factExpenses: section.factExpenses, factOwnInvestments: section.factOwnInvestments, factOwnReturns: section.factOwnReturns }[kind];
-}
-
-function cashHistoryMarkup(entries, labelKey, kind, sectionId) {
-  const safeEntries = Array.isArray(entries) ? entries : [];
-  const total = cashTotal(safeEntries);
-  const historyKey = `${sectionId}:${kind}`;
-  const rows = safeEntries.length
-    ? safeEntries.map((entry) => `<div class="cash-history-row" data-cash-history-entry="${escapeHtml(entry.id)}"><span>${escapeHtml(entry.comment)}<small>${cashDate(entry.date)}</small></span><b>${formatMoney(entry.amount)}</b><button type="button" data-edit-cash-entry="${escapeHtml(entry.id)}" data-cash-entry-kind="${escapeHtml(kind)}" aria-label="${escapeHtml(tr('editCashEntry'))}" title="${escapeHtml(tr('editCashEntry'))}">âœŽ <em>${tr('edit')}</em></button></div>`).join('')
-    : `<div class="cash-history-empty">${tr('noEntries')}</div>`;
-  return `<details class="cash-history" data-cash-history="${escapeHtml(historyKey)}"${expandedCashEntryHistories.has(historyKey) ? ' open' : ''}><summary><span>${tr(labelKey)}</span><b>${formatMoney(total)}</b></summary><div class="cash-history-list">${rows}</div></details>`;
-}
-
-function cashEntryForm(kind, titleKey, buttonKey) {
-  return `<section class="cash-entry-form" data-cash-entry="${kind}"><h3>${tr(titleKey)}</h3><input type="number" min="0.01" step="0.01" inputmode="decimal" data-cash-amount placeholder="0 â‚½" /><input maxlength="240" data-cash-comment placeholder="${tr('comment')}" /><button class="primary-button" type="button" data-cash-submit>${tr(buttonKey)} Â· ${tr(titleKey)}</button></section>`;
-}
-
-function findCashSection(objectId, sectionId) {
-  const object = cashflowObjects.find((item) => item.id === objectId);
-  return { object, section: object?.sections.find((item) => item.id === sectionId) };
-}
-
-function renameCashObject(objectId) {
-  const object = cashflowObjects.find((item) => item.id === objectId);
-  if (!object) return;
-  openRenameDialog(tr('renameObject'), object.name, 100, (name) => {
-    object.name = name;
-    saveCashflow();
-    renderCashflow();
-  });
-}
-
-function renameCashSection(objectId, sectionId) {
-  const { section } = findCashSection(objectId, sectionId);
-  if (!section) return;
-  openRenameDialog(tr('renameSection'), section.name, 120, (name) => {
-    section.name = name;
-    saveCashflow();
-    renderCashflow();
-  });
-}
-
-function openCashContractAmountDialog(objectId, sectionId) {
-  const { object, section } = findCashSection(objectId, sectionId);
-  if (!object || !section?.contractMode) return;
-  showDialog(tr('editContractAmount'), `${object.name} Â· ${section.name}`, `<div class="cash-create-form cash-contract-amount-edit"><label><span>${tr('contractAmount')}</span><input type="number" min="0.01" step="0.01" inputmode="decimal" data-edit-contract-amount value="${section.contractAmount}" /></label><button class="primary-button" type="button" data-save-contract-amount>${tr('saveChanges')}</button></div>`);
-  const scope = $('[data-dialog-content]');
-  const input = $('[data-edit-contract-amount]', scope);
-  const saveAmount = () => {
-    const amount = Math.max(0, Math.round((Number(input?.value) || 0) * 100) / 100);
-    if (amount <= 0) { showToast(tr('enterContractAmount')); input?.focus(); return; }
-    section.contractAmount = amount;
-    saveCashflow();
-    renderCashflow();
-    $('[data-dialog]')?.close();
-    showToast(tr('contractAmountSaved'));
-  };
-  $('[data-save-contract-amount]', scope)?.addEventListener('click', saveAmount);
-  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); saveAmount(); } });
-  setTimeout(() => { input?.focus(); input?.select(); }, 40);
-}
-
-async function addCashSectionAttachment(objectId, sectionId, kind, file) {
-  const { section } = findCashSection(objectId, sectionId);
-  const rule = uploadRules[kind];
-  if (!section || !rule || !file) return;
-  if (file.size > rule.maxMb * 1024 * 1024) { showToast(`${tr('fileTooLarge')}: ${rule.maxMb} ÐœÐ‘`); return; }
-  if (!isAllowedFile(file, rule)) { showToast(`${tr('unsupportedFormat')}: ${rule.formats}`); return; }
-  const current = cashAttachmentCurrent(section, kind);
-  if (current && sameFileMetadata(current, file)) { showToast(tr('sameFileSelected')); return; }
-  const id = `cash-file-${createObjectId()}`;
-  try {
-    await storeCashflowFile(id, file);
-    const sourceCatalog = CASH_SOURCE_DOCUMENT_KINDS.includes(kind) ? await extractCashSourceCatalogFromFile(file, kind) : [];
-    const version = normalizeCashAttachmentVersion({ ...fileMetadata(file), id, sourceCatalog, sourceCatalogScanned: CASH_SOURCE_DOCUMENT_KINDS.includes(kind) }, kind);
-    const versions = [...(section.attachments?.[kind]?.versions || []), version];
-    section.attachments ||= Object.fromEntries(CASH_ATTACHMENT_KINDS.map((attachmentKind) => [attachmentKind, null]));
-    section.attachments[kind] = { kind, versions };
-    saveCashflow();
-    renderCashflow();
-    showToast(tr('sectionAttachmentSaved'));
-  } catch (error) {
-    console.error(error);
-    showToast(tr('sectionAttachmentSaveFailed'));
-  }
-}
-
-function deleteCashSectionAttachment(objectId, sectionId, kind) {
-  const { section } = findCashSection(objectId, sectionId);
-  const versions = section?.attachments?.[kind]?.versions || [];
-  const current = versions[versions.length - 1];
-  if (!section || !uploadRules[kind] || !current) return;
-  const icon = { project: 'â–¤', contract: 'â‰¡', estimate: 'â‚½' }[kind];
-  showDialog(tr('deleteSectionAttachmentTitle'), tr('deleteSectionAttachmentHint'), `<section class="revision-upload-source"><span>${icon}</span><div><small>${escapeHtml(tr(kind))}</small><strong>${escapeHtml(current.sourceDocumentTitle || current.name)}</strong><em>${versions.length} ${escapeHtml(tr('versions'))} Â· ${escapeHtml(formatStorage(versions.reduce((total, version) => total + (Number(version.size) || 0), 0)))}</em></div></section><div class="result-actions"><button class="outline-button" type="button" data-cancel-section-attachment-delete>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-section-attachment-delete>${escapeHtml(tr('deleteSectionAttachment'))}</button></div>`);
-  const scope = $('[data-dialog-content]');
-  $('[data-cancel-section-attachment-delete]', scope)?.addEventListener('click', () => $('[data-dialog]')?.close());
-  $('[data-confirm-section-attachment-delete]', scope)?.addEventListener('click', async (event) => {
-    const button = event.currentTarget;
-    button.disabled = true;
-    try {
-      await deleteCashflowFileVersions(versions);
-      section.attachments[kind] = null;
-      const hasLinkedDocuments = CASH_ATTACHMENT_KINDS.some((attachmentKind) => (section.attachments?.[attachmentKind]?.versions || []).some((version) => version.linkedFromProject));
-      if (!hasLinkedDocuments) section.sourceProjectId = null;
-      saveCashflow();
-      renderCashflow();
-      $('[data-dialog]')?.close();
-      showToast(tr('sectionAttachmentDeleted'));
-    } catch (error) {
-      console.error(error);
-      button.disabled = false;
-      showToast(tr('sectionAttachmentDeleteFailed'));
-    }
-  });
-}
-
-async function openCashSectionAttachment(objectId, sectionId, kind, versionId) {
-  const { section } = findCashSection(objectId, sectionId);
-  const versions = section?.attachments?.[kind]?.versions || [];
-  const version = versions.find((item) => item.id === versionId) || versions[versions.length - 1];
-  if (!version) return;
-  if (version.linkedFromProject && version.sourceObjectId) {
-    openAnalyzedDocument(version.sourceObjectId, version.sourceDocumentKind || kind);
-    return;
-  }
-  const previewWindow = window.open('', '_blank');
-  if (previewWindow) {
-    previewWindow.opener = null;
-    previewWindow.document.title = version.name;
-    previewWindow.document.body.textContent = `${tr('openDocument')}: ${version.name}`;
-  }
-  try {
-    const blob = await readCashflowFile(version.id);
-    if (!blob) throw new Error('Cashflow attachment is missing');
-    const url = URL.createObjectURL(blob);
-    const extension = version.name.split('.').pop()?.toLowerCase();
-    const canPreview = String(version.type || blob.type).startsWith('image/') || String(version.type || blob.type) === 'application/pdf' || extension === 'pdf';
-    if (previewWindow && !previewWindow.closed) {
-      previewWindow.location.replace(url);
-    } else {
-      const link = document.createElement('a');
-      link.href = url;
-      if (canPreview) { link.target = '_blank'; link.rel = 'noopener'; }
-      else link.download = version.name;
-      document.body.append(link); link.click(); link.remove();
-    }
-    setTimeout(() => URL.revokeObjectURL(url), 300000);
-  } catch (error) {
-    console.error(error);
-    previewWindow?.close();
-    showToast(tr('sectionAttachmentOpenFailed'));
-  }
-}
-
-async function addCashOrganizationFile(objectId, role, file) {
-  const object = cashflowObjects.find((item) => item.id === objectId);
-  const card = object?.organizationDocuments?.[role];
-  if (!object || !card || !file) return;
-  const current = card.attachment?.versions?.at(-1);
-  if (current && sameFileMetadata(current, file)) { showToast(tr('sameFileSelected')); return; }
-  const id = `cash-organization-${createObjectId()}`;
-  try {
-    await storeCashflowFile(id, file);
-    const version = normalizeCashAttachmentVersion({ ...fileMetadata(file), id }, `organization-${role}`);
-    card.attachment = { kind: `organization-${role}`, versions: [...(card.attachment?.versions || []), version] };
-    card.updatedAt = new Date().toISOString();
-    saveCashflow();
-    renderCashflow();
-    showToast(tr('organizationFileSaved'));
-  } catch (error) {
-    console.error(error);
-    showToast(tr('sectionAttachmentSaveFailed'));
-  }
-}
-
-function releaseCashOrganizationPreview() {
-  if (activeCashOrganizationPreview?.url) URL.revokeObjectURL(activeCashOrganizationPreview.url);
-  activeCashOrganizationPreview = null;
-  $('[data-report-preview-content]')?.classList.remove('is-organization-file-preview');
-}
-
-function downloadCashOrganizationPreview() {
-  const preview = activeCashOrganizationPreview;
-  if (!preview) return;
-  downloadReportBlob(preview.blob, preview.version.name);
-}
-
-async function shareCashOrganizationPreview() {
-  const preview = activeCashOrganizationPreview;
-  if (!preview) return;
-  const file = new File([preview.blob], preview.version.name, { type: preview.version.type || preview.blob.type || 'application/octet-stream', lastModified: preview.version.lastModified || Date.now() });
-  let canShare = Boolean(navigator.share);
-  try { if (canShare && navigator.canShare) canShare = navigator.canShare({ files: [file] }); }
-  catch { canShare = false; }
-  if (canShare) {
-    try {
-      await navigator.share({ title: preview.version.name, text: `${tr(preview.role)} Â· StructOS`, files: [file] });
-      return;
-    } catch (error) {
-      if (error?.name === 'AbortError') return;
-    }
-  }
-  downloadReportBlob(preview.blob, preview.version.name);
-  showToast(tr('shareFileFallback'));
-}
-
-async function openCashOrganizationFile(objectId, role, versionId) {
-  const object = cashflowObjects.find((item) => item.id === objectId);
-  const card = object?.organizationDocuments?.[role];
-  const versions = card?.attachment?.versions || [];
-  const version = versions.find((item) => item.id === versionId) || versions.at(-1);
-  const dialog = $('[data-report-preview-dialog]');
-  if (!version || !dialog) return;
-  try {
-    const blob = await readCashflowFile(version.id);
-    if (!blob) throw new Error('Organization document is missing');
-    releaseCashOrganizationPreview();
-    const url = URL.createObjectURL(blob);
-    const mime = String(version.type || blob.type || '').toLowerCase();
-    const extension = version.name.split('.').pop()?.toLowerCase();
-    const image = mime.startsWith('image/') || ['jpg', 'jpeg', 'png', 'webp', 'gif', 'heic'].includes(extension);
-    const pdf = mime === 'application/pdf' || extension === 'pdf';
-    activeCashOrganizationPreview = { objectId, role, cardType: card.type, version, blob, url };
-    $('[data-report-preview-title]', dialog).textContent = tr('organizationPreviewTitle');
-    $('[data-report-preview-hint]', dialog).textContent = `${tr(role)} Â· ${tr(card.type === 'individual' ? 'passportFile' : 'organizationCardFile')} Â· ${version.name}`;
-    const content = $('[data-report-preview-content]', dialog);
-    content.classList.add('is-organization-file-preview');
-    content.innerHTML = `<section class="cash-organization-preview">${image
-      ? `<img src="${escapeHtml(url)}" alt="${escapeHtml(version.name)}" />`
-      : pdf
-        ? `<iframe src="${escapeHtml(url)}" title="${escapeHtml(version.name)}"></iframe>`
-        : `<div class="cash-organization-preview-fallback"><span aria-hidden="true">â–¤</span><strong>${escapeHtml(version.name)}</strong><p>${escapeHtml(tr('previewUnavailable'))}</p></div>`}</section>`;
-    const actions = $('[data-report-preview-actions]', dialog);
-    actions.innerHTML = `<div class="cash-report-actions cash-organization-preview-actions"><button class="outline-button" type="button" data-download-organization-preview>â†“ ${tr('downloadDocument')}</button><button class="primary-button" type="button" data-share-organization-preview>${tr('sendDocument')} â†—</button></div>`;
-    $('[data-download-organization-preview]', actions)?.addEventListener('click', downloadCashOrganizationPreview);
-    $('[data-share-organization-preview]', actions)?.addEventListener('click', shareCashOrganizationPreview);
-    if (!dialog.open) dialog.showModal();
-  } catch (error) {
-    console.error(error);
-    releaseCashOrganizationPreview();
-    showToast(tr('organizationFileOpenFailed'));
-  }
-}
-
-async function removeCashOrganizationAttachment(object, role) {
-  const card = object?.organizationDocuments?.[role];
-  const versions = card?.attachment?.versions || [];
-  if (!card || !versions.length) return false;
-  await deleteCashflowFileVersions(versions);
-  card.attachment = null;
-  card.updatedAt = new Date().toISOString();
-  return true;
-}
-
-function deleteCashOrganizationFile(objectId, role) {
-  const object = cashflowObjects.find((item) => item.id === objectId);
-  const card = object?.organizationDocuments?.[role];
-  const versions = card?.attachment?.versions || [];
-  const current = versions.at(-1);
-  if (!object || !card || !current) return;
-  showDialog(tr('deleteOrganizationFileTitle'), tr('deleteOrganizationFileHint'), `<section class="revision-upload-source"><span>${card.type === 'individual' ? 'â–£' : 'â–¤'}</span><div><small>${escapeHtml(tr(card.type === 'individual' ? 'passportFile' : 'organizationCardFile'))}</small><strong>${escapeHtml(current.name)}</strong><em>${escapeHtml(formatStorage(current.size))}</em></div></section><div class="result-actions"><button class="outline-button" type="button" data-cancel-organization-file-delete>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-organization-file-delete>${escapeHtml(tr('deleteDocument'))}</button></div>`);
-  const scope = $('[data-dialog-content]');
-  $('[data-cancel-organization-file-delete]', scope)?.addEventListener('click', () => $('[data-dialog]')?.close());
-  $('[data-confirm-organization-file-delete]', scope)?.addEventListener('click', async (event) => {
-    event.currentTarget.disabled = true;
-    try {
-      await removeCashOrganizationAttachment(object, role);
-      saveCashflow();
-      renderCashflow();
-      $('[data-dialog]')?.close();
-      showToast(tr('organizationFileDeleted'));
-    } catch (error) {
-      console.error(error);
-      event.currentTarget.disabled = false;
-      showToast(tr('organizationFileDeleteFailed'));
-    }
-  });
-}
-
-function cashOrganizationCardMarkup(card, role) {
-  const versions = card?.attachment?.versions || [];
-  const current = versions.at(-1);
-  const individual = card.type === 'individual';
-  const documentLabelKey = individual ? 'passportFile' : 'organizationCardFile';
-  const emptyLabelKey = individual ? 'noPassportFile' : 'noOrganizationFile';
-  const uploadLabelKey = current ? (individual ? 'replacePassport' : 'replaceOrganizationCard') : (individual ? 'uploadPassport' : 'uploadOrganizationCard');
-  const eyeIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg>';
-  const history = versions.length > 1 ? `<details class="cash-organization-file-history"><summary>${tr('versionHistory')} Â· ${versions.length}</summary>${[...versions].reverse().map((version, reverseIndex) => `<button type="button" data-open-organization-file="${escapeHtml(version.id)}"><b>v${versions.length - reverseIndex}</b><span><strong>${escapeHtml(version.name)}</strong><small>${escapeHtml(formatObjectDateTime(version.addedAt))} Â· ${escapeHtml(formatStorage(version.size))}</small></span></button>`).join('')}</details>` : '';
-  return `<article class="cash-organization-card" data-organization-role="${role}">
-    <header><span>${role === 'contractor' ? 'Ð˜' : 'Ð—'}</span><div><h3>${tr(role)}</h3><small>${tr('organizationDocuments')}</small></div></header>
-    <div class="cash-organization-type"><label><span>${tr('partyType')}</span><select data-organization-type><option value="organization"${card.type === 'organization' ? ' selected' : ''}>${tr('legalEntity')}</option><option value="individual"${card.type === 'individual' ? ' selected' : ''}>${tr('individual')}</option></select></label></div>
-    <div class="cash-organization-file${current ? ' has-file' : ' is-empty'}">
-      <div class="cash-organization-file-main"><span class="cash-organization-file-mark" aria-hidden="true">${individual ? 'â–£' : 'â–¤'}</span><div class="cash-organization-file-copy"><small>${tr(documentLabelKey)}</small><strong title="${escapeHtml(current?.name || tr(emptyLabelKey))}">${escapeHtml(current?.name || tr(emptyLabelKey))}</strong>${current ? `<em>v${versions.length} Â· ${escapeHtml(formatObjectDateTime(current.addedAt))} Â· ${escapeHtml(formatStorage(current.size))}</em>` : ''}</div>${current ? `<div class="cash-organization-file-icons"><button class="cash-organization-file-icon is-view" type="button" data-open-organization-file="${escapeHtml(current.id)}" aria-label="${escapeHtml(tr('previewUploadedDocument'))}" title="${escapeHtml(tr('previewUploadedDocument'))}">${eyeIcon}</button><button class="cash-organization-file-icon is-delete" type="button" data-delete-organization-file aria-label="${escapeHtml(tr('removeUploadedDocument'))}" title="${escapeHtml(tr('removeUploadedDocument'))}">Ã—</button></div>` : ''}</div>
-      <button class="outline-button cash-organization-upload" type="button" data-select-organization-file>${tr(uploadLabelKey)}</button>
-      <input type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.heic,image/*" data-organization-file hidden />${history}
-    </div>
-    <div class="cash-organization-manual"><h4>${tr('manualDetails')}</h4><div class="cash-organization-fields is-legal" data-organization-legal${card.type === 'organization' ? '' : ' hidden'}><label><span>${tr('inn')}</span><input data-organization-field="inn" inputmode="numeric" maxlength="12" value="${escapeHtml(card.inn)}" /></label><label><span>${tr('kpp')}</span><input data-organization-field="kpp" inputmode="numeric" maxlength="9" value="${escapeHtml(card.kpp)}" /></label><label class="is-wide"><span>${tr('companyName')}</span><input data-organization-field="company" maxlength="200" value="${escapeHtml(card.company)}" /></label></div><div class="cash-organization-fields is-individual" data-organization-individual${card.type === 'individual' ? '' : ' hidden'}><label class="is-wide"><span>${tr('fullName')}</span><input data-organization-field="fullName" maxlength="200" value="${escapeHtml(card.fullName)}" /></label><label><span>${tr('passportSeries')}</span><input data-organization-field="passportSeries" inputmode="numeric" maxlength="20" value="${escapeHtml(card.passportSeries)}" /></label><label><span>${tr('passportNumber')}</span><input data-organization-field="passportNumber" inputmode="numeric" maxlength="40" value="${escapeHtml(card.passportNumber)}" /></label></div><button class="primary-button" type="button" data-save-organization-card>${tr('saveOrganizationDetails')}</button></div>
-  </article>`;
-}
-
-function cashOrganizationDocumentsMarkup(object) {
-  const documents = normalizeCashOrganizationDocuments(object?.organizationDocuments);
-  const collapsed = Boolean(object?.organizationDocumentsCollapsed);
-  return `<details class="cash-organization-documents" data-organization-documents${collapsed ? '' : ' open'}><summary><div><span class="eyebrow">STRUCTOS DOCUMENTS</span><h2>${tr('organizationDocuments')}</h2><p>${tr('organizationDocumentsHint')}</p></div><span class="cash-organization-toggle-label" data-organization-toggle-label>${tr(collapsed ? 'expandOrganizationDocuments' : 'collapseOrganizationDocuments')}</span><b aria-hidden="true">âŒ„</b></summary><div class="cash-organization-grid">${CASH_ORGANIZATION_ROLES.map((role) => cashOrganizationCardMarkup(documents[role], role)).join('')}</div></details>`;
-}
-
-function bindCashOrganizationDocuments(object, scope) {
-  const documentsSection = $('[data-organization-documents]', scope);
-  documentsSection?.addEventListener('toggle', () => {
-    object.organizationDocumentsCollapsed = !documentsSection.open;
-    const label = $('[data-organization-toggle-label]', documentsSection);
-    if (label) label.textContent = tr(documentsSection.open ? 'collapseOrganizationDocuments' : 'expandOrganizationDocuments');
-    saveCashflow();
-  });
-  $$('[data-organization-role]', scope).forEach((cardElement) => {
-    const role = cardElement.dataset.organizationRole;
-    const card = object.organizationDocuments[role];
-    const typeSelect = $('[data-organization-type]', cardElement);
-    typeSelect?.addEventListener('change', () => {
-      $$('[data-organization-field]', cardElement).forEach((input) => { card[input.dataset.organizationField] = input.value; });
-      card.passport = [card.passportSeries, card.passportNumber].map((value) => String(value || '').trim()).filter(Boolean).join(' ');
-      const nextType = typeSelect.value === 'individual' ? 'individual' : 'organization';
-      if (nextType === card.type) return;
-      const applyType = async (removeAttachment = false) => {
-        if (removeAttachment) await removeCashOrganizationAttachment(object, role);
-        card.type = nextType;
-        card.updatedAt = new Date().toISOString();
-        object.organizationDocuments[role] = normalizeCashOrganizationCard(card, role);
-        saveCashflow();
-        renderCashflow();
-      };
-      const versions = card.attachment?.versions || [];
-      if (!versions.length) { applyType().catch((error) => console.error(error)); return; }
-      showDialog(tr('changePartyTypeTitle'), tr('changePartyTypeHint'), `<div class="result-actions"><button class="outline-button" type="button" data-cancel-party-type>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-party-type>${escapeHtml(tr('changePartyType'))}</button></div>`);
-      const dialogScope = $('[data-dialog-content]');
-      $('[data-cancel-party-type]', dialogScope)?.addEventListener('click', () => { typeSelect.value = card.type; $('[data-dialog]')?.close(); });
-      $('[data-confirm-party-type]', dialogScope)?.addEventListener('click', async (event) => {
-        event.currentTarget.disabled = true;
-        try { await applyType(true); $('[data-dialog]')?.close(); }
-        catch (error) { console.error(error); typeSelect.value = card.type; event.currentTarget.disabled = false; showToast(tr('organizationFileDeleteFailed')); }
-      });
-    });
-    $('[data-save-organization-card]', cardElement)?.addEventListener('click', () => {
-      const values = { ...card, type: typeSelect?.value === 'individual' ? 'individual' : 'organization', updatedAt: new Date().toISOString() };
-      $$('[data-organization-field]', cardElement).forEach((input) => { values[input.dataset.organizationField] = input.value; });
-      values.passport = [values.passportSeries, values.passportNumber].map((value) => String(value || '').trim()).filter(Boolean).join(' ');
-      object.organizationDocuments[role] = normalizeCashOrganizationCard(values, role);
-      saveCashflow(); renderCashflow(); showToast(tr('organizationCardSaved'));
-    });
-    $('[data-select-organization-file]', cardElement)?.addEventListener('click', () => $('[data-organization-file]', cardElement)?.click());
-    $('[data-delete-organization-file]', cardElement)?.addEventListener('click', () => deleteCashOrganizationFile(object.id, role));
-    $('[data-organization-file]', cardElement)?.addEventListener('change', async (event) => {
-      const file = event.currentTarget.files?.[0]; if (!file) return;
-      event.currentTarget.disabled = true; await addCashOrganizationFile(object.id, role, file); event.currentTarget.value = ''; event.currentTarget.disabled = false;
-    });
-    $$('[data-open-organization-file]', cardElement).forEach((button) => button.addEventListener('click', () => openCashOrganizationFile(object.id, role, button.dataset.openOrganizationFile)));
-  });
-}
-
-function cashSectionAttachmentMarkup(section, kind) {
-  const attachment = section.attachments?.[kind];
-  const versions = attachment?.versions || [];
-  const current = versions[versions.length - 1];
-  const icon = { project: 'â–¤', contract: 'â‰¡', estimate: 'â‚½' }[kind];
-  const eyeIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg>';
-  const history = versions.length > 1 ? `<details class="cash-source-file-history"><summary>${tr('versionHistory')} Â· ${versions.length}</summary><div>${[...versions].reverse().map((version, reverseIndex) => `<button type="button" data-open-cash-attachment-version="${escapeHtml(version.id)}" data-cash-attachment-kind="${escapeHtml(kind)}"><b>v${versions.length - reverseIndex}</b><span><strong>${escapeHtml(version.sourceDocumentTitle || version.name)}</strong><small>${version.linkedFromProject ? `${escapeHtml(tr('linkedFromProject'))} Â· ` : ''}${escapeHtml(formatObjectDateTime(version.addedAt))} Â· ${escapeHtml(formatStorage(version.size))}</small></span><i>${tr('openDocument')}</i></button>`).join('')}</div></details>` : '';
-  return `<article class="cash-source-file${current ? ' has-file' : ''}">
-    <header><span aria-hidden="true">${icon}</span><div><strong>${tr(kind)}</strong><small>${escapeHtml(current?.sourceDocumentTitle || current?.name || tr('notUploaded'))}</small>${current ? `<em>${current.linkedFromProject ? `${escapeHtml(tr('linkedFromProject'))} Â· ` : ''}${escapeHtml(current.name)} Â· v${versions.length} Â· ${escapeHtml(formatStorage(current.size))}</em>` : ''}</div>${current ? `<div class="cash-source-file-icons"><button class="cash-source-file-icon is-view" type="button" data-open-cash-attachment-version="${escapeHtml(current.id)}" data-cash-attachment-kind="${escapeHtml(kind)}" aria-label="${escapeHtml(tr('previewUploadedDocument'))}" title="${escapeHtml(tr('previewUploadedDocument'))}">${eyeIcon}</button><button class="cash-source-file-icon is-delete" type="button" data-delete-cash-attachment="${escapeHtml(kind)}" aria-label="${escapeHtml(tr('removeUploadedDocument'))}" title="${escapeHtml(tr('removeUploadedDocument'))}">Ã—</button></div>` : ''}</header>
-    <div class="cash-source-file-actions"><button class="primary-button" type="button" data-select-cash-attachment="${escapeHtml(kind)}">${tr(current ? 'replaceDocument' : 'upload')}</button></div>
-    <input type="file" accept="${uploadRules[kind].accept}" data-cash-attachment-input="${escapeHtml(kind)}" hidden />${history}
-  </article>`;
-}
-
-function cashSectionAttachmentsMarkup(section) {
-  return `<section class="cash-source-documents"><header><div><h4>${tr('sectionSourceDocuments')}</h4><p>${tr('sectionSourceDocumentsHint')}</p></div><span aria-hidden="true">â—‰</span></header><div class="cash-source-files">${CASH_ATTACHMENT_KINDS.map((kind) => cashSectionAttachmentMarkup(section, kind)).join('')}</div></section>`;
-}
-
-function addCashEntry(objectId, sectionId, kind, form) {
-  const object = cashflowObjects.find((item) => item.id === objectId);
-  const section = object?.sections.find((item) => item.id === sectionId);
-  const amountInput = $('[data-cash-amount]', form);
-  const commentInput = $('[data-cash-comment]', form);
-  const amount = Math.round(Number(amountInput?.value) * 100) / 100;
-  const comment = commentInput?.value.trim() || '';
-  if (!object || !section || !Number.isFinite(amount) || amount <= 0 || !comment) {
-    showToast(tr('amountRequired'));
-    (!Number.isFinite(amount) || amount <= 0 ? amountInput : commentInput)?.focus();
-    return;
-  }
-  const target = cashEntryCollection(section, kind);
-  if (!target) return;
-  target.unshift({ id: `entry-${Date.now()}-${Math.random().toString(16).slice(2)}`, amount, comment: comment.slice(0, 240), date: new Date().toISOString() });
-  saveCashflow();
-  renderCashflow();
-}
-
-function openCashEntryEditDialog(objectId, sectionId, kind, entryId) {
-  const { object, section } = findCashSection(objectId, sectionId);
-  const target = section && cashEntryCollection(section, kind);
-  const entry = target?.find((item) => item.id === entryId);
-  if (!object || !section || !entry) return;
-  expandedCashEntryHistories.add(`${section.id}:${kind}`);
-  showDialog(tr('editCashEntry'), `${object.name} Â· ${section.name}`, `<div class="cash-edit-form"><label><span>${tr('amount')}</span><input type="number" min="0.01" step="0.01" inputmode="decimal" data-edit-cash-amount value="${entry.amount}" /></label><label><span>${tr('date')}</span><input type="date" data-edit-cash-date value="${cashDateInputValue(entry.date)}" /></label><label><span>${tr('comment')}</span><input maxlength="240" data-edit-cash-comment value="${escapeHtml(entry.comment)}" /></label><button class="primary-button" type="button" data-save-cash-entry>${tr('saveChanges')}</button></div>`);
-  const scope = $('[data-dialog-content]');
-  const amountInput = $('[data-edit-cash-amount]', scope);
-  const dateInput = $('[data-edit-cash-date]', scope);
-  const commentInput = $('[data-edit-cash-comment]', scope);
-  const saveEntry = () => {
-    const amount = Math.round(Number(amountInput?.value) * 100) / 100;
-    const comment = commentInput?.value.trim() || '';
-    const date = cashEntryDateWithNewDay(entry.date, dateInput?.value || '');
-    if (!Number.isFinite(amount) || amount <= 0 || !comment || !date) {
-      showToast(tr('entryFieldsRequired'));
-      (!Number.isFinite(amount) || amount <= 0 ? amountInput : !date ? dateInput : commentInput)?.focus();
-      return;
-    }
-    entry.amount = amount;
-    entry.comment = comment.slice(0, 240);
-    entry.date = date;
-    target.sort((a, b) => new Date(b.date) - new Date(a.date));
-    saveCashflow();
-    renderCashflow();
-    $('[data-dialog]')?.close();
-    showToast(tr('entryUpdated'));
-  };
-  $('[data-save-cash-entry]', scope)?.addEventListener('click', saveEntry);
-  $$('input', scope).forEach((input) => input.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') { event.preventDefault(); saveEntry(); }
-  }));
-  setTimeout(() => { amountInput?.focus(); amountInput?.select(); }, 40);
-}
-
-function cashReportHistoryMarkup(section) {
-  const isOpen = expandedCashReportHistory.has(section.id);
-  const reportHistory = Array.isArray(section?.reportHistory) ? section.reportHistory : [];
-  const rows = reportHistory.length ? reportHistory.map((item) => {
-    const typeClass = item.type === 'statement' ? 'is-statement' : item.type === 'act' ? 'is-act' : 'is-report';
-    const typeLabel = item.type === 'statement' ? 'Ð’ÐžÐ ' : item.type === 'act' ? 'ÐÐšÐ¢' : tr('report');
-    const documentActions = ['statement', 'act'].includes(item.type) ? `<button type="button" data-history-edit>${tr('editDocument')}</button><button class="is-danger" type="button" data-history-delete>${tr('deleteDocument')}</button>` : '';
-    return `<article class="cash-report-history-row" data-report-history-id="${escapeHtml(item.id)}"><span><span class="cash-report-history-title"><b class="cash-report-type-badge ${typeClass}">${escapeHtml(typeLabel)}</b><strong>${escapeHtml(item.title)}</strong></span><small>${tr('changeSavedAt')}: ${cashDate(item.updatedAt || item.createdAt)}${item.report?.parties?.date ? ` Â· ${tr('documentDate')}: ${escapeHtml(item.report.parties.date)}` : ''}</small></span><div>${documentActions}<button type="button" data-history-preview aria-label="${escapeHtml(tr('viewReport'))}" title="${escapeHtml(tr('viewReport'))}">â—‰</button><button type="button" data-history-download="pdf">PDF</button><button type="button" data-history-download="xlsx">Excel</button><button type="button" data-history-share="pdf">â†— PDF</button><button type="button" data-history-share="xlsx">â†— Excel</button></div></article>`;
-  }).join('') : `<div class="cash-history-empty">${tr('noReports')}</div>`;
-  return `<div class="cash-report-history"${isOpen ? '' : ' hidden'}><div class="cash-report-history-list">${rows}</div></div>`;
-}
-
-function cashOwnFundsMarkup(section, investments, returns, investmentKind, returnKind) {
-  const invested = cashTotal(investments);
-  const closed = cashTotal(returns);
-  const remaining = Math.round((invested - closed) * 100) / 100;
-  return `<section class="cash-own-funds"><h4>${tr('ownFundsAccounting')}</h4><div class="cash-own-summary"><article><span>${tr('totalOwnInvested')}</span><strong>${formatMoney(invested)}</strong></article><article><span>${tr('totalOwnReturned')}</span><strong>${formatMoney(closed)}</strong></article><article class="${cashBalanceClass(remaining)}"><span>${tr('ownFundsRemaining')}</span><strong>${formatSignedMoney(remaining)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm(investmentKind, 'ownInvested', 'addOwnFunds')}${cashEntryForm(returnKind, 'returnedFromAdvance', 'addOwnReturn')}</div>${cashHistoryMarkup(investments, 'ownInvested', investmentKind, section.id)}${cashHistoryMarkup(returns, 'returnedFromAdvance', returnKind, section.id)}</section>`;
-}
-
-function cashStaffingMarkup(section) {
-  const shifts = section.staffingShifts || [];
-  const totals = cashStaffingTotals(section);
-  const tableHeader = `<div class="cash-staffing-table-head" aria-hidden="true"><span>${tr('staffingNumber')}</span><span>${tr('workerFullName')} / ${tr('structosWorkerId')}</span><span>${tr('plannedShift')}</span><span>${tr('actualShift')}</span><span>${tr('shiftRate')}</span><span>${tr('overtimeHours')} / ${tr('overtimePay')}</span><span>${tr('salaryPay')}</span><span>${tr('penalty')}</span><span></span></div>`;
-  const days = cashStaffingDayGroups(section).map(({ date, shifts: dayShifts }) => {
-    const dayTotals = cashStaffingTotalsForShifts(dayShifts);
-    const rows = dayShifts.map((shift, index) => {
-      const calculation = cashStaffingCalculation(shift);
-      const statusClass = shift.closedAt ? ' is-closed' : shift.openedAt ? ' is-open' : '';
-      const shiftAction = !shift.openedAt
-        ? `<button class="cash-staffing-shift-button" type="button" data-open-staffing-shift>${tr('openShift')}</button>`
-        : !shift.closedAt
-          ? `<button class="cash-staffing-shift-button is-close" type="button" data-close-staffing-shift>${tr('closeShift')}</button>`
-          : `<span class="cash-staffing-closed-badge">âœ“ ${tr('shiftClosed')}</span>`;
-      return `<article class="cash-staffing-row${statusClass}" data-staffing-shift="${escapeHtml(shift.id)}">
-        <span class="cash-staffing-number" aria-label="${escapeHtml(`${tr('staffingNumber')} ${index + 1}`)}">${index + 1}</span>
-        <div class="cash-staffing-cell is-person" data-label="${escapeHtml(tr('workerFullName'))}"><input type="text" maxlength="160" data-staffing-field="fullName" value="${escapeHtml(shift.fullName)}" placeholder="${escapeHtml(tr('workerFullName'))}" /><input type="text" inputmode="numeric" maxlength="7" data-staffing-field="structosId" value="${escapeHtml(shift.structosId)}" placeholder="${escapeHtml(tr('structosWorkerId'))}" /></div>
-        <div class="cash-staffing-cell is-plan" data-label="${escapeHtml(tr('plannedShift'))}"><label><small>${tr('shiftFrom')}</small><input type="time" data-staffing-field="plannedFrom" value="${escapeHtml(shift.plannedFrom)}" /></label><label><small>${tr('shiftTo')}</small><input type="time" data-staffing-field="plannedTo" value="${escapeHtml(shift.plannedTo)}" /></label><em><span data-staffing-planned-hours>${calculation.plannedHours}</span> Ñ‡</em></div>
-        <div class="cash-staffing-cell is-actual" data-label="${escapeHtml(tr('actualShift'))}"><small>${tr('shiftOpenedAt')}: <b>${escapeHtml(cashStaffingTimestamp(shift.openedAt))}</b></small><small>${tr('shiftClosedAt')}: <b>${escapeHtml(cashStaffingTimestamp(shift.closedAt))}</b></small>${shiftAction}</div>
-        <div class="cash-staffing-cell is-money" data-label="${escapeHtml(tr('shiftRate'))}"><input type="number" min="0" step="0.01" inputmode="decimal" data-staffing-field="shiftRate" value="${shift.shiftRate || ''}" placeholder="0" /></div>
-        <div class="cash-staffing-cell is-calculation" data-label="${escapeHtml(tr('overtimeHours'))}"><strong><span data-staffing-overtime-hours>${calculation.overtimeHours}</span> Ñ‡</strong><small data-staffing-overtime-pay>${formatMoney(calculation.overtimePay)}</small></div>
-        <div class="cash-staffing-cell is-salary" data-label="${escapeHtml(tr('salaryPay'))}"><strong data-staffing-salary>${formatMoney(calculation.salary)}</strong></div>
-        <div class="cash-staffing-cell is-penalty" data-label="${escapeHtml(tr('penalty'))}"><input type="number" min="0" step="0.01" inputmode="decimal" data-staffing-field="penalty" value="${shift.penalty || ''}" placeholder="0" /><input type="text" maxlength="240" data-staffing-field="penaltyComment" value="${escapeHtml(shift.penaltyComment)}" placeholder="${escapeHtml(tr('penaltyComment'))}" /></div>
-        <button class="cash-staffing-delete" type="button" data-delete-staffing-shift aria-label="${escapeHtml(tr('deleteShift'))}" title="${escapeHtml(tr('deleteShift'))}">Ã—</button>
-      </article>`;
-    }).join('');
-    return `<section class="cash-staffing-day" data-staffing-day="${escapeHtml(date)}">
-      <header class="cash-staffing-day-head">
-        <div class="cash-staffing-day-date"><label><span>${tr('shiftDate')}</span><input type="date" data-staffing-day-date value="${escapeHtml(date)}" /></label><strong><span>${tr('weekday')}</span><b data-staffing-day-weekday>${escapeHtml(cashStaffingWeekday(date))}</b></strong></div>
-        <span class="cash-staffing-day-people"><b data-staffing-day-people>${dayTotals.people}</b> ${tr('staffingPeopleShort')}</span>
-        <button class="outline-button" type="button" data-add-staffing-person-date="${escapeHtml(date)}">ï¼‹ ${tr('addStaffingPerson')}</button>
-      </header>
-      <div class="cash-staffing-day-table">${tableHeader}<div class="cash-staffing-rows">${rows}</div></div>
-      <footer class="cash-staffing-day-total"><strong>${tr('staffingDayTotal')}</strong><div>
-        <span><small>${tr('staffingPeopleShort')}</small><b data-staffing-day-summary="people">${dayTotals.people}</b></span>
-        <span><small>${tr('staffingShiftRatesTotal')}</small><b data-staffing-day-summary="rates">${formatMoney(dayTotals.shiftRates)}</b></span>
-        <span><small>${tr('totalOvertime')}</small><b><i data-staffing-day-summary="overtime">${Math.round(dayTotals.overtimeHours * 100) / 100} Ñ‡</i><i data-staffing-day-summary="overtimePay">${formatMoney(dayTotals.overtimePay)}</i></b></span>
-        <span><small>${tr('staffingPenaltiesTotal')}</small><b data-staffing-day-summary="penalties">${formatMoney(dayTotals.penalties)}</b></span>
-        <span class="is-payroll"><small>${tr('totalPayroll')}</small><b data-staffing-day-summary="payroll">${formatMoney(dayTotals.payroll)}</b></span>
-      </div></footer>
-    </section>`;
-  }).join('');
-  const grandTotal = shifts.length ? `<footer class="cash-staffing-grand-total"><strong>${tr('staffingRegisterTotal')}</strong><div>
-    <span><small>${tr('staffingPeopleShort')}</small><b data-staffing-grand-summary="people">${totals.people}</b></span>
-    <span><small>${tr('staffingShiftRatesTotal')}</small><b data-staffing-grand-summary="rates">${formatMoney(totals.shiftRates)}</b></span>
-    <span><small>${tr('totalOvertime')}</small><b><i data-staffing-grand-summary="overtime">${Math.round(totals.overtimeHours * 100) / 100} Ñ‡</i><i data-staffing-grand-summary="overtimePay">${formatMoney(totals.overtimePay)}</i></b></span>
-    <span><small>${tr('staffingPenaltiesTotal')}</small><b data-staffing-grand-summary="penalties">${formatMoney(totals.penalties)}</b></span>
-    <span class="is-payroll"><small>${tr('totalPayroll')}</small><b data-staffing-grand-summary="payroll">${formatMoney(totals.payroll)}</b></span>
-  </div></footer>` : '';
-  return `<section class="cash-staffing-block">
-    <header><div><span class="eyebrow">STRUCTOS STAFF</span><h4>${tr('aggregatorWindow')}</h4><p>${tr('aggregatorWindowHint')}</p></div><div class="cash-staffing-actions"><button class="outline-button" type="button" data-add-staffing-shift>ï¼‹ ${tr('addStaffingPerson')}</button><button class="primary-button" type="button" data-add-staffing-day>ï¼‹ ${tr('startStaffingDay')}</button></div></header>
-    <div class="cash-staffing-summary"><article><span>${tr('staffingPeople')}</span><strong data-staffing-summary="people">${totals.people}</strong></article><article><span>${tr('activeShifts')}</span><strong data-staffing-summary="active">${totals.active}</strong></article><article><span>${tr('totalOvertime')}</span><strong data-staffing-summary="overtime">${Math.round(totals.overtimeHours * 100) / 100} Ñ‡</strong></article><article><span>${tr('totalPayroll')}</span><strong data-staffing-summary="payroll">${formatMoney(totals.payroll)}</strong></article></div>
-    <p class="cash-staffing-formula"><span>Æ’</span>${tr('overtimeFormula')}</p>
-    <div class="cash-staffing-table">${days || `<div class="cash-staffing-empty"><span>ï¼‹</span><p>${tr('noStaffingShifts')}</p></div>`}</div>${grandTotal}
-  </section>`;
-}
-
-function findCashStaffingShift(objectId, sectionId, shiftId) {
-  const { object, section } = findCashSection(objectId, sectionId);
-  const shift = section?.staffingShifts?.find((item) => item.id === shiftId);
-  return { object, section, shift };
-}
-
-function addCashStaffingShift(objectId, sectionId, requestedDate = '') {
-  const { section } = findCashSection(objectId, sectionId);
-  if (!section) return;
-  section.staffingShifts ||= [];
-  const date = /^\d{4}-\d{2}-\d{2}$/.test(String(requestedDate || '')) ? requestedDate : cashStaffingLatestDate(section);
-  section.staffingShifts.push(normalizeCashStaffingShift({ date }));
-  saveCashflow();
-  renderCashflow();
-}
-
-function addCashStaffingDay(objectId, sectionId) {
-  const { section } = findCashSection(objectId, sectionId);
-  if (!section) return;
-  section.staffingShifts ||= [];
-  section.staffingShifts.push(normalizeCashStaffingShift({ date: cashStaffingNextDate(section) }));
-  saveCashflow();
-  renderCashflow();
-  showToast(tr('staffingDayCreated'));
-}
-
-function updateCashStaffingDayDate(objectId, sectionId, previousDate, nextDate) {
-  const { section } = findCashSection(objectId, sectionId);
-  if (!section || !/^\d{4}-\d{2}-\d{2}$/.test(String(nextDate || ''))) return;
-  const updatedAt = new Date().toISOString();
-  section.staffingShifts.forEach((shift) => {
-    if (shift.date !== previousDate) return;
-    shift.date = nextDate;
-    shift.updatedAt = updatedAt;
-  });
-  saveCashflow();
-  renderCashflow();
-}
-
-function updateCashStaffingTotalsDisplay(section, sectionCard, date) {
-  const totals = cashStaffingTotals(section);
-  const summaryValues = { people: totals.people, active: totals.active, overtime: `${Math.round(totals.overtimeHours * 100) / 100} Ñ‡`, payroll: formatMoney(totals.payroll) };
-  Object.entries(summaryValues).forEach(([key, value]) => {
-    const target = $(`[data-staffing-summary="${key}"]`, sectionCard);
-    if (target) target.textContent = value;
-  });
-  const grandValues = { people: totals.people, rates: formatMoney(totals.shiftRates), overtime: `${Math.round(totals.overtimeHours * 100) / 100} Ñ‡`, overtimePay: formatMoney(totals.overtimePay), penalties: formatMoney(totals.penalties), payroll: formatMoney(totals.payroll) };
-  Object.entries(grandValues).forEach(([key, value]) => {
-    const target = $(`[data-staffing-grand-summary="${key}"]`, sectionCard);
-    if (target) target.textContent = value;
-  });
-  const day = $$('[data-staffing-day]', sectionCard).find((item) => item.dataset.staffingDay === date);
-  if (!day) return;
-  const dayTotals = cashStaffingTotalsForShifts(section.staffingShifts.filter((shift) => shift.date === date));
-  const people = $('[data-staffing-day-people]', day);
-  if (people) people.textContent = dayTotals.people;
-  const dayValues = { people: dayTotals.people, rates: formatMoney(dayTotals.shiftRates), overtime: `${Math.round(dayTotals.overtimeHours * 100) / 100} Ñ‡`, overtimePay: formatMoney(dayTotals.overtimePay), penalties: formatMoney(dayTotals.penalties), payroll: formatMoney(dayTotals.payroll) };
-  Object.entries(dayValues).forEach(([key, value]) => {
-    const target = $(`[data-staffing-day-summary="${key}"]`, day);
-    if (target) target.textContent = value;
-  });
-}
-
-function updateCashStaffingShift(objectId, sectionId, shiftId, field, value, row, sectionCard) {
-  const { section, shift } = findCashStaffingShift(objectId, sectionId, shiftId);
-  if (!section || !shift) return;
-  if (field === 'structosId') shift.structosId = String(value || '').replace(/\D+/g, '').slice(0, 7);
-  else if (['shiftRate', 'penalty'].includes(field)) shift[field] = Math.max(0, Math.round((Number(value) || 0) * 100) / 100);
-  else if (field === 'date') shift.date = /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : localDateKey();
-  else if (['plannedFrom', 'plannedTo'].includes(field)) shift[field] = /^\d{2}:\d{2}$/.test(value) ? value : '';
-  else if (field === 'fullName') shift.fullName = String(value || '').slice(0, 160);
-  else if (field === 'penaltyComment') shift.penaltyComment = String(value || '').slice(0, 240);
-  shift.updatedAt = new Date().toISOString();
-  saveCashflow();
-  const calculation = cashStaffingCalculation(shift);
-  const weekday = $('[data-staffing-weekday]', row);
-  if (weekday) weekday.textContent = cashStaffingWeekday(shift.date);
-  $('[data-staffing-planned-hours]', row).textContent = calculation.plannedHours;
-  $('[data-staffing-overtime-hours]', row).textContent = calculation.overtimeHours;
-  $('[data-staffing-overtime-pay]', row).textContent = formatMoney(calculation.overtimePay);
-  $('[data-staffing-salary]', row).textContent = formatMoney(calculation.salary);
-  updateCashStaffingTotalsDisplay(section, sectionCard, shift.date);
-}
-
-function openCashStaffingShift(objectId, sectionId, shiftId) {
-  const { shift } = findCashStaffingShift(objectId, sectionId, shiftId);
-  if (!shift) return;
-  const valid = shift.fullName.trim() && shift.structosId.length === 7 && shift.date && cashStaffingPlannedHours(shift) > 0 && shift.shiftRate > 0;
-  if (!valid) { showToast(tr('staffingRequiredFields')); return; }
-  shift.openedAt = new Date().toISOString();
-  shift.closedAt = null;
-  shift.updatedAt = shift.openedAt;
-  saveCashflow(); renderCashflow(); showToast(tr('shiftOpened'));
-}
-
-function closeCashStaffingShift(objectId, sectionId, shiftId) {
-  const { shift } = findCashStaffingShift(objectId, sectionId, shiftId);
-  if (!shift?.openedAt || shift.closedAt) return;
-  shift.closedAt = new Date().toISOString();
-  shift.updatedAt = shift.closedAt;
-  saveCashflow(); renderCashflow(); showToast(tr('shiftClosedToast'));
-}
-
-function deleteCashStaffingShift(objectId, sectionId, shiftId) {
-  const { section, shift } = findCashStaffingShift(objectId, sectionId, shiftId);
-  if (!section || !shift || !window.confirm(tr('deleteShiftConfirm'))) return;
-  section.staffingShifts = section.staffingShifts.filter((item) => item.id !== shift.id);
-  saveCashflow(); renderCashflow(); showToast(tr('shiftDeleted'));
-}
-
-function cashSectionMarkup(object, section) {
-  const reportHistory = Array.isArray(section?.reportHistory) ? section.reportHistory : [];
-  const advances = cashTotal(section.advances);
-  const expenses = cashTotal(section.expenses);
-  const remainingContract = Math.round((section.contractAmount - expenses) * 100) / 100;
-  const paidProductionRemaining = Math.round((expenses - advances) * 100) / 100;
-  const factIncome = cashTotal(section.factIncome);
-  const factExpenses = cashTotal(section.factExpenses);
-  const factBalance = Math.round((factIncome - factExpenses) * 100) / 100;
-  const sectionBalance = cashSectionFinancials(section).balance;
-  const isOpen = expandedCashSections.has(section.id);
-  const modeBadges = `${section.contractMode ? `<span>${tr('workByContract')}</span>` : ''}${section.factMode ? `<span>${tr('actualAccounting')}</span>` : ''}${section.staffingMode ? `<span>${tr('peopleAssigned')}</span>` : ''}`;
-  const contractMarkup = section.contractMode ? `<section class="cash-accounting-block cash-contract-accounting"><h4>${tr('contractAccounting')}</h4><div class="cash-contract-head"><article class="cash-contract-value"><span>${tr('contractAmount')}</span><div><strong>${formatMoney(section.contractAmount)}</strong><button type="button" data-edit-contract-amount aria-label="${escapeHtml(tr('editContractAmount'))}" title="${escapeHtml(tr('editContractAmount'))}">âœŽ</button></div></article><article><span>${tr('receivedFromCustomer')}</span><strong>${formatMoney(advances)}</strong></article><article class="${cashBalanceClass(remainingContract)}"><span>${tr('contractProductionRemaining')}</span><strong>${formatSignedMoney(remainingContract)}</strong></article></div><div class="cash-summary"><article><span>${tr('totalReceivedAdvanceClosure')}</span><strong>${formatMoney(advances)}</strong></article><article><span>${tr('totalCompletedWorkVolume')}</span><strong>${formatMoney(expenses)}</strong></article><article class="is-remaining ${cashBalanceClass(-paidProductionRemaining)}"><span>${tr('paidProductionRemaining')}</span><strong>${formatSignedMoney(paidProductionRemaining)}</strong></article></div><div class="cash-entry-grid">${cashEntryForm('advances', 'receivedAdvanceClosure', 'addReceivedAdvanceClosure')}${cashEntryForm('expenses', 'completedWorkVolume', 'addCompletedWorkVolume')}</div>${cashHistoryMarkup(section.advances, 'totalReceivedAdvanceClosure', 'advances', section.id)}${cashHistoryMarkup(section.expenses, 'totalCompletedWorkVolume', 'expenses', section.id)}${cashOwnFundsMarkup(section, section.ownInvestments, section.ownReturns, 'ownInvestments', 'ownReturns')}</section>` : '';
-  const factMarkup = section.factMode ? `<section class="cash-fact-table cash-accounting-block"><h4 class="cash-fact-title">${tr('actualAccounting')}</h4><div class="cash-entry-grid">${cashEntryForm('factIncome', 'factAdvanceCompletion', 'addFactAdvanceCompletion')}${cashEntryForm('factExpenses', 'actuallyCompleted', 'addActuallyCompleted')}</div>${cashHistoryMarkup(section.factIncome, 'totalFactAdvanceCompletion', 'factIncome', section.id)}${cashHistoryMarkup(section.factExpenses, 'totalActuallyCompleted', 'factExpenses', section.id)}<div class="cash-balance ${cashBalanceClass(factBalance)}"><span>${tr('executionRemaining')}</span><strong>${formatSignedMoney(factBalance)}</strong></div>${cashOwnFundsMarkup(section, section.factOwnInvestments, section.factOwnReturns, 'factOwnInvestments', 'factOwnReturns')}</section>` : '';
-  const staffingMarkup = section.staffingMode ? cashStaffingMarkup(section) : '';
-  return `<section class="cash-section" data-cash-section="${escapeHtml(section.id)}">
-    <header class="cash-section-head">
-      <button class="cash-section-toggle" type="button" data-cash-section-toggle aria-expanded="${isOpen}"><span>${isOpen ? 'âŒ„' : 'â€º'}</span><strong>${escapeHtml(section.name)}</strong><b class="cash-section-balance ${cashBalanceClass(sectionBalance)}" aria-label="${escapeHtml(tr('sectionBalance'))}">${formatSignedMoney(sectionBalance)}</b><i>${modeBadges}</i></button>
-      <div class="cash-section-head-actions"><button class="cash-mini-button" type="button" data-rename-cash-section>${tr('rename')}</button><button class="cash-mini-button is-danger" type="button" data-delete-cash-section>${tr('deleteSection')}</button></div>
-    </header>
-    <div class="cash-section-body"${isOpen ? '' : ' hidden'}>
-      ${cashSectionAttachmentsMarkup(section)}<div class="cash-section-document-actions"><button type="button" data-open-cash-document="statement">${tr('workStatement')}</button><button type="button" data-open-cash-document="act">${tr('workAct')}</button><button type="button" data-export-section>${tr('sectionReport')}</button><button type="button" data-toggle-report-history>${tr('reportHistory')} Â· ${reportHistory.length}</button></div>${cashReportHistoryMarkup(section)}${contractMarkup}${factMarkup}${staffingMarkup}
-    </div>
-  </section>`;
-}
-
-function renderCashflowContent() {
-  const browser = $('[data-cashflow-browser]');
-  const detail = $('[data-cashflow-detail]');
-  const list = $('[data-cashflow-list]');
-  const empty = $('[data-cashflow-empty]');
-  if (!browser || !detail || !list || !empty) return;
-  const activeObject = cashflowObjects.find((item) => item.id === activeCashObjectId);
-  if (activeObject) {
-    browser.hidden = true; detail.hidden = false; renderCashObjectDetail(activeObject, detail); return;
-  }
-  activeCashObjectId = null; browser.hidden = false; detail.hidden = true; detail.innerHTML = '';
-  empty.hidden = cashflowObjects.length > 0;
-  list.hidden = cashflowObjects.length === 0;
-  const exportAllButton = $('[data-export-all-cashflow]', browser);
-  if (exportAllButton) exportAllButton.hidden = cashflowObjects.length === 0;
-  const orderedObjects = [...(Array.isArray(cashflowObjects) ? cashflowObjects : [])].sort((a, b) => Number(a.completed) - Number(b.completed) || new Date(b.createdAt) - new Date(a.createdAt));
-  list.innerHTML = orderedObjects.map((object) => {
-    const financials = cashObjectFinancials(object);
-    const sectionCount = Array.isArray(object?.sections) ? object.sections.length : 0;
-    return `<article class="cash-object${object.completed ? ' is-completed' : ''}" data-cash-object="${escapeHtml(object.id)}" role="button" tabindex="0" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}"><header><div class="cash-object-heading"><div class="cash-object-name-line"><h2>${escapeHtml(object.name)}</h2><strong class="cash-card-balance ${cashBalanceClass(financials.balance)}">${formatSignedMoney(financials.balance)}</strong></div><small>${cashDate(object.createdAt)} Â· ${sectionCount} ${tr('sectionCalculations')}${object.completed ? ` Â· ${tr('completedObject')}` : ''}</small><div class="cash-object-actions"><button class="cash-mini-button" type="button" data-rename-cash-object>${tr('rename')}</button><button class="cash-mini-button is-danger" type="button" data-delete-cash-object>${tr('deleteObject')}</button><label class="cash-mini-button is-complete"><input type="checkbox" data-complete-cash-object${object.completed ? ' checked' : ''} /><span>${object.completed ? tr('reopenObject') : tr('finishObject')}</span></label></div></div></header></article>`;
-  }).join('');
-
-  $$('[data-cash-object]', list).forEach((card) => {
-    const object = cashflowObjects.find((item) => item.id === card.dataset.cashObject);
-    if (!object) return;
-    const openObject = () => { activeCashObjectId = object.id; renderCashflow(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
-    card.addEventListener('click', (event) => { if (!event.target.closest('.cash-object-actions')) openObject(); });
-    card.addEventListener('keydown', (event) => { if (event.target !== card || !['Enter', ' '].includes(event.key)) return; event.preventDefault(); openObject(); });
-    $('[data-rename-cash-object]', card)?.addEventListener('click', () => renameCashObject(object.id));
-    $('[data-delete-cash-object]', card)?.addEventListener('click', () => {
-      if (!window.confirm(tr('deleteCashObjectConfirm'))) return;
-      deleteCashflowFiles([object, ...object.sections]).catch((error) => console.error(error));
-      cashflowObjects = cashflowObjects.filter((item) => item.id !== object.id);
-      saveCashflow();
-      renderCashflow();
-      showToast(tr('cashObjectDeleted'));
-    });
-    $('[data-complete-cash-object]', card)?.addEventListener('change', (event) => {
-      object.completed = event.currentTarget.checked;
-      object.completedAt = object.completed ? new Date().toISOString() : null;
-      saveCashflow(); renderCashflow(); showToast(tr(object.completed ? 'completedObject' : 'objectReopened'));
-    });
-  });
-}
-
-let cashflowRecoveryInProgress = false;
-
-function renderCashflow() {
-  try {
-    renderCashflowContent();
-  } catch (error) {
-    console.error('StructOS short contracts render failed:', error);
-    if (!cashflowRecoveryInProgress) {
-      cashflowRecoveryInProgress = true;
-      try {
-        cashflowObjects = loadCashflow();
-        if (activeCashObjectId && !cashflowObjects.some((object) => object.id === activeCashObjectId)) activeCashObjectId = null;
-        renderCashflowContent();
-        return;
-      } catch (retryError) {
-        console.error('StructOS short contracts recovery failed:', retryError);
-      } finally {
-        cashflowRecoveryInProgress = false;
-      }
-    }
-    const browser = $('[data-cashflow-browser]');
-    const detail = $('[data-cashflow-detail]');
-    const list = $('[data-cashflow-list]');
-    const empty = $('[data-cashflow-empty]');
-    if (browser) browser.hidden = false;
-    if (detail) { detail.hidden = true; detail.innerHTML = ''; }
-    if (empty) empty.hidden = true;
-    if (list) {
-      list.hidden = false;
-      list.innerHTML = `<div class="cashflow-empty"><span>â†»</span><h2>${escapeHtml(tr('quickCashflow'))}</h2><p>${escapeHtml(tr('cashflowDescription'))}</p><button class="primary-button" type="button" data-retry-cashflow>${escapeHtml(tr('refreshPage'))}</button></div>`;
-      $('[data-retry-cashflow]', list)?.addEventListener('click', () => window.location.reload());
-    }
-  }
-}
-
-function bindCashSectionEvents(object, scope) {
-  $$('[data-cash-section]', scope).forEach((sectionCard) => {
-      const section = object.sections.find((item) => item.id === sectionCard.dataset.cashSection);
-      if (!section) return;
-      $('[data-cash-section-toggle]', sectionCard)?.addEventListener('click', () => {
-        if (expandedCashSections.has(section.id)) expandedCashSections.delete(section.id); else expandedCashSections.add(section.id);
-        renderCashflow();
-      });
-      $('[data-rename-cash-section]', sectionCard)?.addEventListener('click', () => renameCashSection(object.id, section.id));
-      $('[data-delete-cash-section]', sectionCard)?.addEventListener('click', () => {
-        if (!window.confirm(tr('deleteSectionConfirm'))) return;
-        deleteCashflowFiles(section).catch((error) => console.error(error));
-        object.sections = object.sections.filter((item) => item.id !== section.id);
-        expandedCashSections.delete(section.id);
-        saveCashflow(); renderCashflow(); showToast(tr('sectionDeleted'));
-      });
-      $('[data-edit-contract-amount]', sectionCard)?.addEventListener('click', () => openCashContractAmountDialog(object.id, section.id));
-      $$('[data-select-cash-attachment]', sectionCard).forEach((button) => button.addEventListener('click', () => {
-        const input = $$('[data-cash-attachment-input]', sectionCard).find((item) => item.dataset.cashAttachmentInput === button.dataset.selectCashAttachment);
-        input?.click();
-      }));
-      $$('[data-cash-attachment-input]', sectionCard).forEach((input) => input.addEventListener('change', async () => {
-        const file = input.files?.[0];
-        if (!file) return;
-        input.disabled = true;
-        await addCashSectionAttachment(object.id, section.id, input.dataset.cashAttachmentInput, file);
-        input.value = '';
-        input.disabled = false;
-      }));
-      $$('[data-open-cash-attachment-version]', sectionCard).forEach((button) => button.addEventListener('click', () => openCashSectionAttachment(object.id, section.id, button.dataset.cashAttachmentKind, button.dataset.openCashAttachmentVersion)));
-      $$('[data-delete-cash-attachment]', sectionCard).forEach((button) => button.addEventListener('click', () => deleteCashSectionAttachment(object.id, section.id, button.dataset.deleteCashAttachment)));
-      $('[data-add-staffing-shift]', sectionCard)?.addEventListener('click', () => addCashStaffingShift(object.id, section.id));
-      $('[data-add-staffing-day]', sectionCard)?.addEventListener('click', () => addCashStaffingDay(object.id, section.id));
-      $$('[data-add-staffing-person-date]', sectionCard).forEach((button) => button.addEventListener('click', () => addCashStaffingShift(object.id, section.id, button.dataset.addStaffingPersonDate)));
-      $$('[data-staffing-day-date]', sectionCard).forEach((input) => input.addEventListener('change', () => {
-        const day = input.closest('[data-staffing-day]');
-        if (day) updateCashStaffingDayDate(object.id, section.id, day.dataset.staffingDay, input.value);
-      }));
-      $$('[data-staffing-shift]', sectionCard).forEach((row) => {
-        const shiftId = row.dataset.staffingShift;
-        $$('[data-staffing-field]', row).forEach((input) => input.addEventListener('input', () => {
-          updateCashStaffingShift(object.id, section.id, shiftId, input.dataset.staffingField, input.value, row, sectionCard);
-          if (input.dataset.staffingField === 'structosId') input.value = input.value.replace(/\D+/g, '').slice(0, 7);
-        }));
-        $('[data-open-staffing-shift]', row)?.addEventListener('click', () => openCashStaffingShift(object.id, section.id, shiftId));
-        $('[data-close-staffing-shift]', row)?.addEventListener('click', () => closeCashStaffingShift(object.id, section.id, shiftId));
-        $('[data-delete-staffing-shift]', row)?.addEventListener('click', () => deleteCashStaffingShift(object.id, section.id, shiftId));
-      });
-      $('[data-toggle-report-history]', sectionCard)?.addEventListener('click', () => {
-        if (expandedCashReportHistory.has(section.id)) expandedCashReportHistory.delete(section.id); else expandedCashReportHistory.add(section.id);
-        renderCashflow();
-      });
-      $$('[data-cash-entry]', sectionCard).forEach((form) => {
-        $('[data-cash-submit]', form)?.addEventListener('click', () => addCashEntry(object.id, section.id, form.dataset.cashEntry, form));
-        $$('input', form).forEach((input) => input.addEventListener('keydown', (event) => {
-          if (event.key === 'Enter') { event.preventDefault(); addCashEntry(object.id, section.id, form.dataset.cashEntry, form); }
-        }));
-      });
-      $$('[data-cash-history]', sectionCard).forEach((history) => history.addEventListener('toggle', () => {
-        if (history.open) expandedCashEntryHistories.add(history.dataset.cashHistory); else expandedCashEntryHistories.delete(history.dataset.cashHistory);
-      }));
-      $$('[data-edit-cash-entry]', sectionCard).forEach((button) => button.addEventListener('click', () => openCashEntryEditDialog(object.id, section.id, button.dataset.cashEntryKind, button.dataset.editCashEntry)));
-      $$('[data-open-cash-document]', sectionCard).forEach((button) => button.addEventListener('click', () => openCashDocumentDialog(object.id, section.id, button.dataset.openCashDocument)));
-      $('[data-export-section]', sectionCard)?.addEventListener('click', () => openSectionExportDialog(object.id, section.id));
-      $$('[data-report-history-id]', sectionCard).forEach((historyRow) => {
-        const item = section.reportHistory.find((record) => record.id === historyRow.dataset.reportHistoryId);
-        if (!item) return;
-        $('[data-history-edit]', historyRow)?.addEventListener('click', () => openCashDocumentDialog(object.id, section.id, item.type, { sourceReport: item.report, historyId: item.id }));
-        $('[data-history-delete]', historyRow)?.addEventListener('click', () => {
-          if (!window.confirm(tr('deleteDocumentConfirm'))) return;
-          section.reportHistory = section.reportHistory.filter((record) => record.id !== item.id);
-          saveCashflow(); renderCashflow(); showToast(tr('documentDeleted'));
-        });
-        $('[data-history-preview]', historyRow)?.addEventListener('click', () => openCashReportPreview(item.report, () => item.report));
-        $$('[data-history-download]', historyRow).forEach((button) => button.addEventListener('click', () => deliverCashReport(item.report, button.dataset.historyDownload, false).catch((error) => { console.error(error); showToast(tr('comingSoon')); })));
-        $$('[data-history-share]', historyRow).forEach((button) => button.addEventListener('click', () => deliverCashReport(item.report, button.dataset.historyShare, true).catch((error) => { if (error?.name !== 'AbortError') { console.error(error); showToast(tr('comingSoon')); } })));
-      });
-    });
-}
-
-function renderCashObjectDetail(object, detail) {
-  const financials = cashObjectFinancials(object);
-  const sections = Array.isArray(object?.sections) ? object.sections : [];
-  object.organizationDocuments = normalizeCashOrganizationDocuments(object.organizationDocuments);
-  const overall = `<section class="cash-object-total"><header><div><span class="eyebrow">STRUCTOS TOTAL</span><h2>${tr('overallSectionsBalance')}</h2></div><strong class="${cashBalanceClass(financials.balance)}">${formatSignedMoney(financials.balance)}</strong></header><div class="cash-object-total-breakdown"><article><span>${tr('contractBalancesTotal')}</span><strong class="${cashBalanceClass(financials.contractBalance)}">${formatSignedMoney(financials.contractBalance)}</strong></article><article><span>${tr('factBalancesTotal')}</span><strong class="${cashBalanceClass(financials.factBalance)}">${formatSignedMoney(financials.factBalance)}</strong></article></div><button class="primary-button" type="button" data-export-cash-object>${tr('downloadOverallReport')}</button></section>`;
-  detail.innerHTML = `<div class="cash-object-detail-head"><button class="outline-button" type="button" data-close-cash-object>â€¹ ${tr('backToMoneyObjects')}</button><div><span class="eyebrow">STRUCTOS MONEY</span><div class="cash-object-title-line"><h1>${escapeHtml(object.name)}</h1><button type="button" data-rename-cash-object aria-label="${escapeHtml(tr('renameObject'))}" title="${escapeHtml(tr('renameObject'))}">âœŽ</button></div><p>${object.completed ? tr('completedObject') : tr('objectSections')}</p></div><button class="primary-button" type="button" data-add-cash-section><span>ï¼‹</span>${tr('addSection')}</button></div>${cashOrganizationDocumentsMarkup(object)}${sections.length ? `<div class="cash-sections">${sections.map((section) => cashSectionMarkup(object, section)).join('')}</div>` : `<div class="cash-sections-empty"><span>ï¼‹</span><h2>${tr('noSections')}</h2><p>${tr('noSectionsCopy')}</p><button class="primary-button" type="button" data-add-cash-section>${tr('addSection')}</button></div>`}${overall}`;
-  $('[data-close-cash-object]', detail)?.addEventListener('click', () => { activeCashObjectId = null; renderCashflow(); });
-  $('[data-rename-cash-object]', detail)?.addEventListener('click', () => renameCashObject(object.id));
-  $$('[data-add-cash-section]', detail).forEach((button) => button.addEventListener('click', () => openCashSectionDialog(object.id)));
-  $('[data-export-cash-object]', detail)?.addEventListener('click', () => openCashObjectExportDialog(object.id));
-  bindCashOrganizationDocuments(object, detail);
-  bindCashSectionEvents(object, detail);
-}
-
-function openCashSectionDialog(objectId) {
-  const object = cashflowObjects.find((item) => item.id === objectId);
-  if (!object) return;
-  showDialog(tr('createSection'), object.name, `<div class="cash-create-form cash-section-create"><label><span>${tr('sectionName')}</span><input type="text" maxlength="120" data-cash-section-name placeholder="${tr('sectionPlaceholder')}" /></label><label class="cash-create-fact"><input type="checkbox" data-section-contract /><span>${tr('workByContract')}</span></label><div class="cash-contract-amount-field" data-contract-amount-field hidden><label><span>${tr('contractAmount')}</span><input type="number" min="0.01" step="0.01" inputmode="decimal" data-section-contract-amount placeholder="0 â‚½" /></label></div><label class="cash-create-fact"><input type="checkbox" data-section-fact /><span>${tr('workByFact')}</span></label><label class="cash-create-fact"><input type="checkbox" data-section-staffing /><span>${tr('peopleAssigned')}</span></label><button class="primary-button" type="button" data-create-cash-section>${tr('create')}</button></div>`);
-  const input = $('[data-cash-section-name]', $('[data-dialog-content]'));
-  const contractToggle = $('[data-section-contract]', $('[data-dialog-content]'));
-  const contractAmountField = $('[data-contract-amount-field]', $('[data-dialog-content]'));
-  contractToggle?.addEventListener('change', () => { contractAmountField.hidden = !contractToggle.checked; if (contractToggle.checked) $('[data-section-contract-amount]', contractAmountField)?.focus(); });
-  const createSection = () => {
-    const name = input?.value.trim();
-    if (!name) { input?.focus(); return; }
-    const contractMode = Boolean(contractToggle?.checked);
-    const factMode = Boolean($('[data-section-fact]', $('[data-dialog-content]'))?.checked);
-    const staffingMode = Boolean($('[data-section-staffing]', $('[data-dialog-content]'))?.checked);
-    if (!contractMode && !factMode && !staffingMode) { showToast(tr('chooseSectionMode')); return; }
-    const contractAmountInput = $('[data-section-contract-amount]', $('[data-dialog-content]'));
-    const contractAmount = Math.max(0, Math.round((Number(contractAmountInput?.value) || 0) * 100) / 100);
-    if (contractMode && contractAmount <= 0) { showToast(tr('enterContractAmount')); contractAmountInput?.focus(); return; }
-    const section = normalizeCashSection({ name, createdAt: new Date().toISOString(), createdManually: true, contractMode, factMode, staffingMode, contractAmount });
-    object.sections.push(section);
-    expandedCashSections.add(section.id);
-    saveCashflow(); renderCashflow(); $('[data-dialog]').close(); showToast(tr('sectionCreated'));
-  };
-  $('[data-create-cash-section]')?.addEventListener('click', createSection);
-  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); createSection(); } });
-  setTimeout(() => input?.focus(), 40);
-}
-
-function openCashObjectDialog() {
-  showDialog(tr('createCashObject'), tr('cashflowDescription'), `<div class="cash-create-form"><label><span>${tr('objectName')}</span><input type="text" maxlength="100" data-cash-name placeholder="${tr('objectPlaceholder')}" /></label><button class="primary-button" type="button" data-cash-create>${tr('create')}</button></div>`);
-  const nameInput = $('[data-cash-name]', $('[data-dialog-content]'));
-  const createCashObject = () => {
-    const name = nameInput.value.trim();
-    if (!name) { nameInput.focus(); return; }
-    cashflowObjects.unshift({
-      id: `cash-${Date.now()}-${Math.random().toString(16).slice(2)}`,
-      name: name.slice(0, 100),
-      createdAt: new Date().toISOString(),
-      completed: false, completedAt: null,
-      organizationDocumentsCollapsed: false,
-      organizationDocuments: normalizeCashOrganizationDocuments(),
-      sections: []
-    });
-    saveCashflow();
-    renderCashflow();
-    $('[data-dialog]').close();
-    setPanel('cashflow');
-    showToast(tr('cashObjectCreated'));
-  };
-  $('[data-cash-create]', $('[data-dialog-content]'))?.addEventListener('click', createCashObject);
-  nameInput?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); createCashObject(); } });
-  setTimeout(() => nameInput?.focus(), 40);
-}
-
-function cashSourceOptionLabel(entry) {
-  return [tr(entry.sourceKind), entry.sourceName, entry.sourceSheet, entry.unit].filter(Boolean).join(' Â· ');
-}
-
-function renderCashDocumentSourceCatalog(scope, catalog, section, loading = false) {
-  const banner = $('[data-cash-source-catalog]', scope);
-  const dataList = $('[data-cash-source-options]', scope);
-  if (!banner || !dataList) return;
-  const hasSources = cashSectionHasSourceDocuments(section);
-  const message = loading
-    ? tr('sourceCatalogLoading')
-    : catalog.length
-      ? `${catalog.length} ${tr('sourceCatalogReady')}`
-      : tr(hasSources ? 'sourceCatalogPending' : 'sourceCatalogEmpty');
-  banner.className = `cash-source-catalog${catalog.length ? ' is-ready' : hasSources ? ' is-pending' : ''}`;
-  banner.innerHTML = `<span aria-hidden="true">âŒ•</span><div><strong>${escapeHtml(tr('sourceCatalogTitle'))}</strong><p>${escapeHtml(message)}</p><small>${escapeHtml(tr('sourceCatalogFreeInput'))}</small></div>${catalog.length ? `<b>${catalog.length}</b>` : ''}`;
-  dataList.innerHTML = catalog.slice(0, 1200).map((entry) => `<option value="${escapeHtml(entry.name)}" label="${escapeHtml(cashSourceOptionLabel(entry))}"></option>`).join('');
-}
-
-function cashWorkRowsMarkup(rows, priced, sourceListId = '') {
-  const listAttribute = sourceListId ? ` list="${escapeHtml(sourceListId)}" autocomplete="off"` : '';
-  return rows.map((row, index) => `<tr data-cash-work-row="${escapeHtml(row.id)}"><td>${index + 1}</td><td><input data-work-field="name" maxlength="240" value="${escapeHtml(row.name)}" placeholder="${tr('workOrMaterialName')}"${listAttribute} /></td><td><input data-work-field="unit" maxlength="40" value="${escapeHtml(row.unit)}" placeholder="${tr('unit')}" /></td><td><input data-work-field="quantity" type="number" min="0" step="0.001" inputmode="decimal" value="${row.quantity || ''}" placeholder="0" /></td>${priced ? `<td><input data-work-field="price" type="number" min="0" step="0.01" inputmode="decimal" value="${row.price || ''}" placeholder="0 â‚½" /></td><td data-work-total>${formatMoney(row.quantity * row.price)}</td>` : `<td><div class="cash-explanation-field" data-cash-explanation><textarea data-work-field="basis" maxlength="240" rows="1" placeholder="${tr('justification')}">${escapeHtml(row.basis)}</textarea><button type="button" data-toggle-explanation aria-expanded="false" aria-label="${tr('expandExplanation')}" title="${tr('expandExplanation')}"><span aria-hidden="true">â†—</span></button></div></td>`}<td><button type="button" data-remove-work-row aria-label="${tr('removeRow')}">Ã—</button></td></tr>`).join('');
-}
-
-function cashPartyMarkup(key, label, party) {
-  return `<div class="cash-party-row"><strong>${label}</strong><label><span>${tr('fullName')}</span><input data-party="${key}" data-party-field="name" maxlength="160" value="${escapeHtml(party.name)}" /></label><label><span>${tr('signature')}</span><input data-party="${key}" data-party-field="signature" maxlength="160" value="${escapeHtml(party.signature)}" /></label><label><span>${tr('seal')}</span><input data-party="${key}" data-party-field="seal" maxlength="160" value="${escapeHtml(party.seal)}" /></label></div>`;
-}
-
-function updateCashDocumentTotal(scope, draft, priced) {
-  if (!priced) return;
-  $$('[data-cash-work-row]', scope).forEach((rowElement, index) => {
-    const row = draft.rows[index];
-    $('[data-work-total]', rowElement).textContent = formatMoney((row?.quantity || 0) * (row?.price || 0));
-  });
-  const total = draft.rows.reduce((sum, row) => sum + row.quantity * row.price, 0);
-  $('[data-document-grand-total]', scope).textContent = formatMoney(total);
-}
-
-function bindCashDocumentRows(scope, draft, priced, sourceCatalog = [], sourceListId = '') {
-  const body = $('[data-cash-work-rows]', scope);
-  body.innerHTML = cashWorkRowsMarkup(draft.rows, priced, sourceListId);
-  $$('[data-cash-work-row]', body).forEach((rowElement, index) => {
-    const row = draft.rows[index];
-    $('[data-toggle-explanation]', rowElement)?.addEventListener('click', (event) => {
-      const control = event.currentTarget;
-      const field = $('[data-cash-explanation]', rowElement);
-      const expanded = field?.classList.toggle('is-expanded') || false;
-      control.setAttribute('aria-expanded', String(expanded));
-      control.setAttribute('aria-label', tr(expanded ? 'collapseExplanation' : 'expandExplanation'));
-      control.title = tr(expanded ? 'collapseExplanation' : 'expandExplanation');
-      const icon = $('span', control);
-      if (icon) icon.textContent = expanded ? 'â†™' : 'â†—';
-      if (expanded) $('[data-work-field="basis"]', rowElement)?.focus();
-    });
-    $$('[data-work-field]', rowElement).forEach((input) => input.addEventListener('input', () => {
-      const field = input.dataset.workField;
-      row[field] = ['quantity', 'price'].includes(field) ? Math.max(0, Number(input.value) || 0) : input.value.slice(0, ['name', 'basis'].includes(field) ? 240 : 40);
-      if (field === 'name') {
-        const previousSource = Boolean(row.sourceKind);
-        const match = sourceCatalog.find((entry) => cashSourceKey(entry.name) === cashSourceKey(row.name));
-        if (match) {
-          row.sourceKind = match.sourceKind;
-          row.sourceName = match.sourceName;
-          if (match.unit && (!row.unit || previousSource)) {
-            row.unit = match.unit;
-            $('[data-work-field="unit"]', rowElement).value = match.unit;
-          }
-          if (priced && match.price > 0 && (!row.price || previousSource)) {
-            row.price = match.price;
-            $('[data-work-field="price"]', rowElement).value = String(match.price);
-          }
-          if (!priced && (!row.basis || previousSource)) {
-            row.basis = cashSourceOptionLabel(match).slice(0, 240);
-            $('[data-work-field="basis"]', rowElement).value = row.basis;
-          }
-        } else {
-          row.sourceKind = null;
-          row.sourceName = '';
-        }
-      }
-      updateCashDocumentTotal(scope, draft, priced);
-    }));
-    $('[data-remove-work-row]', rowElement)?.addEventListener('click', () => {
-      draft.rows.splice(index, 1);
-      if (!draft.rows.length) draft.rows.push(...normalizeCashWorkRows([], priced));
-      bindCashDocumentRows(scope, draft, priced, sourceCatalog, sourceListId);
-      updateCashDocumentTotal(scope, draft, priced);
-    });
-  });
-  updateCashDocumentTotal(scope, draft, priced);
-}
-
-function cashOrganizationReportData(object) {
-  const documents = normalizeCashOrganizationDocuments(object?.organizationDocuments);
-  return Object.fromEntries(CASH_ORGANIZATION_ROLES.map((role) => {
-    const card = documents[role];
-    return [role, {
-      type: card.type,
-      company: card.company,
-      inn: card.inn,
-      kpp: card.kpp,
-      fullName: card.fullName,
-      passportSeries: card.passportSeries,
-      passportNumber: card.passportNumber,
-      passport: card.passport,
-      fileName: card.attachment?.versions?.at(-1)?.name || '',
-      updatedAt: card.updatedAt
-    }];
-  }));
-}
-
-function cashDocumentOrganizationsSummaryMarkup(object) {
-  const organizations = cashOrganizationReportData(object);
-  return `<section class="cash-document-organizations"><h3>${tr('organizationDocuments')}</h3><div>${CASH_ORGANIZATION_ROLES.map((role) => {
-    const card = organizations[role];
-    const details = card.type === 'individual'
-      ? [card.fullName, card.passportSeries && `${tr('passportSeries')}: ${card.passportSeries}`, card.passportNumber && `${tr('passportNumber')}: ${card.passportNumber}`]
-      : [card.company, card.inn && `${tr('inn')}: ${card.inn}`, card.kpp && `${tr('kpp')}: ${card.kpp}`];
-    return `<article><strong>${tr(role)}</strong><span>${escapeHtml(details.filter(Boolean).join(' Â· ') || tr('notSpecified'))}</span>${card.fileName ? `<small>${escapeHtml(card.fileName)}</small>` : ''}</article>`;
-  }).join('')}</div></section>`;
-}
-
-function cashDocumentOrganizationsEditorMarkup(organizations) {
-  return `<section class="cash-document-party-editor"><h3>${tr('documentParties')}</h3><div>${CASH_ORGANIZATION_ROLES.map((role) => {
-    const card = organizations[role];
-    return `<article data-document-organization-role="${role}"><header><strong>${tr(role)}</strong><select data-document-organization-type><option value="organization"${card.type === 'organization' ? ' selected' : ''}>${tr('legalEntity')}</option><option value="individual"${card.type === 'individual' ? ' selected' : ''}>${tr('individual')}</option></select></header><p data-document-organization-summary>${escapeHtml(cashDocumentOrganizationSummary(card))}</p>${card.fileName ? `<small>${tr('uploadedDocuments')}: ${escapeHtml(card.fileName)}</small>` : ''}</article>`;
-  }).join('')}</div></section>`;
-}
-
-function cashDocumentOrganizationSummary(card) {
-  const details = card.type === 'individual'
-    ? [card.fullName, card.passportSeries && `${tr('passportSeries')}: ${card.passportSeries}`, card.passportNumber && `${tr('passportNumber')}: ${card.passportNumber}`]
-    : [card.company, card.inn && `${tr('inn')}: ${card.inn}`, card.kpp && `${tr('kpp')}: ${card.kpp}`];
-  return details.filter(Boolean).join(' Â· ') || tr('notSpecified');
-}
-
-function bindCashDocumentOrganizations(scope, draft) {
-  $$('[data-document-organization-role]', scope).forEach((cardElement) => {
-    const role = cardElement.dataset.documentOrganizationRole;
-    const card = draft.organizations[role];
-    const typeSelect = $('[data-document-organization-type]', cardElement);
-    typeSelect?.addEventListener('change', () => {
-      card.type = typeSelect.value === 'individual' ? 'individual' : 'organization';
-      const summary = $('[data-document-organization-summary]', cardElement);
-      if (summary) summary.textContent = cashDocumentOrganizationSummary(card);
-    });
-  });
-}
-
-function cashDocumentReport(object, section, kind, documentData) {
-  const priced = kind === 'act';
-  const defaultTitle = tr(priced ? 'workAct' : 'workStatement');
-  const documentTitle = String(documentData.title || defaultTitle).trim().slice(0, 160) || defaultTitle;
-  const documentNumber = String(documentData.number || '').trim().slice(0, 80);
-  const documentObjectName = String(documentData.objectName || object.name).trim().slice(0, 160) || object.name;
-  const documentSectionName = String(documentData.sectionName || section.name).trim().slice(0, 160) || section.name;
-  const columns = [
-    { label: tr('recordNumber'), key: 'number', width: 34 },
-    { label: tr('workOrMaterialName'), key: 'name', width: '*' },
-    { label: tr('unit'), key: 'unit', width: 48 },
-    { label: tr('quantity'), key: 'quantity', width: 48, number: true },
-    ...(priced ? [{ label: tr('price'), key: 'price', width: 66, money: true }, { label: tr('rowTotal'), key: 'total', width: 72, money: true }] : [{ label: tr('justification'), key: 'basis', width: '*' }])
-  ];
-  return {
-    documentKind: kind,
-    title: priced ? documentTitle : defaultTitle, documentName: documentTitle, documentNumber, numberLabel: tr(priced ? 'actNumber' : 'statementNumber'), objectName: documentObjectName, sectionName: documentSectionName, objectLabel: tr('documentObject'), sectionLabel: tr('documentSection'),
-    tables: [{ title: documentTitle, columns, rows: documentData.rows.map((row, index) => ({ number: index + 1, name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { price: row.price, total: Math.round(row.quantity * row.price * 100) / 100 } : { basis: row.basis }) })), ...(priced ? { total: documentData.rows.reduce((sum, row) => sum + row.quantity * row.price, 0) } : {}) }],
-    parties: documentData.parties,
-    partyRoles: priced ? ['performed', 'accepted'] : ['prepared', 'confirmed'],
-    organizations: normalizeCashDocumentOrganizations(documentData.organizations || cashOrganizationReportData(object))
-  };
-}
-
-function cashDocumentDataFromReport(report, kind) {
-  const priced = kind === 'act';
-  const table = report?.tables?.[0] || { rows: [] };
-  return normalizeCashDocument({
-    title: report?.documentName || table.title || '',
-    number: report?.documentNumber || '',
-    objectName: report?.objectName || '',
-    sectionName: report?.sectionName || '',
-    rows: (table.rows || []).map((row) => ({ name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { price: row.price } : { basis: row.basis }) })),
-    parties: report?.parties,
-    organizations: report?.organizations,
-    updatedAt: new Date().toISOString()
-  }, priced, tr(priced ? 'workAct' : 'workStatement'));
-}
-
-function sectionFinanceReport(object, section) {
-  const rowsFor = (incomeEntries, expenseEntries, incomeLabel = tr('reportIncome'), expenseLabel = tr('reportExpense')) => [
-    ...incomeEntries.map((entry, index) => ({ number: index + 1, type: incomeLabel, comment: entry.comment, date: cashDate(entry.date), amount: entry.amount })),
-    ...expenseEntries.map((entry, index) => ({ number: incomeEntries.length + index + 1, type: expenseLabel, comment: entry.comment, date: cashDate(entry.date), amount: entry.amount }))
-  ];
-  const columns = [{ label: tr('recordNumber'), key: 'number', width: 42 }, { label: tr('entryType'), key: 'type', width: 88 }, { label: tr('comment'), key: 'comment', width: '*' }, { label: tr('date'), key: 'date', width: 100 }, { label: tr('amount'), key: 'amount', width: 76, money: true }];
-  const ownRowsFor = (investments, returns) => [
-    ...investments.map((entry, index) => ({ number: index + 1, type: tr('ownFundsEntry'), comment: entry.comment, date: cashDate(entry.date), amount: entry.amount })),
-    ...returns.map((entry, index) => ({ number: investments.length + index + 1, type: tr('ownReturnEntry'), comment: entry.comment, date: cashDate(entry.date), amount: entry.amount }))
-  ];
-  const tables = [];
-  if (section.contractMode) {
-    const advances = cashTotal(section.advances); const expenses = cashTotal(section.expenses);
-    tables.push({ title: tr('contractAccounting'), columns, rows: rowsFor(section.advances, section.expenses, tr('receivedAdvanceClosure'), tr('completedWorkVolume')), summaries: [cashReportSummary(tr('contractAmount'), section.contractAmount), cashReportSummary(tr('contractProduction'), expenses), cashReportSummary(tr('receivedFromCustomer'), advances), cashReportSummary(tr('contractProductionRemaining'), section.contractAmount - expenses, true), cashReportSummary(tr('paidProductionRemaining'), expenses - advances, true, advances - expenses)] });
-    const ownInvested = cashTotal(section.ownInvestments); const ownReturned = cashTotal(section.ownReturns);
-    tables.push({ title: `${tr('ownFundsAccounting')} Â· ${tr('contractAccounting')}`, columns, rows: ownRowsFor(section.ownInvestments, section.ownReturns), summaries: [cashReportSummary(tr('totalOwnInvested'), ownInvested), cashReportSummary(tr('totalOwnReturned'), ownReturned), cashReportSummary(tr('ownFundsRemaining'), ownInvested - ownReturned, true)] });
-  }
-  if (section.factMode) {
-    const factIncome = cashTotal(section.factIncome); const factExpenses = cashTotal(section.factExpenses);
-    tables.push({ title: tr('actualAccounting'), columns, rows: rowsFor(section.factIncome, section.factExpenses, tr('factAdvanceCompletion'), tr('actuallyCompleted')), summaries: [cashReportSummary(tr('overallIncome'), factIncome), cashReportSummary(tr('overallExpense'), factExpenses), cashReportSummary(tr('executionRemaining'), factIncome - factExpenses, true)] });
-    const factOwnInvested = cashTotal(section.factOwnInvestments); const factOwnReturned = cashTotal(section.factOwnReturns);
-    tables.push({ title: `${tr('ownFundsAccounting')} Â· ${tr('actualAccounting')}`, columns, rows: ownRowsFor(section.factOwnInvestments, section.factOwnReturns), summaries: [cashReportSummary(tr('totalOwnInvested'), factOwnInvested), cashReportSummary(tr('totalOwnReturned'), factOwnReturned), cashReportSummary(tr('ownFundsRemaining'), factOwnInvested - factOwnReturned, true)] });
-  }
-  return {
-    title: tr('sectionFinanceReport'), objectName: object.name, sectionName: section.name,
-    tables, parties: cashDocumentParties(section.statement?.parties)
-  };
-}
-
-function cashObjectOverviewReportPage(object, title = tr('objectReport')) {
-  const sectionColumns = [
-    { label: tr('sectionName'), key: 'section', width: '*' },
-    { label: tr('sectionMode'), key: 'mode', width: 105 },
-    { label: tr('incomingFunds'), key: 'income', width: 82, money: true },
-    { label: tr('completedWorks'), key: 'expense', width: 82, money: true },
-    { label: tr('sectionBalance'), key: 'balance', width: 82, money: true, signed: true, tone: true }
-  ];
-  const summaryRows = [];
-  object.sections.forEach((section) => {
-    const values = cashSectionFinancials(section);
-    if (section.contractMode) summaryRows.push({ section: section.name, mode: tr('workByContract'), income: values.advances, expense: values.expenses, balance: values.contractBalance });
-    if (section.factMode) summaryRows.push({ section: section.name, mode: tr('actualAccounting'), income: values.factIncome, expense: values.factExpenses, balance: values.factBalance });
-    if (!section.contractMode && !section.factMode && section.staffingMode) summaryRows.push({ section: section.name, mode: tr('peopleAssigned'), income: 0, expense: 0, balance: 0 });
-  });
-  const reportTotals = cashObjectReportTotals(object);
-  const incomingTotal = Math.round(summaryRows.reduce((sum, row) => sum + row.income, 0) * 100) / 100;
-  const completedTotal = Math.round(summaryRows.reduce((sum, row) => sum + row.expense, 0) * 100) / 100;
-  const balanceTotal = Math.round((incomingTotal - completedTotal) * 100) / 100;
-  const balanceColumns = [
-    { label: tr('reportIndicator'), key: 'indicator', width: '*' },
-    { label: tr('amount'), key: 'value', width: 110, money: true }
-  ];
-  const contractBalanceRows = [
-    { indicator: tr('totalContractsAmount'), value: reportTotals.contractAmount },
-    { indicator: tr('contractProduction'), value: reportTotals.contractProduction },
-    { indicator: tr('receivedFromCustomer'), value: reportTotals.contractReceived },
-    { indicator: tr('totalOwnFundsInvested'), value: reportTotals.contractOwnInvested },
-    { indicator: tr('contractProductionRemaining'), value: reportTotals.contractRemaining },
-    { indicator: tr('paidProductionRemaining'), value: reportTotals.paidProductionRemaining }
-  ];
-  const factBalanceRows = [
-    { indicator: tr('overallIncome'), value: reportTotals.factIncome },
-    { indicator: tr('overallExpense'), value: reportTotals.factExpense },
-    { indicator: tr('executionRemaining'), value: reportTotals.factRemaining },
-    { indicator: tr('allOwnFundsInvested'), value: reportTotals.factOwnInvested }
-  ];
-  const tables = [
-    { title: tr('overallContractBalance'), columns: balanceColumns, rows: contractBalanceRows },
-    { title: tr('overallFactExecutionBalance'), columns: balanceColumns, rows: factBalanceRows },
-    { title: tr('sectionsBreakdown'), columns: sectionColumns, rows: summaryRows, summaries: [cashReportSummary(tr('totalIncomingFunds'), incomingTotal), cashReportSummary(tr('totalCompletedWorks'), completedTotal), cashReportSummary(tr('totalBalance'), balanceTotal, true)] }
-  ];
-  return { title, objectName: object.name, sectionName: tr('allObjectSections'), tables, parties: null };
-}
-
-function cashObjectDetailedReport(object) {
-  const overview = cashObjectOverviewReportPage(object, tr('overallDetailedReport'));
-  const sectionPages = object.sections.map((section) => sectionFinanceReport(object, section));
-  return { ...overview, pages: [overview, ...sectionPages] };
-}
-
-function allCashflowDetailedReport(objects) {
-  const objectColumns = [
-    { label: tr('objects'), key: 'object', width: '*' },
-    { label: tr('incomingFunds'), key: 'income', width: 100, money: true },
-    { label: tr('completedWorks'), key: 'expense', width: 100, money: true },
-    { label: tr('sectionBalance'), key: 'balance', width: 100, money: true, signed: true, tone: true }
-  ];
-  const rows = objects.map((object) => {
-    const reportTotals = cashObjectReportTotals(object);
-    const income = Math.round((reportTotals.contractReceived + reportTotals.factIncome) * 100) / 100;
-    const expense = Math.round((reportTotals.contractProduction + reportTotals.factExpense) * 100) / 100;
-    return { object: object.name, income, expense, balance: Math.round((income - expense) * 100) / 100 };
-  });
-  const incomeTotal = Math.round(rows.reduce((sum, row) => sum + row.income, 0) * 100) / 100;
-  const expenseTotal = Math.round(rows.reduce((sum, row) => sum + row.expense, 0) * 100) / 100;
-  const balanceTotal = Math.round((incomeTotal - expenseTotal) * 100) / 100;
-  const generalPage = {
-    title: tr('generalReport'), objectName: tr('allCashObjects'), sectionName: tr('allObjectSections'),
-    tables: [{ title: tr('generalReport'), columns: objectColumns, rows, summaries: [cashReportSummary(tr('totalIncomingFunds'), incomeTotal), cashReportSummary(tr('totalCompletedWorks'), expenseTotal), cashReportSummary(tr('totalBalance'), balanceTotal, true)] }],
-    parties: null
-  };
-  const objectPages = objects.map((object) => cashObjectOverviewReportPage(object, `${tr('objectReport')}: ${object.name}`));
-  return { title: tr('fullCashflowReport'), objectName: tr('allCashObjects'), sectionName: tr('allObjectSections'), tables: generalPage.tables, parties: null, pages: [generalPage, ...objectPages] };
-}
-
-function saveCashReportHistory(section, type, report, historyId = null, forceNew = false) {
-  const snapshot = JSON.parse(JSON.stringify(report));
-  const visibleTitle = snapshot.documentName || snapshot.title;
-  const historyTitle = snapshot.documentNumber ? `${visibleTitle} Â· â„– ${snapshot.documentNumber.replace(/^â„–\s*/u, '')}` : visibleTitle;
-  const changedAt = new Date().toISOString();
-  if (historyId) {
-    const existing = section.reportHistory.find((item) => item.id === historyId);
-    if (existing) {
-      existing.type = type;
-      existing.title = historyTitle;
-      existing.updatedAt = changedAt;
-      existing.report = snapshot;
-      saveCashflow();
-      return existing;
-    }
-  }
-  const latest = section.reportHistory[0];
-  if (!forceNew && latest?.type === type && JSON.stringify(latest.report) === JSON.stringify(snapshot)) return latest;
-  const item = { id: `report-${Date.now()}-${Math.random().toString(16).slice(2)}`, type, title: historyTitle, createdAt: changedAt, updatedAt: changedAt, report: snapshot };
-  section.reportHistory.unshift(item);
-  section.reportHistory = section.reportHistory.slice(0, forceNew ? 100 : 50);
-  saveCashflow();
-  return item;
-}
-
-function saveEditedCashReportRevision(section, type, report, previousHistoryId = null) {
-  const previousExists = Boolean(previousHistoryId && section.reportHistory.some((item) => item.id === previousHistoryId));
-  const savedReport = saveCashReportHistory(section, type, report, null, previousExists);
-  return { savedReport, previousHistoryId: previousExists ? previousHistoryId : null };
-}
-
-function askEditedReportHistoryChoice(section, previousHistoryId, dialog, reportLabel, onComplete = null) {
-  if (!previousHistoryId || !section.reportHistory.some((item) => item.id === previousHistoryId)) {
-    renderCashflow();
-    dialog.close();
-    showToast(tr('documentSaved'));
-    onComplete?.();
-    return;
-  }
-  showDialog(`${tr('editedReportSaved')} Â· ${escapeHtml(reportLabel)}`, tr('deletePreviousReportQuestion'), `<div class="edited-document-choice"><button class="outline-button" type="button" data-keep-both-reports>${tr('keepBothReports')}</button><button class="primary-button is-danger" type="button" data-delete-previous-report>${tr('deletePreviousReport')}</button></div>`);
-  const finish = (deletePrevious) => {
-    if (deletePrevious) section.reportHistory = section.reportHistory.filter((item) => item.id !== previousHistoryId);
-    saveCashflow();
-    renderCashflow();
-    dialog.close();
-    showToast(tr(deletePrevious ? 'previousReportDeleted' : 'bothReportVersionsSaved'));
-    onComplete?.();
-  };
-  $('[data-keep-both-reports]')?.addEventListener('click', () => finish(false));
-  $('[data-delete-previous-report]')?.addEventListener('click', () => finish(true));
-}
-
-async function loadReportLogo() {
-  if (reportLogoDataUrl) return reportLogoDataUrl;
-  const response = await fetch(new URL('./assets/favicon-192.png', import.meta.url));
-  const blob = await response.blob();
-  reportLogoDataUrl = await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve(reader.result); reader.onerror = reject; reader.readAsDataURL(blob); });
-  return reportLogoDataUrl;
-}
-
-function reportCellValue(column, row) {
-  const value = row[column.key];
-  if (column.money) return column.signed ? formatSignedMoney(Number(value) || 0) : formatMoney(Number(value) || 0);
-  return String(value ?? '');
-}
-
-function reportPreviewTableMarkup(table) {
-  const headers = table.columns.map((column) => `<th class="report-col-${escapeHtml(column.key)}">${escapeHtml(column.label)}</th>`).join('');
-  const rows = table.rows.length ? table.rows.map((row) => `<tr>${table.columns.map((column) => {
-    const tone = column.tone ? cashBalanceClass(Number(row[column.key]) || 0) : '';
-    return `<td class="report-col-${escapeHtml(column.key)} ${column.number || column.money ? 'is-number ' : ''}${tone}">${escapeHtml(reportCellValue(column, row))}</td>`;
-  }).join('')}</tr>`).join('') : `<tr><td class="report-preview-empty" colspan="${table.columns.length}">${tr('noEntries')}</td></tr>`;
-  const total = Number.isFinite(table.total) ? `<div class="report-preview-total"><span>${tr('rowTotal')}</span><strong>${formatMoney(table.total)}</strong></div>` : '';
-  const summaries = table.summaries?.length ? `<div class="report-preview-summaries">${table.summaries.map((summary) => `<div class="${escapeHtml(summary?.tone || '')}"><strong>${escapeHtml(cashReportSummaryText(summary))}</strong></div>`).join('')}</div>` : '';
-  return `<section class="report-preview-section"><h3>${escapeHtml(table.title)}</h3><div class="report-preview-table-wrap"><table><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div>${total}${summaries}</section>`;
-}
-
-function cashPartyRoleLabel(role) {
-  return tr({ prepared: 'preparedBy', confirmed: 'confirmedBy', performed: 'performedBy', accepted: 'acceptedBy' }[role] || role);
-}
-
-function cashReportPartyRoles(page) {
-  return Array.isArray(page?.partyRoles) && page.partyRoles.length ? page.partyRoles : ['prepared', 'performed', 'accepted'];
-}
-
-function reportPreviewOrganizationsMarkup(organizations) {
-  if (!organizations) return '';
-  return `<section class="report-preview-organizations"><h3>${tr('organizationDocuments')}</h3><div>${CASH_ORGANIZATION_ROLES.map((role) => {
-    const card = organizations[role] || {};
-    const fields = card.type === 'individual'
-      ? [[tr('fullName'), card.fullName], [tr('passportSeries'), card.passportSeries], [tr('passportNumber'), card.passportNumber]]
-      : [[tr('companyName'), card.company], [tr('inn'), card.inn], [tr('kpp'), card.kpp]];
-    return `<article><strong>${tr(role)} Â· ${tr(card.type === 'individual' ? 'individual' : 'legalEntity')}</strong>${fields.map(([label, value]) => `<span>${escapeHtml(label)}: ${escapeHtml(value || 'â€”')}</span>`).join('')}${card.fileName ? `<small>${escapeHtml(card.fileName)}</small>` : ''}</article>`;
-  }).join('')}</div></section>`;
-}
-
-function reportPreviewPartiesMarkup(parties, partyRoles) {
-  if (!parties) return '';
-  const rows = partyRoles.map((role) => [cashPartyRoleLabel(role), parties[role]]);
-  return `<section class="report-preview-parties"><div>${rows.map(([label, party]) => `<article><strong>${escapeHtml(label)}</strong><span>${tr('fullName')}: ${escapeHtml(party?.name || 'â€”')}</span><span>${tr('signature')}: ${escapeHtml(party?.signature || 'â€”')}</span><span>${tr('seal')}: ${escapeHtml(party?.seal || 'â€”')}<small>${tr('documentDate')}: ${escapeHtml(parties.date || localDateKey())}</small></span></article>`).join('')}</div></section>`;
-}
-
-function reportPreviewProposalOpeningMarkup(document) {
-  if (!document) return '';
-  const sender = document.contacts?.sender || {};
-  const recipient = document.contacts?.recipient || {};
-  const contactCard = (contact, fields) => `<article><strong>${escapeHtml(contact.title || '')}</strong>${fields.map(([label, value]) => `<span><b>${escapeHtml(label)}:</b> ${escapeHtml(value || 'â€”')}</span>`).join('')}</article>`;
-  return `<section class="report-preview-proposal-opening"><p><strong>${escapeHtml(document.greeting || '')}</strong></p><p>${escapeHtml(document.intro || '')}</p><div>${contactCard(sender, [[tr('fullName'), sender.name], [tr('proposalOrganization'), sender.organization], [tr('phone'), sender.phone]])}${contactCard(recipient, [[tr('fullName'), recipient.name], [tr('proposalOrganization'), recipient.organization]])}</div></section>`;
-}
-
-function reportPreviewProposalClosingMarkup(document) {
-  if (!document) return '';
-  const summary = document.finalSummary;
-  const summaryMarkup = summary?.rows?.length ? `<section class="report-preview-proposal-summary"><h3>${escapeHtml(summary.title || '')}</h3><table><tbody>${summary.rows.map((row) => `<tr><th>${escapeHtml(row.label || '')}</th><td>${escapeHtml(row.value || '')}</td></tr>`).join('')}</tbody></table></section>` : '';
-  return `${summaryMarkup}<section class="report-preview-proposal-closing"><p>${escapeHtml(document.closing || '')}</p><p>${escapeHtml(document.respectfully || '')}<br /><strong>${escapeHtml(document.signature || 'â€”')}</strong></p></section>`;
-}
-
-function cashReportPages(report) {
-  const pages = Array.isArray(report?.pages) && report.pages.length ? report.pages : [report];
-  return pages.map((page) => ({
-    documentKind: page.documentKind || report.documentKind || null,
-    title: page.title || report.title,
-    documentNumber: page.documentNumber || '',
-    numberLabel: page.numberLabel || report.numberLabel,
-    objectName: page.objectName || report.objectName,
-    sectionName: page.sectionName || report.sectionName,
-    objectLabel: page.objectLabel || report.objectLabel || tr('objects'),
-    sectionLabel: page.sectionLabel || report.sectionLabel || tr('sectionName'),
-    tables: Array.isArray(page.tables) ? page.tables : [],
-    parties: page.parties || null,
-    partyRoles: cashReportPartyRoles(page),
-    organizations: page.organizations || null,
-    proposalDocument: page.proposalDocument || report.proposalDocument || null
-  }));
-}
-
-function reportPreviewPageMarkup(report) {
-  return `<article class="report-preview-sheet"><header><div><span>STRUCTOS REPORT</span><h2>${escapeHtml(report.title)}</h2>${report.documentNumber ? `<p>${escapeHtml(report.numberLabel || tr('documentNumber'))}: ${escapeHtml(report.documentNumber)}</p>` : ''}</div><img src="${reportPreviewLogoUrl}" alt="StructOS" /></header><div class="report-preview-meta"><p><strong>${escapeHtml(report.objectLabel)}:</strong> ${escapeHtml(report.objectName)}</p><p><strong>${escapeHtml(report.sectionLabel)}:</strong> ${escapeHtml(report.sectionName)}</p></div>${reportPreviewProposalOpeningMarkup(report.proposalDocument)}${reportPreviewOrganizationsMarkup(report.organizations)}${report.tables.map(reportPreviewTableMarkup).join('')}${reportPreviewProposalClosingMarkup(report.proposalDocument)}${reportPreviewPartiesMarkup(report.parties, report.partyRoles)}<footer><img src="${reportPreviewLogoUrl}" alt="" /><div><strong>${STRUCTOS_DOCUMENT_BRAND.name}</strong><span>${STRUCTOS_DOCUMENT_BRAND.made}</span><span>${STRUCTOS_DOCUMENT_BRAND.site}</span><span>${STRUCTOS_DOCUMENT_BRAND.slogan}</span></div></footer></article>`;
-}
-
-function reportPreviewMarkup(report) {
-  return `<div class="report-preview-pages">${cashReportPages(report).map(reportPreviewPageMarkup).join('')}</div>`;
-}
-
-function openCashReportPreview(report, getDeliveryReport = () => report, onSuccess = null) {
-  const dialog = $('[data-report-preview-dialog]');
-  if (!dialog) return;
-  releaseCashOrganizationPreview();
-  $('[data-report-preview-title]', dialog).textContent = tr('reportPreviewTitle');
-  $('[data-report-preview-hint]', dialog).textContent = tr('reportPreviewHint');
-  $('[data-report-preview-content]', dialog).innerHTML = reportPreviewMarkup(report);
-  const actions = $('[data-report-preview-actions]', dialog);
-  actions.innerHTML = cashDeliveryActionsMarkup();
-  bindCashDeliveryActions(actions, getDeliveryReport, onSuccess);
-  if (!dialog.open) dialog.showModal();
-}
-
-async function createPdfReport(report) {
-  const [{ default: pdfMake }, { default: pdfFonts }] = await Promise.all([import('pdfmake/build/pdfmake.js'), import('pdfmake/build/vfs_fonts.js')]);
-  const logo = await loadReportLogo();
-  pdfMake.vfs = pdfFonts?.pdfMake?.vfs || pdfFonts?.vfs || pdfFonts;
-  const content = [];
-  const reportPages = cashReportPages(report);
-  const repeatingPartyPage = reportPages.length === 1
-    && ['statement', 'act'].includes(reportPages[0].documentKind)
-    && reportPages[0].parties
-    ? reportPages[0]
-    : null;
-  reportPages.forEach((page, pageIndex) => {
-    content.push({ text: page.title, style: 'title', ...(pageIndex ? { pageBreak: 'before' } : {}) });
-    if (page.documentNumber) content.push({ text: `${page.numberLabel || tr('documentNumber')}: ${page.documentNumber}`, style: 'meta' });
-    content.push(
-      { text: `${page.objectLabel}: ${page.objectName}`, style: 'meta' },
-      { text: `${page.sectionLabel}: ${page.sectionName}`, style: 'meta', margin: [0, 0, 0, 14] }
-    );
-    if (page.proposalDocument) {
-      const sender = page.proposalDocument.contacts?.sender || {};
-      const recipient = page.proposalDocument.contacts?.recipient || {};
-      const senderDetails = [`${tr('fullName')}: ${sender.name || 'â€”'}`, `${tr('proposalOrganization')}: ${sender.organization || 'â€”'}`, `${tr('phone')}: ${sender.phone || 'â€”'}`].join('\n');
-      const recipientDetails = [`${tr('fullName')}: ${recipient.name || 'â€”'}`, `${tr('proposalOrganization')}: ${recipient.organization || 'â€”'}`].join('\n');
-      content.push(
-        { text: page.proposalDocument.greeting || '', bold: true, fontSize: 10, margin: [0, 0, 0, 4] },
-        { text: page.proposalDocument.intro || '', fontSize: 9, lineHeight: 1.25, margin: [0, 0, 0, 10] },
-        { table: { widths: [62, '*', 62, '*'], body: [[{ text: sender.title || tr('proposalSender'), bold: true, color: '#075cd3' }, { text: senderDetails }, { text: recipient.title || tr('proposalRecipient'), bold: true, color: '#075cd3' }, { text: recipientDetails }]] }, layout: { hLineColor: '#c7d5e5', vLineColor: '#c7d5e5', paddingLeft: () => 5, paddingRight: () => 5, paddingTop: () => 5, paddingBottom: () => 5 }, fontSize: 8, margin: [0, 0, 0, 10] }
-      );
-    }
-    if (page.organizations) {
-      const organizationRows = [[tr('reportType'), tr('partyType'), tr('manualDetails'), tr('uploadedDocuments')], ...CASH_ORGANIZATION_ROLES.map((role) => {
-        const card = page.organizations[role] || {};
-        const details = card.type === 'individual'
-          ? `${tr('fullName')}: ${card.fullName || 'â€”'}; ${tr('passportSeries')}: ${card.passportSeries || 'â€”'}; ${tr('passportNumber')}: ${card.passportNumber || 'â€”'}`
-          : `${tr('companyName')}: ${card.company || 'â€”'}; ${tr('inn')}: ${card.inn || 'â€”'}; ${tr('kpp')}: ${card.kpp || 'â€”'}`;
-        return [tr(role), tr(card.type === 'individual' ? 'individual' : 'legalEntity'), details, card.fileName || 'â€”'];
-      })];
-      content.push({ text: tr('organizationDocuments'), style: 'sectionTitle', margin: [0, 4, 0, 6] }, { table: { headerRows: 1, widths: [65, 72, '*', 88], body: organizationRows }, layout: 'lightHorizontalLines', fontSize: 8, margin: [0, 0, 0, 8] });
-    }
-    page.tables.forEach((table) => {
-      const body = [table.columns.map((column) => ({ text: column.label, style: 'tableHeader' })), ...(table.rows.length ? table.rows.map((row) => table.columns.map((column) => {
-        const tone = column.tone ? cashBalanceClass(Number(row[column.key]) || 0) : '';
-        return { text: reportCellValue(column, row), alignment: column.number || column.money ? 'right' : 'left', ...(tone === 'is-negative' ? { color: '#d9384b', bold: true } : tone === 'is-positive' ? { color: '#138a5b', bold: true } : {}) };
-      })) : [[{ text: tr('noEntries'), colSpan: table.columns.length, alignment: 'center', color: '#64748b', margin: [0, 8] }, ...Array.from({ length: table.columns.length - 1 }, () => ({}))]])];
-      content.push({ text: table.title, style: 'sectionTitle', margin: [0, 10, 0, 6] }, { table: { headerRows: 1, widths: table.columns.map((column) => column.width), body }, layout: { fillColor: (rowIndex) => rowIndex === 0 ? '#eaf3ff' : null, hLineColor: '#b8c9dc', vLineColor: '#b8c9dc' }, fontSize: 8 });
-      if (Number.isFinite(table.total)) content.push({ text: `${tr('rowTotal')}: ${formatMoney(table.total)}`, bold: true, alignment: 'right', margin: [0, 7, 0, 4] });
-      if (table.summaries?.length) content.push({ ul: table.summaries.map((summary) => ({ text: cashReportSummaryText(summary), bold: Boolean(summary?.tone), color: summary?.tone === 'is-negative' ? '#d9384b' : summary?.tone === 'is-positive' ? '#138a5b' : '#14213d' })), margin: [10, 7, 0, 5], fontSize: 9 });
-    });
-    if (page.proposalDocument) {
-      const summary = page.proposalDocument.finalSummary;
-      if (summary?.rows?.length) {
-        content.push(
-          { text: summary.title || tr('proposalFinalSummary'), style: 'sectionTitle', margin: [0, 15, 0, 6] },
-          { table: { widths: ['*', 125], body: summary.rows.map((row) => [{ text: row.label || '', bold: true }, { text: row.value || '', bold: true, alignment: 'right' }]) }, layout: { fillColor: (rowIndex) => rowIndex === summary.rows.length - 1 ? '#eaf8f2' : rowIndex % 2 ? '#f6f9fc' : null, hLineColor: '#b8c9dc', vLineColor: '#b8c9dc', paddingLeft: () => 6, paddingRight: () => 6, paddingTop: () => 5, paddingBottom: () => 5 }, fontSize: 9, margin: [0, 0, 0, 14] }
-        );
-      }
-      content.push(
-        { text: page.proposalDocument.closing || '', fontSize: 10, margin: [0, 0, 0, 12] },
-        { text: page.proposalDocument.respectfully || '', fontSize: 9, margin: [0, 0, 0, 3] },
-        { text: page.proposalDocument.signature || 'â€”', bold: true, fontSize: 10, margin: [0, 0, 0, 6] }
-      );
-    }
-    if (page.parties && !repeatingPartyPage) {
-      const partyRows = [['', tr('fullName'), tr('signature'), tr('seal')], ...page.partyRoles.map((role) => [cashPartyRoleLabel(role), page.parties[role]?.name || '', page.parties[role]?.signature || '', page.parties[role]?.seal || ''])];
-      content.push({ text: tr('documentDate'), style: 'sectionTitle', margin: [0, 16, 0, 6] }, { text: page.parties.date || localDateKey(), margin: [0, 0, 0, 8] }, { table: { widths: [80, '*', '*', '*'], body: partyRows }, layout: 'lightHorizontalLines', fontSize: 9 });
-    }
-  });
-  const footerBrand = (currentPage, pageCount) => ({
-    columns: [
-      { width: 175, text: '' },
-      { width: '*', text: `${currentPage}/${pageCount}`, alignment: 'center', bold: true, color: '#43546a', fontSize: 8, margin: [0, 9, 0, 0] },
-      { width: 175, columns: [{ image: logo, width: 25 }, { width: '*', stack: [{ text: STRUCTOS_DOCUMENT_BRAND.name, bold: true, fontSize: 10, color: '#075cd3', alignment: 'right' }, { text: STRUCTOS_DOCUMENT_BRAND.site, fontSize: 6, color: '#64748b', alignment: 'right' }, { text: STRUCTOS_DOCUMENT_BRAND.slogan, fontSize: 6, color: '#64748b', alignment: 'right' }] }], columnGap: 6 }
-    ]
-  });
-  const footer = (currentPage, pageCount) => {
-    const brand = footerBrand(currentPage, pageCount);
-    if (!repeatingPartyPage) return { ...brand, margin: [34, 6, 34, 15] };
-    const documentDate = repeatingPartyPage.parties.date || localDateKey();
-    const partyRows = repeatingPartyPage.partyRoles.map((role) => {
-      const party = repeatingPartyPage.parties[role] || {};
-      return [
-        { text: cashPartyRoleLabel(role), bold: true, color: '#075cd3' },
-        { text: `${tr('fullName')}: ${party.name || ''}` },
-        { text: `${tr('signature')}: ${party.signature || ''}` },
-        { stack: [{ text: `${tr('seal')}: ${party.seal || ''}` }, { text: `${tr('documentDate')}: ${documentDate}`, color: '#64748b', fontSize: 6, margin: [0, 3, 0, 0] }] }
-      ];
-    });
-    return {
-      margin: [34, 0, 34, 10],
-      stack: [
-        { table: { widths: [68, '*', '*', '*'], body: partyRows }, layout: { hLineColor: '#c7d5e5', vLineColor: '#c7d5e5', paddingLeft: () => 4, paddingRight: () => 4, paddingTop: () => 3, paddingBottom: () => 3 }, fontSize: 7 },
-        { ...brand, margin: [0, 5, 0, 0] }
-      ]
-    };
-  };
-  const definition = {
-    pageSize: 'A4', pageMargins: [34, 38, 34, repeatingPartyPage ? 138 : 88], defaultStyle: { font: 'Roboto', fontSize: 9, color: '#14213d' },
-    styles: { title: { fontSize: 18, bold: true, color: '#075cd3', margin: [0, 0, 0, 10] }, meta: { fontSize: 10, color: '#43546a', margin: [0, 0, 0, 3] }, sectionTitle: { fontSize: 12, bold: true, color: '#075cd3' }, tableHeader: { bold: true, color: '#0b2e59', fontSize: 8 } },
-    content,
-    footer
-  };
-  return new Promise((resolve) => pdfMake.createPdf(definition).getBlob(resolve));
-}
-
-async function createExcelReport(report) {
-  const { default: ExcelJS } = await import('exceljs');
-  const workbook = new ExcelJS.Workbook();
-  workbook.creator = 'StructOS'; workbook.created = new Date();
-  const logo = await loadReportLogo();
-  const imageId = workbook.addImage({ base64: logo, extension: 'png' });
-  const usedSheetNames = new Set();
-  const sheetNameFor = (page, pageIndex) => {
-    const cleaned = `${pageIndex + 1} ${page.sectionName || page.objectName || page.title}`.replace(/[\\/*?:\[\]]+/g, ' ').replace(/\s+/g, ' ').trim() || `StructOS ${pageIndex + 1}`;
-    let name = cleaned.slice(0, 31);
-    let suffix = 2;
-    while (usedSheetNames.has(name)) { const ending = ` ${suffix}`; name = `${cleaned.slice(0, 31 - ending.length)}${ending}`; suffix += 1; }
-    usedSheetNames.add(name);
-    return name;
-  };
-  cashReportPages(report).forEach((page, pageIndex) => {
-    const worksheet = workbook.addWorksheet(sheetNameFor(page, pageIndex), { pageSetup: { paperSize: 9, orientation: 'portrait', fitToPage: true, fitToWidth: 1, fitToHeight: 0, horizontalCentered: true, margins: { left: 0.3, right: 0.3, top: 0.5, bottom: 0.8, header: 0.2, footer: 0.2 } } });
-    const maxColumns = Math.max(6, ...page.tables.map((table) => table.columns.length));
-    worksheet.mergeCells(1, 1, 1, maxColumns); worksheet.getCell(1, 1).value = page.title; worksheet.getCell(1, 1).font = { size: 17, bold: true, color: { argb: 'FF075CD3' } };
-    let metaRow = 2;
-    if (page.documentNumber) { worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${page.numberLabel || tr('documentNumber')}: ${page.documentNumber}`; metaRow += 1; }
-    worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${page.objectLabel}: ${page.objectName}`; metaRow += 1;
-    worksheet.mergeCells(metaRow, 1, metaRow, maxColumns); worksheet.getCell(metaRow, 1).value = `${page.sectionLabel}: ${page.sectionName}`;
-    let cursor = metaRow + 2;
-    if (page.proposalDocument) {
-      const sender = page.proposalDocument.contacts?.sender || {};
-      const recipient = page.proposalDocument.contacts?.recipient || {};
-      worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = page.proposalDocument.greeting || ''; worksheet.getCell(cursor, 1).font = { bold: true, size: 11 }; cursor += 1;
-      worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = page.proposalDocument.intro || ''; worksheet.getCell(cursor, 1).alignment = { wrapText: true, vertical: 'top' }; worksheet.getRow(cursor).height = 30; cursor += 2;
-      worksheet.getCell(cursor, 1).value = sender.title || tr('proposalSender'); worksheet.getCell(cursor, 1).font = { bold: true, color: { argb: 'FF075CD3' } };
-      worksheet.mergeCells(cursor, 2, cursor, Math.max(2, Math.floor(maxColumns / 2))); worksheet.getCell(cursor, 2).value = `${tr('fullName')}: ${sender.name || 'â€”'}\n${tr('proposalOrganization')}: ${sender.organization || 'â€”'}\n${tr('phone')}: ${sender.phone || 'â€”'}`; worksheet.getCell(cursor, 2).alignment = { wrapText: true, vertical: 'top' };
-      const recipientLabelColumn = Math.max(3, Math.floor(maxColumns / 2) + 1); worksheet.getCell(cursor, recipientLabelColumn).value = recipient.title || tr('proposalRecipient'); worksheet.getCell(cursor, recipientLabelColumn).font = { bold: true, color: { argb: 'FF075CD3' } };
-      if (recipientLabelColumn < maxColumns) { worksheet.mergeCells(cursor, recipientLabelColumn + 1, cursor, maxColumns); worksheet.getCell(cursor, recipientLabelColumn + 1).value = `${tr('fullName')}: ${recipient.name || 'â€”'}\n${tr('proposalOrganization')}: ${recipient.organization || 'â€”'}`; worksheet.getCell(cursor, recipientLabelColumn + 1).alignment = { wrapText: true, vertical: 'top' }; }
-      worksheet.getRow(cursor).height = 46; cursor += 2;
-    }
-    if (page.organizations) {
-      worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = tr('organizationDocuments'); worksheet.getCell(cursor, 1).font = { bold: true, size: 12, color: { argb: 'FF075CD3' } }; cursor += 1;
-      CASH_ORGANIZATION_ROLES.forEach((role) => {
-        const card = page.organizations[role] || {};
-        const details = card.type === 'individual'
-          ? `${tr('fullName')}: ${card.fullName || 'â€”'}; ${tr('passportSeries')}: ${card.passportSeries || 'â€”'}; ${tr('passportNumber')}: ${card.passportNumber || 'â€”'}`
-          : `${tr('companyName')}: ${card.company || 'â€”'}; ${tr('inn')}: ${card.inn || 'â€”'}; ${tr('kpp')}: ${card.kpp || 'â€”'}`;
-        worksheet.getCell(cursor, 1).value = `${tr(role)} Â· ${tr(card.type === 'individual' ? 'individual' : 'legalEntity')}`; worksheet.getCell(cursor, 1).font = { bold: true };
-        worksheet.getCell(cursor, 2).value = details;
-        worksheet.getCell(cursor, Math.min(5, maxColumns)).value = card.fileName || 'â€”';
-        cursor += 1;
-      });
-      cursor += 1;
-    }
-    page.tables.forEach((table) => {
-      worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = table.title; worksheet.getCell(cursor, 1).font = { bold: true, size: 12, color: { argb: 'FF075CD3' } }; cursor += 1;
-      const header = worksheet.getRow(cursor); table.columns.forEach((column, index) => { const cell = header.getCell(index + 1); cell.value = column.label; cell.font = { bold: true, color: { argb: 'FFFFFFFF' } }; cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF075CD3' } }; cell.alignment = { vertical: 'middle', wrapText: true }; cell.border = { top: { style: 'thin', color: { argb: 'FF9EB6D0' } }, left: { style: 'thin', color: { argb: 'FF9EB6D0' } }, bottom: { style: 'thin', color: { argb: 'FF9EB6D0' } }, right: { style: 'thin', color: { argb: 'FF9EB6D0' } } }; }); header.height = 28; cursor += 1;
-      const rows = table.rows.length ? table.rows : [{ [table.columns[0].key]: tr('noEntries') }];
-      rows.forEach((row) => { const excelRow = worksheet.getRow(cursor); table.columns.forEach((column, index) => { const cell = excelRow.getCell(index + 1); cell.value = column.number || column.money ? (Number(row[column.key]) || 0) : String(row[column.key] ?? ''); if (column.money) cell.numFmt = `${column.signed ? '+' : ''}#,##0.00 "â‚½";[Red]-#,##0.00 "â‚½";0.00 "â‚½"`; if (column.tone) { const tone = cashBalanceClass(Number(row[column.key]) || 0); if (tone !== 'is-zero') cell.font = { bold: true, color: { argb: tone === 'is-negative' ? 'FFD9384B' : 'FF138A5B' } }; } cell.alignment = { vertical: 'top', wrapText: true, horizontal: column.number || column.money ? 'right' : 'left' }; cell.border = { top: { style: 'thin', color: { argb: 'FFD4DFEB' } }, left: { style: 'thin', color: { argb: 'FFD4DFEB' } }, bottom: { style: 'thin', color: { argb: 'FFD4DFEB' } }, right: { style: 'thin', color: { argb: 'FFD4DFEB' } } }; }); cursor += 1; });
-      if (Number.isFinite(table.total)) { worksheet.mergeCells(cursor, 1, cursor, maxColumns - 1); worksheet.getCell(cursor, 1).value = tr('rowTotal'); worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, maxColumns).value = table.total; worksheet.getCell(cursor, maxColumns).numFmt = '#,##0.00 "â‚½"'; worksheet.getCell(cursor, maxColumns).font = { bold: true }; cursor += 1; }
-      (table.summaries || []).forEach((summary) => {
-        worksheet.mergeCells(cursor, 1, cursor, maxColumns);
-        const cell = worksheet.getCell(cursor, 1);
-        cell.value = cashReportSummaryText(summary);
-        cell.font = { bold: true, ...(summary?.tone === 'is-negative' ? { color: { argb: 'FFD9384B' } } : summary?.tone === 'is-positive' ? { color: { argb: 'FF138A5B' } } : {}) };
-        cursor += 1;
-      });
-      cursor += 2;
-    });
-    if (page.proposalDocument) {
-      const summary = page.proposalDocument.finalSummary;
-      if (summary?.rows?.length) {
-        worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = summary.title || tr('proposalFinalSummary'); worksheet.getCell(cursor, 1).font = { bold: true, size: 12, color: { argb: 'FF075CD3' } }; cursor += 1;
-        summary.rows.forEach((row, rowIndex) => {
-          worksheet.mergeCells(cursor, 1, cursor, maxColumns - 1); const labelCell = worksheet.getCell(cursor, 1); labelCell.value = row.label || ''; labelCell.font = { bold: true };
-          const valueCell = worksheet.getCell(cursor, maxColumns); valueCell.value = row.value || ''; valueCell.font = { bold: true, ...(rowIndex === summary.rows.length - 1 ? { color: { argb: 'FF138A5B' } } : {}) }; valueCell.alignment = { horizontal: 'right' };
-          [labelCell, valueCell].forEach((cell) => { cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: rowIndex === summary.rows.length - 1 ? 'FFEAF8F2' : rowIndex % 2 ? 'FFF6F9FC' : 'FFFFFFFF' } }; cell.border = { top: { style: 'thin', color: { argb: 'FFB8C9DC' } }, left: { style: 'thin', color: { argb: 'FFB8C9DC' } }, bottom: { style: 'thin', color: { argb: 'FFB8C9DC' } }, right: { style: 'thin', color: { argb: 'FFB8C9DC' } } }; });
-          cursor += 1;
-        });
-        cursor += 1;
-      }
-      worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = page.proposalDocument.closing || ''; worksheet.getCell(cursor, 1).alignment = { wrapText: true }; cursor += 2;
-      worksheet.mergeCells(cursor, 1, cursor, maxColumns); worksheet.getCell(cursor, 1).value = `${page.proposalDocument.respectfully || ''}\n${page.proposalDocument.signature || 'â€”'}`; worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, 1).alignment = { wrapText: true }; worksheet.getRow(cursor).height = 32; cursor += 2;
-    }
-    if (page.parties) {
-      const documentDate = page.parties.date || localDateKey();
-      page.partyRoles.forEach((role) => { const party = page.parties[role] || {}; worksheet.getCell(cursor, 1).value = cashPartyRoleLabel(role); worksheet.getCell(cursor, 1).font = { bold: true }; worksheet.getCell(cursor, 2).value = `${tr('fullName')}: ${party.name || ''}`; worksheet.getCell(cursor, 4).value = `${tr('signature')}: ${party.signature || ''}`; worksheet.getCell(cursor, 6).value = `${tr('seal')}: ${party.seal || ''}\n${tr('documentDate')}: ${documentDate}`; worksheet.getCell(cursor, 6).alignment = { wrapText: true, vertical: 'top' }; cursor += 1; }); cursor += 2;
-    }
-    worksheet.addImage(imageId, { tl: { col: maxColumns - 3, row: cursor - 1 }, ext: { width: 46, height: 46 } });
-    worksheet.mergeCells(cursor, maxColumns - 2, cursor + 2, maxColumns); const brandCell = worksheet.getCell(cursor, maxColumns - 2); brandCell.value = `${STRUCTOS_DOCUMENT_BRAND.name}\n${STRUCTOS_DOCUMENT_BRAND.made}\n${STRUCTOS_DOCUMENT_BRAND.site}\n${STRUCTOS_DOCUMENT_BRAND.slogan}`; brandCell.font = { bold: true, color: { argb: 'FF075CD3' }, size: 10 }; brandCell.alignment = { horizontal: 'right', vertical: 'middle', wrapText: true }; worksheet.getRow(cursor).height = 32; worksheet.getRow(cursor + 1).height = 20; worksheet.getRow(cursor + 2).height = 20;
-    worksheet.headerFooter.oddFooter = `&C&P/&N&R${STRUCTOS_DOCUMENT_BRAND.name}`;
-    worksheet.headerFooter.evenFooter = `&C&P/&N&R${STRUCTOS_DOCUMENT_BRAND.name}`;
-    const widths = [12, 36, 18, 22, 18, 18]; for (let index = 1; index <= maxColumns; index += 1) worksheet.getColumn(index).width = widths[index - 1] || 18;
-    worksheet.views = [{ state: 'frozen', ySplit: metaRow + 2 }];
-  });
-  const buffer = await workbook.xlsx.writeBuffer();
-  return new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-}
-
-function reportFileName(report, extension) {
-  const safe = `${report.title}${report.documentNumber ? `_â„–_${report.documentNumber.replace(/^â„–\s*/u, '')}` : ''}_${report.objectName}_${report.sectionName}`.replace(/[\\/:*?"<>|]+/g, '_').replace(/\s+/g, '_').slice(0, 110);
-  return `${safe || 'StructOS'}.${extension}`;
-}
-
-function downloadReportBlob(blob, filename) {
-  const link = document.createElement('a'); const url = URL.createObjectURL(blob); link.href = url; link.download = filename; document.body.append(link); link.click(); link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1500);
-}
-
-async function deliverCashReport(report, format, share = false) {
-  const isPdf = format === 'pdf';
-  const blob = isPdf ? await createPdfReport(report) : await createExcelReport(report);
-  const file = new File([blob], reportFileName(report, isPdf ? 'pdf' : 'xlsx'), { type: blob.type });
-  if (share && navigator.share && (!navigator.canShare || navigator.canShare({ files: [file] }))) {
-    await navigator.share({ title: report.title, text: `${report.objectName} Â· ${report.sectionName}`, files: [file] });
-    return;
-  }
-  downloadReportBlob(blob, file.name);
-  showToast(tr(share ? 'shareUnavailable' : 'reportReady'));
-}
-
-function cashDeliveryActionsMarkup() {
-  return `<div class="cash-report-actions"><button class="primary-button" type="button" data-report-format="pdf">${tr('downloadPdf')}</button><button class="primary-button" type="button" data-report-format="xlsx">${tr('downloadExcel')}</button><button class="outline-button" type="button" data-report-share="pdf">${tr('sharePdf')}</button><button class="outline-button" type="button" data-report-share="xlsx">${tr('shareExcel')}</button></div>`;
-}
-
-function cashReportActionsMarkup() {
-  return `<div class="cash-report-preview-start"><button class="outline-button" type="button" data-report-preview><span aria-hidden="true">â—‰</span>${tr('viewReport')}</button><small>${tr('reportPreviewHint')}</small></div>${cashDeliveryActionsMarkup()}`;
-}
-
-function bindCashDeliveryActions(scope, getReport, onSuccess = null) {
-  $$('[data-report-format]', scope).forEach((button) => button.addEventListener('click', async () => {
-    button.disabled = true;
-    try {
-      const report = getReport();
-      await deliverCashReport(report, button.dataset.reportFormat, false);
-      onSuccess?.(report);
-    } catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
-    finally { button.disabled = false; }
-  }));
-  $$('[data-report-share]', scope).forEach((button) => button.addEventListener('click', async () => {
-    button.disabled = true;
-    try {
-      const report = getReport();
-      await deliverCashReport(report, button.dataset.reportShare, true);
-      onSuccess?.(report);
-    } catch (error) { if (error?.name !== 'AbortError' && error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
-    finally { button.disabled = false; }
-  }));
-}
-
-function bindCashReportActions(scope, getReport, onSuccess = null, getPreviewReport = getReport) {
-  $('[data-report-preview]', scope)?.addEventListener('click', () => {
-    try { openCashReportPreview(getPreviewReport(), getReport, onSuccess); }
-    catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
-  });
-  bindCashDeliveryActions(scope, getReport, onSuccess);
-}
-
-function openCashDocumentDialog(objectId, sectionId, kind, options = {}) {
-  const { object, section } = findCashSection(objectId, sectionId);
-  if (!object || !section) return;
-  const priced = kind === 'act';
-  const defaultTitle = tr(priced ? 'workAct' : 'workStatement');
-  const sourceReport = options?.sourceReport || null;
-  const generatedDocument = options?.generatedDocument || null;
-  const historyId = options?.historyId || null;
-  const draft = sourceReport
-    ? cashDocumentDataFromReport(sourceReport, kind)
-    : normalizeCashDocument(generatedDocument, priced, defaultTitle);
-  if (!sourceReport && !generatedDocument) {
-    draft.title = '';
-    draft.number = '';
-    draft.objectName = '';
-    draft.sectionName = '';
-    draft.parties = cashDocumentParties(null);
-    draft.updatedAt = null;
-  }
-  draft.organizations = normalizeCashDocumentOrganizations((sourceReport || generatedDocument)?.organizations || cashOrganizationReportData(object));
-  const headCells = `<th>${tr('recordNumber')}</th><th>${tr('workOrMaterialName')}</th><th>${tr('unit')}</th><th>${tr('quantity')}</th>${priced ? `<th>${tr('price')}</th><th>${tr('rowTotal')}</th>` : `<th>${tr('justification')}</th>`}<th></th>`;
-  const columnLayout = `<colgroup><col class="work-col-number" /><col class="work-col-name" /><col class="work-col-unit" /><col class="work-col-quantity" />${priced ? '<col class="work-col-price" /><col class="work-col-total" />' : '<col class="work-col-basis" />'}<col class="work-col-actions" /></colgroup>`;
-  const responsibleMarkup = priced
-    ? `${cashPartyMarkup('performed', tr('performedBy'), draft.parties.performed)}${cashPartyMarkup('accepted', tr('acceptedBy'), draft.parties.accepted)}`
-    : `${cashPartyMarkup('prepared', tr('preparedBy'), draft.parties.prepared)}${cashPartyMarkup('confirmed', tr('confirmedBy'), draft.parties.confirmed)}`;
-  const sourceListId = `cash-source-options-${createObjectId().replace(/[^a-z0-9-]+/gi, '')}`;
-  let sourceCatalog = cashSectionSourceCatalog(section);
-  const sourceCatalogNeedsHydration = CASH_SOURCE_DOCUMENT_KINDS.some((sourceKind) => {
-    const version = cashAttachmentCurrent(section, sourceKind);
-    return version && !version.linkedFromProject && !version.sourceCatalogScanned;
-  });
-  showDialog(defaultTitle, `${object.name} Â· ${section.name}`, `<div class="cash-document-editor">${cashDocumentOrganizationsEditorMarkup(draft.organizations)}<div class="cash-document-meta"><label><span>${tr(priced ? 'actName' : 'statementName')}</span><input type="text" maxlength="160" data-document-title value="${escapeHtml(draft.title)}" /></label><label><span>${tr(priced ? 'actNumber' : 'statementNumber')}</span><input type="text" maxlength="80" data-document-number value="${escapeHtml(draft.number)}" placeholder="1" /></label><label><span>${tr('documentObject')}</span><input type="text" maxlength="160" data-document-object value="${escapeHtml(draft.objectName)}" placeholder="${escapeHtml(tr('objectPlaceholderDocument'))}" /></label><label><span>${tr('documentSection')}</span><input type="text" maxlength="160" data-document-section value="${escapeHtml(draft.sectionName)}" placeholder="${escapeHtml(tr('sectionPlaceholderDocument'))}" /></label></div><section data-cash-source-catalog></section><datalist id="${escapeHtml(sourceListId)}" data-cash-source-options></datalist><div class="cash-work-table-wrap"><table class="cash-work-table ${priced ? 'is-act' : 'is-statement'}">${columnLayout}<thead><tr>${headCells}</tr></thead><tbody data-cash-work-rows></tbody>${priced ? `<tfoot><tr><td colspan="5">${tr('rowTotal')}</td><td data-document-grand-total>0 â‚½</td><td></td></tr></tfoot>` : ''}</table></div><button class="outline-button cash-add-row" type="button" data-add-work-row>ï¼‹ ${tr('addRow')}</button><div class="cash-parties">${responsibleMarkup}<label class="cash-document-date"><span>${tr('documentDate')}</span><input type="date" data-document-date value="${draft.parties.date}" /></label></div><div class="cash-document-save"><button class="primary-button" type="button" data-save-cash-document>${tr('saveInSection')}</button><button class="${priced ? 'outline-button' : 'primary-button'}" type="button" data-generate-related-document>${tr(priced ? 'generateStatement' : 'generateAct')}</button></div>${cashReportActionsMarkup()}</div>`);
-  const dialog = $('[data-dialog]'); dialog.classList.add('cash-document-dialog');
-  const scope = $('[data-dialog-content]');
-  renderCashDocumentSourceCatalog(scope, sourceCatalog, section, sourceCatalogNeedsHydration);
-  bindCashDocumentRows(scope, draft, priced, sourceCatalog, sourceListId);
-  bindCashDocumentOrganizations(scope, draft);
-  if (sourceCatalogNeedsHydration) hydrateCashSectionSourceCatalog(section).then((catalog) => {
-    if (!scope.isConnected) return;
-    sourceCatalog = catalog;
-    renderCashDocumentSourceCatalog(scope, sourceCatalog, section, false);
-    bindCashDocumentRows(scope, draft, priced, sourceCatalog, sourceListId);
-  });
-  const requiredFields = [
-    { selector: '[data-document-title]', key: 'title' },
-    { selector: '[data-document-object]', key: 'objectName' },
-    { selector: '[data-document-section]', key: 'sectionName' }
-  ];
-  const validateDocument = () => {
-    const missing = requiredFields.find(({ selector, key }) => !String(draft[key] || '').trim() && $(selector, scope));
-    requiredFields.forEach(({ selector, key }) => $(selector, scope)?.setAttribute('aria-invalid', String(!String(draft[key] || '').trim())));
-    if (!missing) return;
-    showToast(tr('documentRequiredFields'));
-    $(missing.selector, scope)?.focus();
-    const error = new Error(tr('documentRequiredFields'));
-    error.code = 'DOCUMENT_REQUIRED';
-    throw error;
-  };
-  $('[data-document-title]', scope)?.addEventListener('input', (event) => { draft.title = event.currentTarget.value.slice(0, 160); event.currentTarget.removeAttribute('aria-invalid'); });
-  $('[data-document-number]', scope)?.addEventListener('input', (event) => { draft.number = event.currentTarget.value.slice(0, 80); });
-  $('[data-document-object]', scope)?.addEventListener('input', (event) => { draft.objectName = event.currentTarget.value.slice(0, 160); event.currentTarget.removeAttribute('aria-invalid'); });
-  $('[data-document-section]', scope)?.addEventListener('input', (event) => { draft.sectionName = event.currentTarget.value.slice(0, 160); event.currentTarget.removeAttribute('aria-invalid'); });
-  $('[data-add-work-row]', scope)?.addEventListener('click', () => { draft.rows.push(...normalizeCashWorkRows([], priced)); bindCashDocumentRows(scope, draft, priced, sourceCatalog, sourceListId); });
-  $$('[data-party-field]', scope).forEach((input) => input.addEventListener('input', () => { draft.parties[input.dataset.party][input.dataset.partyField] = input.value.slice(0, 160); }));
-  $('[data-document-date]', scope)?.addEventListener('change', (event) => { draft.parties.date = event.currentTarget.value || localDateKey(); });
-  const previewDocument = () => {
-    validateDocument();
-    return cashDocumentReport(object, section, kind, { ...draft, title: draft.title.trim(), number: draft.number.trim(), objectName: draft.objectName.trim(), sectionName: draft.sectionName.trim() });
-  };
-  const persistDocument = () => {
-    validateDocument();
-    draft.title = draft.title.trim();
-    draft.number = draft.number.trim();
-    draft.objectName = draft.objectName.trim();
-    draft.sectionName = draft.sectionName.trim();
-    draft.updatedAt = new Date().toISOString();
-    section[priced ? 'act' : 'statement'] = normalizeCashDocument(draft, priced, defaultTitle);
-    saveCashflow();
-    return cashDocumentReport(object, section, kind, draft);
-  };
-  const clearCurrentForm = () => {
-    section[priced ? 'act' : 'statement'] = normalizeCashDocument(null, priced, defaultTitle);
-    saveCashflow();
-  };
-  $('[data-save-cash-document]', scope)?.addEventListener('click', () => {
-    try {
-      const report = persistDocument();
-      const revision = saveEditedCashReportRevision(section, kind, report, historyId);
-      clearCurrentForm();
-      if (revision.previousHistoryId) askEditedReportHistoryChoice(section, revision.previousHistoryId, dialog, defaultTitle);
-      else { renderCashflow(); dialog.close(); showToast(tr('documentSaved')); }
-    } catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
-  });
-  $('[data-generate-related-document]', scope)?.addEventListener('click', () => {
-    try {
-      const report = persistDocument();
-      const revision = saveEditedCashReportRevision(section, kind, report, historyId);
-      const relatedKind = priced ? 'statement' : 'act';
-      const relatedRows = draft.rows.map((row) => ({ name: row.name, unit: row.unit, quantity: row.quantity, ...(priced ? { basis: '' } : { price: 0 }) }));
-      const relatedDocument = { title: draft.title, number: draft.number, objectName: draft.objectName, sectionName: draft.sectionName, rows: relatedRows, organizations: draft.organizations, parties: cashDocumentParties(null) };
-      clearCurrentForm();
-      const openRelatedDocument = () => openCashDocumentDialog(objectId, sectionId, relatedKind, { generatedDocument: relatedDocument });
-      if (revision.previousHistoryId) askEditedReportHistoryChoice(section, revision.previousHistoryId, dialog, defaultTitle, openRelatedDocument);
-      else { renderCashflow(); dialog.close(); showToast(tr('documentSaved')); openRelatedDocument(); }
-    } catch (error) { if (error?.code !== 'DOCUMENT_REQUIRED') { console.error(error); showToast(tr('comingSoon')); } }
-  });
-  bindCashReportActions(scope, persistDocument, (report) => {
-    const revision = saveEditedCashReportRevision(section, kind, report, historyId);
-    if (revision.previousHistoryId) {
-      const previewDialog = $('[data-report-preview-dialog]');
-      if (previewDialog?.open) previewDialog.close();
-      askEditedReportHistoryChoice(section, revision.previousHistoryId, dialog, defaultTitle);
-    } else renderCashflow();
-  }, previewDocument);
-}
-
-function openSectionExportDialog(objectId, sectionId) {
-  const { object, section } = findCashSection(objectId, sectionId);
-  if (!object || !section) return;
-  showDialog(tr('sectionFinanceReport'), `${object.name} Â· ${section.name}`, cashReportActionsMarkup());
-  const dialog = $('[data-dialog]'); dialog.classList.add('cash-export-dialog');
-  bindCashReportActions($('[data-dialog-content]'), () => sectionFinanceReport(object, section), (report) => {
-    saveCashReportHistory(section, 'finance', report);
-    renderCashflow();
-  });
-}
-
-function openCashObjectExportDialog(objectId) {
-  const object = cashflowObjects.find((item) => item.id === objectId);
-  if (!object) return;
-  showDialog(tr('overallDetailedReport'), object.name, cashReportActionsMarkup());
-  const dialog = $('[data-dialog]'); dialog.classList.add('cash-export-dialog');
-  bindCashReportActions($('[data-dialog-content]'), () => cashObjectDetailedReport(object));
-}
-
-function openAllCashflowExportDialog() {
-  if (!cashflowObjects.length) return;
-  showDialog(tr('fullCashflowReport'), tr('allCashObjects'), cashReportActionsMarkup());
-  const dialog = $('[data-dialog]'); dialog.classList.add('cash-export-dialog');
-  bindCashReportActions($('[data-dialog-content]'), () => allCashflowDetailedReport(cashflowObjects));
-}
-
-const drawingDialog = $('[data-drawing-dialog]');
-const drawingCanvas = $('[data-drawing-canvas]');
-const drawingContext = drawingCanvas?.getContext('2d', { willReadFrequently: false });
-let drawingInitialized = false;
-let drawingActive = false;
-let drawingPointerId = null;
-let drawingLastPoint = null;
-let drawingUndoStack = [];
-let drawingMinimized = false;
-let currentDrawingId = null;
-let drawingDirty = false;
-let drawingDbPromise;
-
-function clearDrawingCanvas(trackUndo = true) {
-  if (!drawingContext) return;
-  if (trackUndo) pushDrawingUndo();
-  drawingContext.save();
-  drawingContext.setTransform(1, 0, 0, 1, 0, 0);
-  drawingContext.fillStyle = '#ffffff';
-  drawingContext.fillRect(0, 0, drawingCanvas.width, drawingCanvas.height);
-  drawingContext.restore();
-}
-
-function initializeDrawingCanvas() {
-  if (drawingInitialized || !drawingContext) return;
-  clearDrawingCanvas(false);
-  drawingContext.lineCap = 'round';
-  drawingContext.lineJoin = 'round';
-  $('[data-drawing-title]').value = tr('newSketch');
-  drawingInitialized = true;
-}
-
-function pushDrawingUndo() {
-  if (!drawingCanvas || !drawingInitialized) return;
-  try {
-    drawingUndoStack.push(drawingCanvas.toDataURL('image/png'));
-    if (drawingUndoStack.length > 12) drawingUndoStack.shift();
-  } catch {}
-}
-
-function restoreDrawingImage(source, afterLoad) {
-  if (!drawingContext || !source) return;
-  const image = new Image();
-  image.onload = () => {
-    clearDrawingCanvas(false);
-    drawingContext.drawImage(image, 0, 0, drawingCanvas.width, drawingCanvas.height);
-    afterLoad?.();
-  };
-  image.src = source;
-}
-
-function undoDrawing() {
-  const snapshot = drawingUndoStack.pop();
-  if (snapshot) restoreDrawingImage(snapshot, () => { drawingDirty = true; });
-}
-
-function drawingPoint(event) {
-  const rect = drawingCanvas.getBoundingClientRect();
-  return {
-    x: (event.clientX - rect.left) * drawingCanvas.width / rect.width,
-    y: (event.clientY - rect.top) * drawingCanvas.height / rect.height,
-    pressure: event.pointerType === 'pen' && event.pressure > 0 ? event.pressure : .6
-  };
-}
-
-function drawPointerSegment(event) {
-  const point = drawingPoint(event);
-  if (!drawingLastPoint) drawingLastPoint = point;
-  const baseWidth = Number($('[data-drawing-width]').value) || 5;
-  const pressureScale = event.pointerType === 'pen' ? .45 + point.pressure * 1.1 : 1;
-  drawingContext.beginPath();
-  drawingContext.moveTo(drawingLastPoint.x, drawingLastPoint.y);
-  drawingContext.lineTo(point.x, point.y);
-  drawingContext.strokeStyle = $('[data-drawing-color]').value || '#0868e8';
-  drawingContext.lineWidth = baseWidth * pressureScale;
-  drawingContext.stroke();
-  drawingLastPoint = point;
-}
-
-function openDrawingStudio() {
-  initializeDrawingCanvas();
-  drawingMinimized = false;
-  $('[data-drawing-restore]').hidden = true;
-  $('[data-drawing-gallery]').hidden = true;
-  if (!drawingDialog.open) drawingDialog.showModal();
-}
-
-function closeDrawingStudio() {
-  drawingMinimized = false;
-  $('[data-drawing-restore]').hidden = true;
-  if (drawingDialog.open) drawingDialog.close();
-}
-
-function minimizeDrawingStudio() {
-  drawingMinimized = true;
-  if (drawingDialog.open) drawingDialog.close();
-  $('[data-drawing-restore]').hidden = false;
-}
-
-function drawingDatabase() {
-  if (drawingDbPromise) return drawingDbPromise;
-  drawingDbPromise = new Promise((resolve, reject) => {
-    if (!('indexedDB' in window)) { reject(new Error('IndexedDB unavailable')); return; }
-    const request = indexedDB.open('structos-drawings-db', 1);
-    request.onupgradeneeded = () => {
-      if (!request.result.objectStoreNames.contains('drawings')) request.result.createObjectStore('drawings', { keyPath: 'id' });
-    };
-    request.onsuccess = () => resolve(request.result);
-    request.onerror = () => reject(request.error);
-  });
-  return drawingDbPromise;
-}
-
-async function saveDrawingRecord(options = {}) {
-  initializeDrawingCanvas();
-  const requestedTitle = String(options.title ?? $('[data-drawing-title]').value).trim();
-  if (options.requireTitle && !requestedTitle) {
-    showToast(tr('drawingNameRequired'));
-    return null;
-  }
-  const id = currentDrawingId || `drawing-${Date.now()}-${Math.random().toString(16).slice(2)}`;
-  const record = {
-    id,
-    title: (requestedTitle || tr('newSketch')).slice(0, 80),
-    dataUrl: drawingCanvas.toDataURL('image/png'),
-    updatedAt: new Date().toISOString()
-  };
-  try {
-    const database = await drawingDatabase();
-    await new Promise((resolve, reject) => {
-      const transaction = database.transaction('drawings', 'readwrite');
-      transaction.objectStore('drawings').put(record);
-      transaction.oncomplete = resolve;
-      transaction.onerror = () => reject(transaction.error);
-    });
-    currentDrawingId = id;
-    drawingDirty = false;
-    $('[data-drawing-title]').value = record.title;
-    showToast(tr('drawingSaved'));
-    return record;
-  } catch (error) {
-    console.warn('StructOS drawing could not be saved:', error);
-    showToast(tr('comingSoon'));
-    return null;
-  }
-}
-
-async function getSavedDrawings() {
-  try {
-    const database = await drawingDatabase();
-    const records = await new Promise((resolve, reject) => {
-      const request = database.transaction('drawings', 'readonly').objectStore('drawings').getAll();
-      request.onsuccess = () => resolve(request.result || []);
-      request.onerror = () => reject(request.error);
-    });
-    return records.sort((a, b) => String(b.updatedAt).localeCompare(String(a.updatedAt)));
-  } catch { return []; }
-}
-
-async function renderDrawingGallery() {
-  const gallery = $('[data-drawing-gallery]');
-  const list = $('[data-drawing-saved-list]');
-  gallery.hidden = false;
-  const records = await getSavedDrawings();
-  list.innerHTML = records.length ? records.map((record) => `<article class="saved-drawing-card"><img src="${record.dataUrl}" alt="" /><strong>${escapeHtml(record.title)}</strong><small>${cashDate(record.updatedAt)}</small><button type="button" data-load-drawing="${escapeHtml(record.id)}">${tr('loadDrawing')}</button></article>`).join('') : `<div class="todo-empty">${tr('noSavedDrawings')}</div>`;
-  $$('[data-load-drawing]', list).forEach((button) => button.addEventListener('click', () => {
-    const record = records.find((item) => item.id === button.dataset.loadDrawing);
-    if (!record) return;
-    pushDrawingUndo();
-    restoreDrawingImage(record.dataUrl, () => {
-      currentDrawingId = record.id;
-      $('[data-drawing-title]').value = record.title;
-      drawingDirty = false;
-      gallery.hidden = true;
-    });
-  }));
-}
-
-function loadDrawingBackground(file) {
-  if (!file || !file.type.startsWith('image/')) { showToast(tr('unsupportedFormat')); return; }
-  initializeDrawingCanvas();
-  pushDrawingUndo();
-  const objectUrl = URL.createObjectURL(file);
-  const image = new Image();
-  image.onload = () => {
-    clearDrawingCanvas(false);
-    const scale = Math.min(drawingCanvas.width / image.naturalWidth, drawingCanvas.height / image.naturalHeight);
-    const width = image.naturalWidth * scale;
-    const height = image.naturalHeight * scale;
-    drawingContext.drawImage(image, (drawingCanvas.width - width) / 2, (drawingCanvas.height - height) / 2, width, height);
-    URL.revokeObjectURL(objectUrl);
-    currentDrawingId = null;
-    drawingDirty = true;
-    $('[data-drawing-title]').value = file.name.replace(/\.[^.]+$/, '').slice(0, 80) || tr('newSketch');
-    showToast(tr('backgroundLoaded'));
-  };
-  image.onerror = () => { URL.revokeObjectURL(objectUrl); showToast(tr('unsupportedFormat')); };
-  image.src = objectUrl;
-}
-
-function resetDrawingCanvas() {
-  initializeDrawingCanvas();
-  clearDrawingCanvas(false);
-  drawingUndoStack = [];
-  currentDrawingId = null;
-  drawingDirty = false;
-  $('[data-drawing-title]').value = tr('newSketch');
-  $('[data-drawing-gallery]').hidden = true;
-}
-
-function startFreshDrawing() {
-  resetDrawingCanvas();
-  $('[data-dialog]')?.close();
-  if (!drawingDialog.open) drawingDialog.showModal();
-  showToast(tr('newDrawingReady'));
-}
-
-function askDrawingNameBeforeReset() {
-  const suggestedTitle = ($('[data-drawing-title]').value.trim() || '').slice(0, 80);
-  showDialog(tr('nameDrawing'), tr('drawingUnsavedCopy'), `<div class="object-form"><label><span class="sr-only">${tr('nameDrawing')}</span><input data-new-drawing-name maxlength="80" value="${escapeHtml(suggestedTitle)}" placeholder="${tr('nameDrawing')}" /></label><button class="primary-button" type="button" data-save-before-new>${tr('saveCurrentDrawing')}</button></div>`);
-  const input = $('[data-new-drawing-name]', $('[data-dialog-content]'));
-  const saveAndReset = async () => {
-    const title = input?.value.trim() || '';
-    if (!title) { showToast(tr('drawingNameRequired')); input?.focus(); return; }
-    const button = $('[data-save-before-new]', $('[data-dialog-content]'));
-    if (button) button.disabled = true;
-    const record = await saveDrawingRecord({ title, requireTitle: true });
-    if (record) startFreshDrawing();
-    else if (button) button.disabled = false;
-  };
-  $('[data-save-before-new]', $('[data-dialog-content]'))?.addEventListener('click', saveAndReset);
-  input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); saveAndReset(); } });
-  setTimeout(() => { input?.focus(); input?.select(); }, 40);
-}
-
-function newDrawingFlow() {
-  initializeDrawingCanvas();
-  if (!drawingDirty && !currentDrawingId) { startFreshDrawing(); return; }
-  showDialog(tr('drawingUnsavedTitle'), tr('drawingUnsavedCopy'), `<div class="result-actions drawing-new-actions"><button class="primary-button" type="button" data-drawing-save-current>${tr('saveCurrentDrawing')}</button><button class="outline-button" type="button" data-drawing-discard-current>${tr('discardCurrentDrawing')}</button></div>`);
-  $('[data-drawing-save-current]', $('[data-dialog-content]'))?.addEventListener('click', askDrawingNameBeforeReset);
-  $('[data-drawing-discard-current]', $('[data-dialog-content]'))?.addEventListener('click', startFreshDrawing);
-}
-
-function drawingCanvasBlob(type, quality) {
-  return new Promise((resolve, reject) => drawingCanvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error('Canvas export failed')), type, quality));
-}
-
-function createPdfBlob(jpegBytes, width = drawingCanvas.width, height = drawingCanvas.height) {
-  const encoder = new TextEncoder();
-  const chunks = [];
-  const offsets = [0];
-  let length = 0;
-  const append = (value) => {
-    const bytes = typeof value === 'string' ? encoder.encode(value) : value;
-    chunks.push(bytes);
-    length += bytes.length;
-  };
-  append('%PDF-1.4\n%StructOS\n');
-  offsets[1] = length; append('1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n');
-  offsets[2] = length; append('2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n');
-  offsets[3] = length; append(`3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${width} ${height}] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>\nendobj\n`);
-  offsets[4] = length; append(`4 0 obj\n<< /Type /XObject /Subtype /Image /Width ${width} /Height ${height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpegBytes.length} >>\nstream\n`); append(jpegBytes); append('\nendstream\nendobj\n');
-  const content = `q\n${width} 0 0 ${height} 0 0 cm\n/Im0 Do\nQ\n`;
-  offsets[5] = length; append(`5 0 obj\n<< /Length ${encoder.encode(content).length} >>\nstream\n${content}endstream\nendobj\n`);
-  const xrefOffset = length;
-  append(`xref\n0 6\n0000000000 65535 f \n${offsets.slice(1).map((offset) => `${String(offset).padStart(10, '0')} 00000 n \n`).join('')}trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF`);
-  return new Blob(chunks, { type: 'application/pdf' });
-}
-
-async function brandedDrawingJpeg() {
-  const footerHeight = 112;
-  const canvas = document.createElement('canvas');
-  canvas.width = drawingCanvas.width; canvas.height = drawingCanvas.height + footerHeight;
-  const context = canvas.getContext('2d');
-  context.fillStyle = '#ffffff'; context.fillRect(0, 0, canvas.width, canvas.height);
-  context.drawImage(drawingCanvas, 0, 0);
-  context.strokeStyle = '#b8c9dc'; context.beginPath(); context.moveTo(22, drawingCanvas.height + 12); context.lineTo(canvas.width - 22, drawingCanvas.height + 12); context.stroke();
-  const logoSource = await loadReportLogo();
-  const logo = await new Promise((resolve, reject) => { const image = new Image(); image.onload = () => resolve(image); image.onerror = reject; image.src = logoSource; });
-  context.drawImage(logo, 24, drawingCanvas.height + 27, 58, 58);
-  context.fillStyle = '#075cd3'; context.font = '700 17px Inter, Arial, sans-serif'; context.fillText(STRUCTOS_DOCUMENT_BRAND.made, 94, drawingCanvas.height + 43);
-  context.fillStyle = '#64748b'; context.font = '12px Inter, Arial, sans-serif'; context.fillText(STRUCTOS_DOCUMENT_BRAND.site, 94, drawingCanvas.height + 63);
-  context.fillText(STRUCTOS_DOCUMENT_BRAND.slogan, 94, drawingCanvas.height + 83);
-  const blob = await new Promise((resolve, reject) => canvas.toBlob((value) => value ? resolve(value) : reject(new Error('Canvas export failed')), 'image/jpeg', .92));
-  return { bytes: new Uint8Array(await blob.arrayBuffer()), width: canvas.width, height: canvas.height };
-}
-
-async function createDrawingFile(format) {
-  initializeDrawingCanvas();
-  const safeTitle = ($('[data-drawing-title]').value.trim() || 'structos-sketch').replace(/[^\p{L}\p{N}_-]+/gu, '-').replace(/^-+|-+$/g, '') || 'structos-sketch';
-  if (format === 'pdf') {
-    const branded = await brandedDrawingJpeg();
-    const blob = createPdfBlob(branded.bytes, branded.width, branded.height);
-    return new File([blob], `${safeTitle}.pdf`, { type: 'application/pdf' });
-  }
-  const isJpeg = format === 'jpg';
-  const blob = await drawingCanvasBlob(isJpeg ? 'image/jpeg' : 'image/png', isJpeg ? .92 : undefined);
-  return new File([blob], `${safeTitle}.${isJpeg ? 'jpg' : 'png'}`, { type: blob.type });
-}
-
-function downloadDrawingFile(file) {
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(file);
-  link.download = file.name;
-  document.body.append(link);
-  link.click();
-  link.remove();
-  setTimeout(() => URL.revokeObjectURL(link.href), 1500);
-}
-
-async function shareDrawingFile() {
-  const format = $('[data-drawing-format]').value || 'png';
-  try {
-    const file = await createDrawingFile(format);
-    const data = { title: $('[data-drawing-title]').value.trim() || 'StructOS', files: [file] };
-    if (navigator.share && (!navigator.canShare || navigator.canShare(data))) {
-      try { await navigator.share(data); showToast(tr('drawingShareReady')); return; }
-      catch (error) { if (error?.name === 'AbortError') return; }
-    }
-    downloadDrawingFile(file);
-    showToast(tr('drawingShareReady'));
-  } catch (error) {
-    console.warn('StructOS drawing export failed:', error);
-    showToast(tr('comingSoon'));
-  }
-}
-
-if (drawingCanvas) {
-  drawingCanvas.addEventListener('pointerdown', (event) => {
-    if (event.pointerType === 'mouse' && event.button !== 0) return;
-    event.preventDefault();
-    initializeDrawingCanvas();
-    pushDrawingUndo();
-    drawingActive = true;
-    drawingDirty = true;
-    drawingPointerId = event.pointerId;
-    drawingLastPoint = drawingPoint(event);
-    drawingCanvas.setPointerCapture(event.pointerId);
-    drawPointerSegment(event);
-  });
-  drawingCanvas.addEventListener('pointermove', (event) => {
-    if (!drawingActive || event.pointerId !== drawingPointerId) return;
-    event.preventDefault();
-    const events = event.getCoalescedEvents?.() || [event];
-    events.forEach(drawPointerSegment);
-  });
-  const finishDrawingPointer = (event) => {
-    if (event.pointerId !== drawingPointerId) return;
-    drawingActive = false;
-    drawingPointerId = null;
-    drawingLastPoint = null;
-    if (drawingCanvas.hasPointerCapture(event.pointerId)) drawingCanvas.releasePointerCapture(event.pointerId);
-  };
-  drawingCanvas.addEventListener('pointerup', finishDrawingPointer);
-  drawingCanvas.addEventListener('pointercancel', finishDrawingPointer);
-}
-
-function fileSize(bytes) {
-  const value = Number(bytes) || 0;
-  if (value < 1024 * 1024) return `${Math.max(1, Math.round(value / 1024))} ÐšÐ‘`;
-  return `${(value / 1024 / 1024).toFixed(1)} ÐœÐ‘`;
-}
-
-function uploadTitle(kind) {
-  return tr({ project: 'uploadProject', contract: 'uploadContract', estimate: 'uploadEstimate' }[kind]);
-}
-
-function saveUploads() {
-  localStorage.setItem(UPLOADS_KEY, JSON.stringify(selectedFiles));
-}
-
-function renderAnalysisCards() {
-  Object.keys(uploadRules).forEach((kind) => {
-    const file = selectedFiles[kind];
-    const card = $(`[data-analysis-type="${kind}"]`);
-    const status = $(`[data-analysis-status="${kind}"]`);
-    const fileName = $(`[data-analysis-file="${kind}"]`);
-    if (!card || !status || !fileName) return;
-    card.classList.toggle('has-file', Boolean(file));
-    status.textContent = `${file ? 1 : 0} ${tr('of')} 1`;
-    fileName.hidden = !file;
-    fileName.textContent = file?.name || '';
-    card.setAttribute('aria-label', `${tr(kind)}. ${file ? file.name : `0 ${tr('of')} 1`}`);
-  });
-}
-
-function homePendingNotifications() {
-  return objectRegistry.flatMap((object) => (object.files || [])
-    .filter((file) => file?.kind && !isObjectDocumentAnalyzed(object, file))
-    .map((file) => ({ object, file })));
-}
-
-function homeNotificationKey({ object, file }) {
-  const fileKey = file?.id || file?.versionId || [file?.kind, file?.name, file?.lastModified, file?.addedAt].filter(Boolean).join(':');
-  return `${object?.id || 'object'}:${fileKey || 'notification'}`;
-}
-
-function homePendingInvitations() {
-  return invitedObjects.filter((object) => object.status === 'pending');
-}
-
-function homeUnreadNotifications() {
-  return homePendingNotifications().filter((notification) => !homeReadNotificationKeys.has(homeNotificationKey(notification)));
-}
-
-function markHomeNotificationsRead(notifications) {
-  let changed = false;
-  (Array.isArray(notifications) ? notifications : []).forEach((notification) => {
-    const key = homeNotificationKey(notification);
-    if (homeReadNotificationKeys.has(key)) return;
-    homeReadNotificationKeys.add(key);
-    changed = true;
-  });
-  if (!changed) return;
-  saveHomeReadNotifications();
-  renderHomeInbox();
-}
-
-function renderHomeInbox() {
-  const invitationCount = homePendingInvitations().length;
-  const notificationCount = homeUnreadNotifications().length;
-  const renderCount = (selector, count, labelKey) => {
-    $$(selector).forEach((element) => {
-      element.textContent = String(count);
-      const card = element.closest('.home-inbox-card');
-      card?.classList.toggle('has-activity', count > 0);
-      card?.setAttribute('aria-label', `${tr(labelKey)}: ${count}`);
-    });
-  };
-  renderCount('[data-home-invitations-count]', invitationCount, 'invitations');
-  renderCount('[data-home-notifications-count]', notificationCount, 'notifications');
-}
-
-function saveObjects() {
-  localStorage.setItem(OBJECTS_KEY, JSON.stringify(objectRegistry));
-}
-
-function objectFile(object, kind) {
-  return (object?.files || []).find((file) => file.kind === kind) || null;
-}
-
-function selectObjectForAnalysis(object) {
-  Object.keys(uploadRules).forEach((kind) => { selectedFiles[kind] = objectFile(object, kind); });
-  localStorage.setItem(OBJECT_NAME_KEY, object.name);
-  saveUploads();
-  renderAnalysisCards();
-}
-
-function importPendingTransfer() {
-  try {
-    const pending = JSON.parse(localStorage.getItem(PENDING_TRANSFER_KEY) || 'null');
-    const objectName = String(pending?.objectName || '').trim();
-    const sectionName = String(pending?.sectionName || pending?.projectSection || '').trim();
-    const files = Object.entries(pending?.files || {})
-      .filter(([kind, file]) => uploadRules[kind] && file?.name)
-      .map(([kind, file]) => ({ kind, name: String(file.name), size: Number(file.size) || 0, type: String(file.type || ''), lastModified: Number(file.lastModified) || Date.now(), localFileId: String(file.localFileId || ''), addedAt: file.addedAt || new Date().toISOString(), analysisPending: !pending.analysisComplete, analyzedAt: pending.analysisComplete ? (pending.updatedAt || new Date().toISOString()) : null }));
-    if (!objectName || !files.length) return null;
-    let object = objectRegistry.find((item) => item.name.trim().toLocaleLowerCase() === objectName.toLocaleLowerCase());
-    if (!object) {
-      object = { id: createObjectId(), name: objectName, projectTitle: objectName, projectSection: sectionName || objectName, documentTitles: normalizeProjectDocumentTitles(), contractNumber: '', status: pending.analysisComplete ? 'ready' : 'uploaded', createdAt: pending.updatedAt || new Date().toISOString(), updatedAt: pending.updatedAt || new Date().toISOString(), uploadedAt: pending.updatedAt || new Date().toISOString(), analyzedAt: pending.analysisComplete ? (pending.updatedAt || new Date().toISOString()) : null, startedAt: null, files: [] };
-      objectRegistry.unshift(object);
-    } else if (pending.analysisComplete && object.status === 'uploaded') {
-      object.status = 'ready';
-      object.analyzedAt = pending.updatedAt || new Date().toISOString();
-    }
-    files.forEach((file) => {
-      object.files = [...(object.files || []).filter((item) => item.kind !== file.kind), file];
-      if (file.kind === 'contract' && !object.contractNumber) object.contractNumber = extractContractNumberFromName(file.name);
-    });
-    if (sectionName) object.projectSection = sectionName;
-    object.projectSection ||= object.projectTitle || object.name;
-    object.documentTitles = normalizeProjectDocumentTitles(object.documentTitles);
-    object.updatedAt = pending.updatedAt || new Date().toISOString();
-    object.uploadedAt ||= pending.updatedAt || new Date().toISOString();
-    selectObjectForAnalysis(object);
-    saveObjects();
-    localStorage.removeItem(PENDING_TRANSFER_KEY);
-    return { objectId: object.id, intent: String(pending.intent || ''), source: String(pending.source || '') };
-  } catch { return null; }
-}
-
-function createObjectId() {
-  return globalThis.crypto?.randomUUID?.() || `object-${Date.now()}-${Math.random().toString(16).slice(2)}`;
-}
-
-function formatObjectDate(value) {
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return '';
-  return new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric' }).format(date);
-}
-
-function formatObjectDateTime(value) {
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return 'â€”';
-  return new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }).format(date);
-}
-
-function formatStorage(bytes) {
-  const value = Math.max(0, Number(bytes) || 0);
-  if (value < 1024) return `${Math.round(value)} ${tr('storageB')}`;
-  if (value < 1024 * 1024) return `${(value / 1024).toFixed(value < 10 * 1024 ? 1 : 0)} ${tr('storageKb')}`;
-  if (value < 1024 * 1024 * 1024) return `${(value / 1024 / 1024).toFixed(value < 10 * 1024 * 1024 ? 1 : 0)} ${tr('storageMb')}`;
-  return `${(value / 1024 / 1024 / 1024).toFixed(2)} ${tr('storageGb')}`;
-}
-
-function extractContractNumberFromName(name) {
-  const baseName = String(name || '').replace(/\.[^.]+$/, '').trim();
-  const patterns = [
-    /(?:Ð´Ð¾Ð³Ð¾Ð²Ð¾Ñ€|contract|ÐºÐµÐ»Ð¸ÑˆÐ¸Ð¼|ÑˆÐ°Ñ€Ñ‚Ð½Ð¾Ð¼Ð°)\s*(?:â„–|n(?:o)?\.?\s*)?([\p{L}\d][\p{L}\d._/-]{1,40})/iu,
-    /â„–\s*([\p{L}\d][\p{L}\d._/-]{1,40})/u
-  ];
-  for (const pattern of patterns) {
-    const match = baseName.match(pattern);
-    const candidate = String(match?.[1] || '').replace(/^[â„–#\s]+|[\s._-]+$/g, '');
-    if (candidate && !/^(Ð´Ð¾Ð³Ð¾Ð²Ð¾Ñ€|contract|ÐºÐµÐ»Ð¸ÑˆÐ¸Ð¼|ÑˆÐ°Ñ€Ñ‚Ð½Ð¾Ð¼Ð°)$/iu.test(candidate)) return candidate.slice(0, 60);
-  }
-  return '';
-}
-
-function wizardProgressMarkup(step) {
-  const labels = ['objectNameStep', 'projectNameStep', 'documentsStep'];
-  return `<ol class="project-wizard-progress">${labels.map((key, index) => `<li class="${index + 1 === step ? 'is-current' : index + 1 < step ? 'is-complete' : ''}"><span>${index + 1 < step ? 'âœ“' : index + 1}</span><b>${escapeHtml(tr(key))}</b></li>`).join('')}</ol>`;
-}
-
-function projectWizardTitle() {
-  return projectObjectWizardDraft?.quickProjectOnly ? tr('quickProjectAnalysis') : tr('projectObjectWizard');
-}
-
-function openProjectObjectWizard(options = {}) {
-  projectObjectWizardDraft = {
-    step: 1,
-    quickProjectOnly: Boolean(options.quickProjectOnly),
-    workspaceOrigin: options.workspaceOrigin === 'turnkey' ? 'turnkey' : 'manual',
-    objectName: '',
-    projectSection: '',
-    files: { project: null, contract: null, estimate: null },
-    sourceFiles: { project: null, contract: null, estimate: null },
-    finishing: false
-  };
-  renderProjectObjectWizard();
-}
-
-function renderProjectObjectWizard() {
-  const draft = projectObjectWizardDraft;
-  if (!draft) return;
-  const step = Math.max(1, Math.min(3, Number(draft.step) || 1));
-  draft.step = step;
-  if (step === 1) {
-    showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 1 / 3 Â· ${escapeHtml(tr('objectNameStep'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><label class="project-wizard-field"><span>${escapeHtml(tr('objectName'))}</span><input data-wizard-object-name maxlength="100" autocomplete="organization" placeholder="${escapeHtml(tr('objectPlaceholder'))}" value="${escapeHtml(draft.objectName)}" /></label><button class="primary-button project-wizard-main-action" type="button" data-wizard-next>${escapeHtml(tr('continueAction'))} â†’</button></section>`);
-    const input = $('[data-wizard-object-name]');
-    const next = () => {
-      const value = input?.value.trim().slice(0, 100) || '';
-      if (!value) { input?.focus(); showToast(tr('objectRequired')); return; }
-      draft.objectName = value;
-      draft.step = 2;
-      renderProjectObjectWizard();
-    };
-    $('[data-wizard-next]')?.addEventListener('click', next);
-    input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); next(); } });
-    setTimeout(() => input?.focus(), 40);
-    return;
-  }
-  if (step === 2) {
-    showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 2 / 3 Â· ${escapeHtml(tr('projectNameStep'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><div class="project-wizard-object-chip"><small>${escapeHtml(tr('objectName'))}</small><strong>${escapeHtml(draft.objectName)}</strong></div><label class="project-wizard-field"><span>${escapeHtml(tr('giveProjectName'))}</span><input data-wizard-project-name maxlength="140" placeholder="${escapeHtml(tr('projectNamePlaceholder'))}" value="${escapeHtml(draft.projectSection)}" /><small>${escapeHtml(tr('projectNameHint'))}</small></label><div class="project-wizard-navigation"><button class="outline-button" type="button" data-wizard-back>â† ${escapeHtml(tr('backAction'))}</button><button class="primary-button" type="button" data-wizard-next>${escapeHtml(tr('continueAction'))} â†’</button></div></section>`);
-    const input = $('[data-wizard-project-name]');
-    const next = () => {
-      const value = input?.value.trim().slice(0, 140) || '';
-      if (!value) { input?.focus(); showToast(tr('projectNameRequired')); return; }
-      draft.projectSection = value;
-      draft.step = 3;
-      renderProjectObjectWizard();
-    };
-    $('[data-wizard-back]')?.addEventListener('click', () => { draft.projectSection = input?.value.trim().slice(0, 140) || draft.projectSection; draft.step = 1; renderProjectObjectWizard(); });
-    $('[data-wizard-next]')?.addEventListener('click', next);
-    input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); next(); } });
-    setTimeout(() => { input?.focus(); input?.select(); }, 40);
-    return;
-  }
-
-  const kinds = Object.keys(uploadRules);
-  const documentCards = kinds.map((kind) => {
-    const file = draft.files[kind];
-    const rule = uploadRules[kind];
-    const requirement = tr('documentOptional');
-    const analyzeAction = file ? `<button class="primary-button" type="button" data-wizard-analyze-kind="${escapeHtml(kind)}">${escapeHtml(tr('analyze'))} â†’</button>` : '';
-    const deleteAction = file ? `<button class="project-wizard-delete-document" type="button" data-wizard-delete-document="${escapeHtml(kind)}" aria-label="${escapeHtml(tr('deleteFile'))}">Ã— <span>${escapeHtml(tr('deleteDocument'))}</span></button>` : '';
-    return `<article class="project-wizard-document${file ? ' has-file' : ''}"><header><span>${file ? 'âœ“' : kind === 'project' ? 'â–¤' : kind === 'contract' ? 'â‰¡' : 'â‚½'}</span><div><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(requirement)}</small></div></header><div class="project-wizard-file-state"><b>${escapeHtml(file?.name || tr('documentNotLoaded'))}</b><small>${file ? `${escapeHtml(formatStorage(file.size))} Â· ${escapeHtml(fileFormatLabel(file))}` : escapeHtml(rule.formats)}</small></div><input class="hidden-file-input" data-wizard-document-input="${escapeHtml(kind)}" type="file" accept="${rule.accept}" /><div class="project-wizard-document-actions${file ? ' has-file' : ''}"><button class="${file ? 'outline-button' : 'primary-button'}" type="button" data-wizard-choose-document="${escapeHtml(kind)}">${escapeHtml(tr(file ? 'changeDocument' : 'chooseDocument'))}</button>${analyzeAction}${deleteAction}</div></article>`;
-  }).join('');
-  const documentsHint = draft.quickProjectOnly ? tr('quickDocumentChoiceHint') : tr('uploadDocumentsHint');
-  const loadedCount = Object.values(draft.files).filter(Boolean).length;
-  const analyzeAllAction = loadedCount > 1 ? `<button class="primary-button project-wizard-main-action" type="button" data-wizard-analyze-all>${escapeHtml(tr('analyzeAll'))} â†’</button>` : '';
-  showDialog(escapeHtml(projectWizardTitle()), `${escapeHtml(tr('stepOf'))} 3 / 3 Â· ${escapeHtml(tr('uploadDocuments'))}`, `${wizardProgressMarkup(step)}<section class="project-wizard-step"><div class="project-wizard-summary"><span><small>${escapeHtml(tr('objectName'))}</small><strong>${escapeHtml(draft.objectName)}</strong></span><span><small>${escapeHtml(tr('projectNameStep'))}</small><strong>${escapeHtml(draft.projectSection)}</strong></span></div><p class="project-wizard-documents-hint">${escapeHtml(documentsHint)}</p><div class="project-wizard-documents">${documentCards}</div>${analyzeAllAction}<div class="project-wizard-navigation is-back-only"><button class="outline-button" type="button" data-wizard-back>â† ${escapeHtml(tr('backAction'))}</button></div></section>`);
-  $('[data-wizard-back]')?.addEventListener('click', () => { draft.step = 2; renderProjectObjectWizard(); });
-  $$('[data-wizard-choose-document]').forEach((button) => button.addEventListener('click', () => $(`[data-wizard-document-input="${button.dataset.wizardChooseDocument}"]`)?.click()));
-  $$('[data-wizard-document-input]').forEach((input) => input.addEventListener('change', () => chooseProjectWizardDocument(input.dataset.wizardDocumentInput, input.files?.[0])));
-  $$('[data-wizard-delete-document]').forEach((button) => button.addEventListener('click', () => deleteProjectWizardDocument(button.dataset.wizardDeleteDocument)));
-  $$('[data-wizard-analyze-kind]').forEach((button) => button.addEventListener('click', () => finishProjectObjectWizard(button.dataset.wizardAnalyzeKind)));
-  $('[data-wizard-analyze-all]')?.addEventListener('click', () => finishProjectObjectWizard('all'));
-}
-
-function chooseProjectWizardDocument(kind, file) {
-  const draft = projectObjectWizardDraft;
-  const rule = uploadRules[kind];
-  if (!draft || !rule || !file) return;
-  if (file.size > rule.maxMb * 1024 * 1024) { showToast(`${tr('fileTooLarge')}: ${rule.maxMb} ÐœÐ‘`); return; }
-  if (!isAllowedFile(file, rule)) { showToast(`${tr('unsupportedFormat')}: ${rule.formats}`); return; }
-  const metadata = fileMetadata(file);
-  if (kind === 'contract') metadata.contractNumber = extractContractNumberFromName(file.name);
-  draft.files[kind] = metadata;
-  draft.sourceFiles[kind] = file;
-  renderProjectObjectWizard();
-}
-
-function deleteProjectWizardDocument(kind) {
-  const draft = projectObjectWizardDraft;
-  if (!draft || !uploadRules[kind]) return;
-  draft.files[kind] = null;
-  draft.sourceFiles[kind] = null;
-  renderProjectObjectWizard();
-}
-
-async function finishProjectObjectWizard(analyzeKind) {
-  const draft = projectObjectWizardDraft;
-  if (!draft || draft.finishing) return;
-  const readyFiles = Object.entries(draft.files).filter(([, file]) => file);
-  if (!readyFiles.length) { showToast(tr('documentsRequired')); return; }
-  const analyzeKinds = analyzeKind === 'all' ? readyFiles.map(([kind]) => kind) : [analyzeKind].filter((kind) => draft.files[kind]);
-  if (!analyzeKinds.length) return;
-  draft.finishing = true;
-  $$('[data-wizard-analyze-kind]').forEach((button) => { button.disabled = true; });
-  if ($('[data-wizard-analyze-all]')) $('[data-wizard-analyze-all]').disabled = true;
-  const sourceCatalogByKind = Object.fromEntries(await Promise.all(readyFiles.map(async ([kind]) => [
-    kind,
-    await extractCashSourceCatalogFromFile(draft.sourceFiles[kind], kind)
-  ])));
-  const now = new Date().toISOString();
-  const files = readyFiles.map(([kind, file]) => {
-    const record = { ...file, kind, projectSection: draft.projectSection, addedAt: file.addedAt || now, analysisPending: true, analyzedAt: null, sourceCatalog: sourceCatalogByKind[kind] || [], sourceCatalogScanned: Boolean(draft.sourceFiles[kind] && CASH_SOURCE_DOCUMENT_KINDS.includes(kind)) };
-    return { ...record, versions: [fileVersionSnapshot(record)], comparison: null };
-  });
-  const object = {
-    id: createObjectId(),
-    name: draft.objectName,
-    projectTitle: draft.objectName,
-    projectSection: draft.projectSection,
-    documentTitles: normalizeProjectDocumentTitles(),
-    contractNumber: String(draft.files.contract?.contractNumber || ''),
-    workspaceOrigin: draft.workspaceOrigin,
-    status: 'uploaded',
-    createdAt: now,
-    updatedAt: now,
-    uploadedAt: now,
-    analyzedAt: null,
-    startedAt: null,
-    completedAt: null,
-    files
-  };
-  objectRegistry.unshift(object);
-  selectObjectForAnalysis(object);
-  saveObjects();
-  renderObjects();
-  renderWidgets();
-  projectObjectWizardDraft = null;
-  $('[data-dialog]')?.close();
-  showToast(tr('objectSaved'));
-  if (analyzeKinds.length > 1) analyzeObjectDocuments(object.id, analyzeKinds);
-  else analyzeObjectDocument(object.id, analyzeKinds[0]);
-}
-
-function objectRowMarkup(object) {
-  const isReady = object.status === 'ready';
-  const isActive = object.status === 'active';
-  const fileCount = Array.isArray(object.files) ? object.files.length : 0;
-  const storage = formatStorage((object.files || []).reduce((total, file) => total + (Number(file.size) || 0), 0));
-  const meta = isReady
-    ? `${tr('analyzed')}: ${formatObjectDate(object.analyzedAt)} Â· ${fileCount} ${tr('attachedDocuments')} Â· ${tr('memoryUsed')}: ${storage}`
-    : isActive
-      ? `${tr('started')}: ${formatObjectDate(object.startedAt || object.analyzedAt)} Â· ${fileCount} ${tr('attachedDocuments')} Â· ${tr('memoryUsed')}: ${storage}`
-      : `${tr('uploadedAt')}: ${formatObjectDate(object.uploadedAt || object.analyzedAt)} Â· ${fileCount} ${tr('attachedDocuments')} Â· ${tr('memoryUsed')}: ${storage}`;
-  const actions = isReady
-    ? `<div class="object-row-actions"><button class="object-start-button" type="button" data-start-ready="${escapeHtml(object.id)}">${escapeHtml(tr('start'))}</button><button class="object-delete-button" type="button" data-delete-ready="${escapeHtml(object.id)}" aria-label="${escapeHtml(tr('deleteObject'))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></button></div>`
-    : `<span class="object-status-chip ${isActive ? '' : 'is-uploaded'}">${escapeHtml(tr(isActive ? 'inWork' : 'uploaded'))}</span>`;
-  return `<article class="status-object-row ${isReady ? 'is-ready' : isActive ? 'is-active' : 'is-uploaded'}"><span class="object-row-icon" aria-hidden="true">${isReady ? 'â—‡' : isActive ? 'âŒ‚' : 'â–¤'}</span><div class="object-row-copy"><button class="object-open-button" type="button" data-open-object="${escapeHtml(object.id)}" aria-label="${escapeHtml(`${tr('openObject')}: ${object.name}`)}">${escapeHtml(object.name)}</button><small>${escapeHtml(meta)}</small></div>${actions}</article>`;
-}
-
-function projectTitleFor(object) {
-  return String(object?.projectTitle || object?.name || '').trim().slice(0, 140) || tr('project');
-}
-
-function projectSectionFor(object) {
-  return String(object?.projectSection || object?.projectTitle || object?.name || '').trim().slice(0, 140) || tr('projectNameStep');
-}
-
-function projectDocumentBaseTitle(object, kind) {
-  if (kind === 'project') return projectTitleFor(object);
-  const titles = normalizeProjectDocumentTitles(object?.documentTitles);
-  return titles[kind] || `${projectTitleFor(object)} Â· ${tr(kind)}`;
-}
-
-function projectDocumentTitle(object, kind) {
-  const baseTitle = projectDocumentBaseTitle(object, kind);
-  if (kind !== 'contract' || !object?.contractNumber) return baseTitle;
-  const hasCustomTitle = Boolean(normalizeProjectDocumentTitles(object.documentTitles).contract);
-  return hasCustomTitle
-    ? `${baseTitle} Â· â„– ${object.contractNumber}`
-    : `${projectTitleFor(object)} Â· ${tr('contractNumberLabel')} ${object.contractNumber}`;
-}
-
-function linkedCashAttachmentFromProject(object, kind) {
-  const file = objectFile(object, kind);
-  if (!file) return null;
-  const versions = fileVersions(file).map((version, index) => normalizeCashAttachmentVersion({
-    ...version,
-    id: `project-link-${object.id}-${kind}-${index}-${version.lastModified}`,
-    sourceObjectId: object.id,
-    sourceDocumentKind: kind,
-    sourceDocumentTitle: projectDocumentTitle(object, kind),
-    linkedFromProject: true
-  }, kind)).filter(Boolean);
-  return versions.length ? { kind, versions } : null;
-}
-
-function cashAttachmentsFromProject(object, currentAttachments = {}) {
-  return Object.fromEntries(CASH_ATTACHMENT_KINDS.map((kind) => {
-    const linked = linkedCashAttachmentFromProject(object, kind);
-    const localVersions = (currentAttachments?.[kind]?.versions || []).filter((version) => !version.linkedFromProject);
-    const versions = [...(linked?.versions || []), ...localVersions];
-    return [kind, versions.length ? { kind, versions } : null];
-  }));
-}
-
-function openProjectLaunchDialog(objectId) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  if (!object) return;
-  showDialog(escapeHtml(tr('startObjectQuestion')), `${escapeHtml(tr('project'))}: ${escapeHtml(projectTitleFor(object))}`, `<div class="project-launch-choice-grid">
-    <button class="project-launch-choice is-development" type="button" disabled aria-disabled="true"><span class="project-launch-choice-icon" aria-hidden="true">â—Ž</span><span><strong>${escapeHtml(tr('fullCycleChoice'))}</strong><small>${escapeHtml(tr('fullCycleChoiceHint'))}</small></span><b>${escapeHtml(tr('inDevelopment'))}</b></button>
-    <button class="project-launch-choice is-quick" type="button" data-launch-quick-object><span class="project-launch-choice-icon" aria-hidden="true">â†—</span><span><strong>${escapeHtml(tr('quickObjectChoice'))}</strong><small>${escapeHtml(tr('quickObjectChoiceHint'))}</small></span><i aria-hidden="true">â€º</i></button>
-  </div>`);
-  $('[data-launch-quick-object]', $('[data-dialog-content]'))?.addEventListener('click', () => openQuickObjectFromProjectDialog(object.id));
-}
-
-function openQuickObjectFromProjectDialog(objectId) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  if (!object) return;
-  const uploadedDocuments = CASH_ATTACHMENT_KINDS.map((kind) => ({ kind, file: objectFile(object, kind) })).filter((item) => item.file);
-  const documents = uploadedDocuments.length
-    ? uploadedDocuments.map(({ kind, file }) => `<article class="project-linked-document"><span aria-hidden="true">${kind === 'project' ? 'â–¤' : kind === 'contract' ? 'â‰¡' : 'â‚½'}</span><div><strong>${escapeHtml(projectDocumentTitle(object, kind))}</strong><small>${escapeHtml(file.name)} Â· ${escapeHtml(formatStorage(file.size))}</small></div><b>âœ“ ${escapeHtml(tr('linkedFromProject'))}</b></article>`).join('')
-    : `<div class="project-linked-documents-empty">${escapeHtml(tr('notUploaded'))}</div>`;
-  showDialog(escapeHtml(tr('quickObjectSetup')), escapeHtml(tr('quickObjectSetupHint')), `<div class="project-quick-start-form">
-    <div class="project-quick-start-fields"><label><span>${escapeHtml(tr('quickObjectName'))}</span><input type="text" maxlength="100" data-project-quick-name value="${escapeHtml(object.name)}" /></label><label><span>${escapeHtml(tr('sectionName'))}</span><input type="text" maxlength="120" data-project-quick-section value="${escapeHtml(projectSectionFor(object))}" /></label></div>
-    <fieldset class="project-quick-modes"><legend>${escapeHtml(tr('chooseOneWorkMode'))}</legend><div><label><input type="radio" name="project-quick-mode" value="contract" /><span><b>${escapeHtml(tr('workByContract'))}</b></span></label><label><input type="radio" name="project-quick-mode" value="fact" /><span><b>${escapeHtml(tr('workByFact'))}</b></span></label><label><input type="radio" name="project-quick-mode" value="staffing" /><span><b>${escapeHtml(tr('peopleAssigned'))}</b></span></label></div></fieldset>
-    <div class="project-quick-contract-amount" data-project-quick-contract-amount hidden><label><span>${escapeHtml(tr('contractAmount'))}</span><input type="number" min="0.01" step="0.01" inputmode="decimal" data-project-quick-contract-value placeholder="0 â‚½" /></label></div>
-    <section class="project-linked-documents"><header><div><h3>${escapeHtml(tr('linkedProjectDocuments'))}</h3><p>${escapeHtml(tr('linkedProjectDocumentsHint'))}</p></div><b>${uploadedDocuments.length}</b></header><div>${documents}</div></section>
-    <button class="primary-button project-quick-start-submit" type="button" data-confirm-project-quick-start>${escapeHtml(tr('launchQuickObject'))}</button>
-  </div>`);
-  const scope = $('[data-dialog-content]');
-  const nameInput = $('[data-project-quick-name]', scope);
-  const sectionInput = $('[data-project-quick-section]', scope);
-  const contractAmountField = $('[data-project-quick-contract-amount]', scope);
-  const syncMode = () => {
-    const mode = $('input[name="project-quick-mode"]:checked', scope)?.value;
-    contractAmountField.hidden = mode !== 'contract';
-    if (mode === 'contract') $('[data-project-quick-contract-value]', contractAmountField)?.focus();
-  };
-  $$('input[name="project-quick-mode"]', scope).forEach((input) => input.addEventListener('change', syncMode));
-  const launchQuickObject = () => {
-    const name = nameInput?.value.trim().slice(0, 100) || '';
-    const sectionName = sectionInput?.value.trim().slice(0, 120) || '';
-    const mode = $('input[name="project-quick-mode"]:checked', scope)?.value || '';
-    if (!name) { nameInput?.focus(); return; }
-    if (!sectionName) { sectionInput?.focus(); return; }
-    if (!mode) { showToast(tr('chooseOneWorkMode')); return; }
-    const contractAmountInput = $('[data-project-quick-contract-value]', scope);
-    const contractAmount = mode === 'contract' ? Math.max(0, Math.round((Number(contractAmountInput?.value) || 0) * 100) / 100) : 0;
-    if (mode === 'contract' && contractAmount <= 0) { showToast(tr('enterContractAmount')); contractAmountInput?.focus(); return; }
-    const now = new Date().toISOString();
-    let cashObject = cashflowObjects.find((item) => item.sourceProjectId === object.id);
-    const existed = Boolean(cashObject);
-    if (!cashObject) {
-      cashObject = {
-        id: `cash-${Date.now()}-${Math.random().toString(16).slice(2)}`,
-        sourceProjectId: object.id,
-        name,
-        createdAt: now,
-        completed: false,
-        completedAt: null,
-        organizationDocumentsCollapsed: false,
-        organizationDocuments: normalizeCashOrganizationDocuments(),
-        sections: []
-      };
-      cashflowObjects.unshift(cashObject);
-    }
-    cashObject.name = name;
-    cashObject.completed = false;
-    cashObject.completedAt = null;
-    let sectionIndex = cashObject.sections.findIndex((section) => section.sourceProjectId === object.id);
-    const currentSection = sectionIndex >= 0 ? cashObject.sections[sectionIndex] : null;
-    const section = normalizeCashSection({
-      ...(currentSection || {}),
-      sourceProjectId: object.id,
-      name: sectionName,
-      createdAt: currentSection?.createdAt || now,
-      createdManually: true,
-      contractMode: mode === 'contract',
-      factMode: mode === 'fact',
-      staffingMode: mode === 'staffing',
-      contractAmount,
-      attachments: cashAttachmentsFromProject(object, currentSection?.attachments)
-    });
-    if (sectionIndex >= 0) cashObject.sections[sectionIndex] = section;
-    else cashObject.sections.push(section);
-    expandedCashSections.add(section.id);
-    activeCashObjectId = cashObject.id;
-    object.updatedAt = now;
-    saveObjects();
-    saveCashflow();
-    $('[data-dialog]')?.close();
-    setPanel('cashflow');
-    showToast(tr(existed ? 'quickObjectFromProjectUpdated' : 'quickObjectFromProjectCreated'));
-  };
-  $('[data-confirm-project-quick-start]', scope)?.addEventListener('click', launchQuickObject);
-  [nameInput, sectionInput].forEach((input) => input?.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); launchQuickObject(); } }));
-  setTimeout(() => { nameInput?.focus(); nameInput?.select(); }, 40);
-}
-
-function projectLastUpdatedAt(object) {
-  const dates = [object?.createdAt, object?.uploadedAt, object?.analyzedAt, object?.startedAt, object?.completedAt, object?.updatedAt]
-    .map((value) => new Date(value || 0))
-    .filter((date) => Number.isFinite(date.getTime()));
-  return dates.length ? new Date(Math.max(...dates.map((date) => date.getTime()))).toISOString() : new Date().toISOString();
-}
-
-function renameProjectSection(objectId) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  if (!object) return;
-  openRenameDialog(tr('renameSection'), projectSectionFor(object), 140, (name) => {
-    object.projectSection = name;
-    object.updatedAt = new Date().toISOString();
-    object.files = (object.files || []).map((file) => ({ ...file, projectSection: name }));
-    saveObjects();
-    renderObjects();
-    renderWidgets();
-  });
-}
-
-function renameProjectDocument(objectId, kind) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  if (!object || !uploadRules[kind]) return;
-  const titleKey = kind === 'project' ? 'renameProject' : kind === 'contract' ? 'renameContract' : 'renameEstimate';
-  openRenameDialog(tr(titleKey), projectDocumentBaseTitle(object, kind), 160, (name) => {
-    if (kind === 'project') object.projectTitle = name;
-    else object.documentTitles = { ...normalizeProjectDocumentTitles(object.documentTitles), [kind]: name };
-    object.updatedAt = new Date().toISOString();
-    saveObjects();
-    renderObjects();
-    renderWidgets();
-  });
-}
-
-function myProjectObjects() {
-  const projects = objectRegistry.slice();
-  return projects.sort((a, b) => {
-    if (a.status === 'completed' && b.status !== 'completed') return 1;
-    if (a.status !== 'completed' && b.status === 'completed') return -1;
-    const aDate = projectLastUpdatedAt(a);
-    const bDate = projectLastUpdatedAt(b);
-    return new Date(bDate) - new Date(aDate);
-  });
-}
-
-function myProjectStatusKey(object) {
-  if (object.status === 'ready') return 'readyStatus';
-  if (object.status === 'active') return 'inWork';
-  if (object.status === 'completed') return 'completedListObject';
-  return 'uploaded';
-}
-
-function saveCollapsedProjectIds() {
-  localStorage.setItem(PROJECT_CARD_STATE_KEY, JSON.stringify([...collapsedProjectIds]));
-}
-
-function toggleMyProjectCard(id) {
-  if (collapsedProjectIds.has(id)) collapsedProjectIds.delete(id);
-  else collapsedProjectIds.add(id);
-  saveCollapsedProjectIds();
-  renderMyProjects();
-}
-
-function deleteProjectObject(id) {
-  const object = objectRegistry.find((item) => item.id === id);
-  if (!object) return;
-  showDialog(escapeHtml(tr('deleteProjectTitle')), escapeHtml(tr('deleteProjectHint')), `<div class="result-actions"><button class="outline-button" type="button" data-cancel-project-delete>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-project-delete>${escapeHtml(tr('deleteProject'))}</button></div>`);
-  $('[data-cancel-project-delete]')?.addEventListener('click', () => $('[data-dialog]')?.close());
-  $('[data-confirm-project-delete]')?.addEventListener('click', () => {
-    Object.keys(uploadRules).forEach((kind) => {
-      const file = objectFile(object, kind);
-      if (file && selectedFiles[kind] && sameFileMetadata(selectedFiles[kind], file)) selectedFiles[kind] = null;
-    });
-    objectRegistry = objectRegistry.filter((item) => item.id !== id);
-    collapsedProjectIds.delete(id);
-    saveCollapsedProjectIds();
-    saveObjects();
-    saveUploads();
-    renderAnalysisCards();
-    renderObjects();
-    renderWidgets();
-    $('[data-dialog]')?.close();
-    showToast(tr('projectDeleted'));
-  });
-}
-
-function projectDocumentGroupKey(objectId, kind) {
-  return `${objectId}:${kind}`;
-}
-
-function projectComparisonActionKey(kind) {
-  return { project: 'compareProjects', contract: 'compareContracts', estimate: 'compareEstimates' }[kind] || 'versionComparison';
-}
-
-function projectComparisonTitleKey(kind) {
-  return { project: 'projectComparison', contract: 'contractComparison', estimate: 'estimateComparison' }[kind] || 'versionComparison';
-}
-
-function projectVersionAnalysisMarkup(object, kind, version) {
-  const analyzed = isDocumentVersionAnalyzed(version);
-  if (!analyzed) return `<section class="my-project-version-result is-pending"><header><span>â€¦</span><div><small>${escapeHtml(tr('fileAnalysisResult'))}</small><strong>${escapeHtml(version.name)}</strong></div></header><div class="my-project-version-waiting"><span>âŒ›</span><div><strong>${escapeHtml(tr('fileAwaitingAnalysis'))}</strong><p>${escapeHtml(tr('fileAwaitingAnalysisCopy'))}</p></div><button class="primary-button" type="button" data-analyze-project-version="${escapeHtml(version.id)}" data-object-id="${escapeHtml(object.id)}" data-kind="${escapeHtml(kind)}">${escapeHtml(tr('analyze'))}</button></div></section>`;
-  const key = `${projectDocumentGroupKey(object.id, kind)}:${version.id}`;
-  const selectedTab = selectedProjectVersionTabs.get(key) || 'proposal';
-  const facts = `<div class="my-project-version-facts"><article><span>${escapeHtml(tr('fileFormatLabel'))}</span><b>${escapeHtml(fileFormatLabel(version))}</b></article><article><span>${escapeHtml(tr('fileSizeLabel'))}</span><b>${escapeHtml(formatStorage(version.size))}</b></article><article><span>${escapeHtml(tr('uploadDate'))}</span><b>${escapeHtml(formatObjectDate(version.addedAt))}</b></article>${kind === 'contract' ? `<article><span>${escapeHtml(tr('contractNumberLabel'))}</span><b>${escapeHtml(version.contractNumber || tr('contractNumberPending'))}</b></article>` : ''}</div>`;
-  let resultBody = '';
-  if (kind === 'project') {
-    const tabs = projectAnalysisTabs.map((tab) => `<button class="${tab.id === selectedTab ? 'is-active' : ''}" type="button" data-project-version-tab="${escapeHtml(tab.id)}" data-object-id="${escapeHtml(object.id)}" data-kind="${escapeHtml(kind)}" data-version-id="${escapeHtml(version.id)}" aria-selected="${tab.id === selectedTab}"><span>${tab.icon}</span><strong>${escapeHtml(tr(tab.label))}</strong></button>`).join('');
-    resultBody = `<nav class="project-analysis-tabs is-inline" aria-label="${escapeHtml(tr('projectAnalysis'))}">${tabs}</nav><section class="project-analysis-content is-inline"><header><span class="eyebrow">STRUCTOS DETAIL</span><h2>${escapeHtml(tr(projectAnalysisTabs.find((tab) => tab.id === selectedTab)?.label || 'projectEstimate'))}</h2></header>${projectAnalysisTabContent(selectedTab, version, kind)}</section>`;
-  } else if (kind === 'estimate') {
-    resultBody = `<section class="project-analysis-content is-inline"><header><span class="eyebrow">STRUCTOS ESTIMATE</span><h2>${escapeHtml(tr('estimate'))}</h2></header>${projectAnalysisTabContent('proposal', version, kind)}</section>`;
-  } else {
-    resultBody = `<section class="analysis-document-placeholder is-inline"><span>â‰¡</span><h2>${escapeHtml(tr('analyzedDocumentPage'))}</h2><p>${escapeHtml(tr('analyzedDocumentPageCopy'))}</p></section>`;
-  }
-  return `<section class="my-project-version-result is-ready"><header><span>âœ“</span><div><small>${escapeHtml(tr('fileAnalysisResult'))}</small><strong>${escapeHtml(version.name)}</strong></div><b>${escapeHtml(tr('analyzed'))}</b></header>${facts}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section>${resultBody}</section>`;
-}
-
-function projectVersionComparisonBlock(object, kind, file) {
-  const versions = fileVersions(file);
-  if (versions.length < 2) return '';
-  const key = projectDocumentGroupKey(object.id, kind);
-  const previous = versions[versions.length - 2];
-  const current = versions[versions.length - 1];
-  const expanded = expandedProjectComparisons.has(key);
-  return `<section class="my-project-comparison-block${expanded ? ' is-expanded' : ''}"><button type="button" data-toggle-project-comparison="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}" aria-expanded="${String(expanded)}"><span aria-hidden="true">â‡„</span><div><small>${escapeHtml(tr(projectComparisonTitleKey(kind)))}</small><strong>${escapeHtml(previous.name)} <i>â†”</i> ${escapeHtml(current.name)}</strong><em>${escapeHtml(tr('comparedFiles'))} Â· v${versions.length - 1} / v${versions.length}</em></div><b>${escapeHtml(tr(expanded ? 'hideDifferences' : 'showDifferences'))}</b><i aria-hidden="true">âŒ„</i></button><div class="my-project-comparison-details"${expanded ? '' : ' hidden'}>${revisionComparisonMarkup(file, { previous, current, kind })}</div></section>`;
-}
-
-function myProjectDocumentGroupMarkup(object, kind) {
-  const file = objectFile(object, kind);
-  const versions = file ? fileVersions(file) : [];
-  const groupKey = projectDocumentGroupKey(object.id, kind);
-  const selectedVersionId = selectedProjectVersionIds.get(groupKey);
-  const selectedVersion = versions.find((version) => version.id === selectedVersionId) || null;
-  const icon = { project: 'â–¤', contract: 'â‰¡', estimate: 'â‚½' }[kind];
-  const title = projectDocumentTitle(object, kind);
-  const launchAction = kind === 'project' && versions.length ? `<button class="my-project-document-launch" type="button" data-launch-project="${escapeHtml(object.id)}">â–¶ ${escapeHtml(tr('launchProject'))}</button>` : '';
-  const uploadLabel = versions.length ? tr('uploadAdditionalFile') : tr('upload');
-  const versionCards = versions.map((version, index) => {
-    const analyzed = isDocumentVersionAnalyzed(version);
-    const selected = selectedVersion?.id === version.id;
-    const isLatest = index === versions.length - 1;
-    const contractNumber = kind === 'contract' && version.contractNumber ? ` Â· ${tr('contractNumberLabel')} ${version.contractNumber}` : '';
-    return `<article class="my-project-version-card ${analyzed ? 'is-analyzed' : 'is-pending'}${selected ? ' is-selected' : ''}"><button class="my-project-version-main" type="button" data-toggle-project-version="${escapeHtml(version.id)}" data-object-id="${escapeHtml(object.id)}" data-kind="${escapeHtml(kind)}" aria-expanded="${String(selected)}"><span>${analyzed ? 'âœ“' : 'â€¦'}</span><span><small>${escapeHtml(tr(kind))} Â· v${index + 1}${isLatest ? ` Â· ${escapeHtml(tr('latestFile'))}` : ''}</small><strong>${escapeHtml(version.name)}</strong><em>${escapeHtml(formatStorage(version.size))} Â· ${escapeHtml(formatObjectDate(version.addedAt))}${escapeHtml(contractNumber)}</em></span><i aria-hidden="true">âŒ„</i></button><div class="my-project-version-actions">${analyzed ? `<button class="outline-button" type="button" data-open-project-version="${escapeHtml(version.id)}" data-object-id="${escapeHtml(object.id)}" data-kind="${escapeHtml(kind)}">${escapeHtml(tr('openAnalysisResult'))}</button>` : `<button class="primary-button" type="button" data-analyze-project-version="${escapeHtml(version.id)}" data-object-id="${escapeHtml(object.id)}" data-kind="${escapeHtml(kind)}">${escapeHtml(tr('analyze'))}</button>`}<button class="my-project-version-delete" type="button" data-delete-project-version="${escapeHtml(version.id)}" data-object-id="${escapeHtml(object.id)}" data-kind="${escapeHtml(kind)}" aria-label="${escapeHtml(tr('deleteDocument'))}">Ã—</button></div></article>`;
-  }).join('');
-  const comparisonAction = versions.length > 1 ? `<button class="outline-button my-project-compare-button" type="button" data-show-project-comparison="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}"><span>â‡„</span>${escapeHtml(tr(projectComparisonActionKey(kind)))}</button>` : '';
-  const comparison = visibleProjectComparisons.has(groupKey) ? projectVersionComparisonBlock(object, kind, file) : '';
-  const selectedResult = selectedVersion ? projectVersionAnalysisMarkup(object, kind, selectedVersion) : '';
-  return `<section class="my-project-document-group${versions.length ? ' has-files' : ''}" data-project-document-group="${escapeHtml(groupKey)}"><header><span class="my-project-document-icon" aria-hidden="true">${icon}</span><div><small>${escapeHtml(tr(kind))}</small><strong>${escapeHtml(title)}</strong><em>${versions.length ? `${versions.length} ${escapeHtml(tr('versions'))} Â· ${escapeHtml(tr('fileBlockHint'))}` : escapeHtml(tr('documentNotLoaded'))}</em></div><b>${versions.length}</b><div class="my-project-document-group-actions"><button class="outline-button my-project-document-rename" type="button" data-my-project-rename-document="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}">âœŽ ${escapeHtml(tr('rename'))}</button>${launchAction}<button class="primary-button" type="button" data-my-project-upload="${escapeHtml(kind)}" data-object-id="${escapeHtml(object.id)}" data-version-mode="${versions.length ? 'revision' : 'standard'}">ï¼‹ ${escapeHtml(uploadLabel)}</button></div></header>${versions.length ? `<div class="my-project-version-grid">${versionCards}</div>` : `<div class="my-project-version-empty"><span>ï¼‹</span><p>${escapeHtml(tr('documentNotLoaded'))}</p></div>`}<div class="my-project-document-group-footer">${comparisonAction}</div>${comparison}${selectedResult}</section>`;
-}
-
-function rerenderProjectVersions() {
-  renderMyProjects();
-}
-
-function toggleProjectVersionResult(objectId, kind, versionId) {
-  const key = projectDocumentGroupKey(objectId, kind);
-  if (selectedProjectVersionIds.get(key) === versionId) selectedProjectVersionIds.delete(key);
-  else selectedProjectVersionIds.set(key, versionId);
-  rerenderProjectVersions();
-}
-
-function showProjectComparison(objectId, kind) {
-  const key = projectDocumentGroupKey(objectId, kind);
-  visibleProjectComparisons.add(key);
-  expandedProjectComparisons.delete(key);
-  rerenderProjectVersions();
-}
-
-function toggleProjectComparison(objectId, kind) {
-  const key = projectDocumentGroupKey(objectId, kind);
-  if (expandedProjectComparisons.has(key)) expandedProjectComparisons.delete(key);
-  else expandedProjectComparisons.add(key);
-  rerenderProjectVersions();
-}
-
-function selectProjectVersionTab(objectId, kind, versionId, tab) {
-  selectedProjectVersionTabs.set(`${projectDocumentGroupKey(objectId, kind)}:${versionId}`, tab);
-  rerenderProjectVersions();
-}
-
-function myProjectMarkup(object) {
-  const usedBytes = (object.files || []).reduce((total, file) => total + fileVersions(file).reduce((sum, version) => sum + (Number(version.size) || 0), 0), 0);
-  const updatedAt = projectLastUpdatedAt(object);
-  const statusKey = myProjectStatusKey(object);
-  const projectSection = projectSectionFor(object);
-  const collapsed = collapsedProjectIds.has(object.id);
-  const documents = Object.keys(uploadRules).map((kind) => myProjectDocumentGroupMarkup(object, kind)).join('');
-  const toggleLabel = tr(collapsed ? 'expandProject' : 'collapseProject');
-  return `<article class="my-project-card is-${escapeHtml(object.status)}${collapsed ? ' is-collapsed' : ''}" data-my-project="${escapeHtml(object.id)}"><header><button class="my-project-object-open" type="button" data-toggle-my-project="${escapeHtml(object.id)}" aria-expanded="${String(!collapsed)}" aria-label="${escapeHtml(toggleLabel)}"><span class="my-project-mark" aria-hidden="true">â–°</span><span><small>STRUCTOS OBJECT</small><h2>${escapeHtml(object.name)}</h2><em class="my-project-section-name">${escapeHtml(tr('projectNameStep'))}: ${escapeHtml(projectSection)}</em><span class="my-project-badges"><b>${escapeHtml(tr('fullCycleObject'))}</b><b class="is-${escapeHtml(object.status)}">${escapeHtml(tr(statusKey))}</b></span></span><i aria-hidden="true">âŒ„</i></button><div class="my-project-card-actions"><button class="outline-button" type="button" data-open-project-object="${escapeHtml(object.id)}">${escapeHtml(tr('openDocument'))}</button><button class="outline-button my-project-rename-section-button" type="button" data-my-project-rename-section="${escapeHtml(object.id)}">âœŽ ${escapeHtml(tr('projectNameStep'))}</button><button class="my-project-delete-button" type="button" data-delete-project="${escapeHtml(object.id)}">${escapeHtml(tr('deleteProject'))}</button></div></header><div class="my-project-card-content"${collapsed ? ' hidden' : ''}><div class="my-project-documents">${documents}</div><footer><span>${escapeHtml(tr('lastProjectUpdate'))}: ${escapeHtml(formatObjectDate(updatedAt))}</span><span>${escapeHtml(tr('memoryUsed'))}: ${escapeHtml(formatStorage(usedBytes))}</span></footer></div></article>`;
-}
-
-function renderMyProjects() {
-  const projects = myProjectObjects();
-  $$('[data-my-projects-list]').forEach((list) => {
-    list.innerHTML = projects.map(myProjectMarkup).join('');
-    $$('[data-my-project]', list).forEach((card) => {
-      $('[data-toggle-my-project]', card)?.addEventListener('click', (event) => toggleMyProjectCard(event.currentTarget.dataset.toggleMyProject));
-      $('[data-launch-project]', card)?.addEventListener('click', (event) => { event.stopPropagation(); openProjectLaunchDialog(event.currentTarget.dataset.launchProject); });
-      $('[data-open-project-object]', card)?.addEventListener('click', (event) => { event.stopPropagation(); openObjectCard(event.currentTarget.dataset.openProjectObject); });
-      $('[data-my-project-rename-section]', card)?.addEventListener('click', (event) => { event.stopPropagation(); renameProjectSection(event.currentTarget.dataset.myProjectRenameSection); });
-      $('[data-delete-project]', card)?.addEventListener('click', (event) => { event.stopPropagation(); deleteProjectObject(event.currentTarget.dataset.deleteProject); });
-      $$('[data-my-project-rename-document]', card).forEach((button) => button.addEventListener('click', () => renameProjectDocument(button.dataset.objectId, button.dataset.myProjectRenameDocument)));
-      $$('[data-my-project-upload]', card).forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.myProjectUpload, button.dataset.objectId, button.dataset.versionMode)));
-      $$('[data-toggle-project-version]', card).forEach((button) => button.addEventListener('click', () => toggleProjectVersionResult(button.dataset.objectId, button.dataset.kind, button.dataset.toggleProjectVersion)));
-      $$('[data-analyze-project-version]', card).forEach((button) => button.addEventListener('click', () => analyzeObjectDocument(button.dataset.objectId, button.dataset.kind, button.dataset.analyzeProjectVersion, { inline: true })));
-      $$('[data-open-project-version]', card).forEach((button) => button.addEventListener('click', () => openAnalyzedDocument(button.dataset.objectId, button.dataset.kind, button.dataset.openProjectVersion)));
-      $$('[data-delete-project-version]', card).forEach((button) => button.addEventListener('click', () => deleteObjectDocumentVersion(button.dataset.objectId, button.dataset.kind, button.dataset.deleteProjectVersion)));
-      $$('[data-show-project-comparison]', card).forEach((button) => button.addEventListener('click', () => showProjectComparison(button.dataset.objectId, button.dataset.showProjectComparison)));
-      $$('[data-toggle-project-comparison]', card).forEach((button) => button.addEventListener('click', () => toggleProjectComparison(button.dataset.objectId, button.dataset.toggleProjectComparison)));
-      $$('[data-project-version-tab]', card).forEach((button) => button.addEventListener('click', () => selectProjectVersionTab(button.dataset.objectId, button.dataset.kind, button.dataset.versionId, button.dataset.projectVersionTab)));
-    });
-  });
-  $$('[data-my-projects-count]').forEach((count) => { count.textContent = String(projects.length); });
-  $$('[data-my-projects-empty]').forEach((empty) => { empty.hidden = projects.length > 0; });
-}
-
-function commercialProposalCreationCardMarkup(kind) {
-  const draft = commercialProposalDrafts[kind];
-  const rule = uploadRules[kind];
-  const isProject = kind === 'project';
-  const titleKey = isProject ? 'createProposalByProject' : 'createProposalByEstimate';
-  const hintKey = isProject ? 'proposalCreateProjectHint' : 'proposalCreateEstimateHint';
-  const selectedFile = draft.file
-    ? `<div class="proposal-create-selected-file"><span aria-hidden="true">${isProject ? 'â–¤' : 'Î£'}</span><div><strong>${escapeHtml(draft.file.name)}</strong><small>${escapeHtml(fileFormatLabel(draft.file))} Â· ${escapeHtml(fileSize(draft.file.size))}</small></div><button type="button" data-proposal-replace-file="${kind}">${escapeHtml(tr('replace'))}</button><button class="proposal-create-delete-file" type="button" data-proposal-delete-file="${kind}" aria-label="${escapeHtml(tr('deleteFile'))}" title="${escapeHtml(tr('deleteFile'))}">Ã—</button></div>`
-    : `<div class="proposal-create-dropzone" data-proposal-dropzone="${kind}" role="button" tabindex="0"><span aria-hidden="true">â†‘</span><div><strong>${escapeHtml(tr('selectFile'))}</strong><small>${escapeHtml(tr('dropFile'))} Â· ${escapeHtml(rule.formats)} Â· ${rule.maxMb} ÐœÐ‘</small></div></div>`;
-  const createAction = draft.file
-    ? `<button class="primary-button proposal-create-submit" type="button" data-create-commercial-proposal="${kind}"${draft.busy || !draft.objectName.trim() || !draft.sectionName.trim() ? ' disabled' : ''}>${escapeHtml(tr(draft.busy ? 'creatingCommercialProposal' : 'createCommercialProposal'))}</button>`
-    : '';
-  return `<article class="proposal-create-card is-${kind}${draft.busy ? ' is-busy' : ''}" data-commercial-proposal-create-card="${kind}"><header><span aria-hidden="true">${isProject ? 'â–¤' : 'Î£'}</span><div><h2>${escapeHtml(tr(titleKey))}</h2><p>${escapeHtml(tr(hintKey))}</p></div></header><div class="proposal-create-fields"><label><span>${escapeHtml(tr('objectName'))} <em>*</em></span><input type="text" maxlength="100" data-proposal-object-name="${kind}" value="${escapeHtml(draft.objectName)}" placeholder="${escapeHtml(tr('objectPlaceholder'))}" autocomplete="organization" /></label><label><span>${escapeHtml(tr('proposalSectionField'))} <em>*</em></span><input type="text" maxlength="140" data-proposal-section-name="${kind}" value="${escapeHtml(draft.sectionName)}" placeholder="${escapeHtml(tr('proposalSectionPlaceholder'))}" /></label></div><input class="hidden-file-input" type="file" data-proposal-file-input="${kind}" accept="${escapeHtml(rule.accept)}" />${selectedFile}<small class="proposal-create-file-hint">${escapeHtml(tr('proposalFileHint'))}</small>${createAction}</article>`;
-}
-
-function updateCommercialProposalCreateButton(card, kind) {
-  const draft = commercialProposalDrafts[kind];
-  const button = $('[data-create-commercial-proposal]', card);
-  if (button) button.disabled = draft.busy || !draft.file || !draft.objectName.trim() || !draft.sectionName.trim();
-}
-
-function chooseCommercialProposalFile(kind, file) {
-  if (!file || !commercialProposalDrafts[kind]) return;
-  const rule = uploadRules[kind];
-  if (file.size > rule.maxMb * 1024 * 1024) { showToast(`${tr('fileTooLarge')}: ${rule.maxMb} ÐœÐ‘`); return; }
-  if (!isAllowedFile(file, rule)) { showToast(`${tr('unsupportedFormat')}: ${rule.formats}`); return; }
-  const draft = commercialProposalDrafts[kind];
-  draft.file = fileMetadata(file);
-  draft.sourceFile = file;
-  renderCommercialProposalCreators();
-  showToast(`${tr('fileSelected')}: ${file.name}`);
-}
-
-function renderCommercialProposalCreators() {
-  $$('[data-proposal-create-actions]').forEach((rootElement) => {
-    rootElement.innerHTML = ['project', 'estimate'].map(commercialProposalCreationCardMarkup).join('');
-    $$('[data-commercial-proposal-create-card]', rootElement).forEach((card) => {
-      const kind = card.dataset.commercialProposalCreateCard;
-      const draft = commercialProposalDrafts[kind];
-      const objectInput = $('[data-proposal-object-name]', card);
-      const sectionInput = $('[data-proposal-section-name]', card);
-      const fileInput = $('[data-proposal-file-input]', card);
-      objectInput?.addEventListener('input', () => { draft.objectName = objectInput.value.slice(0, 100); objectInput.removeAttribute('aria-invalid'); updateCommercialProposalCreateButton(card, kind); });
-      sectionInput?.addEventListener('input', () => { draft.sectionName = sectionInput.value.slice(0, 140); sectionInput.removeAttribute('aria-invalid'); updateCommercialProposalCreateButton(card, kind); });
-      fileInput?.addEventListener('change', () => { chooseCommercialProposalFile(kind, fileInput.files?.[0]); fileInput.value = ''; });
-      $('[data-proposal-replace-file]', card)?.addEventListener('click', () => fileInput?.click());
-      $('[data-proposal-delete-file]', card)?.addEventListener('click', () => {
-        draft.file = null;
-        draft.sourceFile = null;
-        renderCommercialProposalCreators();
-        showToast(tr('fileDeleted'));
-      });
-      const dropzone = $('[data-proposal-dropzone]', card);
-      dropzone?.addEventListener('click', () => fileInput?.click());
-      dropzone?.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); fileInput?.click(); } });
-      ['dragenter', 'dragover'].forEach((type) => dropzone?.addEventListener(type, (event) => { event.preventDefault(); dropzone.classList.add('is-dragging'); }));
-      ['dragleave', 'drop'].forEach((type) => dropzone?.addEventListener(type, (event) => { event.preventDefault(); dropzone.classList.remove('is-dragging'); }));
-      dropzone?.addEventListener('drop', (event) => {
-        if (event.dataTransfer.files.length > 1) showToast(tr('onlyOneFile'));
-        chooseCommercialProposalFile(kind, event.dataTransfer.files?.[0]);
-      });
-      $('[data-create-commercial-proposal]', card)?.addEventListener('click', () => createCommercialProposalFromDraft(kind));
-    });
-  });
-}
-
-async function createCommercialProposalFromDraft(kind) {
-  const draft = commercialProposalDrafts[kind];
-  const card = $(`[data-commercial-proposal-create-card="${kind}"]`);
-  const objectInput = $('[data-proposal-object-name]', card);
-  const sectionInput = $('[data-proposal-section-name]', card);
-  draft.objectName = objectInput?.value.trim().slice(0, 100) || draft.objectName.trim().slice(0, 100);
-  draft.sectionName = sectionInput?.value.trim().slice(0, 140) || draft.sectionName.trim().slice(0, 140);
-  if (!draft.objectName) { objectInput?.setAttribute('aria-invalid', 'true'); objectInput?.focus(); showToast(tr('objectRequired')); return; }
-  if (!draft.sectionName) { sectionInput?.setAttribute('aria-invalid', 'true'); sectionInput?.focus(); showToast(tr('projectNameRequired')); return; }
-  if (!draft.file) { showToast(tr('selectFile')); return; }
-  draft.busy = true;
-  renderCommercialProposalCreators();
-  try {
-    const uploadedAt = new Date().toISOString();
-    const sourceCatalog = draft.sourceFile ? await extractCashSourceCatalogFromFile(draft.sourceFile, kind) : [];
-    const sourceFile = {
-      ...draft.file,
-      kind,
-      projectSection: draft.sectionName,
-      addedAt: uploadedAt,
-      analysisPending: true,
-      analyzedAt: null,
-      sourceCatalog,
-      sourceCatalogScanned: Boolean(draft.sourceFile)
-    };
-    const storedFile = normalizeFileRecord({ ...sourceFile, versions: [fileVersionSnapshot(sourceFile)], comparison: null });
-    const proposal = {
-      id: `proposal-${createObjectId()}`,
-      objectName: draft.objectName,
-      sectionName: draft.sectionName,
-      kind,
-      status: 'analyzing',
-      createdAt: uploadedAt,
-      updatedAt: uploadedAt,
-      analyzedAt: null,
-      file: storedFile,
-      workspace: normalizeCommercialProposalWorkspace(null)
-    };
-    commercialProposalRecords.unshift(proposal);
-    activeCommercialProposalResultTab = 'smr';
-    saveCommercialProposalRecords();
-    commercialProposalDrafts[kind] = { objectName: '', sectionName: '', file: null, sourceFile: null, busy: false };
-    renderCommercialProposals();
-    clearTimeout(commercialProposalAnalysisTimer);
-    showDialog(escapeHtml(tr('creatingCommercialProposal')), escapeHtml(tr('proposalSectionStorage')), `<div class="analysis-loader" data-proposal-analysis-id="${escapeHtml(proposal.id)}"><span></span><span></span><span></span></div>`);
-    commercialProposalAnalysisTimer = setTimeout(() => {
-      const storedProposal = commercialProposalRecords.find((item) => item.id === proposal.id);
-      const version = latestDocumentVersion(storedProposal?.file);
-      if (!storedProposal || !version) return;
-      const analyzedAt = new Date().toISOString();
-      const patch = { analysisPending: false, analyzedAt };
-      if (storedProposal.kind === 'project') patch.estimateBreakdown = projectEstimateSnapshot(version);
-      updateDocumentVersion(storedProposal.file, version.id, patch);
-      storedProposal.file = normalizeFileRecord(storedProposal.file);
-      storedProposal.status = 'ready';
-      storedProposal.analyzedAt = analyzedAt;
-      storedProposal.updatedAt = analyzedAt;
-      saveCommercialProposalRecords();
-      renderCommercialProposals();
-      if ($(`[data-proposal-analysis-id="${proposal.id}"]`)) $('[data-dialog]')?.close();
-      setPanel('proposals');
-      showToast(tr('commercialProposalCreated'));
-    }, 1100);
-  } catch (error) {
-    console.warn('StructOS commercial proposal creation failed:', error);
-    draft.busy = false;
-    renderCommercialProposalCreators();
-    showToast(tr('proposalCreateFailed'));
-  }
-}
-
-function commercialProposalCardMarkup(proposal) {
-  const version = latestDocumentVersion(proposal.file);
-  const ready = proposal.status === 'ready' && isDocumentVersionAnalyzed(version);
-  const sourceLabel = tr(proposal.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
-  return `<article class="commercial-proposal-card${ready ? ' is-ready' : ' is-pending'}"><header><span aria-hidden="true">â‚½</span><button class="commercial-proposal-card-copy" type="button" data-open-commercial-proposal="${escapeHtml(proposal.id)}"><small>${escapeHtml(proposal.sectionName)}</small><h2>${escapeHtml(proposal.objectName)}</h2><p>${escapeHtml(sourceLabel)} Â· ${escapeHtml(version?.name || '')}</p></button><div class="commercial-proposal-card-side"><div class="commercial-proposal-card-actions"><button type="button" data-rename-commercial-proposal="${escapeHtml(proposal.id)}" aria-label="${escapeHtml(tr('renameCommercialProposal'))}" title="${escapeHtml(tr('renameCommercialProposal'))}"><span aria-hidden="true">âœŽ</span><strong>${escapeHtml(tr('rename'))}</strong></button><button class="is-delete" type="button" data-delete-commercial-proposal="${escapeHtml(proposal.id)}" aria-label="${escapeHtml(tr('deleteCommercialProposal'))}" title="${escapeHtml(tr('deleteCommercialProposal'))}">Ã—</button></div><b>${escapeHtml(tr(ready ? 'proposalReady' : 'proposalAwaitingAnalysis'))}</b></div></header><footer><span>${escapeHtml(formatObjectDate(proposal.createdAt))} Â· ${escapeHtml(tr('proposalSectionStorage'))}</span><button class="${ready ? 'outline-button' : 'primary-button'}" type="button" data-open-commercial-proposal="${escapeHtml(proposal.id)}">${escapeHtml(tr(ready ? 'openCommercialProposal' : 'proposalAwaitingAnalysis'))} â†’</button></footer></article>`;
-}
-
-function renameCommercialProposal(proposalId) {
-  const proposal = commercialProposalRecords.find((item) => item.id === proposalId);
-  if (!proposal) return;
-  showDialog(escapeHtml(tr('renameCommercialProposal')), escapeHtml(tr('renameCommercialProposalHint')), `<div class="object-form commercial-proposal-rename-form"><label><span>${escapeHtml(tr('objectName'))}</span><input type="text" maxlength="100" value="${escapeHtml(proposal.objectName)}" data-rename-commercial-proposal-object /></label><label><span>${escapeHtml(tr('proposalSectionField'))}</span><input type="text" maxlength="140" value="${escapeHtml(proposal.sectionName)}" data-rename-commercial-proposal-section /></label><button class="primary-button" type="button" data-confirm-commercial-proposal-rename>${escapeHtml(tr('save'))}</button></div>`);
-  const scope = $('[data-dialog-content]');
-  const objectInput = $('[data-rename-commercial-proposal-object]', scope);
-  const sectionInput = $('[data-rename-commercial-proposal-section]', scope);
-  const saveProposalName = () => {
-    const objectName = objectInput?.value.trim().slice(0, 100) || '';
-    const sectionName = sectionInput?.value.trim().slice(0, 140) || '';
-    if (!objectName) { objectInput?.focus(); return; }
-    if (!sectionName) { sectionInput?.focus(); return; }
-    proposal.objectName = objectName;
-    proposal.sectionName = sectionName;
-    proposal.updatedAt = new Date().toISOString();
-    saveCommercialProposalRecords();
-    renderCommercialProposals();
-    $('[data-dialog]')?.close();
-    showToast(tr('commercialProposalRenamed'));
-  };
-  $('[data-confirm-commercial-proposal-rename]', scope)?.addEventListener('click', saveProposalName);
-  [objectInput, sectionInput].forEach((input) => input?.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') { event.preventDefault(); saveProposalName(); }
-  }));
-  setTimeout(() => { objectInput?.focus(); objectInput?.select(); }, 40);
-}
-
-function deleteCommercialProposal(proposalId) {
-  const proposal = commercialProposalRecords.find((item) => item.id === proposalId);
-  if (!proposal) return;
-  showDialog(escapeHtml(tr('deleteCommercialProposal')), escapeHtml(tr('deleteCommercialProposalHint')), `<div class="result-actions"><button class="outline-button" type="button" data-cancel-commercial-proposal-delete>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-commercial-proposal-delete>${escapeHtml(tr('deleteCommercialProposal'))}</button></div>`);
-  const scope = $('[data-dialog-content]');
-  $('[data-cancel-commercial-proposal-delete]', scope)?.addEventListener('click', () => $('[data-dialog]')?.close());
-  $('[data-confirm-commercial-proposal-delete]', scope)?.addEventListener('click', () => {
-    commercialProposalRecords = commercialProposalRecords.filter((item) => item.id !== proposal.id);
-    saveCommercialProposalRecords();
-    renderCommercialProposals();
-    $('[data-dialog]')?.close();
-    showToast(tr('commercialProposalDeleted'));
-  });
-}
-
-function openCommercialProposalCard(proposalId) {
-  const proposal = commercialProposalRecords.find((item) => item.id === proposalId);
-  const version = latestDocumentVersion(proposal?.file);
-  if (!proposal || !version) return;
-  activeCommercialProposalId = proposal.id;
-  activeCommercialProposalColumn = 'smr';
-  activeCommercialProposalGroup = 'specificationWorks';
-  setPanel(`proposal-detail/${encodeURIComponent(proposal.id)}`);
-}
-
-function renderCommercialProposals() {
-  renderCommercialProposalCreators();
-  const proposals = commercialProposalRecords.slice().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-  const markup = proposals.map(commercialProposalCardMarkup).join('');
-  $$('[data-commercial-proposals-list]').forEach((list) => {
-    list.innerHTML = markup;
-    $$('[data-open-commercial-proposal]', list).forEach((button) => button.addEventListener('click', () => openCommercialProposalCard(button.dataset.openCommercialProposal)));
-    $$('[data-rename-commercial-proposal]', list).forEach((button) => button.addEventListener('click', () => renameCommercialProposal(button.dataset.renameCommercialProposal)));
-    $$('[data-delete-commercial-proposal]', list).forEach((button) => button.addEventListener('click', () => deleteCommercialProposal(button.dataset.deleteCommercialProposal)));
-  });
-  $$('[data-commercial-proposals-count]').forEach((count) => { count.textContent = String(proposals.length); });
-  $$('[data-commercial-proposals-empty]').forEach((empty) => { empty.hidden = proposals.length > 0; });
-}
-
-const projectAnalysisTabs = [
-  { id: 'proposal', label: 'commercialProposal', icon: 'â‚½' },
-  { id: 'sheets', label: 'projectBySheets', icon: 'â–¤' },
-  { id: 'systems', label: 'projectBySystems', icon: 'âŒ˜' },
-  { id: 'materials', label: 'projectMaterials', icon: 'â—‡' },
-  { id: 'boq', label: 'billOfQuantities', icon: 'â‰¡' }
-];
-
-function isObjectDocumentAnalyzed(object, file) {
-  if (!object || !file) return false;
-  return isDocumentVersionAnalyzed(latestDocumentVersion(file));
-}
-
-function analysisEmptyTable(columns) {
-  return `<div class="analysis-detail-table-scroll"><table class="analysis-detail-table"><thead><tr>${columns.map((key) => `<th>${escapeHtml(tr(key))}</th>`).join('')}</tr></thead><tbody><tr class="analysis-detail-empty-row"><td colspan="${columns.length}"><span>â—‡</span><strong>${escapeHtml(tr('extractionPending'))}</strong><small>${escapeHtml(tr('extractionPendingCopy'))}</small></td></tr></tbody></table></div>`;
-}
-
-const PROJECT_ESTIMATE_GROUP_ALIASES = Object.freeze({
-  installationWorks: new Set(['installationworks', 'mountingworks', 'works', 'workitems', 'services', 'Ð¼Ð¾Ð½Ñ‚Ð°Ð¶Ð½Ñ‹ÐµÑ€Ð°Ð±Ð¾Ñ‚Ñ‹', 'Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹', 'ÑƒÑÐ»ÑƒÐ³Ð¸']),
-  associatedWorks: new Set(['associatedworks', 'companionworks', 'additionalworks', 'relatedworks', 'hiddenworks', 'auxiliaryworks', 'ÑÐ¾Ð¿ÑƒÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‰Ð¸ÐµÑ€Ð°Ð±Ð¾Ñ‚Ñ‹', 'Ð´Ð¾Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹ÐµÑ€Ð°Ð±Ð¾Ñ‚Ñ‹', 'ÑÐºÑ€Ñ‹Ñ‚Ñ‹ÐµÑ€Ð°Ð±Ð¾Ñ‚Ñ‹']),
-  projectMaterials: new Set(['projectmaterials', 'materials', 'materialitems', 'equipment', 'specification', 'specifications', 'Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ñ‹', 'Ð¾Ð±Ð¾Ñ€ÑƒÐ´Ð¾Ð²Ð°Ð½Ð¸Ðµ', 'ÑÐ¿ÐµÑ†Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ñ']),
-  associatedMaterials: new Set(['associatedmaterials', 'companionmaterials', 'mountingmaterials', 'consumables', 'auxiliarymaterials', 'relatedmaterials', 'ÑÐ¾Ð¿ÑƒÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‰Ð¸ÐµÐ¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ñ‹', 'Ð¼Ð¾Ð½Ñ‚Ð°Ð¶Ð½Ñ‹ÐµÐ¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ñ‹', 'Ñ€Ð°ÑÑ…Ð¾Ð´Ð½Ñ‹ÐµÐ¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ñ‹'])
-});
-
-function mergeProjectEstimateItems(entries) {
-  const merged = new Map();
-  (Array.isArray(entries) ? entries : []).filter(Boolean).forEach((entry) => {
-    const normalized = normalizeCashSourceCatalogEntry(entry, entry);
-    if (!normalized) return;
-    const item = { ...normalized, origin: entry.origin === 'analysis' ? 'analysis' : 'project' };
-    const key = cashSourceKey(item.name);
-    const current = merged.get(key);
-    if (!current) merged.set(key, item);
-    else merged.set(key, {
-      ...current,
-      unit: current.unit || item.unit,
-      quantity: current.quantity || item.quantity,
-      price: current.price || item.price,
-      sourceSheet: current.sourceSheet || item.sourceSheet,
-      sourceName: current.sourceName || item.sourceName,
-      origin: current.origin === 'project' || item.origin === 'project' ? 'project' : 'analysis'
-    });
-  });
-  return [...merged.values()].sort((left, right) => left.name.localeCompare(right.name, root.lang || 'ru')).slice(0, 500);
-}
-
-function projectEstimateEntriesFromValue(value, defaults = {}) {
-  const values = Array.isArray(value)
-    ? value
-    : value && typeof value === 'object'
-      ? [value, ...cashSourceCatalogFromStructuredData(value, defaults)]
-      : [];
-  return mergeProjectEstimateItems(values.map((entry) => {
-    const normalized = normalizeCashSourceCatalogEntry(entry, defaults);
-    return normalized ? { ...normalized, origin: defaults.origin || entry?.origin } : null;
-  }));
-}
-
-function collectProjectEstimateGroups(rootValue, groups, depth = 0) {
-  if (!rootValue || typeof rootValue !== 'object' || depth > 6) return;
-  Object.entries(rootValue).forEach(([key, child]) => {
-    const normalizedKey = cashSourceKey(key);
-    const groupKey = Object.entries(PROJECT_ESTIMATE_GROUP_ALIASES).find(([, aliases]) => aliases.has(normalizedKey))?.[0];
-    if (groupKey) {
-      groups[groupKey].push(...projectEstimateEntriesFromValue(child, {
-        sourceKind: 'project',
-        sourceName: tr(groupKey === 'projectMaterials' || groupKey === 'installationWorks' ? 'extractedFromProject' : 'identifiedByAnalysis'),
-        category: groupKey.includes('Works') ? 'work' : 'material',
-        origin: groupKey === 'projectMaterials' || groupKey === 'installationWorks' ? 'project' : 'analysis'
-      }));
-    }
-    if (child && typeof child === 'object') collectProjectEstimateGroups(child, groups, depth + 1);
-  });
-}
-
-function projectEstimateCatalogGroup(entry) {
-  if (entry.category === 'work') return 'installationWorks';
-  if (entry.category === 'material') return 'projectMaterials';
-  const key = cashSourceKey(entry.name);
-  if (/(Ð¼Ð¾Ð½Ñ‚Ð°Ð¶|ÑƒÑÑ‚Ð°Ð½Ð¾Ð²|Ð¿Ñ€Ð¾ÐºÐ»Ð°Ð´|Ð´ÐµÐ¼Ð¾Ð½Ñ‚Ð°Ð¶|Ð¿ÑƒÑÐºÐ¾Ð½Ð°Ð»Ð°Ð´|Ð¸ÑÐ¿Ñ‹Ñ‚Ð°Ð½|Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹|Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡|Ñ€Ð°Ð±Ð¾Ñ‚|ÑƒÑÐ»ÑƒÐ³|install|mount|laying|testing|commission|service)/u.test(key)) return 'installationWorks';
-  return 'projectMaterials';
-}
-
-function derivedProjectEstimateItem(entry, groupKey) {
-  const prefix = groupKey === 'installationWorks' ? tr('installationWorks') : groupKey === 'associatedWorks' ? tr('associatedWorks') : tr('associatedInstallationMaterials');
-  return {
-    name: `${prefix}: ${entry.name}`,
-    unit: groupKey === 'installationWorks' ? entry.unit : '',
-    quantity: groupKey === 'installationWorks' ? entry.quantity : 0,
-    price: 0,
-    category: groupKey.includes('Works') ? 'work' : 'material',
-    sourceKind: 'project',
-    sourceName: tr('identifiedByAnalysis'),
-    sourceSheet: entry.sourceSheet || '',
-    origin: 'analysis'
-  };
-}
-
-function projectEstimateBreakdown(version, kind = 'project', options = {}) {
-  const groups = { installationWorks: [], associatedWorks: [], projectMaterials: [], associatedMaterials: [] };
-  const roots = [
-    version?.estimateBreakdown,
-    version?.analysisData,
-    version?.analysisResult,
-    version?.result,
-    version?.extractedData,
-    version?.extraction,
-    { works: version?.works, services: version?.services, materials: version?.materials, equipment: version?.equipment, specification: version?.specification }
-  ];
-  roots.forEach((rootValue) => collectProjectEstimateGroups(rootValue, groups));
-  cashSourceCatalogFromFileRecord(version, kind).forEach((entry) => {
-    groups[projectEstimateCatalogGroup(entry)].push({ ...entry, origin: 'project' });
-  });
-  Object.keys(groups).forEach((groupKey) => { groups[groupKey] = mergeProjectEstimateItems(groups[groupKey]); });
-  if (options.derive === false || !groups.projectMaterials.length) return groups;
-  if (!groups.installationWorks.length) groups.installationWorks = mergeProjectEstimateItems(groups.projectMaterials.map((entry) => derivedProjectEstimateItem(entry, 'installationWorks')));
-  if (!groups.associatedWorks.length) groups.associatedWorks = mergeProjectEstimateItems(groups.projectMaterials.map((entry) => derivedProjectEstimateItem(entry, 'associatedWorks')));
-  if (!groups.associatedMaterials.length) groups.associatedMaterials = mergeProjectEstimateItems(groups.projectMaterials.map((entry) => derivedProjectEstimateItem(entry, 'associatedMaterials')));
-  return groups;
-}
-
-function projectEstimateSnapshot(version) {
-  const groups = projectEstimateBreakdown(version, 'project', { derive: false });
-  return { generatedAt: new Date().toISOString(), ...groups };
-}
-
-function projectEstimateGroupMarkup(groupKey, entries, icon) {
-  const sourceKey = groupKey === 'installationWorks' || groupKey === 'projectMaterials' ? 'extractedFromProject' : 'identifiedByAnalysis';
-  const labelKey = groupKey === 'associatedMaterials' ? 'associatedInstallationMaterials' : groupKey;
-  const body = entries.length
-    ? `<div class="project-estimate-list">${entries.slice(0, 200).map((entry) => `<article><span>${escapeHtml(icon)}</span><div><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(entry.sourceSheet || entry.sourceName || tr(sourceKey))}</small></div><b>${entry.quantity ? escapeHtml(String(entry.quantity)) : 'â€”'}${entry.unit ? ` ${escapeHtml(entry.unit)}` : ''}</b></article>`).join('')}</div>`
-    : `<div class="project-estimate-empty"><span>â—‡</span><p>${escapeHtml(tr('estimateGroupPending'))}</p></div>`;
-  return `<section class="project-estimate-group"><header><span>${escapeHtml(icon)}</span><div><h4>${escapeHtml(tr(labelKey))}</h4><small>${escapeHtml(tr(sourceKey))}</small></div><b>${entries.length}</b></header>${body}</section>`;
-}
-
-function projectEstimateBreakdownMarkup(version, kind = 'project') {
-  const groups = projectEstimateBreakdown(version, kind);
-  const worksCount = groups.installationWorks.length + groups.associatedWorks.length;
-  const materialsCount = groups.projectMaterials.length + groups.associatedMaterials.length;
-  return `<section class="project-estimate-breakdown"><header><div><span class="eyebrow">STRUCTOS ESTIMATE</span><h3>${escapeHtml(tr('projectEstimate'))}</h3><p>${escapeHtml(tr('estimateAnalysisSummary'))}</p></div><div><b>${worksCount}</b><small>${escapeHtml(tr('works'))}</small><b>${materialsCount}</b><small>${escapeHtml(tr('materials'))}</small></div></header><div class="project-estimate-columns"><article class="project-estimate-column is-works"><header><span>âš’</span><div><h3>${escapeHtml(tr('installationEstimate'))}</h3><small>${worksCount} Â· ${escapeHtml(tr('works'))}</small></div></header>${projectEstimateGroupMarkup('installationWorks', groups.installationWorks, 'W')}${projectEstimateGroupMarkup('associatedWorks', groups.associatedWorks, '+')}</article><article class="project-estimate-column is-materials"><header><span>â—‡</span><div><h3>${escapeHtml(tr('projectMaterialsEquipment'))}</h3><small>${materialsCount} Â· ${escapeHtml(tr('materials'))}</small></div></header>${projectEstimateGroupMarkup('projectMaterials', groups.projectMaterials, 'M')}${projectEstimateGroupMarkup('associatedMaterials', groups.associatedMaterials, '+')}</article></div></section>`;
-}
-
-const COMMERCIAL_PROPOSAL_GROUP_ALIASES = Object.freeze({
-  specificationWorks: new Set(['specificationWorks', 'worksBySpecification', 'projectSpecificationWorks', 'installationWorks', 'mountingWorks', 'works', 'workItems', 'services', 'Ð¿Ð¾ ÑÐ¿ÐµÑ†Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ð¸ Ð¿Ñ€Ð¾ÐµÐºÑ‚Ð°', 'Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ Ð¿Ð¾ ÑÐ¿ÐµÑ†Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ð¸', 'Ð¼Ð¾Ð½Ñ‚Ð°Ð¶Ð½Ñ‹Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹', 'Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹', 'ÑƒÑÐ»ÑƒÐ³Ð¸'].map(cashSourceKey)),
-  outsideSpecificationWorks: new Set(['outsideSpecificationWorks', 'nonSpecificationWorks', 'unlistedWorks', 'unaccountedWorks', 'additionalProjectWorks', 'Ð²Ð½Ðµ ÑÐ¿ÐµÑ†Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ð¸ Ð¿Ð¾ Ð¿Ñ€Ð¾ÐµÐºÑ‚Ñƒ', 'Ð²Ð½Ðµ ÑÐ¿ÐµÑ†Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ð¸', 'Ð½ÐµÑƒÑ‡Ñ‚ÐµÐ½Ð½Ñ‹Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹', 'Ð½ÐµÑƒÑ‡Ñ‚Ñ‘Ð½Ð½Ñ‹Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹'].map(cashSourceKey)),
-  possibleWorks: new Set(['possibleWorks', 'potentialWorks', 'projectPossibleWorks', 'optionalWorks', 'worksPossibleByProject', 'Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ñ‹Ðµ Ð¿Ð¾ Ð¿Ñ€Ð¾ÐµÐºÑ‚Ñƒ', 'Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ñ‹Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹', 'Ð¿Ñ€ÐµÐ´Ð¿Ð¾Ð»Ð°Ð³Ð°ÐµÐ¼Ñ‹Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹'].map(cashSourceKey)),
-  associatedWorks: new Set(['associatedWorks', 'companionWorks', 'relatedWorks', 'hiddenWorks', 'auxiliaryWorks', 'ÑÐ¾Ð¿ÑƒÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‰Ð¸Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹', 'Ð´Ð¾Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹', 'ÑÐºÑ€Ñ‹Ñ‚Ñ‹Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹'].map(cashSourceKey)),
-  possibleEquipment: new Set(['possibleEquipment', 'potentialEquipment', 'optionalEquipment', 'equipmentPossibleByProject', 'Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾Ðµ Ð¾Ð±Ð¾Ñ€ÑƒÐ´Ð¾Ð²Ð°Ð½Ð¸Ðµ', 'Ð¿Ñ€ÐµÐ´Ð¿Ð¾Ð»Ð°Ð³Ð°ÐµÐ¼Ð¾Ðµ Ð¾Ð±Ð¾Ñ€ÑƒÐ´Ð¾Ð²Ð°Ð½Ð¸Ðµ'].map(cashSourceKey)),
-  possibleMaterials: new Set(['possibleMaterials', 'potentialMaterials', 'optionalMaterials', 'materialsPossibleByProject', 'Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ñ‹Ðµ Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ñ‹', 'Ð¿Ñ€ÐµÐ´Ð¿Ð¾Ð»Ð°Ð³Ð°ÐµÐ¼Ñ‹Ðµ Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ñ‹'].map(cashSourceKey)),
-  equipment: new Set(['equipment', 'equipmentItems', 'devices', 'projectEquipment', 'Ð¾Ð±Ð¾Ñ€ÑƒÐ´Ð¾Ð²Ð°Ð½Ð¸Ðµ', 'Ð¿Ñ€Ð¸Ð±Ð¾Ñ€Ñ‹', 'ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð°'].map(cashSourceKey)),
-  materials: new Set(['materials', 'materialItems', 'projectMaterials', 'specification', 'specifications', 'Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ñ‹', 'ÑÐ¿ÐµÑ†Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸Ñ'].map(cashSourceKey)),
-  toolsAndConsumables: new Set(['toolsAndConsumables', 'tools', 'tooling', 'instruments', 'Ð¸Ð½ÑÑ‚Ñ€ÑƒÐ¼ÐµÐ½Ñ‚ Ð¸ Ñ€Ð°ÑÑ…Ð¾Ð´Ð½Ð¸Ðº', 'Ð¸Ð½ÑÑ‚Ñ€ÑƒÐ¼ÐµÐ½Ñ‚Ñ‹', 'Ð¾ÑÐ½Ð°ÑÑ‚ÐºÐ°'].map(cashSourceKey)),
-  consumableMaterials: new Set(['consumableMaterials', 'consumables', 'associatedMaterials', 'mountingMaterials', 'Ñ€Ð°ÑÑ…Ð¾Ð´Ð½Ñ‹Ðµ Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ñ‹', 'ÑÐ¾Ð¿ÑƒÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‰Ð¸Ðµ Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ñ‹', 'Ð¼Ð¾Ð½Ñ‚Ð°Ð¶Ð½Ñ‹Ðµ Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ñ‹'].map(cashSourceKey)),
-  laborHours: new Set(['laborHours', 'labourHours', 'manHours', 'personHours', 'workHours', 'laborCosts', 'Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ¾ Ñ‡Ð°ÑÑ‹', 'Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ¾-Ñ‡Ð°ÑÑ‹', 'Ñ‚Ñ€ÑƒÐ´Ð¾Ð·Ð°Ñ‚Ñ€Ð°Ñ‚Ñ‹'].map(cashSourceKey))
-});
-
-const COMMERCIAL_PROPOSAL_GROUPS = Object.freeze({
-  specificationWorks: { label: 'specificationProjectWorks', icon: '01', count: 'quantityCount' },
-  outsideSpecificationWorks: { label: 'outsideSpecificationProjectWorks', icon: '02', count: 'quantityCount' },
-  possibleWorks: { label: 'possibleProjectWorks', icon: '03', count: 'quantityCount' },
-  associatedWorks: { label: 'proposalAssociatedWorks', icon: '04', count: 'quantityCount' },
-  equipment: { label: 'proposalEquipment', icon: 'E', count: 'quantityCount' },
-  materials: { label: 'proposalMaterialItems', icon: 'M', count: 'quantityCount' },
-  possibleEquipment: { label: 'proposalPossibleEquipmentShort', icon: '+E', count: 'quantityCount' },
-  possibleMaterials: { label: 'proposalPossibleMaterialsShort', icon: '+M', count: 'quantityCount' },
-  toolsAndConsumables: { label: 'toolsAndConsumables', icon: 'T', count: 'positionsCount' },
-  consumableMaterials: { label: 'consumableMaterials', icon: 'R', count: 'quantityCount' },
-  laborHours: { label: 'laborHourCosts', icon: 'H', count: 'quantityCount' }
-});
-
-const COMMERCIAL_PROPOSAL_RESULT_TABS = Object.freeze([
-  { id: 'smr', label: 'proposalSmr', icon: 'âš’', groups: ['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks'] },
-  { id: 'materials', label: 'proposalMaterials', icon: 'â—‡', groups: ['equipment', 'materials', 'possibleEquipment', 'possibleMaterials'] },
-  { id: 'required', label: 'proposalRequired', icon: 'ï¼‹', groups: ['toolsAndConsumables', 'consumableMaterials', 'laborHours'] }
-]);
-
-const COMMERCIAL_PROPOSAL_EDITOR_COLUMNS = Object.freeze([
-  {
-    id: 'smr', label: 'proposalSmr', icon: 'âš’',
-    groups: [
-      { id: 'specificationWorks', label: 'proposalBySpecificationShort' },
-      { id: 'outsideSpecificationWorks', label: 'proposalByProjectShort' },
-      { id: 'possibleWorks', label: 'proposalAdditionalWorksShort' },
-      { id: 'associatedWorks', label: 'proposalAssociatedShort' },
-      { id: 'my', label: 'myCommercialProposal' }
-    ]
-  },
-  {
-    id: 'materials', label: 'proposalMaterials', icon: 'â—‡',
-    groups: [
-      { id: 'equipment', label: 'proposalSpecificationEquipmentShort' },
-      { id: 'materials', label: 'proposalSpecificationMaterialsShort' },
-      { id: 'possibleEquipment', label: 'proposalPossibleEquipmentShort' },
-      { id: 'possibleMaterials', label: 'proposalPossibleMaterialsShort' },
-      { id: 'materialsMy', label: 'myCommercialProposal' }
-    ]
-  },
-  {
-    id: 'expenses', label: 'proposalOtherExpenses', icon: 'ï¼‹',
-    groups: [
-      { id: 'toolsAndConsumables', label: 'toolsAndConsumables' },
-      { id: 'consumableMaterials', label: 'consumableMaterials' },
-      { id: 'laborHours', label: 'laborHourCosts' }
-    ]
-  }
-]);
-
-function commercialProposalEntriesFromValue(value, groupKey, kind = 'project') {
-  const isWork = ['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'laborHours'].includes(groupKey);
-  const isProjectSource = ['specificationWorks', 'equipment', 'materials'].includes(groupKey);
-  const defaults = {
-    sourceKind: kind,
-    sourceName: tr(isProjectSource ? 'proposalSource' : 'identifiedByAnalysis'),
-    category: isWork ? 'work' : 'material',
-    origin: isProjectSource ? 'project' : 'analysis'
-  };
-  if (groupKey === 'laborHours') {
-    const rawTotal = typeof value === 'number' || typeof value === 'string'
-      ? value
-      : cashSourceProperty(value, ['total', 'hours', 'quantity', 'amount', 'Ñ‡Ð°ÑÑ‹', 'ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾', 'Ñ‚Ñ€ÑƒÐ´Ð¾Ð·Ð°Ñ‚Ñ€Ð°Ñ‚Ñ‹']);
-    const total = cashSourceNumber(rawTotal);
-    if (total > 0) {
-      const entry = normalizeCashSourceCatalogEntry({ name: tr('laborHourCosts'), quantity: total, unit: tr('personHoursUnit') }, defaults);
-      return entry ? [{ ...entry, origin: 'analysis' }] : [];
-    }
-  }
-  return projectEstimateEntriesFromValue(value, defaults);
-}
-
-function collectCommercialProposalGroups(rootValue, groups, kind = 'project', depth = 0) {
-  if (!rootValue || typeof rootValue !== 'object' || depth > 7) return;
-  Object.entries(rootValue).forEach(([key, child]) => {
-    const normalizedKey = cashSourceKey(key);
-    const groupKey = Object.entries(COMMERCIAL_PROPOSAL_GROUP_ALIASES).find(([, aliases]) => aliases.has(normalizedKey))?.[0];
-    if (groupKey) groups[groupKey].push(...commercialProposalEntriesFromValue(child, groupKey, kind));
-    if (child && typeof child === 'object') collectCommercialProposalGroups(child, groups, kind, depth + 1);
-  });
-}
-
-function commercialProposalCatalogGroup(entry) {
-  const key = cashSourceKey(entry.name);
-  if (/(Ñ‡ÐµÐ»Ð¾Ð²ÐµÐºÐ¾Ñ‡Ð°Ñ|Ñ‚Ñ€ÑƒÐ´Ð¾Ð·Ð°Ñ‚Ñ€Ð°Ñ‚|laborhours?|labourhours?|manhours?|personhours?)/u.test(key)) return 'laborHours';
-  if (/(Ð²Ð½ÐµÑÐ¿ÐµÑ†Ð¸Ñ„Ð¸ÐºÐ°Ñ†|Ð½ÐµÑƒÑ‡Ñ‚ÐµÐ½|Ð½ÐµÑƒÑ‡Ñ‚Ñ‘Ð½|outsidespecification|nonspecification|unlisted|unaccounted)/u.test(key)) return 'outsideSpecificationWorks';
-  if (/(Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½.*(Ð¾Ð±Ð¾Ñ€ÑƒÐ´Ð¾Ð²Ð°Ð½|Ð¿Ñ€Ð¸Ð±Ð¾Ñ€|ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²)|Ð¿Ñ€ÐµÐ´Ð¿Ð¾Ð»Ð°Ð³Ð°ÐµÐ¼.*(Ð¾Ð±Ð¾Ñ€ÑƒÐ´Ð¾Ð²Ð°Ð½|Ð¿Ñ€Ð¸Ð±Ð¾Ñ€|ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²)|possibleequipment|potentialequipment|optionalequipment)/u.test(key)) return 'possibleEquipment';
-  if (/(Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½.*Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»|Ð¿Ñ€ÐµÐ´Ð¿Ð¾Ð»Ð°Ð³Ð°ÐµÐ¼.*Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»|possiblematerials?|potentialmaterials?|optionalmaterials?)/u.test(key)) return 'possibleMaterials';
-  if (/(Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½|Ð¿Ñ€ÐµÐ´Ð¿Ð¾Ð»Ð°Ð³Ð°ÐµÐ¼|possiblework|potentialwork|optionalwork)/u.test(key)) return 'possibleWorks';
-  if (/(ÑÐ¾Ð¿ÑƒÑ‚ÑÑ‚Ð²|ÑÐºÑ€Ñ‹Ñ‚.*Ñ€Ð°Ð±Ð¾Ñ‚|associatedwork|companionwork|relatedwork|auxiliarywork|hiddenwork)/u.test(key)) return 'associatedWorks';
-  if (/(Ð¸Ð½ÑÑ‚Ñ€ÑƒÐ¼ÐµÐ½Ñ‚|Ð¾ÑÐ½Ð°ÑÑ‚|tooling|tools?)/u.test(key)) return 'toolsAndConsumables';
-  if (/(Ñ€Ð°ÑÑ…Ð¾Ð´Ð½|ÐºÑ€ÐµÐ¿ÐµÐ¶|ÐºÑ€ÐµÐ¿Ñ‘Ð¶|Ð³ÐµÑ€Ð¼ÐµÑ‚Ð¸Ðº|Ð¸Ð·Ð¾Ð»ÐµÐ½Ñ‚|consumable)/u.test(key)) return 'consumableMaterials';
-  if (/(Ð¾Ð±Ð¾Ñ€ÑƒÐ´Ð¾Ð²Ð°Ð½|Ð¿Ñ€Ð¸Ð±Ð¾Ñ€|ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²|ÑÐ²ÐµÑ‚Ð¸Ð»ÑŒÐ½Ð¸Ðº|ÑˆÐºÐ°Ñ„|Ñ‰Ð¸Ñ‚|Ð½Ð°ÑÐ¾Ñ|Ð²ÐµÐ½Ñ‚Ð¸Ð»ÑÑ‚Ð¾Ñ€|equipment|device|fixture|panel|pump|fan)/u.test(key)) return 'equipment';
-  if (entry.category === 'work' || /(Ð¼Ð¾Ð½Ñ‚Ð°Ð¶|ÑƒÑÑ‚Ð°Ð½Ð¾Ð²|Ð¿Ñ€Ð¾ÐºÐ»Ð°Ð´|Ð´ÐµÐ¼Ð¾Ð½Ñ‚Ð°Ð¶|Ð¿ÑƒÑÐºÐ¾Ð½Ð°Ð»Ð°Ð´|Ð¸ÑÐ¿Ñ‹Ñ‚Ð°Ð½|Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹|Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡|Ñ€Ð°Ð±Ð¾Ñ‚|ÑƒÑÐ»ÑƒÐ³|install|mount|laying|testing|commission|service)/u.test(key)) return 'specificationWorks';
-  return 'materials';
-}
-
-function commercialProposalBreakdown(version, kind = 'project') {
-  const groups = Object.fromEntries(Object.keys(COMMERCIAL_PROPOSAL_GROUPS).map((key) => [key, []]));
-  const roots = [
-    version?.commercialProposal,
-    version?.proposalBreakdown,
-    version?.estimateBreakdown,
-    version?.analysisData,
-    version?.analysisResult,
-    version?.result,
-    version?.extractedData,
-    version?.extraction,
-    { works: version?.works, services: version?.services, materials: version?.materials, equipment: version?.equipment, specification: version?.specification }
-  ];
-  roots.forEach((rootValue) => collectCommercialProposalGroups(rootValue, groups, kind));
-  const claimedEntries = new Set(Object.values(groups).flat().map((entry) => cashSourceKey(entry.name)));
-  cashSourceCatalogFromFileRecord(version, kind).forEach((entry) => {
-    const entryKey = cashSourceKey(entry.name);
-    if (claimedEntries.has(entryKey)) return;
-    groups[commercialProposalCatalogGroup(entry)].push(entry);
-    claimedEntries.add(entryKey);
-  });
-  Object.keys(groups).forEach((groupKey) => { groups[groupKey] = mergeProjectEstimateItems(groups[groupKey]); });
-  return groups;
-}
-
-function commercialProposalGroupMetric(groupKey, entries) {
-  if (groupKey !== 'laborHours') return entries.length;
-  const hours = entries.reduce((total, entry) => total + (Number(entry.quantity) || 0), 0);
-  return hours > 0 ? Math.round(hours * 100) / 100 : entries.length;
-}
-
-function commercialProposalGroupMarkup(groupKey, entries) {
-  const config = COMMERCIAL_PROPOSAL_GROUPS[groupKey];
-  const count = commercialProposalGroupMetric(groupKey, entries);
-  const body = entries.length
-    ? `<div class="project-estimate-list">${entries.slice(0, 200).map((entry) => `<article><span>${escapeHtml(config.icon)}</span><div><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(entry.sourceSheet || entry.sourceName || tr('identifiedByAnalysis'))}</small></div><b>${entry.quantity ? escapeHtml(String(entry.quantity)) : 'â€”'}${entry.unit ? ` ${escapeHtml(entry.unit)}` : ''}</b></article>`).join('')}</div>`
-    : `<div class="project-estimate-empty"><span>â—‡</span><p>${escapeHtml(tr('estimateGroupPending'))}</p></div>`;
-  return `<section class="project-estimate-group commercial-proposal-result-group"><header><span>${escapeHtml(config.icon)}</span><div><h4>${escapeHtml(tr(config.label))}</h4><small>${escapeHtml(tr(config.count))}: ${escapeHtml(String(count))}</small></div><b>${escapeHtml(String(count))}</b></header>${body}</section>`;
-}
-
-function commercialProposalResultMarkup(version, kind = 'project') {
-  const groups = commercialProposalBreakdown(version, kind);
-  const activeTab = COMMERCIAL_PROPOSAL_RESULT_TABS.find((tab) => tab.id === activeCommercialProposalResultTab) || COMMERCIAL_PROPOSAL_RESULT_TABS[0];
-  const summary = {
-    smr: COMMERCIAL_PROPOSAL_RESULT_TABS[0].groups.reduce((total, key) => total + groups[key].length, 0),
-    materials: COMMERCIAL_PROPOSAL_RESULT_TABS[1].groups.reduce((total, key) => total + groups[key].length, 0),
-    required: COMMERCIAL_PROPOSAL_RESULT_TABS[2].groups.reduce((total, key) => total + groups[key].length, 0)
-  };
-  const tabs = COMMERCIAL_PROPOSAL_RESULT_TABS.map((tab) => `<button class="${tab.id === activeTab.id ? 'is-active' : ''}" type="button" data-commercial-proposal-result-tab="${tab.id}" aria-selected="${String(tab.id === activeTab.id)}"><span>${tab.icon}</span><strong>${escapeHtml(tr(tab.label))}</strong><b>${summary[tab.id]}</b></button>`).join('');
-  const totals = COMMERCIAL_PROPOSAL_RESULT_TABS.map((tab) => `<span><b>${summary[tab.id]}</b><small>${escapeHtml(tr(tab.label))}</small></span>`).join('');
-  return `<section class="commercial-proposal-intelligence"><header><div><span class="eyebrow">STRUCTOS INTELLIGENCE</span><h3>${escapeHtml(tr('foundByIntelligence'))}</h3><p>${escapeHtml(tr('proposalFoundSummary'))}</p></div><div>${totals}</div></header><nav class="commercial-proposal-result-tabs" aria-label="${escapeHtml(tr('commercialProposal'))}">${tabs}</nav><div class="commercial-proposal-result-groups is-${activeTab.id}">${activeTab.groups.map((groupKey) => commercialProposalGroupMarkup(groupKey, groups[groupKey])).join('')}</div></section>`;
-}
-
-function commercialProposalEditorGroupConfig(groupId) {
-  for (const column of COMMERCIAL_PROPOSAL_EDITOR_COLUMNS) {
-    const group = column.groups.find((item) => item.id === groupId);
-    if (group) return { ...group, columnId: column.id, columnLabel: column.label };
-  }
-  return null;
-}
-
-function isCommercialProposalMyGroup(groupId) {
-  return groupId === 'my' || groupId === 'materialsMy';
-}
-
-function commercialProposalWorkspaceState(proposal) {
-  if (!proposal.workspace || typeof proposal.workspace !== 'object' || !proposal.workspace.itemValues || !Array.isArray(proposal.workspace.customItems) || !Array.isArray(proposal.workspace.myItems) || !proposal.workspace.contacts || !proposal.workspace.laborSettings || typeof proposal.workspace.laborSettings.itemHours !== 'object') {
-    proposal.workspace = normalizeCommercialProposalWorkspace(proposal.workspace);
-  }
-  return proposal.workspace;
-}
-
-function commercialProposalLineId(groupId, entry, index) {
-  const source = `${groupId}\u0000${entry?.name || ''}\u0000${entry?.unit || ''}\u0000${entry?.sourceSheet || ''}\u0000${entry?.sourceName || ''}`;
-  let hash = 2166136261;
-  for (let position = 0; position < source.length; position += 1) {
-    hash ^= source.charCodeAt(position);
-    hash = Math.imul(hash, 16777619);
-  }
-  return `cp-${groupId}-${(hash >>> 0).toString(36)}-${index}`;
-}
-
-function commercialProposalEntryWithState(entry, id, sourceGroup, state) {
-  const saved = state.itemValues[id];
-  const hasQuantity = saved && Object.prototype.hasOwnProperty.call(saved, 'quantity');
-  const hasPrice = saved && Object.prototype.hasOwnProperty.call(saved, 'price');
-  return {
-    id,
-    sourceGroup,
-    name: String(entry?.name || '').trim(),
-    unit: String(entry?.unit || '').trim(),
-    quantity: hasQuantity ? commercialProposalWorkspaceNumber(saved.quantity) : commercialProposalWorkspaceNumber(entry?.quantity),
-    price: hasPrice ? commercialProposalWorkspaceNumber(saved.price) : commercialProposalWorkspaceNumber(entry?.price),
-    sourceName: String(entry?.sourceName || '').trim(),
-    sourceSheet: String(entry?.sourceSheet || '').trim(),
-    projectSource: saved?.projectSource === 'spec' || saved?.projectSource === 'project'
-      ? saved.projectSource
-      : entry?.projectSource === 'spec' ? 'spec' : 'project',
-    associatedFor: String(saved?.associatedFor ?? entry?.associatedFor ?? '').trim().slice(0, 240),
-    custom: Boolean(entry?.custom)
-  };
-}
-
-function commercialProposalEntriesForGroup(proposal, groupId, groups = null) {
-  const state = commercialProposalWorkspaceState(proposal);
-  if (groupId === 'my') {
-    const workGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'my']);
-    return state.myItems.filter((entry) => workGroups.has(entry.sourceGroup)).map((entry) => commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state));
-  }
-  if (groupId === 'materialsMy') {
-    const materialGroups = new Set(['equipment', 'materials', 'possibleEquipment', 'possibleMaterials', 'materialsMy']);
-    return state.myItems.filter((entry) => materialGroups.has(entry.sourceGroup)).map((entry) => commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state));
-  }
-  if (groupId === 'laborHours') {
-    const workGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'my']);
-    const myWorkEntries = state.myItems.filter((entry) => workGroups.has(entry.sourceGroup)).map((entry) => ({ ...commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state), laborOrigin: 'my' }));
-    const sourceGroups = groups || commercialProposalBreakdown(latestDocumentVersion(proposal.file), proposal.kind);
-    const specificationEntries = commercialProposalEntriesForGroup(proposal, 'specificationWorks', sourceGroups).map((entry) => ({ ...entry, laborOrigin: 'specification' }));
-    const knownIds = new Set(specificationEntries.map((entry) => entry.id));
-    const knownLines = new Set(specificationEntries.map((entry) => `${cashSourceKey(entry.name)}\u0000${cashSourceKey(entry.unit)}`));
-    const uniqueMyWorkEntries = myWorkEntries.filter((entry) => !knownIds.has(entry.id) && !knownLines.has(`${cashSourceKey(entry.name)}\u0000${cashSourceKey(entry.unit)}`));
-    const customLaborEntries = state.customItems.filter((entry) => entry.sourceGroup === groupId).map((entry) => ({ ...commercialProposalEntryWithState(entry, entry.id, groupId, state), laborOrigin: 'custom' }));
-    return [...specificationEntries, ...uniqueMyWorkEntries, ...customLaborEntries];
-  }
-  const sourceGroups = groups || commercialProposalBreakdown(latestDocumentVersion(proposal.file), proposal.kind);
-  if (groupId === 'outsideSpecificationWorks') {
-    const specificationEntries = (sourceGroups.specificationWorks || []).map((entry, index) => commercialProposalEntryWithState(
-      { ...entry, projectSource: 'spec' },
-      commercialProposalLineId('outsideSpecificationWorks-spec', entry, index),
-      groupId,
-      state
-    ));
-    const projectEntries = (sourceGroups.outsideSpecificationWorks || []).map((entry, index) => commercialProposalEntryWithState(
-      { ...entry, projectSource: 'project' },
-      commercialProposalLineId(groupId, entry, index),
-      groupId,
-      state
-    ));
-    const customEntries = state.customItems.filter((entry) => entry.sourceGroup === groupId).map((entry) => commercialProposalEntryWithState(entry, entry.id, groupId, state));
-    return [...specificationEntries, ...projectEntries, ...customEntries];
-  }
-  const extractedEntries = (sourceGroups[groupId] || []).map((entry, index) => commercialProposalEntryWithState(entry, commercialProposalLineId(groupId, entry, index), groupId, state));
-  const customEntries = state.customItems.filter((entry) => entry.sourceGroup === groupId).map((entry) => commercialProposalEntryWithState(entry, entry.id, groupId, state));
-  return [...extractedEntries, ...customEntries];
-}
-
-function commercialProposalRoundMoney(value) {
-  return Math.round(((Number(value) || 0) + Number.EPSILON) * 100) / 100;
-}
-
-function commercialProposalLineAmounts(quantity, price, modeIds = []) {
-  const selectedModeIds = normalizeCommercialProposalTaxModes(modeIds);
-  const modes = selectedModeIds.map((id) => ({ id, ...COMMERCIAL_PROPOSAL_PRICE_MODES[id] }));
-  const direction = modes[0]?.direction || 'none';
-  const unitBase = commercialProposalWorkspaceNumber(price);
-  const base = commercialProposalRoundMoney(commercialProposalWorkspaceNumber(quantity) * unitBase);
-  const unitTaxes = modes.map((mode) => ({
-    id: mode.id,
-    amount: mode.direction === 'subtract'
-      ? commercialProposalRoundMoney(unitBase * mode.rate / (1 + mode.rate))
-      : commercialProposalRoundMoney(unitBase * mode.rate)
-  }));
-  const unitTax = commercialProposalRoundMoney(unitTaxes.reduce((total, item) => total + item.amount, 0));
-  const unitFinal = direction === 'subtract'
-    ? commercialProposalRoundMoney(unitBase - unitTax)
-    : direction === 'add'
-      ? commercialProposalRoundMoney(unitBase + unitTax)
-      : unitBase;
-  const taxes = modes.map((mode) => ({
-    id: mode.id,
-    amount: mode.direction === 'subtract'
-      ? commercialProposalRoundMoney(base * mode.rate / (1 + mode.rate))
-      : commercialProposalRoundMoney(base * mode.rate)
-  }));
-  const tax = commercialProposalRoundMoney(taxes.reduce((total, item) => total + item.amount, 0));
-  const final = direction === 'subtract'
-    ? commercialProposalRoundMoney(base - tax)
-    : direction === 'add'
-      ? commercialProposalRoundMoney(base + tax)
-      : base;
-  return { unitBase, unitTaxes, unitTax, unitFinal, base, taxes, tax, final, direction };
-}
-
-function commercialProposalModeShortLabel(modeId) {
-  const label = tr((COMMERCIAL_PROPOSAL_PRICE_MODES[modeId] || COMMERCIAL_PROPOSAL_PRICE_MODES.cash).label);
-  return label.includes(':') ? label.slice(label.indexOf(':') + 1).trim() : label;
-}
-
-function commercialProposalCombinedTaxLabel(modeIds) {
-  return normalizeCommercialProposalTaxModes(modeIds).map((modeId) => commercialProposalModeShortLabel(modeId)).join(' + ');
-}
-
-function commercialProposalTaxAmount(amounts, modeId) {
-  return amounts.taxes.find((item) => item.id === modeId)?.amount || 0;
-}
-
-function commercialProposalPriceCharacterWidth(value) {
-  const length = String(value ?? '').replace(/[^0-9.,-]/g, '').length;
-  return Math.min(20, Math.max(4, length + 1));
-}
-
-function commercialProposalCompactColumnWidth(values = []) {
-  const longest = values.reduce((maximum, value) => Math.max(maximum, String(value ?? '').replace(/\s+/g, ' ').trim().length), 1);
-  return Math.min(118, Math.max(48, Math.ceil(16 + longest * 6.4)));
-}
-
-function commercialProposalRefreshRenderedPriceColumns(table) {
-  if (!table) return;
-  const priceColumns = $$('col[data-proposal-price-column]', table);
-  const priceWidth = priceColumns.reduce((total, column) => {
-    const index = column.dataset.proposalPriceColumn;
-    const values = $$('[data-proposal-price-column-index="' + index + '"]', table).map((cell) => $('input', cell)?.value || cell.textContent || '');
-    const width = commercialProposalCompactColumnWidth(values);
-    column.style.width = width + 'px';
-    return total + width;
-  }, 0);
-  const fixedWidth = Number(table.dataset.proposalFixedWidth) || 0;
-  table.style.setProperty('--proposal-table-min-width', Math.ceil(fixedWidth + priceWidth) + 'px');
-}
-
-function commercialProposalPriceModeMarkup(state) {
-  const selectedModes = normalizeCommercialProposalTaxModes(state.taxModes);
-  const option = (id) => {
-    const checked = id === 'cash' ? !selectedModes.length : selectedModes.includes(id);
-    return `<label class="${checked ? 'is-active' : ''}"><input type="checkbox" value="${id}" data-proposal-price-mode${checked ? ' checked' : ''} /><span aria-hidden="true">âœ“</span><strong>${escapeHtml(tr(COMMERCIAL_PROPOSAL_PRICE_MODES[id].label))}</strong></label>`;
-  };
-  return `<fieldset class="commercial-proposal-price-modes"><legend>${escapeHtml(tr('proposalPriceMode'))}</legend><div class="proposal-price-mode-groups"><section class="is-cash">${option('cash')}</section><section><h3>${escapeHtml(tr('pricesWithTax'))}</h3>${option('includedVat22')}${option('includedTax6')}${option('includedVat5')}</section><section><h3>${escapeHtml(tr('pricesWithoutTax'))}</h3>${option('excludedVat22')}${option('excludedVat5')}${option('excludedTax6')}</section></div></fieldset>`;
-}
-
-function commercialProposalGroupHintMarkup(groupId) {
-  const hintKey = {
-    specificationWorks: 'proposalSpecificationWorksHint',
-    outsideSpecificationWorks: 'proposalProjectGroupHint',
-    possibleWorks: 'proposalAdditionalWorksHint',
-    associatedWorks: 'proposalAssociatedWorksHint',
-    my: 'proposalMyWorksHint',
-    equipment: 'proposalEquipmentHint',
-    materials: 'proposalMaterialsHint',
-    possibleEquipment: 'proposalPossibleEquipmentHint',
-    possibleMaterials: 'proposalPossibleMaterialsHint',
-    materialsMy: 'proposalMyWorksHint',
-    toolsAndConsumables: 'proposalToolsHint',
-    consumableMaterials: 'proposalConsumableMaterialsHint',
-    laborHours: 'proposalLaborHoursHint'
-  }[groupId];
-  return hintKey ? `<div class="commercial-proposal-group-hint"><span aria-hidden="true">i</span><p>${escapeHtml(tr(hintKey))}</p></div>` : '';
-}
-
-function commercialProposalContactsMarkup(state) {
-  const contacts = state.contacts || normalizeCommercialProposalWorkspace(null).contacts;
-  const field = (key, labelKey, value, options = {}) => `<label><span>${escapeHtml(tr(labelKey))}</span><input type="${options.type || 'text'}" maxlength="${options.maxlength || 160}" value="${escapeHtml(value || '')}" placeholder="${escapeHtml(tr(labelKey))}" autocomplete="${options.autocomplete || 'off'}" data-proposal-contact="${key}" /></label>`;
-  return `<section class="commercial-proposal-contacts"><header><span aria-hidden="true">âœ¦</span><div><small>ÐšÐŸ</small><h2>${escapeHtml(tr('proposalPartiesHeading'))}</h2></div></header><div><article><h3>${escapeHtml(tr('proposalSender'))}</h3>${field('senderName', 'proposalSenderName', contacts.senderName, { autocomplete: 'name' })}${field('senderOrganization', 'proposalSenderOrganization', contacts.senderOrganization, { maxlength: 200, autocomplete: 'organization' })}${field('senderPhone', 'proposalSenderPhone', contacts.senderPhone, { type: 'tel', maxlength: 60, autocomplete: 'tel' })}</article><article><h3>${escapeHtml(tr('proposalRecipient'))}</h3>${field('recipientName', 'proposalRecipientName', contacts.recipientName)}${field('recipientOrganization', 'proposalRecipientOrganization', contacts.recipientOrganization, { maxlength: 200 })}</article></div></section>`;
-}
-
-function commercialProposalTableMarkup(proposal, groupId, entries) {
-  const state = commercialProposalWorkspaceState(proposal);
-  const selectedModeIds = normalizeCommercialProposalTaxModes(state.taxModes);
-  const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[selectedModeIds[0]]?.direction || 'none';
-  const myIds = new Set(state.myItems.map((item) => item.id));
-  const combinedTaxLabel = commercialProposalCombinedTaxLabel(selectedModeIds);
-  const specialHead = groupId === 'outsideSpecificationWorks'
-    ? `<th class="proposal-line-meta-head">${escapeHtml(tr('proposalSpecProjectColumn'))}</th>`
-    : groupId === 'associatedWorks' ? `<th class="proposal-line-meta-head">${escapeHtml(tr('proposalAssociatedForColumn'))}</th>` : '';
-  const priceHeads = direction === 'subtract'
-    ? `<th class="proposal-price-column-head">${escapeHtml(tr('includedUnitPriceWithoutTax'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('includedTotalWithoutTax'))}</th><th class="proposal-price-column-head">${escapeHtml(`${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}`)}</th><th class="proposal-price-column-head">${escapeHtml(`${tr('includedTotalWithTax')} ${combinedTaxLabel}`)}</th>`
-    : direction === 'add'
-      ? `<th class="proposal-price-column-head">${escapeHtml(tr('excludedUnitPriceWithoutTax'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('excludedTotalWithoutTax'))}</th><th class="proposal-price-column-head">${escapeHtml(`${tr('excludedUnitPriceWithTax')} ${combinedTaxLabel}`)}</th><th class="proposal-price-column-head">${escapeHtml(`${tr('excludedTotalWithTax')} ${combinedTaxLabel}`)}</th>`
-      : `<th class="proposal-price-column-head">${escapeHtml(tr('price'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('proposalGrossPrice'))}</th>`;
-  const actionHead = isCommercialProposalMyGroup(groupId) ? '' : escapeHtml(tr('sendToMyProposal'));
-  const rows = entries.map((entry, index) => {
-    const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds);
-    const source = entry.custom ? tr('ownProposalPosition') : entry.sourceSheet || entry.sourceName || tr('identifiedByAnalysis');
-    const priceInputLabel = direction === 'subtract'
-      ? `${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}`
-      : direction === 'add' ? tr('excludedUnitPriceWithoutTax') : tr('price');
-    const priceInput = `<input class="proposal-number-input" style="--proposal-price-ch:${commercialProposalPriceCharacterWidth(entry.price)}" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.price ? escapeHtml(String(entry.price)) : ''}" placeholder="0" data-proposal-line-value="price" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(priceInputLabel)}" />`;
-    const priceCells = direction === 'subtract'
-      ? `<td class="is-money proposal-price-value-cell" data-proposal-price-column-index="0" data-proposal-net-unit>${escapeHtml(formatMoney(amounts.unitFinal))}</td><td class="is-money is-total proposal-price-value-cell" data-proposal-price-column-index="1" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td><td class="proposal-price-input-cell" data-proposal-price-column-index="2">${priceInput}</td><td class="is-money proposal-price-value-cell" data-proposal-price-column-index="3" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td>`
-      : direction === 'add'
-        ? `<td class="proposal-price-input-cell" data-proposal-price-column-index="0">${priceInput}</td><td class="is-money proposal-price-value-cell" data-proposal-price-column-index="1" data-proposal-base-total>${escapeHtml(formatMoney(amounts.base))}</td><td class="is-money proposal-price-value-cell" data-proposal-price-column-index="2" data-proposal-gross-unit>${escapeHtml(formatMoney(amounts.unitFinal))}</td><td class="is-money is-total proposal-price-value-cell" data-proposal-price-column-index="3" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`
-        : `<td class="proposal-price-input-cell" data-proposal-price-column-index="0">${priceInput}</td><td class="is-money is-total proposal-price-value-cell" data-proposal-price-column-index="1" data-proposal-final-total>${escapeHtml(formatMoney(amounts.final))}</td>`;
-    const specialCell = groupId === 'outsideSpecificationWorks'
-      ? `<td class="proposal-line-meta-cell"><select data-proposal-line-meta="projectSource" data-proposal-line-meta-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('proposalSpecProjectColumn'))}"><option value="spec"${entry.projectSource === 'spec' ? ' selected' : ''}>${escapeHtml(tr('proposalSpecShort'))}</option><option value="project"${entry.projectSource !== 'spec' ? ' selected' : ''}>${escapeHtml(tr('proposalProjectShort'))}</option></select></td>`
-      : groupId === 'associatedWorks'
-        ? `<td class="proposal-line-meta-cell is-associated"><input type="text" maxlength="240" value="${escapeHtml(entry.associatedFor)}" placeholder="${escapeHtml(tr('proposalAssociatedForPlaceholder'))}" data-proposal-line-meta="associatedFor" data-proposal-line-meta-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('proposalAssociatedForColumn'))}" /></td>`
-        : '';
-    const removeCustom = entry.custom ? `<button class="proposal-my-remove" type="button" data-remove-proposal-custom-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('deleteOwnProposalPosition'))}" title="${escapeHtml(tr('deleteOwnProposalPosition'))}">Ã—</button>` : '';
-    const action = isCommercialProposalMyGroup(groupId)
-      ? `<button class="proposal-my-remove" type="button" data-remove-proposal-my-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('removeFromMyProposal'))}" title="${escapeHtml(tr('removeFromMyProposal'))}">Ã—</button>`
-      : `<div class="proposal-line-controls"><label class="proposal-send-to-my"><input type="checkbox" data-proposal-send-to-my="${escapeHtml(entry.id)}"${myIds.has(entry.id) ? ' checked' : ''} aria-label="${escapeHtml(`${tr('sendToMyProposal')}: ${entry.name}`)}" /><span aria-hidden="true">âœ“</span></label>${removeCustom}</div>`;
-    return `<tr data-proposal-line-row data-proposal-line-id="${escapeHtml(entry.id)}"><td class="proposal-line-number">${index + 1}</td><td class="proposal-line-name"><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(source)}</small></td><td class="proposal-line-unit">${escapeHtml(entry.unit || 'â€”')}</td><td class="proposal-line-quantity"><input class="proposal-number-input proposal-quantity-input" type="number" min="0" step="0.01" inputmode="decimal" value="${entry.quantity ? escapeHtml(String(entry.quantity)) : ''}" placeholder="0" data-proposal-line-value="quantity" data-proposal-line-value-id="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('quantity'))}" /></td>${specialCell}${priceCells}<td class="proposal-line-action">${action}</td></tr>`;
-  }).join('');
-  const specialColumnCount = specialHead ? 1 : 0;
-  const columnCount = (direction === 'subtract' || direction === 'add' ? 9 : 7) + specialColumnCount;
-  if (!entries.length) {
-    const emptyConfig = commercialProposalEditorGroupConfig(groupId);
-    return `<div class="commercial-proposal-table-empty"><span>â—‡</span><h3>${escapeHtml(tr(isCommercialProposalMyGroup(groupId) ? 'myCommercialProposal' : emptyConfig?.label || 'proposalWorkspaceTitle'))}</h3><p>${escapeHtml(tr(isCommercialProposalMyGroup(groupId) ? 'emptyMyProposal' : 'emptyProposalGroup'))}</p></div>`;
-  }
-  const lineAmounts = entries.map((entry) => commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds));
-  const priceColumnValues = direction === 'subtract'
-    ? [
-        lineAmounts.map((amounts) => formatMoney(amounts.unitFinal)),
-        lineAmounts.map((amounts) => formatMoney(amounts.final)),
-        entries.map((entry) => entry.price || ''),
-        lineAmounts.map((amounts) => formatMoney(amounts.base))
-      ]
-    : direction === 'add'
-      ? [
-          entries.map((entry) => entry.price || ''),
-          lineAmounts.map((amounts) => formatMoney(amounts.base)),
-          lineAmounts.map((amounts) => formatMoney(amounts.unitFinal)),
-          lineAmounts.map((amounts) => formatMoney(amounts.final))
-        ]
-      : [
-          entries.map((entry) => entry.price || ''),
-          lineAmounts.map((amounts) => formatMoney(amounts.final))
-        ];
-  const priceColumnWidths = priceColumnValues.map((values) => commercialProposalCompactColumnWidth(values));
-  const specialColumnWidth = groupId === 'associatedWorks' ? 168 : groupId === 'outsideSpecificationWorks' ? 96 : 0;
-  const actionColumnWidth = isCommercialProposalMyGroup(groupId) ? 52 : 82;
-  const fixedColumnWidth = 38 + 58 + 68 + specialColumnWidth + actionColumnWidth + 320;
-  const tableMinWidth = fixedColumnWidth + priceColumnWidths.reduce((total, width) => total + width, 0);
-  const columnLayout = `<colgroup><col style="width:38px" /><col /><col style="width:58px" /><col style="width:68px" />${specialColumnWidth ? `<col style="width:${specialColumnWidth}px" />` : ''}${priceColumnWidths.map((width, index) => `<col data-proposal-price-column="${index}" style="width:${width}px" />`).join('')}<col style="width:${actionColumnWidth}px" /></colgroup>`;
-  const taxSummaries = selectedModeIds.map((modeId) => `<span>${escapeHtml(commercialProposalModeShortLabel(modeId))}: <b data-proposal-tax-grand-total="${escapeHtml(modeId)}">${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + commercialProposalTaxAmount(amounts, modeId), 0)))}</b></span>`).join('');
-  const totalLabel = direction === 'subtract' ? 'includedTotalWithoutTax' : direction === 'add' ? 'priceTotalWithTax' : 'totalProposalPrice';
-  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table is-compact-proposal-table has-${selectedModeIds.length}-taxes${direction === 'subtract' ? ' is-included-tax' : direction === 'add' ? ' is-added-tax' : ''}${specialHead ? ' has-special-column' : ''}" data-proposal-compact-table data-proposal-fixed-width="${fixedColumnWidth}" style="--proposal-table-min-width:${tableMinWidth}px">${columnLayout}<thead><tr><th class="proposal-line-number">â„–</th><th class="proposal-line-name-head">${escapeHtml(tr('proposalLineName'))}</th><th class="proposal-line-unit-head">${escapeHtml(tr('proposalUnitShort'))}</th><th class="proposal-line-quantity-head">${escapeHtml(tr('proposalQuantityShort'))}</th>${specialHead}${priceHeads}<th class="proposal-line-action-head">${actionHead}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="${columnCount}"><span>${escapeHtml(tr('totalWorkTypes'))}: <b data-proposal-types-total>${entries.length}</b></span>${taxSummaries}<span>${escapeHtml(tr(totalLabel))}: <b data-proposal-price-grand-total>${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + amounts.final, 0)))}</b></span></td></tr></tfoot></table></div>`;
-}
-
-function commercialProposalLaborHourlyRate(state) {
-  const settings = state.laborSettings;
-  return settings.workdayHours > 0 ? commercialProposalRoundMoney(settings.dailyCost / settings.workdayHours) : 0;
-}
-
-function commercialProposalLaborLineAmounts(entry, state) {
-  const quantity = commercialProposalWorkspaceNumber(entry.quantity);
-  const workHours = commercialProposalWorkspaceNumber(state.laborSettings.itemHours[entry.id]);
-  const hourlyRate = commercialProposalLaborHourlyRate(state);
-  const totalHours = commercialProposalRoundMoney(workHours);
-  const total = commercialProposalRoundMoney(totalHours * hourlyRate);
-  return { quantity, workHours, hourlyRate, totalHours, total };
-}
-
-function commercialProposalLaborSettingsMarkup(state) {
-  const settings = state.laborSettings;
-  return `<section class="commercial-proposal-labor-settings"><header><span aria-hidden="true">H</span><div><h3>${escapeHtml(tr('laborCalculationTitle'))}</h3><p>${escapeHtml(tr('laborCalculationFormula'))}</p></div></header><div><label><span>${escapeHtml(tr('employeeDailyCost'))}</span><div><input type="number" min="0" step="0.01" inputmode="decimal" value="${settings.dailyCost ? escapeHtml(String(settings.dailyCost)) : ''}" placeholder="0" data-proposal-labor-setting="dailyCost" /><b>â‚½</b></div></label><label><span>${escapeHtml(tr('workingHoursPerDay'))}</span><div><input type="number" min="0" step="0.01" inputmode="decimal" value="${settings.workdayHours ? escapeHtml(String(settings.workdayHours)) : ''}" placeholder="0" data-proposal-labor-setting="workdayHours" /><b>${escapeHtml(tr('hoursUnit'))}</b></div></label><output><span>${escapeHtml(tr('hourlyEmployeeCost'))}</span><strong data-proposal-labor-hourly-rate>${escapeHtml(formatMoney(commercialProposalLaborHourlyRate(state)))}</strong></output></div></section>`;
-}
-
-function commercialProposalLaborTableMarkup(proposal, entries) {
-  const state = commercialProposalWorkspaceState(proposal);
-  if (!entries.length) {
-    return `<div class="commercial-proposal-table-empty"><span>H</span><h3>${escapeHtml(tr('laborHourCosts'))}</h3><p>${escapeHtml(tr('emptyLaborProposal'))}</p></div>`;
-  }
-  const rows = entries.map((entry, index) => {
-    const amounts = commercialProposalLaborLineAmounts(entry, state);
-    const source = entry.laborOrigin === 'custom'
-      ? tr('ownProposalPosition')
-      : entry.laborOrigin === 'specification' ? tr('laborWorksFromSpecification') : tr('laborWorksFromMyProposal');
-    const remove = entry.laborOrigin === 'custom' ? `<button class="proposal-labor-remove" type="button" data-remove-proposal-custom-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('deleteOwnProposalPosition'))}" title="${escapeHtml(tr('deleteOwnProposalPosition'))}">Ã—</button>` : '';
-    return `<tr data-proposal-labor-row data-proposal-line-id="${escapeHtml(entry.id)}"><td class="proposal-line-number">${index + 1}</td><td class="proposal-line-name"><div class="proposal-labor-name"><span><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(source)}</small></span>${remove}</div></td><td class="proposal-line-unit">${escapeHtml(entry.unit || 'â€”')}</td><td class="proposal-labor-quantity proposal-line-quantity">${amounts.quantity ? escapeHtml(new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(amounts.quantity)) : 'â€”'}</td><td class="proposal-labor-hours"><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${amounts.workHours ? escapeHtml(String(amounts.workHours)) : ''}" placeholder="0" data-proposal-labor-work-hours="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('workHours'))}" /></td><td class="is-money" data-proposal-price-column-index="0" data-proposal-labor-row-rate>${escapeHtml(formatMoney(amounts.hourlyRate))}</td><td class="is-money is-total" data-proposal-price-column-index="1" data-proposal-labor-row-total>${escapeHtml(formatMoney(amounts.total))}</td></tr>`;
-  }).join('');
-  const totalHours = entries.reduce((total, entry) => total + commercialProposalLaborLineAmounts(entry, state).totalHours, 0);
-  const totalCost = entries.reduce((total, entry) => total + commercialProposalLaborLineAmounts(entry, state).total, 0);
-  const laborAmounts = entries.map((entry) => commercialProposalLaborLineAmounts(entry, state));
-  const laborPriceWidths = [
-    commercialProposalCompactColumnWidth(laborAmounts.map((amounts) => formatMoney(amounts.hourlyRate))),
-    commercialProposalCompactColumnWidth(laborAmounts.map((amounts) => formatMoney(amounts.total)))
-  ];
-  const laborFixedWidth = 38 + 58 + 68 + 68 + 320;
-  const laborTableMinWidth = laborFixedWidth + laborPriceWidths.reduce((total, width) => total + width, 0);
-  const laborColumnLayout = `<colgroup><col style="width:38px" /><col /><col style="width:58px" /><col style="width:68px" /><col style="width:68px" />${laborPriceWidths.map((width, index) => `<col data-proposal-price-column="${index}" style="width:${width}px" />`).join('')}</colgroup>`;
-  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table commercial-proposal-labor-table is-compact-proposal-table" data-proposal-compact-table data-proposal-fixed-width="${laborFixedWidth}" style="--proposal-table-min-width:${laborTableMinWidth}px">${laborColumnLayout}<thead><tr><th class="proposal-line-number">â„–</th><th class="proposal-line-name-head">${escapeHtml(tr('laborWorkName'))}</th><th class="proposal-line-unit-head">${escapeHtml(tr('proposalUnitShort'))}</th><th class="proposal-line-quantity-head">${escapeHtml(tr('proposalQuantityShort'))}</th><th>${escapeHtml(tr('workHours'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('hourlyEmployeeCost'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('totalLaborCost'))}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="7"><span>${escapeHtml(tr('totalWorkTypes'))}: <b>${entries.length}</b></span><span>${escapeHtml(tr('totalManHours'))}: <b data-proposal-labor-total-hours>${escapeHtml(new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(totalHours))}</b></span><span>${escapeHtml(tr('totalLaborCost'))}: <b data-proposal-labor-grand-total>${escapeHtml(formatMoney(commercialProposalRoundMoney(totalCost)))}</b></span></td></tr></tfoot></table></div>`;
-}
-
-function commercialProposalColumnsMarkup(proposal, groups) {
-  return `<nav class="commercial-proposal-editor-columns" aria-label="${escapeHtml(tr('proposalWorkspaceTitle'))}">${COMMERCIAL_PROPOSAL_EDITOR_COLUMNS.map((column) => {
-    const columnCount = column.groups.filter((group) => !isCommercialProposalMyGroup(group.id)).reduce((total, group) => total + commercialProposalEntriesForGroup(proposal, group.id, groups).length, 0);
-    const buttons = column.groups.map((group) => {
-      const count = commercialProposalEntriesForGroup(proposal, group.id, groups).length;
-      const active = activeCommercialProposalGroup === group.id;
-      return `<button class="${active ? 'is-active' : ''}" type="button" data-proposal-workspace-group="${group.id}" data-proposal-workspace-column="${column.id}" aria-pressed="${String(active)}"><span>${escapeHtml(tr(group.label))}</span><b>${count}</b></button>`;
-    }).join('');
-    return `<section class="commercial-proposal-editor-column is-${column.id}${activeCommercialProposalColumn === column.id ? ' is-active' : ''}"><header><span aria-hidden="true">${column.icon}</span><div><strong>${escapeHtml(tr(column.label))}</strong><small>${columnCount} Â· ${escapeHtml(tr('proposalFragmentPositions'))}</small></div></header><div>${buttons}</div></section>`;
-  }).join('')}</nav>`;
-}
-
-function updateCommercialProposalTableCalculations(scope, proposal) {
-  const state = commercialProposalWorkspaceState(proposal);
-  const selectedModeIds = normalizeCommercialProposalTaxModes(state.taxModes);
-  const taxTotals = Object.fromEntries(selectedModeIds.map((modeId) => [modeId, 0]));
-  let priceTotal = 0;
-  const rows = $$('[data-proposal-line-row]', scope);
-  rows.forEach((row) => {
-    const quantity = commercialProposalWorkspaceNumber($('[data-proposal-line-value="quantity"]', row)?.value);
-    const price = commercialProposalWorkspaceNumber($('[data-proposal-line-value="price"]', row)?.value);
-    const amounts = commercialProposalLineAmounts(quantity, price, selectedModeIds);
-    const netUnitCell = $('[data-proposal-net-unit]', row);
-    const grossUnitCell = $('[data-proposal-gross-unit]', row);
-    const baseCell = $('[data-proposal-base-total]', row);
-    const finalCell = $('[data-proposal-final-total]', row);
-    if (netUnitCell) netUnitCell.textContent = formatMoney(amounts.unitFinal);
-    if (grossUnitCell) grossUnitCell.textContent = formatMoney(amounts.unitFinal);
-    if (baseCell) baseCell.textContent = formatMoney(amounts.base);
-    selectedModeIds.forEach((modeId) => {
-      const taxAmount = commercialProposalTaxAmount(amounts, modeId);
-      const taxCell = $(`[data-proposal-tax-total="${modeId}"]`, row);
-      if (taxCell) taxCell.textContent = formatMoney(taxAmount);
-      taxTotals[modeId] += taxAmount;
-    });
-    if (finalCell) finalCell.textContent = formatMoney(amounts.final);
-    priceTotal += amounts.final;
-  });
-  const typesTotal = $('[data-proposal-types-total]', scope);
-  const priceGrandTotal = $('[data-proposal-price-grand-total]', scope);
-  if (typesTotal) typesTotal.textContent = String(rows.length);
-  selectedModeIds.forEach((modeId) => {
-    const taxGrandTotal = $(`[data-proposal-tax-grand-total="${modeId}"]`, scope);
-    if (taxGrandTotal) taxGrandTotal.textContent = formatMoney(commercialProposalRoundMoney(taxTotals[modeId]));
-  });
-  if (priceGrandTotal) priceGrandTotal.textContent = formatMoney(commercialProposalRoundMoney(priceTotal));
-  $$('[data-proposal-compact-table]', scope).forEach((table) => commercialProposalRefreshRenderedPriceColumns(table));
-}
-
-function updateCommercialProposalLaborCalculations(scope, proposal) {
-  const state = commercialProposalWorkspaceState(proposal);
-  const hourlyRate = commercialProposalLaborHourlyRate(state);
-  const entriesById = new Map(commercialProposalEntriesForGroup(proposal, 'laborHours').map((entry) => [entry.id, entry]));
-  let totalHours = 0;
-  let totalCost = 0;
-  $$('[data-proposal-labor-row]', scope).forEach((row) => {
-    const itemId = row.dataset.proposalLineId;
-    const entry = {
-      id: itemId,
-      quantity: entriesById.get(itemId)?.quantity || 0
-    };
-    const amounts = commercialProposalLaborLineAmounts(entry, state);
-    $('[data-proposal-labor-row-rate]', row).textContent = formatMoney(amounts.hourlyRate);
-    $('[data-proposal-labor-row-total]', row).textContent = formatMoney(amounts.total);
-    totalHours += amounts.totalHours;
-    totalCost += amounts.total;
-  });
-  const hourlyRateOutput = $('[data-proposal-labor-hourly-rate]', scope);
-  const totalHoursOutput = $('[data-proposal-labor-total-hours]', scope);
-  const totalCostOutput = $('[data-proposal-labor-grand-total]', scope);
-  if (hourlyRateOutput) hourlyRateOutput.textContent = formatMoney(hourlyRate);
-  if (totalHoursOutput) totalHoursOutput.textContent = new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(commercialProposalRoundMoney(totalHours));
-  if (totalCostOutput) totalCostOutput.textContent = formatMoney(commercialProposalRoundMoney(totalCost));
-  $$('[data-proposal-compact-table]', scope).forEach((table) => commercialProposalRefreshRenderedPriceColumns(table));
-}
-
-function saveCommercialProposalMySelection(proposal, groupId, entries, scope) {
-  const state = commercialProposalWorkspaceState(proposal);
-  const selectedIds = new Set($$('[data-proposal-send-to-my]:checked', scope).map((input) => input.dataset.proposalSendToMy));
-  const selectedEntries = entries.filter((entry) => selectedIds.has(entry.id)).map((entry) => {
-    const values = state.itemValues[entry.id];
-    return {
-      ...entry,
-      quantity: values ? commercialProposalWorkspaceNumber(values.quantity) : entry.quantity,
-      price: values ? commercialProposalWorkspaceNumber(values.price) : entry.price
-    };
-  });
-  state.myItems = [...state.myItems.filter((item) => item.sourceGroup !== groupId), ...selectedEntries];
-  const laborEntryIds = new Set(commercialProposalEntriesForGroup(proposal, 'laborHours').map((entry) => entry.id));
-  Object.keys(state.laborSettings.itemHours).forEach((id) => { if (!laborEntryIds.has(id)) delete state.laborSettings.itemHours[id]; });
-  proposal.updatedAt = new Date().toISOString();
-  saveCommercialProposalRecords();
-  renderCommercialProposalWorkspace();
-  showToast(tr('myProposalSelectionSaved'));
-}
-
-function openCommercialProposalCustomPositionDialog(proposalId, groupId) {
-  const proposal = commercialProposalRecords.find((item) => item.id === proposalId);
-  const groupConfig = commercialProposalEditorGroupConfig(groupId);
-  if (!proposal || !groupConfig) return;
-  const groupLabel = `${tr(groupConfig.columnLabel)} Â· ${tr(groupConfig.label)}`;
-  const priceField = groupId === 'laborHours' ? '' : `<label class="is-wide"><span>${escapeHtml(tr('price'))}</span><input type="number" min="0" step="0.01" inputmode="decimal" placeholder="0" data-custom-proposal-position-price /></label>`;
-  showDialog(
-    escapeHtml(tr('addOwnProposalPosition')),
-    escapeHtml(`${tr('ownProposalPositionHint')} ${groupLabel}`),
-    `<div class="commercial-proposal-custom-form" role="form" data-commercial-proposal-custom-form><label class="is-wide"><span>${escapeHtml(tr('ownProposalPositionName'))} <em>*</em></span><input type="text" maxlength="240" placeholder="${escapeHtml(tr('ownProposalPositionNamePlaceholder'))}" autocomplete="off" data-custom-proposal-position-name /></label><label><span>${escapeHtml(tr('unit'))}</span><input type="text" maxlength="40" placeholder="â€”" autocomplete="off" data-custom-proposal-position-unit /></label><label><span>${escapeHtml(tr('quantity'))}</span><input type="number" min="0" step="0.01" inputmode="decimal" value="1" data-custom-proposal-position-quantity /></label>${priceField}<div class="result-actions is-wide"><button class="outline-button" type="button" data-cancel-custom-proposal-position>${escapeHtml(tr('cancel'))}</button><button class="primary-button" type="button" data-save-custom-proposal-position>+ ${escapeHtml(tr('saveProposalPosition'))}</button></div></div>`
-  );
-  const scope = $('[data-dialog-content]');
-  const form = $('[data-commercial-proposal-custom-form]', scope);
-  const nameInput = $('[data-custom-proposal-position-name]', form);
-  $('[data-cancel-custom-proposal-position]', form)?.addEventListener('click', () => $('[data-dialog]')?.close());
-  const savePosition = () => {
-    const name = String(nameInput?.value || '').trim().slice(0, 240);
-    if (!name) {
-      nameInput?.setAttribute('aria-invalid', 'true');
-      nameInput?.focus();
-      return;
-    }
-    const state = commercialProposalWorkspaceState(proposal);
-    const id = `cp-custom-${createObjectId()}`;
-    const quantity = commercialProposalWorkspaceNumber($('[data-custom-proposal-position-quantity]', form)?.value);
-    const price = commercialProposalWorkspaceNumber($('[data-custom-proposal-position-price]', form)?.value);
-    const entry = {
-      id,
-      sourceGroup: groupId,
-      name,
-      unit: String($('[data-custom-proposal-position-unit]', form)?.value || '').trim().slice(0, 40),
-      quantity,
-      price,
-      sourceName: '',
-      sourceSheet: '',
-      projectSource: groupId === 'outsideSpecificationWorks' ? 'project' : '',
-      associatedFor: '',
-      custom: true
-    };
-    state.itemValues[id] = { quantity, price, projectSource: entry.projectSource, associatedFor: '' };
-    if (isCommercialProposalMyGroup(groupId)) state.myItems.push(entry);
-    else state.customItems.push(entry);
-    proposal.updatedAt = new Date().toISOString();
-    saveCommercialProposalRecords();
-    $('[data-dialog]')?.close();
-    renderCommercialProposalWorkspace();
-    showToast(tr('proposalPositionAdded'));
-  };
-  $('[data-save-custom-proposal-position]', form)?.addEventListener('click', savePosition);
-  form?.addEventListener('keydown', (event) => {
-    if (event.key !== 'Enter') return;
-    event.preventDefault();
-    savePosition();
-  });
-  nameInput?.addEventListener('input', () => nameInput.removeAttribute('aria-invalid'));
-  nameInput?.focus();
-}
-
-function removeCommercialProposalCustomPosition(proposal, itemId) {
-  const state = commercialProposalWorkspaceState(proposal);
-  const exists = state.customItems.some((item) => item.id === itemId);
-  if (!exists || !window.confirm(`${tr('deleteOwnProposalPosition')}?`)) return;
-  state.customItems = state.customItems.filter((item) => item.id !== itemId);
-  state.myItems = state.myItems.filter((item) => item.id !== itemId);
-  delete state.itemValues[itemId];
-  delete state.laborSettings.itemHours[itemId];
-  proposal.updatedAt = new Date().toISOString();
-  saveCommercialProposalRecords();
-  renderCommercialProposalWorkspace();
-  showToast(tr('ownProposalPositionDeleted'));
-}
-
-function renderCommercialProposalWorkspace() {
-  const rootElement = $('[data-commercial-proposal-workspace]');
-  if (!rootElement) return;
-  const proposal = commercialProposalRecords.find((item) => item.id === activeCommercialProposalId);
-  const version = latestDocumentVersion(proposal?.file);
-  if (!proposal || !version) {
-    rootElement.innerHTML = `<div class="empty-state"><span class="proposal-empty-mark">â‚½</span><h2>${escapeHtml(tr('noCommercialProposals'))}</h2><button class="outline-button" type="button" data-back-to-commercial-proposals>â† ${escapeHtml(tr('backToProposalList'))}</button></div>`;
-    $('[data-back-to-commercial-proposals]', rootElement)?.addEventListener('click', () => setPanel('proposals'));
-    return;
-  }
-  const ready = proposal.status === 'ready' && isDocumentVersionAnalyzed(version);
-  const sourceLabel = tr(proposal.kind === 'project' ? 'proposalByProject' : 'proposalByEstimate');
-  if (!ready) {
-    rootElement.innerHTML = `<section class="commercial-proposal-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-back-to-commercial-proposals>â† ${escapeHtml(tr('backToProposalList'))}</button><div><span aria-hidden="true">â‚½</span><div><small>${escapeHtml(proposal.sectionName)}</small><h1>${escapeHtml(proposal.objectName)}</h1><p>${escapeHtml(sourceLabel)} Â· ${escapeHtml(version.name)}</p></div></div><b>${escapeHtml(tr('proposalAwaitingAnalysis'))}</b></header><section class="object-proposal-pending"><span aria-hidden="true">âŒ›</span><div><strong>${escapeHtml(tr('proposalAwaitingAnalysis'))}</strong><p>${escapeHtml(tr('creatingCommercialProposal'))}</p></div></section></section>`;
-    $('[data-back-to-commercial-proposals]', rootElement)?.addEventListener('click', () => setPanel('proposals'));
-    return;
-  }
-  const groupConfig = commercialProposalEditorGroupConfig(activeCommercialProposalGroup) || commercialProposalEditorGroupConfig('specificationWorks');
-  activeCommercialProposalGroup = groupConfig.id;
-  activeCommercialProposalColumn = groupConfig.columnId;
-  const groups = commercialProposalBreakdown(version, proposal.kind);
-  const entries = commercialProposalEntriesForGroup(proposal, activeCommercialProposalGroup, groups);
-  const state = commercialProposalWorkspaceState(proposal);
-  const isLaborHours = activeCommercialProposalGroup === 'laborHours';
-  const saveSelection = isCommercialProposalMyGroup(activeCommercialProposalGroup) || isLaborHours ? '' : `<button class="primary-button commercial-proposal-save-my" type="button" data-save-commercial-proposal-my${entries.length ? '' : ' disabled'}>âœ“ ${escapeHtml(tr('saveMyProposalSelection'))}</button>`;
-  const positionActions = `<div class="commercial-proposal-editor-header-actions"><button class="outline-button commercial-proposal-add-own" type="button" data-add-own-proposal-position>+ ${escapeHtml(tr('addOwnProposalPosition'))}</button>${saveSelection}</div>`;
-  const tableWorkspace = isLaborHours
-    ? `${commercialProposalGroupHintMarkup(activeCommercialProposalGroup)}${commercialProposalLaborSettingsMarkup(state)}${commercialProposalLaborTableMarkup(proposal, entries)}`
-    : `${commercialProposalGroupHintMarkup(activeCommercialProposalGroup)}${commercialProposalPriceModeMarkup(state)}${commercialProposalTableMarkup(proposal, activeCommercialProposalGroup, entries)}`;
-  rootElement.innerHTML = `<section class="commercial-proposal-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-back-to-commercial-proposals>â† ${escapeHtml(tr('backToProposalList'))}</button><div><span aria-hidden="true">â‚½</span><div><small>${escapeHtml(proposal.sectionName)}</small><h1>${escapeHtml(proposal.objectName)}</h1><p>${escapeHtml(sourceLabel)} Â· ${escapeHtml(version.name)}</p></div></div><b>${escapeHtml(tr('proposalReady'))}</b></header><div class="analysis-truth-note commercial-proposal-editor-note"><span>i</span><p>${escapeHtml(tr('proposalWorkspacePageHint'))}</p></div>${commercialProposalContactsMarkup(state)}${commercialProposalColumnsMarkup(proposal, groups)}<section class="commercial-proposal-editor-body"><header><div><small>${escapeHtml(tr(groupConfig.columnLabel))}</small><h2>${escapeHtml(tr(groupConfig.label))}</h2><p>${entries.length} Â· ${escapeHtml(tr('proposalFragmentPositions'))}</p></div>${positionActions}</header>${tableWorkspace}<footer class="commercial-proposal-editor-actions"><button class="primary-button" type="button" data-commercial-proposal-action="download"><span aria-hidden="true">â†“</span>${escapeHtml(tr('downloadProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="view"><span aria-hidden="true">â—‰</span>${escapeHtml(tr('viewProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="share"><span aria-hidden="true">â†—</span>${escapeHtml(tr('shareProposal'))}</button></footer></section></section>`;
-  $('[data-back-to-commercial-proposals]', rootElement)?.addEventListener('click', () => setPanel('proposals'));
-  $$('[data-proposal-contact]', rootElement).forEach((input) => input.addEventListener('input', () => {
-    const field = input.dataset.proposalContact;
-    if (!Object.prototype.hasOwnProperty.call(state.contacts, field)) return;
-    state.contacts[field] = String(input.value || '').slice(0, Number(input.maxLength) || 200);
-    proposal.updatedAt = new Date().toISOString();
-    saveCommercialProposalRecords();
-  }));
-  $$('[data-proposal-workspace-group]', rootElement).forEach((button) => button.addEventListener('click', () => {
-    activeCommercialProposalGroup = button.dataset.proposalWorkspaceGroup;
-    activeCommercialProposalColumn = button.dataset.proposalWorkspaceColumn;
-    renderCommercialProposalWorkspace();
-  }));
-  $$('[data-proposal-price-mode]', rootElement).forEach((input) => input.addEventListener('change', () => {
-    const modeId = input.value;
-    if (modeId === 'cash') {
-      state.taxModes = [];
-    } else {
-      const selectedModes = normalizeCommercialProposalTaxModes(state.taxModes);
-      if (selectedModes.includes(modeId)) {
-        state.taxModes = selectedModes.filter((id) => id !== modeId);
-      } else {
-        const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[modeId].direction;
-        const sameDirectionModes = selectedModes.filter((id) => COMMERCIAL_PROPOSAL_PRICE_MODES[id].direction === direction);
-        if (sameDirectionModes.length >= 2) {
-          input.checked = false;
-          showToast(tr('selectUpToTwoTaxModes'));
-          return;
-        }
-        state.taxModes = [...sameDirectionModes, modeId];
-      }
-    }
-    proposal.updatedAt = new Date().toISOString();
-    saveCommercialProposalRecords();
-    renderCommercialProposalWorkspace();
-  }));
-  $$('[data-proposal-line-value]', rootElement).forEach((input) => {
-    const updateValue = () => {
-      const id = input.dataset.proposalLineValueId;
-      const field = input.dataset.proposalLineValue;
-      const row = input.closest('[data-proposal-line-row]');
-      const current = state.itemValues[id] || {
-        quantity: commercialProposalWorkspaceNumber($('[data-proposal-line-value="quantity"]', row)?.value),
-        price: commercialProposalWorkspaceNumber($('[data-proposal-line-value="price"]', row)?.value)
-      };
-      current[field] = commercialProposalWorkspaceNumber(input.value);
-      if (field === 'price') input.style.setProperty('--proposal-price-ch', commercialProposalPriceCharacterWidth(input.value));
-      state.itemValues[id] = current;
-      updateCommercialProposalTableCalculations(rootElement, proposal);
-    };
-    input.addEventListener('input', updateValue);
-    input.addEventListener('change', () => {
-      updateValue();
-      proposal.updatedAt = new Date().toISOString();
-      saveCommercialProposalRecords();
-    });
-  });
-  $$('[data-proposal-line-meta]', rootElement).forEach((input) => {
-    const updateMeta = () => {
-      const id = input.dataset.proposalLineMetaId;
-      const field = input.dataset.proposalLineMeta;
-      const row = input.closest('[data-proposal-line-row]');
-      const current = state.itemValues[id] || {
-        quantity: commercialProposalWorkspaceNumber($('[data-proposal-line-value="quantity"]', row)?.value),
-        price: commercialProposalWorkspaceNumber($('[data-proposal-line-value="price"]', row)?.value),
-        projectSource: '',
-        associatedFor: ''
-      };
-      current[field] = field === 'projectSource'
-        ? input.value === 'spec' ? 'spec' : 'project'
-        : String(input.value || '').trim().slice(0, 240);
-      state.itemValues[id] = current;
-    };
-    input.addEventListener('input', updateMeta);
-    input.addEventListener('change', () => {
-      updateMeta();
-      proposal.updatedAt = new Date().toISOString();
-      saveCommercialProposalRecords();
-    });
-  });
-  $$('[data-proposal-labor-setting]', rootElement).forEach((input) => {
-    const updateValue = () => {
-      state.laborSettings[input.dataset.proposalLaborSetting] = commercialProposalWorkspaceNumber(input.value);
-      updateCommercialProposalLaborCalculations(rootElement, proposal);
-    };
-    input.addEventListener('input', updateValue);
-    input.addEventListener('change', () => {
-      updateValue();
-      proposal.updatedAt = new Date().toISOString();
-      saveCommercialProposalRecords();
-    });
-  });
-  $$('[data-proposal-labor-work-hours]', rootElement).forEach((input) => {
-    const updateValue = () => {
-      state.laborSettings.itemHours[input.dataset.proposalLaborWorkHours] = commercialProposalWorkspaceNumber(input.value);
-      updateCommercialProposalLaborCalculations(rootElement, proposal);
-    };
-    input.addEventListener('input', updateValue);
-    input.addEventListener('change', () => {
-      updateValue();
-      proposal.updatedAt = new Date().toISOString();
-      saveCommercialProposalRecords();
-    });
-  });
-  $('[data-add-own-proposal-position]', rootElement)?.addEventListener('click', () => openCommercialProposalCustomPositionDialog(proposal.id, activeCommercialProposalGroup));
-  $('[data-save-commercial-proposal-my]', rootElement)?.addEventListener('click', () => saveCommercialProposalMySelection(proposal, activeCommercialProposalGroup, entries, rootElement));
-  $$('[data-remove-proposal-custom-item]', rootElement).forEach((button) => button.addEventListener('click', () => removeCommercialProposalCustomPosition(proposal, button.dataset.removeProposalCustomItem)));
-  $$('[data-remove-proposal-my-item]', rootElement).forEach((button) => button.addEventListener('click', () => {
-    const removed = state.myItems.find((item) => item.id === button.dataset.removeProposalMyItem);
-    state.myItems = state.myItems.filter((item) => item.id !== button.dataset.removeProposalMyItem);
-    if (removed?.sourceGroup === 'my') delete state.itemValues[removed.id];
-    delete state.laborSettings.itemHours[button.dataset.removeProposalMyItem];
-    proposal.updatedAt = new Date().toISOString();
-    saveCommercialProposalRecords();
-    renderCommercialProposalWorkspace();
-  }));
-  $$('[data-commercial-proposal-action]', rootElement).forEach((button) => button.addEventListener('click', () => openCommercialProposalFragmentDialog(proposal.id, button.dataset.commercialProposalAction)));
-}
-
-function commercialProposalReportColumns(modeIds = [], groupId = '', rows = []) {
-  const selectedModeIds = normalizeCommercialProposalTaxModes(modeIds);
-  const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[selectedModeIds[0]]?.direction || 'none';
-  const combinedTaxLabel = commercialProposalCombinedTaxLabel(selectedModeIds);
-  const moneyColumnWidth = (key) => {
-    const priceCharacters = rows.reduce((maximum, row) => Math.max(maximum, new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(Math.abs(Number(row?.[key]) || 0)).length), 1);
-    return Math.min(72, Math.max(38, Math.ceil(18 + priceCharacters * 2.8)));
-  };
-  const base = [
-    { label: 'â„–', key: 'number', width: 20, number: true },
-    { label: tr('proposalLineName'), key: 'name', width: '*' },
-    { label: tr('proposalUnitShort'), key: 'unit', width: 30 },
-    { label: tr('proposalQuantityShort'), key: 'quantity', width: 36, number: true }
-  ];
-  if (groupId === 'outsideSpecificationWorks') base.push({ label: tr('proposalSpecProjectColumn'), key: 'projectSource', width: 48 });
-  if (groupId === 'associatedWorks') base.push({ label: tr('proposalAssociatedForColumn'), key: 'associatedFor', width: 72 });
-  if (direction === 'none') return [...base, { label: tr('price'), key: 'unitPrice', width: moneyColumnWidth('unitPrice'), money: true }, { label: tr('proposalGrossPrice'), key: 'finalTotal', width: moneyColumnWidth('finalTotal'), money: true }];
-  if (direction === 'subtract') {
-    return [
-      ...base,
-      { label: tr('includedUnitPriceWithoutTax'), key: 'netUnitPrice', width: moneyColumnWidth('netUnitPrice'), money: true },
-      { label: tr('includedTotalWithoutTax'), key: 'finalTotal', width: moneyColumnWidth('finalTotal'), money: true },
-      { label: `${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}`, key: 'unitPrice', width: moneyColumnWidth('unitPrice'), money: true },
-      { label: `${tr('includedTotalWithTax')} ${combinedTaxLabel}`, key: 'baseTotal', width: moneyColumnWidth('baseTotal'), money: true },
-    ];
-  }
-  return [
-    ...base,
-    { label: tr('excludedUnitPriceWithoutTax'), key: 'unitPrice', width: moneyColumnWidth('unitPrice'), money: true },
-    { label: tr('excludedTotalWithoutTax'), key: 'baseTotal', width: moneyColumnWidth('baseTotal'), money: true },
-    { label: `${tr('excludedUnitPriceWithTax')} ${combinedTaxLabel}`, key: 'grossUnitPrice', width: moneyColumnWidth('grossUnitPrice'), money: true },
-    { label: `${tr('excludedTotalWithTax')} ${combinedTaxLabel}`, key: 'finalTotal', width: moneyColumnWidth('finalTotal'), money: true },
-  ];
-}
-
-function commercialProposalReportTable(proposal, fragment, entries) {
-  const state = commercialProposalWorkspaceState(proposal);
-  const selectedModeIds = normalizeCommercialProposalTaxModes(state.taxModes);
-  const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[selectedModeIds[0]]?.direction || 'none';
-  const taxTotals = Object.fromEntries(selectedModeIds.map((modeId) => [modeId, 0]));
-  let priceTotal = 0;
-  let netTotal = 0;
-  let grossTotal = 0;
-  const rows = entries.map((entry, index) => {
-    const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds);
-    const taxValues = Object.fromEntries(selectedModeIds.map((modeId) => {
-      const amount = commercialProposalTaxAmount(amounts, modeId);
-      taxTotals[modeId] += amount;
-      return [`tax_${modeId}`, amount];
-    }));
-    priceTotal += amounts.final;
-    netTotal += direction === 'subtract' ? amounts.final : amounts.base;
-    grossTotal += direction === 'subtract' ? amounts.base : amounts.final;
-    return {
-      number: index + 1,
-      name: entry.name,
-      unit: entry.unit || 'â€”',
-      quantity: entry.quantity,
-      projectSource: entry.projectSource === 'spec' ? tr('proposalSpecShort') : tr('proposalProjectShort'),
-      associatedFor: entry.associatedFor || 'â€”',
-      netUnitPrice: amounts.unitFinal,
-      grossUnitPrice: amounts.unitFinal,
-      unitPrice: entry.price,
-      baseTotal: amounts.base,
-      ...taxValues,
-      finalTotal: amounts.final
-    };
-  });
-  const selectedModeLabel = selectedModeIds.length
-    ? selectedModeIds.map((modeId) => commercialProposalModeShortLabel(modeId)).join(' + ')
-    : tr(COMMERCIAL_PROPOSAL_PRICE_MODES.cash.label);
-  const summaries = [
-    `${tr('proposalPriceMode')}: ${selectedModeLabel}`,
-    `${tr('totalWorkTypes')}: ${entries.length}`
-  ];
-  selectedModeIds.forEach((modeId) => summaries.push(`${commercialProposalModeShortLabel(modeId)}: ${formatMoney(commercialProposalRoundMoney(taxTotals[modeId]))}`));
-  const totalLabel = direction === 'subtract' ? 'includedTotalWithoutTax' : direction === 'add' ? 'priceTotalWithTax' : 'totalProposalPrice';
-  summaries.push(`${tr(totalLabel)}: ${formatMoney(commercialProposalRoundMoney(priceTotal))}`);
-  return {
-    title: tr(fragment.label),
-    columns: commercialProposalReportColumns(selectedModeIds, fragment.id, rows),
-    rows,
-    summaries,
-    proposalTotals: {
-      netTotal: commercialProposalRoundMoney(netTotal),
-      grossTotal: commercialProposalRoundMoney(grossTotal),
-      taxTotal: commercialProposalRoundMoney(Object.values(taxTotals).reduce((total, value) => total + value, 0)),
-      positionCount: entries.length
-    }
-  };
-}
-
-function commercialProposalLaborReportTable(proposal, fragment, entries) {
-  const state = commercialProposalWorkspaceState(proposal);
-  let totalHours = 0;
-  let totalCost = 0;
-  const rows = entries.map((entry, index) => {
-    const amounts = commercialProposalLaborLineAmounts(entry, state);
-    totalHours += amounts.totalHours;
-    totalCost += amounts.total;
-    return {
-      number: index + 1,
-      name: entry.name,
-      unit: entry.unit || 'â€”',
-      quantity: amounts.quantity,
-      workHours: amounts.workHours,
-      hourlyRate: amounts.hourlyRate,
-      totalCost: amounts.total
-    };
-  });
-  const numberFormat = new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 });
-  return {
-    title: tr(fragment.label),
-    columns: [
-      { label: 'â„–', key: 'number', width: 20, number: true },
-      { label: tr('laborWorkName'), key: 'name', width: '*' },
-      { label: tr('proposalUnitShort'), key: 'unit', width: 30 },
-      { label: tr('proposalQuantityShort'), key: 'quantity', width: 36, number: true },
-      { label: tr('workHours'), key: 'workHours', width: 50, number: true },
-      { label: tr('hourlyEmployeeCost'), key: 'hourlyRate', width: 62, money: true },
-      { label: tr('totalLaborCost'), key: 'totalCost', width: 66, money: true }
-    ],
-    rows,
-    summaries: [
-      `${tr('employeeDailyCost')}: ${formatMoney(state.laborSettings.dailyCost)}`,
-      `${tr('workingHoursPerDay')}: ${numberFormat.format(state.laborSettings.workdayHours)}`,
-      `${tr('hourlyEmployeeCost')}: ${formatMoney(commercialProposalLaborHourlyRate(state))}`,
-      `${tr('totalWorkTypes')}: ${entries.length}`,
-      `${tr('totalManHours')}: ${numberFormat.format(commercialProposalRoundMoney(totalHours))}`,
-      `${tr('totalLaborCost')}: ${formatMoney(commercialProposalRoundMoney(totalCost))}`
-    ],
-    proposalTotals: {
-      netTotal: commercialProposalRoundMoney(totalCost),
-      grossTotal: commercialProposalRoundMoney(totalCost),
-      taxTotal: 0,
-      positionCount: entries.length
-    }
-  };
-}
-
-function commercialProposalFragmentConfigs() {
-  return COMMERCIAL_PROPOSAL_EDITOR_COLUMNS.flatMap((column) => column.groups.map((group) => ({ ...group, columnId: column.id, columnLabel: column.label })));
-}
-
-function commercialProposalReport(proposal, fragmentIds) {
-  const version = latestDocumentVersion(proposal.file);
-  const groups = commercialProposalBreakdown(version, proposal.kind);
-  const selected = new Set(fragmentIds);
-  const tables = commercialProposalFragmentConfigs().filter((fragment) => selected.has(fragment.id)).map((fragment) => {
-    const entries = commercialProposalEntriesForGroup(proposal, fragment.id, groups);
-    if (!entries.length) return null;
-    return fragment.id === 'laborHours' ? commercialProposalLaborReportTable(proposal, fragment, entries) : commercialProposalReportTable(proposal, fragment, entries);
-  }).filter(Boolean);
-  const state = commercialProposalWorkspaceState(proposal);
-  const contacts = state.contacts || normalizeCommercialProposalWorkspace(null).contacts;
-  const totals = tables.reduce((result, table) => {
-    const tableTotals = table.proposalTotals || {};
-    result.netTotal += Number(tableTotals.netTotal) || 0;
-    result.grossTotal += Number(tableTotals.grossTotal) || 0;
-    result.taxTotal += Number(tableTotals.taxTotal) || 0;
-    result.positionCount += Number(tableTotals.positionCount) || 0;
-    return result;
-  }, { netTotal: 0, grossTotal: 0, taxTotal: 0, positionCount: 0 });
-  const selectedModeIds = normalizeCommercialProposalTaxModes(state.taxModes);
-  const taxLabel = commercialProposalCombinedTaxLabel(selectedModeIds) || tr('proposalTaxNotSelected');
-  const withTaxLabel = tr('proposalSummaryPriceWithTax').replace('{tax}', taxLabel);
-  const taxTotalLabel = tr('proposalSummaryTaxTotal').replace('{tax}', taxLabel);
-  const senderSignature = [contacts.senderName, contacts.senderPhone].map((value) => String(value || '').trim()).filter(Boolean).join(', ') || 'â€”';
-  return {
-    title: tr('proposalWorkspaceTitle'),
-    objectName: proposal.objectName,
-    sectionName: proposal.sectionName,
-    objectLabel: tr('objectName'),
-    sectionLabel: tr('proposalSectionNameLabel'),
-    tables,
-    parties: null,
-    proposalDocument: {
-      greeting: tr('proposalGreeting'),
-      intro: tr('proposalIntro'),
-      contacts: {
-        sender: { title: tr('proposalSender'), name: contacts.senderName, organization: contacts.senderOrganization, phone: contacts.senderPhone },
-        recipient: { title: tr('proposalRecipient'), name: contacts.recipientName, organization: contacts.recipientOrganization }
-      },
-      finalSummary: {
-        title: tr('proposalFinalSummary'),
-        rows: [
-          { label: tr('proposalSummaryPriceTotal'), value: formatMoney(commercialProposalRoundMoney(totals.netTotal)) },
-          { label: withTaxLabel, value: formatMoney(commercialProposalRoundMoney(totals.grossTotal)) },
-          { label: taxTotalLabel, value: formatMoney(commercialProposalRoundMoney(totals.taxTotal)) },
-          { label: tr('proposalSummaryPositions'), value: String(totals.positionCount) }
-        ]
-      },
-      closing: tr('proposalClosing'),
-      respectfully: tr('proposalRespectfully'),
-      signature: senderSignature
-    }
-  };
-}
-
-function openCommercialProposalReportPreview(report) {
-  const dialog = $('[data-report-preview-dialog]');
-  if (!dialog) return;
-  releaseCashOrganizationPreview();
-  $('[data-report-preview-title]', dialog).textContent = tr('proposalWorkspaceTitle');
-  $('[data-report-preview-hint]', dialog).textContent = `${report.objectName} Â· ${report.sectionName}`;
-  $('[data-report-preview-content]', dialog).innerHTML = reportPreviewMarkup(report);
-  $('[data-report-preview-actions]', dialog).innerHTML = '';
-  if (!dialog.open) dialog.showModal();
-}
-
-function openCommercialProposalFragmentDialog(proposalId, action) {
-  const proposal = commercialProposalRecords.find((item) => item.id === proposalId);
-  const version = latestDocumentVersion(proposal?.file);
-  if (!proposal || !version) return;
-  const groups = commercialProposalBreakdown(version, proposal.kind);
-  const fragments = commercialProposalFragmentConfigs().map((fragment) => ({
-    ...fragment,
-    count: commercialProposalEntriesForGroup(proposal, fragment.id, groups).length
-  }));
-  const actionKey = { download: 'downloadProposal', view: 'viewProposal', share: 'shareProposal' }[action] || 'viewProposal';
-  const fragmentMarkup = fragments.map((fragment) => `<label class="${fragment.count ? '' : 'is-empty'}"><input type="checkbox" value="${fragment.id}" data-commercial-proposal-fragment${fragment.count ? '' : ' disabled'} /><span><strong>${escapeHtml(tr(fragment.label))}</strong><small>${escapeHtml(tr(fragment.columnLabel))} Â· ${fragment.count} ${escapeHtml(tr('proposalFragmentPositions'))}</small></span></label>`).join('');
-  showDialog(escapeHtml(tr('chooseProposalFragments')), escapeHtml(tr('chooseProposalFragmentsHint')), `<div class="commercial-proposal-fragment-list">${fragmentMarkup}</div><div class="result-actions"><button class="outline-button" type="button" data-cancel-commercial-proposal-fragments>${escapeHtml(tr('cancel'))}</button><button class="primary-button" type="button" data-confirm-commercial-proposal-fragments>${escapeHtml(tr(actionKey))}</button></div>`);
-  const scope = $('[data-dialog-content]');
-  $('[data-cancel-commercial-proposal-fragments]', scope)?.addEventListener('click', () => $('[data-dialog]')?.close());
-  $('[data-confirm-commercial-proposal-fragments]', scope)?.addEventListener('click', async (event) => {
-    const fragmentIds = $$('[data-commercial-proposal-fragment]:checked', scope).map((input) => input.value);
-    if (!fragmentIds.length) { showToast(tr('selectProposalFragments')); return; }
-    const report = commercialProposalReport(proposal, fragmentIds);
-    if (!report.tables.length) { showToast(tr('selectProposalFragments')); return; }
-    if (action === 'view') {
-      $('[data-dialog]')?.close();
-      openCommercialProposalReportPreview(report);
-      return;
-    }
-    const button = event.currentTarget;
-    button.disabled = true;
-    try {
-      await deliverCashReport(report, 'pdf', action === 'share');
-      $('[data-dialog]')?.close();
-    } catch (error) {
-      if (error?.name !== 'AbortError') { console.error(error); showToast(tr('comingSoon')); }
-    } finally {
-      button.disabled = false;
-    }
-  });
-}
-
-function projectAnalysisTabContent(tab, version = null, kind = 'project') {
-  if (tab === 'proposal' && kind === 'project') return projectEstimateBreakdownMarkup(version, kind);
-  const catalog = version ? cashSourceCatalogFromFileRecord(version, kind) : [];
-  if (catalog.length) {
-    if (tab === 'sheets') {
-      const sheets = [...new Set(catalog.map((entry) => entry.sourceSheet).filter(Boolean))];
-      if (sheets.length) return `<div class="analysis-detail-table-scroll"><table class="analysis-detail-table"><thead><tr>${['sheetNumber', 'sheetName', 'system', 'statusLabel'].map((key) => `<th>${escapeHtml(tr(key))}</th>`).join('')}</tr></thead><tbody>${sheets.map((sheet, index) => `<tr><td>${index + 1}</td><td>${escapeHtml(sheet)}</td><td>â€”</td><td>${escapeHtml(tr('analyzed'))}</td></tr>`).join('')}</tbody></table></div>`;
-    }
-    if (tab === 'proposal') {
-      const rows = catalog.slice(0, 160).map((entry) => `<tr><td>${escapeHtml(entry.sourceSheet || tr(entry.sourceKind))}</td><td>${escapeHtml(entry.name)}</td><td>${escapeHtml(entry.unit || 'â€”')}</td><td>${entry.quantity || 'â€”'}</td><td>${entry.price ? escapeHtml(formatMoney(entry.price)) : 'â€”'}</td><td>${entry.price && entry.quantity ? escapeHtml(formatMoney(entry.price * entry.quantity)) : 'â€”'}</td></tr>`).join('');
-      return `<div class="analysis-detail-table-scroll"><table class="analysis-detail-table"><thead><tr>${['section', 'workName', 'unit', 'quantity', 'price', 'rowTotal'].map((key) => `<th>${escapeHtml(tr(key))}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`;
-    }
-    if (tab === 'materials') {
-      const selected = catalog.filter((entry) => entry.category === 'material');
-      const rows = (selected.length ? selected : catalog).slice(0, 160).map((entry, index) => `<tr><td>${index + 1}</td><td>${escapeHtml(entry.name)}</td><td>â€”</td><td>${escapeHtml(entry.unit || 'â€”')}</td><td>${entry.quantity || 'â€”'}</td><td>${escapeHtml(entry.sourceSheet || entry.sourceName || tr(entry.sourceKind))}</td></tr>`).join('');
-      return `<div class="analysis-detail-table-scroll"><table class="analysis-detail-table"><thead><tr>${['recordNumber', 'materialName', 'markType', 'unit', 'quantity', 'source'].map((key) => `<th>${escapeHtml(tr(key))}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`;
-    }
-    if (tab === 'boq') {
-      const selected = catalog.filter((entry) => entry.category === 'work');
-      const rows = (selected.length ? selected : catalog).slice(0, 160).map((entry, index) => `<tr><td>${index + 1}</td><td>${escapeHtml(entry.name)}</td><td>${escapeHtml(entry.unit || 'â€”')}</td><td>${entry.quantity || 'â€”'}</td><td>${escapeHtml(entry.sourceSheet || entry.sourceName || tr(entry.sourceKind))}</td></tr>`).join('');
-      return `<div class="analysis-detail-table-scroll"><table class="analysis-detail-table"><thead><tr>${['recordNumber', 'workName', 'unit', 'quantity', 'source'].map((key) => `<th>${escapeHtml(tr(key))}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`;
-    }
-  }
-  if (tab === 'proposal') return analysisEmptyTable(['section', 'workName', 'unit', 'quantity', 'price', 'rowTotal']);
-  if (tab === 'sheets') return analysisEmptyTable(['sheetNumber', 'sheetName', 'system', 'statusLabel']);
-  if (tab === 'systems') return analysisEmptyTable(['system', 'sheets', 'materials', 'works', 'statusLabel']);
-  if (tab === 'materials') return analysisEmptyTable(['recordNumber', 'materialName', 'markType', 'unit', 'quantity', 'source']);
-  return analysisEmptyTable(['recordNumber', 'workName', 'unit', 'quantity', 'source']);
-}
-
-function versionCatalogDifferences(previous, current, kind) {
-  const beforeCatalog = cashSourceCatalogFromFileRecord(previous, kind);
-  const afterCatalog = cashSourceCatalogFromFileRecord(current, kind);
-  const before = new Map(beforeCatalog.map((entry) => [cashSourceKey(entry.name), entry]));
-  const after = new Map(afterCatalog.map((entry) => [cashSourceKey(entry.name), entry]));
-  const added = afterCatalog.filter((entry) => !before.has(cashSourceKey(entry.name)));
-  const removed = beforeCatalog.filter((entry) => !after.has(cashSourceKey(entry.name)));
-  const changed = afterCatalog.flatMap((entry) => {
-    const old = before.get(cashSourceKey(entry.name));
-    if (!old) return [];
-    return old.unit !== entry.unit || Number(old.quantity) !== Number(entry.quantity) || Number(old.price) !== Number(entry.price) ? [{ before: old, after: entry }] : [];
-  });
-  return { beforeCatalog, afterCatalog, added, removed, changed };
-}
-
-function versionCatalogValue(entry) {
-  if (!entry) return 'â€”';
-  return [entry.unit, entry.quantity ? String(entry.quantity) : '', entry.price ? formatMoney(entry.price) : ''].filter(Boolean).join(' Â· ') || 'â€”';
-}
-
-function revisionComparisonMarkup(file, options = {}) {
-  const versions = fileVersions(file);
-  if (versions.length < 2) return '';
-  const comparison = file.comparison || {};
-  const previous = fileVersionSnapshot(options.previous || comparison.previous || versions[versions.length - 2]);
-  const current = fileVersionSnapshot(options.current || comparison.current || versions[versions.length - 1]);
-  const kind = options.kind || file.kind || 'project';
-  const changes = versionComparisonChanges(previous, current);
-  if (Object.prototype.hasOwnProperty.call(previous, 'contractNumber') || Object.prototype.hasOwnProperty.call(current, 'contractNumber')) {
-    changes.push({ key: 'contractNumberLabel', before: previous.contractNumber || 'â€”', after: current.contractNumber || 'â€”', changed: previous.contractNumber !== current.contractNumber });
-  }
-  const catalogDifferences = versionCatalogDifferences(previous, current, kind);
-  const contentChangedCount = catalogDifferences.added.length + catalogDifferences.removed.length + catalogDifferences.changed.length;
-  const changedCount = changes.filter((item) => item.changed).length + contentChangedCount;
-  const isPending = !isDocumentVersionAnalyzed(previous) || !isDocumentVersionAnalyzed(current);
-  const rows = changes.map((item) => `<tr><th>${escapeHtml(tr(item.key))}</th><td>${escapeHtml(item.before)}</td><td>${escapeHtml(item.after)}</td><td><span class="revision-change-status ${item.changed ? 'is-changed' : 'is-unchanged'}">${escapeHtml(tr(item.changed ? 'changed' : 'unchanged'))}</span></td></tr>`).join('');
-  const contentRows = [
-    ...catalogDifferences.added.map((entry) => ({ name: entry.name, before: null, after: entry, status: 'positionAdded' })),
-    ...catalogDifferences.removed.map((entry) => ({ name: entry.name, before: entry, after: null, status: 'positionRemoved' })),
-    ...catalogDifferences.changed.map((entry) => ({ name: entry.after.name, before: entry.before, after: entry.after, status: 'positionChanged' }))
-  ].slice(0, 120).map((entry) => `<tr><th>${escapeHtml(entry.name)}</th><td>${escapeHtml(versionCatalogValue(entry.before))}</td><td>${escapeHtml(versionCatalogValue(entry.after))}</td><td><span class="revision-change-status is-changed">${escapeHtml(tr(entry.status))}</span></td></tr>`).join('');
-  const contentMarkup = isPending
-    ? `<section class="revision-content-status"><span>!</span><div><strong>${escapeHtml(tr('comparisonNeedsAnalysis'))}</strong><p>${escapeHtml(tr('comparisonNeedsAnalysisCopy'))}</p></div></section>`
-    : catalogDifferences.beforeCatalog.length || catalogDifferences.afterCatalog.length
-      ? `<section class="revision-catalog-differences"><div class="revision-content-summary"><article><span>${escapeHtml(tr('positionsAdded'))}</span><b>${catalogDifferences.added.length}</b></article><article><span>${escapeHtml(tr('positionsRemoved'))}</span><b>${catalogDifferences.removed.length}</b></article><article><span>${escapeHtml(tr('positionsChanged'))}</span><b>${catalogDifferences.changed.length}</b></article></div>${contentRows ? `<div class="revision-difference-scroll"><table><thead><tr><th>${escapeHtml(tr('workOrMaterialName'))}</th><th>${escapeHtml(tr('before'))}</th><th>${escapeHtml(tr('after'))}</th><th>${escapeHtml(tr('statusLabel'))}</th></tr></thead><tbody>${contentRows}</tbody></table></div>` : `<p class="revision-no-content-differences">${escapeHtml(tr('noExtractedDifferences'))}</p>`}</section>`
-      : `<section class="revision-content-status"><span>â—‡</span><div><strong>${escapeHtml(tr('contentDifferences'))}: ${escapeHtml(tr('contentComparisonPending'))}</strong><p>${escapeHtml(tr('contentComparisonPendingCopy'))}</p></div></section>`;
-  const history = versions.slice().reverse().map((version, reverseIndex) => {
-    const number = versions.length - reverseIndex;
-    return `<li><b>v${number}</b><span><strong>${escapeHtml(version.name)}</strong><small>${escapeHtml(formatStorage(version.size))} Â· ${escapeHtml(formatObjectDate(version.addedAt))}</small></span></li>`;
-  }).join('');
-  return `<section class="revision-comparison ${isPending ? 'is-pending' : 'is-ready'}"><header><div><span class="eyebrow">STRUCTOS VERSION CONTROL</span><h2>${escapeHtml(tr('versionComparison'))}</h2><p>${changedCount} ${escapeHtml(tr('changesFound'))}</p></div><span class="revision-comparison-chip">${escapeHtml(tr(isPending ? 'comparisonInProgress' : 'comparisonComplete'))}</span></header><div class="revision-version-pair"><article><small>${escapeHtml(tr('previousVersion'))}</small><b>${escapeHtml(previous.name)}</b><span>${escapeHtml(formatStorage(previous.size))} Â· ${escapeHtml(formatObjectDate(previous.addedAt))}</span></article><i aria-hidden="true">â†’</i><article><small>${escapeHtml(tr('currentVersion'))}</small><b>${escapeHtml(current.name)}</b><span>${escapeHtml(formatStorage(current.size))} Â· ${escapeHtml(formatObjectDate(current.addedAt))}</span></article></div><section class="revision-differences"><h3>${escapeHtml(tr('metadataDifferences'))}</h3><div class="revision-difference-scroll"><table><thead><tr><th></th><th>${escapeHtml(tr('before'))}</th><th>${escapeHtml(tr('after'))}</th><th>${escapeHtml(tr('statusLabel'))}</th></tr></thead><tbody>${rows}</tbody></table></div></section>${contentMarkup}<details class="revision-history"><summary>${escapeHtml(tr('versionHistory'))} Â· ${versions.length}</summary><ol>${history}</ol></details></section>`;
-}
-
-function analysisDetailHeader(object, kind, file, version) {
-  const typeLabel = kind === 'project' ? tr('projectAnalysis') : tr(kind);
-  const versions = fileVersions(file);
-  const versionNumber = Math.max(1, versions.findIndex((item) => item.id === version.id) + 1);
-  return `<header class="analysis-detail-head"><button class="outline-button" type="button" data-analysis-back>â† ${escapeHtml(tr('backToProjects'))}</button><div><span class="eyebrow">STRUCTOS ANALYTICS</span><h1>${escapeHtml(typeLabel)}</h1><p>${escapeHtml(object.name)}</p></div><span class="analysis-detail-status">${escapeHtml(tr(isDocumentVersionAnalyzed(version) ? 'analyzed' : 'pendingAnalysis'))}</span></header><section class="analysis-detail-source"><span>${kind === 'project' ? 'â–¤' : kind === 'contract' ? 'â‰¡' : 'â‚½'}</span><div><small>${escapeHtml(tr('sourceFile'))} Â· v${versionNumber}</small><strong>${escapeHtml(version.name)}</strong><em>${escapeHtml(formatStorage(version.size))} Â· ${escapeHtml(formatObjectDate(version.addedAt))}</em></div><button class="outline-button" type="button" data-analysis-revision="${escapeHtml(kind)}">+ ${escapeHtml(tr('uploadAdditionalFile'))}</button></section>`;
-}
-
-function renderAnalysisDetail() {
-  const rootElement = $('[data-analysis-detail]');
-  if (!rootElement) return;
-  const object = objectRegistry.find((item) => item.id === activeAnalysisDocument.objectId);
-  const kind = activeAnalysisDocument.kind;
-  const file = objectFile(object, kind);
-  const version = documentVersionById(file, activeAnalysisDocument.versionId);
-  if (!object || !file) {
-    rootElement.innerHTML = `<div class="empty-state"><h2>${escapeHtml(tr('noMyProjects'))}</h2><button class="primary-button" type="button" data-analysis-back>${escapeHtml(tr('backToProjects'))}</button></div>`;
-  } else if (!version || !isDocumentVersionAnalyzed(version)) {
-    rootElement.innerHTML = `${version ? analysisDetailHeader(object, kind, file, version) : ''}<section class="analysis-document-placeholder"><span>âŒ›</span><h2>${escapeHtml(tr('fileAwaitingAnalysis'))}</h2><p>${escapeHtml(tr('fileAwaitingAnalysisCopy'))}</p>${version ? `<button class="primary-button" type="button" data-analyze-active-version>${escapeHtml(tr('analyze'))}</button>` : ''}</section>`;
-  } else if (kind === 'project') {
-    const tabs = projectAnalysisTabs.map((tab) => `<button class="${tab.id === activeProjectAnalysisTab ? 'is-active' : ''}" type="button" data-project-analysis-tab="${tab.id}" aria-selected="${tab.id === activeProjectAnalysisTab}"><span>${tab.icon}</span><strong>${escapeHtml(tr(tab.label))}</strong></button>`).join('');
-    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file, version)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><nav class="project-analysis-tabs" aria-label="${escapeHtml(tr('projectAnalysis'))}">${tabs}</nav><section class="project-analysis-content"><header><span class="eyebrow">STRUCTOS DETAIL</span><h2>${escapeHtml(tr(projectAnalysisTabs.find((tab) => tab.id === activeProjectAnalysisTab)?.label || 'projectEstimate'))}</h2></header>${projectAnalysisTabContent(activeProjectAnalysisTab, version, kind)}</section>`;
-  } else if (kind === 'estimate') {
-    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file, version)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><section class="project-analysis-content"><header><span class="eyebrow">STRUCTOS ESTIMATE</span><h2>${escapeHtml(tr('estimate'))}</h2></header>${projectAnalysisTabContent('proposal', version, kind)}</section>`;
-  } else {
-    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file, version)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><section class="analysis-document-placeholder"><span>â‰¡</span><h2>${escapeHtml(tr('analyzedDocumentPage'))}</h2><p>${escapeHtml(tr('analyzedDocumentPageCopy'))}</p></section>`;
-  }
-  $$('[data-analysis-back]', rootElement).forEach((button) => button.addEventListener('click', () => setPanel('projects')));
-  $('[data-analysis-revision]', rootElement)?.addEventListener('click', (event) => openUploadDialog(event.currentTarget.dataset.analysisRevision, object?.id, 'revision'));
-  $('[data-analyze-active-version]', rootElement)?.addEventListener('click', () => analyzeObjectDocument(object?.id, kind, version?.id));
-  $$('[data-project-analysis-tab]', rootElement).forEach((button) => button.addEventListener('click', () => { activeProjectAnalysisTab = button.dataset.projectAnalysisTab; renderAnalysisDetail(); }));
-}
-
-function promptDocumentAnalysis(object, kind, versionId = null) {
-  const file = objectFile(object, kind);
-  const version = documentVersionById(file, versionId);
-  showDialog(tr('analysisNotReady'), tr('analysisNotReadyHint'), `<div class="dialog-options"><button class="primary-button" type="button" data-run-analysis-now>${escapeHtml(tr('runAnalysisNow'))}</button></div>`);
-  $('[data-run-analysis-now]')?.addEventListener('click', () => {
-    if (file && version) analyzeObjectDocument(object.id, kind, version.id);
-  });
-}
-
-function analyzeObjectDocument(objectId, kind, versionId = null, options = {}) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  const file = objectFile(object, kind);
-  const version = documentVersionById(file, versionId);
-  if (!object || !file || !version) return;
-  if (isDocumentVersionAnalyzed(version)) {
-    if (options.inline || options.dialog) {
-      selectedProjectVersionIds.set(projectDocumentGroupKey(objectId, kind), version.id);
-      if (options.dialog) openObjectCard(objectId);
-      else renderMyProjects();
-    } else openAnalyzedDocument(objectId, kind, version.id);
-    return;
-  }
-  clearTimeout(analysisTimer);
-  showDialog(tr('analyzingDocument'), tr('analyzingDocumentHint'), `<div class="analysis-ready-files"><div><span>âœ“</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(version.name)}</small></div></div><div class="analysis-loader"><span></span><span></span><span></span></div>`);
-  analysisTimer = setTimeout(() => {
-    const currentObject = objectRegistry.find((item) => item.id === objectId);
-    const currentFile = objectFile(currentObject, kind);
-    const currentVersion = documentVersionById(currentFile, version.id);
-    if (!currentObject || !currentFile || !currentVersion) return;
-    const analyzedAt = new Date().toISOString();
-    const analysisPatch = { analysisPending: false, analyzedAt };
-    if (kind === 'project') analysisPatch.estimateBreakdown = projectEstimateSnapshot(currentVersion);
-    const analyzedVersion = updateDocumentVersion(currentFile, currentVersion.id, analysisPatch);
-    if (kind === 'contract' && latestDocumentVersion(currentFile)?.id === analyzedVersion?.id) currentObject.contractNumber = String(analyzedVersion.contractNumber || extractContractNumberFromName(analyzedVersion.name) || currentObject.contractNumber || '');
-    currentObject.analyzedAt = analyzedAt;
-    if (currentObject.status === 'uploaded' && currentObject.files?.length && currentObject.files.every((item) => isObjectDocumentAnalyzed(currentObject, item))) currentObject.status = 'ready';
-    selectObjectForAnalysis(currentObject);
-    saveObjects();
-    saveUploads();
-    renderWidgets();
-    activeAnalysisDocument = { objectId, kind, versionId: currentVersion.id };
-    activeProjectAnalysisTab = 'proposal';
-    $('[data-dialog]')?.close();
-    if (options.inline || options.dialog) {
-      selectedProjectVersionIds.set(projectDocumentGroupKey(objectId, kind), currentVersion.id);
-      renderObjects();
-      if (options.dialog) openObjectCard(objectId);
-      else setPanel('projects');
-    } else {
-      renderObjects();
-      setPanel('analysis-detail');
-    }
-  }, 1100);
-}
-
-function analyzeObjectDocuments(objectId, requestedKinds = []) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  if (!object) return;
-  const kinds = [...new Set(requestedKinds)]
-    .filter((kind) => uploadRules[kind])
-    .filter((kind) => {
-      const file = objectFile(object, kind);
-      return file && !isObjectDocumentAnalyzed(object, file);
-    });
-  if (!kinds.length) { openReportChooser(object); return; }
-  if (kinds.length === 1) { analyzeObjectDocument(objectId, kinds[0]); return; }
-  const filesMarkup = `<div class="analysis-ready-files">${kinds.map((kind) => { const file = objectFile(object, kind); return `<div><span>âœ“</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file.name)}</small></div>`; }).join('')}</div>`;
-  clearTimeout(analysisTimer);
-  showDialog(escapeHtml(tr('analyzingDocuments')), escapeHtml(tr('analyzingDocumentsHint')), `${filesMarkup}<div class="analysis-loader"><span></span><span></span><span></span></div>`);
-  analysisTimer = setTimeout(() => {
-    const currentObject = objectRegistry.find((item) => item.id === objectId);
-    if (!currentObject) return;
-    const analyzedAt = new Date().toISOString();
-    kinds.forEach((kind) => {
-      const file = objectFile(currentObject, kind);
-      if (!file) return;
-      const latestVersion = latestDocumentVersion(file);
-      if (!latestVersion) return;
-      const analysisPatch = { analysisPending: false, analyzedAt };
-      if (kind === 'project') analysisPatch.estimateBreakdown = projectEstimateSnapshot(latestVersion);
-      updateDocumentVersion(file, latestVersion.id, analysisPatch);
-      if (kind === 'contract') currentObject.contractNumber = String(file.contractNumber || extractContractNumberFromName(file.name) || currentObject.contractNumber || '');
-    });
-    currentObject.analyzedAt = analyzedAt;
-    if (currentObject.status === 'uploaded' && currentObject.files?.length && currentObject.files.every((item) => isObjectDocumentAnalyzed(currentObject, item))) currentObject.status = 'ready';
-    selectObjectForAnalysis(currentObject);
-    saveObjects();
-    saveUploads();
-    renderObjects();
-    renderWidgets();
-    showDialog(escapeHtml(tr('allDocumentsAnalyzed')), escapeHtml(tr('allDocumentsAnalyzedCopy')), `<div class="result-actions"><button class="outline-button" type="button" data-view-report>${escapeHtml(tr('viewReport'))}</button><button class="primary-button" type="button" data-start-object>${escapeHtml(tr('startObject'))}</button></div>`);
-    $('[data-view-report]')?.addEventListener('click', () => openReportChooser(currentObject));
-    $('[data-start-object]')?.addEventListener('click', () => startReadyObject(currentObject.id));
-  }, 1100);
-}
-
-function analyzePendingObjectDocuments(objectId) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  if (!object) return;
-  const pendingKinds = Object.keys(uploadRules).filter((kind) => {
-    const file = objectFile(object, kind);
-    return file && !isObjectDocumentAnalyzed(object, file);
-  });
-  if (pendingKinds.length) analyzeObjectDocuments(objectId, pendingKinds);
-  else openReportChooser(object);
-}
-
-function deleteObjectDocument(objectId, kind) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  const file = objectFile(object, kind);
-  if (!object || !file) return;
-  showDialog(tr('deleteDocumentTitle'), tr('deleteDocumentHint'), `<div class="result-actions"><button class="outline-button" type="button" data-cancel-document-delete>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-document-delete>${escapeHtml(tr('deleteDocument'))}</button></div>`);
-  $('[data-cancel-document-delete]')?.addEventListener('click', () => $('[data-dialog]')?.close());
-  $('[data-confirm-document-delete]')?.addEventListener('click', () => {
-    object.files = (object.files || []).filter((item) => item.kind !== kind);
-    if (kind === 'contract') object.contractNumber = '';
-    if (selectedFiles[kind] && sameFileMetadata(selectedFiles[kind], file)) selectedFiles[kind] = null;
-    if (!object.files.length && object.status === 'ready') { object.status = 'uploaded'; object.analyzedAt = null; }
-    saveObjects();
-    saveUploads();
-    renderAnalysisCards();
-    renderObjects();
-    renderWidgets();
-    $('[data-dialog]')?.close();
-    showToast(tr('documentDeleted'));
-  });
-}
-
-function deleteObjectDocumentVersion(objectId, kind, versionId) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  const file = objectFile(object, kind);
-  const version = documentVersionById(file, versionId);
-  if (!object || !file || !version) return;
-  showDialog(tr('deleteFileVersion'), tr('deleteFileVersionCopy'), `<section class="revision-upload-source"><span>Ã—</span><div><small>${escapeHtml(tr(kind))}</small><strong>${escapeHtml(version.name)}</strong><em>${escapeHtml(formatStorage(version.size))} Â· ${escapeHtml(formatObjectDate(version.addedAt))}</em></div></section><div class="result-actions"><button class="outline-button" type="button" data-cancel-version-delete>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-version-delete>${escapeHtml(tr('deleteDocument'))}</button></div>`);
-  $('[data-cancel-version-delete]')?.addEventListener('click', () => $('[data-dialog]')?.close());
-  $('[data-confirm-version-delete]')?.addEventListener('click', () => {
-    const versions = fileVersions(file).filter((item) => item.id !== version.id);
-    if (!versions.length) object.files = (object.files || []).filter((item) => item.kind !== kind);
-    else {
-      file.comparison = null;
-      syncLatestDocumentVersion(file, versions);
-    }
-    if (kind === 'contract') object.contractNumber = String(latestDocumentVersion(objectFile(object, kind))?.contractNumber || '');
-    const groupKey = projectDocumentGroupKey(objectId, kind);
-    if (selectedProjectVersionIds.get(groupKey) === version.id) selectedProjectVersionIds.delete(groupKey);
-    selectedProjectVersionTabs.delete(`${groupKey}:${version.id}`);
-    if (versions.length < 2) {
-      visibleProjectComparisons.delete(groupKey);
-      expandedProjectComparisons.delete(groupKey);
-    }
-    if (object.status === 'uploaded' && object.files?.length && object.files.every((item) => isObjectDocumentAnalyzed(object, item))) object.status = 'ready';
-    object.updatedAt = new Date().toISOString();
-    selectObjectForAnalysis(object);
-    saveObjects();
-    saveUploads();
-    renderObjects();
-    renderWidgets();
-    $('[data-dialog]')?.close();
-    showToast(tr('fileVersionDeleted'));
-  });
-}
-
-function openAnalyzedDocument(objectId, kind, versionId = null) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  const file = objectFile(object, kind);
-  const version = documentVersionById(file, versionId);
-  if (!object || !file || !version) return;
-  if (!isDocumentVersionAnalyzed(version)) { promptDocumentAnalysis(object, kind, version.id); return; }
-  activeAnalysisDocument = { objectId: object.id, kind, versionId: version.id };
-  activeProjectAnalysisTab = 'proposal';
-  $('[data-dialog]')?.close();
-  setPanel('analysis-detail');
-}
-
-function openReportChooser(objectOrId) {
-  const object = typeof objectOrId === 'string' ? objectRegistry.find((item) => item.id === objectOrId) : objectOrId;
-  if (!object) return;
-  const available = Object.keys(uploadRules).map((kind) => [kind, objectFile(object, kind)]).filter(([, file]) => file);
-  if (!available.length) { showToast(tr('uploadFirst')); return; }
-  const choices = available.map(([kind, file]) => `<button class="report-document-choice" type="button" data-open-report-document="${escapeHtml(kind)}"><span>${kind === 'project' ? 'â–¤' : kind === 'contract' ? 'â‰¡' : 'â‚½'}</span><div><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file.name)}</small></div><i>â€º</i></button>`).join('');
-  showDialog(tr('chooseReportDocument'), tr('chooseReportDocumentHint'), `<div class="report-document-list">${choices}</div>`);
-  $$('[data-open-report-document]').forEach((button) => button.addEventListener('click', () => openAnalyzedDocument(object.id, button.dataset.openReportDocument)));
-}
-
-function combinedManagedObjects() {
-  const coreObjects = objectRegistry
-    .filter((object) => object.status === 'active' || object.status === 'completed')
-    .map((object) => ({
-      key: `core:${object.id}`,
-      id: object.id,
-      source: 'core',
-      name: object.name,
-      typeLabel: tr('fullCycleObject'),
-      completed: object.status === 'completed',
-      date: object.startedAt || object.analyzedAt || object.uploadedAt,
-      completedAt: object.completedAt || null,
-      details: `${(object.files || []).length} ${tr('attachedDocuments')} Â· ${tr('memoryUsed')}: ${formatStorage((object.files || []).reduce((total, file) => total + (Number(file.size) || 0), 0))}`
-    }));
-  const quickObjects = cashflowObjects.map((object) => ({
-    key: `quick:${object.id}`,
-    id: object.id,
-    source: 'quick',
-    name: object.name,
-    typeLabel: tr('quickObject'),
-    completed: Boolean(object.completed),
-    date: object.createdAt,
-    completedAt: object.completedAt || null,
-    details: `${object.sections.length} ${tr('sectionCalculations')}`
-  }));
-  const invitedManagedObjects = invitedObjects.filter((object) => ['active', 'completed'].includes(object.status)).map((object) => ({
-    key: `invited:${object.id}`,
-    id: object.id,
-    source: 'invited',
-    name: invitedObjectName(object),
-    typeLabel: tr('invitedObject'),
-    completed: object.status === 'completed',
-    date: object.invitedAt,
-    completedAt: object.completedAt || null,
-    details: `${tr('invitedRole')}: ${tr(object.roleKey || 'objectParticipant')} Â· ${tr('invitedBy')}: ${object.invitedBy}`
-  }));
-  const objects = [...coreObjects, ...quickObjects, ...invitedManagedObjects];
-  const orderIndex = new Map(unifiedObjectOrder.map((key, index) => [key, index]));
-  const active = objects.filter((object) => !object.completed).sort((a, b) => {
-    const aOrder = orderIndex.get(a.key);
-    const bOrder = orderIndex.get(b.key);
-    if (aOrder !== undefined && bOrder !== undefined) return aOrder - bOrder;
-    if (aOrder !== undefined) return 1;
-    if (bOrder !== undefined) return -1;
-    return new Date(b.date || 0) - new Date(a.date || 0);
-  });
-  const completed = objects.filter((object) => object.completed).sort((a, b) => new Date(b.completedAt || b.date || 0) - new Date(a.completedAt || a.date || 0));
-  return [...active, ...completed];
-}
-
-function unifiedObjectRowMarkup(object) {
-  const dateValue = object.completed ? object.completedAt || object.date : object.date;
-  const status = tr(object.completed ? 'completedListObject' : 'inWork');
-  const meta = `${status}: ${formatObjectDate(dateValue)} Â· ${object.details}`;
-  const handle = object.completed
-    ? '<span class="unified-drag-placeholder" aria-hidden="true">âœ“</span>'
-    : `<button class="unified-drag-handle" type="button" data-unified-drag aria-label="${escapeHtml(`${tr('dragObject')}: ${object.name}`)}" title="${escapeHtml(tr('dragObject'))}"><span></span><span></span><span></span></button>`;
-  const invitationBadge = object.source === 'invited' ? `<span class="invited-object-ribbon"><i aria-hidden="true"></i>${escapeHtml(tr('byInvitation'))}</span>` : '';
-  return `<article class="unified-object-row is-${object.source}${object.completed ? ' is-completed' : ''}" data-unified-object="${escapeHtml(object.key)}" data-open-unified="${escapeHtml(object.key)}" role="button" tabindex="0" aria-label="${escapeHtml(`${tr('openObjectAction')}: ${object.name}`)}">${invitationBadge}${handle}<div class="unified-object-open"><span class="unified-object-icon" aria-hidden="true">${object.source === 'quick' ? '+â‚½âˆ’' : object.source === 'invited' ? 'â†—' : 'âŒ‚'}</span><span class="unified-object-copy"><strong>${escapeHtml(object.name)}</strong><span class="unified-object-badges"><b class="is-${object.source}">${escapeHtml(object.typeLabel)}</b><b class="is-status">${escapeHtml(status)}</b></span><small>${escapeHtml(meta)}</small></span><span class="unified-object-arrow" aria-hidden="true">â€º</span></div></article>`;
-}
-
-function openUnifiedObject(key) {
-  if (key.startsWith('quick:')) {
-    const id = key.slice('quick:'.length);
-    if (!cashflowObjects.some((object) => object.id === id)) return;
-    activeCashObjectId = id;
-    setPanel('cashflow');
-    return;
-  }
-  if (key.startsWith('invited:')) { openInvitedObjectCard(key.slice('invited:'.length)); return; }
-  if (key.startsWith('core:')) openObjectCard(key.slice('core:'.length));
-}
-
-function confirmDeclineInvitation(id) {
-  const object = invitedObjects.find((item) => item.id === id && ['pending', 'active'].includes(item.status));
-  if (!object) return;
-  showDialog(escapeHtml(tr('declineInvitationTitle')), tr('declineInvitationHint'), `<div class="result-actions"><button class="outline-button" type="button" data-cancel-invitation-decline>${escapeHtml(tr('cancel'))}</button><button class="primary-button is-danger" type="button" data-confirm-invitation-decline>${escapeHtml(tr('declineInvitation'))}</button></div>`);
-  $('[data-cancel-invitation-decline]')?.addEventListener('click', () => $('[data-dialog]')?.close());
-  $('[data-confirm-invitation-decline]')?.addEventListener('click', () => {
-    object.status = 'declined';
-    object.declinedAt = new Date().toISOString();
-    saveInvitedObjects();
-    renderHomeInbox();
-    renderObjects();
-    $('[data-dialog]')?.close();
-    showToast(tr('invitationDeclined'));
-  });
-}
-
-function acceptInvitation(id) {
-  const object = invitedObjects.find((item) => item.id === id && item.status === 'pending');
-  if (!object) return;
-  object.status = 'active';
-  object.acceptedAt = new Date().toISOString();
-  saveInvitedObjects();
-  renderHomeInbox();
-  renderObjects();
-  $('[data-dialog]')?.close();
-  showToast(tr('invitationAccepted'));
-}
-
-function openInvitedObjectCard(id) {
-  const object = invitedObjects.find((item) => item.id === id);
-  if (!object) return;
-  const name = invitedObjectName(object);
-  const documents = Object.keys(uploadRules).map((kind) => {
-    const file = object.files.find((item) => item.kind === kind);
-    return `<button class="object-document-choice${file ? ' has-file' : ''}" type="button" data-invited-document><span>${file ? 'âœ“' : '+'}</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file?.name || tr('ownerWillShare'))}</small></button>`;
-  }).join('');
-  const isPending = object.status === 'pending';
-  const invitationActions = ['pending', 'active'].includes(object.status) ? `<div class="result-actions invited-object-actions">${isPending ? `<button class="primary-button" type="button" data-accept-invitation>${escapeHtml(tr('acceptInvitation'))}</button>` : ''}<button class="outline-button is-danger" type="button" data-decline-invitation>${escapeHtml(tr('declineInvitation'))}</button></div>` : '';
-  showDialog(escapeHtml(name), tr('invitedToObject'), `<section class="invited-object-card"><div class="invited-object-status"><span>â†—</span><div><b>${tr('invitedObject')}</b><small>${tr(isPending ? 'invitationPending' : 'inWork')}</small></div></div><dl><div><dt>${tr('invitedRole')}</dt><dd>${tr(object.roleKey || 'objectParticipant')}</dd></div><div><dt>${tr('invitedBy')}</dt><dd>${escapeHtml(object.invitedBy)}</dd></div><div><dt>${tr('invitedAt')}</dt><dd>${escapeHtml(formatObjectDate(object.invitedAt))}</dd></div></dl><p>${tr('invitedDocumentsHint')}</p><div class="object-document-chooser">${documents}</div>${invitationActions}</section>`);
-  $('[data-dialog]')?.classList.add('invited-object-dialog');
-  $$('[data-invited-document]', $('[data-dialog-content]')).forEach((button) => button.addEventListener('click', () => showToast(tr('ownerWillShare'))));
-  $('[data-accept-invitation]')?.addEventListener('click', () => acceptInvitation(object.id));
-  $('[data-decline-invitation]')?.addEventListener('click', () => confirmDeclineInvitation(object.id));
-}
-
-function persistUnifiedObjectOrder(list) {
-  unifiedObjectOrder = $$('[data-unified-object]:not(.is-completed)', list).map((card) => card.dataset.unifiedObject);
-  localStorage.setItem(OBJECT_ORDER_KEY, JSON.stringify(unifiedObjectOrder));
-}
-
-function enableUnifiedObjectSorting(handle, card, list) {
-  let pointerId = null;
-  let moved = false;
-  let startY = 0;
-  const moveCard = (direction) => {
-    const activeCards = $$('[data-unified-object]:not(.is-completed)', list);
-    const index = activeCards.indexOf(card);
-    const nextIndex = Math.max(0, Math.min(activeCards.length - 1, index + direction));
-    const target = activeCards[nextIndex];
-    if (!target || target === card) return;
-    if (direction < 0) list.insertBefore(card, target);
-    else list.insertBefore(card, target.nextSibling);
-    persistUnifiedObjectOrder(list);
-    showToast(tr('orderSaved'));
-  };
-  handle.addEventListener('keydown', (event) => {
-    if (!['ArrowUp', 'ArrowDown'].includes(event.key)) return;
-    event.preventDefault();
-    moveCard(event.key === 'ArrowUp' ? -1 : 1);
-  });
-  handle.addEventListener('pointerdown', (event) => {
-    event.preventDefault();
-    pointerId = event.pointerId;
-    startY = event.clientY;
-    moved = false;
-    card.classList.add('is-dragging');
-    handle.setPointerCapture(event.pointerId);
-  });
-  handle.addEventListener('pointermove', (event) => {
-    if (event.pointerId !== pointerId) return;
-    event.preventDefault();
-    moved ||= Math.abs(event.clientY - startY) > 5;
-    const activeCards = $$('[data-unified-object]:not(.is-completed)', list).filter((item) => item !== card);
-    const next = activeCards.find((item) => event.clientY < item.getBoundingClientRect().top + item.offsetHeight / 2);
-    const firstCompleted = $('[data-unified-object].is-completed', list);
-    if (next) list.insertBefore(card, next);
-    else if (firstCompleted) list.insertBefore(card, firstCompleted);
-    else list.append(card);
-  });
-  const finish = (event) => {
-    if (event.pointerId !== pointerId) return;
-    if (handle.hasPointerCapture(event.pointerId)) handle.releasePointerCapture(event.pointerId);
-    pointerId = null;
-    card.classList.remove('is-dragging');
-    if (moved) { persistUnifiedObjectOrder(list); showToast(tr('orderSaved')); }
-  };
-  handle.addEventListener('pointerup', finish);
-  handle.addEventListener('pointercancel', finish);
-}
-
-function renderObjects() {
-  const uploaded = objectRegistry.filter((object) => object.status === 'uploaded');
-  const ready = objectRegistry.filter((object) => object.status === 'ready');
-  const active = objectRegistry.filter((object) => object.status === 'active');
-  const combined = combinedManagedObjects();
-  $$('[data-uploaded-objects-list]').forEach((list) => { list.innerHTML = uploaded.map(objectRowMarkup).join(''); });
-  $$('[data-ready-objects-list]').forEach((list) => { list.innerHTML = ready.map(objectRowMarkup).join(''); });
-  $$('[data-active-objects-list]').forEach((list) => { list.innerHTML = active.map(objectRowMarkup).join(''); });
-  $$('[data-all-objects-list]').forEach((list) => {
-    list.innerHTML = combined.map(unifiedObjectRowMarkup).join('');
-    $$('[data-open-unified]', list).forEach((card) => {
-      card.addEventListener('click', (event) => { if (!event.target.closest('[data-unified-drag]')) openUnifiedObject(card.dataset.openUnified); });
-      card.addEventListener('keydown', (event) => { if (event.target !== card || !['Enter', ' '].includes(event.key)) return; event.preventDefault(); openUnifiedObject(card.dataset.openUnified); });
-    });
-    $$('[data-unified-drag]', list).forEach((handle) => enableUnifiedObjectSorting(handle, handle.closest('[data-unified-object]'), list));
-  });
-  $$('[data-uploaded-count]').forEach((count) => { count.textContent = String(uploaded.length); });
-  $$('[data-ready-count]').forEach((count) => { count.textContent = String(ready.length); });
-  $$('[data-active-count]').forEach((count) => { count.textContent = String(active.length); });
-  $$('[data-all-active-count]').forEach((count) => { count.textContent = String(combined.filter((object) => !object.completed).length); });
-  $$('[data-active-available]').forEach((count) => { count.textContent = String(Math.max(0, ACTIVE_OBJECT_LIMIT - active.length)); });
-  $$('[data-uploaded-empty]').forEach((empty) => { empty.hidden = uploaded.length > 0; });
-  $$('[data-ready-empty]').forEach((empty) => { empty.hidden = ready.length > 0; });
-  $$('[data-active-empty]').forEach((empty) => { empty.hidden = active.length > 0; });
-  $$('[data-all-objects-empty]').forEach((empty) => { empty.hidden = combined.length > 0; });
-  $$('[data-start-ready]').forEach((button) => button.addEventListener('click', () => startReadyObject(button.dataset.startReady)));
-  $$('[data-delete-ready]').forEach((button) => button.addEventListener('click', () => deleteReadyObject(button.dataset.deleteReady)));
-  $$('[data-open-object]').forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openObject)));
-  renderMyProjects();
-  renderCommercialProposals();
-  renderHomeInbox();
-}
-
-function openObjectCard(id) {
-  const object = objectRegistry.find((item) => item.id === id);
-  if (!object) return;
-  const documentChoices = Object.keys(uploadRules).map((kind) => myProjectDocumentGroupMarkup(object, kind)).join('');
-  const lifecycleAction = ['active', 'completed'].includes(object.status)
-    ? `<button class="outline-button object-lifecycle-button${object.status === 'active' ? ' is-danger' : ''}" type="button" data-toggle-core-object>${escapeHtml(tr(object.status === 'active' ? 'finishObject' : 'reopenObject'))}</button>`
-    : object.status === 'ready'
-      ? `<button class="outline-button object-start-project" type="button" data-start-core-object>${escapeHtml(tr('startObject'))}</button>`
-      : '';
-  const reportAction = object.files?.length ? `<button class="outline-button object-view-report" type="button" data-view-object-report>${escapeHtml(tr('viewReport'))}</button>` : '';
-  const documentsContent = `<div class="object-document-chooser is-versioned my-project-documents">${documentChoices}</div><div class="object-card-actions">${reportAction}<button class="outline-button object-rename-button" type="button" data-rename-core-object>${escapeHtml(tr('rename'))}</button>${lifecycleAction}</div>`;
-  showDialog(escapeHtml(object.name), escapeHtml(tr('chooseObjectDocument')), documentsContent);
-  const scope = $('[data-dialog-content]');
-  $('[data-launch-project]', scope)?.addEventListener('click', () => openProjectLaunchDialog(object.id));
-  $$('[data-my-project-rename-document]', scope).forEach((button) => button.addEventListener('click', () => renameProjectDocument(button.dataset.objectId, button.dataset.myProjectRenameDocument)));
-  $$('[data-my-project-upload]', scope).forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.myProjectUpload, button.dataset.objectId, button.dataset.versionMode)));
-  $$('[data-toggle-project-version]', scope).forEach((button) => button.addEventListener('click', () => {
-    const key = projectDocumentGroupKey(button.dataset.objectId, button.dataset.kind);
-    if (selectedProjectVersionIds.get(key) === button.dataset.toggleProjectVersion) selectedProjectVersionIds.delete(key);
-    else selectedProjectVersionIds.set(key, button.dataset.toggleProjectVersion);
-    openObjectCard(object.id);
-  }));
-  $$('[data-analyze-project-version]', scope).forEach((button) => button.addEventListener('click', () => analyzeObjectDocument(button.dataset.objectId, button.dataset.kind, button.dataset.analyzeProjectVersion, { dialog: true })));
-  $$('[data-open-project-version]', scope).forEach((button) => button.addEventListener('click', () => openAnalyzedDocument(button.dataset.objectId, button.dataset.kind, button.dataset.openProjectVersion)));
-  $$('[data-delete-project-version]', scope).forEach((button) => button.addEventListener('click', () => deleteObjectDocumentVersion(button.dataset.objectId, button.dataset.kind, button.dataset.deleteProjectVersion)));
-  $$('[data-show-project-comparison]', scope).forEach((button) => button.addEventListener('click', () => {
-    const key = projectDocumentGroupKey(button.dataset.objectId, button.dataset.showProjectComparison);
-    visibleProjectComparisons.add(key); expandedProjectComparisons.delete(key); openObjectCard(object.id);
-  }));
-  $$('[data-toggle-project-comparison]', scope).forEach((button) => button.addEventListener('click', () => {
-    const key = projectDocumentGroupKey(button.dataset.objectId, button.dataset.toggleProjectComparison);
-    if (expandedProjectComparisons.has(key)) expandedProjectComparisons.delete(key); else expandedProjectComparisons.add(key);
-    openObjectCard(object.id);
-  }));
-  $$('[data-project-version-tab]', scope).forEach((button) => button.addEventListener('click', () => {
-    selectedProjectVersionTabs.set(`${projectDocumentGroupKey(button.dataset.objectId, button.dataset.kind)}:${button.dataset.versionId}`, button.dataset.projectVersionTab);
-    openObjectCard(object.id);
-  }));
-  $('[data-view-object-report]', scope)?.addEventListener('click', () => openReportChooser(object));
-  $('[data-rename-core-object]', scope)?.addEventListener('click', () => renameCoreObject(object.id));
-  $('[data-start-core-object]', scope)?.addEventListener('click', () => startReadyObject(object.id));
-  $('[data-toggle-core-object]', scope)?.addEventListener('click', () => toggleCoreObjectCompletion(object.id));
-}
-
-function renameCoreObject(id) {
-  const object = objectRegistry.find((item) => item.id === id);
-  if (!object) return;
-  const previousName = object.name;
-  openRenameDialog(tr('renameObject'), object.name, 100, (name) => {
-    object.name = name;
-    if (localStorage.getItem(OBJECT_NAME_KEY) === previousName) localStorage.setItem(OBJECT_NAME_KEY, name);
-    saveObjects();
-    renderObjects();
-    renderWidgets();
-  });
-}
-
-function toggleCoreObjectCompletion(id) {
-  const object = objectRegistry.find((item) => item.id === id);
-  if (!object || !['active', 'completed'].includes(object.status)) return;
-  if (object.status === 'completed') {
-    if (objectRegistry.filter((item) => item.status === 'active').length >= ACTIVE_OBJECT_LIMIT) { showActiveLimit(); return; }
-    object.status = 'active';
-    object.completedAt = null;
-    object.startedAt ||= new Date().toISOString();
-    showToast(tr('objectReopened'));
-  } else {
-    object.status = 'completed';
-    object.completedAt = new Date().toISOString();
-    showToast(tr('completedObject'));
-  }
-  saveObjects();
-  renderObjects();
-  renderWidgets();
-  $('[data-dialog]')?.close();
-}
-
-function registerAnalyzedObject(name, readyFiles) {
-  const normalizedName = String(name).trim().toLocaleLowerCase();
-  const existing = objectRegistry.find((object) => object.name.trim().toLocaleLowerCase() === normalizedName);
-  const analyzedAt = new Date().toISOString();
-  const files = readyFiles.map(([kind, file]) => {
-    const record = { ...file, kind, name: file.name, size: file.size || 0, analysisPending: false, analyzedAt };
-    if (kind === 'project') record.estimateBreakdown = projectEstimateSnapshot(record);
-    return { ...record, versions: [fileVersionSnapshot(record)] };
-  });
-  if (existing) {
-    existing.projectTitle ||= String(name).trim();
-    existing.projectSection ||= existing.projectTitle;
-    existing.documentTitles = normalizeProjectDocumentTitles(existing.documentTitles);
-    existing.updatedAt = analyzedAt;
-    existing.analyzedAt = analyzedAt;
-    existing.files = files;
-    if (!['active', 'completed'].includes(existing.status)) {
-      existing.status = 'ready';
-      existing.startedAt = null;
-      existing.completedAt = null;
-    }
-    saveObjects();
-    renderObjects();
-    renderWidgets();
-    return existing;
-  }
-  const object = { id: createObjectId(), name: String(name).trim(), projectTitle: String(name).trim(), projectSection: String(name).trim(), documentTitles: normalizeProjectDocumentTitles(), contractNumber: '', status: 'ready', createdAt: analyzedAt, updatedAt: analyzedAt, uploadedAt: analyzedAt, analyzedAt, startedAt: null, files };
-  objectRegistry.unshift(object);
-  saveObjects();
-  renderObjects();
-  renderWidgets();
-  return object;
-}
-
-function showActiveLimit() {
-  showDialog(tr('activeLimitTitle'), tr('activeLimitCopy'));
-}
-
-function startReadyObject(id) {
-  const object = objectRegistry.find((item) => item.id === id);
-  if (!object) return;
-  if (object.status === 'active') {
-    $('[data-dialog]')?.close();
-    setPanel('objects');
-    return;
-  }
-  const activeCount = objectRegistry.filter((item) => item.status === 'active').length;
-  if (activeCount >= ACTIVE_OBJECT_LIMIT) {
-    showActiveLimit();
-    return;
-  }
-  object.status = 'active';
-  object.startedAt = new Date().toISOString();
-  object.completedAt = null;
-  saveObjects();
-  renderObjects();
-  renderWidgets();
-  $('[data-dialog]')?.close();
-  showToast(tr('objectStarted'));
-}
-
-function deleteReadyObject(id) {
-  const nextRegistry = objectRegistry.filter((object) => object.id !== id || object.status !== 'ready');
-  if (nextRegistry.length === objectRegistry.length) return;
-  objectRegistry = nextRegistry;
-  saveObjects();
-  renderObjects();
-  renderWidgets();
-  showToast(tr('objectDeleted'));
-}
-
-function isAllowedFile(file, rule) {
-  const extension = String(file.name || '').split('.').pop()?.toLowerCase();
-  return rule.extensions.includes(extension) || String(file.type || '').startsWith('image/');
-}
-
-function fileMetadata(file) {
-  return {
-    name: String(file.name || tr('selectFile')),
-    size: Number(file.size) || 0,
-    type: String(file.type || ''),
-    lastModified: Number(file.lastModified) || Date.now(),
-    addedAt: new Date().toISOString()
-  };
-}
-
-function renderUploadFile() {
-  const selected = $('[data-upload-selected]');
-  const dropzone = $('[data-upload-dropzone]');
-  const actions = $('[data-upload-device-actions]');
-  if (!selected || !dropzone || !actions) return;
-  selected.hidden = !pendingFile;
-  dropzone.hidden = Boolean(pendingFile);
-  actions.hidden = Boolean(pendingFile);
-  if (pendingFile) {
-    $('[data-upload-file-name]').textContent = pendingFile.name;
-    $('[data-upload-file-meta]').textContent = `${pendingFile.type || 'Ð¤Ð°Ð¹Ð»'} Â· ${fileSize(pendingFile.size)}`;
-  }
-  const objectName = $('[data-analysis-object-name]');
-  const confirm = $('[data-confirm-upload]');
-  if (confirm) confirm.disabled = !(pendingFile && objectName?.value.trim());
-}
-
-function chooseUploadFile(file) {
-  if (!file) return;
-  const rule = uploadRules[activeUploadKind];
-  if (file.size > rule.maxMb * 1024 * 1024) {
-    showToast(`${tr('fileTooLarge')}: ${rule.maxMb} ÐœÐ‘`);
-    return;
-  }
-  if (!isAllowedFile(file, rule)) {
-    showToast(`${tr('unsupportedFormat')}: ${rule.formats}`);
-    return;
-  }
-  pendingFile = fileMetadata(file);
-  pendingUploadSourceFile = file;
-  renderUploadFile();
-  showToast(`${tr('fileSelected')}: ${file.name}`);
-}
-
-function removeUploadFile() {
-  pendingFile = null;
-  pendingUploadSourceFile = null;
-  if (activeUploadMode === 'revision') {
-    renderUploadFile();
-    return;
-  }
-  if (selectedFiles[activeUploadKind]) {
-    selectedFiles[activeUploadKind] = null;
-    saveUploads();
-    renderAnalysisCards();
-    showToast(tr('fileDeleted'));
-  }
-  const object = objectRegistry.find((item) => item.id === activeUploadObjectId);
-  if (object && objectFile(object, activeUploadKind)) {
-    object.files = object.files.filter((file) => file.kind !== activeUploadKind);
-    saveObjects();
-    renderObjects();
-  }
-  renderUploadFile();
-}
-
-function openVersionComparison(objectId, kind) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  const file = objectFile(object, kind);
-  if (!object || !file) return;
-  activeAnalysisDocument = { objectId, kind, versionId: latestDocumentVersion(file)?.id || null };
-  activeProjectAnalysisTab = 'proposal';
-  $('[data-dialog]')?.close();
-  setPanel('analysis-detail');
-}
-
-function startRevisionComparison(objectId, kind, comparisonId) {
-  const object = objectRegistry.find((item) => item.id === objectId);
-  const file = objectFile(object, kind);
-  if (!object || !file || file.comparison?.id !== comparisonId) return;
-  activeRevisionComparisonId = comparisonId;
-  showDialog(tr('comparisonInProgress'), tr('comparisonInProgressCopy'), `<div data-revision-analysis="${escapeHtml(comparisonId)}">${revisionComparisonMarkup(file)}<div class="analysis-loader"><span></span><span></span><span></span></div></div>`);
-  revisionAnalysisTimer = setTimeout(() => {
-    const currentObject = objectRegistry.find((item) => item.id === objectId);
-    const currentFile = objectFile(currentObject, kind);
-    if (!currentObject || !currentFile || currentFile.comparison?.id !== comparisonId) return;
-    const analyzedAt = new Date().toISOString();
-    currentFile.comparison.status = 'ready';
-    currentFile.comparison.analyzedAt = analyzedAt;
-    currentFile.comparison.current.analyzedAt = analyzedAt;
-    currentFile.analysisPending = false;
-    currentFile.analyzedAt = analyzedAt;
-    currentFile.versions = fileVersions(currentFile).map((version, index, versions) => index === versions.length - 1 ? { ...version, analyzedAt } : version);
-    currentObject.analyzedAt = analyzedAt;
-    if (currentObject.status === 'uploaded' && currentObject.files?.length && currentObject.files.every((item) => isObjectDocumentAnalyzed(currentObject, item))) currentObject.status = 'ready';
-    selectObjectForAnalysis(currentObject);
-    saveObjects();
-    saveUploads();
-    renderObjects();
-    renderWidgets();
-    if (activeRevisionComparisonId === comparisonId && $('[data-dialog]')?.open && $(`[data-revision-analysis="${comparisonId}"]`)) {
-      showDialog(tr('comparisonComplete'), tr('comparisonCompleteCopy'), `${revisionComparisonMarkup(currentFile)}<div class="result-actions"><button class="primary-button" type="button" data-view-version-comparison>${escapeHtml(tr('viewComparison'))}</button></div>`);
-      $('[data-view-version-comparison]')?.addEventListener('click', () => openVersionComparison(objectId, kind));
-    } else {
-      showToast(tr('versionSaved'));
-    }
-  }, 1100);
-}
-
-async function confirmUpload() {
-  const objectNameInput = $('[data-analysis-object-name]');
-  const selectedTargetId = $('[data-upload-object-target]')?.value || activeUploadObjectId;
-  let destination = objectRegistry.find((object) => object.id === selectedTargetId);
-  const objectName = destination?.name || objectNameInput?.value.trim();
-  if (!objectName) {
-    objectNameInput?.classList.add('field-error');
-    objectNameInput?.focus();
-    showToast(tr('objectRequired'));
-    return;
-  }
-  if (!pendingFile) {
-    showToast(tr('selectFile'));
-    return;
-  }
-  objectNameInput.classList.remove('field-error');
-  const uploadedAt = new Date().toISOString();
-  if (!destination) destination = objectRegistry.find((object) => object.name.trim().toLocaleLowerCase() === objectName.toLocaleLowerCase());
-  const previousFile = objectFile(destination, activeUploadKind);
-  if (activeUploadMode === 'revision' && !previousFile) {
-    showToast(tr('uploadFirst'));
-    return;
-  }
-  if (previousFile && sameFileMetadata(previousFile, pendingFile)) {
-    if (activeUploadMode === 'revision') {
-      showToast(tr('sameFileSelected'));
-      return;
-    }
-    pendingUploadSourceFile = null;
-    $('[data-dialog]').close();
-    showToast(tr('uploadComplete'));
-    return;
-  }
-  const sourceFile = pendingUploadSourceFile;
-  const shouldExtractSourceCatalog = Boolean(sourceFile && CASH_SOURCE_DOCUMENT_KINDS.includes(activeUploadKind));
-  const confirmButton = $('[data-confirm-upload]');
-  if (confirmButton) confirmButton.disabled = true;
-  const sourceCatalog = shouldExtractSourceCatalog ? await extractCashSourceCatalogFromFile(sourceFile, activeUploadKind) : [];
-  if (confirmButton?.isConnected) confirmButton.disabled = false;
-  let uploadedFile = { ...pendingFile, kind: activeUploadKind, addedAt: uploadedAt, analysisPending: true, analyzedAt: null, sourceCatalog, sourceCatalogScanned: shouldExtractSourceCatalog };
-  if (activeUploadKind === 'contract') uploadedFile.contractNumber = String(pendingFile.contractNumber || extractContractNumberFromName(pendingFile.name) || '');
-  if (!destination) {
-    destination = { id: createObjectId(), name: objectName, projectTitle: objectName, projectSection: objectName, documentTitles: normalizeProjectDocumentTitles(), contractNumber: '', status: 'uploaded', createdAt: uploadedAt, updatedAt: uploadedAt, uploadedAt, analyzedAt: null, startedAt: null, files: [] };
-    objectRegistry.unshift(destination);
-  }
-  if (previousFile) {
-    const normalizedPrevious = normalizeFileRecord(previousFile);
-    const current = fileVersionSnapshot(uploadedFile);
-    const versions = fileVersions(normalizedPrevious);
-    if (!sameFileMetadata(versions[versions.length - 1], current)) versions.push(current);
-    uploadedFile = {
-      ...uploadedFile,
-      versions,
-      comparison: null
-    };
-  } else {
-    uploadedFile = { ...uploadedFile, versions: [fileVersionSnapshot(uploadedFile)], comparison: null };
-  }
-  destination.files = [...(destination.files || []).filter((file) => file.kind !== activeUploadKind), uploadedFile];
-  destination.projectTitle ||= destination.name;
-  destination.projectSection ||= destination.projectTitle;
-  destination.documentTitles = normalizeProjectDocumentTitles(destination.documentTitles);
-  if (activeUploadKind === 'contract') destination.contractNumber = String(uploadedFile.contractNumber || extractContractNumberFromName(uploadedFile.name) || '');
-  destination.updatedAt = uploadedAt;
-  destination.uploadedAt = uploadedAt;
-  if (destination.status === 'ready') destination.status = 'uploaded';
-  activeUploadObjectId = destination.id;
-  selectObjectForAnalysis(destination);
-  saveObjects();
-  renderAnalysisCards();
-  renderObjects();
-  renderWidgets();
-  pendingUploadSourceFile = null;
-  $('[data-dialog]').close();
-  showToast(tr(previousFile ? 'versionSaved' : 'uploadComplete'));
-}
-
-function openUploadDialog(kind, objectId = null, mode = 'standard') {
-  activeUploadKind = uploadRules[kind] ? kind : 'project';
-  activeUploadMode = mode === 'revision' ? 'revision' : 'standard';
-  selectAnalysis(activeUploadKind);
-  activeUploadObjectId = objectRegistry.some((object) => object.id === objectId) ? objectId : null;
-  const selectedObject = objectRegistry.find((object) => object.id === activeUploadObjectId);
-  const storedFile = objectFile(selectedObject, activeUploadKind);
-  if (activeUploadMode === 'revision' && !storedFile) activeUploadMode = 'standard';
-  pendingUploadSourceFile = null;
-  pendingFile = activeUploadMode === 'revision' ? null : (selectedObject ? (storedFile ? { ...storedFile } : null) : (selectedFiles[activeUploadKind] ? { ...selectedFiles[activeUploadKind] } : null));
-  const rule = uploadRules[activeUploadKind];
-  newObjectNameDraft = selectedObject ? '' : (localStorage.getItem(OBJECT_NAME_KEY) || '');
-  const targetOptions = objectRegistry.map((object) => `<option value="${escapeHtml(object.id)}" ${object.id === activeUploadObjectId ? 'selected' : ''}>${escapeHtml(object.name)} Â· ${escapeHtml(tr(object.status === 'active' ? 'inWork' : object.status === 'ready' ? 'readyStatus' : 'uploaded'))}</option>`).join('');
-  const revisionSource = activeUploadMode === 'revision' && storedFile ? `<section class="revision-upload-source"><span>v${fileVersionCount(storedFile)}</span><div><small>${escapeHtml(tr('currentStoredVersion'))}</small><strong>${escapeHtml(storedFile.name)}</strong><em>${escapeHtml(formatStorage(storedFile.size))} Â· ${escapeHtml(formatObjectDate(storedFile.addedAt))}</em></div></section>` : '';
-  const markup = `
-    <div class="upload-limits" aria-label="${escapeHtml(tr('userUploadPlan'))}">
-      <span><b>${escapeHtml(tr('maxFileSize'))}</b>${rule.maxMb} ÐœÐ‘</span>
-      <span><b>${escapeHtml(tr('allowedFormats'))}</b>${rule.formats}</span>
-      <small>${escapeHtml(tr('userUploadPlan'))}</small>
-    </div>
-    <label class="upload-target-field${activeUploadMode === 'revision' ? ' is-fixed' : ''}">
-      <span>${escapeHtml(tr('addToObject'))}</span>
-      <select data-upload-object-target ${activeUploadMode === 'revision' ? 'disabled' : ''}><option value="">${escapeHtml(tr('newObject'))}</option>${targetOptions}</select>
-    </label>
-    <label class="upload-object-field">
-      <span>${escapeHtml(tr('objectName'))} <em>*</em></span>
-      <input data-analysis-object-name maxlength="100" autocomplete="organization" placeholder="${escapeHtml(tr('objectPlaceholder'))}" value="${escapeHtml(selectedObject?.name || newObjectNameDraft)}" ${selectedObject ? 'readonly' : ''} />
-      <small>${escapeHtml(tr('objectNameHint'))}</small>
-    </label>
-    ${revisionSource}
-    <div class="analysis-dropzone" data-upload-dropzone role="button" tabindex="0">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v5h14v-5"/></svg>
-      <strong>${escapeHtml(tr('selectFile'))}</strong>
-      <span>${escapeHtml(tr('dropFile'))}</span>
-      <small>${rule.formats} Â· ${rule.maxMb} ÐœÐ‘</small>
-    </div>
-    <input class="hidden-file-input" data-upload-file-input type="file" accept="${rule.accept}" />
-    <input class="hidden-file-input" data-upload-photo-input type="file" accept="image/*" capture="environment" />
-    <div class="upload-device-actions" data-upload-device-actions>
-      <button type="button" data-choose-device>${escapeHtml(tr('deviceFile'))}</button>
-      <button type="button" data-choose-photo>${escapeHtml(tr('photoOrCamera'))}</button>
-    </div>
-    <div class="dashboard-selected-file" data-upload-selected hidden>
-      <span class="dashboard-file-icon">â–¤</span>
-      <div><strong data-upload-file-name></strong><small data-upload-file-meta></small></div>
-      <button type="button" data-replace-file>${escapeHtml(tr('replace'))}</button>
-      <button class="dashboard-delete-file" type="button" data-delete-file aria-label="${escapeHtml(tr('deleteFile'))}">Ã—</button>
-    </div>
-    <button class="primary-button dashboard-upload-confirm" type="button" data-confirm-upload>${escapeHtml(tr(activeUploadMode === 'revision' ? 'uploadAndCompare' : 'upload'))}</button>`;
-  showDialog(activeUploadMode === 'revision' ? `${escapeHtml(tr('newVersion'))}: ${escapeHtml(tr(activeUploadKind))}` : uploadTitle(activeUploadKind), tr(activeUploadMode === 'revision' ? 'revisionUploadHint' : 'oneFilePerCategory'), markup);
-
-  const fileInput = $('[data-upload-file-input]');
-  const photoInput = $('[data-upload-photo-input]');
-  const dropzone = $('[data-upload-dropzone]');
-  const objectNameInput = $('[data-analysis-object-name]');
-  const targetSelect = $('[data-upload-object-target]');
-  fileInput.addEventListener('change', () => chooseUploadFile(fileInput.files?.[0]));
-  photoInput.addEventListener('change', () => chooseUploadFile(photoInput.files?.[0]));
-  $('[data-choose-device]').addEventListener('click', () => fileInput.click());
-  $('[data-choose-photo]').addEventListener('click', () => photoInput.click());
-  $('[data-replace-file]').addEventListener('click', () => fileInput.click());
-  $('[data-delete-file]').addEventListener('click', removeUploadFile);
-  $('[data-confirm-upload]').addEventListener('click', confirmUpload);
-  objectNameInput.addEventListener('input', () => { objectNameInput.classList.remove('field-error'); newObjectNameDraft = objectNameInput.value; renderUploadFile(); });
-  targetSelect.addEventListener('change', () => {
-    if (activeUploadMode === 'revision') return;
-    const target = objectRegistry.find((object) => object.id === targetSelect.value);
-    activeUploadObjectId = target?.id || null;
-    objectNameInput.readOnly = Boolean(target);
-    objectNameInput.value = target?.name || newObjectNameDraft;
-    pendingUploadSourceFile = null;
-    pendingFile = target && objectFile(target, activeUploadKind) ? { ...objectFile(target, activeUploadKind) } : null;
-    renderUploadFile();
-  });
-  dropzone.addEventListener('click', () => fileInput.click());
-  dropzone.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); fileInput.click(); } });
-  ['dragenter', 'dragover'].forEach((type) => dropzone.addEventListener(type, (event) => { event.preventDefault(); dropzone.classList.add('is-dragging'); }));
-  ['dragleave', 'drop'].forEach((type) => dropzone.addEventListener(type, (event) => { event.preventDefault(); dropzone.classList.remove('is-dragging'); }));
-  dropzone.addEventListener('drop', (event) => {
-    if (event.dataTransfer.files.length > 1) showToast(tr('onlyOneFile'));
-    chooseUploadFile(event.dataTransfer.files?.[0]);
-  });
-  renderUploadFile();
-}
-
-function selectAnalysis(type) {
-  selectedAnalysis = ['project', 'contract', 'estimate'].includes(type) ? type : 'project';
-  $$('[data-analysis-type]').forEach((card) => {
-    const selected = card.dataset.analysisType === selectedAnalysis;
-    card.classList.toggle('is-selected', selected);
-    card.setAttribute('aria-pressed', String(selected));
-  });
-}
-
-function runAnalysis() {
-  const readyFiles = Object.entries(selectedFiles).filter(([, file]) => file);
-  if (!readyFiles.length) {
-    showToast(tr('uploadFirst'));
-    openUploadDialog(selectedAnalysis);
-    return;
-  }
-  const objectName = localStorage.getItem(OBJECT_NAME_KEY) || tr('analysis');
-  const title = escapeHtml(objectName);
-  const filesMarkup = `<div class="analysis-ready-files">${readyFiles.map(([kind, file]) => `<div><span>âœ“</span><strong>${escapeHtml(tr(kind))}</strong><small>${escapeHtml(file.name)}</small></div>`).join('')}</div>`;
-  clearTimeout(analysisTimer);
-  showDialog(`${tr('analysis')}: ${title}`, `${tr('filesReady')}: ${readyFiles.length} ${tr('analysisFilesCount')}`, `${filesMarkup}<div class="analysis-loader"><span></span><span></span><span></span></div>`);
-  analysisTimer = setTimeout(() => {
-    if (!$('[data-dialog]').open) return;
-    const analyzedObject = registerAnalyzedObject(objectName, readyFiles);
-    showDialog(tr('analysisComplete'), tr('analysisCompleteCopy'), `<div class="result-actions"><button class="outline-button" type="button" data-view-report>${tr('viewReport')}</button><button class="primary-button" type="button" data-start-object>${tr('startObject')}</button></div>`);
-    $('[data-view-report]')?.addEventListener('click', () => openReportChooser(analyzedObject));
-    $('[data-start-object]')?.addEventListener('click', () => startReadyObject(analyzedObject.id));
-  }, 1100);
-}
-
-function openInvitationsCenter() {
-  const active = homePendingInvitations();
-  const markup = active.length
-    ? `<div class="home-invitation-list">${active.map((object) => `<button type="button" data-open-home-invitation="${escapeHtml(object.id)}"><span>â†—</span><span><strong>${escapeHtml(invitedObjectName(object))}</strong><small>${escapeHtml(tr(object.roleKey || 'objectParticipant'))} Â· ${escapeHtml(formatObjectDate(object.invitedAt))}</small></span><i>â€º</i></button>`).join('')}</div>`
-    : `<div class="history-empty">${escapeHtml(tr('noObjects'))}</div>`;
-  showDialog(escapeHtml(tr('invitationsCenter')), `${active.length} Â· ${escapeHtml(tr('invitations'))}`, markup);
-  $$('[data-open-home-invitation]').forEach((button) => button.addEventListener('click', () => openInvitedObjectCard(button.dataset.openHomeInvitation)));
-}
-
-function isAppleMobileDevice() {
-  return /iPad|iPhone|iPod/i.test(navigator.userAgent)
-    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-}
-
-function isInstalledWebApp() {
-  return window.matchMedia?.('(display-mode: standalone)').matches || navigator.standalone === true;
-}
-
-function supportsPushNotifications() {
-  return 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
-}
-
-function isDemoAccount() {
-  try { return JSON.parse(localStorage.getItem(DEMO_SESSION_KEY) || 'null')?.email === 'str@str.com'; }
-  catch { return false; }
-}
-
-async function pushRegistration() {
-  const current = await navigator.serviceWorker.getRegistration();
-  if (current) return current;
-  return navigator.serviceWorker.register('./sw.js?v=101', { updateViaCache: 'none' });
-}
-
-async function pushNotificationState() {
-  if (!supportsPushNotifications()) return 'unsupported';
-  if (isAppleMobileDevice() && !isInstalledWebApp()) return 'install';
-  if (Notification.permission === 'denied') return 'denied';
-  const registration = await pushRegistration();
-  const subscription = await registration.pushManager.getSubscription();
-  if (Notification.permission === 'granted' && subscription) return 'enabled';
-  if (Notification.permission === 'granted') return 'local';
-  return 'disabled';
-}
-
-function base64UrlBytes(value) {
-  const padding = '='.repeat((4 - (value.length % 4)) % 4);
-  const binary = atob((value + padding).replace(/-/g, '+').replace(/_/g, '/'));
-  return Uint8Array.from(binary, (character) => character.charCodeAt(0));
-}
-
-async function invokePushApi(body) {
-  if (!authClient) throw new Error('StructOS account required');
-  const { data, error } = await authClient.functions.invoke('structos-push', { body });
-  if (error) throw error;
-  if (!data?.ok) throw new Error(data?.error || tr('pushError'));
-  return data;
-}
-
-function pushDeviceName() {
-  if (isAppleMobileDevice()) return navigator.maxTouchPoints > 1 && !/iPhone/i.test(navigator.userAgent) ? 'iPad' : 'iPhone';
-  if (/Android/i.test(navigator.userAgent)) return 'Android';
-  return 'Web';
-}
-
-async function enablePushNotifications({ reopenCenter = true } = {}) {
-  if (!supportsPushNotifications()) { showToast(tr('pushUnsupported')); return false; }
-  if (isAppleMobileDevice() && !isInstalledWebApp()) { showToast(tr('pushInstallRequired')); return false; }
-  try {
-    const permission = Notification.permission === 'default' ? await Notification.requestPermission() : Notification.permission;
-    if (permission !== 'granted') { if (reopenCenter) await openNotificationsCenter(); return false; }
-    const registration = await pushRegistration();
-    await registration.update().catch(() => {});
-    if (!authClient || isDemoAccount()) {
-      showToast(tr('pushLocalOnly'));
-      if (reopenCenter) await openNotificationsCenter();
-      return true;
-    }
-    const { publicKey } = await invokePushApi({ action: 'public-key' });
-    let subscription = await registration.pushManager.getSubscription();
-    if (!subscription) {
-      subscription = await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: base64UrlBytes(publicKey) });
-    }
-    try {
-      await invokePushApi({ action: 'subscribe', subscription: subscription.toJSON(), deviceName: pushDeviceName(), language });
-    } catch (error) {
-      await subscription.unsubscribe().catch(() => {});
-      throw error;
-    }
-    showToast(tr('pushEnabledToast'));
-    if (reopenCenter) await openNotificationsCenter();
-    return true;
-  } catch (error) {
-    console.error('StructOS push setup failed:', error);
-    showToast(tr('pushError'));
-    return false;
-  }
-}
-
-async function disablePushNotifications() {
-  try {
-    const registration = await pushRegistration();
-    const subscription = await registration.pushManager.getSubscription();
-    if (subscription && authClient && !isDemoAccount()) {
-      await invokePushApi({ action: 'unsubscribe', endpoint: subscription.endpoint }).catch(() => {});
-    }
-    await subscription?.unsubscribe();
-    showToast(tr('pushDisabledToast'));
-    await openNotificationsCenter();
-  } catch (error) {
-    console.error('StructOS push disable failed:', error);
-    showToast(tr('pushError'));
-  }
-}
-
-async function testPushNotification() {
-  try {
-    const registration = await pushRegistration();
-    const subscription = await registration.pushManager.getSubscription();
-    if (subscription && authClient && !isDemoAccount()) {
-      await invokePushApi({ action: 'send-test', language });
-    } else {
-      if (Notification.permission !== 'granted') { await enablePushNotifications(); return; }
-      await registration.showNotification(tr('pushTestTitle'), { body: tr('pushTestBody'), icon: './assets/favicon-192.png', badge: './assets/favicon-192.png', tag: 'structos-test', renotify: true, vibrate: [90, 40, 90], data: { url: new URL('./dashboard.html#notifications', location.href).href } });
-    }
-    showToast(tr('pushTestSent'));
-  } catch (error) {
-    console.error('StructOS push test failed:', error);
-    showToast(tr('pushError'));
-  }
-}
-
-function pushSettingsMarkup(state) {
-  const labels = { enabled: 'pushEnabled', local: 'pushLocalOnly', disabled: 'pushDisabled', denied: 'pushDenied', install: 'pushInstallRequired', unsupported: 'pushUnsupported' };
-  const hints = state === 'install' ? tr('pushInstallHint') : state === 'denied' ? tr('pushDeniedHint') : state === 'local' && (!authClient || isDemoAccount()) ? tr('pushAccountHint') : tr('pushNotificationsHint');
-  const enable = state === 'disabled' || (state === 'local' && authClient && !isDemoAccount());
-  const test = state === 'enabled' || state === 'local';
-  return `<section class="push-settings-card is-${state}"><header><span aria-hidden="true">${state === 'enabled' || state === 'local' ? 'âœ“' : '!'}</span><div><small>STRUCTOS PUSH</small><strong>${escapeHtml(tr('pushNotificationsTitle'))}</strong><em>${escapeHtml(tr(labels[state]))}</em></div></header><p>${escapeHtml(hints)}</p><div class="push-settings-actions">${enable ? `<button class="primary-button" type="button" data-enable-push>${escapeHtml(tr('enablePush'))}</button>` : ''}${test ? `<button class="outline-button" type="button" data-test-push>${escapeHtml(tr('testPush'))}</button>` : ''}${state === 'enabled' ? `<button class="outline-button is-danger" type="button" data-disable-push>${escapeHtml(tr('disablePush'))}</button>` : ''}</div></section>`;
-}
-
-async function openNotificationsCenter() {
-  const notifications = homePendingNotifications();
-  let pushState = 'unsupported';
-  try { pushState = await pushNotificationState(); }
-  catch (error) { console.warn('StructOS push state unavailable:', error); }
-  const markup = notifications.length
-    ? `<div class="home-invitation-list home-notification-list">${notifications.map(({ object, file }) => `<button type="button" data-open-home-notification="${escapeHtml(object.id)}"><span>!</span><span><strong>${escapeHtml(object.projectTitle || object.name)}</strong><small>${escapeHtml(tr(file.kind))} Â· ${escapeHtml(tr('pendingAnalysis'))}</small></span><i>â€º</i></button>`).join('')}</div>`
-    : `<section class="home-notifications-empty"><span>âœ“</span><strong>${escapeHtml(tr('noNewNotifications'))}</strong><small>${escapeHtml(tr('noNewNotificationsHint'))}</small></section>`;
-  showDialog(escapeHtml(tr('notifications')), `${notifications.length} Â· ${escapeHtml(tr('notifications'))}`, `${pushSettingsMarkup(pushState)}${markup}`);
-  $('[data-enable-push]')?.addEventListener('click', enablePushNotifications);
-  $('[data-disable-push]')?.addEventListener('click', disablePushNotifications);
-  $('[data-test-push]')?.addEventListener('click', testPushNotification);
-  $$('[data-open-home-notification]').forEach((button) => button.addEventListener('click', () => openObjectCard(button.dataset.openHomeNotification)));
-  markHomeNotificationsRead(notifications);
-}
-
-function openView(view) {
-  if (view === 'profile') { setPanel('profile'); return; }
-  if (view === 'passport') { setPanel('passport'); return; }
-  if (view === 'projects') { setPanel('projects'); return; }
-  if (view === 'proposals') { setPanel('proposals'); return; }
-  if (view === 'games') { setPanel('games'); return; }
-  if (view === 'objects') { setPanel('objects'); return; }
-  if (view === 'invitations') { openInvitationsCenter(); return; }
-  if (view === 'notifications') { openNotificationsCenter(); return; }
-  if (view === 'tasks') { openTodoDialog(); return; }
-  if (view === 'calendar') { openCalendarDialog(); return; }
-  if (view === 'drawing') { openDrawingStudio(); return; }
-  if (view === 'project' || view === 'analysis') {
-    openProjectObjectWizard({ quickProjectOnly: true });
-    return;
-  }
-  if (view === 'contract' || view === 'estimate') {
-    openUploadDialog(view);
-    return;
-  }
-  if (view === 'balance') { openBalanceDialog(); return; }
-  if (view === 'balanceBonuses') { openFinanceHubDialog(); return; }
-  if (view === 'finance') { setPanel('cashflow'); return; }
-  if (view === 'bonuses') { openBonusDialog(); return; }
-  if (view === 'subscription') { openSubscriptionDialog(); return; }
-  if (view === 'connections') { openConnectionsDialog(); return; }
-  const labels = { subscription: 'tariffSubscription', invitations: 'invitations', invite: 'invite', notifications: 'notifications', documents: 'documents', connections: 'connections', settings: 'settings', acts: 'widgetActs', attention: 'attention', tasks: 'widgetTasks', team: 'widgetTeam' };
-  showDialog(tr(labels[view] || 'settings'), tr('comingSoon'), `<div class="dialog-options"><div class="dialog-option"><span>StructOS</span><span>â†’</span></div></div>`);
-}
-
-const OFFLINE_SYNC_CATEGORIES = Object.freeze([
-  { id: 'projects', labelKey: 'syncCategoryProjects', hintKey: 'syncCategoryProjectsHint', icon: 'â–£' },
-  { id: 'staff', labelKey: 'syncCategoryStaff', hintKey: 'syncCategoryStaffHint', icon: 'äºº' },
-  { id: 'finance', labelKey: 'syncCategoryFinance', hintKey: 'syncCategoryFinanceHint', icon: 'â‚½' },
-  { id: 'warehouse', labelKey: 'syncCategoryWarehouse', hintKey: 'syncCategoryWarehouseHint', icon: 'â—‡' },
-  { id: 'documents', labelKey: 'syncCategoryDocuments', hintKey: 'syncCategoryDocumentsHint', icon: 'â–¤' },
-  { id: 'profile', labelKey: 'syncCategoryProfile', hintKey: 'syncCategoryProfileHint', icon: 'ID' }
-]);
-
-function offlineJsonCopy(value) {
-  return JSON.parse(JSON.stringify(value));
-}
-
-function cashObjectIdentitySnapshot(object) {
-  return {
-    id: object.id,
-    sourceProjectId: object.sourceProjectId,
-    name: object.name,
-    createdAt: object.createdAt,
-    completed: object.completed,
-    completedAt: object.completedAt
-  };
-}
-
-function cashFinanceSectionSnapshot(section) {
-  return {
-    id: section.id,
-    sourceProjectId: section.sourceProjectId,
-    name: section.name,
-    createdAt: section.createdAt,
-    createdManually: section.createdManually,
-    contractMode: section.contractMode,
-    factMode: section.factMode,
-    contractAmount: section.contractAmount,
-    advances: section.advances,
-    expenses: section.expenses,
-    ownInvestments: section.ownInvestments,
-    ownReturns: section.ownReturns,
-    factIncome: section.factIncome,
-    factExpenses: section.factExpenses,
-    factOwnInvestments: section.factOwnInvestments,
-    factOwnReturns: section.factOwnReturns
-  };
-}
-
-function cashDocumentSectionSnapshot(section) {
-  return {
-    id: section.id,
-    sourceProjectId: section.sourceProjectId,
-    name: section.name,
-    attachments: section.attachments,
-    statement: section.statement,
-    act: section.act,
-    reportHistory: section.reportHistory
-  };
-}
-
-async function indexedStoreKeys(databaseFactory, storeName) {
-  try {
-    const database = await databaseFactory();
-    return await new Promise((resolve, reject) => {
-      const transaction = database.transaction(storeName, 'readonly');
-      const request = transaction.objectStore(storeName).getAllKeys();
-      request.onsuccess = () => resolve(request.result.map(String).sort());
-      request.onerror = () => reject(request.error || new Error('Local file inventory failed'));
-    });
-  } catch {
-    return [];
-  }
-}
-
-async function collectOfflineSyncCategory(category) {
-  if (category === 'projects') {
-    return offlineJsonCopy({
-      schemaVersion: 1,
-      objects: objectRegistry,
-      commercialProposals: commercialProposalRecords,
-      invitedObjects,
-      objectOrder: unifiedObjectOrder,
-      currentUploads: selectedFiles,
-      collapsedProjectIds: [...collapsedProjectIds].sort()
-    });
-  }
-
-  if (category === 'staff') {
-    return offlineJsonCopy({
-      schemaVersion: 1,
-      objects: cashflowObjects.map((object) => ({
-        ...cashObjectIdentitySnapshot(object),
-        sections: object.sections
-          .filter((section) => section.staffingMode || section.staffingShifts?.length)
-          .map((section) => ({ id: section.id, name: section.name, staffingMode: section.staffingMode, staffingShifts: section.staffingShifts }))
-      })).filter((object) => object.sections.length)
-    });
-  }
-
-  if (category === 'finance') {
-    return offlineJsonCopy({
-      schemaVersion: 1,
-      account: finance,
-      objects: cashflowObjects.map((object) => ({
-        ...cashObjectIdentitySnapshot(object),
-        sections: object.sections.map(cashFinanceSectionSnapshot)
-      }))
-    });
-  }
-
-  if (category === 'warehouse') {
-    return offlineJsonCopy({
-      schemaVersion: 1,
-      projects: objectRegistry.map((object) => ({
-        id: object.id,
-        name: object.name,
-        files: object.files.map((file) => ({
-          id: file.id,
-          kind: file.kind,
-          name: file.name,
-          sourceCatalog: file.sourceCatalog,
-          materials: file.materials,
-          equipment: file.equipment,
-          specification: file.specification,
-          versions: fileVersions(file).map((version) => ({
-            id: version.id,
-            sourceCatalog: version.sourceCatalog,
-            materials: version.materials,
-            equipment: version.equipment,
-            specification: version.specification
-          }))
-        }))
-      })),
-      cashflow: cashflowObjects.map((object) => ({
-        id: object.id,
-        sections: object.sections.map((section) => ({ id: section.id, name: section.name, sourceCatalog: section.sourceCatalog }))
-      }))
-    });
-  }
-
-  if (category === 'documents') {
-    const [cashflowFileIds, drawingIds] = await Promise.all([
-      indexedStoreKeys(openCashflowFileDb, CASHFLOW_FILE_STORE),
-      indexedStoreKeys(drawingDatabase, 'drawings')
-    ]);
-    return offlineJsonCopy({
-      schemaVersion: 1,
-      projects: objectRegistry.map((object) => ({ id: object.id, name: object.name, files: object.files })),
-      commercialProposals: commercialProposalRecords,
-      cashflow: cashflowObjects.map((object) => ({
-        ...cashObjectIdentitySnapshot(object),
-        organizationDocuments: object.organizationDocuments,
-        sections: object.sections.map(cashDocumentSectionSnapshot)
-      })),
-      localFileInventory: { cashflowFileIds, drawingIds }
-    });
-  }
-
-  if (category === 'profile') {
-    return offlineJsonCopy({
-      schemaVersion: 1,
-      person: personData,
-      profile: profileData,
-      builderPassport,
-      plan: profilePlan,
-      connections: structosConnections,
-      preferences: {
-        language,
-        theme: root.dataset.theme || 'dark',
-        selectedWidgets,
-        widgetPositions,
-        widgetSizes,
-        widgetStyles,
-        todoItems,
-        activityLog
-      }
-    });
-  }
-
-  return { schemaVersion: 1 };
-}
-
-function offlineSyncHasValue(value) {
-  if (value == null) return false;
-  if (Array.isArray(value)) return value.length > 0;
-  if (typeof value === 'object') return Object.values(value).some(offlineSyncHasValue);
-  if (typeof value === 'string') return value.trim().length > 0;
-  return true;
-}
-
-function countOfflineSyncSubsections(category, payload = {}) {
-  if (category === 'projects') {
-    const objectIds = new Set([...(payload.objects || []), ...(payload.invitedObjects || [])].map((object) => object?.id).filter(Boolean));
-    const activeUploads = Object.values(payload.currentUploads || {}).filter(offlineSyncHasValue).length;
-    return objectIds.size + activeUploads;
-  }
-
-  if (category === 'staff') {
-    return (payload.objects || []).reduce((total, object) => total + (object.sections || []).length, 0);
-  }
-
-  if (category === 'finance') {
-    const financeSections = (payload.objects || []).reduce((total, object) => total + (object.sections || []).length, 0);
-    return financeSections + (offlineSyncHasValue(payload.account) ? 1 : 0);
-  }
-
-  if (category === 'warehouse') {
-    const projectFiles = (payload.projects || []).reduce((total, project) => total + (project.files || []).filter((file) =>
-      offlineSyncHasValue(file.sourceCatalog) || offlineSyncHasValue(file.materials) || offlineSyncHasValue(file.equipment) || offlineSyncHasValue(file.specification)
-    ).length, 0);
-    const cashflowSections = (payload.cashflow || []).reduce((total, object) => total + (object.sections || []).filter((section) => offlineSyncHasValue(section.sourceCatalog)).length, 0);
-    return projectFiles + cashflowSections;
-  }
-
-  if (category === 'documents') {
-    const projectFiles = (payload.projects || []).reduce((total, project) => total + (project.files || []).length, 0);
-    const cashflowDocuments = (payload.cashflow || []).reduce((total, object) => {
-      const organizationDocuments = offlineSyncHasValue(object.organizationDocuments) ? 1 : 0;
-      const sectionDocuments = (object.sections || []).filter((section) =>
-        offlineSyncHasValue(section.attachments) || offlineSyncHasValue(section.statement) || offlineSyncHasValue(section.act) || offlineSyncHasValue(section.reportHistory)
-      ).length;
-      return total + organizationDocuments + sectionDocuments;
-    }, 0);
-    const localFiles = (payload.localFileInventory?.cashflowFileIds || []).length + (payload.localFileInventory?.drawingIds || []).length;
-    return projectFiles + cashflowDocuments + localFiles;
-  }
-
-  if (category === 'profile') {
-    return ['person', 'profile', 'builderPassport', 'plan', 'connections', 'preferences']
-      .filter((key) => offlineSyncHasValue(payload[key])).length;
-  }
-
-  return 0;
-}
-
-const offlineSync = createOfflineSyncEngine({
-  categories: OFFLINE_SYNC_CATEGORIES.map((category) => category.id),
-  collectCategory: collectOfflineSyncCategory,
-  countSubsections: countOfflineSyncSubsections
-});
-let offlineSyncState = offlineSync.getState();
-let offlineSyncNetworkMode = navigator.onLine ? 'online' : 'offline';
-let offlineSyncRestoredTimer;
-
-function offlineSyncDate(value) {
-  if (!value) return '';
-  try {
-    return new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date(value));
-  } catch {
-    return '';
-  }
-}
-
-function offlineSyncCountWord(prefix, count) {
-  if (language === 'RU') {
-    const lastTwo = count % 100;
-    const last = count % 10;
-    if (last === 1 && lastTwo !== 11) return tr(`${prefix}One`);
-    if (last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14)) return tr(`${prefix}Few`);
-  } else if (language === 'EN' && count === 1) {
-    return tr(`${prefix}One`);
-  }
-  return tr(`${prefix}Many`);
-}
-
-function renderOfflineSyncState(state = offlineSyncState) {
-  const section = $('.home-sync-section');
-  const status = $('[data-sync-live-status]');
-  if (!section || !status) return;
-  section.dataset.syncNetwork = state.online ? offlineSyncNetworkMode : 'offline';
-  const pendingSummary = $('[data-sync-pending-summary]', section);
-  const pendingSections = Math.max(0, Number(state.pendingCount) || 0);
-  const pendingSubsections = Math.max(0, Number(state.pendingSubsectionCount) || 0);
-  if (pendingSummary) {
-    pendingSummary.classList.toggle('is-synced', pendingSections === 0 && pendingSubsections === 0);
-    $('[data-sync-pending-sections]', pendingSummary).textContent = String(pendingSections);
-    $('[data-sync-pending-section-label]', pendingSummary).textContent = offlineSyncCountWord('syncSection', pendingSections);
-    $('[data-sync-pending-subsections]', pendingSummary).textContent = String(pendingSubsections);
-    $('[data-sync-pending-subsection-label]', pendingSummary).textContent = offlineSyncCountWord('syncSubsection', pendingSubsections);
-  }
-  status.classList.remove('is-ready', 'is-synced', 'is-offline', 'is-syncing', 'is-error');
-
-  let title = tr('syncStatePreparingTitle');
-  let copyText = tr('syncStatePreparingCopy');
-  let statusClass = 'is-syncing';
-  if (!state.online) {
-    title = tr('syncStateOfflineTitle');
-    copyText = tr('syncStateOfflineCopy');
-    statusClass = 'is-offline';
-  } else if (state.phase === 'error') {
-    title = tr('syncStateErrorTitle');
-    copyText = tr('syncStateErrorCopy');
-    statusClass = 'is-error';
-  } else if (state.syncing) {
-    title = tr('syncStatePreparingTitle');
-    copyText = state.phase === 'pushing' || state.phase === 'pulling' ? tr('syncProgressCloud') : tr('syncProgressSaving');
-    statusClass = 'is-syncing';
-  } else if (state.phase === 'synced') {
-    title = tr('syncStateSyncedTitle');
-    copyText = tr('syncStateSyncedCopy');
-    statusClass = 'is-synced';
-  } else if (state.deviceReady) {
-    title = tr('syncStateReadyTitle');
-    copyText = tr('syncStateReadyCopy');
-    statusClass = 'is-ready';
-  }
-
-  const savedAt = offlineSyncDate(state.lastLocalSaveAt);
-  if (savedAt && !state.syncing) copyText = `${copyText} Â· ${tr('syncLastSaved')}: ${savedAt}`;
-  status.classList.add(statusClass);
-  $('[data-sync-live-title]', status).textContent = title;
-  $('[data-sync-live-copy]', status).textContent = copyText;
-  $('[data-sync-live-action]', status).textContent = tr('syncOpen');
-}
-
-function handleOfflineSyncState(nextState) {
-  const wasOnline = offlineSyncState.online;
-  offlineSyncState = nextState;
-  clearTimeout(offlineSyncRestoredTimer);
-  if (!wasOnline && nextState.online) {
-    offlineSyncNetworkMode = 'restored';
-    offlineSyncRestoredTimer = setTimeout(() => {
-      offlineSyncNetworkMode = navigator.onLine ? 'online' : 'offline';
-      renderOfflineSyncState();
-    }, 4200);
-  } else if (!nextState.online) {
-    offlineSyncNetworkMode = 'offline';
-  } else if (offlineSyncNetworkMode !== 'restored') {
-    offlineSyncNetworkMode = 'online';
-  }
-  renderOfflineSyncState(nextState);
-}
-
-function syncCategoryMarkup(category) {
-  return `<label class="sync-category-option"><input type="checkbox" value="${category.id}" data-sync-category /><span><b>${category.icon}</b><span><strong>${escapeHtml(tr(category.labelKey))}</strong><small>${escapeHtml(tr(category.hintKey))}</small></span><b class="sync-category-check">âœ“</b></span></label>`;
-}
-
-function openOfflineSyncDialog() {
-  const online = navigator.onLine;
-  const architecture = `<div class="sync-architecture"><div><small>${escapeHtml(tr('syncServerRole'))}</small><strong>${escapeHtml(tr('syncServerMain'))}</strong></div><div><small>${escapeHtml(tr('syncDeviceRole'))}</small><strong>${escapeHtml(tr('syncDeviceCopy'))}</strong></div><div><small>${escapeHtml(tr('syncEngineRole'))}</small><strong>${escapeHtml(tr('syncEngineCopy'))}</strong></div></div>`;
-  const extra = `<div class="sync-dialog-intro${online ? '' : ' is-offline'}"><i></i><span><strong>${escapeHtml(tr(online ? 'syncOnlineTitle' : 'syncOfflineTitle'))}</strong><small>${escapeHtml(tr(online ? 'syncOnlineCopy' : 'syncOfflineCopy'))}</small></span></div>
-    <fieldset class="sync-category-fieldset"><legend>${escapeHtml(tr('syncChooseData'))}</legend><div class="sync-category-grid">${OFFLINE_SYNC_CATEGORIES.map(syncCategoryMarkup).join('')}</div></fieldset>
-    <div class="sync-server-only-note"><b>!</b><span>${escapeHtml(tr('syncServerOnlyNote'))}</span></div>
-    ${architecture}
-    <div class="sync-dialog-progress" data-sync-progress hidden><span><i></i></span><small data-sync-progress-copy>${escapeHtml(tr('syncProgressSaving'))}</small></div>
-    <div class="sync-dialog-actions"><button class="outline-button" type="button" data-sync-selected disabled>${escapeHtml(tr('syncSelected'))}</button><button class="primary-button" type="button" data-sync-all>${escapeHtml(tr('syncAll'))}</button></div>`;
-  showDialog(escapeHtml(tr('syncDialogTitle')), escapeHtml(tr('syncDialogHint')), extra);
-  const dialog = $('[data-dialog]');
-  dialog.classList.add('sync-dialog');
-  const scope = $('[data-dialog-content]');
-  const selectedButton = $('[data-sync-selected]', scope);
-  const allButton = $('[data-sync-all]', scope);
-  const progress = $('[data-sync-progress]', scope);
-  const progressCopy = $('[data-sync-progress-copy]', scope);
-
-  const selection = () => $$('[data-sync-category]:checked', scope).map((input) => input.value);
-  const updateSelection = () => { selectedButton.disabled = selection().length === 0; };
-  $$('[data-sync-category]', scope).forEach((input) => input.addEventListener('change', updateSelection));
-
-  const synchronize = async (categories) => {
-    if (!categories.length) { showToast(tr('syncSelectOne')); return; }
-    selectedButton.disabled = true;
-    allButton.disabled = true;
-    $$('[data-sync-category]', scope).forEach((input) => { input.disabled = true; });
-    progress.hidden = false;
-    progressCopy.textContent = tr('syncProgressSaving');
-    const cloudPhaseTimer = setTimeout(() => { if (navigator.onLine) progressCopy.textContent = tr('syncProgressCloud'); }, 320);
-    const result = await offlineSync.prepare(categories);
-    clearTimeout(cloudPhaseTimer);
-    if (result?.cloud) showToast(tr('syncToastCloud'));
-    else if (result?.offline) showToast(tr('syncToastOffline'));
-    else showToast(tr('syncToastDevice'));
-    setTimeout(() => { if (dialog.open) dialog.close(); }, 260);
-  };
-
-  selectedButton.addEventListener('click', () => synchronize(selection()));
-  allButton.addEventListener('click', () => synchronize(OFFLINE_SYNC_CATEGORIES.map((category) => category.id)));
-}
-
-offlineSync.subscribe(handleOfflineSyncState);
-
-function openObjectDialog() {
-  if (objectRegistry.filter((object) => object.status === 'active').length >= ACTIVE_OBJECT_LIMIT) {
-    showActiveLimit();
-    return;
-  }
-  showDialog(tr('addObject'), tr('noObjectsCopy'), `<div class="object-form"><label><span class="sr-only">${tr('objectName')}</span><input data-object-name maxlength="80" placeholder="${tr('objectPlaceholder')}" /></label><button class="primary-button" type="button" data-create-object>${tr('create')}</button></div>`);
-  setTimeout(() => $('[data-object-name]')?.focus(), 40);
-  $('[data-create-object]')?.addEventListener('click', () => {
-    const name = $('[data-object-name]').value.trim();
-    if (!name) { $('[data-object-name]').focus(); return; }
-    const now = new Date().toISOString();
-    objectRegistry.unshift({ id: createObjectId(), name, projectTitle: name, projectSection: name, documentTitles: normalizeProjectDocumentTitles(), contractNumber: '', status: 'active', createdAt: now, updatedAt: now, uploadedAt: now, analyzedAt: now, startedAt: now, completedAt: null, files: [] });
-    saveObjects();
-    renderObjects();
-    renderWidgets();
-    $('[data-dialog]').close();
-    showToast(tr('objectCreated'));
-  });
-}
-
-async function logout() {
-  localStorage.removeItem(DEMO_SESSION_KEY);
-  if (authClient) await authClient.auth.signOut();
-  window.location.replace('login.html#login');
-}
-
-async function forceRefresh() {
-  const button = $('[data-force-refresh]');
-  button.classList.add('is-refreshing');
-  button.disabled = true;
-  try {
-    if ('caches' in window) {
-      const keys = await caches.keys();
-      await Promise.all(keys.filter((key) => key.startsWith('structos-')).map((key) => caches.delete(key)));
-    }
-    if ('serviceWorker' in navigator) {
-      const registration = await navigator.serviceWorker.getRegistration();
-      await registration?.update();
-    }
-  } catch {}
-  const url = new URL(window.location.href);
-  url.searchParams.set('refresh', Date.now().toString());
-  url.hash = 'space';
-  window.location.replace(url);
-}
-
-$('[data-language]').addEventListener('change', (event) => applyLanguage(event.target.value));
-$('[data-refresh-page]').addEventListener('click', (event) => {
-  event.currentTarget.classList.add('is-refreshing');
-  setTimeout(() => window.location.reload(), 180);
-});
-$('[data-force-refresh]').addEventListener('click', forceRefresh);
-$('[data-theme-toggle]').addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
-$('[data-menu-open]').addEventListener('click', openMenu);
-$$('[data-menu-close]').forEach((button) => button.addEventListener('click', closeMenu));
-$$('[data-copy-id]').forEach((button) => button.addEventListener('click', copyId));
-$$('[data-copy-referral]').forEach((button) => button.addEventListener('click', copyReferral));
-$$('[data-share-referral]').forEach((button) => button.addEventListener('click', shareReferral));
-const bottomMenuToggle = $('[data-bottom-menu-toggle]');
-bottomMenuToggle?.addEventListener('click', () => setBottomMenu(!$('[data-bottom-menu]').classList.contains('is-open')));
-$$('[data-tab]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.tab)));
-$$('[data-open-panel]').forEach((button) => button.addEventListener('click', () => setPanel(button.dataset.openPanel)));
-$$('[data-project-menu-placeholder]').forEach((button) => button.addEventListener('click', () => {
-  const label = tr(button.dataset.projectMenuPlaceholder);
-  showToast(tr('projectMenuPrepared').replace('{name}', label));
-}));
-$$('[data-launch-turnkey-object]').forEach((button) => button.addEventListener('click', () => openProjectObjectWizard({ workspaceOrigin: 'turnkey' })));
-$$('[data-open-view]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.openView)));
-$$('[data-action]').forEach((button) => button.addEventListener('click', () => openView(button.dataset.action)));
-$$('[data-earn-action]').forEach((button) => button.addEventListener('click', () => {
-  const action = button.dataset.earnAction;
-  if (action === 'passport') setPanel('passport');
-  if (action === 'connections') openConnectionsDialog();
-  if (action === 'referral') shareReferral();
-  if (action === 'games') setPanel('games');
-}));
-window.addEventListener('structos:game-reward', (event) => awardGameWin(event.detail?.game));
-$$('[data-analysis-type]').forEach((button) => button.addEventListener('click', () => openUploadDialog(button.dataset.analysisType)));
-$('[data-run-analysis]')?.addEventListener('click', runAnalysis);
-$$('[data-create-project-object]').forEach((button) => button.addEventListener('click', () => openProjectObjectWizard()));
-$('[data-quick-project-analysis]')?.addEventListener('click', () => openProjectObjectWizard({ quickProjectOnly: true }));
-$('[data-quick-object-start]')?.addEventListener('click', openCashObjectDialog);
-$('[data-open-sync-dialog]')?.addEventListener('click', openOfflineSyncDialog);
-$$('[data-add-object]').forEach((button) => button.addEventListener('click', openObjectDialog));
-$$('[data-add-cash-object]').forEach((button) => button.addEventListener('click', openCashObjectDialog));
-$('[data-export-all-cashflow]')?.addEventListener('click', openAllCashflowExportDialog);
-$('[data-profile-menu]').addEventListener('click', () => $('.drawer-group').classList.toggle('is-open'));
-$('[data-logout]').addEventListener('click', logout);
-$('[data-space-settings]').addEventListener('click', () => {
-  const toolbar = $('[data-space-toolbar]');
-  toolbar.hidden = !toolbar.hidden;
-  $('[data-space-settings]').setAttribute('aria-expanded', String(!toolbar.hidden));
-});
-$('[data-space-done]').addEventListener('click', () => { $('[data-space-toolbar]').hidden = true; $('[data-space-settings]').setAttribute('aria-expanded', 'false'); });
-$('[data-edit-profile]').addEventListener('click', openProfileEditor);
-$('[data-edit-profile-personal]')?.addEventListener('click', openProfileEditor);
-$('[data-drawing-close]')?.addEventListener('click', closeDrawingStudio);
-$('[data-drawing-minimize]')?.addEventListener('click', minimizeDrawingStudio);
-$('[data-drawing-restore]')?.addEventListener('click', openDrawingStudio);
-$('[data-drawing-new]')?.addEventListener('click', newDrawingFlow);
-$('[data-drawing-undo]')?.addEventListener('click', undoDrawing);
-$('[data-drawing-clear]')?.addEventListener('click', () => { clearDrawingCanvas(); currentDrawingId = null; drawingDirty = true; });
-$('[data-drawing-title]')?.addEventListener('input', () => { if (drawingInitialized) drawingDirty = true; });
-$('[data-drawing-upload]')?.addEventListener('click', () => $('[data-drawing-file]').click());
-$('[data-drawing-file]')?.addEventListener('change', (event) => {
-  loadDrawingBackground(event.currentTarget.files?.[0]);
-  event.currentTarget.value = '';
-});
-$('[data-drawing-save]')?.addEventListener('click', saveDrawingRecord);
-$('[data-drawing-saved]')?.addEventListener('click', renderDrawingGallery);
-$('[data-drawing-gallery-close]')?.addEventListener('click', () => { $('[data-drawing-gallery]').hidden = true; });
-$('[data-drawing-share]')?.addEventListener('click', shareDrawingFile);
-$$('[data-report-preview-close]').forEach((button) => button.addEventListener('click', () => $('[data-report-preview-dialog]')?.close()));
-$('[data-report-preview-dialog]')?.addEventListener('close', () => {
-  releaseCashOrganizationPreview();
-  const content = $('[data-report-preview-content]');
-  const actions = $('[data-report-preview-actions]');
-  if (content) content.innerHTML = '';
-  if (actions) actions.innerHTML = '';
-});
-drawingDialog?.addEventListener('cancel', () => {
-  drawingMinimized = false;
-  $('[data-drawing-restore]').hidden = true;
-});
-drawingDialog?.addEventListener('close', () => {
-  if (!drawingMinimized) $('[data-drawing-restore]').hidden = true;
-});
-document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
-window.addEventListener('resize', renderWidgets);
-window.addEventListener('pagehide', persistIdentityLocal);
-
-const pendingTransferImport = importPendingTransfer();
-applyPassportRewards(passportCompletion());
-applyTheme(localStorage.getItem('structos-theme') === 'light' ? 'light' : 'dark');
-applyLanguage(language);
-startHomeStatisticsClock();
-renderWidgetPicker();
-renderWidgets();
-selectAnalysis(selectedAnalysis);
-renderAnalysisCards();
-renderObjects();
-renderCashflow();
-renderProfilePersonalData();
-renderConnectionsSummary();
-offlineSync.initialize();
-recordActivity('cabinet', 'daily-session', { daily: true });
-document.addEventListener('click', trackConstructionActivity, true);
-setPanel(pendingTransferImport?.intent === 'commercial-proposal' ? 'proposals' : (location.hash.slice(1) || 'home'));
-restoreBottomMenuState();
-const cabinetRole = await initAuth();
-if (cabinetRole) playCabinetWelcome(cabinetRole);
-const dailyRewarded = awardDailyLoginReward();
-startActiveBonusAccrual();
-window.setTimeout(() => runLoginPrompts(dailyRewarded), window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1100 : 3750);
-if (pendingTransferImport?.intent === 'commercial-proposal' || location.hash === '#proposals') localStorage.removeItem(AUTH_RETURN_KEY);
-
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=101', { updateViaCache: 'none' }).catch(() => {}));
+  const size = Math×ßzÛFòµë(š+my×fÇVSÒ"G¶W66T‡FÖÂ†6&Bæ–æâ—Ò"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG·G"‚v·r—ÓÂ÷7ããÆ–çWBFFÖ÷&væ—¦F–öâÖf–VÆCÒ&·"–çWFÖöFSÒ&çVÖW&–2"Ö†ÆVæwFƒÒ#’"fÇVSÒ"G¶W66T‡FÖÂ†6&Bæ·—Ò"óãÂöÆ&VÃãÆÆ&VÂ6Æ73Ò&—2×v–FR#ãÇ7ãâG·G"‚v6ö×ç”æÖRr—ÓÂ÷7ããÆ–çWBFFÖ÷&væ—¦F–öâÖf–VÆCÒ&6ö×ç’"Ö†ÆVæwFƒÒ##"fÇVSÒ"G¶W66T‡FÖÂ†6&Bæ6ö×ç’—Ò"óãÂöÆ&VÃãÂöF—cãÆF—b6Æ73Ò&66‚Ö÷&væ—¦F–öâÖf–VÆG2—2Ö–æF—f–GVÂ"FFÖ÷&væ—¦F–öâÖ–æF—f–GVÂG¶6&BçG—RÓÓÒv–æF—f–GVÂròrr¢r†–FFVâwÓãÆÆ&VÂ6Æ73Ò&—2×v–FR#ãÇ7ãâG·G"‚vgVÆÄæÖRr—ÓÂ÷7ããÆ–çWBFFÖ÷&væ—¦F–öâÖf–VÆCÒ&gVÆÄæÖR"Ö†ÆVæwFƒÒ##"fÇVSÒ"G¶W66T‡FÖÂ†6&BægVÆÄæÖR—Ò"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG·G"‚w77÷'E6W&–W2r—ÓÂ÷7ããÆ–çWBFFÖ÷&væ—¦F–öâÖf–VÆCÒ'77÷'E6W&–W2"–çWFÖöFSÒ&çVÖW&–2"Ö†ÆVæwFƒÒ##"fÇVSÒ"G¶W66T‡FÖÂ†6&Bç77÷'E6W&–W2—Ò"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG·G"‚w77÷'DçVÖ&W"r—ÓÂ÷7ããÆ–çWBFFÖ÷&væ—¦F–öâÖf–VÆCÒ'77÷'DçVÖ&W""–çWFÖöFSÒ&çVÖW&–2"Ö†ÆVæwFƒÒ#C"fÇVSÒ"G¶W66T‡FÖÂ†6&Bç77÷'DçVÖ&W"—Ò"óãÂöÆ&VÃãÂöF—cãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×6fRÖ÷&væ—¦F–öâÖ6&CâG·G"‚w6fT÷&væ—¦F–öäFWF–Ç2r—ÓÂö'WGFöããÂöF—cà¢Âö'F–6ÆSæ°§Ð ¦gVæ7F–öâ66„÷&væ—¦F–öäFö7VÖVçG4Ö&·W†ö&¦V7B’°¢6öç7BFö7VÖVçG2Òæ÷&ÖÆ—¦T66„÷&væ—¦F–öäFö7VÖVçG2†ö&¦V7Còæ÷&væ—¦F–öäFö7VÖVçG2“°¢6öç7B6öÆÆ6VBÒ&ööÆVâ†ö&¦V7Còæ÷&væ—¦F–öäFö7VÖVçG46öÆÆ6VB“°¢&WGW&âÆFWF–Ç26Æ73Ò&66‚Ö÷&væ—¦F–öâÖFö7VÖVçG2"FFÖ÷&væ—¦F–öâÖFö7VÖVçG2G¶6öÆÆ6VBòrr¢r÷VâwÓãÇ7VÖÖ'“ãÆF—cãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ2Dô5TÔTåE3Â÷7ããÆƒ#âG·G"‚v÷&væ—¦F–öäFö7VÖVçG2r—ÓÂöƒ#ãÇâG·G"‚v÷&væ—¦F–öäFö7VÖVçG4†–çBr—ÓÂ÷ãÂöF—cãÇ7â6Æ73Ò&66‚Ö÷&væ—¦F–öâ×FövvÆRÖÆ&VÂ"FFÖ÷&væ—¦F–öâ×FövvÆRÖÆ&VÃâG·G"†6öÆÆ6VBòvW‡æD÷&væ—¦F–öäFö7VÖVçG2r¢v6öÆÆ6T÷&væ—¦F–öäFö7VÖVçG2r—ÓÂ÷7ããÆ"&–Ö†–FFVãÒ'G'VR#î(ÈCÂö#ãÂ÷7VÖÖ'“ãÆF—b6Æ73Ò&66‚Ö÷&væ—¦F–öâÖw&–B#âG´44…ôõ$tä•¤D”ôåõ$ôÄU2æÖ‚‡&öÆR’Óâ66„÷&væ—¦F–öä6&DÖ&·W†Fö7VÖVçG5·&öÆUÒÂ&öÆR’’æ¦ö–â‚rr—ÓÂöF—cãÂöFWF–Ç3æ°§Ð ¦gVæ7F–öâ&–æD66„÷&væ—¦F–öäFö7VÖVçG2†ö&¦V7BÂ66÷R’°¢6öç7BFö7VÖVçG56V7F–öâÒB‚u¶FFÖ÷&væ—¦F–öâÖFö7VÖVçG5ÒrÂ66÷R“°¢Fö7VÖVçG56V7F–öãòæFDWfVçDÆ—7FVæW"‚wFövvÆRrÂ‚’Óâ°¢ö&¦V7Bæ÷&væ—¦F–öäFö7VÖVçG46öÆÆ6VBÒFö7VÖVçG56V7F–öâæ÷Vã°¢6öç7BÆ&VÂÒB‚u¶FFÖ÷&væ—¦F–öâ×FövvÆRÖÆ&VÅÒrÂFö7VÖVçG56V7F–öâ“°¢–b†Æ&VÂ’Æ&VÂçFW‡D6öçFVçBÒG"†Fö7VÖVçG56V7F–öâæ÷Vâòv6öÆÆ6T÷&væ—¦F–öäFö7VÖVçG2r¢vW‡æD÷&væ—¦F–öäFö7VÖVçG2r“°¢6fT66†fÆ÷r‚“°¢Ò“°¢BB‚u¶FFÖ÷&væ—¦F–öâ×&öÆUÒrÂ66÷R’æf÷$V6‚‚†6&DVÆVÖVçB’Óâ°¢6öç7B&öÆRÒ6&DVÆVÖVçBæFF6WBæ÷&væ—¦F–öå&öÆS°¢6öç7B6&BÒö&¦V7Bæ÷&væ—¦F–öäFö7VÖVçG5·&öÆUÓ°¢6öç7BG—U6VÆV7BÒB‚u¶FFÖ÷&væ—¦F–öâ×G—UÒrÂ6&DVÆVÖVçB“°¢G—U6VÆV7CòæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ°¢BB‚u¶FFÖ÷&væ—¦F–öâÖf–VÆEÒrÂ6&DVÆVÖVçB’æf÷$V6‚‚†–çWB’Óâ²6&E¶–çWBæFF6WBæ÷&væ—¦F–öäf–VÆEÒÒ–çWBçfÇVS²Ò“°¢6&Bç77÷'BÒ¶6&Bç77÷'E6W&–W2Â6&Bç77÷'DçVÖ&W%ÒæÖ‚‡fÇVR’Óâ7G&–ær‡fÇVRÇÂrr’çG&–Ò‚’’æf–ÇFW"„&ööÆVâ’æ¦ö–â‚rr“°¢6öç7BæW‡EG—RÒG—U6VÆV7BçfÇVRÓÓÒv–æF—f–GVÂròv–æF—f–GVÂr¢v÷&væ—¦F–öâs°¢–b†æW‡EG—RÓÓÒ6&BçG—R’&WGW&ã°¢6öç7BÇ•G—RÒ7–æ2‡&VÖ÷fTGF6†ÖVçBÒfÇ6R’Óâ°¢–b‡&VÖ÷fTGF6†ÖVçB’v—B&VÖ÷fT66„÷&væ—¦F–öäGF6†ÖVçB†ö&¦V7BÂ&öÆR“°¢6&BçG—RÒæW‡EG—S°¢6&BçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢ö&¦V7Bæ÷&væ—¦F–öäFö7VÖVçG5·&öÆUÒÒæ÷&ÖÆ—¦T66„÷&væ—¦F–öä6&B†6&BÂ&öÆR“°¢6fT66†fÆ÷r‚“°¢&VæFW$66†fÆ÷r‚“°¢Ó°¢6öç7BfW'6–öç2Ò6&BæGF6†ÖVçCòçfW'6–öç2ÇÂµÓ°¢–b‚fW'6–öç2æÆVæwF‚’²Ç•G—R‚’æ6F6‚‚†W'&÷"’Óâ6öç6öÆRæW'&÷"†W'&÷"’“²&WGW&ã²Ð¢6†÷tF–Æör‡G"‚v6†ævU'G•G—UF—FÆRr’ÂG"‚v6†ævU'G•G—T†–çBr’ÂÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ6æ6VÂ×'G’×G—SâG¶W66T‡FÖÂ‡G"‚v6æ6VÂr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ—2ÖFævW""G—SÒ&'WGFöâ"FFÖ6öæf—&Ò×'G’×G—SâG¶W66T‡FÖÂ‡G"‚v6†ævU'G•G—Rr’—ÓÂö'WGFöããÂöF—cæ“°¢6öç7BF–Æöu66÷RÒB‚u¶FFÖF–ÆörÖ6öçFVçEÒr“°¢B‚u¶FFÖ6æ6VÂ×'G’×G—UÒrÂF–Æöu66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²G—U6VÆV7BçfÇVRÒ6&BçG—S²B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“²Ò“°¢B‚u¶FFÖ6öæf—&Ò×'G’×G—UÒrÂF–Æöu66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ7–æ2†WfVçB’Óâ°¢WfVçBæ7W'&VçEF&vWBæF—6&ÆVBÒG'VS°¢G'’²v—BÇ•G—R‡G'VR“²B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“²Ð¢6F6‚†W'&÷"’²6öç6öÆRæW'&÷"†W'&÷"“²G—U6VÆV7BçfÇVRÒ6&BçG—S²WfVçBæ7W'&VçEF&vWBæF—6&ÆVBÒfÇ6S²6†÷uFö7B‡G"‚v÷&væ—¦F–öäf–ÆTFVÆWFTf–ÆVBr’“²Ð¢Ò“°¢Ò“°¢B‚u¶FF×6fRÖ÷&væ—¦F–öâÖ6&EÒrÂ6&DVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7BfÇVW2Ò²ââæ6&BÂG—S¢G—U6VÆV7CòçfÇVRÓÓÒv–æF—f–GVÂròv–æF—f–GVÂr¢v÷&væ—¦F–öârÂWFFVDC¢æWrFFR‚’çFô•4õ7G&–ær‚’Ó°¢BB‚u¶FFÖ÷&væ—¦F–öâÖf–VÆEÒrÂ6&DVÆVÖVçB’æf÷$V6‚‚†–çWB’Óâ²fÇVW5¶–çWBæFF6WBæ÷&væ—¦F–öäf–VÆEÒÒ–çWBçfÇVS²Ò“°¢fÇVW2ç77÷'BÒ·fÇVW2ç77÷'E6W&–W2ÂfÇVW2ç77÷'DçVÖ&W%ÒæÖ‚‡fÇVR’Óâ7G&–ær‡fÇVRÇÂrr’çG&–Ò‚’’æf–ÇFW"„&ööÆVâ’æ¦ö–â‚rr“°¢ö&¦V7Bæ÷&væ—¦F–öäFö7VÖVçG5·&öÆUÒÒæ÷&ÖÆ—¦T66„÷&væ—¦F–öä6&B‡fÇVW2Â&öÆR“°¢6fT66†fÆ÷r‚“²&VæFW$66†fÆ÷r‚“²6†÷uFö7B‡G"‚v÷&væ—¦F–öä6&E6fVBr’“°¢Ò“°¢B‚u¶FF×6VÆV7BÖ÷&væ—¦F–öâÖf–ÆUÒrÂ6&DVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB‚u¶FFÖ÷&væ—¦F–öâÖf–ÆUÒrÂ6&DVÆVÖVçB“òæ6Æ–6²‚’“°¢B‚u¶FFÖFVÆWFRÖ÷&væ—¦F–öâÖf–ÆUÒrÂ6&DVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFVÆWFT66„÷&væ—¦F–öäf–ÆR†ö&¦V7Bæ–BÂ&öÆR’“°¢B‚u¶FFÖ÷&væ—¦F–öâÖf–ÆUÒrÂ6&DVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ7–æ2†WfVçB’Óâ°¢6öç7Bf–ÆRÒWfVçBæ7W'&VçEF&vWBæf–ÆW3òå³Ó²–b‚f–ÆR’&WGW&ã°¢WfVçBæ7W'&VçEF&vWBæF—6&ÆVBÒG'VS²v—BFD66„÷&væ—¦F–öäf–ÆR†ö&¦V7Bæ–BÂ&öÆRÂf–ÆR“²WfVçBæ7W'&VçEF&vWBçfÇVRÒrs²WfVçBæ7W'&VçEF&vWBæF—6&ÆVBÒfÇ6S°¢Ò“°¢BB‚u¶FFÖ÷VâÖ÷&væ—¦F–öâÖf–ÆUÒrÂ6&DVÆVÖVçB’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä66„÷&væ—¦F–öäf–ÆR†ö&¦V7Bæ–BÂ&öÆRÂ'WGFöâæFF6WBæ÷Vä÷&væ—¦F–öäf–ÆR’’“°¢Ò“°§Ð ¦gVæ7F–öâ66…6V7F–öäGF6†ÖVçDÖ&·W‡6V7F–öâÂ¶–æB’°¢6öç7BGF6†ÖVçBÒ6V7F–öâæGF6†ÖVçG3òå¶¶–æEÓ°¢6öç7BfW'6–öç2ÒGF6†ÖVçCòçfW'6–öç2ÇÂµÓ°¢6öç7B7W'&VçBÒfW'6–öç5·fW'6–öç2æÆVæwF‚ÒÓ°¢6öç7B–6öâÒ²&ö¦V7C¢~)jBrÂ6öçG&7C¢~(šrÂW7F–ÖFS¢~(+ÒrÕ¶¶–æEÓ°¢6öç7BW–T–6öâÒsÇ7frf–Wt&÷ƒÒ##B#B"&–Ö†–FFVãÒ'G'VR#ãÇF‚CÒ$Ó"ãR'32ãRÓb’ãRÓb’ãRb’ãRbÓ2ãRbÓ’ãRbÓ’ãRÓbÓ’ãRÓe¢"óãÆ6—&6ÆR7ƒÒ#""7“Ò#""#Ò#"ãr"óãÂ÷7fsâs°¢6öç7B†—7F÷'’ÒfW'6–öç2æÆVæwF‚âòÆFWF–Ç26Æ73Ò&66‚×6÷W&6RÖf–ÆRÖ†—7F÷'’#ãÇ7VÖÖ'“âG·G"‚wfW'6–öä†—7F÷'’r—Ò+rG·fW'6–öç2æÆVæwF‡ÓÂ÷7VÖÖ'“ãÆF—câGµ²ââçfW'6–öç5Òç&WfW'6R‚’æÖ‚‡fW'6–öâÂ&WfW'6T–æFW‚’ÓâÆ'WGFöâG—SÒ&'WGFöâ"FFÖ÷VâÖ66‚ÖGF6†ÖVçB×fW'6–öãÒ"G¶W66T‡FÖÂ‡fW'6–öâæ–B—Ò"FFÖ66‚ÖGF6†ÖVçBÖ¶–æCÒ"G¶W66T‡FÖÂ†¶–æB—Ò#ãÆ#çbG·fW'6–öç2æÆVæwF‚Ò&WfW'6T–æFW‡ÓÂö#ãÇ7ããÇ7G&öæsâG¶W66T‡FÖÂ‡fW'6–öâç6÷W&6TFö7VÖVçEF—FÆRÇÂfW'6–öâææÖR—ÓÂ÷7G&öæsãÇ6ÖÆÃâG·fW'6–öâæÆ–æ¶VDg&öÕ&ö¦V7BòG¶W66T‡FÖÂ‡G"‚vÆ–æ¶VDg&öÕ&ö¦V7Br’—Ò+r¢rwÒG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFUF–ÖR‡fW'6–öâæFFVDB’—Ò+rG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR‡fW'6–öâç6—¦R’—ÓÂ÷6ÖÆÃãÂ÷7ããÆ“âG·G"‚v÷VäFö7VÖVçBr—ÓÂö“ãÂö'WGFöãæ’æ¦ö–â‚rr—ÓÂöF—cãÂöFWF–Ç3æ¢rs°¢&WGW&âÆ'F–6ÆR6Æ73Ò&66‚×6÷W&6RÖf–ÆRG¶7W'&VçBòr†2Öf–ÆRr¢rwÒ#à¢Æ†VFW#ãÇ7â&–Ö†–FFVãÒ'G'VR#âG¶–6öçÓÂ÷7ããÆF—cãÇ7G&öæsâG·G"†¶–æB—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ†7W'&VçCòç6÷W&6TFö7VÖVçEF—FÆRÇÂ7W'&VçCòææÖRÇÂG"‚væ÷EWÆöFVBr’—ÓÂ÷6ÖÆÃâG¶7W'&VçBòÆVÓâG¶7W'&VçBæÆ–æ¶VDg&öÕ&ö¦V7BòG¶W66T‡FÖÂ‡G"‚vÆ–æ¶VDg&öÕ&ö¦V7Br’—Ò+r¢rwÒG¶W66T‡FÖÂ†7W'&VçBææÖR—Ò+rbG·fW'6–öç2æÆVæwF‡Ò+rG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR†7W'&VçBç6—¦R’—ÓÂöVÓæ¢rwÓÂöF—câG¶7W'&VçBòÆF—b6Æ73Ò&66‚×6÷W&6RÖf–ÆRÖ–6öç2#ãÆ'WGFöâ6Æ73Ò&66‚×6÷W&6RÖf–ÆRÖ–6öâ—2×f–Wr"G—SÒ&'WGFöâ"FFÖ÷VâÖ66‚ÖGF6†ÖVçB×fW'6–öãÒ"G¶W66T‡FÖÂ†7W'&VçBæ–B—Ò"FFÖ66‚ÖGF6†ÖVçBÖ¶–æCÒ"G¶W66T‡FÖÂ†¶–æB—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w&Wf–WuWÆöFVDFö7VÖVçBr’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚w&Wf–WuWÆöFVDFö7VÖVçBr’—Ò#âG¶W–T–6öçÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&66‚×6÷W&6RÖf–ÆRÖ–6öâ—2ÖFVÆWFR"G—SÒ&'WGFöâ"FFÖFVÆWFRÖ66‚ÖGF6†ÖVçCÒ"G¶W66T‡FÖÂ†¶–æB—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w&VÖ÷fUWÆöFVDFö7VÖVçBr’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚w&VÖ÷fUWÆöFVDFö7VÖVçBr’—Ò#ì9sÂö'WGFöããÂöF—cæ¢rwÓÂö†VFW#à¢ÆF—b6Æ73Ò&66‚×6÷W&6RÖf–ÆRÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×6VÆV7BÖ66‚ÖGF6†ÖVçCÒ"G¶W66T‡FÖÂ†¶–æB—Ò#âG·G"†7W'&VçBòw&WÆ6TFö7VÖVçBr¢wWÆöBr—ÓÂö'WGFöããÂöF—cà¢Æ–çWBG—SÒ&f–ÆR"66WCÒ"G·WÆöE'VÆW5¶¶–æEÒæ66WGÒ"FFÖ66‚ÖGF6†ÖVçBÖ–çWCÒ"G¶W66T‡FÖÂ†¶–æB—Ò"†–FFVâóâG¶†—7F÷'—Ð¢Âö'F–6ÆSæ°§Ð ¦gVæ7F–öâ66…6V7F–öäGF6†ÖVçG4Ö&·W‡6V7F–öâ’°¢&WGW&âÇ6V7F–öâ6Æ73Ò&66‚×6÷W&6RÖFö7VÖVçG2#ãÆ†VFW#ãÆF—cãÆƒCâG·G"‚w6V7F–öå6÷W&6TFö7VÖVçG2r—ÓÂöƒCãÇâG·G"‚w6V7F–öå6÷W&6TFö7VÖVçG4†–çBr—ÓÂ÷ãÂöF—cãÇ7â&–Ö†–FFVãÒ'G'VR#î)x“Â÷7ããÂö†VFW#ãÆF—b6Æ73Ò&66‚×6÷W&6RÖf–ÆW2#âG´44…ôED4„ÔTåEô´”äE2æÖ‚†¶–æB’Óâ66…6V7F–öäGF6†ÖVçDÖ&·W‡6V7F–öâÂ¶–æB’’æ¦ö–â‚rr—ÓÂöF—cãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâFD66„VçG'’†ö&¦V7D–BÂ6V7F–öä–BÂ¶–æBÂf÷&Ò’°¢6öç7Bö&¦V7BÒ66†fÆ÷tö&¦V7G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢6öç7B6V7F–öâÒö&¦V7Còç6V7F–öç2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ6V7F–öä–B“°¢6öç7BÖ÷VçD–çWBÒB‚u¶FFÖ66‚ÖÖ÷VçEÒrÂf÷&Ò“°¢6öç7B6öÖÖVçD–çWBÒB‚u¶FFÖ66‚Ö6öÖÖVçEÒrÂf÷&Ò“°¢6öç7BÖ÷VçBÒÖF‚ç&÷VæB„çVÖ&W"†Ö÷VçD–çWCòçfÇVR’¢’ò°¢6öç7B6öÖÖVçBÒ6öÖÖVçD–çWCòçfÇVRçG&–Ò‚’ÇÂrs°¢–b‚ö&¦V7BÇÂ6V7F–öâÇÂçVÖ&W"æ—4f–æ—FR†Ö÷VçB’ÇÂÖ÷VçBÃÒÇÂ6öÖÖVçB’°¢6†÷uFö7B‡G"‚vÖ÷VçE&WV—&VBr’“°¢‚çVÖ&W"æ—4f–æ—FR†Ö÷VçB’ÇÂÖ÷VçBÃÒòÖ÷VçD–çWB¢6öÖÖVçD–çWB“òæfö7W2‚“°¢&WGW&ã°¢Ð¢6öç7BF&vWBÒ66„VçG'”6öÆÆV7F–öâ‡6V7F–öâÂ¶–æB“°¢–b‚F&vWB’&WGW&ã°¢F&vWBçVç6†–gB‡²–C¢VçG'’ÒG´FFRææ÷r‚—ÒÒG´ÖF‚ç&æFöÒ‚’çFõ7G&–ærƒb’ç6Æ–6Rƒ"—ÖÂÖ÷VçBÂ6öÖÖVçC¢6öÖÖVçBç6Æ–6RƒÂ#C’ÂFFS¢æWrFFR‚’çFô•4õ7G&–ær‚’Ò“°¢6fT66†fÆ÷r‚“°¢&VæFW$66†fÆ÷r‚“°§Ð ¦gVæ7F–öâ÷Vä66„VçG'”VF—DF–Æör†ö&¦V7D–BÂ6V7F–öä–BÂ¶–æBÂVçG'”–B’°¢6öç7B²ö&¦V7BÂ6V7F–öâÒÒf–æD66…6V7F–öâ†ö&¦V7D–BÂ6V7F–öä–B“°¢6öç7BF&vWBÒ6V7F–öâbb66„VçG'”6öÆÆV7F–öâ‡6V7F–öâÂ¶–æB“°¢6öç7BVçG'’ÒF&vWCòæf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒVçG'”–B“°¢–b‚ö&¦V7BÇÂ6V7F–öâÇÂVçG'’’&WGW&ã°¢W‡æFVD66„VçG'”†—7F÷&–W2æFB†G·6V7F–öâæ–GÓ¢G¶¶–æGÖ“°¢6†÷tF–Æör‡G"‚vVF—D66„VçG'’r’ÂG¶ö&¦V7BææÖWÒ+rG·6V7F–öâææÖWÖÂÆF—b6Æ73Ò&66‚ÖVF—BÖf÷&Ò#ãÆÆ&VÃãÇ7ãâG·G"‚vÖ÷VçBr—ÓÂ÷7ããÆ–çWBG—SÒ&çVÖ&W""Ö–ãÒ#ã"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"FFÖVF—BÖ66‚ÖÖ÷VçBfÇVSÒ"G¶VçG'’æÖ÷VçGÒ"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG·G"‚vFFRr—ÓÂ÷7ããÆ–çWBG—SÒ&FFR"FFÖVF—BÖ66‚ÖFFRfÇVSÒ"G¶66„FFT–çWEfÇVR†VçG'’æFFR—Ò"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG·G"‚v6öÖÖVçBr—ÓÂ÷7ããÆ–çWBÖ†ÆVæwFƒÒ##C"FFÖVF—BÖ66‚Ö6öÖÖVçBfÇVSÒ"G¶W66T‡FÖÂ†VçG'’æ6öÖÖVçB—Ò"óãÂöÆ&VÃãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×6fRÖ66‚ÖVçG'“âG·G"‚w6fT6†ævW2r—ÓÂö'WGFöããÂöF—cæ“°¢6öç7B66÷RÒB‚u¶FFÖF–ÆörÖ6öçFVçEÒr“°¢6öç7BÖ÷VçD–çWBÒB‚u¶FFÖVF—BÖ66‚ÖÖ÷VçEÒrÂ66÷R“°¢6öç7BFFT–çWBÒB‚u¶FFÖVF—BÖ66‚ÖFFUÒrÂ66÷R“°¢6öç7B6öÖÖVçD–çWBÒB‚u¶FFÖVF—BÖ66‚Ö6öÖÖVçEÒrÂ66÷R“°¢6öç7B6fTVçG'’Ò‚’Óâ°¢6öç7BÖ÷VçBÒÖF‚ç&÷VæB„çVÖ&W"†Ö÷VçD–çWCòçfÇVR’¢’ò°¢6öç7B6öÖÖVçBÒ6öÖÖVçD–çWCòçfÇVRçG&–Ò‚’ÇÂrs°¢6öç7BFFRÒ66„VçG'”FFUv—F„æWtF’†VçG'’æFFRÂFFT–çWCòçfÇVRÇÂrr“°¢–b‚çVÖ&W"æ—4f–æ—FR†Ö÷VçB’ÇÂÖ÷VçBÃÒÇÂ6öÖÖVçBÇÂFFR’°¢6†÷uFö7B‡G"‚vVçG'”f–VÆG5&WV—&VBr’“°¢‚çVÖ&W"æ—4f–æ—FR†Ö÷VçB’ÇÂÖ÷VçBÃÒòÖ÷VçD–çWB¢FFRòFFT–çWB¢6öÖÖVçD–çWB“òæfö7W2‚“°¢&WGW&ã°¢Ð¢VçG'’æÖ÷VçBÒÖ÷VçC°¢VçG'’æ6öÖÖVçBÒ6öÖÖVçBç6Æ–6RƒÂ#C“°¢VçG'’æFFRÒFFS°¢F&vWBç6÷'B‚†Â"’ÓâæWrFFR†"æFFR’ÒæWrFFR†æFFR’“°¢6fT66†fÆ÷r‚“°¢&VæFW$66†fÆ÷r‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚vVçG'•WFFVBr’“°¢Ó°¢B‚u¶FF×6fRÖ66‚ÖVçG'•ÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6fTVçG'’“°¢BB‚v–çWBrÂ66÷R’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ°¢–b†WfVçBæ¶W’ÓÓÒtVçFW"r’²WfVçBç&WfVçDFVfVÇB‚“²6fTVçG'’‚“²Ð¢Ò’“°¢6WEF–ÖV÷WB‚‚’Óâ²Ö÷VçD–çWCòæfö7W2‚“²Ö÷VçD–çWCòç6VÆV7B‚“²ÒÂC“°§Ð ¦gVæ7F–öâ66…&W÷'D†—7F÷'”Ö&·W‡6V7F–öâ’°¢6öç7B—4÷VâÒW‡æFVD66…&W÷'D†—7F÷'’æ†2‡6V7F–öâæ–B“°¢6öç7B&W÷'D†—7F÷'’Ò'&’æ—4'&’‡6V7F–öãòç&W÷'D†—7F÷'’’ò6V7F–öâç&W÷'D†—7F÷'’¢µÓ°¢6öç7B&÷w2Ò&W÷'D†—7F÷'’æÆVæwF‚ò&W÷'D†—7F÷'’æÖ‚†—FVÒ’Óâ°¢6öç7BG—T6Æ72Ò—FVÒçG—RÓÓÒw7FFVÖVçBròv—2×7FFVÖVçBr¢—FVÒçG—RÓÓÒv7Bròv—2Ö7Br¢v—2×&W÷'Bs°¢6öç7BG—TÆ&VÂÒ—FVÒçG—RÓÓÒw7FFVÖVçBrò}	-	í
+r¢—FVÒçG—RÓÓÒv7Brò}		­
+"r¢G"‚w&W÷'Br“°¢6öç7BFö7VÖVçD7F–öç2Ò²w7FFVÖVçBrÂv7BuÒæ–æ6ÇVFW2†—FVÒçG—R’òÆ'WGFöâG—SÒ&'WGFöâ"FFÖ†—7F÷'’ÖVF—CâG·G"‚vVF—DFö7VÖVçBr—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&—2ÖFævW""G—SÒ&'WGFöâ"FFÖ†—7F÷'’ÖFVÆWFSâG·G"‚vFVÆWFTFö7VÖVçBr—ÓÂö'WGFöãæ¢rs°¢&WGW&âÆ'F–6ÆR6Æ73Ò&66‚×&W÷'BÖ†—7F÷'’×&÷r"FF×&W÷'BÖ†—7F÷'’Ö–CÒ"G¶W66T‡FÖÂ†—FVÒæ–B—Ò#ãÇ7ããÇ7â6Æ73Ò&66‚×&W÷'BÖ†—7F÷'’×F—FÆR#ãÆ"6Æ73Ò&66‚×&W÷'B×G—RÖ&FvRG·G—T6Æ77Ò#âG¶W66T‡FÖÂ‡G—TÆ&VÂ—ÓÂö#ãÇ7G&öæsâG¶W66T‡FÖÂ†—FVÒçF—FÆR—ÓÂ÷7G&öæsãÂ÷7ããÇ6ÖÆÃâG·G"‚v6†ævU6fVDBr—Ó¢G¶66„FFR†—FVÒçWFFVDBÇÂ—FVÒæ7&VFVDB—ÒG¶—FVÒç&W÷'Còç'F–W3òæFFRò+rG·G"‚vFö7VÖVçDFFRr—Ó¢G¶W66T‡FÖÂ†—FVÒç&W÷'Bç'F–W2æFFR—Ö¢rwÓÂ÷6ÖÆÃãÂ÷7ããÆF—câG¶Fö7VÖVçD7F–öç7ÓÆ'WGFöâG—SÒ&'WGFöâ"FFÖ†—7F÷'’×&Wf–Wr&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚wf–Wu&W÷'Br’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚wf–Wu&W÷'Br’—Ò#î)x“Âö'WGFöããÆ'WGFöâG—SÒ&'WGFöâ"FFÖ†—7F÷'’ÖF÷væÆöCÒ'Fb#åDcÂö'WGFöããÆ'WGFöâG—SÒ&'WGFöâ"FFÖ†—7F÷'’ÖF÷væÆöCÒ'†Ç7‚#äW†6VÃÂö'WGFöããÆ'WGFöâG—SÒ&'WGFöâ"FFÖ†—7F÷'’×6†&SÒ'Fb#î(irDcÂö'WGFöããÆ'WGFöâG—SÒ&'WGFöâ"FFÖ†—7F÷'’×6†&SÒ'†Ç7‚#î(irW†6VÃÂö'WGFöããÂöF—cãÂö'F–6ÆSæ°¢Ò’æ¦ö–â‚rr’¢ÆF—b6Æ73Ò&66‚Ö†—7F÷'’ÖV×G’#âG·G"‚væõ&W÷'G2r—ÓÂöF—cæ°¢&WGW&âÆF—b6Æ73Ò&66‚×&W÷'BÖ†—7F÷'’"G¶—4÷Vâòrr¢r†–FFVâwÓãÆF—b6Æ73Ò&66‚×&W÷'BÖ†—7F÷'’ÖÆ—7B#âG·&÷w7ÓÂöF—cãÂöF—cæ°§Ð ¦gVæ7F–öâ66„÷vägVæG4Ö&·W‡6V7F–öâÂ–çfW7FÖVçG2Â&WGW&ç2Â–çfW7FÖVçD¶–æBÂ&WGW&ä¶–æB’°¢6öç7B–çfW7FVBÒ66…F÷FÂ†–çfW7FÖVçG2“°¢6öç7B6Æ÷6VBÒ66…F÷FÂ‡&WGW&ç2“°¢6öç7B&VÖ–æ–ærÒÖF‚ç&÷VæB‚†–çfW7FVBÒ6Æ÷6VB’¢’ò°¢&WGW&âÇ6V7F–öâ6Æ73Ò&66‚Ö÷vâÖgVæG2#ãÆƒCâG·G"‚v÷vägVæG466÷VçF–ærr—ÓÂöƒCãÆF—b6Æ73Ò&66‚Ö÷vâ×7VÖÖ'’#ãÆ'F–6ÆSãÇ7ãâG·G"‚wF÷FÄ÷vä–çfW7FVBr—ÓÂ÷7ããÇ7G&öæsâG¶f÷&ÖDÖöæW’†–çfW7FVB—ÓÂ÷7G&öæsãÂö'F–6ÆSãÆ'F–6ÆSãÇ7ãâG·G"‚wF÷FÄ÷vå&WGW&æVBr—ÓÂ÷7ããÇ7G&öæsâG¶f÷&ÖDÖöæW’†6Æ÷6VB—ÓÂ÷7G&öæsãÂö'F–6ÆSãÆ'F–6ÆR6Æ73Ò"G¶66„&Ææ6T6Æ72‡&VÖ–æ–ær—Ò#ãÇ7ãâG·G"‚v÷vägVæG5&VÖ–æ–ærr—ÓÂ÷7ããÇ7G&öæsâG¶f÷&ÖE6–væVDÖöæW’‡&VÖ–æ–ær—ÓÂ÷7G&öæsãÂö'F–6ÆSãÂöF—cãÆF—b6Æ73Ò&66‚ÖVçG'’Öw&–B#âG¶66„VçG'”f÷&Ò†–çfW7FÖVçD¶–æBÂv÷vä–çfW7FVBrÂvFD÷vägVæG2r—ÒG¶66„VçG'”f÷&Ò‡&WGW&ä¶–æBÂw&WGW&æVDg&öÔGfæ6RrÂvFD÷vå&WGW&âr—ÓÂöF—câG¶66„†—7F÷'”Ö&·W†–çfW7FÖVçG2Âv÷vä–çfW7FVBrÂ–çfW7FÖVçD¶–æBÂ6V7F–öâæ–B—ÒG¶66„†—7F÷'”Ö&·W‡&WGW&ç2Âw&WGW&æVDg&öÔGfæ6RrÂ&WGW&ä¶–æBÂ6V7F–öâæ–B—ÓÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ66…7Fff–ætÖ&·W‡6V7F–öâ’°¢6öç7B6†–gG2Ò6V7F–öâç7Fff–æu6†–gG2ÇÂµÓ°¢6öç7BF÷FÇ2Ò66…7Fff–æuF÷FÇ2‡6V7F–öâ“°¢6öç7BF&ÆT†VFW"ÒÆF—b6Æ73Ò&66‚×7Fff–ær×F&ÆRÖ†VB"&–Ö†–FFVãÒ'G'VR#ãÇ7ãâG·G"‚w7Fff–ætçVÖ&W"r—ÓÂ÷7ããÇ7ãâG·G"‚wv÷&¶W$gVÆÄæÖRr—ÒòG·G"‚w7G'V7F÷5v÷&¶W$–Br—ÓÂ÷7ããÇ7ãâG·G"‚wÆææVE6†–gBr—ÓÂ÷7ããÇ7ãâG·G"‚v7GVÅ6†–gBr—ÓÂ÷7ããÇ7ãâG·G"‚w6†–gE&FRr—ÓÂ÷7ããÇ7ãâG·G"‚v÷fW'F–ÖT†÷W'2r—ÒòG·G"‚v÷fW'F–ÖU’r—ÓÂ÷7ããÇ7ãâG·G"‚w6Æ'•’r—ÓÂ÷7ããÇ7ãâG·G"‚wVæÇG’r—ÓÂ÷7ããÇ7ããÂ÷7ããÂöF—cæ°¢6öç7BF—2Ò66…7Fff–ætF”w&÷W2‡6V7F–öâ’æÖ‚‡²FFRÂ6†–gG3¢F•6†–gG2Ò’Óâ°¢6öç7BF•F÷FÇ2Ò66…7Fff–æuF÷FÇ4f÷%6†–gG2†F•6†–gG2“°¢6öç7B&÷w2ÒF•6†–gG2æÖ‚‡6†–gBÂ–æFW‚’Óâ°¢6öç7B6Æ7VÆF–öâÒ66…7Fff–æt6Æ7VÆF–öâ‡6†–gB“°¢6öç7B7FGW46Æ72Ò6†–gBæ6Æ÷6VDBòr—2Ö6Æ÷6VBr¢6†–gBæ÷VæVDBòr—2Ö÷Vâr¢rs°¢6öç7B6†–gD7F–öâÒ6†–gBæ÷VæVD@¢òÆ'WGFöâ6Æ73Ò&66‚×7Fff–ær×6†–gBÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ÷Vâ×7Fff–ær×6†–gCâG·G"‚v÷Vå6†–gBr—ÓÂö'WGFöãæ ¢¢6†–gBæ6Æ÷6VD@¢òÆ'WGFöâ6Æ73Ò&66‚×7Fff–ær×6†–gBÖ'WGFöâ—2Ö6Æ÷6R"G—SÒ&'WGFöâ"FFÖ6Æ÷6R×7Fff–ær×6†–gCâG·G"‚v6Æ÷6U6†–gBr—ÓÂö'WGFöãæ ¢¢Ç7â6Æ73Ò&66‚×7Fff–ærÖ6Æ÷6VBÖ&FvR#î)É2G·G"‚w6†–gD6Æ÷6VBr—ÓÂ÷7ãæ°¢&WGW&âÆ'F–6ÆR6Æ73Ò&66‚×7Fff–ær×&÷rG·7FGW46Æ77Ò"FF×7Fff–ær×6†–gCÒ"G¶W66T‡FÖÂ‡6†–gBæ–B—Ò#à¢Ç7â6Æ73Ò&66‚×7Fff–ærÖçVÖ&W""&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ†G·G"‚w7Fff–ætçVÖ&W"r—ÒG¶–æFW‚²Ö—Ò#âG¶–æFW‚²ÓÂ÷7ãà¢ÆF—b6Æ73Ò&66‚×7Fff–ærÖ6VÆÂ—2×W'6öâ"FFÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚wv÷&¶W$gVÆÄæÖRr’—Ò#ãÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#c"FF×7Fff–ærÖf–VÆCÒ&gVÆÄæÖR"fÇVSÒ"G¶W66T‡FÖÂ‡6†–gBægVÆÄæÖR—Ò"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚wv÷&¶W$gVÆÄæÖRr’—Ò"óãÆ–çWBG—SÒ'FW‡B"–çWFÖöFSÒ&çVÖW&–2"Ö†ÆVæwFƒÒ#r"FF×7Fff–ærÖf–VÆCÒ'7G'V7F÷4–B"fÇVSÒ"G¶W66T‡FÖÂ‡6†–gBç7G'V7F÷4–B—Ò"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚w7G'V7F÷5v÷&¶W$–Br’—Ò"óãÂöF—cà¢ÆF—b6Æ73Ò&66‚×7Fff–ærÖ6VÆÂ—2×Æâ"FFÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚wÆææVE6†–gBr’—Ò#ãÆÆ&VÃãÇ6ÖÆÃâG·G"‚w6†–gDg&öÒr—ÓÂ÷6ÖÆÃãÆ–çWBG—SÒ'F–ÖR"FF×7Fff–ærÖf–VÆCÒ'ÆææVDg&öÒ"fÇVSÒ"G¶W66T‡FÖÂ‡6†–gBçÆææVDg&öÒ—Ò"óãÂöÆ&VÃãÆÆ&VÃãÇ6ÖÆÃâG·G"‚w6†–gEFòr—ÓÂ÷6ÖÆÃãÆ–çWBG—SÒ'F–ÖR"FF×7Fff–ærÖf–VÆCÒ'ÆææVEFò"fÇVSÒ"G¶W66T‡FÖÂ‡6†–gBçÆææVEFò—Ò"óãÂöÆ&VÃãÆVÓãÇ7âFF×7Fff–ær×ÆææVBÖ†÷W'3âG¶6Æ7VÆF–öâçÆææVD†÷W'7ÓÂ÷7ãâsÂöVÓãÂöF—cà¢ÆF—b6Æ73Ò&66‚×7Fff–ærÖ6VÆÂ—2Ö7GVÂ"FFÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚v7GVÅ6†–gBr’—Ò#ãÇ6ÖÆÃâG·G"‚w6†–gD÷VæVDBr—Ó¢Æ#âG¶W66T‡FÖÂ†66…7Fff–æuF–ÖW7F×‡6†–gBæ÷VæVDB’—ÓÂö#ãÂ÷6ÖÆÃãÇ6ÖÆÃâG·G"‚w6†–gD6Æ÷6VDBr—Ó¢Æ#âG¶W66T‡FÖÂ†66…7Fff–æuF–ÖW7F×‡6†–gBæ6Æ÷6VDB’—ÓÂö#ãÂ÷6ÖÆÃâG·6†–gD7F–öçÓÂöF—cà¢ÆF—b6Æ73Ò&66‚×7Fff–ærÖ6VÆÂ—2ÖÖöæW’"FFÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w6†–gE&FRr’—Ò#ãÆ–çWBG—SÒ&çVÖ&W""Ö–ãÒ#"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"FF×7Fff–ærÖf–VÆCÒ'6†–gE&FR"fÇVSÒ"G·6†–gBç6†–gE&FRÇÂrwÒ"Æ6V†öÆFW#Ò#"óãÂöF—cà¢ÆF—b6Æ73Ò&66‚×7Fff–ærÖ6VÆÂ—2Ö6Æ7VÆF–öâ"FFÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚v÷fW'F–ÖT†÷W'2r’—Ò#ãÇ7G&öæsãÇ7âFF×7Fff–ærÖ÷fW'F–ÖRÖ†÷W'3âG¶6Æ7VÆF–öâæ÷fW'F–ÖT†÷W'7ÓÂ÷7ãâsÂ÷7G&öæsãÇ6ÖÆÂFF×7Fff–ærÖ÷fW'F–ÖR×“âG¶f÷&ÖDÖöæW’†6Æ7VÆF–öâæ÷fW'F–ÖU’—ÓÂ÷6ÖÆÃãÂöF—cà¢ÆF—b6Æ73Ò&66‚×7Fff–ærÖ6VÆÂ—2×6Æ'’"FFÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w6Æ'•’r’—Ò#ãÇ7G&öærFF×7Fff–ær×6Æ'“âG¶f÷&ÖDÖöæW’†6Æ7VÆF–öâç6Æ'’—ÓÂ÷7G&öæsãÂöF—cà¢ÆF—b6Æ73Ò&66‚×7Fff–ærÖ6VÆÂ—2×VæÇG’"FFÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚wVæÇG’r’—Ò#ãÆ–çWBG—SÒ&çVÖ&W""Ö–ãÒ#"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"FF×7Fff–ærÖf–VÆCÒ'VæÇG’"fÇVSÒ"G·6†–gBçVæÇG’ÇÂrwÒ"Æ6V†öÆFW#Ò#"óãÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ##C"FF×7Fff–ærÖf–VÆCÒ'VæÇG”6öÖÖVçB"fÇVSÒ"G¶W66T‡FÖÂ‡6†–gBçVæÇG”6öÖÖVçB—Ò"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚wVæÇG”6öÖÖVçBr’—Ò"óãÂöF—cà¢Æ'WGFöâ6Æ73Ò&66‚×7Fff–ærÖFVÆWFR"G—SÒ&'WGFöâ"FFÖFVÆWFR×7Fff–ær×6†–gB&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFU6†–gBr’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFU6†–gBr’—Ò#ì9sÂö'WGFöãà¢Âö'F–6ÆSæ°¢Ò’æ¦ö–â‚rr“°¢&WGW&âÇ6V7F–öâ6Æ73Ò&66‚×7Fff–ærÖF’"FF×7Fff–ærÖF“Ò"G¶W66T‡FÖÂ†FFR—Ò#à¢Æ†VFW"6Æ73Ò&66‚×7Fff–ærÖF’Ö†VB#à¢ÆF—b6Æ73Ò&66‚×7Fff–ærÖF’ÖFFR#ãÆÆ&VÃãÇ7ãâG·G"‚w6†–gDFFRr—ÓÂ÷7ããÆ–çWBG—SÒ&FFR"FF×7Fff–ærÖF’ÖFFRfÇVSÒ"G¶W66T‡FÖÂ†FFR—Ò"óãÂöÆ&VÃãÇ7G&öæsãÇ7ãâG·G"‚wvVV¶F’r—ÓÂ÷7ããÆ"FF×7Fff–ærÖF’×vVV¶F“âG¶W66T‡FÖÂ†66…7Fff–æuvVV¶F’†FFR’—ÓÂö#ãÂ÷7G&öæsãÂöF—cà¢Ç7â6Æ73Ò&66‚×7Fff–ærÖF’×V÷ÆR#ãÆ"FF×7Fff–ærÖF’×V÷ÆSâG¶F•F÷FÇ2çV÷ÆWÓÂö#âG·G"‚w7Fff–æuV÷ÆU6†÷'Br—ÓÂ÷7ãà¢Æ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖFB×7Fff–ær×W'6öâÖFFSÒ"G¶W66T‡FÖÂ†FFR—Ò#îûÈ²G·G"‚vFE7Fff–æuW'6öâr—ÓÂö'WGFöãà¢Âö†VFW#à¢ÆF—b6Æ73Ò&66‚×7Fff–ærÖF’×F&ÆR#âG·F&ÆT†VFW'ÓÆF—b6Æ73Ò&66‚×7Fff–ær×&÷w2#âG·&÷w7ÓÂöF—cãÂöF—cà¢Æfö÷FW"6Æ73Ò&66‚×7Fff–ærÖF’×F÷FÂ#ãÇ7G&öæsâG·G"‚w7Fff–ætF•F÷FÂr—ÓÂ÷7G&öæsãÆF—cà¢Ç7ããÇ6ÖÆÃâG·G"‚w7Fff–æuV÷ÆU6†÷'Br—ÓÂ÷6ÖÆÃãÆ"FF×7Fff–ærÖF’×7VÖÖ'“Ò'V÷ÆR#âG¶F•F÷FÇ2çV÷ÆWÓÂö#ãÂ÷7ãà¢Ç7ããÇ6ÖÆÃâG·G"‚w7Fff–æu6†–gE&FW5F÷FÂr—ÓÂ÷6ÖÆÃãÆ"FF×7Fff–ærÖF’×7VÖÖ'“Ò'&FW2#âG¶f÷&ÖDÖöæW’†F•F÷FÇ2ç6†–gE&FW2—ÓÂö#ãÂ÷7ãà¢Ç7ããÇ6ÖÆÃâG·G"‚wF÷FÄ÷fW'F–ÖRr—ÓÂ÷6ÖÆÃãÆ#ãÆ’FF×7Fff–ærÖF’×7VÖÖ'“Ò&÷fW'F–ÖR#âG´ÖF‚ç&÷VæB†F•F÷FÇ2æ÷fW'F–ÖT†÷W'2¢’òÒsÂö“ãÆ’FF×7Fff–ærÖF’×7VÖÖ'“Ò&÷fW'F–ÖU’#âG¶f÷&ÖDÖöæW’†F•F÷FÇ2æ÷fW'F–ÖU’—ÓÂö“ãÂö#ãÂ÷7ãà¢Ç7ããÇ6ÖÆÃâG·G"‚w7Fff–æuVæÇF–W5F÷FÂr—ÓÂ÷6ÖÆÃãÆ"FF×7Fff–ærÖF’×7VÖÖ'“Ò'VæÇF–W2#âG¶f÷&ÖDÖöæW’†F•F÷FÇ2çVæÇF–W2—ÓÂö#ãÂ÷7ãà¢Ç7â6Æ73Ò&—2×—&öÆÂ#ãÇ6ÖÆÃâG·G"‚wF÷FÅ—&öÆÂr—ÓÂ÷6ÖÆÃãÆ"FF×7Fff–ærÖF’×7VÖÖ'“Ò'—&öÆÂ#âG¶f÷&ÖDÖöæW’†F•F÷FÇ2ç—&öÆÂ—ÓÂö#ãÂ÷7ãà¢ÂöF—cãÂöfö÷FW#à¢Â÷6V7F–öãæ°¢Ò’æ¦ö–â‚rr“°¢6öç7Bw&æEF÷FÂÒ6†–gG2æÆVæwF‚òÆfö÷FW"6Æ73Ò&66‚×7Fff–ærÖw&æB×F÷FÂ#ãÇ7G&öæsâG·G"‚w7Fff–æu&Vv—7FW%F÷FÂr—ÓÂ÷7G&öæsãÆF—cà¢Ç7ããÇ6ÖÆÃâG·G"‚w7Fff–æuV÷ÆU6†÷'Br—ÓÂ÷6ÖÆÃãÆ"FF×7Fff–ærÖw&æB×7VÖÖ'“Ò'V÷ÆR#âG·F÷FÇ2çV÷ÆWÓÂö#ãÂ÷7ãà¢Ç7ããÇ6ÖÆÃâG·G"‚w7Fff–æu6†–gE&FW5F÷FÂr—ÓÂ÷6ÖÆÃãÆ"FF×7Fff–ærÖw&æB×7VÖÖ'“Ò'&FW2#âG¶f÷&ÖDÖöæW’‡F÷FÇ2ç6†–gE&FW2—ÓÂö#ãÂ÷7ãà¢Ç7ããÇ6ÖÆÃâG·G"‚wF÷FÄ÷fW'F–ÖRr—ÓÂ÷6ÖÆÃãÆ#ãÆ’FF×7Fff–ærÖw&æB×7VÖÖ'“Ò&÷fW'F–ÖR#âG´ÖF‚ç&÷VæB‡F÷FÇ2æ÷fW'F–ÖT†÷W'2¢’òÒsÂö“ãÆ’FF×7Fff–ærÖw&æB×7VÖÖ'“Ò&÷fW'F–ÖU’#âG¶f÷&ÖDÖöæW’‡F÷FÇ2æ÷fW'F–ÖU’—ÓÂö“ãÂö#ãÂ÷7ãà¢Ç7ããÇ6ÖÆÃâG·G"‚w7Fff–æuVæÇF–W5F÷FÂr—ÓÂ÷6ÖÆÃãÆ"FF×7Fff–ærÖw&æB×7VÖÖ'“Ò'VæÇF–W2#âG¶f÷&ÖDÖöæW’‡F÷FÇ2çVæÇF–W2—ÓÂö#ãÂ÷7ãà¢Ç7â6Æ73Ò&—2×—&öÆÂ#ãÇ6ÖÆÃâG·G"‚wF÷FÅ—&öÆÂr—ÓÂ÷6ÖÆÃãÆ"FF×7Fff–ærÖw&æB×7VÖÖ'“Ò'—&öÆÂ#âG¶f÷&ÖDÖöæW’‡F÷FÇ2ç—&öÆÂ—ÓÂö#ãÂ÷7ãà¢ÂöF—cãÂöfö÷FW#æ¢rs°¢&WGW&âÇ6V7F–öâ6Æ73Ò&66‚×7Fff–ærÖ&Æö6²#à¢Æ†VFW#ãÆF—cãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ25DdcÂ÷7ããÆƒCâG·G"‚vvw&VvF÷%v–æF÷rr—ÓÂöƒCãÇâG·G"‚vvw&VvF÷%v–æF÷t†–çBr—ÓÂ÷ãÂöF—cãÆF—b6Æ73Ò&66‚×7Fff–ærÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖFB×7Fff–ær×6†–gCîûÈ²G·G"‚vFE7Fff–æuW'6öâr—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖFB×7Fff–ærÖF“îûÈ²G·G"‚w7F'E7Fff–ætF’r—ÓÂö'WGFöããÂöF—cãÂö†VFW#à¢ÆF—b6Æ73Ò&66‚×7Fff–ær×7VÖÖ'’#ãÆ'F–6ÆSãÇ7ãâG·G"‚w7Fff–æuV÷ÆRr—ÓÂ÷7ããÇ7G&öærFF×7Fff–ær×7VÖÖ'“Ò'V÷ÆR#âG·F÷FÇ2çV÷ÆWÓÂ÷7G&öæsãÂö'F–6ÆSãÆ'F–6ÆSãÇ7ãâG·G"‚v7F—fU6†–gG2r—ÓÂ÷7ããÇ7G&öærFF×7Fff–ær×7VÖÖ'“Ò&7F—fR#âG·F÷FÇ2æ7F—fWÓÂ÷7G&öæsãÂö'F–6ÆSãÆ'F–6ÆSãÇ7ãâG·G"‚wF÷FÄ÷fW'F–ÖRr—ÓÂ÷7ããÇ7G&öærFF×7Fff–ær×7VÖÖ'“Ò&÷fW'F–ÖR#âG´ÖF‚ç&÷VæB‡F÷FÇ2æ÷fW'F–ÖT†÷W'2¢’òÒsÂ÷7G&öæsãÂö'F–6ÆSãÆ'F–6ÆSãÇ7ãâG·G"‚wF÷FÅ—&öÆÂr—ÓÂ÷7ããÇ7G&öærFF×7Fff–ær×7VÖÖ'“Ò'—&öÆÂ#âG¶f÷&ÖDÖöæW’‡F÷FÇ2ç—&öÆÂ—ÓÂ÷7G&öæsãÂö'F–6ÆSãÂöF—cà¢Ç6Æ73Ò&66‚×7Fff–ærÖf÷&×VÆ#ãÇ7ãìi#Â÷7ãâG·G"‚v÷fW'F–ÖTf÷&×VÆr—ÓÂ÷à¢ÆF—b6Æ73Ò&66‚×7Fff–ær×F&ÆR#âG¶F—2ÇÂÆF—b6Æ73Ò&66‚×7Fff–ærÖV×G’#ãÇ7ãîûÈ³Â÷7ããÇâG·G"‚væõ7Fff–æu6†–gG2r—ÓÂ÷ãÂöF—cæÓÂöF—câG¶w&æEF÷FÇÐ¢Â÷6V7F–öãæ°§Ð ¦gVæ7F–öâf–æD66…7Fff–æu6†–gB†ö&¦V7D–BÂ6V7F–öä–BÂ6†–gD–B’°¢6öç7B²ö&¦V7BÂ6V7F–öâÒÒf–æD66…6V7F–öâ†ö&¦V7D–BÂ6V7F–öä–B“°¢6öç7B6†–gBÒ6V7F–öãòç7Fff–æu6†–gG3òæf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ6†–gD–B“°¢&WGW&â²ö&¦V7BÂ6V7F–öâÂ6†–gBÓ°§Ð ¦gVæ7F–öâFD66…7Fff–æu6†–gB†ö&¦V7D–BÂ6V7F–öä–BÂ&WVW7FVDFFRÒrr’°¢6öç7B²6V7F–öâÒÒf–æD66…6V7F–öâ†ö&¦V7D–BÂ6V7F–öä–B“°¢–b‚6V7F–öâ’&WGW&ã°¢6V7F–öâç7Fff–æu6†–gG2ÇÃÒµÓ°¢6öç7BFFRÒõåÆG³GÒÕÆG³'ÒÕÆG³'ÒBòçFW7B…7G&–ær‡&WVW7FVDFFRÇÂrr’’ò&WVW7FVDFFR¢66…7Fff–ætÆFW7DFFR‡6V7F–öâ“°¢6V7F–öâç7Fff–æu6†–gG2çW6‚†æ÷&ÖÆ—¦T66…7Fff–æu6†–gB‡²FFRÒ’“°¢6fT66†fÆ÷r‚“°¢&VæFW$66†fÆ÷r‚“°§Ð ¦gVæ7F–öâFD66…7Fff–ætF’†ö&¦V7D–BÂ6V7F–öä–B’°¢6öç7B²6V7F–öâÒÒf–æD66…6V7F–öâ†ö&¦V7D–BÂ6V7F–öä–B“°¢–b‚6V7F–öâ’&WGW&ã°¢6V7F–öâç7Fff–æu6†–gG2ÇÃÒµÓ°¢6V7F–öâç7Fff–æu6†–gG2çW6‚†æ÷&ÖÆ—¦T66…7Fff–æu6†–gB‡²FFS¢66…7Fff–ætæW‡DFFR‡6V7F–öâ’Ò’“°¢6fT66†fÆ÷r‚“°¢&VæFW$66†fÆ÷r‚“°¢6†÷uFö7B‡G"‚w7Fff–ætF”7&VFVBr’“°§Ð ¦gVæ7F–öâWFFT66…7Fff–ætF”FFR†ö&¦V7D–BÂ6V7F–öä–BÂ&Wf–÷W4FFRÂæW‡DFFR’°¢6öç7B²6V7F–öâÒÒf–æD66…6V7F–öâ†ö&¦V7D–BÂ6V7F–öä–B“°¢–b‚6V7F–öâÇÂõåÆG³GÒÕÆG³'ÒÕÆG³'ÒBòçFW7B…7G&–ær†æW‡DFFRÇÂrr’’’&WGW&ã°¢6öç7BWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6V7F–öâç7Fff–æu6†–gG2æf÷$V6‚‚‡6†–gB’Óâ°¢–b‡6†–gBæFFRÓÒ&Wf–÷W4FFR’&WGW&ã°¢6†–gBæFFRÒæW‡DFFS°¢6†–gBçWFFVDBÒWFFVDC°¢Ò“°¢6fT66†fÆ÷r‚“°¢&VæFW$66†fÆ÷r‚“°§Ð ¦gVæ7F–öâWFFT66…7Fff–æuF÷FÇ4F—7Æ’‡6V7F–öâÂ6V7F–öä6&BÂFFR’°¢6öç7BF÷FÇ2Ò66…7Fff–æuF÷FÇ2‡6V7F–öâ“°¢6öç7B7VÖÖ'•fÇVW2Ò²V÷ÆS¢F÷FÇ2çV÷ÆRÂ7F—fS¢F÷FÇ2æ7F—fRÂ÷fW'F–ÖS¢G´ÖF‚ç&÷VæB‡F÷FÇ2æ÷fW'F–ÖT†÷W'2¢’òÒvÂ—&öÆÃ¢f÷&ÖDÖöæW’‡F÷FÇ2ç—&öÆÂ’Ó°¢ö&¦V7BæVçG&–W2‡7VÖÖ'•fÇVW2’æf÷$V6‚‚…¶¶W’ÂfÇVUÒ’Óâ°¢6öç7BF&vWBÒB†¶FF×7Fff–ær×7VÖÖ'“Ò"G¶¶W—Ò%ÖÂ6V7F–öä6&B“°¢–b‡F&vWB’F&vWBçFW‡D6öçFVçBÒfÇVS°¢Ò“°¢6öç7Bw&æEfÇVW2Ò²V÷ÆS¢F÷FÇ2çV÷ÆRÂ&FW3¢f÷&ÖDÖöæW’‡F÷FÇ2ç6†–gE&FW2’Â÷fW'F–ÖS¢G´ÖF‚ç&÷VæB‡F÷FÇ2æ÷fW'F–ÖT†÷W'2¢’òÒvÂ÷fW'F–ÖU“¢f÷&ÖDÖöæW’‡F÷FÇ2æ÷fW'F–ÖU’’ÂVæÇF–W3¢f÷&ÖDÖöæW’‡F÷FÇ2çVæÇF–W2’Â—&öÆÃ¢f÷&ÖDÖöæW’‡F÷FÇ2ç—&öÆÂ’Ó°¢ö&¦V7BæVçG&–W2†w&æEfÇVW2’æf÷$V6‚‚…¶¶W’ÂfÇVUÒ’Óâ°¢6öç7BF&vWBÒB†¶FF×7Fff–ærÖw&æB×7VÖÖ'“Ò"G¶¶W—Ò%ÖÂ6V7F–öä6&B“°¢–b‡F&vWB’F&vWBçFW‡D6öçFVçBÒfÇVS°¢Ò“°¢6öç7BF’ÒBB‚u¶FF×7Fff–ærÖF•ÒrÂ6V7F–öä6&B’æf–æB‚†—FVÒ’Óâ—FVÒæFF6WBç7Fff–ætF’ÓÓÒFFR“°¢–b‚F’’&WGW&ã°¢6öç7BF•F÷FÇ2Ò66…7Fff–æuF÷FÇ4f÷%6†–gG2‡6V7F–öâç7Fff–æu6†–gG2æf–ÇFW"‚‡6†–gB’Óâ6†–gBæFFRÓÓÒFFR’“°¢6öç7BV÷ÆRÒB‚u¶FF×7Fff–ærÖF’×V÷ÆUÒrÂF’“°¢–b‡V÷ÆR’V÷ÆRçFW‡D6öçFVçBÒF•F÷FÇ2çV÷ÆS°¢6öç7BF•fÇVW2Ò²V÷ÆS¢F•F÷FÇ2çV÷ÆRÂ&FW3¢f÷&ÖDÖöæW’†F•F÷FÇ2ç6†–gE&FW2’Â÷fW'F–ÖS¢G´ÖF‚ç&÷VæB†F•F÷FÇ2æ÷fW'F–ÖT†÷W'2¢’òÒvÂ÷fW'F–ÖU“¢f÷&ÖDÖöæW’†F•F÷FÇ2æ÷fW'F–ÖU’’ÂVæÇF–W3¢f÷&ÖDÖöæW’†F•F÷FÇ2çVæÇF–W2’Â—&öÆÃ¢f÷&ÖDÖöæW’†F•F÷FÇ2ç—&öÆÂ’Ó°¢ö&¦V7BæVçG&–W2†F•fÇVW2’æf÷$V6‚‚…¶¶W’ÂfÇVUÒ’Óâ°¢6öç7BF&vWBÒB†¶FF×7Fff–ærÖF’×7VÖÖ'“Ò"G¶¶W—Ò%ÖÂF’“°¢–b‡F&vWB’F&vWBçFW‡D6öçFVçBÒfÇVS°¢Ò“°§Ð ¦gVæ7F–öâWFFT66…7Fff–æu6†–gB†ö&¦V7D–BÂ6V7F–öä–BÂ6†–gD–BÂf–VÆBÂfÇVRÂ&÷rÂ6V7F–öä6&B’°¢6öç7B²6V7F–öâÂ6†–gBÒÒf–æD66…7Fff–æu6†–gB†ö&¦V7D–BÂ6V7F–öä–BÂ6†–gD–B“°¢–b‚6V7F–öâÇÂ6†–gB’&WGW&ã°¢–b†f–VÆBÓÓÒw7G'V7F÷4–Br’6†–gBç7G'V7F÷4–BÒ7G&–ær‡fÇVRÇÂrr’ç&WÆ6R‚õÄB²örÂrr’ç6Æ–6RƒÂr“°¢VÇ6R–b…²w6†–gE&FRrÂwVæÇG’uÒæ–æ6ÇVFW2†f–VÆB’’6†–gE¶f–VÆEÒÒÖF‚æÖ‚ƒÂÖF‚ç&÷VæB‚„çVÖ&W"‡fÇVR’ÇÂ’¢’ò“°¢VÇ6R–b†f–VÆBÓÓÒvFFRr’6†–gBæFFRÒõåÆG³GÒÕÆG³'ÒÕÆG³'ÒBòçFW7B‡fÇVR’òfÇVR¢Æö6ÄFFT¶W’‚“°¢VÇ6R–b…²wÆææVDg&öÒrÂwÆææVEFòuÒæ–æ6ÇVFW2†f–VÆB’’6†–gE¶f–VÆEÒÒõåÆG³'Ó¥ÆG³'ÒBòçFW7B‡fÇVR’òfÇVR¢rs°¢VÇ6R–b†f–VÆBÓÓÒvgVÆÄæÖRr’6†–gBægVÆÄæÖRÒ7G&–ær‡fÇVRÇÂrr’ç6Æ–6RƒÂc“°¢VÇ6R–b†f–VÆBÓÓÒwVæÇG”6öÖÖVçBr’6†–gBçVæÇG”6öÖÖVçBÒ7G&–ær‡fÇVRÇÂrr’ç6Æ–6RƒÂ#C“°¢6†–gBçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT66†fÆ÷r‚“°¢6öç7B6Æ7VÆF–öâÒ66…7Fff–æt6Æ7VÆF–öâ‡6†–gB“°¢6öç7BvVV¶F’ÒB‚u¶FF×7Fff–ær×vVV¶F•ÒrÂ&÷r“°¢–b‡vVV¶F’’vVV¶F’çFW‡D6öçFVçBÒ66…7Fff–æuvVV¶F’‡6†–gBæFFR“°¢B‚u¶FF×7Fff–ær×ÆææVBÖ†÷W'5ÒrÂ&÷r’çFW‡D6öçFVçBÒ6Æ7VÆF–öâçÆææVD†÷W'3°¢B‚u¶FF×7Fff–ærÖ÷fW'F–ÖRÖ†÷W'5ÒrÂ&÷r’çFW‡D6öçFVçBÒ6Æ7VÆF–öâæ÷fW'F–ÖT†÷W'3°¢B‚u¶FF×7Fff–ærÖ÷fW'F–ÖR×•ÒrÂ&÷r’çFW‡D6öçFVçBÒf÷&ÖDÖöæW’†6Æ7VÆF–öâæ÷fW'F–ÖU’“°¢B‚u¶FF×7Fff–ær×6Æ'•ÒrÂ&÷r’çFW‡D6öçFVçBÒf÷&ÖDÖöæW’†6Æ7VÆF–öâç6Æ'’“°¢WFFT66…7Fff–æuF÷FÇ4F—7Æ’‡6V7F–öâÂ6V7F–öä6&BÂ6†–gBæFFR“°§Ð ¦gVæ7F–öâ÷Vä66…7Fff–æu6†–gB†ö&¦V7D–BÂ6V7F–öä–BÂ6†–gD–B’°¢6öç7B²6†–gBÒÒf–æD66…7Fff–æu6†–gB†ö&¦V7D–BÂ6V7F–öä–BÂ6†–gD–B“°¢–b‚6†–gB’&WGW&ã°¢6öç7BfÆ–BÒ6†–gBægVÆÄæÖRçG&–Ò‚’bb6†–gBç7G'V7F÷4–BæÆVæwF‚ÓÓÒrbb6†–gBæFFRbb66…7Fff–æuÆææVD†÷W'2‡6†–gB’âbb6†–gBç6†–gE&FRâ°¢–b‚fÆ–B’²6†÷uFö7B‡G"‚w7Fff–æu&WV—&VDf–VÆG2r’“²&WGW&ã²Ð¢6†–gBæ÷VæVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6†–gBæ6Æ÷6VDBÒçVÆÃ°¢6†–gBçWFFVDBÒ6†–gBæ÷VæVDC°¢6fT66†fÆ÷r‚“²&VæFW$66†fÆ÷r‚“²6†÷uFö7B‡G"‚w6†–gD÷VæVBr’“°§Ð ¦gVæ7F–öâ6Æ÷6T66…7Fff–æu6†–gB†ö&¦V7D–BÂ6V7F–öä–BÂ6†–gD–B’°¢6öç7B²6†–gBÒÒf–æD66…7Fff–æu6†–gB†ö&¦V7D–BÂ6V7F–öä–BÂ6†–gD–B“°¢–b‚6†–gCòæ÷VæVDBÇÂ6†–gBæ6Æ÷6VDB’&WGW&ã°¢6†–gBæ6Æ÷6VDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6†–gBçWFFVDBÒ6†–gBæ6Æ÷6VDC°¢6fT66†fÆ÷r‚“²&VæFW$66†fÆ÷r‚“²6†÷uFö7B‡G"‚w6†–gD6Æ÷6VEFö7Br’“°§Ð ¦gVæ7F–öâFVÆWFT66…7Fff–æu6†–gB†ö&¦V7D–BÂ6V7F–öä–BÂ6†–gD–B’°¢6öç7B²6V7F–öâÂ6†–gBÒÒf–æD66…7Fff–æu6†–gB†ö&¦V7D–BÂ6V7F–öä–BÂ6†–gD–B“°¢–b‚6V7F–öâÇÂ6†–gBÇÂv–æF÷ræ6öæf—&Ò‡G"‚vFVÆWFU6†–gD6öæf—&Òr’’’&WGW&ã°¢6V7F–öâç7Fff–æu6†–gG2Ò6V7F–öâç7Fff–æu6†–gG2æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ–BÓÒ6†–gBæ–B“°¢6fT66†fÆ÷r‚“²&VæFW$66†fÆ÷r‚“²6†÷uFö7B‡G"‚w6†–gDFVÆWFVBr’“°§Ð ¦gVæ7F–öâ66…6V7F–öäÖ&·W†ö&¦V7BÂ6V7F–öâ’°¢6öç7B&W÷'D†—7F÷'’Ò'&’æ—4'&’‡6V7F–öãòç&W÷'D†—7F÷'’’ò6V7F–öâç&W÷'D†—7F÷'’¢µÓ°¢6öç7BGfæ6W2Ò66…F÷FÂ‡6V7F–öâæGfæ6W2“°¢6öç7BW‡Vç6W2Ò66…F÷FÂ‡6V7F–öâæW‡Vç6W2“°¢6öç7B&VÖ–æ–æt6öçG&7BÒÖF‚ç&÷VæB‚‡6V7F–öâæ6öçG&7DÖ÷VçBÒW‡Vç6W2’¢’ò°¢6öç7B–E&öGV7F–öå&VÖ–æ–ærÒÖF‚ç&÷VæB‚†W‡Vç6W2ÒGfæ6W2’¢’ò°¢6öç7Bf7D–æ6öÖRÒ66…F÷FÂ‡6V7F–öâæf7D–æ6öÖR“°¢6öç7Bf7DW‡Vç6W2Ò66…F÷FÂ‡6V7F–öâæf7DW‡Vç6W2“°¢6öç7Bf7D&Ææ6RÒÖF‚ç&÷VæB‚†f7D–æ6öÖRÒf7DW‡Vç6W2’¢’ò°¢6öç7B6V7F–öä&Ææ6RÒ66…6V7F–öäf–ææ6–Ç2‡6V7F–öâ’æ&Ææ6S°¢6öç7B—4÷VâÒW‡æFVD66…6V7F–öç2æ†2‡6V7F–öâæ–B“°¢6öç7BÖöFT&FvW2ÒG·6V7F–öâæ6öçG&7DÖöFRòÇ7ãâG·G"‚wv÷&´'”6öçG&7Br—ÓÂ÷7ãæ¢rwÒG·6V7F–öâæf7DÖöFRòÇ7ãâG·G"‚v7GVÄ66÷VçF–ærr—ÓÂ÷7ãæ¢rwÒG·6V7F–öâç7Fff–ætÖöFRòÇ7ãâG·G"‚wV÷ÆT76–væVBr—ÓÂ÷7ãæ¢rwÖ°¢6öç7B6öçG&7DÖ&·WÒ6V7F–öâæ6öçG&7DÖöFRòÇ6V7F–öâ6Æ73Ò&66‚Ö66÷VçF–ærÖ&Æö6²66‚Ö6öçG&7BÖ66÷VçF–ær#ãÆƒCâG·G"‚v6öçG&7D66÷VçF–ærr—ÓÂöƒCãÆF—b6Æ73Ò&66‚Ö6öçG&7BÖ†VB#ãÆ'F–6ÆR6Æ73Ò&66‚Ö6öçG&7B×fÇVR#ãÇ7ãâG·G"‚v6öçG&7DÖ÷VçBr—ÓÂ÷7ããÆF—cãÇ7G&öæsâG¶f÷&ÖDÖöæW’‡6V7F–öâæ6öçG&7DÖ÷VçB—ÓÂ÷7G&öæsãÆ'WGFöâG—SÒ&'WGFöâ"FFÖVF—BÖ6öçG&7BÖÖ÷VçB&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚vVF—D6öçG&7DÖ÷VçBr’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚vVF—D6öçG&7DÖ÷VçBr’—Ò#î)ÈãÂö'WGFöããÂöF—cãÂö'F–6ÆSãÆ'F–6ÆSãÇ7ãâG·G"‚w&V6V—fVDg&öÔ7W7FöÖW"r—ÓÂ÷7ããÇ7G&öæsâG¶f÷&ÖDÖöæW’†Gfæ6W2—ÓÂ÷7G&öæsãÂö'F–6ÆSãÆ'F–6ÆR6Æ73Ò"G¶66„&Ææ6T6Æ72‡&VÖ–æ–æt6öçG&7B—Ò#ãÇ7ãâG·G"‚v6öçG&7E&öGV7F–öå&VÖ–æ–ærr—ÓÂ÷7ããÇ7G&öæsâG¶f÷&ÖE6–væVDÖöæW’‡&VÖ–æ–æt6öçG&7B—ÓÂ÷7G&öæsãÂö'F–6ÆSãÂöF—cãÆF—b6Æ73Ò&66‚×7VÖÖ'’#ãÆ'F–6ÆSãÇ7ãâG·G"‚wF÷FÅ&V6V—fVDGfæ6T6Æ÷7W&Rr—ÓÂ÷7ããÇ7G&öæsâG¶f÷&ÖDÖöæW’†Gfæ6W2—ÓÂ÷7G&öæsãÂö'F–6ÆSãÆ'F–6ÆSãÇ7ãâG·G"‚wF÷FÄ6ö×ÆWFVEv÷&µföÇVÖRr—ÓÂ÷7ããÇ7G&öæsâG¶f÷&ÖDÖöæW’†W‡Vç6W2—ÓÂ÷7G&öæsãÂö'F–6ÆSãÆ'F–6ÆR6Æ73Ò&—2×&VÖ–æ–ærG¶66„&Ææ6T6Æ72‚×–E&öGV7F–öå&VÖ–æ–ær—Ò#ãÇ7ãâG·G"‚w–E&öGV7F–öå&VÖ–æ–ærr—ÓÂ÷7ããÇ7G&öæsâG¶f÷&ÖE6–væVDÖöæW’‡–E&öGV7F–öå&VÖ–æ–ær—ÓÂ÷7G&öæsãÂö'F–6ÆSãÂöF—cãÆF—b6Æ73Ò&66‚ÖVçG'’Öw&–B#âG¶66„VçG'”f÷&Ò‚vGfæ6W2rÂw&V6V—fVDGfæ6T6Æ÷7W&RrÂvFE&V6V—fVDGfæ6T6Æ÷7W&Rr—ÒG¶66„VçG'”f÷&Ò‚vW‡Vç6W2rÂv6ö×ÆWFVEv÷&µföÇVÖRrÂvFD6ö×ÆWFVEv÷&µföÇVÖRr—ÓÂöF—câG¶66„†—7F÷'”Ö&·W‡6V7F–öâæGfæ6W2ÂwF÷FÅ&V6V—fVDGfæ6T6Æ÷7W&RrÂvGfæ6W2rÂ6V7F–öâæ–B—ÒG¶66„†—7F÷'”Ö&·W‡6V7F–öâæW‡Vç6W2ÂwF÷FÄ6ö×ÆWFVEv÷&µföÇVÖRrÂvW‡Vç6W2rÂ6V7F–öâæ–B—ÒG¶66„÷vägVæG4Ö&·W‡6V7F–öâÂ6V7F–öâæ÷vä–çfW7FÖVçG2Â6V7F–öâæ÷vå&WGW&ç2Âv÷vä–çfW7FÖVçG2rÂv÷vå&WGW&ç2r—ÓÂ÷6V7F–öãæ¢rs°¢6öç7Bf7DÖ&·WÒ6V7F–öâæf7DÖöFRòÇ6V7F–öâ6Æ73Ò&66‚Öf7B×F&ÆR66‚Ö66÷VçF–ærÖ&Æö6²#ãÆƒB6Æ73Ò&66‚Öf7B×F—FÆR#âG·G"‚v7GVÄ66÷VçF–ærr—ÓÂöƒCãÆF—b6Æ73Ò&66‚ÖVçG'’Öw&–B#âG¶66„VçG'”f÷&Ò‚vf7D–æ6öÖRrÂvf7DGfæ6T6ö×ÆWF–öârÂvFDf7DGfæ6T6ö×ÆWF–öâr—ÒG¶66„VçG'”f÷&Ò‚vf7DW‡Vç6W2rÂv7GVÆÇ”6ö×ÆWFVBrÂvFD7GVÆÇ”6ö×ÆWFVBr—ÓÂöF—câG¶66„†—7F÷'”Ö&·W‡6V7F–öâæf7D–æ6öÖRÂwF÷FÄf7DGfæ6T6ö×ÆWF–öârÂvf7D–æ6öÖRrÂ6V7F–öâæ–B—ÒG¶66„†—7F÷'”Ö&·W‡6V7F–öâæf7DW‡Vç6W2ÂwF÷FÄ7GVÆÇ”6ö×ÆWFVBrÂvf7DW‡Vç6W2rÂ6V7F–öâæ–B—ÓÆF—b6Æ73Ò&66‚Ö&Ææ6RG¶66„&Ææ6T6Æ72†f7D&Ææ6R—Ò#ãÇ7ãâG·G"‚vW†V7WF–öå&VÖ–æ–ærr—ÓÂ÷7ããÇ7G&öæsâG¶f÷&ÖE6–væVDÖöæW’†f7D&Ææ6R—ÓÂ÷7G&öæsãÂöF—câG¶66„÷vägVæG4Ö&·W‡6V7F–öâÂ6V7F–öâæf7D÷vä–çfW7FÖVçG2Â6V7F–öâæf7D÷vå&WGW&ç2Âvf7D÷vä–çfW7FÖVçG2rÂvf7D÷vå&WGW&ç2r—ÓÂ÷6V7F–öãæ¢rs°¢6öç7B7Fff–ætÖ&·WÒ6V7F–öâç7Fff–ætÖöFRò66…7Fff–ætÖ&·W‡6V7F–öâ’¢rs°¢&WGW&âÇ6V7F–öâ6Æ73Ò&66‚×6V7F–öâ"FFÖ66‚×6V7F–öãÒ"G¶W66T‡FÖÂ‡6V7F–öâæ–B—Ò#à¢Æ†VFW"6Æ73Ò&66‚×6V7F–öâÖ†VB#à¢Æ'WGFöâ6Æ73Ò&66‚×6V7F–öâ×FövvÆR"G—SÒ&'WGFöâ"FFÖ66‚×6V7F–öâ×FövvÆR&–ÖW‡æFVCÒ"G¶—4÷VçÒ#ãÇ7ãâG¶—4÷Vâò~(ÈBr¢~(¢wÓÂ÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡6V7F–öâææÖR—ÓÂ÷7G&öæsãÆ"6Æ73Ò&66‚×6V7F–öâÖ&Ææ6RG¶66„&Ææ6T6Æ72‡6V7F–öä&Ææ6R—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w6V7F–öä&Ææ6Rr’—Ò#âG¶f÷&ÖE6–væVDÖöæW’‡6V7F–öä&Ææ6R—ÓÂö#ãÆ“âG¶ÖöFT&FvW7ÓÂö“ãÂö'WGFöãà¢ÆF—b6Æ73Ò&66‚×6V7F–öâÖ†VBÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&66‚ÖÖ–æ’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×&VæÖRÖ66‚×6V7F–öãâG·G"‚w&VæÖRr—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&66‚ÖÖ–æ’Ö'WGFöâ—2ÖFævW""G—SÒ&'WGFöâ"FFÖFVÆWFRÖ66‚×6V7F–öãâG·G"‚vFVÆWFU6V7F–öâr—ÓÂö'WGFöããÂöF—cà¢Âö†VFW#à¢ÆF—b6Æ73Ò&66‚×6V7F–öâÖ&öG’"G¶—4÷Vâòrr¢r†–FFVâwÓà¢G¶66…6V7F–öäGF6†ÖVçG4Ö&·W‡6V7F–öâ—ÓÆF—b6Æ73Ò&66‚×6V7F–öâÖFö7VÖVçBÖ7F–öç2#ãÆ'WGFöâG—SÒ&'WGFöâ"FFÖ÷VâÖ66‚ÖFö7VÖVçCÒ'7FFVÖVçB#âG·G"‚wv÷&µ7FFVÖVçBr—ÓÂö'WGFöããÆ'WGFöâG—SÒ&'WGFöâ"FFÖ÷VâÖ66‚ÖFö7VÖVçCÒ&7B#âG·G"‚wv÷&´7Br—ÓÂö'WGFöããÆ'WGFöâG—SÒ&'WGFöâ"FFÖW‡÷'B×6V7F–öãâG·G"‚w6V7F–öå&W÷'Br—ÓÂö'WGFöããÆ'WGFöâG—SÒ&'WGFöâ"FF×FövvÆR×&W÷'BÖ†—7F÷'“âG·G"‚w&W÷'D†—7F÷'’r—Ò+rG·&W÷'D†—7F÷'’æÆVæwF‡ÓÂö'WGFöããÂöF—câG¶66…&W÷'D†—7F÷'”Ö&·W‡6V7F–öâ—ÒG¶6öçG&7DÖ&·WÒG¶f7DÖ&·WÒG·7Fff–ætÖ&·WÐ¢ÂöF—cà¢Â÷6V7F–öãæ°§Ð ¦gVæ7F–öâ&VæFW$66†fÆ÷t6öçFVçB‚’°¢6öç7B'&÷w6W"ÒB‚u¶FFÖ66†fÆ÷rÖ'&÷w6W%Òr“°¢6öç7BFWF–ÂÒB‚u¶FFÖ66†fÆ÷rÖFWF–ÅÒr“°¢6öç7BÆ—7BÒB‚u¶FFÖ66†fÆ÷rÖÆ—7EÒr“°¢6öç7BV×G’ÒB‚u¶FFÖ66†fÆ÷rÖV×G•Òr“°¢–b‚'&÷w6W"ÇÂFWF–ÂÇÂÆ—7BÇÂV×G’’&WGW&ã°¢6öç7B7F—fTö&¦V7BÒ66†fÆ÷tö&¦V7G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ7F—fT66„ö&¦V7D–B“°¢–b†7F—fTö&¦V7B’°¢'&÷w6W"æ†–FFVâÒG'VS²FWF–Âæ†–FFVâÒfÇ6S²&VæFW$66„ö&¦V7DFWF–Â†7F—fTö&¦V7BÂFWF–Â“²&WGW&ã°¢Ð¢7F—fT66„ö&¦V7D–BÒçVÆÃ²'&÷w6W"æ†–FFVâÒfÇ6S²FWF–Âæ†–FFVâÒG'VS²FWF–Âæ–ææW$…DÔÂÒrs°¢V×G’æ†–FFVâÒ66†fÆ÷tö&¦V7G2æÆVæwF‚â°¢Æ—7Bæ†–FFVâÒ66†fÆ÷tö&¦V7G2æÆVæwF‚ÓÓÒ°¢6öç7BW‡÷'DÆÄ'WGFöâÒB‚u¶FFÖW‡÷'BÖÆÂÖ66†fÆ÷uÒrÂ'&÷w6W"“°¢–b†W‡÷'DÆÄ'WGFöâ’W‡÷'DÆÄ'WGFöâæ†–FFVâÒ66†fÆ÷tö&¦V7G2æÆVæwF‚ÓÓÒ°¢6öç7B÷&FW&VDö&¦V7G2Ò²âââ„'&’æ—4'&’†66†fÆ÷tö&¦V7G2’ò66†fÆ÷tö&¦V7G2¢µÒ•Òç6÷'B‚†Â"’ÓâçVÖ&W"†æ6ö×ÆWFVB’ÒçVÖ&W"†"æ6ö×ÆWFVB’ÇÂæWrFFR†"æ7&VFVDB’ÒæWrFFR†æ7&VFVDB’“°¢Æ—7Bæ–ææW$…DÔÂÒ÷&FW&VDö&¦V7G2æÖ‚†ö&¦V7B’Óâ°¢6öç7Bf–ææ6–Ç2Ò66„ö&¦V7Df–ææ6–Ç2†ö&¦V7B“°¢6öç7B6V7F–öä6÷VçBÒ'&’æ—4'&’†ö&¦V7Còç6V7F–öç2’òö&¦V7Bç6V7F–öç2æÆVæwF‚¢°¢&WGW&âÆ'F–6ÆR6Æ73Ò&66‚Öö&¦V7BG¶ö&¦V7Bæ6ö×ÆWFVBòr—2Ö6ö×ÆWFVBr¢rwÒ"FFÖ66‚Öö&¦V7CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"&öÆSÒ&'WGFöâ"F&–æFWƒÒ#"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ†G·G"‚v÷Väö&¦V7D7F–öâr—Ó¢G¶ö&¦V7BææÖWÖ—Ò#ãÆ†VFW#ãÆF—b6Æ73Ò&66‚Öö&¦V7BÖ†VF–ær#ãÆF—b6Æ73Ò&66‚Öö&¦V7BÖæÖRÖÆ–æR#ãÆƒ#âG¶W66T‡FÖÂ†ö&¦V7BææÖR—ÓÂöƒ#ãÇ7G&öær6Æ73Ò&66‚Ö6&BÖ&Ææ6RG¶66„&Ææ6T6Æ72†f–ææ6–Ç2æ&Ææ6R—Ò#âG¶f÷&ÖE6–væVDÖöæW’†f–ææ6–Ç2æ&Ææ6R—ÓÂ÷7G&öæsãÂöF—cãÇ6ÖÆÃâG¶66„FFR†ö&¦V7Bæ7&VFVDB—Ò+rG·6V7F–öä6÷VçGÒG·G"‚w6V7F–öä6Æ7VÆF–öç2r—ÒG¶ö&¦V7Bæ6ö×ÆWFVBò+rG·G"‚v6ö×ÆWFVDö&¦V7Br—Ö¢rwÓÂ÷6ÖÆÃãÆF—b6Æ73Ò&66‚Öö&¦V7BÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&66‚ÖÖ–æ’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×&VæÖRÖ66‚Öö&¦V7CâG·G"‚w&VæÖRr—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&66‚ÖÖ–æ’Ö'WGFöâ—2ÖFævW""G—SÒ&'WGFöâ"FFÖFVÆWFRÖ66‚Öö&¦V7CâG·G"‚vFVÆWFTö&¦V7Br—ÓÂö'WGFöããÆÆ&VÂ6Æ73Ò&66‚ÖÖ–æ’Ö'WGFöâ—2Ö6ö×ÆWFR#ãÆ–çWBG—SÒ&6†V6¶&÷‚"FFÖ6ö×ÆWFRÖ66‚Öö&¦V7BG¶ö&¦V7Bæ6ö×ÆWFVBòr6†V6¶VBr¢rwÒóãÇ7ãâG¶ö&¦V7Bæ6ö×ÆWFVBòG"‚w&V÷Väö&¦V7Br’¢G"‚vf–æ—6„ö&¦V7Br—ÓÂ÷7ããÂöÆ&VÃãÂöF—cãÂöF—cãÂö†VFW#ãÂö'F–6ÆSæ°¢Ò’æ¦ö–â‚rr“° ¢BB‚u¶FFÖ66‚Öö&¦V7EÒrÂÆ—7B’æf÷$V6‚‚†6&B’Óâ°¢6öç7Bö&¦V7BÒ66†fÆ÷tö&¦V7G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ6&BæFF6WBæ66„ö&¦V7B“°¢–b‚ö&¦V7B’&WGW&ã°¢6öç7B÷Väö&¦V7BÒ‚’Óâ²7F—fT66„ö&¦V7D–BÒö&¦V7Bæ–C²&VæFW$66†fÆ÷r‚“²v–æF÷rç67&öÆÅFò‡²F÷¢Â&V†f–÷#¢w6Öö÷F‚rÒ“²Ó°¢6&BæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ†WfVçB’Óâ²–b‚WfVçBçF&vWBæ6Æ÷6W7B‚ræ66‚Öö&¦V7BÖ7F–öç2r’’÷Väö&¦V7B‚“²Ò“°¢6&BæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ²–b†WfVçBçF&vWBÓÒ6&BÇÂ²tVçFW"rÂruÒæ–æ6ÇVFW2†WfVçBæ¶W’’’&WGW&ã²WfVçBç&WfVçDFVfVÇB‚“²÷Väö&¦V7B‚“²Ò“°¢B‚u¶FF×&VæÖRÖ66‚Öö&¦V7EÒrÂ6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ&VæÖT66„ö&¦V7B†ö&¦V7Bæ–B’“°¢B‚u¶FFÖFVÆWFRÖ66‚Öö&¦V7EÒrÂ6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢–b‚v–æF÷ræ6öæf—&Ò‡G"‚vFVÆWFT66„ö&¦V7D6öæf—&Òr’’’&WGW&ã°¢FVÆWFT66†fÆ÷tf–ÆW2…¶ö&¦V7BÂââæö&¦V7Bç6V7F–öç5Ò’æ6F6‚‚†W'&÷"’Óâ6öç6öÆRæW'&÷"†W'&÷"’“°¢66†fÆ÷tö&¦V7G2Ò66†fÆ÷tö&¦V7G2æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ–BÓÒö&¦V7Bæ–B“°¢6fT66†fÆ÷r‚“°¢&VæFW$66†fÆ÷r‚“°¢6†÷uFö7B‡G"‚v66„ö&¦V7DFVÆWFVBr’“°¢Ò“°¢B‚u¶FFÖ6ö×ÆWFRÖ66‚Öö&¦V7EÒrÂ6&B“òæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ†WfVçB’Óâ°¢ö&¦V7Bæ6ö×ÆWFVBÒWfVçBæ7W'&VçEF&vWBæ6†V6¶VC°¢ö&¦V7Bæ6ö×ÆWFVDBÒö&¦V7Bæ6ö×ÆWFVBòæWrFFR‚’çFô•4õ7G&–ær‚’¢çVÆÃ°¢6fT66†fÆ÷r‚“²&VæFW$66†fÆ÷r‚“²6†÷uFö7B‡G"†ö&¦V7Bæ6ö×ÆWFVBòv6ö×ÆWFVDö&¦V7Br¢vö&¦V7E&V÷VæVBr’“°¢Ò“°¢Ò“°§Ð ¦ÆWB66†fÆ÷u&V6÷fW'”–å&öw&W72ÒfÇ6S° ¦gVæ7F–öâ&VæFW$66†fÆ÷r‚’°¢G'’°¢&VæFW$66†fÆ÷t6öçFVçB‚“°¢Ò6F6‚†W'&÷"’°¢6öç6öÆRæW'&÷"‚u7G'V7Dõ26†÷'B6öçG&7G2&VæFW"f–ÆVC¢rÂW'&÷"“°¢–b‚66†fÆ÷u&V6÷fW'”–å&öw&W72’°¢66†fÆ÷u&V6÷fW'”–å&öw&W72ÒG'VS°¢G'’°¢66†fÆ÷tö&¦V7G2ÒÆöD66†fÆ÷r‚“°¢–b†7F—fT66„ö&¦V7D–Bbb66†fÆ÷tö&¦V7G2ç6öÖR‚†ö&¦V7B’Óâö&¦V7Bæ–BÓÓÒ7F—fT66„ö&¦V7D–B’’7F—fT66„ö&¦V7D–BÒçVÆÃ°¢&VæFW$66†fÆ÷t6öçFVçB‚“°¢&WGW&ã°¢Ò6F6‚‡&WG'”W'&÷"’°¢6öç6öÆRæW'&÷"‚u7G'V7Dõ26†÷'B6öçG&7G2&V6÷fW'’f–ÆVC¢rÂ&WG'”W'&÷"“°¢Òf–æÆÇ’°¢66†fÆ÷u&V6÷fW'”–å&öw&W72ÒfÇ6S°¢Ð¢Ð¢6öç7B'&÷w6W"ÒB‚u¶FFÖ66†fÆ÷rÖ'&÷w6W%Òr“°¢6öç7BFWF–ÂÒB‚u¶FFÖ66†fÆ÷rÖFWF–ÅÒr“°¢6öç7BÆ—7BÒB‚u¶FFÖ66†fÆ÷rÖÆ—7EÒr“°¢6öç7BV×G’ÒB‚u¶FFÖ66†fÆ÷rÖV×G•Òr“°¢–b†'&÷w6W"’'&÷w6W"æ†–FFVâÒfÇ6S°¢–b†FWF–Â’²FWF–Âæ†–FFVâÒG'VS²FWF–Âæ–ææW$…DÔÂÒrs²Ð¢–b†V×G’’V×G’æ†–FFVâÒG'VS°¢–b†Æ—7B’°¢Æ—7Bæ†–FFVâÒfÇ6S°¢Æ—7Bæ–ææW$…DÔÂÒÆF—b6Æ73Ò&66†fÆ÷rÖV×G’#ãÇ7ãî(k³Â÷7ããÆƒ#âG¶W66T‡FÖÂ‡G"‚wV–6´66†fÆ÷rr’—ÓÂöƒ#ãÇâG¶W66T‡FÖÂ‡G"‚v66†fÆ÷tFW67&—F–öâr’—ÓÂ÷ãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×&WG'’Ö66†fÆ÷sâG¶W66T‡FÖÂ‡G"‚w&Vg&W6…vRr’—ÓÂö'WGFöããÂöF—cæ°¢B‚u¶FF×&WG'’Ö66†fÆ÷uÒrÂÆ—7B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâv–æF÷ræÆö6F–öâç&VÆöB‚’“°¢Ð¢Ð§Ð ¦gVæ7F–öâ&–æD66…6V7F–öäWfVçG2†ö&¦V7BÂ66÷R’°¢BB‚u¶FFÖ66‚×6V7F–öåÒrÂ66÷R’æf÷$V6‚‚‡6V7F–öä6&B’Óâ°¢6öç7B6V7F–öâÒö&¦V7Bç6V7F–öç2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ6V7F–öä6&BæFF6WBæ66…6V7F–öâ“°¢–b‚6V7F–öâ’&WGW&ã°¢B‚u¶FFÖ66‚×6V7F–öâ×FövvÆUÒrÂ6V7F–öä6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢–b†W‡æFVD66…6V7F–öç2æ†2‡6V7F–öâæ–B’’W‡æFVD66…6V7F–öç2æFVÆWFR‡6V7F–öâæ–B“²VÇ6RW‡æFVD66…6V7F–öç2æFB‡6V7F–öâæ–B“°¢&VæFW$66†fÆ÷r‚“°¢Ò“°¢B‚u¶FF×&VæÖRÖ66‚×6V7F–öåÒrÂ6V7F–öä6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ&VæÖT66…6V7F–öâ†ö&¦V7Bæ–BÂ6V7F–öâæ–B’“°¢B‚u¶FFÖFVÆWFRÖ66‚×6V7F–öåÒrÂ6V7F–öä6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢–b‚v–æF÷ræ6öæf—&Ò‡G"‚vFVÆWFU6V7F–öä6öæf—&Òr’’’&WGW&ã°¢FVÆWFT66†fÆ÷tf–ÆW2‡6V7F–öâ’æ6F6‚‚†W'&÷"’Óâ6öç6öÆRæW'&÷"†W'&÷"’“°¢ö&¦V7Bç6V7F–öç2Òö&¦V7Bç6V7F–öç2æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ–BÓÒ6V7F–öâæ–B“°¢W‡æFVD66…6V7F–öç2æFVÆWFR‡6V7F–öâæ–B“°¢6fT66†fÆ÷r‚“²&VæFW$66†fÆ÷r‚“²6†÷uFö7B‡G"‚w6V7F–öäFVÆWFVBr’“°¢Ò“°¢B‚u¶FFÖVF—BÖ6öçG&7BÖÖ÷VçEÒrÂ6V7F–öä6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä66„6öçG&7DÖ÷VçDF–Æör†ö&¦V7Bæ–BÂ6V7F–öâæ–B’“°¢BB‚u¶FF×6VÆV7BÖ66‚ÖGF6†ÖVçEÒrÂ6V7F–öä6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7B–çWBÒBB‚u¶FFÖ66‚ÖGF6†ÖVçBÖ–çWEÒrÂ6V7F–öä6&B’æf–æB‚†—FVÒ’Óâ—FVÒæFF6WBæ66„GF6†ÖVçD–çWBÓÓÒ'WGFöâæFF6WBç6VÆV7D66„GF6†ÖVçB“°¢–çWCòæ6Æ–6²‚“°¢Ò’“°¢BB‚u¶FFÖ66‚ÖGF6†ÖVçBÖ–çWEÒrÂ6V7F–öä6&B’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ7–æ2‚’Óâ°¢6öç7Bf–ÆRÒ–çWBæf–ÆW3òå³Ó°¢–b‚f–ÆR’&WGW&ã°¢–çWBæF—6&ÆVBÒG'VS°¢v—BFD66…6V7F–öäGF6†ÖVçB†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂ–çWBæFF6WBæ66„GF6†ÖVçD–çWBÂf–ÆR“°¢–çWBçfÇVRÒrs°¢–çWBæF—6&ÆVBÒfÇ6S°¢Ò’“°¢BB‚u¶FFÖ÷VâÖ66‚ÖGF6†ÖVçB×fW'6–öåÒrÂ6V7F–öä6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä66…6V7F–öäGF6†ÖVçB†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂ'WGFöâæFF6WBæ66„GF6†ÖVçD¶–æBÂ'WGFöâæFF6WBæ÷Vä66„GF6†ÖVçEfW'6–öâ’’“°¢BB‚u¶FFÖFVÆWFRÖ66‚ÖGF6†ÖVçEÒrÂ6V7F–öä6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFVÆWFT66…6V7F–öäGF6†ÖVçB†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂ'WGFöâæFF6WBæFVÆWFT66„GF6†ÖVçB’’“°¢B‚u¶FFÖFB×7Fff–ær×6†–gEÒrÂ6V7F–öä6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFD66…7Fff–æu6†–gB†ö&¦V7Bæ–BÂ6V7F–öâæ–B’“°¢B‚u¶FFÖFB×7Fff–ærÖF•ÒrÂ6V7F–öä6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFD66…7Fff–ætF’†ö&¦V7Bæ–BÂ6V7F–öâæ–B’“°¢BB‚u¶FFÖFB×7Fff–ær×W'6öâÖFFUÒrÂ6V7F–öä6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFD66…7Fff–æu6†–gB†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂ'WGFöâæFF6WBæFE7Fff–æuW'6öäFFR’’“°¢BB‚u¶FF×7Fff–ærÖF’ÖFFUÒrÂ6V7F–öä6&B’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ°¢6öç7BF’Ò–çWBæ6Æ÷6W7B‚u¶FF×7Fff–ærÖF•Òr“°¢–b†F’’WFFT66…7Fff–ætF”FFR†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂF’æFF6WBç7Fff–ætF’Â–çWBçfÇVR“°¢Ò’“°¢BB‚u¶FF×7Fff–ær×6†–gEÒrÂ6V7F–öä6&B’æf÷$V6‚‚‡&÷r’Óâ°¢6öç7B6†–gD–BÒ&÷ræFF6WBç7Fff–æu6†–gC°¢BB‚u¶FF×7Fff–ærÖf–VÆEÒrÂ&÷r’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v–çWBrÂ‚’Óâ°¢WFFT66…7Fff–æu6†–gB†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂ6†–gD–BÂ–çWBæFF6WBç7Fff–ætf–VÆBÂ–çWBçfÇVRÂ&÷rÂ6V7F–öä6&B“°¢–b†–çWBæFF6WBç7Fff–ætf–VÆBÓÓÒw7G'V7F÷4–Br’–çWBçfÇVRÒ–çWBçfÇVRç&WÆ6R‚õÄB²örÂrr’ç6Æ–6RƒÂr“°¢Ò’“°¢B‚u¶FFÖ÷Vâ×7Fff–ær×6†–gEÒrÂ&÷r“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä66…7Fff–æu6†–gB†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂ6†–gD–B’“°¢B‚u¶FFÖ6Æ÷6R×7Fff–ær×6†–gEÒrÂ&÷r“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6Æ÷6T66…7Fff–æu6†–gB†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂ6†–gD–B’“°¢B‚u¶FFÖFVÆWFR×7Fff–ær×6†–gEÒrÂ&÷r“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFVÆWFT66…7Fff–æu6†–gB†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂ6†–gD–B’“°¢Ò“°¢B‚u¶FF×FövvÆR×&W÷'BÖ†—7F÷'•ÒrÂ6V7F–öä6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢–b†W‡æFVD66…&W÷'D†—7F÷'’æ†2‡6V7F–öâæ–B’’W‡æFVD66…&W÷'D†—7F÷'’æFVÆWFR‡6V7F–öâæ–B“²VÇ6RW‡æFVD66…&W÷'D†—7F÷'’æFB‡6V7F–öâæ–B“°¢&VæFW$66†fÆ÷r‚“°¢Ò“°¢BB‚u¶FFÖ66‚ÖVçG'•ÒrÂ6V7F–öä6&B’æf÷$V6‚‚†f÷&Ò’Óâ°¢B‚u¶FFÖ66‚×7V&Ö—EÒrÂf÷&Ò“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFD66„VçG'’†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂf÷&ÒæFF6WBæ66„VçG'’Âf÷&Ò’“°¢BB‚v–çWBrÂf÷&Ò’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ°¢–b†WfVçBæ¶W’ÓÓÒtVçFW"r’²WfVçBç&WfVçDFVfVÇB‚“²FD66„VçG'’†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂf÷&ÒæFF6WBæ66„VçG'’Âf÷&Ò“²Ð¢Ò’“°¢Ò“°¢BB‚u¶FFÖ66‚Ö†—7F÷'•ÒrÂ6V7F–öä6&B’æf÷$V6‚‚††—7F÷'’’Óâ†—7F÷'’æFDWfVçDÆ—7FVæW"‚wFövvÆRrÂ‚’Óâ°¢–b††—7F÷'’æ÷Vâ’W‡æFVD66„VçG'”†—7F÷&–W2æFB††—7F÷'’æFF6WBæ66„†—7F÷'’“²VÇ6RW‡æFVD66„VçG'”†—7F÷&–W2æFVÆWFR††—7F÷'’æFF6WBæ66„†—7F÷'’“°¢Ò’“°¢BB‚u¶FFÖVF—BÖ66‚ÖVçG'•ÒrÂ6V7F–öä6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä66„VçG'”VF—DF–Æör†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂ'WGFöâæFF6WBæ66„VçG'”¶–æBÂ'WGFöâæFF6WBæVF—D66„VçG'’’’“°¢BB‚u¶FFÖ÷VâÖ66‚ÖFö7VÖVçEÒrÂ6V7F–öä6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä66„Fö7VÖVçDF–Æör†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂ'WGFöâæFF6WBæ÷Vä66„Fö7VÖVçB’’“°¢B‚u¶FFÖW‡÷'B×6V7F–öåÒrÂ6V7F–öä6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vå6V7F–öäW‡÷'DF–Æör†ö&¦V7Bæ–BÂ6V7F–öâæ–B’“°¢BB‚u¶FF×&W÷'BÖ†—7F÷'’Ö–EÒrÂ6V7F–öä6&B’æf÷$V6‚‚††—7F÷'•&÷r’Óâ°¢6öç7B—FVÒÒ6V7F–öâç&W÷'D†—7F÷'’æf–æB‚‡&V6÷&B’Óâ&V6÷&Bæ–BÓÓÒ†—7F÷'•&÷ræFF6WBç&W÷'D†—7F÷'”–B“°¢–b‚—FVÒ’&WGW&ã°¢B‚u¶FFÖ†—7F÷'’ÖVF—EÒrÂ†—7F÷'•&÷r“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä66„Fö7VÖVçDF–Æör†ö&¦V7Bæ–BÂ6V7F–öâæ–BÂ—FVÒçG—RÂ²6÷W&6U&W÷'C¢—FVÒç&W÷'BÂ†—7F÷'”–C¢—FVÒæ–BÒ’“°¢B‚u¶FFÖ†—7F÷'’ÖFVÆWFUÒrÂ†—7F÷'•&÷r“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢–b‚v–æF÷ræ6öæf—&Ò‡G"‚vFVÆWFTFö7VÖVçD6öæf—&Òr’’’&WGW&ã°¢6V7F–öâç&W÷'D†—7F÷'’Ò6V7F–öâç&W÷'D†—7F÷'’æf–ÇFW"‚‡&V6÷&B’Óâ&V6÷&Bæ–BÓÒ—FVÒæ–B“°¢6fT66†fÆ÷r‚“²&VæFW$66†fÆ÷r‚“²6†÷uFö7B‡G"‚vFö7VÖVçDFVÆWFVBr’“°¢Ò“°¢B‚u¶FFÖ†—7F÷'’×&Wf–WuÒrÂ†—7F÷'•&÷r“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä66…&W÷'E&Wf–Wr†—FVÒç&W÷'BÂ‚’Óâ—FVÒç&W÷'B’“°¢BB‚u¶FFÖ†—7F÷'’ÖF÷væÆöEÒrÂ†—7F÷'•&÷r’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFVÆ—fW$66…&W÷'B†—FVÒç&W÷'BÂ'WGFöâæFF6WBæ†—7F÷'”F÷væÆöBÂfÇ6R’æ6F6‚‚†W'&÷"’Óâ²6öç6öÆRæW'&÷"†W'&÷"“²6†÷uFö7B‡G"‚v6öÖ–æu6ööâr’“²Ò’’“°¢BB‚u¶FFÖ†—7F÷'’×6†&UÒrÂ†—7F÷'•&÷r’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFVÆ—fW$66…&W÷'B†—FVÒç&W÷'BÂ'WGFöâæFF6WBæ†—7F÷'•6†&RÂG'VR’æ6F6‚‚†W'&÷"’Óâ²–b†W'&÷#òææÖRÓÒt&÷'DW'&÷"r’²6öç6öÆRæW'&÷"†W'&÷"“²6†÷uFö7B‡G"‚v6öÖ–æu6ööâr’“²ÒÒ’’“°¢Ò“°¢Ò“°§Ð ¦gVæ7F–öâ&VæFW$66„ö&¦V7DFWF–Â†ö&¦V7BÂFWF–Â’°¢6öç7Bf–ææ6–Ç2Ò66„ö&¦V7Df–ææ6–Ç2†ö&¦V7B“°¢6öç7B6V7F–öç2Ò'&’æ—4'&’†ö&¦V7Còç6V7F–öç2’òö&¦V7Bç6V7F–öç2¢µÓ°¢ö&¦V7Bæ÷&væ—¦F–öäFö7VÖVçG2Òæ÷&ÖÆ—¦T66„÷&væ—¦F–öäFö7VÖVçG2†ö&¦V7Bæ÷&væ—¦F–öäFö7VÖVçG2“°¢6öç7B÷fW&ÆÂÒÇ6V7F–öâ6Æ73Ò&66‚Öö&¦V7B×F÷FÂ#ãÆ†VFW#ãÆF—cãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ2DõDÃÂ÷7ããÆƒ#âG·G"‚v÷fW&ÆÅ6V7F–öç4&Ææ6Rr—ÓÂöƒ#ãÂöF—cãÇ7G&öær6Æ73Ò"G¶66„&Ææ6T6Æ72†f–ææ6–Ç2æ&Ææ6R—Ò#âG¶f÷&ÖE6–væVDÖöæW’†f–ææ6–Ç2æ&Ææ6R—ÓÂ÷7G&öæsãÂö†VFW#ãÆF—b6Æ73Ò&66‚Öö&¦V7B×F÷FÂÖ'&V¶F÷vâ#ãÆ'F–6ÆSãÇ7ãâG·G"‚v6öçG&7D&Ææ6W5F÷FÂr—ÓÂ÷7ããÇ7G&öær6Æ73Ò"G¶66„&Ææ6T6Æ72†f–ææ6–Ç2æ6öçG&7D&Ææ6R—Ò#âG¶f÷&ÖE6–væVDÖöæW’†f–ææ6–Ç2æ6öçG&7D&Ææ6R—ÓÂ÷7G&öæsãÂö'F–6ÆSãÆ'F–6ÆSãÇ7ãâG·G"‚vf7D&Ææ6W5F÷FÂr—ÓÂ÷7ããÇ7G&öær6Æ73Ò"G¶66„&Ææ6T6Æ72†f–ææ6–Ç2æf7D&Ææ6R—Ò#âG¶f÷&ÖE6–væVDÖöæW’†f–ææ6–Ç2æf7D&Ææ6R—ÓÂ÷7G&öæsãÂö'F–6ÆSãÂöF—cãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖW‡÷'BÖ66‚Öö&¦V7CâG·G"‚vF÷væÆöD÷fW&ÆÅ&W÷'Br—ÓÂö'WGFöããÂ÷6V7F–öãæ°¢FWF–Âæ–ææW$…DÔÂÒÆF—b6Æ73Ò&66‚Öö&¦V7BÖFWF–ÂÖ†VB#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ6Æ÷6RÖ66‚Öö&¦V7Cî(’G·G"‚v&6µFôÖöæW”ö&¦V7G2r—ÓÂö'WGFöããÆF—cãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ2ÔôäU“Â÷7ããÆF—b6Æ73Ò&66‚Öö&¦V7B×F—FÆRÖÆ–æR#ãÆƒâG¶W66T‡FÖÂ†ö&¦V7BææÖR—ÓÂöƒãÆ'WGFöâG—SÒ&'WGFöâ"FF×&VæÖRÖ66‚Öö&¦V7B&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w&VæÖTö&¦V7Br’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚w&VæÖTö&¦V7Br’—Ò#î)ÈãÂö'WGFöããÂöF—cãÇâG¶ö&¦V7Bæ6ö×ÆWFVBòG"‚v6ö×ÆWFVDö&¦V7Br’¢G"‚vö&¦V7E6V7F–öç2r—ÓÂ÷ãÂöF—cãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖFBÖ66‚×6V7F–öããÇ7ãîûÈ³Â÷7ãâG·G"‚vFE6V7F–öâr—ÓÂö'WGFöããÂöF—câG¶66„÷&væ—¦F–öäFö7VÖVçG4Ö&·W†ö&¦V7B—ÒG·6V7F–öç2æÆVæwF‚òÆF—b6Æ73Ò&66‚×6V7F–öç2#âG·6V7F–öç2æÖ‚‡6V7F–öâ’Óâ66…6V7F–öäÖ&·W†ö&¦V7BÂ6V7F–öâ’’æ¦ö–â‚rr—ÓÂöF—cæ¢ÆF—b6Æ73Ò&66‚×6V7F–öç2ÖV×G’#ãÇ7ãîûÈ³Â÷7ããÆƒ#âG·G"‚væõ6V7F–öç2r—ÓÂöƒ#ãÇâG·G"‚væõ6V7F–öç46÷’r—ÓÂ÷ãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖFBÖ66‚×6V7F–öãâG·G"‚vFE6V7F–öâr—ÓÂö'WGFöããÂöF—cæÒG¶÷fW&ÆÇÖ°¢B‚u¶FFÖ6Æ÷6RÖ66‚Öö&¦V7EÒrÂFWF–Â“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²7F—fT66„ö&¦V7D–BÒçVÆÃ²&VæFW$66†fÆ÷r‚“²Ò“°¢B‚u¶FF×&VæÖRÖ66‚Öö&¦V7EÒrÂFWF–Â“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ&VæÖT66„ö&¦V7B†ö&¦V7Bæ–B’“°¢BB‚u¶FFÖFBÖ66‚×6V7F–öåÒrÂFWF–Â’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä66…6V7F–öäF–Æör†ö&¦V7Bæ–B’’“°¢B‚u¶FFÖW‡÷'BÖ66‚Öö&¦V7EÒrÂFWF–Â“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä66„ö&¦V7DW‡÷'DF–Æör†ö&¦V7Bæ–B’“°¢&–æD66„÷&væ—¦F–öäFö7VÖVçG2†ö&¦V7BÂFWF–Â“°¢&–æD66…6V7F–öäWfVçG2†ö&¦V7BÂFWF–Â“°§Ð ¦gVæ7F–öâ÷Vä66…6V7F–öäF–Æör†ö&¦V7D–B’°¢6öç7Bö&¦V7BÒ66†fÆ÷tö&¦V7G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢–b‚ö&¦V7B’&WGW&ã°¢6†÷tF–Æör‡G"‚v7&VFU6V7F–öâr’Âö&¦V7BææÖRÂÆF—b6Æ73Ò&66‚Ö7&VFRÖf÷&Ò66‚×6V7F–öâÖ7&VFR#ãÆÆ&VÃãÇ7ãâG·G"‚w6V7F–öäæÖRr—ÓÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ##"FFÖ66‚×6V7F–öâÖæÖRÆ6V†öÆFW#Ò"G·G"‚w6V7F–öåÆ6V†öÆFW"r—Ò"óãÂöÆ&VÃãÆÆ&VÂ6Æ73Ò&66‚Ö7&VFRÖf7B#ãÆ–çWBG—SÒ&6†V6¶&÷‚"FF×6V7F–öâÖ6öçG&7BóãÇ7ãâG·G"‚wv÷&´'”6öçG&7Br—ÓÂ÷7ããÂöÆ&VÃãÆF—b6Æ73Ò&66‚Ö6öçG&7BÖÖ÷VçBÖf–VÆB"FFÖ6öçG&7BÖÖ÷VçBÖf–VÆB†–FFVããÆÆ&VÃãÇ7ãâG·G"‚v6öçG&7DÖ÷VçBr—ÓÂ÷7ããÆ–çWBG—SÒ&çVÖ&W""Ö–ãÒ#ã"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"FF×6V7F–öâÖ6öçG&7BÖÖ÷VçBÆ6V†öÆFW#Ò#(+Ò"óãÂöÆ&VÃãÂöF—cãÆÆ&VÂ6Æ73Ò&66‚Ö7&VFRÖf7B#ãÆ–çWBG—SÒ&6†V6¶&÷‚"FF×6V7F–öâÖf7BóãÇ7ãâG·G"‚wv÷&´'”f7Br—ÓÂ÷7ããÂöÆ&VÃãÆÆ&VÂ6Æ73Ò&66‚Ö7&VFRÖf7B#ãÆ–çWBG—SÒ&6†V6¶&÷‚"FF×6V7F–öâ×7Fff–æróãÇ7ãâG·G"‚wV÷ÆT76–væVBr—ÓÂ÷7ããÂöÆ&VÃãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖ7&VFRÖ66‚×6V7F–öãâG·G"‚v7&VFRr—ÓÂö'WGFöããÂöF—cæ“°¢6öç7B–çWBÒB‚u¶FFÖ66‚×6V7F–öâÖæÖUÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“°¢6öç7B6öçG&7EFövvÆRÒB‚u¶FF×6V7F–öâÖ6öçG&7EÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“°¢6öç7B6öçG&7DÖ÷VçDf–VÆBÒB‚u¶FFÖ6öçG&7BÖÖ÷VçBÖf–VÆEÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“°¢6öçG&7EFövvÆSòæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ²6öçG&7DÖ÷VçDf–VÆBæ†–FFVâÒ6öçG&7EFövvÆRæ6†V6¶VC²–b†6öçG&7EFövvÆRæ6†V6¶VB’B‚u¶FF×6V7F–öâÖ6öçG&7BÖÖ÷VçEÒrÂ6öçG&7DÖ÷VçDf–VÆB“òæfö7W2‚“²Ò“°¢6öç7B7&VFU6V7F–öâÒ‚’Óâ°¢6öç7BæÖRÒ–çWCòçfÇVRçG&–Ò‚“°¢–b‚æÖR’²–çWCòæfö7W2‚“²&WGW&ã²Ð¢6öç7B6öçG&7DÖöFRÒ&ööÆVâ†6öçG&7EFövvÆSòæ6†V6¶VB“°¢6öç7Bf7DÖöFRÒ&ööÆVâ‚B‚u¶FF×6V7F–öâÖf7EÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“òæ6†V6¶VB“°¢6öç7B7Fff–ætÖöFRÒ&ööÆVâ‚B‚u¶FF×6V7F–öâ×7Fff–æuÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“òæ6†V6¶VB“°¢–b‚6öçG&7DÖöFRbbf7DÖöFRbb7Fff–ætÖöFR’²6†÷uFö7B‡G"‚v6†ö÷6U6V7F–öäÖöFRr’“²&WGW&ã²Ð¢6öç7B6öçG&7DÖ÷VçD–çWBÒB‚u¶FF×6V7F–öâÖ6öçG&7BÖÖ÷VçEÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“°¢6öç7B6öçG&7DÖ÷VçBÒÖF‚æÖ‚ƒÂÖF‚ç&÷VæB‚„çVÖ&W"†6öçG&7DÖ÷VçD–çWCòçfÇVR’ÇÂ’¢’ò“°¢–b†6öçG&7DÖöFRbb6öçG&7DÖ÷VçBÃÒ’²6†÷uFö7B‡G"‚vVçFW$6öçG&7DÖ÷VçBr’“²6öçG&7DÖ÷VçD–çWCòæfö7W2‚“²&WGW&ã²Ð¢6öç7B6V7F–öâÒæ÷&ÖÆ—¦T66…6V7F–öâ‡²æÖRÂ7&VFVDC¢æWrFFR‚’çFô•4õ7G&–ær‚’Â7&VFVDÖçVÆÇ“¢G'VRÂ6öçG&7DÖöFRÂf7DÖöFRÂ7Fff–ætÖöFRÂ6öçG&7DÖ÷VçBÒ“°¢ö&¦V7Bç6V7F–öç2çW6‚‡6V7F–öâ“°¢W‡æFVD66…6V7F–öç2æFB‡6V7F–öâæ–B“°¢6fT66†fÆ÷r‚“²&VæFW$66†fÆ÷r‚“²B‚u¶FFÖF–ÆöuÒr’æ6Æ÷6R‚“²6†÷uFö7B‡G"‚w6V7F–öä7&VFVBr’“°¢Ó°¢B‚u¶FFÖ7&VFRÖ66‚×6V7F–öåÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ7&VFU6V7F–öâ“°¢–çWCòæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ²–b†WfVçBæ¶W’ÓÓÒtVçFW"r’²WfVçBç&WfVçDFVfVÇB‚“²7&VFU6V7F–öâ‚“²ÒÒ“°¢6WEF–ÖV÷WB‚‚’Óâ–çWCòæfö7W2‚’ÂC“°§Ð ¦gVæ7F–öâ÷Vä66„ö&¦V7DF–Æör‚’°¢6†÷tF–Æör‡G"‚v7&VFT66„ö&¦V7Br’ÂG"‚v66†fÆ÷tFW67&—F–öâr’ÂÆF—b6Æ73Ò&66‚Ö7&VFRÖf÷&Ò#ãÆÆ&VÃãÇ7ãâG·G"‚vö&¦V7DæÖRr—ÓÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#"FFÖ66‚ÖæÖRÆ6V†öÆFW#Ò"G·G"‚vö&¦V7EÆ6V†öÆFW"r—Ò"óãÂöÆ&VÃãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖ66‚Ö7&VFSâG·G"‚v7&VFRr—ÓÂö'WGFöããÂöF—cæ“°¢6öç7BæÖT–çWBÒB‚u¶FFÖ66‚ÖæÖUÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“°¢6öç7B7&VFT66„ö&¦V7BÒ‚’Óâ°¢6öç7BæÖRÒæÖT–çWBçfÇVRçG&–Ò‚“°¢–b‚æÖR’²æÖT–çWBæfö7W2‚“²&WGW&ã²Ð¢66†fÆ÷tö&¦V7G2çVç6†–gB‡°¢–C¢66‚ÒG´FFRææ÷r‚—ÒÒG´ÖF‚ç&æFöÒ‚’çFõ7G&–ærƒb’ç6Æ–6Rƒ"—ÖÀ¢æÖS¢æÖRç6Æ–6RƒÂ’À¢7&VFVDC¢æWrFFR‚’çFô•4õ7G&–ær‚’À¢6ö×ÆWFVC¢fÇ6RÂ6ö×ÆWFVDC¢çVÆÂÀ¢÷&væ—¦F–öäFö7VÖVçG46öÆÆ6VC¢fÇ6RÀ¢÷&væ—¦F–öäFö7VÖVçG3¢æ÷&ÖÆ—¦T66„÷&væ—¦F–öäFö7VÖVçG2‚’À¢6V7F–öç3¢µÐ¢Ò“°¢6fT66†fÆ÷r‚“°¢&VæFW$66†fÆ÷r‚“°¢B‚u¶FFÖF–ÆöuÒr’æ6Æ÷6R‚“°¢6WEæVÂ‚v66†fÆ÷rr“°¢6†÷uFö7B‡G"‚v66„ö&¦V7D7&VFVBr’“°¢Ó°¢B‚u¶FFÖ66‚Ö7&VFUÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ7&VFT66„ö&¦V7B“°¢æÖT–çWCòæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ²–b†WfVçBæ¶W’ÓÓÒtVçFW"r’²WfVçBç&WfVçDFVfVÇB‚“²7&VFT66„ö&¦V7B‚“²ÒÒ“°¢6WEF–ÖV÷WB‚‚’ÓâæÖT–çWCòæfö7W2‚’ÂC“°§Ð ¦gVæ7F–öâ66…6÷W&6T÷F–öäÆ&VÂ†VçG'’’°¢&WGW&â·G"†VçG'’ç6÷W&6T¶–æB’ÂVçG'’ç6÷W&6TæÖRÂVçG'’ç6÷W&6U6†VWBÂVçG'’çVæ—EÒæf–ÇFW"„&ööÆVâ’æ¦ö–â‚r+rr“°§Ð ¦gVæ7F–öâ&VæFW$66„Fö7VÖVçE6÷W&6T6FÆör‡66÷RÂ6FÆörÂ6V7F–öâÂÆöF–ærÒfÇ6R’°¢6öç7B&ææW"ÒB‚u¶FFÖ66‚×6÷W&6RÖ6FÆöuÒrÂ66÷R“°¢6öç7BFFÆ—7BÒB‚u¶FFÖ66‚×6÷W&6RÖ÷F–öç5ÒrÂ66÷R“°¢–b‚&ææW"ÇÂFFÆ—7B’&WGW&ã°¢6öç7B†56÷W&6W2Ò66…6V7F–öä†56÷W&6TFö7VÖVçG2‡6V7F–öâ“°¢6öç7BÖW76vRÒÆöF–æp¢òG"‚w6÷W&6T6FÆötÆöF–ærr¢¢6FÆöræÆVæwF€¢òG¶6FÆöræÆVæwF‡ÒG·G"‚w6÷W&6T6FÆöu&VG’r—Ö ¢¢G"††56÷W&6W2òw6÷W&6T6FÆöuVæF–ærr¢w6÷W&6T6FÆötV×G’r“°¢&ææW"æ6Æ74æÖRÒ66‚×6÷W&6RÖ6FÆörG¶6FÆöræÆVæwF‚òr—2×&VG’r¢†56÷W&6W2òr—2×VæF–ærr¢rwÖ°¢&ææW"æ–ææW$…DÔÂÒÇ7â&–Ö†–FFVãÒ'G'VR#î(ÉSÂ÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚w6÷W&6T6FÆöuF—FÆRr’—ÓÂ÷7G&öæsãÇâG¶W66T‡FÖÂ†ÖW76vR—ÓÂ÷ãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚w6÷W&6T6FÆötg&VT–çWBr’—ÓÂ÷6ÖÆÃãÂöF—câG¶6FÆöræÆVæwF‚òÆ#âG¶6FÆöræÆVæwF‡ÓÂö#æ¢rwÖ°¢FFÆ—7Bæ–ææW$…DÔÂÒ6FÆörç6Æ–6RƒÂ#’æÖ‚†VçG'’’ÓâÆ÷F–öâfÇVSÒ"G¶W66T‡FÖÂ†VçG'’ææÖR—Ò"Æ&VÃÒ"G¶W66T‡FÖÂ†66…6÷W&6T÷F–öäÆ&VÂ†VçG'’’—Ò#ãÂö÷F–öãæ’æ¦ö–â‚rr“°§Ð ¦gVæ7F–öâ66…v÷&µ&÷w4Ö&·W‡&÷w2Â&–6VBÂ6÷W&6TÆ—7D–BÒrr’°¢6öç7BÆ—7DGG&–'WFRÒ6÷W&6TÆ—7D–BòÆ—7CÒ"G¶W66T‡FÖÂ‡6÷W&6TÆ—7D–B—Ò"WFö6ö×ÆWFSÒ&öfb&¢rs°¢&WGW&â&÷w2æÖ‚‡&÷rÂ–æFW‚’ÓâÇG"FFÖ66‚×v÷&²×&÷sÒ"G¶W66T‡FÖÂ‡&÷ræ–B—Ò#ãÇFCâG¶–æFW‚²ÓÂ÷FCãÇFCãÆ–çWBFF×v÷&²Öf–VÆCÒ&æÖR"Ö†ÆVæwFƒÒ##C"fÇVSÒ"G¶W66T‡FÖÂ‡&÷rææÖR—Ò"Æ6V†öÆFW#Ò"G·G"‚wv÷&´÷$ÖFW&–ÄæÖRr—Ò"G¶Æ—7DGG&–'WFWÒóãÂ÷FCãÇFCãÆ–çWBFF×v÷&²Öf–VÆCÒ'Væ—B"Ö†ÆVæwFƒÒ#C"fÇVSÒ"G¶W66T‡FÖÂ‡&÷rçVæ—B—Ò"Æ6V†öÆFW#Ò"G·G"‚wVæ—Br—Ò"óãÂ÷FCãÇFCãÆ–çWBFF×v÷&²Öf–VÆCÒ'VçF—G’"G—SÒ&çVÖ&W""Ö–ãÒ#"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"fÇVSÒ"G·&÷rçVçF—G’ÇÂrwÒ"Æ6V†öÆFW#Ò#"óãÂ÷FCâG·&–6VBòÇFCãÆ–çWBFF×v÷&²Öf–VÆCÒ'&–6R"G—SÒ&çVÖ&W""Ö–ãÒ#"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"fÇVSÒ"G·&÷rç&–6RÇÂrwÒ"Æ6V†öÆFW#Ò#(+Ò"óãÂ÷FCãÇFBFF×v÷&²×F÷FÃâG¶f÷&ÖDÖöæW’‡&÷rçVçF—G’¢&÷rç&–6R—ÓÂ÷FCæ¢ÇFCãÆF—b6Æ73Ò&66‚ÖW‡ÆæF–öâÖf–VÆB"FFÖ66‚ÖW‡ÆæF–öããÇFW‡F&VFF×v÷&²Öf–VÆCÒ&&6—2"Ö†ÆVæwFƒÒ##C"&÷w3Ò#"Æ6V†öÆFW#Ò"G·G"‚v§W7F–f–6F–öâr—Ò#âG¶W66T‡FÖÂ‡&÷ræ&6—2—ÓÂ÷FW‡F&VãÆ'WGFöâG—SÒ&'WGFöâ"FF×FövvÆRÖW‡ÆæF–öâ&–ÖW‡æFVCÒ&fÇ6R"&–ÖÆ&VÃÒ"G·G"‚vW‡æDW‡ÆæF–öâr—Ò"F—FÆSÒ"G·G"‚vW‡æDW‡ÆæF–öâr—Ò#ãÇ7â&–Ö†–FFVãÒ'G'VR#î(isÂ÷7ããÂö'WGFöããÂöF—cãÂ÷FCæÓÇFCãÆ'WGFöâG—SÒ&'WGFöâ"FF×&VÖ÷fR×v÷&²×&÷r&–ÖÆ&VÃÒ"G·G"‚w&VÖ÷fU&÷rr—Ò#ì9sÂö'WGFöããÂ÷FCãÂ÷G#æ’æ¦ö–â‚rr“°§Ð ¦gVæ7F–öâ66…'G”Ö&·W†¶W’ÂÆ&VÂÂ'G’’°¢&WGW&âÆF—b6Æ73Ò&66‚×'G’×&÷r#ãÇ7G&öæsâG¶Æ&VÇÓÂ÷7G&öæsãÆÆ&VÃãÇ7ãâG·G"‚vgVÆÄæÖRr—ÓÂ÷7ããÆ–çWBFF×'G“Ò"G¶¶W—Ò"FF×'G’Öf–VÆCÒ&æÖR"Ö†ÆVæwFƒÒ#c"fÇVSÒ"G¶W66T‡FÖÂ‡'G’ææÖR—Ò"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG·G"‚w6–væGW&Rr—ÓÂ÷7ããÆ–çWBFF×'G“Ò"G¶¶W—Ò"FF×'G’Öf–VÆCÒ'6–væGW&R"Ö†ÆVæwFƒÒ#c"fÇVSÒ"G¶W66T‡FÖÂ‡'G’ç6–væGW&R—Ò"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG·G"‚w6VÂr—ÓÂ÷7ããÆ–çWBFF×'G“Ò"G¶¶W—Ò"FF×'G’Öf–VÆCÒ'6VÂ"Ö†ÆVæwFƒÒ#c"fÇVSÒ"G¶W66T‡FÖÂ‡'G’ç6VÂ—Ò"óãÂöÆ&VÃãÂöF—cæ°§Ð ¦gVæ7F–öâWFFT66„Fö7VÖVçEF÷FÂ‡66÷RÂG&gBÂ&–6VB’°¢–b‚&–6VB’&WGW&ã°¢BB‚u¶FFÖ66‚×v÷&²×&÷uÒrÂ66÷R’æf÷$V6‚‚‡&÷tVÆVÖVçBÂ–æFW‚’Óâ°¢6öç7B&÷rÒG&gBç&÷w5¶–æFW…Ó°¢B‚u¶FF×v÷&²×F÷FÅÒrÂ&÷tVÆVÖVçB’çFW‡D6öçFVçBÒf÷&ÖDÖöæW’‚‡&÷sòçVçF—G’ÇÂ’¢‡&÷sòç&–6RÇÂ’“°¢Ò“°¢6öç7BF÷FÂÒG&gBç&÷w2ç&VGV6R‚‡7VÒÂ&÷r’Óâ7VÒ²&÷rçVçF—G’¢&÷rç&–6RÂ“°¢B‚u¶FFÖFö7VÖVçBÖw&æB×F÷FÅÒrÂ66÷R’çFW‡D6öçFVçBÒf÷&ÖDÖöæW’‡F÷FÂ“°§Ð ¦gVæ7F–öâ&–æD66„Fö7VÖVçE&÷w2‡66÷RÂG&gBÂ&–6VBÂ6÷W&6T6FÆörÒµÒÂ6÷W&6TÆ—7D–BÒrr’°¢6öç7B&öG’ÒB‚u¶FFÖ66‚×v÷&²×&÷w5ÒrÂ66÷R“°¢&öG’æ–ææW$…DÔÂÒ66…v÷&µ&÷w4Ö&·W†G&gBç&÷w2Â&–6VBÂ6÷W&6TÆ—7D–B“°¢BB‚u¶FFÖ66‚×v÷&²×&÷uÒrÂ&öG’’æf÷$V6‚‚‡&÷tVÆVÖVçBÂ–æFW‚’Óâ°¢6öç7B&÷rÒG&gBç&÷w5¶–æFW…Ó°¢B‚u¶FF×FövvÆRÖW‡ÆæF–öåÒrÂ&÷tVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ†WfVçB’Óâ°¢6öç7B6öçG&öÂÒWfVçBæ7W'&VçEF&vWC°¢6öç7Bf–VÆBÒB‚u¶FFÖ66‚ÖW‡ÆæF–öåÒrÂ&÷tVÆVÖVçB“°¢6öç7BW‡æFVBÒf–VÆCòæ6Æ74Æ—7BçFövvÆR‚v—2ÖW‡æFVBr’ÇÂfÇ6S°¢6öçG&öÂç6WDGG&–'WFR‚v&–ÖW‡æFVBrÂ7G&–ær†W‡æFVB’“°¢6öçG&öÂç6WDGG&–'WFR‚v&–ÖÆ&VÂrÂG"†W‡æFVBòv6öÆÆ6TW‡ÆæF–öâr¢vW‡æDW‡ÆæF–öâr’“°¢6öçG&öÂçF—FÆRÒG"†W‡æFVBòv6öÆÆ6TW‡ÆæF–öâr¢vW‡æDW‡ÆæF–öâr“°¢6öç7B–6öâÒB‚w7ârÂ6öçG&öÂ“°¢–b†–6öâ’–6öâçFW‡D6öçFVçBÒW‡æFVBò~(i’r¢~(irs°¢–b†W‡æFVB’B‚u¶FF×v÷&²Öf–VÆCÒ&&6—2%ÒrÂ&÷tVÆVÖVçB“òæfö7W2‚“°¢Ò“°¢BB‚u¶FF×v÷&²Öf–VÆEÒrÂ&÷tVÆVÖVçB’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v–çWBrÂ‚’Óâ°¢6öç7Bf–VÆBÒ–çWBæFF6WBçv÷&´f–VÆC°¢&÷u¶f–VÆEÒÒ²wVçF—G’rÂw&–6RuÒæ–æ6ÇVFW2†f–VÆB’òÖF‚æÖ‚ƒÂçVÖ&W"†–çWBçfÇVR’ÇÂ’¢–çWBçfÇVRç6Æ–6RƒÂ²væÖRrÂv&6—2uÒæ–æ6ÇVFW2†f–VÆB’ò#C¢C“°¢–b†f–VÆBÓÓÒvæÖRr’°¢6öç7B&Wf–÷W56÷W&6RÒ&ööÆVâ‡&÷rç6÷W&6T¶–æB“°¢6öç7BÖF6‚Ò6÷W&6T6FÆöræf–æB‚†VçG'’’Óâ66…6÷W&6T¶W’†VçG'’ææÖR’ÓÓÒ66…6÷W&6T¶W’‡&÷rææÖR’“°¢–b†ÖF6‚’°¢&÷rç6÷W&6T¶–æBÒÖF6‚ç6÷W&6T¶–æC°¢&÷rç6÷W&6TæÖRÒÖF6‚ç6÷W&6TæÖS°¢–b†ÖF6‚çVæ—Bbb‚&÷rçVæ—BÇÂ&Wf–÷W56÷W&6R’’°¢&÷rçVæ—BÒÖF6‚çVæ—C°¢B‚u¶FF×v÷&²Öf–VÆCÒ'Væ—B%ÒrÂ&÷tVÆVÖVçB’çfÇVRÒÖF6‚çVæ—C°¢Ð¢–b‡&–6VBbbÖF6‚ç&–6Râbb‚&÷rç&–6RÇÂ&Wf–÷W56÷W&6R’’°¢&÷rç&–6RÒÖF6‚ç&–6S°¢B‚u¶FF×v÷&²Öf–VÆCÒ'&–6R%ÒrÂ&÷tVÆVÖVçB’çfÇVRÒ7G&–ær†ÖF6‚ç&–6R“°¢Ð¢–b‚&–6VBbb‚&÷ræ&6—2ÇÂ&Wf–÷W56÷W&6R’’°¢&÷ræ&6—2Ò66…6÷W&6T÷F–öäÆ&VÂ†ÖF6‚’ç6Æ–6RƒÂ#C“°¢B‚u¶FF×v÷&²Öf–VÆCÒ&&6—2%ÒrÂ&÷tVÆVÖVçB’çfÇVRÒ&÷ræ&6—3°¢Ð¢ÒVÇ6R°¢&÷rç6÷W&6T¶–æBÒçVÆÃ°¢&÷rç6÷W&6TæÖRÒrs°¢Ð¢Ð¢WFFT66„Fö7VÖVçEF÷FÂ‡66÷RÂG&gBÂ&–6VB“°¢Ò’“°¢B‚u¶FF×&VÖ÷fR×v÷&²×&÷uÒrÂ&÷tVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢G&gBç&÷w2ç7Æ–6R†–æFW‚Â“°¢–b‚G&gBç&÷w2æÆVæwF‚’G&gBç&÷w2çW6‚‚ââææ÷&ÖÆ—¦T66…v÷&µ&÷w2…µÒÂ&–6VB’“°¢&–æD66„Fö7VÖVçE&÷w2‡66÷RÂG&gBÂ&–6VBÂ6÷W&6T6FÆörÂ6÷W&6TÆ—7D–B“°¢WFFT66„Fö7VÖVçEF÷FÂ‡66÷RÂG&gBÂ&–6VB“°¢Ò“°¢Ò“°¢WFFT66„Fö7VÖVçEF÷FÂ‡66÷RÂG&gBÂ&–6VB“°§Ð ¦gVæ7F–öâ66„÷&væ—¦F–öå&W÷'DFF†ö&¦V7B’°¢6öç7BFö7VÖVçG2Òæ÷&ÖÆ—¦T66„÷&væ—¦F–öäFö7VÖVçG2†ö&¦V7Còæ÷&væ—¦F–öäFö7VÖVçG2“°¢&WGW&âö&¦V7Bæg&öÔVçG&–W2„44…ôõ$tä•¤D”ôåõ$ôÄU2æÖ‚‡&öÆR’Óâ°¢6öç7B6&BÒFö7VÖVçG5·&öÆUÓ°¢&WGW&â·&öÆRÂ°¢G—S¢6&BçG—RÀ¢6ö×ç“¢6&Bæ6ö×ç’À¢–æã¢6&Bæ–æâÀ¢·¢6&Bæ·À¢gVÆÄæÖS¢6&BægVÆÄæÖRÀ¢77÷'E6W&–W3¢6&Bç77÷'E6W&–W2À¢77÷'DçVÖ&W#¢6&Bç77÷'DçVÖ&W"À¢77÷'C¢6&Bç77÷'BÀ¢f–ÆTæÖS¢6&BæGF6†ÖVçCòçfW'6–öç3òæB‚Ó“òææÖRÇÂrrÀ¢WFFVDC¢6&BçWFFVD@¢ÕÓ°¢Ò’“°§Ð ¦gVæ7F–öâ66„Fö7VÖVçD÷&væ—¦F–öç57VÖÖ'”Ö&·W†ö&¦V7B’°¢6öç7B÷&væ—¦F–öç2Ò66„÷&væ—¦F–öå&W÷'DFF†ö&¦V7B“°¢&WGW&âÇ6V7F–öâ6Æ73Ò&66‚ÖFö7VÖVçBÖ÷&væ—¦F–öç2#ãÆƒ3âG·G"‚v÷&væ—¦F–öäFö7VÖVçG2r—ÓÂöƒ3ãÆF—câG´44…ôõ$tä•¤D”ôåõ$ôÄU2æÖ‚‡&öÆR’Óâ°¢6öç7B6&BÒ÷&væ—¦F–öç5·&öÆUÓ°¢6öç7BFWF–Ç2Ò6&BçG—RÓÓÒv–æF—f–GVÂp¢ò¶6&BægVÆÄæÖRÂ6&Bç77÷'E6W&–W2bbG·G"‚w77÷'E6W&–W2r—Ó¢G¶6&Bç77÷'E6W&–W7ÖÂ6&Bç77÷'DçVÖ&W"bbG·G"‚w77÷'DçVÖ&W"r—Ó¢G¶6&Bç77÷'DçVÖ&W'ÖÐ¢¢¶6&Bæ6ö×ç’Â6&Bæ–æâbbG·G"‚v–æâr—Ó¢G¶6&Bæ–æçÖÂ6&Bæ·bbG·G"‚v·r—Ó¢G¶6&Bæ·ÖÓ°¢&WGW&âÆ'F–6ÆSãÇ7G&öæsâG·G"‡&öÆR—ÓÂ÷7G&öæsãÇ7ãâG¶W66T‡FÖÂ†FWF–Ç2æf–ÇFW"„&ööÆVâ’æ¦ö–â‚r+rr’ÇÂG"‚væ÷E7V6–f–VBr’—ÓÂ÷7ãâG¶6&Bæf–ÆTæÖRòÇ6ÖÆÃâG¶W66T‡FÖÂ†6&Bæf–ÆTæÖR—ÓÂ÷6ÖÆÃæ¢rwÓÂö'F–6ÆSæ°¢Ò’æ¦ö–â‚rr—ÓÂöF—cãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ66„Fö7VÖVçD÷&væ—¦F–öç4VF—F÷$Ö&·W†÷&væ—¦F–öç2’°¢&WGW&âÇ6V7F–öâ6Æ73Ò&66‚ÖFö7VÖVçB×'G’ÖVF—F÷"#ãÆƒ3âG·G"‚vFö7VÖVçE'F–W2r—ÓÂöƒ3ãÆF—câG´44…ôõ$tä•¤D”ôåõ$ôÄU2æÖ‚‡&öÆR’Óâ°¢6öç7B6&BÒ÷&væ—¦F–öç5·&öÆUÓ°¢&WGW&âÆ'F–6ÆRFFÖFö7VÖVçBÖ÷&væ—¦F–öâ×&öÆSÒ"G·&öÆWÒ#ãÆ†VFW#ãÇ7G&öæsâG·G"‡&öÆR—ÓÂ÷7G&öæsãÇ6VÆV7BFFÖFö7VÖVçBÖ÷&væ—¦F–öâ×G—SãÆ÷F–öâfÇVSÒ&÷&væ—¦F–öâ"G¶6&BçG—RÓÓÒv÷&væ—¦F–öâròr6VÆV7FVBr¢rwÓâG·G"‚vÆVvÄVçF—G’r—ÓÂö÷F–öããÆ÷F–öâfÇVSÒ&–æF—f–GVÂ"G¶6&BçG—RÓÓÒv–æF—f–GVÂròr6VÆV7FVBr¢rwÓâG·G"‚v–æF—f–GVÂr—ÓÂö÷F–öããÂ÷6VÆV7CãÂö†VFW#ãÇFFÖFö7VÖVçBÖ÷&væ—¦F–öâ×7VÖÖ'“âG¶W66T‡FÖÂ†66„Fö7VÖVçD÷&væ—¦F–öå7VÖÖ'’†6&B’—ÓÂ÷âG¶6&Bæf–ÆTæÖRòÇ6ÖÆÃâG·G"‚wWÆöFVDFö7VÖVçG2r—Ó¢G¶W66T‡FÖÂ†6&Bæf–ÆTæÖR—ÓÂ÷6ÖÆÃæ¢rwÓÂö'F–6ÆSæ°¢Ò’æ¦ö–â‚rr—ÓÂöF—cãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ66„Fö7VÖVçD÷&væ—¦F–öå7VÖÖ'’†6&B’°¢6öç7BFWF–Ç2Ò6&BçG—RÓÓÒv–æF—f–GVÂp¢ò¶6&BægVÆÄæÖRÂ6&Bç77÷'E6W&–W2bbG·G"‚w77÷'E6W&–W2r—Ó¢G¶6&Bç77÷'E6W&–W7ÖÂ6&Bç77÷'DçVÖ&W"bbG·G"‚w77÷'DçVÖ&W"r—Ó¢G¶6&Bç77÷'DçVÖ&W'ÖÐ¢¢¶6&Bæ6ö×ç’Â6&Bæ–æâbbG·G"‚v–æâr—Ó¢G¶6&Bæ–æçÖÂ6&Bæ·bbG·G"‚v·r—Ó¢G¶6&Bæ·ÖÓ°¢&WGW&âFWF–Ç2æf–ÇFW"„&ööÆVâ’æ¦ö–â‚r+rr’ÇÂG"‚væ÷E7V6–f–VBr“°§Ð ¦gVæ7F–öâ&–æD66„Fö7VÖVçD÷&væ—¦F–öç2‡66÷RÂG&gB’°¢BB‚u¶FFÖFö7VÖVçBÖ÷&væ—¦F–öâ×&öÆUÒrÂ66÷R’æf÷$V6‚‚†6&DVÆVÖVçB’Óâ°¢6öç7B&öÆRÒ6&DVÆVÖVçBæFF6WBæFö7VÖVçD÷&væ—¦F–öå&öÆS°¢6öç7B6&BÒG&gBæ÷&væ—¦F–öç5·&öÆUÓ°¢6öç7BG—U6VÆV7BÒB‚u¶FFÖFö7VÖVçBÖ÷&væ—¦F–öâ×G—UÒrÂ6&DVÆVÖVçB“°¢G—U6VÆV7CòæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ°¢6&BçG—RÒG—U6VÆV7BçfÇVRÓÓÒv–æF—f–GVÂròv–æF—f–GVÂr¢v÷&væ—¦F–öâs°¢6öç7B7VÖÖ'’ÒB‚u¶FFÖFö7VÖVçBÖ÷&væ—¦F–öâ×7VÖÖ'•ÒrÂ6&DVÆVÖVçB“°¢–b‡7VÖÖ'’’7VÖÖ'’çFW‡D6öçFVçBÒ66„Fö7VÖVçD÷&væ—¦F–öå7VÖÖ'’†6&B“°¢Ò“°¢Ò“°§Ð ¦gVæ7F–öâ66„Fö7VÖVçE&W÷'B†ö&¦V7BÂ6V7F–öâÂ¶–æBÂFö7VÖVçDFF’°¢6öç7B&–6VBÒ¶–æBÓÓÒv7Bs°¢6öç7BFVfVÇEF—FÆRÒG"‡&–6VBòwv÷&´7Br¢wv÷&µ7FFVÖVçBr“°¢6öç7BFö7VÖVçEF—FÆRÒ7G&–ær†Fö7VÖVçDFFçF—FÆRÇÂFVfVÇEF—FÆR’çG&–Ò‚’ç6Æ–6RƒÂc’ÇÂFVfVÇEF—FÆS°¢6öç7BFö7VÖVçDçVÖ&W"Ò7G&–ær†Fö7VÖVçDFFæçVÖ&W"ÇÂrr’çG&–Ò‚’ç6Æ–6RƒÂƒ“°¢6öç7BFö7VÖVçDö&¦V7DæÖRÒ7G&–ær†Fö7VÖVçDFFæö&¦V7DæÖRÇÂö&¦V7BææÖR’çG&–Ò‚’ç6Æ–6RƒÂc’ÇÂö&¦V7BææÖS°¢6öç7BFö7VÖVçE6V7F–öäæÖRÒ7G&–ær†Fö7VÖVçDFFç6V7F–öäæÖRÇÂ6V7F–öâææÖR’çG&–Ò‚’ç6Æ–6RƒÂc’ÇÂ6V7F–öâææÖS°¢6öç7B6öÇVÖç2Ò°¢²Æ&VÃ¢G"‚w&V6÷&DçVÖ&W"r’Â¶W“¢vçVÖ&W"rÂv–GFƒ¢3BÒÀ¢²Æ&VÃ¢G"‚wv÷&´÷$ÖFW&–ÄæÖRr’Â¶W“¢væÖRrÂv–GFƒ¢r¢rÒÀ¢²Æ&VÃ¢G"‚wVæ—Br’Â¶W“¢wVæ—BrÂv–GFƒ¢C‚ÒÀ¢²Æ&VÃ¢G"‚wVçF—G’r’Â¶W“¢wVçF—G’rÂv–GFƒ¢C‚ÂçVÖ&W#¢G'VRÒÀ¢âââ‡&–6VBò·²Æ&VÃ¢G"‚w&–6Rr’Â¶W“¢w&–6RrÂv–GFƒ¢cbÂÖöæW“¢G'VRÒÂ²Æ&VÃ¢G"‚w&÷uF÷FÂr’Â¶W“¢wF÷FÂrÂv–GFƒ¢s"ÂÖöæW“¢G'VRÕÒ¢·²Æ&VÃ¢G"‚v§W7F–f–6F–öâr’Â¶W“¢v&6—2rÂv–GFƒ¢r¢rÕÒ¢Ó°¢&WGW&â°¢Fö7VÖVçD¶–æC¢¶–æBÀ¢F—FÆS¢&–6VBòFö7VÖVçEF—FÆR¢FVfVÇEF—FÆRÂFö7VÖVçDæÖS¢Fö7VÖVçEF—FÆRÂFö7VÖVçDçVÖ&W"ÂçVÖ&W$Æ&VÃ¢G"‡&–6VBòv7DçVÖ&W"r¢w7FFVÖVçDçVÖ&W"r’Âö&¦V7DæÖS¢Fö7VÖVçDö&¦V7DæÖRÂ6V7F–öäæÖS¢Fö7VÖVçE6V7F–öäæÖRÂö&¦V7DÆ&VÃ¢G"‚vFö7VÖVçDö&¦V7Br’Â6V7F–öäÆ&VÃ¢G"‚vFö7VÖVçE6V7F–öâr’À¢F&ÆW3¢·²F—FÆS¢Fö7VÖVçEF—FÆRÂ6öÇVÖç2Â&÷w3¢Fö7VÖVçDFFç&÷w2æÖ‚‡&÷rÂ–æFW‚’Óâ‡²çVÖ&W#¢–æFW‚²ÂæÖS¢&÷rææÖRÂVæ—C¢&÷rçVæ—BÂVçF—G“¢&÷rçVçF—G’Ââââ‡&–6VBò²&–6S¢&÷rç&–6RÂF÷FÃ¢ÖF‚ç&÷VæB‡&÷rçVçF—G’¢&÷rç&–6R¢’òÒ¢²&6—3¢&÷ræ&6—2Ò’Ò’’Ââââ‡&–6VBò²F÷FÃ¢Fö7VÖVçDFFç&÷w2ç&VGV6R‚‡7VÒÂ&÷r’Óâ7VÒ²&÷rçVçF—G’¢&÷rç&–6RÂ’Ò¢·Ò’ÕÒÀ¢'F–W3¢Fö7VÖVçDFFç'F–W2À¢'G•&öÆW3¢&–6VBò²wW&f÷&ÖVBrÂv66WFVBuÒ¢²w&W&VBrÂv6öæf—&ÖVBuÒÀ¢÷&væ—¦F–öç3¢æ÷&ÖÆ—¦T66„Fö7VÖVçD÷&væ—¦F–öç2†Fö7VÖVçDFFæ÷&væ—¦F–öç2ÇÂ66„÷&væ—¦F–öå&W÷'DFF†ö&¦V7B’¢Ó°§Ð ¦gVæ7F–öâ66„Fö7VÖVçDFFg&öÕ&W÷'B‡&W÷'BÂ¶–æB’°¢6öç7B&–6VBÒ¶–æBÓÓÒv7Bs°¢6öç7BF&ÆRÒ&W÷'CòçF&ÆW3òå³ÒÇÂ²&÷w3¢µÒÓ°¢&WGW&âæ÷&ÖÆ—¦T66„Fö7VÖVçB‡°¢F—FÆS¢&W÷'CòæFö7VÖVçDæÖRÇÂF&ÆRçF—FÆRÇÂrrÀ¢çVÖ&W#¢&W÷'CòæFö7VÖVçDçVÖ&W"ÇÂrrÀ¢ö&¦V7DæÖS¢&W÷'Còæö&¦V7DæÖRÇÂrrÀ¢6V7F–öäæÖS¢&W÷'Còç6V7F–öäæÖRÇÂrrÀ¢&÷w3¢‡F&ÆRç&÷w2ÇÂµÒ’æÖ‚‡&÷r’Óâ‡²æÖS¢&÷rææÖRÂVæ—C¢&÷rçVæ—BÂVçF—G“¢&÷rçVçF—G’Ââââ‡&–6VBò²&–6S¢&÷rç&–6RÒ¢²&6—3¢&÷ræ&6—2Ò’Ò’’À¢'F–W3¢&W÷'Còç'F–W2À¢÷&væ—¦F–öç3¢&W÷'Còæ÷&væ—¦F–öç2À¢WFFVDC¢æWrFFR‚’çFô•4õ7G&–ær‚¢ÒÂ&–6VBÂG"‡&–6VBòwv÷&´7Br¢wv÷&µ7FFVÖVçBr’“°§Ð ¦gVæ7F–öâ6V7F–öäf–ææ6U&W÷'B†ö&¦V7BÂ6V7F–öâ’°¢6öç7B&÷w4f÷"Ò†–æ6öÖTVçG&–W2ÂW‡Vç6TVçG&–W2Â–æ6öÖTÆ&VÂÒG"‚w&W÷'D–æ6öÖRr’ÂW‡Vç6TÆ&VÂÒG"‚w&W÷'DW‡Vç6Rr’’Óâ°¢ââæ–æ6öÖTVçG&–W2æÖ‚†VçG'’Â–æFW‚’Óâ‡²çVÖ&W#¢–æFW‚²ÂG—S¢–æ6öÖTÆ&VÂÂ6öÖÖVçC¢VçG'’æ6öÖÖVçBÂFFS¢66„FFR†VçG'’æFFR’ÂÖ÷VçC¢VçG'’æÖ÷VçBÒ’’À¢ââæW‡Vç6TVçG&–W2æÖ‚†VçG'’Â–æFW‚’Óâ‡²çVÖ&W#¢–æ6öÖTVçG&–W2æÆVæwF‚²–æFW‚²ÂG—S¢W‡Vç6TÆ&VÂÂ6öÖÖVçC¢VçG'’æ6öÖÖVçBÂFFS¢66„FFR†VçG'’æFFR’ÂÖ÷VçC¢VçG'’æÖ÷VçBÒ’¢Ó°¢6öç7B6öÇVÖç2Ò·²Æ&VÃ¢G"‚w&V6÷&DçVÖ&W"r’Â¶W“¢vçVÖ&W"rÂv–GFƒ¢C"ÒÂ²Æ&VÃ¢G"‚vVçG'•G—Rr’Â¶W“¢wG—RrÂv–GFƒ¢ƒ‚ÒÂ²Æ&VÃ¢G"‚v6öÖÖVçBr’Â¶W“¢v6öÖÖVçBrÂv–GFƒ¢r¢rÒÂ²Æ&VÃ¢G"‚vFFRr’Â¶W“¢vFFRrÂv–GFƒ¢ÒÂ²Æ&VÃ¢G"‚vÖ÷VçBr’Â¶W“¢vÖ÷VçBrÂv–GFƒ¢sbÂÖöæW“¢G'VRÕÓ°¢6öç7B÷vå&÷w4f÷"Ò†–çfW7FÖVçG2Â&WGW&ç2’Óâ°¢ââæ–çfW7FÖVçG2æÖ‚†VçG'’Â–æFW‚’Óâ‡²çVÖ&W#¢–æFW‚²ÂG—S¢G"‚v÷vägVæG4VçG'’r’Â6öÖÖVçC¢VçG'’æ6öÖÖVçBÂFFS¢66„FFR†VçG'’æFFR’ÂÖ÷VçC¢VçG'’æÖ÷VçBÒ’’À¢ââç&WGW&ç2æÖ‚†VçG'’Â–æFW‚’Óâ‡²çVÖ&W#¢–çfW7FÖVçG2æÆVæwF‚²–æFW‚²ÂG—S¢G"‚v÷vå&WGW&äVçG'’r’Â6öÖÖVçC¢VçG'’æ6öÖÖVçBÂFFS¢66„FFR†VçG'’æFFR’ÂÖ÷VçC¢VçG'’æÖ÷VçBÒ’¢Ó°¢6öç7BF&ÆW2ÒµÓ°¢–b‡6V7F–öâæ6öçG&7DÖöFR’°¢6öç7BGfæ6W2Ò66…F÷FÂ‡6V7F–öâæGfæ6W2“²6öç7BW‡Vç6W2Ò66…F÷FÂ‡6V7F–öâæW‡Vç6W2“°¢F&ÆW2çW6‚‡²F—FÆS¢G"‚v6öçG&7D66÷VçF–ærr’Â6öÇVÖç2Â&÷w3¢&÷w4f÷"‡6V7F–öâæGfæ6W2Â6V7F–öâæW‡Vç6W2ÂG"‚w&V6V—fVDGfæ6T6Æ÷7W&Rr’ÂG"‚v6ö×ÆWFVEv÷&µföÇVÖRr’’Â7VÖÖ&–W3¢¶66…&W÷'E7VÖÖ'’‡G"‚v6öçG&7DÖ÷VçBr’Â6V7F–öâæ6öçG&7DÖ÷VçB’Â66…&W÷'E7VÖÖ'’‡G"‚v6öçG&7E&öGV7F–öâr’ÂW‡Vç6W2’Â66…&W÷'E7VÖÖ'’‡G"‚w&V6V—fVDg&öÔ7W7FöÖW"r’ÂGfæ6W2’Â66…&W÷'E7VÖÖ'’‡G"‚v6öçG&7E&öGV7F–öå&VÖ–æ–ærr’Â6V7F–öâæ6öçG&7DÖ÷VçBÒW‡Vç6W2ÂG'VR’Â66…&W÷'E7VÖÖ'’‡G"‚w–E&öGV7F–öå&VÖ–æ–ærr’ÂW‡Vç6W2ÒGfæ6W2ÂG'VRÂGfæ6W2ÒW‡Vç6W2•ÒÒ“°¢6öç7B÷vä–çfW7FVBÒ66…F÷FÂ‡6V7F–öâæ÷vä–çfW7FÖVçG2“²6öç7B÷vå&WGW&æVBÒ66…F÷FÂ‡6V7F–öâæ÷vå&WGW&ç2“°¢F&ÆW2çW6‚‡²F—FÆS¢G·G"‚v÷vägVæG466÷VçF–ærr—Ò+rG·G"‚v6öçG&7D66÷VçF–ærr—ÖÂ6öÇVÖç2Â&÷w3¢÷vå&÷w4f÷"‡6V7F–öâæ÷vä–çfW7FÖVçG2Â6V7F–öâæ÷vå&WGW&ç2’Â7VÖÖ&–W3¢¶66…&W÷'E7VÖÖ'’‡G"‚wF÷FÄ÷vä–çfW7FVBr’Â÷vä–çfW7FVB’Â66…&W÷'E7VÖÖ'’‡G"‚wF÷FÄ÷vå&WGW&æVBr’Â÷vå&WGW&æVB’Â66…&W÷'E7VÖÖ'’‡G"‚v÷vägVæG5&VÖ–æ–ærr’Â÷vä–çfW7FVBÒ÷vå&WGW&æVBÂG'VR•ÒÒ“°¢Ð¢–b‡6V7F–öâæf7DÖöFR’°¢6öç7Bf7D–æ6öÖRÒ66…F÷FÂ‡6V7F–öâæf7D–æ6öÖR“²6öç7Bf7DW‡Vç6W2Ò66…F÷FÂ‡6V7F–öâæf7DW‡Vç6W2“°¢F&ÆW2çW6‚‡²F—FÆS¢G"‚v7GVÄ66÷VçF–ærr’Â6öÇVÖç2Â&÷w3¢&÷w4f÷"‡6V7F–öâæf7D–æ6öÖRÂ6V7F–öâæf7DW‡Vç6W2ÂG"‚vf7DGfæ6T6ö×ÆWF–öâr’ÂG"‚v7GVÆÇ”6ö×ÆWFVBr’’Â7VÖÖ&–W3¢¶66…&W÷'E7VÖÖ'’‡G"‚v÷fW&ÆÄ–æ6öÖRr’Âf7D–æ6öÖR’Â66…&W÷'E7VÖÖ'’‡G"‚v÷fW&ÆÄW‡Vç6Rr’Âf7DW‡Vç6W2’Â66…&W÷'E7VÖÖ'’‡G"‚vW†V7WF–öå&VÖ–æ–ærr’Âf7D–æ6öÖRÒf7DW‡Vç6W2ÂG'VR•ÒÒ“°¢6öç7Bf7D÷vä–çfW7FVBÒ66…F÷FÂ‡6V7F–öâæf7D÷vä–çfW7FÖVçG2“²6öç7Bf7D÷vå&WGW&æVBÒ66…F÷FÂ‡6V7F–öâæf7D÷vå&WGW&ç2“°¢F&ÆW2çW6‚‡²F—FÆS¢G·G"‚v÷vägVæG466÷VçF–ærr—Ò+rG·G"‚v7GVÄ66÷VçF–ærr—ÖÂ6öÇVÖç2Â&÷w3¢÷vå&÷w4f÷"‡6V7F–öâæf7D÷vä–çfW7FÖVçG2Â6V7F–öâæf7D÷vå&WGW&ç2’Â7VÖÖ&–W3¢¶66…&W÷'E7VÖÖ'’‡G"‚wF÷FÄ÷vä–çfW7FVBr’Âf7D÷vä–çfW7FVB’Â66…&W÷'E7VÖÖ'’‡G"‚wF÷FÄ÷vå&WGW&æVBr’Âf7D÷vå&WGW&æVB’Â66…&W÷'E7VÖÖ'’‡G"‚v÷vägVæG5&VÖ–æ–ærr’Âf7D÷vä–çfW7FVBÒf7D÷vå&WGW&æVBÂG'VR•ÒÒ“°¢Ð¢&WGW&â°¢F—FÆS¢G"‚w6V7F–öäf–ææ6U&W÷'Br’Âö&¦V7DæÖS¢ö&¦V7BææÖRÂ6V7F–öäæÖS¢6V7F–öâææÖRÀ¢F&ÆW2Â'F–W3¢66„Fö7VÖVçE'F–W2‡6V7F–öâç7FFVÖVçCòç'F–W2¢Ó°§Ð ¦gVæ7F–öâ66„ö&¦V7D÷fW'f–Wu&W÷'EvR†ö&¦V7BÂF—FÆRÒG"‚vö&¦V7E&W÷'Br’’°¢6öç7B6V7F–öä6öÇVÖç2Ò°¢²Æ&VÃ¢G"‚w6V7F–öäæÖRr’Â¶W“¢w6V7F–öârÂv–GFƒ¢r¢rÒÀ¢²Æ&VÃ¢G"‚w6V7F–öäÖöFRr’Â¶W“¢vÖöFRrÂv–GFƒ¢RÒÀ¢²Æ&VÃ¢G"‚v–æ6öÖ–ætgVæG2r’Â¶W“¢v–æ6öÖRrÂv–GFƒ¢ƒ"ÂÖöæW“¢G'VRÒÀ¢²Æ&VÃ¢G"‚v6ö×ÆWFVEv÷&·2r’Â¶W“¢vW‡Vç6RrÂv–GFƒ¢ƒ"ÂÖöæW“¢G'VRÒÀ¢²Æ&VÃ¢G"‚w6V7F–öä&Ææ6Rr’Â¶W“¢v&Ææ6RrÂv–GFƒ¢ƒ"ÂÖöæW“¢G'VRÂ6–væVC¢G'VRÂFöæS¢G'VRÐ¢Ó°¢6öç7B7VÖÖ'•&÷w2ÒµÓ°¢ö&¦V7Bç6V7F–öç2æf÷$V6‚‚‡6V7F–öâ’Óâ°¢6öç7BfÇVW2Ò66…6V7F–öäf–ææ6–Ç2‡6V7F–öâ“°¢–b‡6V7F–öâæ6öçG&7DÖöFR’7VÖÖ'•&÷w2çW6‚‡²6V7F–öã¢6V7F–öâææÖRÂÖöFS¢G"‚wv÷&´'”6öçG&7Br’Â–æ6öÖS¢fÇVW2æGfæ6W2ÂW‡Vç6S¢fÇVW2æW‡Vç6W2Â&Ææ6S¢fÇVW2æ6öçG&7D&Ææ6RÒ“°¢–b‡6V7F–öâæf7DÖöFR’7VÖÖ'•&÷w2çW6‚‡²6V7F–öã¢6V7F–öâææÖRÂÖöFS¢G"‚v7GVÄ66÷VçF–ærr’Â–æ6öÖS¢fÇVW2æf7D–æ6öÖRÂW‡Vç6S¢fÇVW2æf7DW‡Vç6W2Â&Ææ6S¢fÇVW2æf7D&Ææ6RÒ“°¢–b‚6V7F–öâæ6öçG&7DÖöFRbb6V7F–öâæf7DÖöFRbb6V7F–öâç7Fff–ætÖöFR’7VÖÖ'•&÷w2çW6‚‡²6V7F–öã¢6V7F–öâææÖRÂÖöFS¢G"‚wV÷ÆT76–væVBr’Â–æ6öÖS¢ÂW‡Vç6S¢Â&Ææ6S¢Ò“°¢Ò“°¢6öç7B&W÷'EF÷FÇ2Ò66„ö&¦V7E&W÷'EF÷FÇ2†ö&¦V7B“°¢6öç7B–æ6öÖ–æuF÷FÂÒÖF‚ç&÷VæB‡7VÖÖ'•&÷w2ç&VGV6R‚‡7VÒÂ&÷r’Óâ7VÒ²&÷ræ–æ6öÖRÂ’¢’ò°¢6öç7B6ö×ÆWFVEF÷FÂÒÖF‚ç&÷VæB‡7VÖÖ'•&÷w2ç&VGV6R‚‡7VÒÂ&÷r’Óâ7VÒ²&÷ræW‡Vç6RÂ’¢’ò°¢6öç7B&Ææ6UF÷FÂÒÖF‚ç&÷VæB‚†–æ6öÖ–æuF÷FÂÒ6ö×ÆWFVEF÷FÂ’¢’ò°¢6öç7B&Ææ6T6öÇVÖç2Ò°¢²Æ&VÃ¢G"‚w&W÷'D–æF–6F÷"r’Â¶W“¢v–æF–6F÷"rÂv–GFƒ¢r¢rÒÀ¢²Æ&VÃ¢G"‚vÖ÷VçBr’Â¶W“¢wfÇVRrÂv–GFƒ¢ÂÖöæW“¢G'VRÐ¢Ó°¢6öç7B6öçG&7D&Ææ6U&÷w2Ò°¢²–æF–6F÷#¢G"‚wF÷FÄ6öçG&7G4Ö÷VçBr’ÂfÇVS¢&W÷'EF÷FÇ2æ6öçG&7DÖ÷VçBÒÀ¢²–æF–6F÷#¢G"‚v6öçG&7E&öGV7F–öâr’ÂfÇVS¢&W÷'EF÷FÇ2æ6öçG&7E&öGV7F–öâÒÀ¢²–æF–6F÷#¢G"‚w&V6V—fVDg&öÔ7W7FöÖW"r’ÂfÇVS¢&W÷'EF÷FÇ2æ6öçG&7E&V6V—fVBÒÀ¢²–æF–6F÷#¢G"‚wF÷FÄ÷vägVæG4–çfW7FVBr’ÂfÇVS¢&W÷'EF÷FÇ2æ6öçG&7D÷vä–çfW7FVBÒÀ¢²–æF–6F÷#¢G"‚v6öçG&7E&öGV7F–öå&VÖ–æ–ærr’ÂfÇVS¢&W÷'EF÷FÇ2æ6öçG&7E&VÖ–æ–ærÒÀ¢²–æF–6F÷#¢G"‚w–E&öGV7F–öå&VÖ–æ–ærr’ÂfÇVS¢&W÷'EF÷FÇ2ç–E&öGV7F–öå&VÖ–æ–ærÐ¢Ó°¢6öç7Bf7D&Ææ6U&÷w2Ò°¢²–æF–6F÷#¢G"‚v÷fW&ÆÄ–æ6öÖRr’ÂfÇVS¢&W÷'EF÷FÇ2æf7D–æ6öÖRÒÀ¢²–æF–6F÷#¢G"‚v÷fW&ÆÄW‡Vç6Rr’ÂfÇVS¢&W÷'EF÷FÇ2æf7DW‡Vç6RÒÀ¢²–æF–6F÷#¢G"‚vW†V7WF–öå&VÖ–æ–ærr’ÂfÇVS¢&W÷'EF÷FÇ2æf7E&VÖ–æ–ærÒÀ¢²–æF–6F÷#¢G"‚vÆÄ÷vägVæG4–çfW7FVBr’ÂfÇVS¢&W÷'EF÷FÇ2æf7D÷vä–çfW7FVBÐ¢Ó°¢6öç7BF&ÆW2Ò°¢²F—FÆS¢G"‚v÷fW&ÆÄ6öçG&7D&Ææ6Rr’Â6öÇVÖç3¢&Ææ6T6öÇVÖç2Â&÷w3¢6öçG&7D&Ææ6U&÷w2ÒÀ¢²F—FÆS¢G"‚v÷fW&ÆÄf7DW†V7WF–öä&Ææ6Rr’Â6öÇVÖç3¢&Ææ6T6öÇVÖç2Â&÷w3¢f7D&Ææ6U&÷w2ÒÀ¢²F—FÆS¢G"‚w6V7F–öç4'&V¶F÷vâr’Â6öÇVÖç3¢6V7F–öä6öÇVÖç2Â&÷w3¢7VÖÖ'•&÷w2Â7VÖÖ&–W3¢¶66…&W÷'E7VÖÖ'’‡G"‚wF÷FÄ–æ6öÖ–ætgVæG2r’Â–æ6öÖ–æuF÷FÂ’Â66…&W÷'E7VÖÖ'’‡G"‚wF÷FÄ6ö×ÆWFVEv÷&·2r’Â6ö×ÆWFVEF÷FÂ’Â66…&W÷'E7VÖÖ'’‡G"‚wF÷FÄ&Ææ6Rr’Â&Ææ6UF÷FÂÂG'VR•ÒÐ¢Ó°¢&WGW&â²F—FÆRÂö&¦V7DæÖS¢ö&¦V7BææÖRÂ6V7F–öäæÖS¢G"‚vÆÄö&¦V7E6V7F–öç2r’ÂF&ÆW2Â'F–W3¢çVÆÂÓ°§Ð ¦gVæ7F–öâ66„ö&¦V7DFWF–ÆVE&W÷'B†ö&¦V7B’°¢6öç7B÷fW'f–WrÒ66„ö&¦V7D÷fW'f–Wu&W÷'EvR†ö&¦V7BÂG"‚v÷fW&ÆÄFWF–ÆVE&W÷'Br’“°¢6öç7B6V7F–öåvW2Òö&¦V7Bç6V7F–öç2æÖ‚‡6V7F–öâ’Óâ6V7F–öäf–ææ6U&W÷'B†ö&¦V7BÂ6V7F–öâ’“°¢&WGW&â²ââæ÷fW'f–WrÂvW3¢¶÷fW'f–WrÂââç6V7F–öåvW5ÒÓ°§Ð ¦gVæ7F–öâÆÄ66†fÆ÷tFWF–ÆVE&W÷'B†ö&¦V7G2’°¢6öç7Bö&¦V7D6öÇVÖç2Ò°¢²Æ&VÃ¢G"‚vö&¦V7G2r’Â¶W“¢vö&¦V7BrÂv–GFƒ¢r¢rÒÀ¢²Æ&VÃ¢G"‚v–æ6öÖ–ætgVæG2r’Â¶W“¢v–æ6öÖRrÂv–GFƒ¢ÂÖöæW“¢G'VRÒÀ¢²Æ&VÃ¢G"‚v6ö×ÆWFVEv÷&·2r’Â¶W“¢vW‡Vç6RrÂv–GFƒ¢ÂÖöæW“¢G'VRÒÀ¢²Æ&VÃ¢G"‚w6V7F–öä&Ææ6Rr’Â¶W“¢v&Ææ6RrÂv–GFƒ¢ÂÖöæW“¢G'VRÂ6–væVC¢G'VRÂFöæS¢G'VRÐ¢Ó°¢6öç7B&÷w2Òö&¦V7G2æÖ‚†ö&¦V7B’Óâ°¢6öç7B&W÷'EF÷FÇ2Ò66„ö&¦V7E&W÷'EF÷FÇ2†ö&¦V7B“°¢6öç7B–æ6öÖRÒÖF‚ç&÷VæB‚‡&W÷'EF÷FÇ2æ6öçG&7E&V6V—fVB²&W÷'EF÷FÇ2æf7D–æ6öÖR’¢’ò°¢6öç7BW‡Vç6RÒÖF‚ç&÷VæB‚‡&W÷'EF÷FÇ2æ6öçG&7E&öGV7F–öâ²&W÷'EF÷FÇ2æf7DW‡Vç6R’¢’ò°¢&WGW&â²ö&¦V7C¢ö&¦V7BææÖRÂ–æ6öÖRÂW‡Vç6RÂ&Ææ6S¢ÖF‚ç&÷VæB‚†–æ6öÖRÒW‡Vç6R’¢’òÓ°¢Ò“°¢6öç7B–æ6öÖUF÷FÂÒÖF‚ç&÷VæB‡&÷w2ç&VGV6R‚‡7VÒÂ&÷r’Óâ7VÒ²&÷ræ–æ6öÖRÂ’¢’ò°¢6öç7BW‡Vç6UF÷FÂÒÖF‚ç&÷VæB‡&÷w2ç&VGV6R‚‡7VÒÂ&÷r’Óâ7VÒ²&÷ræW‡Vç6RÂ’¢’ò°¢6öç7B&Ææ6UF÷FÂÒÖF‚ç&÷VæB‚†–æ6öÖUF÷FÂÒW‡Vç6UF÷FÂ’¢’ò°¢6öç7BvVæW&ÅvRÒ°¢F—FÆS¢G"‚vvVæW&Å&W÷'Br’Âö&¦V7DæÖS¢G"‚vÆÄ66„ö&¦V7G2r’Â6V7F–öäæÖS¢G"‚vÆÄö&¦V7E6V7F–öç2r’À¢F&ÆW3¢·²F—FÆS¢G"‚vvVæW&Å&W÷'Br’Â6öÇVÖç3¢ö&¦V7D6öÇVÖç2Â&÷w2Â7VÖÖ&–W3¢¶66…&W÷'E7VÖÖ'’‡G"‚wF÷FÄ–æ6öÖ–ætgVæG2r’Â–æ6öÖUF÷FÂ’Â66…&W÷'E7VÖÖ'’‡G"‚wF÷FÄ6ö×ÆWFVEv÷&·2r’ÂW‡Vç6UF÷FÂ’Â66…&W÷'E7VÖÖ'’‡G"‚wF÷FÄ&Ææ6Rr’Â&Ææ6UF÷FÂÂG'VR•ÒÕÒÀ¢'F–W3¢çVÆÀ¢Ó°¢6öç7Bö&¦V7EvW2Òö&¦V7G2æÖ‚†ö&¦V7B’Óâ66„ö&¦V7D÷fW'f–Wu&W÷'EvR†ö&¦V7BÂG·G"‚vö&¦V7E&W÷'Br—Ó¢G¶ö&¦V7BææÖWÖ’“°¢&WGW&â²F—FÆS¢G"‚vgVÆÄ66†fÆ÷u&W÷'Br’Âö&¦V7DæÖS¢G"‚vÆÄ66„ö&¦V7G2r’Â6V7F–öäæÖS¢G"‚vÆÄö&¦V7E6V7F–öç2r’ÂF&ÆW3¢vVæW&ÅvRçF&ÆW2Â'F–W3¢çVÆÂÂvW3¢¶vVæW&ÅvRÂââæö&¦V7EvW5ÒÓ°§Ð ¦gVæ7F–öâ6fT66…&W÷'D†—7F÷'’‡6V7F–öâÂG—RÂ&W÷'BÂ†—7F÷'”–BÒçVÆÂÂf÷&6TæWrÒfÇ6R’°¢6öç7B6æ6†÷BÒ¥4ôâç'6R„¥4ôâç7G&–æv–g’‡&W÷'B’“°¢6öç7Bf—6–&ÆUF—FÆRÒ6æ6†÷BæFö7VÖVçDæÖRÇÂ6æ6†÷BçF—FÆS°¢6öç7B†—7F÷'•F—FÆRÒ6æ6†÷BæFö7VÖVçDçVÖ&W"òG·f—6–&ÆUF—FÆWÒ+r(IbG·6æ6†÷BæFö7VÖVçDçVÖ&W"ç&WÆ6R‚õî(IeÇ2¢÷RÂrr—Ö¢f—6–&ÆUF—FÆS°¢6öç7B6†ævVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢–b††—7F÷'”–B’°¢6öç7BW†—7F–ærÒ6V7F–öâç&W÷'D†—7F÷'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ†—7F÷'”–B“°¢–b†W†—7F–ær’°¢W†—7F–ærçG—RÒG—S°¢W†—7F–ærçF—FÆRÒ†—7F÷'•F—FÆS°¢W†—7F–ærçWFFVDBÒ6†ævVDC°¢W†—7F–ærç&W÷'BÒ6æ6†÷C°¢6fT66†fÆ÷r‚“°¢&WGW&âW†—7F–æs°¢Ð¢Ð¢6öç7BÆFW7BÒ6V7F–öâç&W÷'D†—7F÷'•³Ó°¢–b‚f÷&6TæWrbbÆFW7CòçG—RÓÓÒG—Rbb¥4ôâç7G&–æv–g’†ÆFW7Bç&W÷'B’ÓÓÒ¥4ôâç7G&–æv–g’‡6æ6†÷B’’&WGW&âÆFW7C°¢6öç7B—FVÒÒ²–C¢&W÷'BÒG´FFRææ÷r‚—ÒÒG´ÖF‚ç&æFöÒ‚’çFõ7G&–ærƒb’ç6Æ–6Rƒ"—ÖÂG—RÂF—FÆS¢†—7F÷'•F—FÆRÂ7&VFVDC¢6†ævVDBÂWFFVDC¢6†ævVDBÂ&W÷'C¢6æ6†÷BÓ°¢6V7F–öâç&W÷'D†—7F÷'’çVç6†–gB†—FVÒ“°¢6V7F–öâç&W÷'D†—7F÷'’Ò6V7F–öâç&W÷'D†—7F÷'’ç6Æ–6RƒÂf÷&6TæWrò¢S“°¢6fT66†fÆ÷r‚“°¢&WGW&â—FVÓ°§Ð ¦gVæ7F–öâ6fTVF—FVD66…&W÷'E&Wf—6–öâ‡6V7F–öâÂG—RÂ&W÷'BÂ&Wf–÷W4†—7F÷'”–BÒçVÆÂ’°¢6öç7B&Wf–÷W4W†—7G2Ò&ööÆVâ‡&Wf–÷W4†—7F÷'”–Bbb6V7F–öâç&W÷'D†—7F÷'’ç6öÖR‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ&Wf–÷W4†—7F÷'”–B’“°¢6öç7B6fVE&W÷'BÒ6fT66…&W÷'D†—7F÷'’‡6V7F–öâÂG—RÂ&W÷'BÂçVÆÂÂ&Wf–÷W4W†—7G2“°¢&WGW&â²6fVE&W÷'BÂ&Wf–÷W4†—7F÷'”–C¢&Wf–÷W4W†—7G2ò&Wf–÷W4†—7F÷'”–B¢çVÆÂÓ°§Ð ¦gVæ7F–öâ6´VF—FVE&W÷'D†—7F÷'”6†ö–6R‡6V7F–öâÂ&Wf–÷W4†—7F÷'”–BÂF–ÆörÂ&W÷'DÆ&VÂÂöä6ö×ÆWFRÒçVÆÂ’°¢–b‚&Wf–÷W4†—7F÷'”–BÇÂ6V7F–öâç&W÷'D†—7F÷'’ç6öÖR‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ&Wf–÷W4†—7F÷'”–B’’°¢&VæFW$66†fÆ÷r‚“°¢F–Æöræ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚vFö7VÖVçE6fVBr’“°¢öä6ö×ÆWFSòâ‚“°¢&WGW&ã°¢Ð¢6†÷tF–Æör†G·G"‚vVF—FVE&W÷'E6fVBr—Ò+rG¶W66T‡FÖÂ‡&W÷'DÆ&VÂ—ÖÂG"‚vFVÆWFU&Wf–÷W5&W÷'EVW7F–öâr’ÂÆF—b6Æ73Ò&VF—FVBÖFö7VÖVçBÖ6†ö–6R#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ¶VWÖ&÷F‚×&W÷'G3âG·G"‚v¶VW&÷F…&W÷'G2r—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ—2ÖFævW""G—SÒ&'WGFöâ"FFÖFVÆWFR×&Wf–÷W2×&W÷'CâG·G"‚vFVÆWFU&Wf–÷W5&W÷'Br—ÓÂö'WGFöããÂöF—cæ“°¢6öç7Bf–æ—6‚Ò†FVÆWFU&Wf–÷W2’Óâ°¢–b†FVÆWFU&Wf–÷W2’6V7F–öâç&W÷'D†—7F÷'’Ò6V7F–öâç&W÷'D†—7F÷'’æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ–BÓÒ&Wf–÷W4†—7F÷'”–B“°¢6fT66†fÆ÷r‚“°¢&VæFW$66†fÆ÷r‚“°¢F–Æöræ6Æ÷6R‚“°¢6†÷uFö7B‡G"†FVÆWFU&Wf–÷W2òw&Wf–÷W5&W÷'DFVÆWFVBr¢v&÷F…&W÷'EfW'6–öç56fVBr’“°¢öä6ö×ÆWFSòâ‚“°¢Ó°¢B‚u¶FFÖ¶VWÖ&÷F‚×&W÷'G5Òr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâf–æ—6‚†fÇ6R’“°¢B‚u¶FFÖFVÆWFR×&Wf–÷W2×&W÷'EÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâf–æ—6‚‡G'VR’“°§Ð ¦7–æ2gVæ7F–öâÆöE&W÷'DÆövò‚’°¢–b‡&W÷'DÆövôFFW&Â’&WGW&â&W÷'DÆövôFFW&Ã°¢6öç7B&W7öç6RÒv—BfWF6‚†æWrU$Â‚râö76WG2öff–6öâÓ“"çærrÂ–×÷'BæÖWFçW&Â’“°¢6öç7B&Æö"Òv—B&W7öç6Ræ&Æö"‚“°¢&W÷'DÆövôFFW&ÂÒv—BæWr&öÖ—6R‚‡&W6öÇfRÂ&V¦V7B’Óâ²6öç7B&VFW"ÒæWrf–ÆU&VFW"‚“²&VFW"æöæÆöBÒ‚’Óâ&W6öÇfR‡&VFW"ç&W7VÇB“²&VFW"æöæW'&÷"Ò&V¦V7C²&VFW"ç&VD4FFU$Â†&Æö"“²Ò“°¢&WGW&â&W÷'DÆövôFFW&Ã°§Ð ¦gVæ7F–öâ&W÷'D6VÆÅfÇVR†6öÇVÖâÂ&÷r’°¢6öç7BfÇVRÒ&÷u¶6öÇVÖâæ¶W•Ó°¢–b†6öÇVÖâæÖöæW’’&WGW&â6öÇVÖâç6–væVBòf÷&ÖE6–væVDÖöæW’„çVÖ&W"‡fÇVR’ÇÂ’¢f÷&ÖDÖöæW’„çVÖ&W"‡fÇVR’ÇÂ“°¢&WGW&â7G&–ær‡fÇVRóòrr“°§Ð ¦gVæ7F–öâ&W÷'E&Wf–WuF&ÆTÖ&·W‡F&ÆR’°¢6öç7B†VFW'2ÒF&ÆRæ6öÇVÖç2æÖ‚†6öÇVÖâ’ÓâÇF‚6Æ73Ò'&W÷'BÖ6öÂÒG¶W66T‡FÖÂ†6öÇVÖâæ¶W’—Ò#âG¶W66T‡FÖÂ†6öÇVÖâæÆ&VÂ—ÓÂ÷Fƒæ’æ¦ö–â‚rr“°¢6öç7B&÷w2ÒF&ÆRç&÷w2æÆVæwF‚òF&ÆRç&÷w2æÖ‚‡&÷r’ÓâÇG#âG·F&ÆRæ6öÇVÖç2æÖ‚†6öÇVÖâ’Óâ°¢6öç7BFöæRÒ6öÇVÖâçFöæRò66„&Ææ6T6Æ72„çVÖ&W"‡&÷u¶6öÇVÖâæ¶W•Ò’ÇÂ’¢rs°¢&WGW&âÇFB6Æ73Ò'&W÷'BÖ6öÂÒG¶W66T‡FÖÂ†6öÇVÖâæ¶W’—ÒG¶6öÇVÖâæçVÖ&W"ÇÂ6öÇVÖâæÖöæW’òv—2ÖçVÖ&W"r¢rwÒG·FöæWÒ#âG¶W66T‡FÖÂ‡&W÷'D6VÆÅfÇVR†6öÇVÖâÂ&÷r’—ÓÂ÷FCæ°¢Ò’æ¦ö–â‚rr—ÓÂ÷G#æ’æ¦ö–â‚rr’¢ÇG#ãÇFB6Æ73Ò'&W÷'B×&Wf–WrÖV×G’"6öÇ7ãÒ"G·F&ÆRæ6öÇVÖç2æÆVæwF‡Ò#âG·G"‚væôVçG&–W2r—ÓÂ÷FCãÂ÷G#æ°¢6öç7BF÷FÂÒçVÖ&W"æ—4f–æ—FR‡F&ÆRçF÷FÂ’òÆF—b6Æ73Ò'&W÷'B×&Wf–Wr×F÷FÂ#ãÇ7ãâG·G"‚w&÷uF÷FÂr—ÓÂ÷7ããÇ7G&öæsâG¶f÷&ÖDÖöæW’‡F&ÆRçF÷FÂ—ÓÂ÷7G&öæsãÂöF—cæ¢rs°¢6öç7B7VÖÖ&–W2ÒF&ÆRç7VÖÖ&–W3òæÆVæwF‚òÆF—b6Æ73Ò'&W÷'B×&Wf–Wr×7VÖÖ&–W2#âG·F&ÆRç7VÖÖ&–W2æÖ‚‡7VÖÖ'’’ÓâÆF—b6Æ73Ò"G¶W66T‡FÖÂ‡7VÖÖ'“òçFöæRÇÂrr—Ò#ãÇ7G&öæsâG¶W66T‡FÖÂ†66…&W÷'E7VÖÖ'•FW‡B‡7VÖÖ'’’—ÓÂ÷7G&öæsãÂöF—cæ’æ¦ö–â‚rr—ÓÂöF—cæ¢rs°¢&WGW&âÇ6V7F–öâ6Æ73Ò'&W÷'B×&Wf–Wr×6V7F–öâ#ãÆƒ3âG¶W66T‡FÖÂ‡F&ÆRçF—FÆR—ÓÂöƒ3ãÆF—b6Æ73Ò'&W÷'B×&Wf–Wr×F&ÆR×w&#ãÇF&ÆSãÇF†VCãÇG#âG¶†VFW'7ÓÂ÷G#ãÂ÷F†VCãÇF&öG“âG·&÷w7ÓÂ÷F&öG“ãÂ÷F&ÆSãÂöF—câG·F÷FÇÒG·7VÖÖ&–W7ÓÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ66…'G•&öÆTÆ&VÂ‡&öÆR’°¢&WGW&âG"‡²&W&VC¢w&W&VD'’rÂ6öæf—&ÖVC¢v6öæf—&ÖVD'’rÂW&f÷&ÖVC¢wW&f÷&ÖVD'’rÂ66WFVC¢v66WFVD'’rÕ·&öÆUÒÇÂ&öÆR“°§Ð ¦gVæ7F–öâ66…&W÷'E'G•&öÆW2‡vR’°¢&WGW&â'&’æ—4'&’‡vSòç'G•&öÆW2’bbvRç'G•&öÆW2æÆVæwF‚òvRç'G•&öÆW2¢²w&W&VBrÂwW&f÷&ÖVBrÂv66WFVBuÓ°§Ð ¦gVæ7F–öâ&W÷'E&Wf–Wt÷&væ—¦F–öç4Ö&·W†÷&væ—¦F–öç2’°¢–b‚÷&væ—¦F–öç2’&WGW&ârs°¢&WGW&âÇ6V7F–öâ6Æ73Ò'&W÷'B×&Wf–WrÖ÷&væ—¦F–öç2#ãÆƒ3âG·G"‚v÷&væ—¦F–öäFö7VÖVçG2r—ÓÂöƒ3ãÆF—câG´44…ôõ$tä•¤D”ôåõ$ôÄU2æÖ‚‡&öÆR’Óâ°¢6öç7B6&BÒ÷&væ—¦F–öç5·&öÆUÒÇÂ·Ó°¢6öç7Bf–VÆG2Ò6&BçG—RÓÓÒv–æF—f–GVÂp¢òµ·G"‚vgVÆÄæÖRr’Â6&BægVÆÄæÖUÒÂ·G"‚w77÷'E6W&–W2r’Â6&Bç77÷'E6W&–W5ÒÂ·G"‚w77÷'DçVÖ&W"r’Â6&Bç77÷'DçVÖ&W%ÕÐ¢¢µ·G"‚v6ö×ç”æÖRr’Â6&Bæ6ö×ç•ÒÂ·G"‚v–æâr’Â6&Bæ–æåÒÂ·G"‚v·r’Â6&Bæ·ÕÓ°¢&WGW&âÆ'F–6ÆSãÇ7G&öæsâG·G"‡&öÆR—Ò+rG·G"†6&BçG—RÓÓÒv–æF—f–GVÂròv–æF—f–GVÂr¢vÆVvÄVçF—G’r—ÓÂ÷7G&öæsâG¶f–VÆG2æÖ‚…¶Æ&VÂÂfÇVUÒ’ÓâÇ7ãâG¶W66T‡FÖÂ†Æ&VÂ—Ó¢G¶W66T‡FÖÂ‡fÇVRÇÂ~(	Br—ÓÂ÷7ãæ’æ¦ö–â‚rr—ÒG¶6&Bæf–ÆTæÖRòÇ6ÖÆÃâG¶W66T‡FÖÂ†6&Bæf–ÆTæÖR—ÓÂ÷6ÖÆÃæ¢rwÓÂö'F–6ÆSæ°¢Ò’æ¦ö–â‚rr—ÓÂöF—cãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ&W÷'E&Wf–Wu'F–W4Ö&·W‡'F–W2Â'G•&öÆW2’°¢–b‚'F–W2’&WGW&ârs°¢6öç7B&÷w2Ò'G•&öÆW2æÖ‚‡&öÆR’Óâ¶66…'G•&öÆTÆ&VÂ‡&öÆR’Â'F–W5·&öÆUÕÒ“°¢&WGW&âÇ6V7F–öâ6Æ73Ò'&W÷'B×&Wf–Wr×'F–W2#ãÆF—câG·&÷w2æÖ‚…¶Æ&VÂÂ'G•Ò’ÓâÆ'F–6ÆSãÇ7G&öæsâG¶W66T‡FÖÂ†Æ&VÂ—ÓÂ÷7G&öæsãÇ7ãâG·G"‚vgVÆÄæÖRr—Ó¢G¶W66T‡FÖÂ‡'G“òææÖRÇÂ~(	Br—ÓÂ÷7ããÇ7ãâG·G"‚w6–væGW&Rr—Ó¢G¶W66T‡FÖÂ‡'G“òç6–væGW&RÇÂ~(	Br—ÓÂ÷7ããÇ7ãâG·G"‚w6VÂr—Ó¢G¶W66T‡FÖÂ‡'G“òç6VÂÇÂ~(	Br—ÓÇ6ÖÆÃâG·G"‚vFö7VÖVçDFFRr—Ó¢G¶W66T‡FÖÂ‡'F–W2æFFRÇÂÆö6ÄFFT¶W’‚’—ÓÂ÷6ÖÆÃãÂ÷7ããÂö'F–6ÆSæ’æ¦ö–â‚rr—ÓÂöF—cãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ&W÷'E&Wf–Wu&÷÷6Ä÷Væ–ætÖ&·W†Fö7VÖVçB’°¢–b‚Fö7VÖVçB’&WGW&ârs°¢6öç7B6VæFW"ÒFö7VÖVçBæ6öçF7G3òç6VæFW"ÇÂ·Ó°¢6öç7B&V6—–VçBÒFö7VÖVçBæ6öçF7G3òç&V6—–VçBÇÂ·Ó°¢6öç7B6öçF7D6&BÒ†6öçF7BÂf–VÆG2’ÓâÆ'F–6ÆSãÇ7G&öæsâG¶W66T‡FÖÂ†6öçF7BçF—FÆRÇÂrr—ÓÂ÷7G&öæsâG¶f–VÆG2æÖ‚…¶Æ&VÂÂfÇVUÒ’ÓâÇ7ããÆ#âG¶W66T‡FÖÂ†Æ&VÂ—Ó£Âö#âG¶W66T‡FÖÂ‡fÇVRÇÂ~(	Br—ÓÂ÷7ãæ’æ¦ö–â‚rr—ÓÂö'F–6ÆSæ°¢&WGW&âÇ6V7F–öâ6Æ73Ò'&W÷'B×&Wf–Wr×&÷÷6ÂÖ÷Væ–ær#ãÇãÇ7G&öæsâG¶W66T‡FÖÂ†Fö7VÖVçBæw&VWF–ærÇÂrr—ÓÂ÷7G&öæsãÂ÷ãÇâG¶W66T‡FÖÂ†Fö7VÖVçBæ–çG&òÇÂrr—ÓÂ÷ãÆF—câG¶6öçF7D6&B‡6VæFW"Âµ·G"‚vgVÆÄæÖRr’Â6VæFW"ææÖUÒÂ·G"‚w&÷÷6Ä÷&væ—¦F–öâr’Â6VæFW"æ÷&væ—¦F–öåÒÂ·G"‚w†öæRr’Â6VæFW"ç†öæUÕÒ—ÒG¶6öçF7D6&B‡&V6—–VçBÂµ·G"‚vgVÆÄæÖRr’Â&V6—–VçBææÖUÒÂ·G"‚w&÷÷6Ä÷&væ—¦F–öâr’Â&V6—–VçBæ÷&væ—¦F–öåÕÒ—ÓÂöF—cãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ&W÷'E&Wf–Wu&÷÷6Ä6Æ÷6–ætÖ&·W†Fö7VÖVçB’°¢–b‚Fö7VÖVçB’&WGW&ârs°¢6öç7B7VÖÖ'’ÒFö7VÖVçBæf–æÅ7VÖÖ'“°¢6öç7B7VÖÖ'”Ö&·WÒ7VÖÖ'“òç&÷w3òæÆVæwF‚òÇ6V7F–öâ6Æ73Ò'&W÷'B×&Wf–Wr×&÷÷6Â×7VÖÖ'’#ãÆƒ3âG¶W66T‡FÖÂ‡7VÖÖ'’çF—FÆRÇÂrr—ÓÂöƒ3ãÇF&ÆSãÇF&öG“âG·7VÖÖ'’ç&÷w2æÖ‚‡&÷r’ÓâÇG#ãÇFƒâG¶W66T‡FÖÂ‡&÷ræÆ&VÂÇÂrr—ÓÂ÷FƒãÇFCâG¶W66T‡FÖÂ‡&÷rçfÇVRÇÂrr—ÓÂ÷FCãÂ÷G#æ’æ¦ö–â‚rr—ÓÂ÷F&öG“ãÂ÷F&ÆSãÂ÷6V7F–öãæ¢rs°¢&WGW&âG·7VÖÖ'”Ö&·WÓÇ6V7F–öâ6Æ73Ò'&W÷'B×&Wf–Wr×&÷÷6ÂÖ6Æ÷6–ær#ãÇâG¶W66T‡FÖÂ†Fö7VÖVçBæ6Æ÷6–ærÇÂrr—ÓÂ÷ãÇâG¶W66T‡FÖÂ†Fö7VÖVçBç&W7V7FgVÆÇ’ÇÂrr—ÓÆ'"óãÇ7G&öæsâG¶W66T‡FÖÂ†Fö7VÖVçBç6–væGW&RÇÂ~(	Br—ÓÂ÷7G&öæsãÂ÷ãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ66…&W÷'EvW2‡&W÷'B’°¢6öç7BvW2Ò'&’æ—4'&’‡&W÷'CòçvW2’bb&W÷'BçvW2æÆVæwF‚ò&W÷'BçvW2¢·&W÷'EÓ°¢&WGW&âvW2æÖ‚‡vR’Óâ‡°¢Fö7VÖVçD¶–æC¢vRæFö7VÖVçD¶–æBÇÂ&W÷'BæFö7VÖVçD¶–æBÇÂçVÆÂÀ¢F—FÆS¢vRçF—FÆRÇÂ&W÷'BçF—FÆRÀ¢Fö7VÖVçDçVÖ&W#¢vRæFö7VÖVçDçVÖ&W"ÇÂrrÀ¢çVÖ&W$Æ&VÃ¢vRæçVÖ&W$Æ&VÂÇÂ&W÷'BæçVÖ&W$Æ&VÂÀ¢ö&¦V7DæÖS¢vRæö&¦V7DæÖRÇÂ&W÷'Bæö&¦V7DæÖRÀ¢6V7F–öäæÖS¢vRç6V7F–öäæÖRÇÂ&W÷'Bç6V7F–öäæÖRÀ¢ö&¦V7DÆ&VÃ¢vRæö&¦V7DÆ&VÂÇÂ&W÷'Bæö&¦V7DÆ&VÂÇÂG"‚vö&¦V7G2r’À¢6V7F–öäÆ&VÃ¢vRç6V7F–öäÆ&VÂÇÂ&W÷'Bç6V7F–öäÆ&VÂÇÂG"‚w6V7F–öäæÖRr’À¢F&ÆW3¢'&’æ—4'&’‡vRçF&ÆW2’òvRçF&ÆW2¢µÒÀ¢'F–W3¢vRç'F–W2ÇÂçVÆÂÀ¢'G•&öÆW3¢66…&W÷'E'G•&öÆW2‡vR’À¢÷&væ—¦F–öç3¢vRæ÷&væ—¦F–öç2ÇÂçVÆÂÀ¢&÷÷6ÄFö7VÖVçC¢vRç&÷÷6ÄFö7VÖVçBÇÂ&W÷'Bç&÷÷6ÄFö7VÖVçBÇÂçVÆÀ¢Ò’“°§Ð ¦gVæ7F–öâ&W÷'E&Wf–WuvTÖ&·W‡&W÷'B’°¢&WGW&âÆ'F–6ÆR6Æ73Ò'&W÷'B×&Wf–Wr×6†VWB#ãÆ†VFW#ãÆF—cãÇ7ãå5E%T5Dõ2$Uõ%CÂ÷7ããÆƒ#âG¶W66T‡FÖÂ‡&W÷'BçF—FÆR—ÓÂöƒ#âG·&W÷'BæFö7VÖVçDçVÖ&W"òÇâG¶W66T‡FÖÂ‡&W÷'BæçVÖ&W$Æ&VÂÇÂG"‚vFö7VÖVçDçVÖ&W"r’—Ó¢G¶W66T‡FÖÂ‡&W÷'BæFö7VÖVçDçVÖ&W"—ÓÂ÷æ¢rwÓÂöF—cãÆ–Ör7&3Ò"G·&W÷'E&Wf–WtÆövõW&ÇÒ"ÇCÒ%7G'V7Dõ2"óãÂö†VFW#ãÆF—b6Æ73Ò'&W÷'B×&Wf–WrÖÖWF#ãÇãÇ7G&öæsâG¶W66T‡FÖÂ‡&W÷'Bæö&¦V7DÆ&VÂ—Ó£Â÷7G&öæsâG¶W66T‡FÖÂ‡&W÷'Bæö&¦V7DæÖR—ÓÂ÷ãÇãÇ7G&öæsâG¶W66T‡FÖÂ‡&W÷'Bç6V7F–öäÆ&VÂ—Ó£Â÷7G&öæsâG¶W66T‡FÖÂ‡&W÷'Bç6V7F–öäæÖR—ÓÂ÷ãÂöF—câG·&W÷'E&Wf–Wu&÷÷6Ä÷Væ–ætÖ&·W‡&W÷'Bç&÷÷6ÄFö7VÖVçB—ÒG·&W÷'E&Wf–Wt÷&væ—¦F–öç4Ö&·W‡&W÷'Bæ÷&væ—¦F–öç2—ÒG·&W÷'BçF&ÆW2æÖ‡&W÷'E&Wf–WuF&ÆTÖ&·W’æ¦ö–â‚rr—ÒG·&W÷'E&Wf–Wu&÷÷6Ä6Æ÷6–ætÖ&·W‡&W÷'Bç&÷÷6ÄFö7VÖVçB—ÒG·&W÷'E&Wf–Wu'F–W4Ö&·W‡&W÷'Bç'F–W2Â&W÷'Bç'G•&öÆW2—ÓÆfö÷FW#ãÆ–Ör7&3Ò"G·&W÷'E&Wf–WtÆövõW&ÇÒ"ÇCÒ""óãÆF—cãÇ7G&öæsâGµ5E%T5Dõ5ôDô5TÔTåEô%$äBææÖWÓÂ÷7G&öæsãÇ7ãâGµ5E%T5Dõ5ôDô5TÔTåEô%$äBæÖFWÓÂ÷7ããÇ7ãâGµ5E%T5Dõ5ôDô5TÔTåEô%$äBç6—FWÓÂ÷7ããÇ7ãâGµ5E%T5Dõ5ôDô5TÔTåEô%$äBç6ÆövçÓÂ÷7ããÂöF—cãÂöfö÷FW#ãÂö'F–6ÆSæ°§Ð ¦gVæ7F–öâ&W÷'E&Wf–WtÖ&·W‡&W÷'B’°¢&WGW&âÆF—b6Æ73Ò'&W÷'B×&Wf–Wr×vW2#âG¶66…&W÷'EvW2‡&W÷'B’æÖ‡&W÷'E&Wf–WuvTÖ&·W’æ¦ö–â‚rr—ÓÂöF—cæ°§Ð ¦gVæ7F–öâ÷Vä66…&W÷'E&Wf–Wr‡&W÷'BÂvWDFVÆ—fW'•&W÷'BÒ‚’Óâ&W÷'BÂöå7V66W72ÒçVÆÂ’°¢6öç7BF–ÆörÒB‚u¶FF×&W÷'B×&Wf–WrÖF–ÆöuÒr“°¢–b‚F–Æör’&WGW&ã°¢&VÆV6T66„÷&væ—¦F–öå&Wf–Wr‚“°¢B‚u¶FF×&W÷'B×&Wf–Wr×F—FÆUÒrÂF–Æör’çFW‡D6öçFVçBÒG"‚w&W÷'E&Wf–WuF—FÆRr“°¢B‚u¶FF×&W÷'B×&Wf–WrÖ†–çEÒrÂF–Æör’çFW‡D6öçFVçBÒG"‚w&W÷'E&Wf–Wt†–çBr“°¢B‚u¶FF×&W÷'B×&Wf–WrÖ6öçFVçEÒrÂF–Æör’æ–ææW$…DÔÂÒ&W÷'E&Wf–WtÖ&·W‡&W÷'B“°¢6öç7B7F–öç2ÒB‚u¶FF×&W÷'B×&Wf–WrÖ7F–öç5ÒrÂF–Æör“°¢7F–öç2æ–ææW$…DÔÂÒ66„FVÆ—fW'”7F–öç4Ö&·W‚“°¢&–æD66„FVÆ—fW'”7F–öç2†7F–öç2ÂvWDFVÆ—fW'•&W÷'BÂöå7V66W72“°¢–b‚F–Æöræ÷Vâ’F–Æörç6†÷tÖöFÂ‚“°§Ð ¦7–æ2gVæ7F–öâ7&VFUFe&W÷'B‡&W÷'B’°¢6öç7B·²FVfVÇC¢FdÖ¶RÒÂ²FVfVÇC¢FdföçG2ÕÒÒv—B&öÖ—6RæÆÂ…¶–×÷'B‚wFfÖ¶Rö'V–ÆB÷FfÖ¶Ræ§2r’Â–×÷'B‚wFfÖ¶Rö'V–ÆB÷fg5öföçG2æ§2r•Ò“°¢6öç7BÆövòÒv—BÆöE&W÷'DÆövò‚“°¢FdÖ¶Rçfg2ÒFdföçG3òçFdÖ¶Sòçfg2ÇÂFdföçG3òçfg2ÇÂFdföçG3°¢6öç7B6öçFVçBÒµÓ°¢6öç7B&W÷'EvW2Ò66…&W÷'EvW2‡&W÷'B“°¢6öç7B&WVF–æu'G•vRÒ&W÷'EvW2æÆVæwF‚ÓÓÒ¢bb²w7FFVÖVçBrÂv7BuÒæ–æ6ÇVFW2‡&W÷'EvW5³ÒæFö7VÖVçD¶–æB¢bb&W÷'EvW5³Òç'F–W0¢ò&W÷'EvW5³Ð¢¢çVÆÃ°¢&W÷'EvW2æf÷$V6‚‚‡vRÂvT–æFW‚’Óâ°¢6öçFVçBçW6‚‡²FW‡C¢vRçF—FÆRÂ7G–ÆS¢wF—FÆRrÂâââ‡vT–æFW‚ò²vT'&V³¢v&Vf÷&RrÒ¢·Ò’Ò“°¢–b‡vRæFö7VÖVçDçVÖ&W"’6öçFVçBçW6‚‡²FW‡C¢G·vRæçVÖ&W$Æ&VÂÇÂG"‚vFö7VÖVçDçVÖ&W"r—Ó¢G·vRæFö7VÖVçDçVÖ&W'ÖÂ7G–ÆS¢vÖWFrÒ“°¢6öçFVçBçW6‚€¢²FW‡C¢G·vRæö&¦V7DÆ&VÇÓ¢G·vRæö&¦V7DæÖWÖÂ7G–ÆS¢vÖWFrÒÀ¢²FW‡C¢G·vRç6V7F–öäÆ&VÇÓ¢G·vRç6V7F–öäæÖWÖÂ7G–ÆS¢vÖWFrÂÖ&v–ã¢³ÂÂÂEÒÐ¢“°¢–b‡vRç&÷÷6ÄFö7VÖVçB’°¢6öç7B6VæFW"ÒvRç&÷÷6ÄFö7VÖVçBæ6öçF7G3òç6VæFW"ÇÂ·Ó°¢6öç7B&V6—–VçBÒvRç&÷÷6ÄFö7VÖVçBæ6öçF7G3òç&V6—–VçBÇÂ·Ó°¢6öç7B6VæFW$FWF–Ç2Ò¶G·G"‚vgVÆÄæÖRr—Ó¢G·6VæFW"ææÖRÇÂ~(	BwÖÂG·G"‚w&÷÷6Ä÷&væ—¦F–öâr—Ó¢G·6VæFW"æ÷&væ—¦F–öâÇÂ~(	BwÖÂG·G"‚w†öæRr—Ó¢G·6VæFW"ç†öæRÇÂ~(	BwÖÒæ¦ö–â‚uÆâr“°¢6öç7B&V6—–VçDFWF–Ç2Ò¶G·G"‚vgVÆÄæÖRr—Ó¢G·&V6—–VçBææÖRÇÂ~(	BwÖÂG·G"‚w&÷÷6Ä÷&væ—¦F–öâr—Ó¢G·&V6—–VçBæ÷&væ—¦F–öâÇÂ~(	BwÖÒæ¦ö–â‚uÆâr“°¢6öçFVçBçW6‚€¢²FW‡C¢vRç&÷÷6ÄFö7VÖVçBæw&VWF–ærÇÂrrÂ&öÆC¢G'VRÂföçE6—¦S¢ÂÖ&v–ã¢³ÂÂÂEÒÒÀ¢²FW‡C¢vRç&÷÷6ÄFö7VÖVçBæ–çG&òÇÂrrÂföçE6—¦S¢’ÂÆ–æT†V–v‡C¢ã#RÂÖ&v–ã¢³ÂÂÂÒÒÀ¢²F&ÆS¢²v–GF‡3¢³c"Âr¢rÂc"Âr¢uÒÂ&öG“¢µ·²FW‡C¢6VæFW"çF—FÆRÇÂG"‚w&÷÷6Å6VæFW"r’Â&öÆC¢G'VRÂ6öÆ÷#¢r3sV6C2rÒÂ²FW‡C¢6VæFW$FWF–Ç2ÒÂ²FW‡C¢&V6—–VçBçF—FÆRÇÂG"‚w&÷÷6Å&V6—–VçBr’Â&öÆC¢G'VRÂ6öÆ÷#¢r3sV6C2rÒÂ²FW‡C¢&V6—–VçDFWF–Ç2ÕÕÒÒÂÆ–÷WC¢²„Æ–æT6öÆ÷#¢r63vCVSRrÂdÆ–æT6öÆ÷#¢r63vCVSRrÂFF–ætÆVgC¢‚’ÓâRÂFF–æu&–v‡C¢‚’ÓâRÂFF–æuF÷¢‚’ÓâRÂFF–æt&÷GFöÓ¢‚’ÓâRÒÂföçE6—¦S¢‚ÂÖ&v–ã¢³ÂÂÂÒÐ¢“°¢Ð¢–b‡vRæ÷&væ—¦F–öç2’°¢6öç7B÷&væ—¦F–öå&÷w2Òµ·G"‚w&W÷'EG—Rr’ÂG"‚w'G•G—Rr’ÂG"‚vÖçVÄFWF–Ç2r’ÂG"‚wWÆöFVDFö7VÖVçG2r•ÒÂââä44…ôõ$tä•¤D”ôåõ$ôÄU2æÖ‚‡&öÆR’Óâ°¢6öç7B6&BÒvRæ÷&væ—¦F–öç5·&öÆUÒÇÂ·Ó°¢6öç7BFWF–Ç2Ò6&BçG—RÓÓÒv–æF—f–GVÂp¢òG·G"‚vgVÆÄæÖRr—Ó¢G¶6&BægVÆÄæÖRÇÂ~(	BwÓ²G·G"‚w77÷'E6W&–W2r—Ó¢G¶6&Bç77÷'E6W&–W2ÇÂ~(	BwÓ²G·G"‚w77÷'DçVÖ&W"r—Ó¢G¶6&Bç77÷'DçVÖ&W"ÇÂ~(	BwÖ ¢¢G·G"‚v6ö×ç”æÖRr—Ó¢G¶6&Bæ6ö×ç’ÇÂ~(	BwÓ²G·G"‚v–æâr—Ó¢G¶6&Bæ–æâÇÂ~(	BwÓ²G·G"‚v·r—Ó¢G¶6&Bæ·ÇÂ~(	BwÖ°¢&WGW&â·G"‡&öÆR’ÂG"†6&BçG—RÓÓÒv–æF—f–GVÂròv–æF—f–GVÂr¢vÆVvÄVçF—G’r’ÂFWF–Ç2Â6&Bæf–ÆTæÖRÇÂ~(	BuÓ°¢Ò•Ó°¢6öçFVçBçW6‚‡²FW‡C¢G"‚v÷&væ—¦F–öäFö7VÖVçG2r’Â7G–ÆS¢w6V7F–öåF—FÆRrÂÖ&v–ã¢³ÂBÂÂeÒÒÂ²F&ÆS¢²†VFW%&÷w3¢Âv–GF‡3¢³cRÂs"Âr¢rÂƒ…ÒÂ&öG“¢÷&væ—¦F–öå&÷w2ÒÂÆ–÷WC¢vÆ–v‡D†÷&—¦öçFÄÆ–æW2rÂföçE6—¦S¢‚ÂÖ&v–ã¢³ÂÂÂ…ÒÒ“°¢Ð¢vRçF&ÆW2æf÷$V6‚‚‡F&ÆR’Óâ°¢6öç7B&öG’Ò·F&ÆRæ6öÇVÖç2æÖ‚†6öÇVÖâ’Óâ‡²FW‡C¢6öÇVÖâæÆ&VÂÂ7G–ÆS¢wF&ÆT†VFW"rÒ’’Ââââ‡F&ÆRç&÷w2æÆVæwF‚òF&ÆRç&÷w2æÖ‚‡&÷r’ÓâF&ÆRæ6öÇVÖç2æÖ‚†6öÇVÖâ’Óâ°¢6öç7BFöæRÒ6öÇVÖâçFöæRò66„&Ææ6T6Æ72„çVÖ&W"‡&÷u¶6öÇVÖâæ¶W•Ò’ÇÂ’¢rs°¢&WGW&â²FW‡C¢&W÷'D6VÆÅfÇVR†6öÇVÖâÂ&÷r’ÂÆ–væÖVçC¢6öÇVÖâæçVÖ&W"ÇÂ6öÇVÖâæÖöæW’òw&–v‡Br¢vÆVgBrÂâââ‡FöæRÓÓÒv—2ÖæVvF—fRrò²6öÆ÷#¢r6C“3ƒF"rÂ&öÆC¢G'VRÒ¢FöæRÓÓÒv—2×÷6—F—fRrò²6öÆ÷#¢r33†V"rÂ&öÆC¢G'VRÒ¢·Ò’Ó°¢Ò’’¢µ·²FW‡C¢G"‚væôVçG&–W2r’Â6öÅ7ã¢F&ÆRæ6öÇVÖç2æÆVæwF‚ÂÆ–væÖVçC¢v6VçFW"rÂ6öÆ÷#¢r3cCsC†"rÂÖ&v–ã¢³Â…ÒÒÂââä'&’æg&öÒ‡²ÆVæwFƒ¢F&ÆRæ6öÇVÖç2æÆVæwF‚ÒÒÂ‚’Óâ‡·Ò’•ÕÒ•Ó°¢6öçFVçBçW6‚‡²FW‡C¢F&ÆRçF—FÆRÂ7G–ÆS¢w6V7F–öåF—FÆRrÂÖ&v–ã¢³ÂÂÂeÒÒÂ²F&ÆS¢²†VFW%&÷w3¢Âv–GF‡3¢F&ÆRæ6öÇVÖç2æÖ‚†6öÇVÖâ’Óâ6öÇVÖâçv–GF‚’Â&öG’ÒÂÆ–÷WC¢²f–ÆÄ6öÆ÷#¢‡&÷t–æFW‚’Óâ&÷t–æFW‚ÓÓÒòr6Vc6fbr¢çVÆÂÂ„Æ–æT6öÆ÷#¢r6#†3–F2rÂdÆ–æT6öÆ÷#¢r6#†3–F2rÒÂföçE6—¦S¢‚Ò“°¢–b„çVÖ&W"æ—4f–æ—FR‡F&ÆRçF÷FÂ’’6öçFVçBçW6‚‡²FW‡C¢G·G"‚w&÷uF÷FÂr—Ó¢G¶f÷&ÖDÖöæW’‡F&ÆRçF÷FÂ—ÖÂ&öÆC¢G'VRÂÆ–væÖVçC¢w&–v‡BrÂÖ&v–ã¢³ÂrÂÂEÒÒ“°¢–b‡F&ÆRç7VÖÖ&–W3òæÆVæwF‚’6öçFVçBçW6‚‡²VÃ¢F&ÆRç7VÖÖ&–W2æÖ‚‡7VÖÖ'’’Óâ‡²FW‡C¢66…&W÷'E7VÖÖ'•FW‡B‡7VÖÖ'’’Â&öÆC¢&ööÆVâ‡7VÖÖ'“òçFöæR’Â6öÆ÷#¢7VÖÖ'“òçFöæRÓÓÒv—2ÖæVvF—fRròr6C“3ƒF"r¢7VÖÖ'“òçFöæRÓÓÒv—2×÷6—F—fRròr33†V"r¢r3C#6BrÒ’’ÂÖ&v–ã¢³ÂrÂÂUÒÂföçE6—¦S¢’Ò“°¢Ò“°¢–b‡vRç&÷÷6ÄFö7VÖVçB’°¢6öç7B7VÖÖ'’ÒvRç&÷÷6ÄFö7VÖVçBæf–æÅ7VÖÖ'“°¢–b‡7VÖÖ'“òç&÷w3òæÆVæwF‚’°¢6öçFVçBçW6‚€¢²FW‡C¢7VÖÖ'’çF—FÆRÇÂG"‚w&÷÷6Äf–æÅ7VÖÖ'’r’Â7G–ÆS¢w6V7F–öåF—FÆRrÂÖ&v–ã¢³ÂRÂÂeÒÒÀ¢²F&ÆS¢²v–GF‡3¢²r¢rÂ#UÒÂ&öG“¢7VÖÖ'’ç&÷w2æÖ‚‡&÷r’Óâ·²FW‡C¢&÷ræÆ&VÂÇÂrrÂ&öÆC¢G'VRÒÂ²FW‡C¢&÷rçfÇVRÇÂrrÂ&öÆC¢G'VRÂÆ–væÖVçC¢w&–v‡BrÕÒ’ÒÂÆ–÷WC¢²f–ÆÄ6öÆ÷#¢‡&÷t–æFW‚’Óâ&÷t–æFW‚ÓÓÒ7VÖÖ'’ç&÷w2æÆVæwF‚Òòr6Vc†c"r¢&÷t–æFW‚R"òr6cfc–f2r¢çVÆÂÂ„Æ–æT6öÆ÷#¢r6#†3–F2rÂdÆ–æT6öÆ÷#¢r6#†3–F2rÂFF–ætÆVgC¢‚’ÓâbÂFF–æu&–v‡C¢‚’ÓâbÂFF–æuF÷¢‚’ÓâRÂFF–æt&÷GFöÓ¢‚’ÓâRÒÂföçE6—¦S¢’ÂÖ&v–ã¢³ÂÂÂEÒÐ¢“°¢Ð¢6öçFVçBçW6‚€¢²FW‡C¢vRç&÷÷6ÄFö7VÖVçBæ6Æ÷6–ærÇÂrrÂföçE6—¦S¢ÂÖ&v–ã¢³ÂÂÂ%ÒÒÀ¢²FW‡C¢vRç&÷÷6ÄFö7VÖVçBç&W7V7FgVÆÇ’ÇÂrrÂföçE6—¦S¢’ÂÖ&v–ã¢³ÂÂÂ5ÒÒÀ¢²FW‡C¢vRç&÷÷6ÄFö7VÖVçBç6–væGW&RÇÂ~(	BrÂ&öÆC¢G'VRÂföçE6—¦S¢ÂÖ&v–ã¢³ÂÂÂeÒÐ¢“°¢Ð¢–b‡vRç'F–W2bb&WVF–æu'G•vR’°¢6öç7B'G•&÷w2Òµ²rrÂG"‚vgVÆÄæÖRr’ÂG"‚w6–væGW&Rr’ÂG"‚w6VÂr•ÒÂââçvRç'G•&öÆW2æÖ‚‡&öÆR’Óâ¶66…'G•&öÆTÆ&VÂ‡&öÆR’ÂvRç'F–W5·&öÆUÓòææÖRÇÂrrÂvRç'F–W5·&öÆUÓòç6–væGW&RÇÂrrÂvRç'F–W5·&öÆUÓòç6VÂÇÂruÒ•Ó°¢6öçFVçBçW6‚‡²FW‡C¢G"‚vFö7VÖVçDFFRr’Â7G–ÆS¢w6V7F–öåF—FÆRrÂÖ&v–ã¢³ÂbÂÂeÒÒÂ²FW‡C¢vRç'F–W2æFFRÇÂÆö6ÄFFT¶W’‚’ÂÖ&v–ã¢³ÂÂÂ…ÒÒÂ²F&ÆS¢²v–GF‡3¢³ƒÂr¢rÂr¢rÂr¢uÒÂ&öG“¢'G•&÷w2ÒÂÆ–÷WC¢vÆ–v‡D†÷&—¦öçFÄÆ–æW2rÂföçE6—¦S¢’Ò“°¢Ð¢Ò“°¢6öç7Bfö÷FW$'&æBÒ†7W'&VçEvRÂvT6÷VçB’Óâ‡°¢6öÇVÖç3¢°¢²v–GFƒ¢sRÂFW‡C¢rrÒÀ¢²v–GFƒ¢r¢rÂFW‡C¢G¶7W'&VçEvWÒòG·vT6÷VçGÖÂÆ–væÖVçC¢v6VçFW"rÂ&öÆC¢G'VRÂ6öÆ÷#¢r3C3SCfrÂföçE6—¦S¢‚ÂÖ&v–ã¢³Â’ÂÂÒÒÀ¢²v–GFƒ¢sRÂ6öÇVÖç3¢·²–ÖvS¢ÆövòÂv–GFƒ¢#RÒÂ²v–GFƒ¢r¢rÂ7F6³¢·²FW‡C¢5E%T5Dõ5ôDô5TÔTåEô%$äBææÖRÂ&öÆC¢G'VRÂföçE6—¦S¢Â6öÆ÷#¢r3sV6C2rÂÆ–væÖVçC¢w&–v‡BrÒÂ²FW‡C¢5E%T5Dõ5ôDô5TÔTåEô%$äBç6—FRÂföçE6—¦S¢bÂ6öÆ÷#¢r3cCsC†"rÂÆ–væÖVçC¢w&–v‡BrÒÂ²FW‡C¢5E%T5Dõ5ôDô5TÔTåEô%$äBç6ÆövâÂföçE6—¦S¢bÂ6öÆ÷#¢r3cCsC†"rÂÆ–væÖVçC¢w&–v‡BrÕÒÕÒÂ6öÇVÖäv¢bÐ¢Ð¢Ò“°¢6öç7Bfö÷FW"Ò†7W'&VçEvRÂvT6÷VçB’Óâ°¢6öç7B'&æBÒfö÷FW$'&æB†7W'&VçEvRÂvT6÷VçB“°¢–b‚&WVF–æu'G•vR’&WGW&â²ââæ'&æBÂÖ&v–ã¢³3BÂbÂ3BÂUÒÓ°¢6öç7BFö7VÖVçDFFRÒ&WVF–æu'G•vRç'F–W2æFFRÇÂÆö6ÄFFT¶W’‚“°¢6öç7B'G•&÷w2Ò&WVF–æu'G•vRç'G•&öÆW2æÖ‚‡&öÆR’Óâ°¢6öç7B'G’Ò&WVF–æu'G•vRç'F–W5·&öÆUÒÇÂ·Ó°¢&WGW&â°¢²FW‡C¢66…'G•&öÆTÆ&VÂ‡&öÆR’Â&öÆC¢G'VRÂ6öÆ÷#¢r3sV6C2rÒÀ¢²FW‡C¢G·G"‚vgVÆÄæÖRr—Ó¢G·'G’ææÖRÇÂrwÖÒÀ¢²FW‡C¢G·G"‚w6–væGW&Rr—Ó¢G·'G’ç6–væGW&RÇÂrwÖÒÀ¢²7F6³¢·²FW‡C¢G·G"‚w6VÂr—Ó¢G·'G’ç6VÂÇÂrwÖÒÂ²FW‡C¢G·G"‚vFö7VÖVçDFFRr—Ó¢G¶Fö7VÖVçDFFWÖÂ6öÆ÷#¢r3cCsC†"rÂföçE6—¦S¢bÂÖ&v–ã¢³Â2ÂÂÒÕÒÐ¢Ó°¢Ò“°¢&WGW&â°¢Ö&v–ã¢³3BÂÂ3BÂÒÀ¢7F6³¢°¢²F&ÆS¢²v–GF‡3¢³c‚Âr¢rÂr¢rÂr¢uÒÂ&öG“¢'G•&÷w2ÒÂÆ–÷WC¢²„Æ–æT6öÆ÷#¢r63vCVSRrÂdÆ–æT6öÆ÷#¢r63vCVSRrÂFF–ætÆVgC¢‚’ÓâBÂFF–æu&–v‡C¢‚’ÓâBÂFF–æuF÷¢‚’Óâ2ÂFF–æt&÷GFöÓ¢‚’Óâ2ÒÂföçE6—¦S¢rÒÀ¢²ââæ'&æBÂÖ&v–ã¢³ÂRÂÂÒÐ¢Ð¢Ó°¢Ó°¢6öç7BFVf–æ—F–öâÒ°¢vU6—¦S¢tBrÂvTÖ&v–ç3¢³3BÂ3‚Â3BÂ&WVF–æu'G•vRò3‚¢ƒ…ÒÂFVfVÇE7G–ÆS¢²föçC¢u&ö&÷FòrÂföçE6—¦S¢’Â6öÆ÷#¢r3C#6BrÒÀ¢7G–ÆW3¢²F—FÆS¢²föçE6—¦S¢‚Â&öÆC¢G'VRÂ6öÆ÷#¢r3sV6C2rÂÖ&v–ã¢³ÂÂÂÒÒÂÖWF¢²föçE6—¦S¢Â6öÆ÷#¢r3C3SCfrÂÖ&v–ã¢³ÂÂÂ5ÒÒÂ6V7F–öåF—FÆS¢²föçE6—¦S¢"Â&öÆC¢G'VRÂ6öÆ÷#¢r3sV6C2rÒÂF&ÆT†VFW#¢²&öÆC¢G'VRÂ6öÆ÷#¢r3#&SS’rÂföçE6—¦S¢‚ÒÒÀ¢6öçFVçBÀ¢fö÷FW ¢Ó°¢&WGW&âæWr&öÖ—6R‚‡&W6öÇfR’ÓâFdÖ¶Ræ7&VFUFb†FVf–æ—F–öâ’ævWD&Æö"‡&W6öÇfR’“°§Ð ¦7–æ2gVæ7F–öâ7&VFTW†6VÅ&W÷'B‡&W÷'B’°¢6öç7B²FVfVÇC¢W†6VÄ¥2ÒÒv—B–×÷'B‚vW†6VÆ§2r“°¢6öç7Bv÷&¶&öö²ÒæWrW†6VÄ¥2åv÷&¶&öö²‚“°¢v÷&¶&öö²æ7&VF÷"Òu7G'V7Dõ2s²v÷&¶&öö²æ7&VFVBÒæWrFFR‚“°¢6öç7BÆövòÒv—BÆöE&W÷'DÆövò‚“°¢6öç7B–ÖvT–BÒv÷&¶&öö²æFD–ÖvR‡²&6ScC¢ÆövòÂW‡FVç6–öã¢wærrÒ“°¢6öç7BW6VE6†VWDæÖW2ÒæWr6WB‚“°¢6öç7B6†VWDæÖTf÷"Ò‡vRÂvT–æFW‚’Óâ°¢6öç7B6ÆVæVBÒG·vT–æFW‚²ÒG·vRç6V7F–öäæÖRÇÂvRæö&¦V7DæÖRÇÂvRçF—FÆWÖç&WÆ6R‚õµÅÂò£ó¥ÅµÅÕÒ²örÂrr’ç&WÆ6R‚õÇ2²örÂrr’çG&–Ò‚’ÇÂ7G'V7Dõ2G·vT–æFW‚²Ö°¢ÆWBæÖRÒ6ÆVæVBç6Æ–6RƒÂ3“°¢ÆWB7Vff—‚Ò#°¢v†–ÆR‡W6VE6†VWDæÖW2æ†2†æÖR’’²6öç7BVæF–ærÒG·7Vff—‡Ö²æÖRÒG¶6ÆVæVBç6Æ–6RƒÂ3ÒVæF–æræÆVæwF‚—ÒG¶VæF–æwÖ²7Vff—‚³Ò²Ð¢W6VE6†VWDæÖW2æFB†æÖR“°¢&WGW&âæÖS°¢Ó°¢66…&W÷'EvW2‡&W÷'B’æf÷$V6‚‚‡vRÂvT–æFW‚’Óâ°¢6öç7Bv÷&·6†VWBÒv÷&¶&öö²æFEv÷&·6†VWB‡6†VWDæÖTf÷"‡vRÂvT–æFW‚’Â²vU6WGW¢²W%6—¦S¢’Â÷&–VçFF–öã¢w÷'G&—BrÂf—EFõvS¢G'VRÂf—EFõv–GFƒ¢Âf—EFô†V–v‡C¢Â†÷&—¦öçFÄ6VçFW&VC¢G'VRÂÖ&v–ç3¢²ÆVgC¢ã2Â&–v‡C¢ã2ÂF÷¢ãRÂ&÷GFöÓ¢ã‚Â†VFW#¢ã"Âfö÷FW#¢ã"ÒÒÒ“°¢6öç7BÖ„6öÇVÖç2ÒÖF‚æÖ‚ƒbÂââçvRçF&ÆW2æÖ‚‡F&ÆR’ÓâF&ÆRæ6öÇVÖç2æÆVæwF‚’“°¢v÷&·6†VWBæÖW&vT6VÆÇ2ƒÂÂÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂƒÂ’çfÇVRÒvRçF—FÆS²v÷&·6†VWBævWD6VÆÂƒÂ’æföçBÒ²6—¦S¢rÂ&öÆC¢G'VRÂ6öÆ÷#¢²&v#¢tdcsT4C2rÒÓ°¢ÆWBÖWF&÷rÒ#°¢–b‡vRæFö7VÖVçDçVÖ&W"’²v÷&·6†VWBæÖW&vT6VÆÇ2†ÖWF&÷rÂÂÖWF&÷rÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂ†ÖWF&÷rÂ’çfÇVRÒG·vRæçVÖ&W$Æ&VÂÇÂG"‚vFö7VÖVçDçVÖ&W"r—Ó¢G·vRæFö7VÖVçDçVÖ&W'Ö²ÖWF&÷r³Ò²Ð¢v÷&·6†VWBæÖW&vT6VÆÇ2†ÖWF&÷rÂÂÖWF&÷rÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂ†ÖWF&÷rÂ’çfÇVRÒG·vRæö&¦V7DÆ&VÇÓ¢G·vRæö&¦V7DæÖWÖ²ÖWF&÷r³Ò°¢v÷&·6†VWBæÖW&vT6VÆÇ2†ÖWF&÷rÂÂÖWF&÷rÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂ†ÖWF&÷rÂ’çfÇVRÒG·vRç6V7F–öäÆ&VÇÓ¢G·vRç6V7F–öäæÖWÖ°¢ÆWB7W'6÷"ÒÖWF&÷r²#°¢–b‡vRç&÷÷6ÄFö7VÖVçB’°¢6öç7B6VæFW"ÒvRç&÷÷6ÄFö7VÖVçBæ6öçF7G3òç6VæFW"ÇÂ·Ó°¢6öç7B&V6—–VçBÒvRç&÷÷6ÄFö7VÖVçBæ6öçF7G3òç&V6—–VçBÇÂ·Ó°¢v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"ÂÂ7W'6÷"ÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’çfÇVRÒvRç&÷÷6ÄFö7VÖVçBæw&VWF–ærÇÂrs²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æföçBÒ²&öÆC¢G'VRÂ6—¦S¢Ó²7W'6÷"³Ò°¢v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"ÂÂ7W'6÷"ÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’çfÇVRÒvRç&÷÷6ÄFö7VÖVçBæ–çG&òÇÂrs²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æÆ–væÖVçBÒ²w&FW‡C¢G'VRÂfW'F–6Ã¢wF÷rÓ²v÷&·6†VWBævWE&÷r†7W'6÷"’æ†V–v‡BÒ3²7W'6÷"³Ò#°¢v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’çfÇVRÒ6VæFW"çF—FÆRÇÂG"‚w&÷÷6Å6VæFW"r“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æföçBÒ²&öÆC¢G'VRÂ6öÆ÷#¢²&v#¢tdcsT4C2rÒÓ°¢v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"Â"Â7W'6÷"ÂÖF‚æÖ‚ƒ"ÂÖF‚æfÆö÷"†Ö„6öÇVÖç2ò"’’“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â"’çfÇVRÒG·G"‚vgVÆÄæÖRr—Ó¢G·6VæFW"ææÖRÇÂ~(	BwÕÆâG·G"‚w&÷÷6Ä÷&væ—¦F–öâr—Ó¢G·6VæFW"æ÷&væ—¦F–öâÇÂ~(	BwÕÆâG·G"‚w†öæRr—Ó¢G·6VæFW"ç†öæRÇÂ~(	BwÖ²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â"’æÆ–væÖVçBÒ²w&FW‡C¢G'VRÂfW'F–6Ã¢wF÷rÓ°¢6öç7B&V6—–VçDÆ&VÄ6öÇVÖâÒÖF‚æÖ‚ƒ2ÂÖF‚æfÆö÷"†Ö„6öÇVÖç2ò"’²“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â&V6—–VçDÆ&VÄ6öÇVÖâ’çfÇVRÒ&V6—–VçBçF—FÆRÇÂG"‚w&÷÷6Å&V6—–VçBr“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â&V6—–VçDÆ&VÄ6öÇVÖâ’æföçBÒ²&öÆC¢G'VRÂ6öÆ÷#¢²&v#¢tdcsT4C2rÒÓ°¢–b‡&V6—–VçDÆ&VÄ6öÇVÖâÂÖ„6öÇVÖç2’²v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"Â&V6—–VçDÆ&VÄ6öÇVÖâ²Â7W'6÷"ÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â&V6—–VçDÆ&VÄ6öÇVÖâ²’çfÇVRÒG·G"‚vgVÆÄæÖRr—Ó¢G·&V6—–VçBææÖRÇÂ~(	BwÕÆâG·G"‚w&÷÷6Ä÷&væ—¦F–öâr—Ó¢G·&V6—–VçBæ÷&væ—¦F–öâÇÂ~(	BwÖ²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â&V6—–VçDÆ&VÄ6öÇVÖâ²’æÆ–væÖVçBÒ²w&FW‡C¢G'VRÂfW'F–6Ã¢wF÷rÓ²Ð¢v÷&·6†VWBævWE&÷r†7W'6÷"’æ†V–v‡BÒCc²7W'6÷"³Ò#°¢Ð¢–b‡vRæ÷&væ—¦F–öç2’°¢v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"ÂÂ7W'6÷"ÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’çfÇVRÒG"‚v÷&væ—¦F–öäFö7VÖVçG2r“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æföçBÒ²&öÆC¢G'VRÂ6—¦S¢"Â6öÆ÷#¢²&v#¢tdcsT4C2rÒÓ²7W'6÷"³Ò°¢44…ôõ$tä•¤D”ôåõ$ôÄU2æf÷$V6‚‚‡&öÆR’Óâ°¢6öç7B6&BÒvRæ÷&væ—¦F–öç5·&öÆUÒÇÂ·Ó°¢6öç7BFWF–Ç2Ò6&BçG—RÓÓÒv–æF—f–GVÂp¢òG·G"‚vgVÆÄæÖRr—Ó¢G¶6&BægVÆÄæÖRÇÂ~(	BwÓ²G·G"‚w77÷'E6W&–W2r—Ó¢G¶6&Bç77÷'E6W&–W2ÇÂ~(	BwÓ²G·G"‚w77÷'DçVÖ&W"r—Ó¢G¶6&Bç77÷'DçVÖ&W"ÇÂ~(	BwÖ ¢¢G·G"‚v6ö×ç”æÖRr—Ó¢G¶6&Bæ6ö×ç’ÇÂ~(	BwÓ²G·G"‚v–æâr—Ó¢G¶6&Bæ–æâÇÂ~(	BwÓ²G·G"‚v·r—Ó¢G¶6&Bæ·ÇÂ~(	BwÖ°¢v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’çfÇVRÒG·G"‡&öÆR—Ò+rG·G"†6&BçG—RÓÓÒv–æF—f–GVÂròv–æF—f–GVÂr¢vÆVvÄVçF—G’r—Ö²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æföçBÒ²&öÆC¢G'VRÓ°¢v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â"’çfÇVRÒFWF–Ç3°¢v÷&·6†VWBævWD6VÆÂ†7W'6÷"ÂÖF‚æÖ–âƒRÂÖ„6öÇVÖç2’’çfÇVRÒ6&Bæf–ÆTæÖRÇÂ~(	Bs°¢7W'6÷"³Ò°¢Ò“°¢7W'6÷"³Ò°¢Ð¢vRçF&ÆW2æf÷$V6‚‚‡F&ÆR’Óâ°¢v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"ÂÂ7W'6÷"ÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’çfÇVRÒF&ÆRçF—FÆS²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æföçBÒ²&öÆC¢G'VRÂ6—¦S¢"Â6öÆ÷#¢²&v#¢tdcsT4C2rÒÓ²7W'6÷"³Ò°¢6öç7B†VFW"Òv÷&·6†VWBævWE&÷r†7W'6÷"“²F&ÆRæ6öÇVÖç2æf÷$V6‚‚†6öÇVÖâÂ–æFW‚’Óâ²6öç7B6VÆÂÒ†VFW"ævWD6VÆÂ†–æFW‚²“²6VÆÂçfÇVRÒ6öÇVÖâæÆ&VÃ²6VÆÂæföçBÒ²&öÆC¢G'VRÂ6öÆ÷#¢²&v#¢tdddddddbrÒÓ²6VÆÂæf–ÆÂÒ²G—S¢wGFW&ârÂGFW&ã¢w6öÆ–BrÂft6öÆ÷#¢²&v#¢tdcsT4C2rÒÓ²6VÆÂæÆ–væÖVçBÒ²fW'F–6Ã¢vÖ–FFÆRrÂw&FW‡C¢G'VRÓ²6VÆÂæ&÷&FW"Ò²F÷¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tdc”T#dCrÒÒÂÆVgC¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tdc”T#dCrÒÒÂ&÷GFöÓ¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tdc”T#dCrÒÒÂ&–v‡C¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tdc”T#dCrÒÒÓ²Ò“²†VFW"æ†V–v‡BÒ#ƒ²7W'6÷"³Ò°¢6öç7B&÷w2ÒF&ÆRç&÷w2æÆVæwF‚òF&ÆRç&÷w2¢·²·F&ÆRæ6öÇVÖç5³Òæ¶W•Ó¢G"‚væôVçG&–W2r’ÕÓ°¢&÷w2æf÷$V6‚‚‡&÷r’Óâ²6öç7BW†6VÅ&÷rÒv÷&·6†VWBævWE&÷r†7W'6÷"“²F&ÆRæ6öÇVÖç2æf÷$V6‚‚†6öÇVÖâÂ–æFW‚’Óâ²6öç7B6VÆÂÒW†6VÅ&÷rævWD6VÆÂ†–æFW‚²“²6VÆÂçfÇVRÒ6öÇVÖâæçVÖ&W"ÇÂ6öÇVÖâæÖöæW’ò„çVÖ&W"‡&÷u¶6öÇVÖâæ¶W•Ò’ÇÂ’¢7G&–ær‡&÷u¶6öÇVÖâæ¶W•Òóòrr“²–b†6öÇVÖâæÖöæW’’6VÆÂæçVÔf×BÒG¶6öÇVÖâç6–væVBòr²r¢rwÒ2Â23ã.(+Ò#µµ&VEÒÒ2Â23ã.(+Ò#³ã.(+Ò&²–b†6öÇVÖâçFöæR’²6öç7BFöæRÒ66„&Ææ6T6Æ72„çVÖ&W"‡&÷u¶6öÇVÖâæ¶W•Ò’ÇÂ“²–b‡FöæRÓÒv—2×¦W&òr’6VÆÂæföçBÒ²&öÆC¢G'VRÂ6öÆ÷#¢²&v#¢FöæRÓÓÒv—2ÖæVvF—fRròtddC“3ƒD"r¢tdc3„T"rÒÓ²Ò6VÆÂæÆ–væÖVçBÒ²fW'F–6Ã¢wF÷rÂw&FW‡C¢G'VRÂ†÷&—¦öçFÃ¢6öÇVÖâæçVÖ&W"ÇÂ6öÇVÖâæÖöæW’òw&–v‡Br¢vÆVgBrÓ²6VÆÂæ&÷&FW"Ò²F÷¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tddCDDdT"rÒÒÂÆVgC¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tddCDDdT"rÒÒÂ&÷GFöÓ¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tddCDDdT"rÒÒÂ&–v‡C¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tddCDDdT"rÒÒÓ²Ò“²7W'6÷"³Ò²Ò“°¢–b„çVÖ&W"æ—4f–æ—FR‡F&ÆRçF÷FÂ’’²v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"ÂÂ7W'6÷"ÂÖ„6öÇVÖç2Ò“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’çfÇVRÒG"‚w&÷uF÷FÂr“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æföçBÒ²&öÆC¢G'VRÓ²v÷&·6†VWBævWD6VÆÂ†7W'6÷"ÂÖ„6öÇVÖç2’çfÇVRÒF&ÆRçF÷FÃ²v÷&·6†VWBævWD6VÆÂ†7W'6÷"ÂÖ„6öÇVÖç2’æçVÔf×BÒr2Â23ã.(+Ò"s²v÷&·6†VWBævWD6VÆÂ†7W'6÷"ÂÖ„6öÇVÖç2’æföçBÒ²&öÆC¢G'VRÓ²7W'6÷"³Ò²Ð¢‡F&ÆRç7VÖÖ&–W2ÇÂµÒ’æf÷$V6‚‚‡7VÖÖ'’’Óâ°¢v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"ÂÂ7W'6÷"ÂÖ„6öÇVÖç2“°¢6öç7B6VÆÂÒv÷&·6†VWBævWD6VÆÂ†7W'6÷"Â“°¢6VÆÂçfÇVRÒ66…&W÷'E7VÖÖ'•FW‡B‡7VÖÖ'’“°¢6VÆÂæföçBÒ²&öÆC¢G'VRÂâââ‡7VÖÖ'“òçFöæRÓÓÒv—2ÖæVvF—fRrò²6öÆ÷#¢²&v#¢tddC“3ƒD"rÒÒ¢7VÖÖ'“òçFöæRÓÓÒv—2×÷6—F—fRrò²6öÆ÷#¢²&v#¢tdc3„T"rÒÒ¢·Ò’Ó°¢7W'6÷"³Ò°¢Ò“°¢7W'6÷"³Ò#°¢Ò“°¢–b‡vRç&÷÷6ÄFö7VÖVçB’°¢6öç7B7VÖÖ'’ÒvRç&÷÷6ÄFö7VÖVçBæf–æÅ7VÖÖ'“°¢–b‡7VÖÖ'“òç&÷w3òæÆVæwF‚’°¢v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"ÂÂ7W'6÷"ÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’çfÇVRÒ7VÖÖ'’çF—FÆRÇÂG"‚w&÷÷6Äf–æÅ7VÖÖ'’r“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æföçBÒ²&öÆC¢G'VRÂ6—¦S¢"Â6öÆ÷#¢²&v#¢tdcsT4C2rÒÓ²7W'6÷"³Ò°¢7VÖÖ'’ç&÷w2æf÷$V6‚‚‡&÷rÂ&÷t–æFW‚’Óâ°¢v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"ÂÂ7W'6÷"ÂÖ„6öÇVÖç2Ò“²6öç7BÆ&VÄ6VÆÂÒv÷&·6†VWBævWD6VÆÂ†7W'6÷"Â“²Æ&VÄ6VÆÂçfÇVRÒ&÷ræÆ&VÂÇÂrs²Æ&VÄ6VÆÂæföçBÒ²&öÆC¢G'VRÓ°¢6öç7BfÇVT6VÆÂÒv÷&·6†VWBævWD6VÆÂ†7W'6÷"ÂÖ„6öÇVÖç2“²fÇVT6VÆÂçfÇVRÒ&÷rçfÇVRÇÂrs²fÇVT6VÆÂæföçBÒ²&öÆC¢G'VRÂâââ‡&÷t–æFW‚ÓÓÒ7VÖÖ'’ç&÷w2æÆVæwF‚Òò²6öÆ÷#¢²&v#¢tdc3„T"rÒÒ¢·Ò’Ó²fÇVT6VÆÂæÆ–væÖVçBÒ²†÷&—¦öçFÃ¢w&–v‡BrÓ°¢¶Æ&VÄ6VÆÂÂfÇVT6VÆÅÒæf÷$V6‚‚†6VÆÂ’Óâ²6VÆÂæf–ÆÂÒ²G—S¢wGFW&ârÂGFW&ã¢w6öÆ–BrÂft6öÆ÷#¢²&v#¢&÷t–æFW‚ÓÓÒ7VÖÖ'’ç&÷w2æÆVæwF‚ÒòtddTc„c"r¢&÷t–æFW‚R"òtddcdc”d2r¢tdddddddbrÒÓ²6VÆÂæ&÷&FW"Ò²F÷¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tdd#„3”D2rÒÒÂÆVgC¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tdd#„3”D2rÒÒÂ&÷GFöÓ¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tdd#„3”D2rÒÒÂ&–v‡C¢²7G–ÆS¢wF†–ârÂ6öÆ÷#¢²&v#¢tdd#„3”D2rÒÒÓ²Ò“°¢7W'6÷"³Ò°¢Ò“°¢7W'6÷"³Ò°¢Ð¢v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"ÂÂ7W'6÷"ÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’çfÇVRÒvRç&÷÷6ÄFö7VÖVçBæ6Æ÷6–ærÇÂrs²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æÆ–væÖVçBÒ²w&FW‡C¢G'VRÓ²7W'6÷"³Ò#°¢v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"ÂÂ7W'6÷"ÂÖ„6öÇVÖç2“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’çfÇVRÒG·vRç&÷÷6ÄFö7VÖVçBç&W7V7FgVÆÇ’ÇÂrwÕÆâG·vRç&÷÷6ÄFö7VÖVçBç6–væGW&RÇÂ~(	BwÖ²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æföçBÒ²&öÆC¢G'VRÓ²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æÆ–væÖVçBÒ²w&FW‡C¢G'VRÓ²v÷&·6†VWBævWE&÷r†7W'6÷"’æ†V–v‡BÒ3#²7W'6÷"³Ò#°¢Ð¢–b‡vRç'F–W2’°¢6öç7BFö7VÖVçDFFRÒvRç'F–W2æFFRÇÂÆö6ÄFFT¶W’‚“°¢vRç'G•&öÆW2æf÷$V6‚‚‡&öÆR’Óâ²6öç7B'G’ÒvRç'F–W5·&öÆUÒÇÂ·Ó²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’çfÇVRÒ66…'G•&öÆTÆ&VÂ‡&öÆR“²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â’æföçBÒ²&öÆC¢G'VRÓ²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Â"’çfÇVRÒG·G"‚vgVÆÄæÖRr—Ó¢G·'G’ææÖRÇÂrwÖ²v÷&·6†VWBævWD6VÆÂ†7W'6÷"ÂB’çfÇVRÒG·G"‚w6–væGW&Rr—Ó¢G·'G’ç6–væGW&RÇÂrwÖ²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Âb’çfÇVRÒG·G"‚w6VÂr—Ó¢G·'G’ç6VÂÇÂrwÕÆâG·G"‚vFö7VÖVçDFFRr—Ó¢G¶Fö7VÖVçDFFWÖ²v÷&·6†VWBævWD6VÆÂ†7W'6÷"Âb’æÆ–væÖVçBÒ²w&FW‡C¢G'VRÂfW'F–6Ã¢wF÷rÓ²7W'6÷"³Ò²Ò“²7W'6÷"³Ò#°¢Ð¢v÷&·6†VWBæFD–ÖvR†–ÖvT–BÂ²FÃ¢²6öÃ¢Ö„6öÇVÖç2Ò2Â&÷s¢7W'6÷"ÒÒÂW‡C¢²v–GFƒ¢CbÂ†V–v‡C¢CbÒÒ“°¢v÷&·6†VWBæÖW&vT6VÆÇ2†7W'6÷"ÂÖ„6öÇVÖç2Ò"Â7W'6÷"²"ÂÖ„6öÇVÖç2“²6öç7B'&æD6VÆÂÒv÷&·6†VWBævWD6VÆÂ†7W'6÷"ÂÖ„6öÇVÖç2Ò"“²'&æD6VÆÂçfÇVRÒGµ5E%T5Dõ5ôDô5TÔTåEô%$äBææÖWÕÆâGµ5E%T5Dõ5ôDô5TÔTåEô%$äBæÖFWÕÆâGµ5E%T5Dõ5ôDô5TÔTåEô%$äBç6—FWÕÆâGµ5E%T5Dõ5ôDô5TÔTåEô%$äBç6ÆövçÖ²'&æD6VÆÂæföçBÒ²&öÆC¢G'VRÂ6öÆ÷#¢²&v#¢tdcsT4C2rÒÂ6—¦S¢Ó²'&æD6VÆÂæÆ–væÖVçBÒ²†÷&—¦öçFÃ¢w&–v‡BrÂfW'F–6Ã¢vÖ–FFÆRrÂw&FW‡C¢G'VRÓ²v÷&·6†VWBævWE&÷r†7W'6÷"’æ†V–v‡BÒ3#²v÷&·6†VWBævWE&÷r†7W'6÷"²’æ†V–v‡BÒ#²v÷&·6†VWBævWE&÷r†7W'6÷"²"’æ†V–v‡BÒ#°¢v÷&·6†VWBæ†VFW$fö÷FW"æöFDfö÷FW"Òd2eòdâe"Gµ5E%T5Dõ5ôDô5TÔTåEô%$äBææÖWÖ°¢v÷&·6†VWBæ†VFW$fö÷FW"æWfVäfö÷FW"Òd2eòdâe"Gµ5E%T5Dõ5ôDô5TÔTåEô%$äBææÖWÖ°¢6öç7Bv–GF‡2Ò³"Â3bÂ‚Â#"Â‚Â…Ó²f÷"†ÆWB–æFW‚Ò²–æFW‚ÃÒÖ„6öÇVÖç3²–æFW‚³Ò’v÷&·6†VWBævWD6öÇVÖâ†–æFW‚’çv–GF‚Òv–GF‡5¶–æFW‚ÒÒÇÂƒ°¢v÷&·6†VWBçf–Ww2Ò·²7FFS¢vg&÷¦VârÂ•7Æ—C¢ÖWF&÷r²"ÕÓ°¢Ò“°¢6öç7B'VffW"Òv—Bv÷&¶&öö²ç†Ç7‚çw&—FT'VffW"‚“°¢&WGW&âæWr&Æö"…¶'VffW%ÒÂ²G—S¢vÆ–6F–öâ÷fæBæ÷Vç†ÖÆf÷&ÖG2Ööff–6VFö7VÖVçBç7&VG6†VWFÖÂç6†VWBrÒ“°§Ð ¦gVæ7F–öâ&W÷'Df–ÆTæÖR‡&W÷'BÂW‡FVç6–öâ’°¢6öç7B6fRÒG·&W÷'BçF—FÆWÒG·&W÷'BæFö7VÖVçDçVÖ&W"òþ(IeòG·&W÷'BæFö7VÖVçDçVÖ&W"ç&WÆ6R‚õî(IeÇ2¢÷RÂrr—Ö¢rwÕòG·&W÷'Bæö&¦V7DæÖWÕòG·&W÷'Bç6V7F–öäæÖWÖç&WÆ6R‚õµÅÂó¢£ò#ÃçÅÒ²örÂuòr’ç&WÆ6R‚õÇ2²örÂuòr’ç6Æ–6RƒÂ“°¢&WGW&âG·6fRÇÂu7G'V7Dõ2wÒâG¶W‡FVç6–öçÖ°§Ð ¦gVæ7F–öâF÷væÆöE&W÷'D&Æö"†&Æö"Âf–ÆVæÖR’°¢6öç7BÆ–æ²ÒFö7VÖVçBæ7&VFTVÆVÖVçB‚vr“²6öç7BW&ÂÒU$Âæ7&VFTö&¦V7EU$Â†&Æö"“²Æ–æ²æ‡&VbÒW&Ã²Æ–æ²æF÷væÆöBÒf–ÆVæÖS²Fö7VÖVçBæ&öG’æVæB†Æ–æ²“²Æ–æ²æ6Æ–6²‚“²Æ–æ²ç&VÖ÷fR‚“²6WEF–ÖV÷WB‚‚’ÓâU$Âç&Wfö¶Tö&¦V7EU$Â‡W&Â’ÂS“°§Ð ¦7–æ2gVæ7F–öâFVÆ—fW$66…&W÷'B‡&W÷'BÂf÷&ÖBÂ6†&RÒfÇ6R’°¢6öç7B—5FbÒf÷&ÖBÓÓÒwFbs°¢6öç7B&Æö"Ò—5Fbòv—B7&VFUFe&W÷'B‡&W÷'B’¢v—B7&VFTW†6VÅ&W÷'B‡&W÷'B“°¢6öç7Bf–ÆRÒæWrf–ÆR…¶&Æö%ÒÂ&W÷'Df–ÆTæÖR‡&W÷'BÂ—5FbòwFbr¢w†Ç7‚r’Â²G—S¢&Æö"çG—RÒ“°¢–b‡6†&Rbbæf–vF÷"ç6†&Rbb‚æf–vF÷"æ6å6†&RÇÂæf–vF÷"æ6å6†&R‡²f–ÆW3¢¶f–ÆUÒÒ’’’°¢v—Bæf–vF÷"ç6†&R‡²F—FÆS¢&W÷'BçF—FÆRÂFW‡C¢G·&W÷'Bæö&¦V7DæÖWÒ+rG·&W÷'Bç6V7F–öäæÖWÖÂf–ÆW3¢¶f–ÆUÒÒ“°¢&WGW&ã°¢Ð¢F÷væÆöE&W÷'D&Æö"†&Æö"Âf–ÆRææÖR“°¢6†÷uFö7B‡G"‡6†&Ròw6†&UVæf–Æ&ÆRr¢w&W÷'E&VG’r’“°§Ð ¦gVæ7F–öâ66„FVÆ—fW'”7F–öç4Ö&·W‚’°¢&WGW&âÆF—b6Æ73Ò&66‚×&W÷'BÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×&W÷'BÖf÷&ÖCÒ'Fb#âG·G"‚vF÷væÆöEFbr—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×&W÷'BÖf÷&ÖCÒ'†Ç7‚#âG·G"‚vF÷væÆöDW†6VÂr—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FF×&W÷'B×6†&SÒ'Fb#âG·G"‚w6†&UFbr—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FF×&W÷'B×6†&SÒ'†Ç7‚#âG·G"‚w6†&TW†6VÂr—ÓÂö'WGFöããÂöF—cæ°§Ð ¦gVæ7F–öâ66…&W÷'D7F–öç4Ö&·W‚’°¢&WGW&âÆF—b6Æ73Ò&66‚×&W÷'B×&Wf–Wr×7F'B#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FF×&W÷'B×&Wf–WsãÇ7â&–Ö†–FFVãÒ'G'VR#î)x“Â÷7ãâG·G"‚wf–Wu&W÷'Br—ÓÂö'WGFöããÇ6ÖÆÃâG·G"‚w&W÷'E&Wf–Wt†–çBr—ÓÂ÷6ÖÆÃãÂöF—câG¶66„FVÆ—fW'”7F–öç4Ö&·W‚—Ö°§Ð ¦gVæ7F–öâ&–æD66„FVÆ—fW'”7F–öç2‡66÷RÂvWE&W÷'BÂöå7V66W72ÒçVÆÂ’°¢BB‚u¶FF×&W÷'BÖf÷&ÖEÒrÂ66÷R’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ7–æ2‚’Óâ°¢'WGFöâæF—6&ÆVBÒG'VS°¢G'’°¢6öç7B&W÷'BÒvWE&W÷'B‚“°¢v—BFVÆ—fW$66…&W÷'B‡&W÷'BÂ'WGFöâæFF6WBç&W÷'Df÷&ÖBÂfÇ6R“°¢öå7V66W73òâ‡&W÷'B“°¢Ò6F6‚†W'&÷"’²–b†W'&÷#òæ6öFRÓÒtDô5TÔTåEõ$UT•$TBr’²6öç6öÆRæW'&÷"†W'&÷"“²6†÷uFö7B‡G"‚v6öÖ–æu6ööâr’“²ÒÐ¢f–æÆÇ’²'WGFöâæF—6&ÆVBÒfÇ6S²Ð¢Ò’“°¢BB‚u¶FF×&W÷'B×6†&UÒrÂ66÷R’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ7–æ2‚’Óâ°¢'WGFöâæF—6&ÆVBÒG'VS°¢G'’°¢6öç7B&W÷'BÒvWE&W÷'B‚“°¢v—BFVÆ—fW$66…&W÷'B‡&W÷'BÂ'WGFöâæFF6WBç&W÷'E6†&RÂG'VR“°¢öå7V66W73òâ‡&W÷'B“°¢Ò6F6‚†W'&÷"’²–b†W'&÷#òææÖRÓÒt&÷'DW'&÷"rbbW'&÷#òæ6öFRÓÒtDô5TÔTåEõ$UT•$TBr’²6öç6öÆRæW'&÷"†W'&÷"“²6†÷uFö7B‡G"‚v6öÖ–æu6ööâr’“²ÒÐ¢f–æÆÇ’²'WGFöâæF—6&ÆVBÒfÇ6S²Ð¢Ò’“°§Ð ¦gVæ7F–öâ&–æD66…&W÷'D7F–öç2‡66÷RÂvWE&W÷'BÂöå7V66W72ÒçVÆÂÂvWE&Wf–Wu&W÷'BÒvWE&W÷'B’°¢B‚u¶FF×&W÷'B×&Wf–WuÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢G'’²÷Vä66…&W÷'E&Wf–Wr†vWE&Wf–Wu&W÷'B‚’ÂvWE&W÷'BÂöå7V66W72“²Ð¢6F6‚†W'&÷"’²–b†W'&÷#òæ6öFRÓÒtDô5TÔTåEõ$UT•$TBr’²6öç6öÆRæW'&÷"†W'&÷"“²6†÷uFö7B‡G"‚v6öÖ–æu6ööâr’“²ÒÐ¢Ò“°¢&–æD66„FVÆ—fW'”7F–öç2‡66÷RÂvWE&W÷'BÂöå7V66W72“°§Ð ¦gVæ7F–öâ÷Vä66„Fö7VÖVçDF–Æör†ö&¦V7D–BÂ6V7F–öä–BÂ¶–æBÂ÷F–öç2Ò·Ò’°¢6öç7B²ö&¦V7BÂ6V7F–öâÒÒf–æD66…6V7F–öâ†ö&¦V7D–BÂ6V7F–öä–B“°¢–b‚ö&¦V7BÇÂ6V7F–öâ’&WGW&ã°¢6öç7B&–6VBÒ¶–æBÓÓÒv7Bs°¢6öç7BFVfVÇEF—FÆRÒG"‡&–6VBòwv÷&´7Br¢wv÷&µ7FFVÖVçBr“°¢6öç7B6÷W&6U&W÷'BÒ÷F–öç3òç6÷W&6U&W÷'BÇÂçVÆÃ°¢6öç7BvVæW&FVDFö7VÖVçBÒ÷F–öç3òævVæW&FVDFö7VÖVçBÇÂçVÆÃ°¢6öç7B†—7F÷'”–BÒ÷F–öç3òæ†—7F÷'”–BÇÂçVÆÃ°¢6öç7BG&gBÒ6÷W&6U&W÷'@¢ò66„Fö7VÖVçDFFg&öÕ&W÷'B‡6÷W&6U&W÷'BÂ¶–æB¢¢æ÷&ÖÆ—¦T66„Fö7VÖVçB†vVæW&FVDFö7VÖVçBÂ&–6VBÂFVfVÇEF—FÆR“°¢–b‚6÷W&6U&W÷'BbbvVæW&FVDFö7VÖVçB’°¢G&gBçF—FÆRÒrs°¢G&gBæçVÖ&W"Òrs°¢G&gBæö&¦V7DæÖRÒrs°¢G&gBç6V7F–öäæÖRÒrs°¢G&gBç'F–W2Ò66„Fö7VÖVçE'F–W2†çVÆÂ“°¢G&gBçWFFVDBÒçVÆÃ°¢Ð¢G&gBæ÷&væ—¦F–öç2Òæ÷&ÖÆ—¦T66„Fö7VÖVçD÷&væ—¦F–öç2‚‡6÷W&6U&W÷'BÇÂvVæW&FVDFö7VÖVçB“òæ÷&væ—¦F–öç2ÇÂ66„÷&væ—¦F–öå&W÷'DFF†ö&¦V7B’“°¢6öç7B†VD6VÆÇ2ÒÇFƒâG·G"‚w&V6÷&DçVÖ&W"r—ÓÂ÷FƒãÇFƒâG·G"‚wv÷&´÷$ÖFW&–ÄæÖRr—ÓÂ÷FƒãÇFƒâG·G"‚wVæ—Br—ÓÂ÷FƒãÇFƒâG·G"‚wVçF—G’r—ÓÂ÷FƒâG·&–6VBòÇFƒâG·G"‚w&–6Rr—ÓÂ÷FƒãÇFƒâG·G"‚w&÷uF÷FÂr—ÓÂ÷Fƒæ¢ÇFƒâG·G"‚v§W7F–f–6F–öâr—ÓÂ÷FƒæÓÇFƒãÂ÷Fƒæ°¢6öç7B6öÇVÖäÆ–÷WBÒÆ6öÆw&÷WãÆ6öÂ6Æ73Ò'v÷&²Ö6öÂÖçVÖ&W""óãÆ6öÂ6Æ73Ò'v÷&²Ö6öÂÖæÖR"óãÆ6öÂ6Æ73Ò'v÷&²Ö6öÂ×Væ—B"óãÆ6öÂ6Æ73Ò'v÷&²Ö6öÂ×VçF—G’"óâG·&–6VBòsÆ6öÂ6Æ73Ò'v÷&²Ö6öÂ×&–6R"óãÆ6öÂ6Æ73Ò'v÷&²Ö6öÂ×F÷FÂ"óâr¢sÆ6öÂ6Æ73Ò'v÷&²Ö6öÂÖ&6—2"óâwÓÆ6öÂ6Æ73Ò'v÷&²Ö6öÂÖ7F–öç2"óãÂö6öÆw&÷Wæ°¢6öç7B&W7öç6–&ÆTÖ&·WÒ&–6V@¢òG¶66…'G”Ö&·W‚wW&f÷&ÖVBrÂG"‚wW&f÷&ÖVD'’r’ÂG&gBç'F–W2çW&f÷&ÖVB—ÒG¶66…'G”Ö&·W‚v66WFVBrÂG"‚v66WFVD'’r’ÂG&gBç'F–W2æ66WFVB—Ö ¢¢G¶66…'G”Ö&·W‚w&W&VBrÂG"‚w&W&VD'’r’ÂG&gBç'F–W2ç&W&VB—ÒG¶66…'G”Ö&·W‚v6öæf—&ÖVBrÂG"‚v6öæf—&ÖVD'’r’ÂG&gBç'F–W2æ6öæf—&ÖVB—Ö°¢6öç7B6÷W&6TÆ—7D–BÒ66‚×6÷W&6RÖ÷F–öç2ÒG¶7&VFTö&¦V7D–B‚’ç&WÆ6R‚õµæ×£Ó’ÕÒ²öv’Ârr—Ö°¢ÆWB6÷W&6T6FÆörÒ66…6V7F–öå6÷W&6T6FÆör‡6V7F–öâ“°¢6öç7B6÷W&6T6FÆötæVVG4‡–G&F–öâÒ44…õ4õU$4UôDô5TÔTåEô´”äE2ç6öÖR‚‡6÷W&6T¶–æB’Óâ°¢6öç7BfW'6–öâÒ66„GF6†ÖVçD7W'&VçB‡6V7F–öâÂ6÷W&6T¶–æB“°¢&WGW&âfW'6–öâbbfW'6–öâæÆ–æ¶VDg&öÕ&ö¦V7BbbfW'6–öâç6÷W&6T6FÆöu66ææVC°¢Ò“°¢6†÷tF–Æör†FVfVÇEF—FÆRÂG¶ö&¦V7BææÖWÒ+rG·6V7F–öâææÖWÖÂÆF—b6Æ73Ò&66‚ÖFö7VÖVçBÖVF—F÷"#âG¶66„Fö7VÖVçD÷&væ—¦F–öç4VF—F÷$Ö&·W†G&gBæ÷&væ—¦F–öç2—ÓÆF—b6Æ73Ò&66‚ÖFö7VÖVçBÖÖWF#ãÆÆ&VÃãÇ7ãâG·G"‡&–6VBòv7DæÖRr¢w7FFVÖVçDæÖRr—ÓÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#c"FFÖFö7VÖVçB×F—FÆRfÇVSÒ"G¶W66T‡FÖÂ†G&gBçF—FÆR—Ò"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG·G"‡&–6VBòv7DçVÖ&W"r¢w7FFVÖVçDçVÖ&W"r—ÓÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#ƒ"FFÖFö7VÖVçBÖçVÖ&W"fÇVSÒ"G¶W66T‡FÖÂ†G&gBæçVÖ&W"—Ò"Æ6V†öÆFW#Ò#"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG·G"‚vFö7VÖVçDö&¦V7Br—ÓÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#c"FFÖFö7VÖVçBÖö&¦V7BfÇVSÒ"G¶W66T‡FÖÂ†G&gBæö&¦V7DæÖR—Ò"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚vö&¦V7EÆ6V†öÆFW$Fö7VÖVçBr’—Ò"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG·G"‚vFö7VÖVçE6V7F–öâr—ÓÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#c"FFÖFö7VÖVçB×6V7F–öâfÇVSÒ"G¶W66T‡FÖÂ†G&gBç6V7F–öäæÖR—Ò"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚w6V7F–öåÆ6V†öÆFW$Fö7VÖVçBr’—Ò"óãÂöÆ&VÃãÂöF—cãÇ6V7F–öâFFÖ66‚×6÷W&6RÖ6FÆösãÂ÷6V7F–öããÆFFÆ—7B–CÒ"G¶W66T‡FÖÂ‡6÷W&6TÆ—7D–B—Ò"FFÖ66‚×6÷W&6RÖ÷F–öç3ãÂöFFÆ—7CãÆF—b6Æ73Ò&66‚×v÷&²×F&ÆR×w&#ãÇF&ÆR6Æ73Ò&66‚×v÷&²×F&ÆRG·&–6VBòv—2Ö7Br¢v—2×7FFVÖVçBwÒ#âG¶6öÇVÖäÆ–÷WGÓÇF†VCãÇG#âG¶†VD6VÆÇ7ÓÂ÷G#ãÂ÷F†VCãÇF&öG’FFÖ66‚×v÷&²×&÷w3ãÂ÷F&öG“âG·&–6VBòÇFfö÷CãÇG#ãÇFB6öÇ7ãÒ#R#âG·G"‚w&÷uF÷FÂr—ÓÂ÷FCãÇFBFFÖFö7VÖVçBÖw&æB×F÷FÃã(+ÓÂ÷FCãÇFCãÂ÷FCãÂ÷G#ãÂ÷Ffö÷Cæ¢rwÓÂ÷F&ÆSãÂöF—cãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ66‚ÖFB×&÷r"G—SÒ&'WGFöâ"FFÖFB×v÷&²×&÷sîûÈ²G·G"‚vFE&÷rr—ÓÂö'WGFöããÆF—b6Æ73Ò&66‚×'F–W2#âG·&W7öç6–&ÆTÖ&·WÓÆÆ&VÂ6Æ73Ò&66‚ÖFö7VÖVçBÖFFR#ãÇ7ãâG·G"‚vFö7VÖVçDFFRr—ÓÂ÷7ããÆ–çWBG—SÒ&FFR"FFÖFö7VÖVçBÖFFRfÇVSÒ"G¶G&gBç'F–W2æFFWÒ"óãÂöÆ&VÃãÂöF—cãÆF—b6Æ73Ò&66‚ÖFö7VÖVçB×6fR#ãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×6fRÖ66‚ÖFö7VÖVçCâG·G"‚w6fT–å6V7F–öâr—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò"G·&–6VBòv÷WFÆ–æRÖ'WGFöâr¢w&–Ö'’Ö'WGFöâwÒ"G—SÒ&'WGFöâ"FFÖvVæW&FR×&VÆFVBÖFö7VÖVçCâG·G"‡&–6VBòvvVæW&FU7FFVÖVçBr¢vvVæW&FT7Br—ÓÂö'WGFöããÂöF—câG¶66…&W÷'D7F–öç4Ö&·W‚—ÓÂöF—cæ“°¢6öç7BF–ÆörÒB‚u¶FFÖF–ÆöuÒr“²F–Æöræ6Æ74Æ—7BæFB‚v66‚ÖFö7VÖVçBÖF–Æörr“°¢6öç7B66÷RÒB‚u¶FFÖF–ÆörÖ6öçFVçEÒr“°¢&VæFW$66„Fö7VÖVçE6÷W&6T6FÆör‡66÷RÂ6÷W&6T6FÆörÂ6V7F–öâÂ6÷W&6T6FÆötæVVG4‡–G&F–öâ“°¢&–æD66„Fö7VÖVçE&÷w2‡66÷RÂG&gBÂ&–6VBÂ6÷W&6T6FÆörÂ6÷W&6TÆ—7D–B“°¢&–æD66„Fö7VÖVçD÷&væ—¦F–öç2‡66÷RÂG&gB“°¢–b‡6÷W&6T6FÆötæVVG4‡–G&F–öâ’‡–G&FT66…6V7F–öå6÷W&6T6FÆör‡6V7F–öâ’çF†Vâ‚†6FÆör’Óâ°¢–b‚66÷Ræ—46öææV7FVB’&WGW&ã°¢6÷W&6T6FÆörÒ6FÆös°¢&VæFW$66„Fö7VÖVçE6÷W&6T6FÆör‡66÷RÂ6÷W&6T6FÆörÂ6V7F–öâÂfÇ6R“°¢&–æD66„Fö7VÖVçE&÷w2‡66÷RÂG&gBÂ&–6VBÂ6÷W&6T6FÆörÂ6÷W&6TÆ—7D–B“°¢Ò“°¢6öç7B&WV—&VDf–VÆG2Ò°¢²6VÆV7F÷#¢u¶FFÖFö7VÖVçB×F—FÆUÒrÂ¶W“¢wF—FÆRrÒÀ¢²6VÆV7F÷#¢u¶FFÖFö7VÖVçBÖö&¦V7EÒrÂ¶W“¢vö&¦V7DæÖRrÒÀ¢²6VÆV7F÷#¢u¶FFÖFö7VÖVçB×6V7F–öåÒrÂ¶W“¢w6V7F–öäæÖRrÐ¢Ó°¢6öç7BfÆ–FFTFö7VÖVçBÒ‚’Óâ°¢6öç7BÖ—76–ærÒ&WV—&VDf–VÆG2æf–æB‚‡²6VÆV7F÷"Â¶W’Ò’Óâ7G&–ær†G&gE¶¶W•ÒÇÂrr’çG&–Ò‚’bbB‡6VÆV7F÷"Â66÷R’“°¢&WV—&VDf–VÆG2æf÷$V6‚‚‡²6VÆV7F÷"Â¶W’Ò’ÓâB‡6VÆV7F÷"Â66÷R“òç6WDGG&–'WFR‚v&–Ö–çfÆ–BrÂ7G&–ær‚7G&–ær†G&gE¶¶W•ÒÇÂrr’çG&–Ò‚’’’“°¢–b‚Ö—76–ær’&WGW&ã°¢6†÷uFö7B‡G"‚vFö7VÖVçE&WV—&VDf–VÆG2r’“°¢B†Ö—76–ærç6VÆV7F÷"Â66÷R“òæfö7W2‚“°¢6öç7BW'&÷"ÒæWrW'&÷"‡G"‚vFö7VÖVçE&WV—&VDf–VÆG2r’“°¢W'&÷"æ6öFRÒtDô5TÔTåEõ$UT•$TBs°¢F‡&÷rW'&÷#°¢Ó°¢B‚u¶FFÖFö7VÖVçB×F—FÆUÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v–çWBrÂ†WfVçB’Óâ²G&gBçF—FÆRÒWfVçBæ7W'&VçEF&vWBçfÇVRç6Æ–6RƒÂc“²WfVçBæ7W'&VçEF&vWBç&VÖ÷fTGG&–'WFR‚v&–Ö–çfÆ–Br“²Ò“°¢B‚u¶FFÖFö7VÖVçBÖçVÖ&W%ÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v–çWBrÂ†WfVçB’Óâ²G&gBæçVÖ&W"ÒWfVçBæ7W'&VçEF&vWBçfÇVRç6Æ–6RƒÂƒ“²Ò“°¢B‚u¶FFÖFö7VÖVçBÖö&¦V7EÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v–çWBrÂ†WfVçB’Óâ²G&gBæö&¦V7DæÖRÒWfVçBæ7W'&VçEF&vWBçfÇVRç6Æ–6RƒÂc“²WfVçBæ7W'&VçEF&vWBç&VÖ÷fTGG&–'WFR‚v&–Ö–çfÆ–Br“²Ò“°¢B‚u¶FFÖFö7VÖVçB×6V7F–öåÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v–çWBrÂ†WfVçB’Óâ²G&gBç6V7F–öäæÖRÒWfVçBæ7W'&VçEF&vWBçfÇVRç6Æ–6RƒÂc“²WfVçBæ7W'&VçEF&vWBç&VÖ÷fTGG&–'WFR‚v&–Ö–çfÆ–Br“²Ò“°¢B‚u¶FFÖFB×v÷&²×&÷uÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²G&gBç&÷w2çW6‚‚ââææ÷&ÖÆ—¦T66…v÷&µ&÷w2…µÒÂ&–6VB’“²&–æD66„Fö7VÖVçE&÷w2‡66÷RÂG&gBÂ&–6VBÂ6÷W&6T6FÆörÂ6÷W&6TÆ—7D–B“²Ò“°¢BB‚u¶FF×'G’Öf–VÆEÒrÂ66÷R’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v–çWBrÂ‚’Óâ²G&gBç'F–W5¶–çWBæFF6WBç'G•Õ¶–çWBæFF6WBç'G”f–VÆEÒÒ–çWBçfÇVRç6Æ–6RƒÂc“²Ò’“°¢B‚u¶FFÖFö7VÖVçBÖFFUÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ†WfVçB’Óâ²G&gBç'F–W2æFFRÒWfVçBæ7W'&VçEF&vWBçfÇVRÇÂÆö6ÄFFT¶W’‚“²Ò“°¢6öç7B&Wf–WtFö7VÖVçBÒ‚’Óâ°¢fÆ–FFTFö7VÖVçB‚“°¢&WGW&â66„Fö7VÖVçE&W÷'B†ö&¦V7BÂ6V7F–öâÂ¶–æBÂ²ââæG&gBÂF—FÆS¢G&gBçF—FÆRçG&–Ò‚’ÂçVÖ&W#¢G&gBæçVÖ&W"çG&–Ò‚’Âö&¦V7DæÖS¢G&gBæö&¦V7DæÖRçG&–Ò‚’Â6V7F–öäæÖS¢G&gBç6V7F–öäæÖRçG&–Ò‚’Ò“°¢Ó°¢6öç7BW'6—7DFö7VÖVçBÒ‚’Óâ°¢fÆ–FFTFö7VÖVçB‚“°¢G&gBçF—FÆRÒG&gBçF—FÆRçG&–Ò‚“°¢G&gBæçVÖ&W"ÒG&gBæçVÖ&W"çG&–Ò‚“°¢G&gBæö&¦V7DæÖRÒG&gBæö&¦V7DæÖRçG&–Ò‚“°¢G&gBç6V7F–öäæÖRÒG&gBç6V7F–öäæÖRçG&–Ò‚“°¢G&gBçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6V7F–öå·&–6VBòv7Br¢w7FFVÖVçBuÒÒæ÷&ÖÆ—¦T66„Fö7VÖVçB†G&gBÂ&–6VBÂFVfVÇEF—FÆR“°¢6fT66†fÆ÷r‚“°¢&WGW&â66„Fö7VÖVçE&W÷'B†ö&¦V7BÂ6V7F–öâÂ¶–æBÂG&gB“°¢Ó°¢6öç7B6ÆV$7W'&VçDf÷&ÒÒ‚’Óâ°¢6V7F–öå·&–6VBòv7Br¢w7FFVÖVçBuÒÒæ÷&ÖÆ—¦T66„Fö7VÖVçB†çVÆÂÂ&–6VBÂFVfVÇEF—FÆR“°¢6fT66†fÆ÷r‚“°¢Ó°¢B‚u¶FF×6fRÖ66‚ÖFö7VÖVçEÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢G'’°¢6öç7B&W÷'BÒW'6—7DFö7VÖVçB‚“°¢6öç7B&Wf—6–öâÒ6fTVF—FVD66…&W÷'E&Wf—6–öâ‡6V7F–öâÂ¶–æBÂ&W÷'BÂ†—7F÷'”–B“°¢6ÆV$7W'&VçDf÷&Ò‚“°¢–b‡&Wf—6–öâç&Wf–÷W4†—7F÷'”–B’6´VF—FVE&W÷'D†—7F÷'”6†ö–6R‡6V7F–öâÂ&Wf—6–öâç&Wf–÷W4†—7F÷'”–BÂF–ÆörÂFVfVÇEF—FÆR“°¢VÇ6R²&VæFW$66†fÆ÷r‚“²F–Æöræ6Æ÷6R‚“²6†÷uFö7B‡G"‚vFö7VÖVçE6fVBr’“²Ð¢Ò6F6‚†W'&÷"’²–b†W'&÷#òæ6öFRÓÒtDô5TÔTåEõ$UT•$TBr’²6öç6öÆRæW'&÷"†W'&÷"“²6†÷uFö7B‡G"‚v6öÖ–æu6ööâr’“²ÒÐ¢Ò“°¢B‚u¶FFÖvVæW&FR×&VÆFVBÖFö7VÖVçEÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢G'’°¢6öç7B&W÷'BÒW'6—7DFö7VÖVçB‚“°¢6öç7B&Wf—6–öâÒ6fTVF—FVD66…&W÷'E&Wf—6–öâ‡6V7F–öâÂ¶–æBÂ&W÷'BÂ†—7F÷'”–B“°¢6öç7B&VÆFVD¶–æBÒ&–6VBòw7FFVÖVçBr¢v7Bs°¢6öç7B&VÆFVE&÷w2ÒG&gBç&÷w2æÖ‚‡&÷r’Óâ‡²æÖS¢&÷rææÖRÂVæ—C¢&÷rçVæ—BÂVçF—G“¢&÷rçVçF—G’Ââââ‡&–6VBò²&6—3¢rrÒ¢²&–6S¢Ò’Ò’“°¢6öç7B&VÆFVDFö7VÖVçBÒ²F—FÆS¢G&gBçF—FÆRÂçVÖ&W#¢G&gBæçVÖ&W"Âö&¦V7DæÖS¢G&gBæö&¦V7DæÖRÂ6V7F–öäæÖS¢G&gBç6V7F–öäæÖRÂ&÷w3¢&VÆFVE&÷w2Â÷&væ—¦F–öç3¢G&gBæ÷&væ—¦F–öç2Â'F–W3¢66„Fö7VÖVçE'F–W2†çVÆÂ’Ó°¢6ÆV$7W'&VçDf÷&Ò‚“°¢6öç7B÷Vå&VÆFVDFö7VÖVçBÒ‚’Óâ÷Vä66„Fö7VÖVçDF–Æör†ö&¦V7D–BÂ6V7F–öä–BÂ&VÆFVD¶–æBÂ²vVæW&FVDFö7VÖVçC¢&VÆFVDFö7VÖVçBÒ“°¢–b‡&Wf—6–öâç&Wf–÷W4†—7F÷'”–B’6´VF—FVE&W÷'D†—7F÷'”6†ö–6R‡6V7F–öâÂ&Wf—6–öâç&Wf–÷W4†—7F÷'”–BÂF–ÆörÂFVfVÇEF—FÆRÂ÷Vå&VÆFVDFö7VÖVçB“°¢VÇ6R²&VæFW$66†fÆ÷r‚“²F–Æöræ6Æ÷6R‚“²6†÷uFö7B‡G"‚vFö7VÖVçE6fVBr’“²÷Vå&VÆFVDFö7VÖVçB‚“²Ð¢Ò6F6‚†W'&÷"’²–b†W'&÷#òæ6öFRÓÒtDô5TÔTåEõ$UT•$TBr’²6öç6öÆRæW'&÷"†W'&÷"“²6†÷uFö7B‡G"‚v6öÖ–æu6ööâr’“²ÒÐ¢Ò“°¢&–æD66…&W÷'D7F–öç2‡66÷RÂW'6—7DFö7VÖVçBÂ‡&W÷'B’Óâ°¢6öç7B&Wf—6–öâÒ6fTVF—FVD66…&W÷'E&Wf—6–öâ‡6V7F–öâÂ¶–æBÂ&W÷'BÂ†—7F÷'”–B“°¢–b‡&Wf—6–öâç&Wf–÷W4†—7F÷'”–B’°¢6öç7B&Wf–WtF–ÆörÒB‚u¶FF×&W÷'B×&Wf–WrÖF–ÆöuÒr“°¢–b‡&Wf–WtF–Æösòæ÷Vâ’&Wf–WtF–Æöræ6Æ÷6R‚“°¢6´VF—FVE&W÷'D†—7F÷'”6†ö–6R‡6V7F–öâÂ&Wf—6–öâç&Wf–÷W4†—7F÷'”–BÂF–ÆörÂFVfVÇEF—FÆR“°¢ÒVÇ6R&VæFW$66†fÆ÷r‚“°¢ÒÂ&Wf–WtFö7VÖVçB“°§Ð ¦gVæ7F–öâ÷Vå6V7F–öäW‡÷'DF–Æör†ö&¦V7D–BÂ6V7F–öä–B’°¢6öç7B²ö&¦V7BÂ6V7F–öâÒÒf–æD66…6V7F–öâ†ö&¦V7D–BÂ6V7F–öä–B“°¢–b‚ö&¦V7BÇÂ6V7F–öâ’&WGW&ã°¢6†÷tF–Æör‡G"‚w6V7F–öäf–ææ6U&W÷'Br’ÂG¶ö&¦V7BææÖWÒ+rG·6V7F–öâææÖWÖÂ66…&W÷'D7F–öç4Ö&·W‚’“°¢6öç7BF–ÆörÒB‚u¶FFÖF–ÆöuÒr“²F–Æöræ6Æ74Æ—7BæFB‚v66‚ÖW‡÷'BÖF–Æörr“°¢&–æD66…&W÷'D7F–öç2‚B‚u¶FFÖF–ÆörÖ6öçFVçEÒr’Â‚’Óâ6V7F–öäf–ææ6U&W÷'B†ö&¦V7BÂ6V7F–öâ’Â‡&W÷'B’Óâ°¢6fT66…&W÷'D†—7F÷'’‡6V7F–öâÂvf–ææ6RrÂ&W÷'B“°¢&VæFW$66†fÆ÷r‚“°¢Ò“°§Ð ¦gVæ7F–öâ÷Vä66„ö&¦V7DW‡÷'DF–Æör†ö&¦V7D–B’°¢6öç7Bö&¦V7BÒ66†fÆ÷tö&¦V7G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢–b‚ö&¦V7B’&WGW&ã°¢6†÷tF–Æör‡G"‚v÷fW&ÆÄFWF–ÆVE&W÷'Br’Âö&¦V7BææÖRÂ66…&W÷'D7F–öç4Ö&·W‚’“°¢6öç7BF–ÆörÒB‚u¶FFÖF–ÆöuÒr“²F–Æöræ6Æ74Æ—7BæFB‚v66‚ÖW‡÷'BÖF–Æörr“°¢&–æD66…&W÷'D7F–öç2‚B‚u¶FFÖF–ÆörÖ6öçFVçEÒr’Â‚’Óâ66„ö&¦V7DFWF–ÆVE&W÷'B†ö&¦V7B’“°§Ð ¦gVæ7F–öâ÷VäÆÄ66†fÆ÷tW‡÷'DF–Æör‚’°¢–b‚66†fÆ÷tö&¦V7G2æÆVæwF‚’&WGW&ã°¢6†÷tF–Æör‡G"‚vgVÆÄ66†fÆ÷u&W÷'Br’ÂG"‚vÆÄ66„ö&¦V7G2r’Â66…&W÷'D7F–öç4Ö&·W‚’“°¢6öç7BF–ÆörÒB‚u¶FFÖF–ÆöuÒr“²F–Æöræ6Æ74Æ—7BæFB‚v66‚ÖW‡÷'BÖF–Æörr“°¢&–æD66…&W÷'D7F–öç2‚B‚u¶FFÖF–ÆörÖ6öçFVçEÒr’Â‚’ÓâÆÄ66†fÆ÷tFWF–ÆVE&W÷'B†66†fÆ÷tö&¦V7G2’“°§Ð ¦6öç7BG&v–ætF–ÆörÒB‚u¶FFÖG&v–ærÖF–ÆöuÒr“°¦6öç7BG&v–æt6çf2ÒB‚u¶FFÖG&v–ærÖ6çf5Òr“°¦6öç7BG&v–æt6öçFW‡BÒG&v–æt6çf3òævWD6öçFW‡B‚s&BrÂ²v–ÆÅ&VDg&WVVçFÇ“¢fÇ6RÒ“°¦ÆWBG&v–æt–æ—F–Æ—¦VBÒfÇ6S°¦ÆWBG&v–æt7F—fRÒfÇ6S°¦ÆWBG&v–æuö–çFW$–BÒçVÆÃ°¦ÆWBG&v–ætÆ7Eö–çBÒçVÆÃ°¦ÆWBG&v–æuVæFõ7F6²ÒµÓ°¦ÆWBG&v–ætÖ–æ–Ö—¦VBÒfÇ6S°¦ÆWB7W'&VçDG&v–æt–BÒçVÆÃ°¦ÆWBG&v–ætF—'G’ÒfÇ6S°¦ÆWBG&v–ætF%&öÖ—6S° ¦gVæ7F–öâ6ÆV$G&v–æt6çf2‡G&6µVæFòÒG'VR’°¢–b‚G&v–æt6öçFW‡B’&WGW&ã°¢–b‡G&6µVæFò’W6„G&v–æuVæFò‚“°¢G&v–æt6öçFW‡Bç6fR‚“°¢G&v–æt6öçFW‡Bç6WEG&ç6f÷&ÒƒÂÂÂÂÂ“°¢G&v–æt6öçFW‡Bæf–ÆÅ7G–ÆRÒr6fffffbs°¢G&v–æt6öçFW‡Bæf–ÆÅ&V7BƒÂÂG&v–æt6çf2çv–GF‚ÂG&v–æt6çf2æ†V–v‡B“°¢G&v–æt6öçFW‡Bç&W7F÷&R‚“°§Ð ¦gVæ7F–öâ–æ—F–Æ—¦TG&v–æt6çf2‚’°¢–b†G&v–æt–æ—F–Æ—¦VBÇÂG&v–æt6öçFW‡B’&WGW&ã°¢6ÆV$G&v–æt6çf2†fÇ6R“°¢G&v–æt6öçFW‡BæÆ–æT6Òw&÷VæBs°¢G&v–æt6öçFW‡BæÆ–æT¦ö–âÒw&÷VæBs°¢B‚u¶FFÖG&v–ær×F—FÆUÒr’çfÇVRÒG"‚væWu6¶WF6‚r“°¢G&v–æt–æ—F–Æ—¦VBÒG'VS°§Ð ¦gVæ7F–öâW6„G&v–æuVæFò‚’°¢–b‚G&v–æt6çf2ÇÂG&v–æt–æ—F–Æ—¦VB’&WGW&ã°¢G'’°¢G&v–æuVæFõ7F6²çW6‚†G&v–æt6çf2çFôFFU$Â‚v–ÖvR÷ærr’“°¢–b†G&v–æuVæFõ7F6²æÆVæwF‚â"’G&v–æuVæFõ7F6²ç6†–gB‚“°¢Ò6F6‚·Ð§Ð ¦gVæ7F–öâ&W7F÷&TG&v–æt–ÖvR‡6÷W&6RÂgFW$ÆöB’°¢–b‚G&v–æt6öçFW‡BÇÂ6÷W&6R’&WGW&ã°¢6öç7B–ÖvRÒæWr–ÖvR‚“°¢–ÖvRæöæÆöBÒ‚’Óâ°¢6ÆV$G&v–æt6çf2†fÇ6R“°¢G&v–æt6öçFW‡BæG&t–ÖvR†–ÖvRÂÂÂG&v–æt6çf2çv–GF‚ÂG&v–æt6çf2æ†V–v‡B“°¢gFW$ÆöCòâ‚“°¢Ó°¢–ÖvRç7&2Ò6÷W&6S°§Ð ¦gVæ7F–öâVæFôG&v–ær‚’°¢6öç7B6æ6†÷BÒG&v–æuVæFõ7F6²ç÷‚“°¢–b‡6æ6†÷B’&W7F÷&TG&v–æt–ÖvR‡6æ6†÷BÂ‚’Óâ²G&v–ætF—'G’ÒG'VS²Ò“°§Ð ¦gVæ7F–öâG&v–æuö–çB†WfVçB’°¢6öç7B&V7BÒG&v–æt6çf2ævWD&÷VæF–æt6Æ–VçE&V7B‚“°¢&WGW&â°¢ƒ¢†WfVçBæ6Æ–VçE‚Ò&V7BæÆVgB’¢G&v–æt6çf2çv–GF‚ò&V7Bçv–GF‚À¢“¢†WfVçBæ6Æ–VçE’Ò&V7BçF÷’¢G&v–æt6çf2æ†V–v‡Bò&V7Bæ†V–v‡BÀ¢&W77W&S¢WfVçBçö–çFW%G—RÓÓÒwVârbbWfVçBç&W77W&RâòWfVçBç&W77W&R¢ã`¢Ó°§Ð ¦gVæ7F–öâG&uö–çFW%6VvÖVçB†WfVçB’°¢6öç7Bö–çBÒG&v–æuö–çB†WfVçB“°¢–b‚G&v–ætÆ7Eö–çB’G&v–ætÆ7Eö–çBÒö–çC°¢6öç7B&6Uv–GF‚ÒçVÖ&W"‚B‚u¶FFÖG&v–ær×v–GF…Òr’çfÇVR’ÇÂS°¢6öç7B&W77W&U66ÆRÒWfVçBçö–çFW%G—RÓÓÒwVâròãCR²ö–çBç&W77W&R¢ã¢°¢G&v–æt6öçFW‡Bæ&Vv–åF‚‚“°¢G&v–æt6öçFW‡BæÖ÷fUFò†G&v–ætÆ7Eö–çBç‚ÂG&v–ætÆ7Eö–çBç’“°¢G&v–æt6öçFW‡BæÆ–æUFò‡ö–çBç‚Âö–çBç’“°¢G&v–æt6öçFW‡Bç7G&ö¶U7G–ÆRÒB‚u¶FFÖG&v–ærÖ6öÆ÷%Òr’çfÇVRÇÂr3ƒc†S‚s°¢G&v–æt6öçFW‡BæÆ–æUv–GF‚Ò&6Uv–GF‚¢&W77W&U66ÆS°¢G&v–æt6öçFW‡Bç7G&ö¶R‚“°¢G&v–ætÆ7Eö–çBÒö–çC°§Ð ¦gVæ7F–öâ÷VäG&v–æu7GVF–ò‚’°¢–æ—F–Æ—¦TG&v–æt6çf2‚“°¢G&v–ætÖ–æ–Ö—¦VBÒfÇ6S°¢B‚u¶FFÖG&v–ær×&W7F÷&UÒr’æ†–FFVâÒG'VS°¢B‚u¶FFÖG&v–ærÖvÆÆW'•Òr’æ†–FFVâÒG'VS°¢–b‚G&v–ætF–Æöræ÷Vâ’G&v–ætF–Æörç6†÷tÖöFÂ‚“°§Ð ¦gVæ7F–öâ6Æ÷6TG&v–æu7GVF–ò‚’°¢G&v–ætÖ–æ–Ö—¦VBÒfÇ6S°¢B‚u¶FFÖG&v–ær×&W7F÷&UÒr’æ†–FFVâÒG'VS°¢–b†G&v–ætF–Æöræ÷Vâ’G&v–ætF–Æöræ6Æ÷6R‚“°§Ð ¦gVæ7F–öâÖ–æ–Ö—¦TG&v–æu7GVF–ò‚’°¢G&v–ætÖ–æ–Ö—¦VBÒG'VS°¢–b†G&v–ætF–Æöræ÷Vâ’G&v–ætF–Æöræ6Æ÷6R‚“°¢B‚u¶FFÖG&v–ær×&W7F÷&UÒr’æ†–FFVâÒfÇ6S°§Ð ¦gVæ7F–öâG&v–ætFF&6R‚’°¢–b†G&v–ætF%&öÖ—6R’&WGW&âG&v–ætF%&öÖ—6S°¢G&v–ætF%&öÖ—6RÒæWr&öÖ—6R‚‡&W6öÇfRÂ&V¦V7B’Óâ°¢–b‚‚v–æFW†VDD"r–âv–æF÷r’’²&V¦V7B†æWrW'&÷"‚t–æFW†VDD"Væf–Æ&ÆRr’“²&WGW&ã²Ð¢6öç7B&WVW7BÒ–æFW†VDD"æ÷Vâ‚w7G'V7F÷2ÖG&v–æw2ÖF"rÂ“°¢&WVW7BæöçWw&FVæVVFVBÒ‚’Óâ°¢–b‚&WVW7Bç&W7VÇBæö&¦V7E7F÷&TæÖW2æ6öçF–ç2‚vG&v–æw2r’’&WVW7Bç&W7VÇBæ7&VFTö&¦V7E7F÷&R‚vG&v–æw2rÂ²¶W•Fƒ¢v–BrÒ“°¢Ó°¢&WVW7Bæöç7V66W72Ò‚’Óâ&W6öÇfR‡&WVW7Bç&W7VÇB“°¢&WVW7BæöæW'&÷"Ò‚’Óâ&V¦V7B‡&WVW7BæW'&÷"“°¢Ò“°¢&WGW&âG&v–ætF%&öÖ—6S°§Ð ¦7–æ2gVæ7F–öâ6fTG&v–æu&V6÷&B†÷F–öç2Ò·Ò’°¢–æ—F–Æ—¦TG&v–æt6çf2‚“°¢6öç7B&WVW7FVEF—FÆRÒ7G&–ær†÷F–öç2çF—FÆRóòB‚u¶FFÖG&v–ær×F—FÆUÒr’çfÇVR’çG&–Ò‚“°¢–b†÷F–öç2ç&WV—&UF—FÆRbb&WVW7FVEF—FÆR’°¢6†÷uFö7B‡G"‚vG&v–ætæÖU&WV—&VBr’“°¢&WGW&âçVÆÃ°¢Ð¢6öç7B–BÒ7W'&VçDG&v–æt–BÇÂG&v–ærÒG´FFRææ÷r‚—ÒÒG´ÖF‚ç&æFöÒ‚’çFõ7G&–ærƒb’ç6Æ–6Rƒ"—Ö°¢6öç7B&V6÷&BÒ°¢–BÀ¢F—FÆS¢‡&WVW7FVEF—FÆRÇÂG"‚væWu6¶WF6‚r’’ç6Æ–6RƒÂƒ’À¢FFW&Ã¢G&v–æt6çf2çFôFFU$Â‚v–ÖvR÷ærr’À¢WFFVDC¢æWrFFR‚’çFô•4õ7G&–ær‚¢Ó°¢G'’°¢6öç7BFF&6RÒv—BG&v–ætFF&6R‚“°¢v—BæWr&öÖ—6R‚‡&W6öÇfRÂ&V¦V7B’Óâ°¢6öç7BG&ç67F–öâÒFF&6RçG&ç67F–öâ‚vG&v–æw2rÂw&VGw&—FRr“°¢G&ç67F–öâæö&¦V7E7F÷&R‚vG&v–æw2r’çWB‡&V6÷&B“°¢G&ç67F–öâæöæ6ö×ÆWFRÒ&W6öÇfS°¢G&ç67F–öâæöæW'&÷"Ò‚’Óâ&V¦V7B‡G&ç67F–öâæW'&÷"“°¢Ò“°¢7W'&VçDG&v–æt–BÒ–C°¢G&v–ætF—'G’ÒfÇ6S°¢B‚u¶FFÖG&v–ær×F—FÆUÒr’çfÇVRÒ&V6÷&BçF—FÆS°¢6†÷uFö7B‡G"‚vG&v–æu6fVBr’“°¢&WGW&â&V6÷&C°¢Ò6F6‚†W'&÷"’°¢6öç6öÆRçv&â‚u7G'V7Dõ2G&v–ær6÷VÆBæ÷B&R6fVC¢rÂW'&÷"“°¢6†÷uFö7B‡G"‚v6öÖ–æu6ööâr’“°¢&WGW&âçVÆÃ°¢Ð§Ð ¦7–æ2gVæ7F–öâvWE6fVDG&v–æw2‚’°¢G'’°¢6öç7BFF&6RÒv—BG&v–ætFF&6R‚“°¢6öç7B&V6÷&G2Òv—BæWr&öÖ—6R‚‡&W6öÇfRÂ&V¦V7B’Óâ°¢6öç7B&WVW7BÒFF&6RçG&ç67F–öâ‚vG&v–æw2rÂw&VFöæÇ’r’æö&¦V7E7F÷&R‚vG&v–æw2r’ævWDÆÂ‚“°¢&WVW7Bæöç7V66W72Ò‚’Óâ&W6öÇfR‡&WVW7Bç&W7VÇBÇÂµÒ“°¢&WVW7BæöæW'&÷"Ò‚’Óâ&V¦V7B‡&WVW7BæW'&÷"“°¢Ò“°¢&WGW&â&V6÷&G2ç6÷'B‚†Â"’Óâ7G&–ær†"çWFFVDB’æÆö6ÆT6ö×&R…7G&–ær†çWFFVDB’’“°¢Ò6F6‚²&WGW&âµÓ²Ð§Ð ¦7–æ2gVæ7F–öâ&VæFW$G&v–ætvÆÆW'’‚’°¢6öç7BvÆÆW'’ÒB‚u¶FFÖG&v–ærÖvÆÆW'•Òr“°¢6öç7BÆ—7BÒB‚u¶FFÖG&v–ær×6fVBÖÆ—7EÒr“°¢vÆÆW'’æ†–FFVâÒfÇ6S°¢6öç7B&V6÷&G2Òv—BvWE6fVDG&v–æw2‚“°¢Æ—7Bæ–ææW$…DÔÂÒ&V6÷&G2æÆVæwF‚ò&V6÷&G2æÖ‚‡&V6÷&B’ÓâÆ'F–6ÆR6Æ73Ò'6fVBÖG&v–ærÖ6&B#ãÆ–Ör7&3Ò"G·&V6÷&BæFFW&ÇÒ"ÇCÒ""óãÇ7G&öæsâG¶W66T‡FÖÂ‡&V6÷&BçF—FÆR—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶66„FFR‡&V6÷&BçWFFVDB—ÓÂ÷6ÖÆÃãÆ'WGFöâG—SÒ&'WGFöâ"FFÖÆöBÖG&v–æsÒ"G¶W66T‡FÖÂ‡&V6÷&Bæ–B—Ò#âG·G"‚vÆöDG&v–ærr—ÓÂö'WGFöããÂö'F–6ÆSæ’æ¦ö–â‚rr’¢ÆF—b6Æ73Ò'FöFòÖV×G’#âG·G"‚væõ6fVDG&v–æw2r—ÓÂöF—cæ°¢BB‚u¶FFÖÆöBÖG&v–æuÒrÂÆ—7B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7B&V6÷&BÒ&V6÷&G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ'WGFöâæFF6WBæÆöDG&v–ær“°¢–b‚&V6÷&B’&WGW&ã°¢W6„G&v–æuVæFò‚“°¢&W7F÷&TG&v–æt–ÖvR‡&V6÷&BæFFW&ÂÂ‚’Óâ°¢7W'&VçDG&v–æt–BÒ&V6÷&Bæ–C°¢B‚u¶FFÖG&v–ær×F—FÆUÒr’çfÇVRÒ&V6÷&BçF—FÆS°¢G&v–ætF—'G’ÒfÇ6S°¢vÆÆW'’æ†–FFVâÒG'VS°¢Ò“°¢Ò’“°§Ð ¦gVæ7F–öâÆöDG&v–æt&6¶w&÷VæB†f–ÆR’°¢–b‚f–ÆRÇÂf–ÆRçG—Rç7F'G5v—F‚‚v–ÖvRòr’’²6†÷uFö7B‡G"‚wVç7W÷'FVDf÷&ÖBr’“²&WGW&ã²Ð¢–æ—F–Æ—¦TG&v–æt6çf2‚“°¢W6„G&v–æuVæFò‚“°¢6öç7Bö&¦V7EW&ÂÒU$Âæ7&VFTö&¦V7EU$Â†f–ÆR“°¢6öç7B–ÖvRÒæWr–ÖvR‚“°¢–ÖvRæöæÆöBÒ‚’Óâ°¢6ÆV$G&v–æt6çf2†fÇ6R“°¢6öç7B66ÆRÒÖF‚æÖ–â†G&v–æt6çf2çv–GF‚ò–ÖvRææGW&Åv–GF‚ÂG&v–æt6çf2æ†V–v‡Bò–ÖvRææGW&Ä†V–v‡B“°¢6öç7Bv–GF‚Ò–ÖvRææGW&Åv–GF‚¢66ÆS°¢6öç7B†V–v‡BÒ–ÖvRææGW&Ä†V–v‡B¢66ÆS°¢G&v–æt6öçFW‡BæG&t–ÖvR†–ÖvRÂ†G&v–æt6çf2çv–GF‚Òv–GF‚’ò"Â†G&v–æt6çf2æ†V–v‡BÒ†V–v‡B’ò"Âv–GF‚Â†V–v‡B“°¢U$Âç&Wfö¶Tö&¦V7EU$Â†ö&¦V7EW&Â“°¢7W'&VçDG&v–æt–BÒçVÆÃ°¢G&v–ætF—'G’ÒG'VS°¢B‚u¶FFÖG&v–ær×F—FÆUÒr’çfÇVRÒf–ÆRææÖRç&WÆ6R‚õÂåµâåÒ²BòÂrr’ç6Æ–6RƒÂƒ’ÇÂG"‚væWu6¶WF6‚r“°¢6†÷uFö7B‡G"‚v&6¶w&÷VæDÆöFVBr’“°¢Ó°¢–ÖvRæöæW'&÷"Ò‚’Óâ²U$Âç&Wfö¶Tö&¦V7EU$Â†ö&¦V7EW&Â“²6†÷uFö7B‡G"‚wVç7W÷'FVDf÷&ÖBr’“²Ó°¢–ÖvRç7&2Òö&¦V7EW&Ã°§Ð ¦gVæ7F–öâ&W6WDG&v–æt6çf2‚’°¢–æ—F–Æ—¦TG&v–æt6çf2‚“°¢6ÆV$G&v–æt6çf2†fÇ6R“°¢G&v–æuVæFõ7F6²ÒµÓ°¢7W'&VçDG&v–æt–BÒçVÆÃ°¢G&v–ætF—'G’ÒfÇ6S°¢B‚u¶FFÖG&v–ær×F—FÆUÒr’çfÇVRÒG"‚væWu6¶WF6‚r“°¢B‚u¶FFÖG&v–ærÖvÆÆW'•Òr’æ†–FFVâÒG'VS°§Ð ¦gVæ7F–öâ7F'Dg&W6„G&v–ær‚’°¢&W6WDG&v–æt6çf2‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢–b‚G&v–ætF–Æöræ÷Vâ’G&v–ætF–Æörç6†÷tÖöFÂ‚“°¢6†÷uFö7B‡G"‚væWtG&v–æu&VG’r’“°§Ð ¦gVæ7F–öâ6´G&v–ætæÖT&Vf÷&U&W6WB‚’°¢6öç7B7VvvW7FVEF—FÆRÒ‚B‚u¶FFÖG&v–ær×F—FÆUÒr’çfÇVRçG&–Ò‚’ÇÂrr’ç6Æ–6RƒÂƒ“°¢6†÷tF–Æör‡G"‚væÖTG&v–ærr’ÂG"‚vG&v–æuVç6fVD6÷’r’ÂÆF—b6Æ73Ò&ö&¦V7BÖf÷&Ò#ãÆÆ&VÃãÇ7â6Æ73Ò'7"ÖöæÇ’#âG·G"‚væÖTG&v–ærr—ÓÂ÷7ããÆ–çWBFFÖæWrÖG&v–ærÖæÖRÖ†ÆVæwFƒÒ#ƒ"fÇVSÒ"G¶W66T‡FÖÂ‡7VvvW7FVEF—FÆR—Ò"Æ6V†öÆFW#Ò"G·G"‚væÖTG&v–ærr—Ò"óãÂöÆ&VÃãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×6fRÖ&Vf÷&RÖæWsâG·G"‚w6fT7W'&VçDG&v–ærr—ÓÂö'WGFöããÂöF—cæ“°¢6öç7B–çWBÒB‚u¶FFÖæWrÖG&v–ærÖæÖUÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“°¢6öç7B6fTæE&W6WBÒ7–æ2‚’Óâ°¢6öç7BF—FÆRÒ–çWCòçfÇVRçG&–Ò‚’ÇÂrs°¢–b‚F—FÆR’²6†÷uFö7B‡G"‚vG&v–ætæÖU&WV—&VBr’“²–çWCòæfö7W2‚“²&WGW&ã²Ð¢6öç7B'WGFöâÒB‚u¶FF×6fRÖ&Vf÷&RÖæWuÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“°¢–b†'WGFöâ’'WGFöâæF—6&ÆVBÒG'VS°¢6öç7B&V6÷&BÒv—B6fTG&v–æu&V6÷&B‡²F—FÆRÂ&WV—&UF—FÆS¢G'VRÒ“°¢–b‡&V6÷&B’7F'Dg&W6„G&v–ær‚“°¢VÇ6R–b†'WGFöâ’'WGFöâæF—6&ÆVBÒfÇ6S°¢Ó°¢B‚u¶FF×6fRÖ&Vf÷&RÖæWuÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6fTæE&W6WB“°¢–çWCòæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ²–b†WfVçBæ¶W’ÓÓÒtVçFW"r’²WfVçBç&WfVçDFVfVÇB‚“²6fTæE&W6WB‚“²ÒÒ“°¢6WEF–ÖV÷WB‚‚’Óâ²–çWCòæfö7W2‚“²–çWCòç6VÆV7B‚“²ÒÂC“°§Ð ¦gVæ7F–öâæWtG&v–ætfÆ÷r‚’°¢–æ—F–Æ—¦TG&v–æt6çf2‚“°¢–b‚G&v–ætF—'G’bb7W'&VçDG&v–æt–B’²7F'Dg&W6„G&v–ær‚“²&WGW&ã²Ð¢6†÷tF–Æör‡G"‚vG&v–æuVç6fVEF—FÆRr’ÂG"‚vG&v–æuVç6fVD6÷’r’ÂÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2G&v–ærÖæWrÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖG&v–ær×6fRÖ7W'&VçCâG·G"‚w6fT7W'&VçDG&v–ærr—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖG&v–ærÖF—66&BÖ7W'&VçCâG·G"‚vF—66&D7W'&VçDG&v–ærr—ÓÂö'WGFöããÂöF—cæ“°¢B‚u¶FFÖG&v–ær×6fRÖ7W'&VçEÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6´G&v–ætæÖT&Vf÷&U&W6WB“°¢B‚u¶FFÖG&v–ærÖF—66&BÖ7W'&VçEÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ7F'Dg&W6„G&v–ær“°§Ð ¦gVæ7F–öâG&v–æt6çf4&Æö"‡G—RÂVÆ—G’’°¢&WGW&âæWr&öÖ—6R‚‡&W6öÇfRÂ&V¦V7B’ÓâG&v–æt6çf2çFô&Æö"‚†&Æö"’Óâ&Æö"ò&W6öÇfR†&Æö"’¢&V¦V7B†æWrW'&÷"‚t6çf2W‡÷'Bf–ÆVBr’’ÂG—RÂVÆ—G’’“°§Ð ¦gVæ7F–öâ7&VFUFd&Æö"†§Vt'—FW2Âv–GF‚ÒG&v–æt6çf2çv–GF‚Â†V–v‡BÒG&v–æt6çf2æ†V–v‡B’°¢6öç7BVæ6öFW"ÒæWrFW‡DVæ6öFW"‚“°¢6öç7B6‡Væ·2ÒµÓ°¢6öç7Böfg6WG2Ò³Ó°¢ÆWBÆVæwF‚Ò°¢6öç7BVæBÒ‡fÇVR’Óâ°¢6öç7B'—FW2ÒG—VöbfÇVRÓÓÒw7G&–ærròVæ6öFW"æVæ6öFR‡fÇVR’¢fÇVS°¢6‡Væ·2çW6‚†'—FW2“°¢ÆVæwF‚³Ò'—FW2æÆVæwFƒ°¢Ó°¢VæB‚rUDbÓãEÆâU7G'V7Dõ5Æâr“°¢öfg6WG5³ÒÒÆVæwFƒ²VæB‚sö&¥ÆãÃÂõG—Rô6FÆörõvW2""ãåÆæVæFö&¥Æâr“°¢öfg6WG5³%ÒÒÆVæwFƒ²VæB‚s"ö&¥ÆãÃÂõG—RõvW2ô¶–G2³2%Òô6÷VçBãåÆæVæFö&¥Æâr“°¢öfg6WG5³5ÒÒÆVæwFƒ²VæB†2ö&¥ÆãÃÂõG—RõvRõ&VçB""ôÖVF–&÷‚³G·v–GF‡ÒG¶†V–v‡GÕÒõ&W6÷W&6W2ÃÂõ„ö&¦V7BÃÂô–ÓB"ãâãâô6öçFVçG2R"ãåÆæVæFö&¥Ææ“°¢öfg6WG5³EÒÒÆVæwFƒ²VæB†Bö&¥ÆãÃÂõG—Rõ„ö&¦V7Bõ7V'G—Rô–ÖvRõv–GF‚G·v–GF‡Òô†V–v‡BG¶†V–v‡GÒô6öÆ÷%76RôFWf–6U$t"ô&—G5W$6ö×öæVçB‚ôf–ÇFW"ôD5DFV6öFRôÆVæwF‚G¶§Vt'—FW2æÆVæwF‡ÒãåÆç7G&VÕÆæ“²VæB†§Vt'—FW2“²VæB‚uÆæVæG7G&VÕÆæVæFö&¥Æâr“°¢6öç7B6öçFVçBÒÆâG·v–GF‡ÒG¶†V–v‡GÒ6ÕÆâô–ÓFõÆåÆæ°¢öfg6WG5³UÒÒÆVæwFƒ²VæB†Rö&¥ÆãÃÂôÆVæwF‚G¶Væ6öFW"æVæ6öFR†6öçFVçB’æÆVæwF‡ÒãåÆç7G&VÕÆâG¶6öçFVçGÖVæG7G&VÕÆæVæFö&¥Ææ“°¢6öç7B‡&Vdöfg6WBÒÆVæwFƒ°¢VæB†‡&VeÆãeÆãcSS3RbÆâG¶öfg6WG2ç6Æ–6Rƒ’æÖ‚†öfg6WB’ÓâGµ7G&–ær†öfg6WB’çE7F'BƒÂsr—ÒâÆæ’æ¦ö–â‚rr—×G&–ÆW%ÆãÃÂõ6—¦Rbõ&ö÷B"ãåÆç7F'G‡&VeÆâG·‡&Vdöfg6WGÕÆâRTTôf“°¢&WGW&âæWr&Æö"†6‡Væ·2Â²G—S¢vÆ–6F–öâ÷FbrÒ“°§Ð ¦7–æ2gVæ7F–öâ'&æFVDG&v–æt§Vr‚’°¢6öç7Bfö÷FW$†V–v‡BÒ#°¢6öç7B6çf2ÒFö7VÖVçBæ7&VFTVÆVÖVçB‚v6çf2r“°¢6çf2çv–GF‚ÒG&v–æt6çf2çv–GFƒ²6çf2æ†V–v‡BÒG&v–æt6çf2æ†V–v‡B²fö÷FW$†V–v‡C°¢6öç7B6öçFW‡BÒ6çf2ævWD6öçFW‡B‚s&Br“°¢6öçFW‡Bæf–ÆÅ7G–ÆRÒr6fffffbs²6öçFW‡Bæf–ÆÅ&V7BƒÂÂ6çf2çv–GF‚Â6çf2æ†V–v‡B“°¢6öçFW‡BæG&t–ÖvR†G&v–æt6çf2ÂÂ“°¢6öçFW‡Bç7G&ö¶U7G–ÆRÒr6#†3–F2s²6öçFW‡Bæ&Vv–åF‚‚“²6öçFW‡BæÖ÷fUFòƒ#"ÂG&v–æt6çf2æ†V–v‡B²"“²6öçFW‡BæÆ–æUFò†6çf2çv–GF‚Ò#"ÂG&v–æt6çf2æ†V–v‡B²"“²6öçFW‡Bç7G&ö¶R‚“°¢6öç7BÆövõ6÷W&6RÒv—BÆöE&W÷'DÆövò‚“°¢6öç7BÆövòÒv—BæWr&öÖ—6R‚‡&W6öÇfRÂ&V¦V7B’Óâ²6öç7B–ÖvRÒæWr–ÖvR‚“²–ÖvRæöæÆöBÒ‚’Óâ&W6öÇfR†–ÖvR“²–ÖvRæöæW'&÷"Ò&V¦V7C²–ÖvRç7&2ÒÆövõ6÷W&6S²Ò“°¢6öçFW‡BæG&t–ÖvR†ÆövòÂ#BÂG&v–æt6çf2æ†V–v‡B²#rÂS‚ÂS‚“°¢6öçFW‡Bæf–ÆÅ7G–ÆRÒr3sV6C2s²6öçFW‡BæföçBÒssw‚–çFW"Â&–ÂÂ6ç2×6W&–bs²6öçFW‡Bæf–ÆÅFW‡B…5E%T5Dõ5ôDô5TÔTåEô%$äBæÖFRÂ“BÂG&v–æt6çf2æ†V–v‡B²C2“°¢6öçFW‡Bæf–ÆÅ7G–ÆRÒr3cCsC†"s²6öçFW‡BæföçBÒs'‚–çFW"Â&–ÂÂ6ç2×6W&–bs²6öçFW‡Bæf–ÆÅFW‡B…5E%T5Dõ5ôDô5TÔTåEô%$äBç6—FRÂ“BÂG&v–æt6çf2æ†V–v‡B²c2“°¢6öçFW‡Bæf–ÆÅFW‡B…5E%T5Dõ5ôDô5TÔTåEô%$äBç6ÆövâÂ“BÂG&v–æt6çf2æ†V–v‡B²ƒ2“°¢6öç7B&Æö"Òv—BæWr&öÖ—6R‚‡&W6öÇfRÂ&V¦V7B’Óâ6çf2çFô&Æö"‚‡fÇVR’ÓâfÇVRò&W6öÇfR‡fÇVR’¢&V¦V7B†æWrW'&÷"‚t6çf2W‡÷'Bf–ÆVBr’’Âv–ÖvRö§VrrÂã“"’“°¢&WGW&â²'—FW3¢æWrV–çC„'&’†v—B&Æö"æ'&”'VffW"‚’’Âv–GFƒ¢6çf2çv–GF‚Â†V–v‡C¢6çf2æ†V–v‡BÓ°§Ð ¦7–æ2gVæ7F–öâ7&VFTG&v–ætf–ÆR†f÷&ÖB’°¢–æ—F–Æ—¦TG&v–æt6çf2‚“°¢6öç7B6fUF—FÆRÒ‚B‚u¶FFÖG&v–ær×F—FÆUÒr’çfÇVRçG&–Ò‚’ÇÂw7G'V7F÷2×6¶WF6‚r’ç&WÆ6R‚õµåÇ´ÇÕÇ´çÕòÕÒ²öwRÂrÒr’ç&WÆ6R‚õâÒ·ÂÒ²BörÂrr’ÇÂw7G'V7F÷2×6¶WF6‚s°¢–b†f÷&ÖBÓÓÒwFbr’°¢6öç7B'&æFVBÒv—B'&æFVDG&v–æt§Vr‚“°¢6öç7B&Æö"Ò7&VFUFd&Æö"†'&æFVBæ'—FW2Â'&æFVBçv–GF‚Â'&æFVBæ†V–v‡B“°¢&WGW&âæWrf–ÆR…¶&Æö%ÒÂG·6fUF—FÆWÒçFfÂ²G—S¢vÆ–6F–öâ÷FbrÒ“°¢Ð¢6öç7B—4§VrÒf÷&ÖBÓÓÒv§rs°¢6öç7B&Æö"Òv—BG&v–æt6çf4&Æö"†—4§Vròv–ÖvRö§Vrr¢v–ÖvR÷ærrÂ—4§Vròã“"¢VæFVf–æVB“°¢&WGW&âæWrf–ÆR…¶&Æö%ÒÂG·6fUF—FÆWÒâG¶—4§Vròv§rr¢wærwÖÂ²G—S¢&Æö"çG—RÒ“°§Ð ¦gVæ7F–öâF÷væÆöDG&v–ætf–ÆR†f–ÆR’°¢6öç7BÆ–æ²ÒFö7VÖVçBæ7&VFTVÆVÖVçB‚vr“°¢Æ–æ²æ‡&VbÒU$Âæ7&VFTö&¦V7EU$Â†f–ÆR“°¢Æ–æ²æF÷væÆöBÒf–ÆRææÖS°¢Fö7VÖVçBæ&öG’æVæB†Æ–æ²“°¢Æ–æ²æ6Æ–6²‚“°¢Æ–æ²ç&VÖ÷fR‚“°¢6WEF–ÖV÷WB‚‚’ÓâU$Âç&Wfö¶Tö&¦V7EU$Â†Æ–æ²æ‡&Vb’ÂS“°§Ð ¦7–æ2gVæ7F–öâ6†&TG&v–ætf–ÆR‚’°¢6öç7Bf÷&ÖBÒB‚u¶FFÖG&v–ærÖf÷&ÖEÒr’çfÇVRÇÂwærs°¢G'’°¢6öç7Bf–ÆRÒv—B7&VFTG&v–ætf–ÆR†f÷&ÖB“°¢6öç7BFFÒ²F—FÆS¢B‚u¶FFÖG&v–ær×F—FÆUÒr’çfÇVRçG&–Ò‚’ÇÂu7G'V7Dõ2rÂf–ÆW3¢¶f–ÆUÒÓ°¢–b†æf–vF÷"ç6†&Rbb‚æf–vF÷"æ6å6†&RÇÂæf–vF÷"æ6å6†&R†FF’’’°¢G'’²v—Bæf–vF÷"ç6†&R†FF“²6†÷uFö7B‡G"‚vG&v–æu6†&U&VG’r’“²&WGW&ã²Ð¢6F6‚†W'&÷"’²–b†W'&÷#òææÖRÓÓÒt&÷'DW'&÷"r’&WGW&ã²Ð¢Ð¢F÷væÆöDG&v–ætf–ÆR†f–ÆR“°¢6†÷uFö7B‡G"‚vG&v–æu6†&U&VG’r’“°¢Ò6F6‚†W'&÷"’°¢6öç6öÆRçv&â‚u7G'V7Dõ2G&v–ærW‡÷'Bf–ÆVC¢rÂW'&÷"“°¢6†÷uFö7B‡G"‚v6öÖ–æu6ööâr’“°¢Ð§Ð ¦–b†G&v–æt6çf2’°¢G&v–æt6çf2æFDWfVçDÆ—7FVæW"‚wö–çFW&F÷vârÂ†WfVçB’Óâ°¢–b†WfVçBçö–çFW%G—RÓÓÒvÖ÷W6RrbbWfVçBæ'WGFöâÓÒ’&WGW&ã°¢WfVçBç&WfVçDFVfVÇB‚“°¢–æ—F–Æ—¦TG&v–æt6çf2‚“°¢W6„G&v–æuVæFò‚“°¢G&v–æt7F—fRÒG'VS°¢G&v–ætF—'G’ÒG'VS°¢G&v–æuö–çFW$–BÒWfVçBçö–çFW$–C°¢G&v–ætÆ7Eö–çBÒG&v–æuö–çB†WfVçB“°¢G&v–æt6çf2ç6WEö–çFW$6GW&R†WfVçBçö–çFW$–B“°¢G&uö–çFW%6VvÖVçB†WfVçB“°¢Ò“°¢G&v–æt6çf2æFDWfVçDÆ—7FVæW"‚wö–çFW&Ö÷fRrÂ†WfVçB’Óâ°¢–b‚G&v–æt7F—fRÇÂWfVçBçö–çFW$–BÓÒG&v–æuö–çFW$–B’&WGW&ã°¢WfVçBç&WfVçDFVfVÇB‚“°¢6öç7BWfVçG2ÒWfVçBævWD6öÆW66VDWfVçG3òâ‚’ÇÂ¶WfVçEÓ°¢WfVçG2æf÷$V6‚†G&uö–çFW%6VvÖVçB“°¢Ò“°¢6öç7Bf–æ—6„G&v–æuö–çFW"Ò†WfVçB’Óâ°¢–b†WfVçBçö–çFW$–BÓÒG&v–æuö–çFW$–B’&WGW&ã°¢G&v–æt7F—fRÒfÇ6S°¢G&v–æuö–çFW$–BÒçVÆÃ°¢G&v–ætÆ7Eö–çBÒçVÆÃ°¢–b†G&v–æt6çf2æ†5ö–çFW$6GW&R†WfVçBçö–çFW$–B’’G&v–æt6çf2ç&VÆV6Uö–çFW$6GW&R†WfVçBçö–çFW$–B“°¢Ó°¢G&v–æt6çf2æFDWfVçDÆ—7FVæW"‚wö–çFW'WrÂf–æ—6„G&v–æuö–çFW"“°¢G&v–æt6çf2æFDWfVçDÆ—7FVæW"‚wö–çFW&6æ6VÂrÂf–æ—6„G&v–æuö–çFW"“°§Ð ¦gVæ7F–öâf–ÆU6—¦R†'—FW2’°¢6öç7BfÇVRÒçVÖ&W"†'—FW2’ÇÂ°¢–b‡fÇVRÂ#B¢#B’&WGW&âG´ÖF‚æÖ‚ƒÂÖF‚ç&÷VæB‡fÇVRò#B’—Ò	­	°¢&WGW&âG²‡fÇVRò#Bò#B’çFôf—†VBƒ—Ò	Í	°§Ð ¦gVæ7F–öâWÆöEF—FÆR†¶–æB’°¢&WGW&âG"‡²&ö¦V7C¢wWÆöE&ö¦V7BrÂ6öçG&7C¢wWÆöD6öçG&7BrÂW7F–ÖFS¢wWÆöDW7F–ÖFRrÕ¶¶–æEÒ“°§Ð ¦gVæ7F–öâ6fUWÆöG2‚’°¢Æö6Å7F÷&vRç6WD—FVÒ…UÄôE5ô´U’Â¥4ôâç7G&–æv–g’‡6VÆV7FVDf–ÆW2’“°§Ð ¦gVæ7F–öâ&VæFW$æÇ—6—46&G2‚’°¢ö&¦V7Bæ¶W—2‡WÆöE'VÆW2’æf÷$V6‚‚†¶–æB’Óâ°¢6öç7Bf–ÆRÒ6VÆV7FVDf–ÆW5¶¶–æEÓ°¢6öç7B6&BÒB†¶FFÖæÇ—6—2×G—SÒ"G¶¶–æGÒ%Ö“°¢6öç7B7FGW2ÒB†¶FFÖæÇ—6—2×7FGW3Ò"G¶¶–æGÒ%Ö“°¢6öç7Bf–ÆTæÖRÒB†¶FFÖæÇ—6—2Öf–ÆSÒ"G¶¶–æGÒ%Ö“°¢–b‚6&BÇÂ7FGW2ÇÂf–ÆTæÖR’&WGW&ã°¢6&Bæ6Æ74Æ—7BçFövvÆR‚v†2Öf–ÆRrÂ&ööÆVâ†f–ÆR’“°¢7FGW2çFW‡D6öçFVçBÒG¶f–ÆRò¢ÒG·G"‚vöbr—Ò°¢f–ÆTæÖRæ†–FFVâÒf–ÆS°¢f–ÆTæÖRçFW‡D6öçFVçBÒf–ÆSòææÖRÇÂrs°¢6&Bç6WDGG&–'WFR‚v&–ÖÆ&VÂrÂG·G"†¶–æB—ÒâG¶f–ÆRòf–ÆRææÖR¢G·G"‚vöbr—ÒÖ“°¢Ò“°§Ð ¦gVæ7F–öâ†öÖUVæF–ætæ÷F–f–6F–öç2‚’°¢&WGW&âö&¦V7E&Vv—7G'’æfÆDÖ‚†ö&¦V7B’Óâ†ö&¦V7Bæf–ÆW2ÇÂµÒ¢æf–ÇFW"‚†f–ÆR’Óâf–ÆSòæ¶–æBbb—4ö&¦V7DFö7VÖVçDæÇ—¦VB†ö&¦V7BÂf–ÆR’¢æÖ‚†f–ÆR’Óâ‡²ö&¦V7BÂf–ÆRÒ’’“°§Ð ¦gVæ7F–öâ†öÖTæ÷F–f–6F–öä¶W’‡²ö&¦V7BÂf–ÆRÒ’°¢6öç7Bf–ÆT¶W’Òf–ÆSòæ–BÇÂf–ÆSòçfW'6–öä–BÇÂ¶f–ÆSòæ¶–æBÂf–ÆSòææÖRÂf–ÆSòæÆ7DÖöF–f–VBÂf–ÆSòæFFVDEÒæf–ÇFW"„&ööÆVâ’æ¦ö–â‚s¢r“°¢&WGW&âG¶ö&¦V7Còæ–BÇÂvö&¦V7BwÓ¢G¶f–ÆT¶W’ÇÂvæ÷F–f–6F–öâwÖ°§Ð ¦gVæ7F–öâ†öÖUVæF–æt–çf—FF–öç2‚’°¢&WGW&â–çf—FVDö&¦V7G2æf–ÇFW"‚†ö&¦V7B’Óâö&¦V7Bç7FGW2ÓÓÒwVæF–ærr“°§Ð ¦gVæ7F–öâ†öÖUVç&VDæ÷F–f–6F–öç2‚’°¢&WGW&â†öÖUVæF–ætæ÷F–f–6F–öç2‚’æf–ÇFW"‚†æ÷F–f–6F–öâ’Óâ†öÖU&VDæ÷F–f–6F–öä¶W—2æ†2††öÖTæ÷F–f–6F–öä¶W’†æ÷F–f–6F–öâ’’“°§Ð ¦gVæ7F–öâÖ&´†öÖTæ÷F–f–6F–öç5&VB†æ÷F–f–6F–öç2’°¢ÆWB6†ævVBÒfÇ6S°¢„'&’æ—4'&’†æ÷F–f–6F–öç2’òæ÷F–f–6F–öç2¢µÒ’æf÷$V6‚‚†æ÷F–f–6F–öâ’Óâ°¢6öç7B¶W’Ò†öÖTæ÷F–f–6F–öä¶W’†æ÷F–f–6F–öâ“°¢–b††öÖU&VDæ÷F–f–6F–öä¶W—2æ†2†¶W’’’&WGW&ã°¢†öÖU&VDæ÷F–f–6F–öä¶W—2æFB†¶W’“°¢6†ævVBÒG'VS°¢Ò“°¢–b‚6†ævVB’&WGW&ã°¢6fT†öÖU&VDæ÷F–f–6F–öç2‚“°¢&VæFW$†öÖT–æ&÷‚‚“°§Ð ¦gVæ7F–öâ&VæFW$†öÖT–æ&÷‚‚’°¢6öç7B–çf—FF–öä6÷VçBÒ†öÖUVæF–æt–çf—FF–öç2‚’æÆVæwFƒ°¢6öç7Bæ÷F–f–6F–öä6÷VçBÒ†öÖUVç&VDæ÷F–f–6F–öç2‚’æÆVæwFƒ°¢6öç7B&VæFW$6÷VçBÒ‡6VÆV7F÷"Â6÷VçBÂÆ&VÄ¶W’’Óâ°¢BB‡6VÆV7F÷"’æf÷$V6‚‚†VÆVÖVçB’Óâ°¢VÆVÖVçBçFW‡D6öçFVçBÒ7G&–ær†6÷VçB“°¢6öç7B6&BÒVÆVÖVçBæ6Æ÷6W7B‚ræ†öÖRÖ–æ&÷‚Ö6&Br“°¢6&Còæ6Æ74Æ—7BçFövvÆR‚v†2Ö7F—f—G’rÂ6÷VçBâ“°¢6&Còç6WDGG&–'WFR‚v&–ÖÆ&VÂrÂG·G"†Æ&VÄ¶W’—Ó¢G¶6÷VçGÖ“°¢Ò“°¢Ó°¢&VæFW$6÷VçB‚u¶FFÖ†öÖRÖ–çf—FF–öç2Ö6÷VçEÒrÂ–çf—FF–öä6÷VçBÂv–çf—FF–öç2r“°¢&VæFW$6÷VçB‚u¶FFÖ†öÖRÖæ÷F–f–6F–öç2Ö6÷VçEÒrÂæ÷F–f–6F–öä6÷VçBÂvæ÷F–f–6F–öç2r“°§Ð ¦gVæ7F–öâ6fTö&¦V7G2‚’°¢Æö6Å7F÷&vRç6WD—FVÒ„ô$¤T5E5ô´U’Â¥4ôâç7G&–æv–g’†ö&¦V7E&Vv—7G'’’“°§Ð ¦gVæ7F–öâö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB’°¢&WGW&â†ö&¦V7Còæf–ÆW2ÇÂµÒ’æf–æB‚†f–ÆR’Óâf–ÆRæ¶–æBÓÓÒ¶–æB’ÇÂçVÆÃ°§Ð ¦gVæ7F–öâ6VÆV7Dö&¦V7Df÷$æÇ—6—2†ö&¦V7B’°¢ö&¦V7Bæ¶W—2‡WÆöE'VÆW2’æf÷$V6‚‚†¶–æB’Óâ²6VÆV7FVDf–ÆW5¶¶–æEÒÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“²Ò“°¢Æö6Å7F÷&vRç6WD—FVÒ„ô$¤T5EôäÔUô´U’Âö&¦V7BææÖR“°¢6fUWÆöG2‚“°¢&VæFW$æÇ—6—46&G2‚“°§Ð ¦gVæ7F–öâ–×÷'EVæF–æuG&ç6fW"‚’°¢G'’°¢6öç7BVæF–ærÒ¥4ôâç'6R†Æö6Å7F÷&vRævWD—FVÒ…TäD”äuõE$å4dU%ô´U’’ÇÂvçVÆÂr“°¢6öç7Bö&¦V7DæÖRÒ7G&–ær‡VæF–æsòæö&¦V7DæÖRÇÂrr’çG&–Ò‚“°¢6öç7B6V7F–öäæÖRÒ7G&–ær‡VæF–æsòç6V7F–öäæÖRÇÂVæF–æsòç&ö¦V7E6V7F–öâÇÂrr’çG&–Ò‚“°¢6öç7Bf–ÆW2Òö&¦V7BæVçG&–W2‡VæF–æsòæf–ÆW2ÇÂ·Ò¢æf–ÇFW"‚…¶¶–æBÂf–ÆUÒ’ÓâWÆöE'VÆW5¶¶–æEÒbbf–ÆSòææÖR¢æÖ‚…¶¶–æBÂf–ÆUÒ’Óâ‡²¶–æBÂæÖS¢7G&–ær†f–ÆRææÖR’Â6—¦S¢çVÖ&W"†f–ÆRç6—¦R’ÇÂÂG—S¢7G&–ær†f–ÆRçG—RÇÂrr’ÂÆ7DÖöF–f–VC¢çVÖ&W"†f–ÆRæÆ7DÖöF–f–VB’ÇÂFFRææ÷r‚’ÂÆö6Äf–ÆT–C¢7G&–ær†f–ÆRæÆö6Äf–ÆT–BÇÂrr’ÂFFVDC¢f–ÆRæFFVDBÇÂæWrFFR‚’çFô•4õ7G&–ær‚’ÂæÇ—6—5VæF–æs¢VæF–ærææÇ—6—46ö×ÆWFRÂæÇ—¦VDC¢VæF–ærææÇ—6—46ö×ÆWFRò‡VæF–ærçWFFVDBÇÂæWrFFR‚’çFô•4õ7G&–ær‚’’¢çVÆÂÒ’“°¢–b‚ö&¦V7DæÖRÇÂf–ÆW2æÆVæwF‚’&WGW&âçVÆÃ°¢ÆWBö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒææÖRçG&–Ò‚’çFôÆö6ÆTÆ÷vW$66R‚’ÓÓÒö&¦V7DæÖRçFôÆö6ÆTÆ÷vW$66R‚’“°¢–b‚ö&¦V7B’°¢ö&¦V7BÒ²–C¢7&VFTö&¦V7D–B‚’ÂæÖS¢ö&¦V7DæÖRÂ&ö¦V7EF—FÆS¢ö&¦V7DæÖRÂ&ö¦V7E6V7F–öã¢6V7F–öäæÖRÇÂö&¦V7DæÖRÂFö7VÖVçEF—FÆW3¢æ÷&ÖÆ—¦U&ö¦V7DFö7VÖVçEF—FÆW2‚’Â6öçG&7DçVÖ&W#¢rrÂ7FGW3¢VæF–ærææÇ—6—46ö×ÆWFRòw&VG’r¢wWÆöFVBrÂ7&VFVDC¢VæF–ærçWFFVDBÇÂæWrFFR‚’çFô•4õ7G&–ær‚’ÂWFFVDC¢VæF–ærçWFFVDBÇÂæWrFFR‚’çFô•4õ7G&–ær‚’ÂWÆöFVDC¢VæF–ærçWFFVDBÇÂæWrFFR‚’çFô•4õ7G&–ær‚’ÂæÇ—¦VDC¢VæF–ærææÇ—6—46ö×ÆWFRò‡VæF–ærçWFFVDBÇÂæWrFFR‚’çFô•4õ7G&–ær‚’’¢çVÆÂÂ7F'FVDC¢çVÆÂÂf–ÆW3¢µÒÓ°¢ö&¦V7E&Vv—7G'’çVç6†–gB†ö&¦V7B“°¢ÒVÇ6R–b‡VæF–ærææÇ—6—46ö×ÆWFRbbö&¦V7Bç7FGW2ÓÓÒwWÆöFVBr’°¢ö&¦V7Bç7FGW2Òw&VG’s°¢ö&¦V7BææÇ—¦VDBÒVæF–ærçWFFVDBÇÂæWrFFR‚’çFô•4õ7G&–ær‚“°¢Ð¢f–ÆW2æf÷$V6‚‚†f–ÆR’Óâ°¢ö&¦V7Bæf–ÆW2Ò²âââ†ö&¦V7Bæf–ÆW2ÇÂµÒ’æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ¶–æBÓÒf–ÆRæ¶–æB’Âf–ÆUÓ°¢–b†f–ÆRæ¶–æBÓÓÒv6öçG&7Brbbö&¦V7Bæ6öçG&7DçVÖ&W"’ö&¦V7Bæ6öçG&7DçVÖ&W"ÒW‡G&7D6öçG&7DçVÖ&W$g&öÔæÖR†f–ÆRææÖR“°¢Ò“°¢–b‡6V7F–öäæÖR’ö&¦V7Bç&ö¦V7E6V7F–öâÒ6V7F–öäæÖS°¢ö&¦V7Bç&ö¦V7E6V7F–öâÇÃÒö&¦V7Bç&ö¦V7EF—FÆRÇÂö&¦V7BææÖS°¢ö&¦V7BæFö7VÖVçEF—FÆW2Òæ÷&ÖÆ—¦U&ö¦V7DFö7VÖVçEF—FÆW2†ö&¦V7BæFö7VÖVçEF—FÆW2“°¢ö&¦V7BçWFFVDBÒVæF–ærçWFFVDBÇÂæWrFFR‚’çFô•4õ7G&–ær‚“°¢ö&¦V7BçWÆöFVDBÇÃÒVæF–ærçWFFVDBÇÂæWrFFR‚’çFô•4õ7G&–ær‚“°¢6VÆV7Dö&¦V7Df÷$æÇ—6—2†ö&¦V7B“°¢6fTö&¦V7G2‚“°¢Æö6Å7F÷&vRç&VÖ÷fT—FVÒ…TäD”äuõE$å4dU%ô´U’“°¢&WGW&â²ö&¦V7D–C¢ö&¦V7Bæ–BÂ–çFVçC¢7G&–ær‡VæF–æræ–çFVçBÇÂrr’Â6÷W&6S¢7G&–ær‡VæF–ærç6÷W&6RÇÂrr’Ó°¢Ò6F6‚²&WGW&âçVÆÃ²Ð§Ð ¦gVæ7F–öâ7&VFTö&¦V7D–B‚’°¢&WGW&âvÆö&ÅF†—2æ7'—Fóòç&æFöÕUT”Còâ‚’ÇÂö&¦V7BÒG´FFRææ÷r‚—ÒÒG´ÖF‚ç&æFöÒ‚’çFõ7G&–ærƒb’ç6Æ–6Rƒ"—Ö°§Ð ¦gVæ7F–öâf÷&ÖDö&¦V7DFFR‡fÇVR’°¢6öç7BFFRÒæWrFFR‡fÇVR“°¢–b„çVÖ&W"æ—4æâ†FFRævWEF–ÖR‚’’’&WGW&ârs°¢&WGW&âæWr–çFÂäFFUF–ÖTf÷&ÖB‡&ö÷BæÆærÇÂw'RrÂ²F“¢s"ÖF–v—BrÂÖöçFƒ¢w6†÷'BrÂ–V#¢vçVÖW&–2rÒ’æf÷&ÖB†FFR“°§Ð ¦gVæ7F–öâf÷&ÖDö&¦V7DFFUF–ÖR‡fÇVR’°¢6öç7BFFRÒæWrFFR‡fÇVR“°¢–b„çVÖ&W"æ—4æâ†FFRævWEF–ÖR‚’’’&WGW&â~(	Bs°¢&WGW&âæWr–çFÂäFFUF–ÖTf÷&ÖB‡&ö÷BæÆærÇÂw'RrÂ²F“¢s"ÖF–v—BrÂÖöçFƒ¢w6†÷'BrÂ–V#¢vçVÖW&–2rÂ†÷W#¢s"ÖF–v—BrÂÖ–çWFS¢s"ÖF–v—BrÒ’æf÷&ÖB†FFR“°§Ð ¦gVæ7F–öâf÷&ÖE7F÷&vR†'—FW2’°¢6öç7BfÇVRÒÖF‚æÖ‚ƒÂçVÖ&W"†'—FW2’ÇÂ“°¢–b‡fÇVRÂ#B’&WGW&âG´ÖF‚ç&÷VæB‡fÇVR—ÒG·G"‚w7F÷&vT"r—Ö°¢–b‡fÇVRÂ#B¢#B’&WGW&âG²‡fÇVRò#B’çFôf—†VB‡fÇVRÂ¢#Bò¢—ÒG·G"‚w7F÷&vT¶"r—Ö°¢–b‡fÇVRÂ#B¢#B¢#B’&WGW&âG²‡fÇVRò#Bò#B’çFôf—†VB‡fÇVRÂ¢#B¢#Bò¢—ÒG·G"‚w7F÷&vTÖ"r—Ö°¢&WGW&âG²‡fÇVRò#Bò#Bò#B’çFôf—†VBƒ"—ÒG·G"‚w7F÷&vTv"r—Ö°§Ð ¦gVæ7F–öâW‡G&7D6öçG&7DçVÖ&W$g&öÔæÖR†æÖR’°¢6öç7B&6TæÖRÒ7G&–ær†æÖRÇÂrr’ç&WÆ6R‚õÂåµâåÒ²BòÂrr’çG&–Ò‚“°¢6öç7BGFW&ç2Ò°¢òƒó­Mí=í-íÆ6öçG&7GÍ­]½ÇÍ-ÝíÍ•Ç2¢ƒó®(IgÆâƒó¦ò“õÂãõÇ2¢“ò…µÇ´ÇÕÆEÕµÇ´ÇÕÆBåòòÕ×³ÃCÒ’ö—RÀ¢þ(IeÇ2¢…µÇ´ÇÕÆEÕµÇ´ÇÕÆBåòòÕ×³ÃCÒ’÷P¢Ó°¢f÷"†6öç7BGFW&âöbGFW&ç2’°¢6öç7BÖF6‚Ò&6TæÖRæÖF6‚‡GFW&â“°¢6öç7B6æF–FFRÒ7G&–ær†ÖF6ƒòå³ÒÇÂrr’ç&WÆ6R‚õå¾(Ib5Ç5Ò·ÅµÇ2åòÕÒ²BörÂrr“°¢–b†6æF–FFRbbõâMí=í-íÆ6öçG&7GÍ­]½ÇÍ-ÝíÍ’Bö—RçFW7B†6æF–FFR’’&WGW&â6æF–FFRç6Æ–6RƒÂc“°¢Ð¢&WGW&ârs°§Ð ¦gVæ7F–öâv—¦&E&öw&W74Ö&·W‡7FW’°¢6öç7BÆ&VÇ2Ò²vö&¦V7DæÖU7FWrÂw&ö¦V7DæÖU7FWrÂvFö7VÖVçG57FWuÓ°¢&WGW&âÆöÂ6Æ73Ò'&ö¦V7B×v—¦&B×&öw&W72#âG¶Æ&VÇ2æÖ‚†¶W’Â–æFW‚’ÓâÆÆ’6Æ73Ò"G¶–æFW‚²ÓÓÒ7FWòv—2Ö7W'&VçBr¢–æFW‚²Â7FWòv—2Ö6ö×ÆWFRr¢rwÒ#ãÇ7ãâG¶–æFW‚²Â7FWò~)É2r¢–æFW‚²ÓÂ÷7ããÆ#âG¶W66T‡FÖÂ‡G"†¶W’’—ÓÂö#ãÂöÆ“æ’æ¦ö–â‚rr—ÓÂööÃæ°§Ð ¦gVæ7F–öâ&ö¦V7Ev—¦&EF—FÆR‚’°¢&WGW&â&ö¦V7Dö&¦V7Ev—¦&DG&gCòçV–6µ&ö¦V7DöæÇ’òG"‚wV–6µ&ö¦V7DæÇ—6—2r’¢G"‚w&ö¦V7Dö&¦V7Ev—¦&Br“°§Ð ¦gVæ7F–öâ÷Vå&ö¦V7Dö&¦V7Ev—¦&B†÷F–öç2Ò·Ò’°¢&ö¦V7Dö&¦V7Ev—¦&DG&gBÒ°¢7FW¢À¢V–6µ&ö¦V7DöæÇ“¢&ööÆVâ†÷F–öç2çV–6µ&ö¦V7DöæÇ’’À¢v÷&·76T÷&–v–ã¢÷F–öç2çv÷&·76T÷&–v–âÓÓÒwGW&æ¶W’ròwGW&æ¶W’r¢vÖçVÂrÀ¢ö&¦V7DæÖS¢rrÀ¢&ö¦V7E6V7F–öã¢rrÀ¢f–ÆW3¢²&ö¦V7C¢çVÆÂÂ6öçG&7C¢çVÆÂÂW7F–ÖFS¢çVÆÂÒÀ¢6÷W&6Tf–ÆW3¢²&ö¦V7C¢çVÆÂÂ6öçG&7C¢çVÆÂÂW7F–ÖFS¢çVÆÂÒÀ¢f–æ—6†–æs¢fÇ6P¢Ó°¢&VæFW%&ö¦V7Dö&¦V7Ev—¦&B‚“°§Ð ¦gVæ7F–öâ&VæFW%&ö¦V7Dö&¦V7Ev—¦&B‚’°¢6öç7BG&gBÒ&ö¦V7Dö&¦V7Ev—¦&DG&gC°¢–b‚G&gB’&WGW&ã°¢6öç7B7FWÒÖF‚æÖ‚ƒÂÖF‚æÖ–âƒ2ÂçVÖ&W"†G&gBç7FW’ÇÂ’“°¢G&gBç7FWÒ7FW°¢–b‡7FWÓÓÒ’°¢6†÷tF–Æör†W66T‡FÖÂ‡&ö¦V7Ev—¦&EF—FÆR‚’’ÂG¶W66T‡FÖÂ‡G"‚w7FWöbr’—Òò2+rG¶W66T‡FÖÂ‡G"‚vö&¦V7DæÖU7FWr’—ÖÂG·v—¦&E&öw&W74Ö&·W‡7FW—ÓÇ6V7F–öâ6Æ73Ò'&ö¦V7B×v—¦&B×7FW#ãÆÆ&VÂ6Æ73Ò'&ö¦V7B×v—¦&BÖf–VÆB#ãÇ7ãâG¶W66T‡FÖÂ‡G"‚vö&¦V7DæÖRr’—ÓÂ÷7ããÆ–çWBFF×v—¦&BÖö&¦V7BÖæÖRÖ†ÆVæwFƒÒ#"WFö6ö×ÆWFSÒ&÷&væ—¦F–öâ"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚vö&¦V7EÆ6V†öÆFW"r’—Ò"fÇVSÒ"G¶W66T‡FÖÂ†G&gBæö&¦V7DæÖR—Ò"óãÂöÆ&VÃãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ&ö¦V7B×v—¦&BÖÖ–âÖ7F–öâ"G—SÒ&'WGFöâ"FF×v—¦&BÖæW‡CâG¶W66T‡FÖÂ‡G"‚v6öçF–çVT7F–öâr’—Ò(i#Âö'WGFöããÂ÷6V7F–öãæ“°¢6öç7B–çWBÒB‚u¶FF×v—¦&BÖö&¦V7BÖæÖUÒr“°¢6öç7BæW‡BÒ‚’Óâ°¢6öç7BfÇVRÒ–çWCòçfÇVRçG&–Ò‚’ç6Æ–6RƒÂ’ÇÂrs°¢–b‚fÇVR’²–çWCòæfö7W2‚“²6†÷uFö7B‡G"‚vö&¦V7E&WV—&VBr’“²&WGW&ã²Ð¢G&gBæö&¦V7DæÖRÒfÇVS°¢G&gBç7FWÒ#°¢&VæFW%&ö¦V7Dö&¦V7Ev—¦&B‚“°¢Ó°¢B‚u¶FF×v—¦&BÖæW‡EÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂæW‡B“°¢–çWCòæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ²–b†WfVçBæ¶W’ÓÓÒtVçFW"r’²WfVçBç&WfVçDFVfVÇB‚“²æW‡B‚“²ÒÒ“°¢6WEF–ÖV÷WB‚‚’Óâ–çWCòæfö7W2‚’ÂC“°¢&WGW&ã°¢Ð¢–b‡7FWÓÓÒ"’°¢6†÷tF–Æör†W66T‡FÖÂ‡&ö¦V7Ev—¦&EF—FÆR‚’’ÂG¶W66T‡FÖÂ‡G"‚w7FWöbr’—Ò"ò2+rG¶W66T‡FÖÂ‡G"‚w&ö¦V7DæÖU7FWr’—ÖÂG·v—¦&E&öw&W74Ö&·W‡7FW—ÓÇ6V7F–öâ6Æ73Ò'&ö¦V7B×v—¦&B×7FW#ãÆF—b6Æ73Ò'&ö¦V7B×v—¦&BÖö&¦V7BÖ6†—#ãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚vö&¦V7DæÖRr’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ†G&gBæö&¦V7DæÖR—ÓÂ÷7G&öæsãÂöF—cãÆÆ&VÂ6Æ73Ò'&ö¦V7B×v—¦&BÖf–VÆB#ãÇ7ãâG¶W66T‡FÖÂ‡G"‚vv—fU&ö¦V7DæÖRr’—ÓÂ÷7ããÆ–çWBFF×v—¦&B×&ö¦V7BÖæÖRÖ†ÆVæwFƒÒ#C"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚w&ö¦V7DæÖUÆ6V†öÆFW"r’—Ò"fÇVSÒ"G¶W66T‡FÖÂ†G&gBç&ö¦V7E6V7F–öâ—Ò"óãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚w&ö¦V7DæÖT†–çBr’—ÓÂ÷6ÖÆÃãÂöÆ&VÃãÆF—b6Æ73Ò'&ö¦V7B×v—¦&BÖæf–vF–öâ#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FF×v—¦&BÖ&6³î(iG¶W66T‡FÖÂ‡G"‚v&6´7F–öâr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×v—¦&BÖæW‡CâG¶W66T‡FÖÂ‡G"‚v6öçF–çVT7F–öâr’—Ò(i#Âö'WGFöããÂöF—cãÂ÷6V7F–öãæ“°¢6öç7B–çWBÒB‚u¶FF×v—¦&B×&ö¦V7BÖæÖUÒr“°¢6öç7BæW‡BÒ‚’Óâ°¢6öç7BfÇVRÒ–çWCòçfÇVRçG&–Ò‚’ç6Æ–6RƒÂC’ÇÂrs°¢–b‚fÇVR’²–çWCòæfö7W2‚“²6†÷uFö7B‡G"‚w&ö¦V7DæÖU&WV—&VBr’“²&WGW&ã²Ð¢G&gBç&ö¦V7E6V7F–öâÒfÇVS°¢G&gBç7FWÒ3°¢&VæFW%&ö¦V7Dö&¦V7Ev—¦&B‚“°¢Ó°¢B‚u¶FF×v—¦&BÖ&6µÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²G&gBç&ö¦V7E6V7F–öâÒ–çWCòçfÇVRçG&–Ò‚’ç6Æ–6RƒÂC’ÇÂG&gBç&ö¦V7E6V7F–öã²G&gBç7FWÒ²&VæFW%&ö¦V7Dö&¦V7Ev—¦&B‚“²Ò“°¢B‚u¶FF×v—¦&BÖæW‡EÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂæW‡B“°¢–çWCòæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ²–b†WfVçBæ¶W’ÓÓÒtVçFW"r’²WfVçBç&WfVçDFVfVÇB‚“²æW‡B‚“²ÒÒ“°¢6WEF–ÖV÷WB‚‚’Óâ²–çWCòæfö7W2‚“²–çWCòç6VÆV7B‚“²ÒÂC“°¢&WGW&ã°¢Ð ¢6öç7B¶–æG2Òö&¦V7Bæ¶W—2‡WÆöE'VÆW2“°¢6öç7BFö7VÖVçD6&G2Ò¶–æG2æÖ‚†¶–æB’Óâ°¢6öç7Bf–ÆRÒG&gBæf–ÆW5¶¶–æEÓ°¢6öç7B'VÆRÒWÆöE'VÆW5¶¶–æEÓ°¢6öç7B&WV—&VÖVçBÒG"‚vFö7VÖVçD÷F–öæÂr“°¢6öç7BæÇ—¦T7F–öâÒf–ÆRòÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×v—¦&BÖæÇ—¦RÖ¶–æCÒ"G¶W66T‡FÖÂ†¶–æB—Ò#âG¶W66T‡FÖÂ‡G"‚væÇ—¦Rr’—Ò(i#Âö'WGFöãæ¢rs°¢6öç7BFVÆWFT7F–öâÒf–ÆRòÆ'WGFöâ6Æ73Ò'&ö¦V7B×v—¦&BÖFVÆWFRÖFö7VÖVçB"G—SÒ&'WGFöâ"FF×v—¦&BÖFVÆWFRÖFö7VÖVçCÒ"G¶W66T‡FÖÂ†¶–æB—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFTf–ÆRr’—Ò#ì9rÇ7ãâG¶W66T‡FÖÂ‡G"‚vFVÆWFTFö7VÖVçBr’—ÓÂ÷7ããÂö'WGFöãæ¢rs°¢&WGW&âÆ'F–6ÆR6Æ73Ò'&ö¦V7B×v—¦&BÖFö7VÖVçBG¶f–ÆRòr†2Öf–ÆRr¢rwÒ#ãÆ†VFW#ãÇ7ãâG¶f–ÆRò~)É2r¢¶–æBÓÓÒw&ö¦V7Brò~)jBr¢¶–æBÓÓÒv6öçG&7Brò~(šr¢~(+ÒwÓÂ÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ‡G"†¶–æB’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡&WV—&VÖVçB—ÓÂ÷6ÖÆÃãÂöF—cãÂö†VFW#ãÆF—b6Æ73Ò'&ö¦V7B×v—¦&BÖf–ÆR×7FFR#ãÆ#âG¶W66T‡FÖÂ†f–ÆSòææÖRÇÂG"‚vFö7VÖVçDæ÷DÆöFVBr’—ÓÂö#ãÇ6ÖÆÃâG¶f–ÆRòG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR†f–ÆRç6—¦R’—Ò+rG¶W66T‡FÖÂ†f–ÆTf÷&ÖDÆ&VÂ†f–ÆR’—Ö¢W66T‡FÖÂ‡'VÆRæf÷&ÖG2—ÓÂ÷6ÖÆÃãÂöF—cãÆ–çWB6Æ73Ò&†–FFVâÖf–ÆRÖ–çWB"FF×v—¦&BÖFö7VÖVçBÖ–çWCÒ"G¶W66T‡FÖÂ†¶–æB—Ò"G—SÒ&f–ÆR"66WCÒ"G·'VÆRæ66WGÒ"óãÆF—b6Æ73Ò'&ö¦V7B×v—¦&BÖFö7VÖVçBÖ7F–öç2G¶f–ÆRòr†2Öf–ÆRr¢rwÒ#ãÆ'WGFöâ6Æ73Ò"G¶f–ÆRòv÷WFÆ–æRÖ'WGFöâr¢w&–Ö'’Ö'WGFöâwÒ"G—SÒ&'WGFöâ"FF×v—¦&BÖ6†ö÷6RÖFö7VÖVçCÒ"G¶W66T‡FÖÂ†¶–æB—Ò#âG¶W66T‡FÖÂ‡G"†f–ÆRòv6†ævTFö7VÖVçBr¢v6†ö÷6TFö7VÖVçBr’—ÓÂö'WGFöãâG¶æÇ—¦T7F–öçÒG¶FVÆWFT7F–öçÓÂöF—cãÂö'F–6ÆSæ°¢Ò’æ¦ö–â‚rr“°¢6öç7BFö7VÖVçG4†–çBÒG&gBçV–6µ&ö¦V7DöæÇ’òG"‚wV–6´Fö7VÖVçD6†ö–6T†–çBr’¢G"‚wWÆöDFö7VÖVçG4†–çBr“°¢6öç7BÆöFVD6÷VçBÒö&¦V7BçfÇVW2†G&gBæf–ÆW2’æf–ÇFW"„&ööÆVâ’æÆVæwFƒ°¢6öç7BæÇ—¦TÆÄ7F–öâÒÆöFVD6÷VçBâòÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ&ö¦V7B×v—¦&BÖÖ–âÖ7F–öâ"G—SÒ&'WGFöâ"FF×v—¦&BÖæÇ—¦RÖÆÃâG¶W66T‡FÖÂ‡G"‚væÇ—¦TÆÂr’—Ò(i#Âö'WGFöãæ¢rs°¢6†÷tF–Æör†W66T‡FÖÂ‡&ö¦V7Ev—¦&EF—FÆR‚’’ÂG¶W66T‡FÖÂ‡G"‚w7FWöbr’—Ò2ò2+rG¶W66T‡FÖÂ‡G"‚wWÆöDFö7VÖVçG2r’—ÖÂG·v—¦&E&öw&W74Ö&·W‡7FW—ÓÇ6V7F–öâ6Æ73Ò'&ö¦V7B×v—¦&B×7FW#ãÆF—b6Æ73Ò'&ö¦V7B×v—¦&B×7VÖÖ'’#ãÇ7ããÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚vö&¦V7DæÖRr’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ†G&gBæö&¦V7DæÖR—ÓÂ÷7G&öæsãÂ÷7ããÇ7ããÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚w&ö¦V7DæÖU7FWr’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ†G&gBç&ö¦V7E6V7F–öâ—ÓÂ÷7G&öæsãÂ÷7ããÂöF—cãÇ6Æ73Ò'&ö¦V7B×v—¦&BÖFö7VÖVçG2Ö†–çB#âG¶W66T‡FÖÂ†Fö7VÖVçG4†–çB—ÓÂ÷ãÆF—b6Æ73Ò'&ö¦V7B×v—¦&BÖFö7VÖVçG2#âG¶Fö7VÖVçD6&G7ÓÂöF—câG¶æÇ—¦TÆÄ7F–öçÓÆF—b6Æ73Ò'&ö¦V7B×v—¦&BÖæf–vF–öâ—2Ö&6²ÖöæÇ’#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FF×v—¦&BÖ&6³î(iG¶W66T‡FÖÂ‡G"‚v&6´7F–öâr’—ÓÂö'WGFöããÂöF—cãÂ÷6V7F–öãæ“°¢B‚u¶FF×v—¦&BÖ&6µÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²G&gBç7FWÒ#²&VæFW%&ö¦V7Dö&¦V7Ev—¦&B‚“²Ò“°¢BB‚u¶FF×v—¦&BÖ6†ö÷6RÖFö7VÖVçEÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB†¶FF×v—¦&BÖFö7VÖVçBÖ–çWCÒ"G¶'WGFöâæFF6WBçv—¦&D6†ö÷6TFö7VÖVçGÒ%Ö“òæ6Æ–6²‚’’“°¢BB‚u¶FF×v—¦&BÖFö7VÖVçBÖ–çWEÒr’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ6†ö÷6U&ö¦V7Ev—¦&DFö7VÖVçB†–çWBæFF6WBçv—¦&DFö7VÖVçD–çWBÂ–çWBæf–ÆW3òå³Ò’’“°¢BB‚u¶FF×v—¦&BÖFVÆWFRÖFö7VÖVçEÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFVÆWFU&ö¦V7Ev—¦&DFö7VÖVçB†'WGFöâæFF6WBçv—¦&DFVÆWFTFö7VÖVçB’’“°¢BB‚u¶FF×v—¦&BÖæÇ—¦RÖ¶–æEÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâf–æ—6…&ö¦V7Dö&¦V7Ev—¦&B†'WGFöâæFF6WBçv—¦&DæÇ—¦T¶–æB’’“°¢B‚u¶FF×v—¦&BÖæÇ—¦RÖÆÅÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâf–æ—6…&ö¦V7Dö&¦V7Ev—¦&B‚vÆÂr’“°§Ð ¦gVæ7F–öâ6†ö÷6U&ö¦V7Ev—¦&DFö7VÖVçB†¶–æBÂf–ÆR’°¢6öç7BG&gBÒ&ö¦V7Dö&¦V7Ev—¦&DG&gC°¢6öç7B'VÆRÒWÆöE'VÆW5¶¶–æEÓ°¢–b‚G&gBÇÂ'VÆRÇÂf–ÆR’&WGW&ã°¢–b†f–ÆRç6—¦Râ'VÆRæÖ„Ö"¢#B¢#B’²6†÷uFö7B†G·G"‚vf–ÆUFöôÆ&vRr—Ó¢G·'VÆRæÖ„Ö'Ò	Í	“²&WGW&ã²Ð¢–b‚—4ÆÆ÷vVDf–ÆR†f–ÆRÂ'VÆR’’²6†÷uFö7B†G·G"‚wVç7W÷'FVDf÷&ÖBr—Ó¢G·'VÆRæf÷&ÖG7Ö“²&WGW&ã²Ð¢6öç7BÖWFFFÒf–ÆTÖWFFF†f–ÆR“°¢–b†¶–æBÓÓÒv6öçG&7Br’ÖWFFFæ6öçG&7DçVÖ&W"ÒW‡G&7D6öçG&7DçVÖ&W$g&öÔæÖR†f–ÆRææÖR“°¢G&gBæf–ÆW5¶¶–æEÒÒÖWFFF°¢G&gBç6÷W&6Tf–ÆW5¶¶–æEÒÒf–ÆS°¢&VæFW%&ö¦V7Dö&¦V7Ev—¦&B‚“°§Ð ¦gVæ7F–öâFVÆWFU&ö¦V7Ev—¦&DFö7VÖVçB†¶–æB’°¢6öç7BG&gBÒ&ö¦V7Dö&¦V7Ev—¦&DG&gC°¢–b‚G&gBÇÂWÆöE'VÆW5¶¶–æEÒ’&WGW&ã°¢G&gBæf–ÆW5¶¶–æEÒÒçVÆÃ°¢G&gBç6÷W&6Tf–ÆW5¶¶–æEÒÒçVÆÃ°¢&VæFW%&ö¦V7Dö&¦V7Ev—¦&B‚“°§Ð ¦7–æ2gVæ7F–öâf–æ—6…&ö¦V7Dö&¦V7Ev—¦&B†æÇ—¦T¶–æB’°¢6öç7BG&gBÒ&ö¦V7Dö&¦V7Ev—¦&DG&gC°¢–b‚G&gBÇÂG&gBæf–æ—6†–ær’&WGW&ã°¢6öç7B&VG”f–ÆW2Òö&¦V7BæVçG&–W2†G&gBæf–ÆW2’æf–ÇFW"‚…²Âf–ÆUÒ’Óâf–ÆR“°¢–b‚&VG”f–ÆW2æÆVæwF‚’²6†÷uFö7B‡G"‚vFö7VÖVçG5&WV—&VBr’“²&WGW&ã²Ð¢6öç7BæÇ—¦T¶–æG2ÒæÇ—¦T¶–æBÓÓÒvÆÂrò&VG”f–ÆW2æÖ‚…¶¶–æEÒ’Óâ¶–æB’¢¶æÇ—¦T¶–æEÒæf–ÇFW"‚†¶–æB’ÓâG&gBæf–ÆW5¶¶–æEÒ“°¢–b‚æÇ—¦T¶–æG2æÆVæwF‚’&WGW&ã°¢G&gBæf–æ—6†–ærÒG'VS°¢BB‚u¶FF×v—¦&BÖæÇ—¦RÖ¶–æEÒr’æf÷$V6‚‚†'WGFöâ’Óâ²'WGFöâæF—6&ÆVBÒG'VS²Ò“°¢–b‚B‚u¶FF×v—¦&BÖæÇ—¦RÖÆÅÒr’’B‚u¶FF×v—¦&BÖæÇ—¦RÖÆÅÒr’æF—6&ÆVBÒG'VS°¢6öç7B6÷W&6T6FÆöt'”¶–æBÒö&¦V7Bæg&öÔVçG&–W2†v—B&öÖ—6RæÆÂ‡&VG”f–ÆW2æÖ†7–æ2…¶¶–æEÒ’Óâ°¢¶–æBÀ¢v—BW‡G&7D66…6÷W&6T6FÆötg&öÔf–ÆR†G&gBç6÷W&6Tf–ÆW5¶¶–æEÒÂ¶–æB¢Ò’’“°¢6öç7Bæ÷rÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6öç7Bf–ÆW2Ò&VG”f–ÆW2æÖ‚…¶¶–æBÂf–ÆUÒ’Óâ°¢6öç7B&V6÷&BÒ²ââæf–ÆRÂ¶–æBÂ&ö¦V7E6V7F–öã¢G&gBç&ö¦V7E6V7F–öâÂFFVDC¢f–ÆRæFFVDBÇÂæ÷rÂæÇ—6—5VæF–æs¢G'VRÂæÇ—¦VDC¢çVÆÂÂ6÷W&6T6FÆös¢6÷W&6T6FÆöt'”¶–æE¶¶–æEÒÇÂµÒÂ6÷W&6T6FÆöu66ææVC¢&ööÆVâ†G&gBç6÷W&6Tf–ÆW5¶¶–æEÒbb44…õ4õU$4UôDô5TÔTåEô´”äE2æ–æ6ÇVFW2†¶–æB’’Ó°¢&WGW&â²ââç&V6÷&BÂfW'6–öç3¢¶f–ÆUfW'6–öå6æ6†÷B‡&V6÷&B•ÒÂ6ö×&—6öã¢çVÆÂÓ°¢Ò“°¢6öç7Bö&¦V7BÒ°¢–C¢7&VFTö&¦V7D–B‚’À¢æÖS¢G&gBæö&¦V7DæÖRÀ¢&ö¦V7EF—FÆS¢G&gBæö&¦V7DæÖRÀ¢&ö¦V7E6V7F–öã¢G&gBç&ö¦V7E6V7F–öâÀ¢Fö7VÖVçEF—FÆW3¢æ÷&ÖÆ—¦U&ö¦V7DFö7VÖVçEF—FÆW2‚’À¢6öçG&7DçVÖ&W#¢7G&–ær†G&gBæf–ÆW2æ6öçG&7Còæ6öçG&7DçVÖ&W"ÇÂrr’À¢v÷&·76T÷&–v–ã¢G&gBçv÷&·76T÷&–v–âÀ¢7FGW3¢wWÆöFVBrÀ¢7&VFVDC¢æ÷rÀ¢WFFVDC¢æ÷rÀ¢WÆöFVDC¢æ÷rÀ¢æÇ—¦VDC¢çVÆÂÀ¢7F'FVDC¢çVÆÂÀ¢6ö×ÆWFVDC¢çVÆÂÀ¢f–ÆW0¢Ó°¢ö&¦V7E&Vv—7G'’çVç6†–gB†ö&¦V7B“°¢6VÆV7Dö&¦V7Df÷$æÇ—6—2†ö&¦V7B“°¢6fTö&¦V7G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢&ö¦V7Dö&¦V7Ev—¦&DG&gBÒçVÆÃ°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚vö&¦V7E6fVBr’“°¢–b†æÇ—¦T¶–æG2æÆVæwF‚â’æÇ—¦Tö&¦V7DFö7VÖVçG2†ö&¦V7Bæ–BÂæÇ—¦T¶–æG2“°¢VÇ6RæÇ—¦Tö&¦V7DFö7VÖVçB†ö&¦V7Bæ–BÂæÇ—¦T¶–æG5³Ò“°§Ð ¦gVæ7F–öâö&¦V7E&÷tÖ&·W†ö&¦V7B’°¢6öç7B—5&VG’Òö&¦V7Bç7FGW2ÓÓÒw&VG’s°¢6öç7B—47F—fRÒö&¦V7Bç7FGW2ÓÓÒv7F—fRs°¢6öç7Bf–ÆT6÷VçBÒ'&’æ—4'&’†ö&¦V7Bæf–ÆW2’òö&¦V7Bæf–ÆW2æÆVæwF‚¢°¢6öç7B7F÷&vRÒf÷&ÖE7F÷&vR‚†ö&¦V7Bæf–ÆW2ÇÂµÒ’ç&VGV6R‚‡F÷FÂÂf–ÆR’ÓâF÷FÂ²„çVÖ&W"†f–ÆRç6—¦R’ÇÂ’Â’“°¢6öç7BÖWFÒ—5&VG¢òG·G"‚væÇ—¦VBr—Ó¢G¶f÷&ÖDö&¦V7DFFR†ö&¦V7BææÇ—¦VDB—Ò+rG¶f–ÆT6÷VçGÒG·G"‚vGF6†VDFö7VÖVçG2r—Ò+rG·G"‚vÖVÖ÷'•W6VBr—Ó¢G·7F÷&vWÖ ¢¢—47F—fP¢òG·G"‚w7F'FVBr—Ó¢G¶f÷&ÖDö&¦V7DFFR†ö&¦V7Bç7F'FVDBÇÂö&¦V7BææÇ—¦VDB—Ò+rG¶f–ÆT6÷VçGÒG·G"‚vGF6†VDFö7VÖVçG2r—Ò+rG·G"‚vÖVÖ÷'•W6VBr—Ó¢G·7F÷&vWÖ ¢¢G·G"‚wWÆöFVDBr—Ó¢G¶f÷&ÖDö&¦V7DFFR†ö&¦V7BçWÆöFVDBÇÂö&¦V7BææÇ—¦VDB—Ò+rG¶f–ÆT6÷VçGÒG·G"‚vGF6†VDFö7VÖVçG2r—Ò+rG·G"‚vÖVÖ÷'•W6VBr—Ó¢G·7F÷&vWÖ°¢6öç7B7F–öç2Ò—5&VG¢òÆF—b6Æ73Ò&ö&¦V7B×&÷rÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&ö&¦V7B×7F'BÖ'WGFöâ"G—SÒ&'WGFöâ"FF×7F'B×&VG“Ò"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò#âG¶W66T‡FÖÂ‡G"‚w7F'Br’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&ö&¦V7BÖFVÆWFRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖFVÆWFR×&VG“Ò"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFTö&¦V7Br’—Ò#ãÇ7frf–Wt&÷ƒÒ##B#B"&–Ö†–FFVãÒ'G'VR#ãÇF‚CÒ$ÓBvƒdÓ’ucFƒgc4ÓrvÃ6ƒ†ÃÓ4ÓcTÓBcR"óãÂ÷7fsãÂö'WGFöããÂöF—cæ ¢¢Ç7â6Æ73Ò&ö&¦V7B×7FGW2Ö6†—G¶—47F—fRòrr¢v—2×WÆöFVBwÒ#âG¶W66T‡FÖÂ‡G"†—47F—fRòv–åv÷&²r¢wWÆöFVBr’—ÓÂ÷7ãæ°¢&WGW&âÆ'F–6ÆR6Æ73Ò'7FGW2Öö&¦V7B×&÷rG¶—5&VG’òv—2×&VG’r¢—47F—fRòv—2Ö7F—fRr¢v—2×WÆöFVBwÒ#ãÇ7â6Æ73Ò&ö&¦V7B×&÷rÖ–6öâ"&–Ö†–FFVãÒ'G'VR#âG¶—5&VG’ò~)xrr¢—47F—fRò~(È"r¢~)jBwÓÂ÷7ããÆF—b6Æ73Ò&ö&¦V7B×&÷rÖ6÷’#ãÆ'WGFöâ6Æ73Ò&ö&¦V7BÖ÷VâÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ÷VâÖö&¦V7CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ†G·G"‚v÷Väö&¦V7Br—Ó¢G¶ö&¦V7BææÖWÖ—Ò#âG¶W66T‡FÖÂ†ö&¦V7BææÖR—ÓÂö'WGFöããÇ6ÖÆÃâG¶W66T‡FÖÂ†ÖWF—ÓÂ÷6ÖÆÃãÂöF—câG¶7F–öç7ÓÂö'F–6ÆSæ°§Ð ¦gVæ7F–öâ&ö¦V7EF—FÆTf÷"†ö&¦V7B’°¢&WGW&â7G&–ær†ö&¦V7Còç&ö¦V7EF—FÆRÇÂö&¦V7CòææÖRÇÂrr’çG&–Ò‚’ç6Æ–6RƒÂC’ÇÂG"‚w&ö¦V7Br“°§Ð ¦gVæ7F–öâ&ö¦V7E6V7F–öäf÷"†ö&¦V7B’°¢&WGW&â7G&–ær†ö&¦V7Còç&ö¦V7E6V7F–öâÇÂö&¦V7Còç&ö¦V7EF—FÆRÇÂö&¦V7CòææÖRÇÂrr’çG&–Ò‚’ç6Æ–6RƒÂC’ÇÂG"‚w&ö¦V7DæÖU7FWr“°§Ð ¦gVæ7F–öâ&ö¦V7DFö7VÖVçD&6UF—FÆR†ö&¦V7BÂ¶–æB’°¢–b†¶–æBÓÓÒw&ö¦V7Br’&WGW&â&ö¦V7EF—FÆTf÷"†ö&¦V7B“°¢6öç7BF—FÆW2Òæ÷&ÖÆ—¦U&ö¦V7DFö7VÖVçEF—FÆW2†ö&¦V7CòæFö7VÖVçEF—FÆW2“°¢&WGW&âF—FÆW5¶¶–æEÒÇÂG·&ö¦V7EF—FÆTf÷"†ö&¦V7B—Ò+rG·G"†¶–æB—Ö°§Ð ¦gVæ7F–öâ&ö¦V7DFö7VÖVçEF—FÆR†ö&¦V7BÂ¶–æB’°¢6öç7B&6UF—FÆRÒ&ö¦V7DFö7VÖVçD&6UF—FÆR†ö&¦V7BÂ¶–æB“°¢–b†¶–æBÓÒv6öçG&7BrÇÂö&¦V7Còæ6öçG&7DçVÖ&W"’&WGW&â&6UF—FÆS°¢6öç7B†47W7FöÕF—FÆRÒ&ööÆVâ†æ÷&ÖÆ—¦U&ö¦V7DFö7VÖVçEF—FÆW2†ö&¦V7BæFö7VÖVçEF—FÆW2’æ6öçG&7B“°¢&WGW&â†47W7FöÕF—FÆP¢òG¶&6UF—FÆWÒ+r(IbG¶ö&¦V7Bæ6öçG&7DçVÖ&W'Ö ¢¢G·&ö¦V7EF—FÆTf÷"†ö&¦V7B—Ò+rG·G"‚v6öçG&7DçVÖ&W$Æ&VÂr—ÒG¶ö&¦V7Bæ6öçG&7DçVÖ&W'Ö°§Ð ¦gVæ7F–öâÆ–æ¶VD66„GF6†ÖVçDg&öÕ&ö¦V7B†ö&¦V7BÂ¶–æB’°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢–b‚f–ÆR’&WGW&âçVÆÃ°¢6öç7BfW'6–öç2Òf–ÆUfW'6–öç2†f–ÆR’æÖ‚‡fW'6–öâÂ–æFW‚’Óâæ÷&ÖÆ—¦T66„GF6†ÖVçEfW'6–öâ‡°¢ââçfW'6–öâÀ¢–C¢&ö¦V7BÖÆ–æ²ÒG¶ö&¦V7Bæ–GÒÒG¶¶–æGÒÒG¶–æFW‡ÒÒG·fW'6–öâæÆ7DÖöF–f–VGÖÀ¢6÷W&6Tö&¦V7D–C¢ö&¦V7Bæ–BÀ¢6÷W&6TFö7VÖVçD¶–æC¢¶–æBÀ¢6÷W&6TFö7VÖVçEF—FÆS¢&ö¦V7DFö7VÖVçEF—FÆR†ö&¦V7BÂ¶–æB’À¢Æ–æ¶VDg&öÕ&ö¦V7C¢G'VP¢ÒÂ¶–æB’’æf–ÇFW"„&ööÆVâ“°¢&WGW&âfW'6–öç2æÆVæwF‚ò²¶–æBÂfW'6–öç2Ò¢çVÆÃ°§Ð ¦gVæ7F–öâ66„GF6†ÖVçG4g&öÕ&ö¦V7B†ö&¦V7BÂ7W'&VçDGF6†ÖVçG2Ò·Ò’°¢&WGW&âö&¦V7Bæg&öÔVçG&–W2„44…ôED4„ÔTåEô´”äE2æÖ‚†¶–æB’Óâ°¢6öç7BÆ–æ¶VBÒÆ–æ¶VD66„GF6†ÖVçDg&öÕ&ö¦V7B†ö&¦V7BÂ¶–æB“°¢6öç7BÆö6ÅfW'6–öç2Ò†7W'&VçDGF6†ÖVçG3òå¶¶–æEÓòçfW'6–öç2ÇÂµÒ’æf–ÇFW"‚‡fW'6–öâ’ÓâfW'6–öâæÆ–æ¶VDg&öÕ&ö¦V7B“°¢6öç7BfW'6–öç2Ò²âââ†Æ–æ¶VCòçfW'6–öç2ÇÂµÒ’ÂââæÆö6ÅfW'6–öç5Ó°¢&WGW&â¶¶–æBÂfW'6–öç2æÆVæwF‚ò²¶–æBÂfW'6–öç2Ò¢çVÆÅÓ°¢Ò’“°§Ð ¦gVæ7F–öâ÷Vå&ö¦V7DÆVæ6„F–Æör†ö&¦V7D–B’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢–b‚ö&¦V7B’&WGW&ã°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚w7F'Dö&¦V7EVW7F–öâr’’ÂG¶W66T‡FÖÂ‡G"‚w&ö¦V7Br’—Ó¢G¶W66T‡FÖÂ‡&ö¦V7EF—FÆTf÷"†ö&¦V7B’—ÖÂÆF—b6Æ73Ò'&ö¦V7BÖÆVæ6‚Ö6†ö–6RÖw&–B#à¢Æ'WGFöâ6Æ73Ò'&ö¦V7BÖÆVæ6‚Ö6†ö–6R—2ÖFWfVÆ÷ÖVçB"G—SÒ&'WGFöâ"F—6&ÆVB&–ÖF—6&ÆVCÒ'G'VR#ãÇ7â6Æ73Ò'&ö¦V7BÖÆVæ6‚Ö6†ö–6RÖ–6öâ"&–Ö†–FFVãÒ'G'VR#î)xãÂ÷7ããÇ7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚vgVÆÄ7–6ÆT6†ö–6Rr’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚vgVÆÄ7–6ÆT6†ö–6T†–çBr’—ÓÂ÷6ÖÆÃãÂ÷7ããÆ#âG¶W66T‡FÖÂ‡G"‚v–äFWfVÆ÷ÖVçBr’—ÓÂö#ãÂö'WGFöãà¢Æ'WGFöâ6Æ73Ò'&ö¦V7BÖÆVæ6‚Ö6†ö–6R—2×V–6²"G—SÒ&'WGFöâ"FFÖÆVæ6‚×V–6²Öö&¦V7CãÇ7â6Æ73Ò'&ö¦V7BÖÆVæ6‚Ö6†ö–6RÖ–6öâ"&–Ö†–FFVãÒ'G'VR#î(isÂ÷7ããÇ7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚wV–6´ö&¦V7D6†ö–6Rr’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚wV–6´ö&¦V7D6†ö–6T†–çBr’—ÓÂ÷6ÖÆÃãÂ÷7ããÆ’&–Ö†–FFVãÒ'G'VR#î(£Âö“ãÂö'WGFöãà¢ÂöF—cæ“°¢B‚u¶FFÖÆVæ6‚×V–6²Öö&¦V7EÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷VåV–6´ö&¦V7Dg&öÕ&ö¦V7DF–Æör†ö&¦V7Bæ–B’“°§Ð ¦gVæ7F–öâ÷VåV–6´ö&¦V7Dg&öÕ&ö¦V7DF–Æör†ö&¦V7D–B’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢–b‚ö&¦V7B’&WGW&ã°¢6öç7BWÆöFVDFö7VÖVçG2Ò44…ôED4„ÔTåEô´”äE2æÖ‚†¶–æB’Óâ‡²¶–æBÂf–ÆS¢ö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB’Ò’’æf–ÇFW"‚†—FVÒ’Óâ—FVÒæf–ÆR“°¢6öç7BFö7VÖVçG2ÒWÆöFVDFö7VÖVçG2æÆVæwF€¢òWÆöFVDFö7VÖVçG2æÖ‚‡²¶–æBÂf–ÆRÒ’ÓâÆ'F–6ÆR6Æ73Ò'&ö¦V7BÖÆ–æ¶VBÖFö7VÖVçB#ãÇ7â&–Ö†–FFVãÒ'G'VR#âG¶¶–æBÓÓÒw&ö¦V7Brò~)jBr¢¶–æBÓÓÒv6öçG&7Brò~(šr¢~(+ÒwÓÂ÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ‡&ö¦V7DFö7VÖVçEF—FÆR†ö&¦V7BÂ¶–æB’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ†f–ÆRææÖR—Ò+rG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR†f–ÆRç6—¦R’—ÓÂ÷6ÖÆÃãÂöF—cãÆ#î)É2G¶W66T‡FÖÂ‡G"‚vÆ–æ¶VDg&öÕ&ö¦V7Br’—ÓÂö#ãÂö'F–6ÆSæ’æ¦ö–â‚rr¢¢ÆF—b6Æ73Ò'&ö¦V7BÖÆ–æ¶VBÖFö7VÖVçG2ÖV×G’#âG¶W66T‡FÖÂ‡G"‚væ÷EWÆöFVBr’—ÓÂöF—cæ°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚wV–6´ö&¦V7E6WGWr’’ÂW66T‡FÖÂ‡G"‚wV–6´ö&¦V7E6WGW†–çBr’’ÂÆF—b6Æ73Ò'&ö¦V7B×V–6²×7F'BÖf÷&Ò#à¢ÆF—b6Æ73Ò'&ö¦V7B×V–6²×7F'BÖf–VÆG2#ãÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"‚wV–6´ö&¦V7DæÖRr’—ÓÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#"FF×&ö¦V7B×V–6²ÖæÖRfÇVSÒ"G¶W66T‡FÖÂ†ö&¦V7BææÖR—Ò"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"‚w6V7F–öäæÖRr’—ÓÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ##"FF×&ö¦V7B×V–6²×6V7F–öâfÇVSÒ"G¶W66T‡FÖÂ‡&ö¦V7E6V7F–öäf÷"†ö&¦V7B’—Ò"óãÂöÆ&VÃãÂöF—cà¢Æf–VÆG6WB6Æ73Ò'&ö¦V7B×V–6²ÖÖöFW2#ãÆÆVvVæCâG¶W66T‡FÖÂ‡G"‚v6†ö÷6TöæUv÷&´ÖöFRr’—ÓÂöÆVvVæCãÆF—cãÆÆ&VÃãÆ–çWBG—SÒ'&F–ò"æÖSÒ'&ö¦V7B×V–6²ÖÖöFR"fÇVSÒ&6öçG&7B"óãÇ7ããÆ#âG¶W66T‡FÖÂ‡G"‚wv÷&´'”6öçG&7Br’—ÓÂö#ãÂ÷7ããÂöÆ&VÃãÆÆ&VÃãÆ–çWBG—SÒ'&F–ò"æÖSÒ'&ö¦V7B×V–6²ÖÖöFR"fÇVSÒ&f7B"óãÇ7ããÆ#âG¶W66T‡FÖÂ‡G"‚wv÷&´'”f7Br’—ÓÂö#ãÂ÷7ããÂöÆ&VÃãÆÆ&VÃãÆ–çWBG—SÒ'&F–ò"æÖSÒ'&ö¦V7B×V–6²ÖÖöFR"fÇVSÒ'7Fff–ær"óãÇ7ããÆ#âG¶W66T‡FÖÂ‡G"‚wV÷ÆT76–væVBr’—ÓÂö#ãÂ÷7ããÂöÆ&VÃãÂöF—cãÂöf–VÆG6WCà¢ÆF—b6Æ73Ò'&ö¦V7B×V–6²Ö6öçG&7BÖÖ÷VçB"FF×&ö¦V7B×V–6²Ö6öçG&7BÖÖ÷VçB†–FFVããÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"‚v6öçG&7DÖ÷VçBr’—ÓÂ÷7ããÆ–çWBG—SÒ&çVÖ&W""Ö–ãÒ#ã"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"FF×&ö¦V7B×V–6²Ö6öçG&7B×fÇVRÆ6V†öÆFW#Ò#(+Ò"óãÂöÆ&VÃãÂöF—cà¢Ç6V7F–öâ6Æ73Ò'&ö¦V7BÖÆ–æ¶VBÖFö7VÖVçG2#ãÆ†VFW#ãÆF—cãÆƒ3âG¶W66T‡FÖÂ‡G"‚vÆ–æ¶VE&ö¦V7DFö7VÖVçG2r’—ÓÂöƒ3ãÇâG¶W66T‡FÖÂ‡G"‚vÆ–æ¶VE&ö¦V7DFö7VÖVçG4†–çBr’—ÓÂ÷ãÂöF—cãÆ#âG·WÆöFVDFö7VÖVçG2æÆVæwF‡ÓÂö#ãÂö†VFW#ãÆF—câG¶Fö7VÖVçG7ÓÂöF—cãÂ÷6V7F–öãà¢Æ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ&ö¦V7B×V–6²×7F'B×7V&Ö—B"G—SÒ&'WGFöâ"FFÖ6öæf—&Ò×&ö¦V7B×V–6²×7F'CâG¶W66T‡FÖÂ‡G"‚vÆVæ6…V–6´ö&¦V7Br’—ÓÂö'WGFöãà¢ÂöF—cæ“°¢6öç7B66÷RÒB‚u¶FFÖF–ÆörÖ6öçFVçEÒr“°¢6öç7BæÖT–çWBÒB‚u¶FF×&ö¦V7B×V–6²ÖæÖUÒrÂ66÷R“°¢6öç7B6V7F–öä–çWBÒB‚u¶FF×&ö¦V7B×V–6²×6V7F–öåÒrÂ66÷R“°¢6öç7B6öçG&7DÖ÷VçDf–VÆBÒB‚u¶FF×&ö¦V7B×V–6²Ö6öçG&7BÖÖ÷VçEÒrÂ66÷R“°¢6öç7B7–æ4ÖöFRÒ‚’Óâ°¢6öç7BÖöFRÒB‚v–çWE¶æÖSÒ'&ö¦V7B×V–6²ÖÖöFR%Ó¦6†V6¶VBrÂ66÷R“òçfÇVS°¢6öçG&7DÖ÷VçDf–VÆBæ†–FFVâÒÖöFRÓÒv6öçG&7Bs°¢–b†ÖöFRÓÓÒv6öçG&7Br’B‚u¶FF×&ö¦V7B×V–6²Ö6öçG&7B×fÇVUÒrÂ6öçG&7DÖ÷VçDf–VÆB“òæfö7W2‚“°¢Ó°¢BB‚v–çWE¶æÖSÒ'&ö¦V7B×V–6²ÖÖöFR%ÒrÂ66÷R’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ7–æ4ÖöFR’“°¢6öç7BÆVæ6…V–6´ö&¦V7BÒ‚’Óâ°¢6öç7BæÖRÒæÖT–çWCòçfÇVRçG&–Ò‚’ç6Æ–6RƒÂ’ÇÂrs°¢6öç7B6V7F–öäæÖRÒ6V7F–öä–çWCòçfÇVRçG&–Ò‚’ç6Æ–6RƒÂ#’ÇÂrs°¢6öç7BÖöFRÒB‚v–çWE¶æÖSÒ'&ö¦V7B×V–6²ÖÖöFR%Ó¦6†V6¶VBrÂ66÷R“òçfÇVRÇÂrs°¢–b‚æÖR’²æÖT–çWCòæfö7W2‚“²&WGW&ã²Ð¢–b‚6V7F–öäæÖR’²6V7F–öä–çWCòæfö7W2‚“²&WGW&ã²Ð¢–b‚ÖöFR’²6†÷uFö7B‡G"‚v6†ö÷6TöæUv÷&´ÖöFRr’“²&WGW&ã²Ð¢6öç7B6öçG&7DÖ÷VçD–çWBÒB‚u¶FF×&ö¦V7B×V–6²Ö6öçG&7B×fÇVUÒrÂ66÷R“°¢6öç7B6öçG&7DÖ÷VçBÒÖöFRÓÓÒv6öçG&7BròÖF‚æÖ‚ƒÂÖF‚ç&÷VæB‚„çVÖ&W"†6öçG&7DÖ÷VçD–çWCòçfÇVR’ÇÂ’¢’ò’¢°¢–b†ÖöFRÓÓÒv6öçG&7Brbb6öçG&7DÖ÷VçBÃÒ’²6†÷uFö7B‡G"‚vVçFW$6öçG&7DÖ÷VçBr’“²6öçG&7DÖ÷VçD–çWCòæfö7W2‚“²&WGW&ã²Ð¢6öç7Bæ÷rÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢ÆWB66„ö&¦V7BÒ66†fÆ÷tö&¦V7G2æf–æB‚†—FVÒ’Óâ—FVÒç6÷W&6U&ö¦V7D–BÓÓÒö&¦V7Bæ–B“°¢6öç7BW†—7FVBÒ&ööÆVâ†66„ö&¦V7B“°¢–b‚66„ö&¦V7B’°¢66„ö&¦V7BÒ°¢–C¢66‚ÒG´FFRææ÷r‚—ÒÒG´ÖF‚ç&æFöÒ‚’çFõ7G&–ærƒb’ç6Æ–6Rƒ"—ÖÀ¢6÷W&6U&ö¦V7D–C¢ö&¦V7Bæ–BÀ¢æÖRÀ¢7&VFVDC¢æ÷rÀ¢6ö×ÆWFVC¢fÇ6RÀ¢6ö×ÆWFVDC¢çVÆÂÀ¢÷&væ—¦F–öäFö7VÖVçG46öÆÆ6VC¢fÇ6RÀ¢÷&væ—¦F–öäFö7VÖVçG3¢æ÷&ÖÆ—¦T66„÷&væ—¦F–öäFö7VÖVçG2‚’À¢6V7F–öç3¢µÐ¢Ó°¢66†fÆ÷tö&¦V7G2çVç6†–gB†66„ö&¦V7B“°¢Ð¢66„ö&¦V7BææÖRÒæÖS°¢66„ö&¦V7Bæ6ö×ÆWFVBÒfÇ6S°¢66„ö&¦V7Bæ6ö×ÆWFVDBÒçVÆÃ°¢ÆWB6V7F–öä–æFW‚Ò66„ö&¦V7Bç6V7F–öç2æf–æD–æFW‚‚‡6V7F–öâ’Óâ6V7F–öâç6÷W&6U&ö¦V7D–BÓÓÒö&¦V7Bæ–B“°¢6öç7B7W'&VçE6V7F–öâÒ6V7F–öä–æFW‚ãÒò66„ö&¦V7Bç6V7F–öç5·6V7F–öä–æFW…Ò¢çVÆÃ°¢6öç7B6V7F–öâÒæ÷&ÖÆ—¦T66…6V7F–öâ‡°¢âââ†7W'&VçE6V7F–öâÇÂ·Ò’À¢6÷W&6U&ö¦V7D–C¢ö&¦V7Bæ–BÀ¢æÖS¢6V7F–öäæÖRÀ¢7&VFVDC¢7W'&VçE6V7F–öãòæ7&VFVDBÇÂæ÷rÀ¢7&VFVDÖçVÆÇ“¢G'VRÀ¢6öçG&7DÖöFS¢ÖöFRÓÓÒv6öçG&7BrÀ¢f7DÖöFS¢ÖöFRÓÓÒvf7BrÀ¢7Fff–ætÖöFS¢ÖöFRÓÓÒw7Fff–ærrÀ¢6öçG&7DÖ÷VçBÀ¢GF6†ÖVçG3¢66„GF6†ÖVçG4g&öÕ&ö¦V7B†ö&¦V7BÂ7W'&VçE6V7F–öãòæGF6†ÖVçG2¢Ò“°¢–b‡6V7F–öä–æFW‚ãÒ’66„ö&¦V7Bç6V7F–öç5·6V7F–öä–æFW…ÒÒ6V7F–öã°¢VÇ6R66„ö&¦V7Bç6V7F–öç2çW6‚‡6V7F–öâ“°¢W‡æFVD66…6V7F–öç2æFB‡6V7F–öâæ–B“°¢7F—fT66„ö&¦V7D–BÒ66„ö&¦V7Bæ–C°¢ö&¦V7BçWFFVDBÒæ÷s°¢6fTö&¦V7G2‚“°¢6fT66†fÆ÷r‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6WEæVÂ‚v66†fÆ÷rr“°¢6†÷uFö7B‡G"†W†—7FVBòwV–6´ö&¦V7Dg&öÕ&ö¦V7EWFFVBr¢wV–6´ö&¦V7Dg&öÕ&ö¦V7D7&VFVBr’“°¢Ó°¢B‚u¶FFÖ6öæf—&Ò×&ö¦V7B×V–6²×7F'EÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂÆVæ6…V–6´ö&¦V7B“°¢¶æÖT–çWBÂ6V7F–öä–çWEÒæf÷$V6‚‚†–çWB’Óâ–çWCòæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ²–b†WfVçBæ¶W’ÓÓÒtVçFW"r’²WfVçBç&WfVçDFVfVÇB‚“²ÆVæ6…V–6´ö&¦V7B‚“²ÒÒ’“°¢6WEF–ÖV÷WB‚‚’Óâ²æÖT–çWCòæfö7W2‚“²æÖT–çWCòç6VÆV7B‚“²ÒÂC“°§Ð ¦gVæ7F–öâ&ö¦V7DÆ7EWFFVDB†ö&¦V7B’°¢6öç7BFFW2Ò¶ö&¦V7Còæ7&VFVDBÂö&¦V7CòçWÆöFVDBÂö&¦V7CòææÇ—¦VDBÂö&¦V7Còç7F'FVDBÂö&¦V7Còæ6ö×ÆWFVDBÂö&¦V7CòçWFFVDEÐ¢æÖ‚‡fÇVR’ÓâæWrFFR‡fÇVRÇÂ’¢æf–ÇFW"‚†FFR’ÓâçVÖ&W"æ—4f–æ—FR†FFRævWEF–ÖR‚’’“°¢&WGW&âFFW2æÆVæwF‚òæWrFFR„ÖF‚æÖ‚‚ââæFFW2æÖ‚†FFR’ÓâFFRævWEF–ÖR‚’’’’çFô•4õ7G&–ær‚’¢æWrFFR‚’çFô•4õ7G&–ær‚“°§Ð ¦gVæ7F–öâ&VæÖU&ö¦V7E6V7F–öâ†ö&¦V7D–B’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢–b‚ö&¦V7B’&WGW&ã°¢÷Vå&VæÖTF–Æör‡G"‚w&VæÖU6V7F–öâr’Â&ö¦V7E6V7F–öäf÷"†ö&¦V7B’ÂCÂ†æÖR’Óâ°¢ö&¦V7Bç&ö¦V7E6V7F–öâÒæÖS°¢ö&¦V7BçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢ö&¦V7Bæf–ÆW2Ò†ö&¦V7Bæf–ÆW2ÇÂµÒ’æÖ‚†f–ÆR’Óâ‡²ââæf–ÆRÂ&ö¦V7E6V7F–öã¢æÖRÒ’“°¢6fTö&¦V7G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢Ò“°§Ð ¦gVæ7F–öâ&VæÖU&ö¦V7DFö7VÖVçB†ö&¦V7D–BÂ¶–æB’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢–b‚ö&¦V7BÇÂWÆöE'VÆW5¶¶–æEÒ’&WGW&ã°¢6öç7BF—FÆT¶W’Ò¶–æBÓÓÒw&ö¦V7Bròw&VæÖU&ö¦V7Br¢¶–æBÓÓÒv6öçG&7Bròw&VæÖT6öçG&7Br¢w&VæÖTW7F–ÖFRs°¢÷Vå&VæÖTF–Æör‡G"‡F—FÆT¶W’’Â&ö¦V7DFö7VÖVçD&6UF—FÆR†ö&¦V7BÂ¶–æB’ÂcÂ†æÖR’Óâ°¢–b†¶–æBÓÓÒw&ö¦V7Br’ö&¦V7Bç&ö¦V7EF—FÆRÒæÖS°¢VÇ6Rö&¦V7BæFö7VÖVçEF—FÆW2Ò²ââææ÷&ÖÆ—¦U&ö¦V7DFö7VÖVçEF—FÆW2†ö&¦V7BæFö7VÖVçEF—FÆW2’Â¶¶–æEÓ¢æÖRÓ°¢ö&¦V7BçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fTö&¦V7G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢Ò“°§Ð ¦gVæ7F–öâ×•&ö¦V7Dö&¦V7G2‚’°¢6öç7B&ö¦V7G2Òö&¦V7E&Vv—7G'’ç6Æ–6R‚“°¢&WGW&â&ö¦V7G2ç6÷'B‚†Â"’Óâ°¢–b†ç7FGW2ÓÓÒv6ö×ÆWFVBrbb"ç7FGW2ÓÒv6ö×ÆWFVBr’&WGW&â°¢–b†ç7FGW2ÓÒv6ö×ÆWFVBrbb"ç7FGW2ÓÓÒv6ö×ÆWFVBr’&WGW&âÓ°¢6öç7BFFRÒ&ö¦V7DÆ7EWFFVDB†“°¢6öç7B$FFRÒ&ö¦V7DÆ7EWFFVDB†"“°¢&WGW&âæWrFFR†$FFR’ÒæWrFFR†FFR“°¢Ò“°§Ð ¦gVæ7F–öâ×•&ö¦V7E7FGW4¶W’†ö&¦V7B’°¢–b†ö&¦V7Bç7FGW2ÓÓÒw&VG’r’&WGW&âw&VG•7FGW2s°¢–b†ö&¦V7Bç7FGW2ÓÓÒv7F—fRr’&WGW&âv–åv÷&²s°¢–b†ö&¦V7Bç7FGW2ÓÓÒv6ö×ÆWFVBr’&WGW&âv6ö×ÆWFVDÆ—7Dö&¦V7Bs°¢&WGW&âwWÆöFVBs°§Ð ¦gVæ7F–öâ6fT6öÆÆ6VE&ö¦V7D–G2‚’°¢Æö6Å7F÷&vRç6WD—FVÒ…$ô¤T5Eô4$Eõ5DDUô´U’Â¥4ôâç7G&–æv–g’…²ââæ6öÆÆ6VE&ö¦V7D–G5Ò’“°§Ð ¦gVæ7F–öâFövvÆT×•&ö¦V7D6&B†–B’°¢–b†6öÆÆ6VE&ö¦V7D–G2æ†2†–B’’6öÆÆ6VE&ö¦V7D–G2æFVÆWFR†–B“°¢VÇ6R6öÆÆ6VE&ö¦V7D–G2æFB†–B“°¢6fT6öÆÆ6VE&ö¦V7D–G2‚“°¢&VæFW$×•&ö¦V7G2‚“°§Ð ¦gVæ7F–öâFVÆWFU&ö¦V7Dö&¦V7B†–B’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ–B“°¢–b‚ö&¦V7B’&WGW&ã°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚vFVÆWFU&ö¦V7EF—FÆRr’’ÂW66T‡FÖÂ‡G"‚vFVÆWFU&ö¦V7D†–çBr’’ÂÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ6æ6VÂ×&ö¦V7BÖFVÆWFSâG¶W66T‡FÖÂ‡G"‚v6æ6VÂr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ—2ÖFævW""G—SÒ&'WGFöâ"FFÖ6öæf—&Ò×&ö¦V7BÖFVÆWFSâG¶W66T‡FÖÂ‡G"‚vFVÆWFU&ö¦V7Br’—ÓÂö'WGFöããÂöF—cæ“°¢B‚u¶FFÖ6æ6VÂ×&ö¦V7BÖFVÆWFUÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚’“°¢B‚u¶FFÖ6öæf—&Ò×&ö¦V7BÖFVÆWFUÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢ö&¦V7Bæ¶W—2‡WÆöE'VÆW2’æf÷$V6‚‚†¶–æB’Óâ°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢–b†f–ÆRbb6VÆV7FVDf–ÆW5¶¶–æEÒbb6ÖTf–ÆTÖWFFF‡6VÆV7FVDf–ÆW5¶¶–æEÒÂf–ÆR’’6VÆV7FVDf–ÆW5¶¶–æEÒÒçVÆÃ°¢Ò“°¢ö&¦V7E&Vv—7G'’Òö&¦V7E&Vv—7G'’æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ–BÓÒ–B“°¢6öÆÆ6VE&ö¦V7D–G2æFVÆWFR†–B“°¢6fT6öÆÆ6VE&ö¦V7D–G2‚“°¢6fTö&¦V7G2‚“°¢6fUWÆöG2‚“°¢&VæFW$æÇ—6—46&G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚w&ö¦V7DFVÆWFVBr’“°¢Ò“°§Ð ¦gVæ7F–öâ&ö¦V7DFö7VÖVçDw&÷W¶W’†ö&¦V7D–BÂ¶–æB’°¢&WGW&âG¶ö&¦V7D–GÓ¢G¶¶–æGÖ°§Ð ¦gVæ7F–öâ&ö¦V7D6ö×&—6öä7F–öä¶W’†¶–æB’°¢&WGW&â²&ö¦V7C¢v6ö×&U&ö¦V7G2rÂ6öçG&7C¢v6ö×&T6öçG&7G2rÂW7F–ÖFS¢v6ö×&TW7F–ÖFW2rÕ¶¶–æEÒÇÂwfW'6–öä6ö×&—6öâs°§Ð ¦gVæ7F–öâ&ö¦V7D6ö×&—6öåF—FÆT¶W’†¶–æB’°¢&WGW&â²&ö¦V7C¢w&ö¦V7D6ö×&—6öârÂ6öçG&7C¢v6öçG&7D6ö×&—6öârÂW7F–ÖFS¢vW7F–ÖFT6ö×&—6öârÕ¶¶–æEÒÇÂwfW'6–öä6ö×&—6öâs°§Ð ¦gVæ7F–öâ&ö¦V7EfW'6–öäæÇ—6—4Ö&·W†ö&¦V7BÂ¶–æBÂfW'6–öâ’°¢6öç7BæÇ—¦VBÒ—4Fö7VÖVçEfW'6–öäæÇ—¦VB‡fW'6–öâ“°¢–b‚æÇ—¦VB’&WGW&âÇ6V7F–öâ6Æ73Ò&×’×&ö¦V7B×fW'6–öâ×&W7VÇB—2×VæF–ær#ãÆ†VFW#ãÇ7ãî(
+cÂ÷7ããÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚vf–ÆTæÇ—6—5&W7VÇBr’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡fW'6–öâææÖR—ÓÂ÷7G&öæsãÂöF—cãÂö†VFW#ãÆF—b6Æ73Ò&×’×&ö¦V7B×fW'6–öâ×v—F–ær#ãÇ7ãî(É³Â÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚vf–ÆTv—F–ætæÇ—6—2r’—ÓÂ÷7G&öæsãÇâG¶W66T‡FÖÂ‡G"‚vf–ÆTv—F–ætæÇ—6—46÷’r’—ÓÂ÷ãÂöF—cãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖæÇ—¦R×&ö¦V7B×fW'6–öãÒ"G¶W66T‡FÖÂ‡fW'6–öâæ–B—Ò"FFÖö&¦V7BÖ–CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"FFÖ¶–æCÒ"G¶W66T‡FÖÂ†¶–æB—Ò#âG¶W66T‡FÖÂ‡G"‚væÇ—¦Rr’—ÓÂö'WGFöããÂöF—cãÂ÷6V7F–öãæ°¢6öç7B¶W’ÒG·&ö¦V7DFö7VÖVçDw&÷W¶W’†ö&¦V7Bæ–BÂ¶–æB—Ó¢G·fW'6–öâæ–GÖ°¢6öç7B6VÆV7FVEF"Ò6VÆV7FVE&ö¦V7EfW'6–öåF'2ævWB†¶W’’ÇÂw&÷÷6Âs°¢6öç7Bf7G2ÒÆF—b6Æ73Ò&×’×&ö¦V7B×fW'6–öâÖf7G2#ãÆ'F–6ÆSãÇ7ãâG¶W66T‡FÖÂ‡G"‚vf–ÆTf÷&ÖDÆ&VÂr’—ÓÂ÷7ããÆ#âG¶W66T‡FÖÂ†f–ÆTf÷&ÖDÆ&VÂ‡fW'6–öâ’—ÓÂö#ãÂö'F–6ÆSãÆ'F–6ÆSãÇ7ãâG¶W66T‡FÖÂ‡G"‚vf–ÆU6—¦TÆ&VÂr’—ÓÂ÷7ããÆ#âG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR‡fW'6–öâç6—¦R’—ÓÂö#ãÂö'F–6ÆSãÆ'F–6ÆSãÇ7ãâG¶W66T‡FÖÂ‡G"‚wWÆöDFFRr’—ÓÂ÷7ããÆ#âG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR‡fW'6–öâæFFVDB’—ÓÂö#ãÂö'F–6ÆSâG¶¶–æBÓÓÒv6öçG&7BròÆ'F–6ÆSãÇ7ãâG¶W66T‡FÖÂ‡G"‚v6öçG&7DçVÖ&W$Æ&VÂr’—ÓÂ÷7ããÆ#âG¶W66T‡FÖÂ‡fW'6–öâæ6öçG&7DçVÖ&W"ÇÂG"‚v6öçG&7DçVÖ&W%VæF–ærr’—ÓÂö#ãÂö'F–6ÆSæ¢rwÓÂöF—cæ°¢ÆWB&W7VÇD&öG’Òrs°¢–b†¶–æBÓÓÒw&ö¦V7Br’°¢6öç7BF'2Ò&ö¦V7DæÇ—6—5F'2æÖ‚‡F"’ÓâÆ'WGFöâ6Æ73Ò"G·F"æ–BÓÓÒ6VÆV7FVEF"òv—2Ö7F—fRr¢rwÒ"G—SÒ&'WGFöâ"FF×&ö¦V7B×fW'6–öâ×F#Ò"G¶W66T‡FÖÂ‡F"æ–B—Ò"FFÖö&¦V7BÖ–CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"FFÖ¶–æCÒ"G¶W66T‡FÖÂ†¶–æB—Ò"FF×fW'6–öâÖ–CÒ"G¶W66T‡FÖÂ‡fW'6–öâæ–B—Ò"&–×6VÆV7FVCÒ"G·F"æ–BÓÓÒ6VÆV7FVEF'Ò#ãÇ7ãâG·F"æ–6öçÓÂ÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"‡F"æÆ&VÂ’—ÓÂ÷7G&öæsãÂö'WGFöãæ’æ¦ö–â‚rr“°¢&W7VÇD&öG’ÒÆæb6Æ73Ò'&ö¦V7BÖæÇ—6—2×F'2—2Ö–æÆ–æR"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w&ö¦V7DæÇ—6—2r’—Ò#âG·F'7ÓÂöæcãÇ6V7F–öâ6Æ73Ò'&ö¦V7BÖæÇ—6—2Ö6öçFVçB—2Ö–æÆ–æR#ãÆ†VFW#ãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ2DUD”ÃÂ÷7ããÆƒ#âG¶W66T‡FÖÂ‡G"‡&ö¦V7DæÇ—6—5F'2æf–æB‚‡F"’ÓâF"æ–BÓÓÒ6VÆV7FVEF"“òæÆ&VÂÇÂw&ö¦V7DW7F–ÖFRr’—ÓÂöƒ#ãÂö†VFW#âG·&ö¦V7DæÇ—6—5F$6öçFVçB‡6VÆV7FVEF"ÂfW'6–öâÂ¶–æB—ÓÂ÷6V7F–öãæ°¢ÒVÇ6R–b†¶–æBÓÓÒvW7F–ÖFRr’°¢&W7VÇD&öG’ÒÇ6V7F–öâ6Æ73Ò'&ö¦V7BÖæÇ—6—2Ö6öçFVçB—2Ö–æÆ–æR#ãÆ†VFW#ãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ2U5D”ÔDSÂ÷7ããÆƒ#âG¶W66T‡FÖÂ‡G"‚vW7F–ÖFRr’—ÓÂöƒ#ãÂö†VFW#âG·&ö¦V7DæÇ—6—5F$6öçFVçB‚w&÷÷6ÂrÂfW'6–öâÂ¶–æB—ÓÂ÷6V7F–öãæ°¢ÒVÇ6R°¢&W7VÇD&öG’ÒÇ6V7F–öâ6Æ73Ò&æÇ—6—2ÖFö7VÖVçB×Æ6V†öÆFW"—2Ö–æÆ–æR#ãÇ7ãî(šÂ÷7ããÆƒ#âG¶W66T‡FÖÂ‡G"‚væÇ—¦VDFö7VÖVçEvRr’—ÓÂöƒ#ãÇâG¶W66T‡FÖÂ‡G"‚væÇ—¦VDFö7VÖVçEvT6÷’r’—ÓÂ÷ãÂ÷6V7F–öãæ°¢Ð¢&WGW&âÇ6V7F–öâ6Æ73Ò&×’×&ö¦V7B×fW'6–öâ×&W7VÇB—2×&VG’#ãÆ†VFW#ãÇ7ãî)É3Â÷7ããÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚vf–ÆTæÇ—6—5&W7VÇBr’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡fW'6–öâææÖR—ÓÂ÷7G&öæsãÂöF—cãÆ#âG¶W66T‡FÖÂ‡G"‚væÇ—¦VBr’—ÓÂö#ãÂö†VFW#âG¶f7G7ÓÇ6V7F–öâ6Æ73Ò&æÇ—6—2×G'WF‚Öæ÷FR#ãÇ7ãâÂ÷7ããÇâG¶W66T‡FÖÂ‡G"‚væÇ—¦VDFFöæÇ’r’—ÓÂ÷ãÂ÷6V7F–öãâG·&W7VÇD&öG—ÓÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ&ö¦V7EfW'6–öä6ö×&—6öä&Æö6²†ö&¦V7BÂ¶–æBÂf–ÆR’°¢6öç7BfW'6–öç2Òf–ÆUfW'6–öç2†f–ÆR“°¢–b‡fW'6–öç2æÆVæwF‚Â"’&WGW&ârs°¢6öç7B¶W’Ò&ö¦V7DFö7VÖVçDw&÷W¶W’†ö&¦V7Bæ–BÂ¶–æB“°¢6öç7B&Wf–÷W2ÒfW'6–öç5·fW'6–öç2æÆVæwF‚Ò%Ó°¢6öç7B7W'&VçBÒfW'6–öç5·fW'6–öç2æÆVæwF‚ÒÓ°¢6öç7BW‡æFVBÒW‡æFVE&ö¦V7D6ö×&—6öç2æ†2†¶W’“°¢&WGW&âÇ6V7F–öâ6Æ73Ò&×’×&ö¦V7BÖ6ö×&—6öâÖ&Æö6²G¶W‡æFVBòr—2ÖW‡æFVBr¢rwÒ#ãÆ'WGFöâG—SÒ&'WGFöâ"FF×FövvÆR×&ö¦V7BÖ6ö×&—6öãÒ"G¶W66T‡FÖÂ†¶–æB—Ò"FFÖö&¦V7BÖ–CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"&–ÖW‡æFVCÒ"Gµ7G&–ær†W‡æFVB—Ò#ãÇ7â&–Ö†–FFVãÒ'G'VR#î(xCÂ÷7ããÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‡&ö¦V7D6ö×&—6öåF—FÆT¶W’†¶–æB’’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡&Wf–÷W2ææÖR—ÒÆ“î(iCÂö“âG¶W66T‡FÖÂ†7W'&VçBææÖR—ÓÂ÷7G&öæsãÆVÓâG¶W66T‡FÖÂ‡G"‚v6ö×&VDf–ÆW2r’—Ò+rbG·fW'6–öç2æÆVæwF‚ÒÒòbG·fW'6–öç2æÆVæwF‡ÓÂöVÓãÂöF—cãÆ#âG¶W66T‡FÖÂ‡G"†W‡æFVBòv†–FTF–ffW&Væ6W2r¢w6†÷tF–ffW&Væ6W2r’—ÓÂö#ãÆ’&–Ö†–FFVãÒ'G'VR#î(ÈCÂö“ãÂö'WGFöããÆF—b6Æ73Ò&×’×&ö¦V7BÖ6ö×&—6öâÖFWF–Ç2"G¶W‡æFVBòrr¢r†–FFVâwÓâG·&Wf—6–öä6ö×&—6öäÖ&·W†f–ÆRÂ²&Wf–÷W2Â7W'&VçBÂ¶–æBÒ—ÓÂöF—cãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ×•&ö¦V7DFö7VÖVçDw&÷WÖ&·W†ö&¦V7BÂ¶–æB’°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢6öç7BfW'6–öç2Òf–ÆRòf–ÆUfW'6–öç2†f–ÆR’¢µÓ°¢6öç7Bw&÷W¶W’Ò&ö¦V7DFö7VÖVçDw&÷W¶W’†ö&¦V7Bæ–BÂ¶–æB“°¢6öç7B6VÆV7FVEfW'6–öä–BÒ6VÆV7FVE&ö¦V7EfW'6–öä–G2ævWB†w&÷W¶W’“°¢6öç7B6VÆV7FVEfW'6–öâÒfW'6–öç2æf–æB‚‡fW'6–öâ’ÓâfW'6–öâæ–BÓÓÒ6VÆV7FVEfW'6–öä–B’ÇÂçVÆÃ°¢6öç7B–6öâÒ²&ö¦V7C¢~)jBrÂ6öçG&7C¢~(šrÂW7F–ÖFS¢~(+ÒrÕ¶¶–æEÓ°¢6öç7BF—FÆRÒ&ö¦V7DFö7VÖVçEF—FÆR†ö&¦V7BÂ¶–æB“°¢6öç7BÆVæ6„7F–öâÒ¶–æBÓÓÒw&ö¦V7BrbbfW'6–öç2æÆVæwF‚òÆ'WGFöâ6Æ73Ò&×’×&ö¦V7BÖFö7VÖVçBÖÆVæ6‚"G—SÒ&'WGFöâ"FFÖÆVæ6‚×&ö¦V7CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò#î)kbG¶W66T‡FÖÂ‡G"‚vÆVæ6…&ö¦V7Br’—ÓÂö'WGFöãæ¢rs°¢6öç7BWÆöDÆ&VÂÒfW'6–öç2æÆVæwF‚òG"‚wWÆöDFF—F–öæÄf–ÆRr’¢G"‚wWÆöBr“°¢6öç7BfW'6–öä6&G2ÒfW'6–öç2æÖ‚‡fW'6–öâÂ–æFW‚’Óâ°¢6öç7BæÇ—¦VBÒ—4Fö7VÖVçEfW'6–öäæÇ—¦VB‡fW'6–öâ“°¢6öç7B6VÆV7FVBÒ6VÆV7FVEfW'6–öãòæ–BÓÓÒfW'6–öâæ–C°¢6öç7B—4ÆFW7BÒ–æFW‚ÓÓÒfW'6–öç2æÆVæwF‚Ò°¢6öç7B6öçG&7DçVÖ&W"Ò¶–æBÓÓÒv6öçG&7BrbbfW'6–öâæ6öçG&7DçVÖ&W"ò+rG·G"‚v6öçG&7DçVÖ&W$Æ&VÂr—ÒG·fW'6–öâæ6öçG&7DçVÖ&W'Ö¢rs°¢&WGW&âÆ'F–6ÆR6Æ73Ò&×’×&ö¦V7B×fW'6–öâÖ6&BG¶æÇ—¦VBòv—2ÖæÇ—¦VBr¢v—2×VæF–ærwÒG·6VÆV7FVBòr—2×6VÆV7FVBr¢rwÒ#ãÆ'WGFöâ6Æ73Ò&×’×&ö¦V7B×fW'6–öâÖÖ–â"G—SÒ&'WGFöâ"FF×FövvÆR×&ö¦V7B×fW'6–öãÒ"G¶W66T‡FÖÂ‡fW'6–öâæ–B—Ò"FFÖö&¦V7BÖ–CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"FFÖ¶–æCÒ"G¶W66T‡FÖÂ†¶–æB—Ò"&–ÖW‡æFVCÒ"Gµ7G&–ær‡6VÆV7FVB—Ò#ãÇ7ãâG¶æÇ—¦VBò~)É2r¢~(
+bwÓÂ÷7ããÇ7ããÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"†¶–æB’—Ò+rbG¶–æFW‚²ÒG¶—4ÆFW7Bò+rG¶W66T‡FÖÂ‡G"‚vÆFW7Df–ÆRr’—Ö¢rwÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡fW'6–öâææÖR—ÓÂ÷7G&öæsãÆVÓâG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR‡fW'6–öâç6—¦R’—Ò+rG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR‡fW'6–öâæFFVDB’—ÒG¶W66T‡FÖÂ†6öçG&7DçVÖ&W"—ÓÂöVÓãÂ÷7ããÆ’&–Ö†–FFVãÒ'G'VR#î(ÈCÂö“ãÂö'WGFöããÆF—b6Æ73Ò&×’×&ö¦V7B×fW'6–öâÖ7F–öç2#âG¶æÇ—¦VBòÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ÷Vâ×&ö¦V7B×fW'6–öãÒ"G¶W66T‡FÖÂ‡fW'6–öâæ–B—Ò"FFÖö&¦V7BÖ–CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"FFÖ¶–æCÒ"G¶W66T‡FÖÂ†¶–æB—Ò#âG¶W66T‡FÖÂ‡G"‚v÷VäæÇ—6—5&W7VÇBr’—ÓÂö'WGFöãæ¢Æ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖæÇ—¦R×&ö¦V7B×fW'6–öãÒ"G¶W66T‡FÖÂ‡fW'6–öâæ–B—Ò"FFÖö&¦V7BÖ–CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"FFÖ¶–æCÒ"G¶W66T‡FÖÂ†¶–æB—Ò#âG¶W66T‡FÖÂ‡G"‚væÇ—¦Rr’—ÓÂö'WGFöãæÓÆ'WGFöâ6Æ73Ò&×’×&ö¦V7B×fW'6–öâÖFVÆWFR"G—SÒ&'WGFöâ"FFÖFVÆWFR×&ö¦V7B×fW'6–öãÒ"G¶W66T‡FÖÂ‡fW'6–öâæ–B—Ò"FFÖö&¦V7BÖ–CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"FFÖ¶–æCÒ"G¶W66T‡FÖÂ†¶–æB—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFTFö7VÖVçBr’—Ò#ì9sÂö'WGFöããÂöF—cãÂö'F–6ÆSæ°¢Ò’æ¦ö–â‚rr“°¢6öç7B6ö×&—6öä7F–öâÒfW'6–öç2æÆVæwF‚âòÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ×’×&ö¦V7BÖ6ö×&RÖ'WGFöâ"G—SÒ&'WGFöâ"FF×6†÷r×&ö¦V7BÖ6ö×&—6öãÒ"G¶W66T‡FÖÂ†¶–æB—Ò"FFÖö&¦V7BÖ–CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò#ãÇ7ãî(xCÂ÷7ãâG¶W66T‡FÖÂ‡G"‡&ö¦V7D6ö×&—6öä7F–öä¶W’†¶–æB’’—ÓÂö'WGFöãæ¢rs°¢6öç7B6ö×&—6öâÒf—6–&ÆU&ö¦V7D6ö×&—6öç2æ†2†w&÷W¶W’’ò&ö¦V7EfW'6–öä6ö×&—6öä&Æö6²†ö&¦V7BÂ¶–æBÂf–ÆR’¢rs°¢6öç7B6VÆV7FVE&W7VÇBÒ6VÆV7FVEfW'6–öâò&ö¦V7EfW'6–öäæÇ—6—4Ö&·W†ö&¦V7BÂ¶–æBÂ6VÆV7FVEfW'6–öâ’¢rs°¢&WGW&âÇ6V7F–öâ6Æ73Ò&×’×&ö¦V7BÖFö7VÖVçBÖw&÷WG·fW'6–öç2æÆVæwF‚òr†2Öf–ÆW2r¢rwÒ"FF×&ö¦V7BÖFö7VÖVçBÖw&÷WÒ"G¶W66T‡FÖÂ†w&÷W¶W’—Ò#ãÆ†VFW#ãÇ7â6Æ73Ò&×’×&ö¦V7BÖFö7VÖVçBÖ–6öâ"&–Ö†–FFVãÒ'G'VR#âG¶–6öçÓÂ÷7ããÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"†¶–æB’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡F—FÆR—ÓÂ÷7G&öæsãÆVÓâG·fW'6–öç2æÆVæwF‚òG·fW'6–öç2æÆVæwF‡ÒG¶W66T‡FÖÂ‡G"‚wfW'6–öç2r’—Ò+rG¶W66T‡FÖÂ‡G"‚vf–ÆT&Æö6´†–çBr’—Ö¢W66T‡FÖÂ‡G"‚vFö7VÖVçDæ÷DÆöFVBr’—ÓÂöVÓãÂöF—cãÆ#âG·fW'6–öç2æÆVæwF‡ÓÂö#ãÆF—b6Æ73Ò&×’×&ö¦V7BÖFö7VÖVçBÖw&÷WÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ×’×&ö¦V7BÖFö7VÖVçB×&VæÖR"G—SÒ&'WGFöâ"FFÖ×’×&ö¦V7B×&VæÖRÖFö7VÖVçCÒ"G¶W66T‡FÖÂ†¶–æB—Ò"FFÖö&¦V7BÖ–CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò#î)ÈâG¶W66T‡FÖÂ‡G"‚w&VæÖRr’—ÓÂö'WGFöãâG¶ÆVæ6„7F–öçÓÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖ×’×&ö¦V7B×WÆöCÒ"G¶W66T‡FÖÂ†¶–æB—Ò"FFÖö&¦V7BÖ–CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"FF×fW'6–öâÖÖöFSÒ"G·fW'6–öç2æÆVæwF‚òw&Wf—6–öâr¢w7FæF&BwÒ#îûÈ²G¶W66T‡FÖÂ‡WÆöDÆ&VÂ—ÓÂö'WGFöããÂöF—cãÂö†VFW#âG·fW'6–öç2æÆVæwF‚òÆF—b6Æ73Ò&×’×&ö¦V7B×fW'6–öâÖw&–B#âG·fW'6–öä6&G7ÓÂöF—cæ¢ÆF—b6Æ73Ò&×’×&ö¦V7B×fW'6–öâÖV×G’#ãÇ7ãîûÈ³Â÷7ããÇâG¶W66T‡FÖÂ‡G"‚vFö7VÖVçDæ÷DÆöFVBr’—ÓÂ÷ãÂöF—cæÓÆF—b6Æ73Ò&×’×&ö¦V7BÖFö7VÖVçBÖw&÷WÖfö÷FW"#âG¶6ö×&—6öä7F–öçÓÂöF—câG¶6ö×&—6öçÒG·6VÆV7FVE&W7VÇGÓÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ&W&VæFW%&ö¦V7EfW'6–öç2‚’°¢&VæFW$×•&ö¦V7G2‚“°§Ð ¦gVæ7F–öâFövvÆU&ö¦V7EfW'6–öå&W7VÇB†ö&¦V7D–BÂ¶–æBÂfW'6–öä–B’°¢6öç7B¶W’Ò&ö¦V7DFö7VÖVçDw&÷W¶W’†ö&¦V7D–BÂ¶–æB“°¢–b‡6VÆV7FVE&ö¦V7EfW'6–öä–G2ævWB†¶W’’ÓÓÒfW'6–öä–B’6VÆV7FVE&ö¦V7EfW'6–öä–G2æFVÆWFR†¶W’“°¢VÇ6R6VÆV7FVE&ö¦V7EfW'6–öä–G2ç6WB†¶W’ÂfW'6–öä–B“°¢&W&VæFW%&ö¦V7EfW'6–öç2‚“°§Ð ¦gVæ7F–öâ6†÷u&ö¦V7D6ö×&—6öâ†ö&¦V7D–BÂ¶–æB’°¢6öç7B¶W’Ò&ö¦V7DFö7VÖVçDw&÷W¶W’†ö&¦V7D–BÂ¶–æB“°¢f—6–&ÆU&ö¦V7D6ö×&—6öç2æFB†¶W’“°¢W‡æFVE&ö¦V7D6ö×&—6öç2æFVÆWFR†¶W’“°¢&W&VæFW%&ö¦V7EfW'6–öç2‚“°§Ð ¦gVæ7F–öâFövvÆU&ö¦V7D6ö×&—6öâ†ö&¦V7D–BÂ¶–æB’°¢6öç7B¶W’Ò&ö¦V7DFö7VÖVçDw&÷W¶W’†ö&¦V7D–BÂ¶–æB“°¢–b†W‡æFVE&ö¦V7D6ö×&—6öç2æ†2†¶W’’’W‡æFVE&ö¦V7D6ö×&—6öç2æFVÆWFR†¶W’“°¢VÇ6RW‡æFVE&ö¦V7D6ö×&—6öç2æFB†¶W’“°¢&W&VæFW%&ö¦V7EfW'6–öç2‚“°§Ð ¦gVæ7F–öâ6VÆV7E&ö¦V7EfW'6–öåF"†ö&¦V7D–BÂ¶–æBÂfW'6–öä–BÂF"’°¢6VÆV7FVE&ö¦V7EfW'6–öåF'2ç6WB†G·&ö¦V7DFö7VÖVçDw&÷W¶W’†ö&¦V7D–BÂ¶–æB—Ó¢G·fW'6–öä–GÖÂF"“°¢&W&VæFW%&ö¦V7EfW'6–öç2‚“°§Ð ¦gVæ7F–öâ×•&ö¦V7DÖ&·W†ö&¦V7B’°¢6öç7BW6VD'—FW2Ò†ö&¦V7Bæf–ÆW2ÇÂµÒ’ç&VGV6R‚‡F÷FÂÂf–ÆR’ÓâF÷FÂ²f–ÆUfW'6–öç2†f–ÆR’ç&VGV6R‚‡7VÒÂfW'6–öâ’Óâ7VÒ²„çVÖ&W"‡fW'6–öâç6—¦R’ÇÂ’Â’Â“°¢6öç7BWFFVDBÒ&ö¦V7DÆ7EWFFVDB†ö&¦V7B“°¢6öç7B7FGW4¶W’Ò×•&ö¦V7E7FGW4¶W’†ö&¦V7B“°¢6öç7B&ö¦V7E6V7F–öâÒ&ö¦V7E6V7F–öäf÷"†ö&¦V7B“°¢6öç7B6öÆÆ6VBÒ6öÆÆ6VE&ö¦V7D–G2æ†2†ö&¦V7Bæ–B“°¢6öç7BFö7VÖVçG2Òö&¦V7Bæ¶W—2‡WÆöE'VÆW2’æÖ‚†¶–æB’Óâ×•&ö¦V7DFö7VÖVçDw&÷WÖ&·W†ö&¦V7BÂ¶–æB’’æ¦ö–â‚rr“°¢6öç7BFövvÆTÆ&VÂÒG"†6öÆÆ6VBòvW‡æE&ö¦V7Br¢v6öÆÆ6U&ö¦V7Br“°¢&WGW&âÆ'F–6ÆR6Æ73Ò&×’×&ö¦V7BÖ6&B—2ÒG¶W66T‡FÖÂ†ö&¦V7Bç7FGW2—ÒG¶6öÆÆ6VBòr—2Ö6öÆÆ6VBr¢rwÒ"FFÖ×’×&ö¦V7CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò#ãÆ†VFW#ãÆ'WGFöâ6Æ73Ò&×’×&ö¦V7BÖö&¦V7BÖ÷Vâ"G—SÒ&'WGFöâ"FF×FövvÆRÖ×’×&ö¦V7CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"&–ÖW‡æFVCÒ"Gµ7G&–ær‚6öÆÆ6VB—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡FövvÆTÆ&VÂ—Ò#ãÇ7â6Æ73Ò&×’×&ö¦V7BÖÖ&²"&–Ö†–FFVãÒ'G'VR#î)kÂ÷7ããÇ7ããÇ6ÖÆÃå5E%T5Dõ2ô$¤T5CÂ÷6ÖÆÃãÆƒ#âG¶W66T‡FÖÂ†ö&¦V7BææÖR—ÓÂöƒ#ãÆVÒ6Æ73Ò&×’×&ö¦V7B×6V7F–öâÖæÖR#âG¶W66T‡FÖÂ‡G"‚w&ö¦V7DæÖU7FWr’—Ó¢G¶W66T‡FÖÂ‡&ö¦V7E6V7F–öâ—ÓÂöVÓãÇ7â6Æ73Ò&×’×&ö¦V7BÖ&FvW2#ãÆ#âG¶W66T‡FÖÂ‡G"‚vgVÆÄ7–6ÆTö&¦V7Br’—ÓÂö#ãÆ"6Æ73Ò&—2ÒG¶W66T‡FÖÂ†ö&¦V7Bç7FGW2—Ò#âG¶W66T‡FÖÂ‡G"‡7FGW4¶W’’—ÓÂö#ãÂ÷7ããÂ÷7ããÆ’&–Ö†–FFVãÒ'G'VR#î(ÈCÂö“ãÂö'WGFöããÆF—b6Æ73Ò&×’×&ö¦V7BÖ6&BÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ÷Vâ×&ö¦V7BÖö&¦V7CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò#âG¶W66T‡FÖÂ‡G"‚v÷VäFö7VÖVçBr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ×’×&ö¦V7B×&VæÖR×6V7F–öâÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ×’×&ö¦V7B×&VæÖR×6V7F–öãÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò#î)ÈâG¶W66T‡FÖÂ‡G"‚w&ö¦V7DæÖU7FWr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&×’×&ö¦V7BÖFVÆWFRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖFVÆWFR×&ö¦V7CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò#âG¶W66T‡FÖÂ‡G"‚vFVÆWFU&ö¦V7Br’—ÓÂö'WGFöããÂöF—cãÂö†VFW#ãÆF—b6Æ73Ò&×’×&ö¦V7BÖ6&BÖ6öçFVçB"G¶6öÆÆ6VBòr†–FFVâr¢rwÓãÆF—b6Æ73Ò&×’×&ö¦V7BÖFö7VÖVçG2#âG¶Fö7VÖVçG7ÓÂöF—cãÆfö÷FW#ãÇ7ãâG¶W66T‡FÖÂ‡G"‚vÆ7E&ö¦V7EWFFRr’—Ó¢G¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR‡WFFVDB’—ÓÂ÷7ããÇ7ãâG¶W66T‡FÖÂ‡G"‚vÖVÖ÷'•W6VBr’—Ó¢G¶W66T‡FÖÂ†f÷&ÖE7F÷&vR‡W6VD'—FW2’—ÓÂ÷7ããÂöfö÷FW#ãÂöF—cãÂö'F–6ÆSæ°§Ð ¦gVæ7F–öâ&VæFW$×•&ö¦V7G2‚’°¢6öç7B&ö¦V7G2Ò×•&ö¦V7Dö&¦V7G2‚“°¢BB‚u¶FFÖ×’×&ö¦V7G2ÖÆ—7EÒr’æf÷$V6‚‚†Æ—7B’Óâ°¢Æ—7Bæ–ææW$…DÔÂÒ&ö¦V7G2æÖ†×•&ö¦V7DÖ&·W’æ¦ö–â‚rr“°¢BB‚u¶FFÖ×’×&ö¦V7EÒrÂÆ—7B’æf÷$V6‚‚†6&B’Óâ°¢B‚u¶FF×FövvÆRÖ×’×&ö¦V7EÒrÂ6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ†WfVçB’ÓâFövvÆT×•&ö¦V7D6&B†WfVçBæ7W'&VçEF&vWBæFF6WBçFövvÆT×•&ö¦V7B’“°¢B‚u¶FFÖÆVæ6‚×&ö¦V7EÒrÂ6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ†WfVçB’Óâ²WfVçBç7F÷&÷vF–öâ‚“²÷Vå&ö¦V7DÆVæ6„F–Æör†WfVçBæ7W'&VçEF&vWBæFF6WBæÆVæ6…&ö¦V7B“²Ò“°¢B‚u¶FFÖ÷Vâ×&ö¦V7BÖö&¦V7EÒrÂ6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ†WfVçB’Óâ²WfVçBç7F÷&÷vF–öâ‚“²÷Väö&¦V7D6&B†WfVçBæ7W'&VçEF&vWBæFF6WBæ÷Vå&ö¦V7Dö&¦V7B“²Ò“°¢B‚u¶FFÖ×’×&ö¦V7B×&VæÖR×6V7F–öåÒrÂ6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ†WfVçB’Óâ²WfVçBç7F÷&÷vF–öâ‚“²&VæÖU&ö¦V7E6V7F–öâ†WfVçBæ7W'&VçEF&vWBæFF6WBæ×•&ö¦V7E&VæÖU6V7F–öâ“²Ò“°¢B‚u¶FFÖFVÆWFR×&ö¦V7EÒrÂ6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ†WfVçB’Óâ²WfVçBç7F÷&÷vF–öâ‚“²FVÆWFU&ö¦V7Dö&¦V7B†WfVçBæ7W'&VçEF&vWBæFF6WBæFVÆWFU&ö¦V7B“²Ò“°¢BB‚u¶FFÖ×’×&ö¦V7B×&VæÖRÖFö7VÖVçEÒrÂ6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ&VæÖU&ö¦V7DFö7VÖVçB†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ×•&ö¦V7E&VæÖTFö7VÖVçB’’“°¢BB‚u¶FFÖ×’×&ö¦V7B×WÆöEÒrÂ6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷VåWÆöDF–Æör†'WGFöâæFF6WBæ×•&ö¦V7EWÆöBÂ'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBçfW'6–öäÖöFR’’“°¢BB‚u¶FF×FövvÆR×&ö¦V7B×fW'6–öåÒrÂ6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFövvÆU&ö¦V7EfW'6–öå&W7VÇB†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ¶–æBÂ'WGFöâæFF6WBçFövvÆU&ö¦V7EfW'6–öâ’’“°¢BB‚u¶FFÖæÇ—¦R×&ö¦V7B×fW'6–öåÒrÂ6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâæÇ—¦Tö&¦V7DFö7VÖVçB†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ¶–æBÂ'WGFöâæFF6WBææÇ—¦U&ö¦V7EfW'6–öâÂ²–æÆ–æS¢G'VRÒ’’“°¢BB‚u¶FFÖ÷Vâ×&ö¦V7B×fW'6–öåÒrÂ6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷VäæÇ—¦VDFö7VÖVçB†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ¶–æBÂ'WGFöâæFF6WBæ÷Vå&ö¦V7EfW'6–öâ’’“°¢BB‚u¶FFÖFVÆWFR×&ö¦V7B×fW'6–öåÒrÂ6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFVÆWFTö&¦V7DFö7VÖVçEfW'6–öâ†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ¶–æBÂ'WGFöâæFF6WBæFVÆWFU&ö¦V7EfW'6–öâ’’“°¢BB‚u¶FF×6†÷r×&ö¦V7BÖ6ö×&—6öåÒrÂ6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6†÷u&ö¦V7D6ö×&—6öâ†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBç6†÷u&ö¦V7D6ö×&—6öâ’’“°¢BB‚u¶FF×FövvÆR×&ö¦V7BÖ6ö×&—6öåÒrÂ6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFövvÆU&ö¦V7D6ö×&—6öâ†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBçFövvÆU&ö¦V7D6ö×&—6öâ’’“°¢BB‚u¶FF×&ö¦V7B×fW'6–öâ×F%ÒrÂ6&B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6VÆV7E&ö¦V7EfW'6–öåF"†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ¶–æBÂ'WGFöâæFF6WBçfW'6–öä–BÂ'WGFöâæFF6WBç&ö¦V7EfW'6–öåF"’’“°¢Ò“°¢Ò“°¢BB‚u¶FFÖ×’×&ö¦V7G2Ö6÷VçEÒr’æf÷$V6‚‚†6÷VçB’Óâ²6÷VçBçFW‡D6öçFVçBÒ7G&–ær‡&ö¦V7G2æÆVæwF‚“²Ò“°¢BB‚u¶FFÖ×’×&ö¦V7G2ÖV×G•Òr’æf÷$V6‚‚†V×G’’Óâ²V×G’æ†–FFVâÒ&ö¦V7G2æÆVæwF‚â²Ò“°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Ä7&VF–öä6&DÖ&·W†¶–æB’°¢6öç7BG&gBÒ6öÖÖW&6–Å&÷÷6ÄG&gG5¶¶–æEÓ°¢6öç7B'VÆRÒWÆöE'VÆW5¶¶–æEÓ°¢6öç7B—5&ö¦V7BÒ¶–æBÓÓÒw&ö¦V7Bs°¢6öç7BF—FÆT¶W’Ò—5&ö¦V7Bòv7&VFU&÷÷6Ä'•&ö¦V7Br¢v7&VFU&÷÷6Ä'”W7F–ÖFRs°¢6öç7B†–çD¶W’Ò—5&ö¦V7Bòw&÷÷6Ä7&VFU&ö¦V7D†–çBr¢w&÷÷6Ä7&VFTW7F–ÖFT†–çBs°¢6öç7B6VÆV7FVDf–ÆRÒG&gBæf–ÆP¢òÆF—b6Æ73Ò'&÷÷6ÂÖ7&VFR×6VÆV7FVBÖf–ÆR#ãÇ7â&–Ö†–FFVãÒ'G'VR#âG¶—5&ö¦V7Bò~)jBr¢|ê2wÓÂ÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ†G&gBæf–ÆRææÖR—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ†f–ÆTf÷&ÖDÆ&VÂ†G&gBæf–ÆR’—Ò+rG¶W66T‡FÖÂ†f–ÆU6—¦R†G&gBæf–ÆRç6—¦R’—ÓÂ÷6ÖÆÃãÂöF—cãÆ'WGFöâG—SÒ&'WGFöâ"FF×&÷÷6Â×&WÆ6RÖf–ÆSÒ"G¶¶–æGÒ#âG¶W66T‡FÖÂ‡G"‚w&WÆ6Rr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&÷÷6ÂÖ7&VFRÖFVÆWFRÖf–ÆR"G—SÒ&'WGFöâ"FF×&÷÷6ÂÖFVÆWFRÖf–ÆSÒ"G¶¶–æGÒ"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFTf–ÆRr’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFTf–ÆRr’—Ò#ì9sÂö'WGFöããÂöF—cæ ¢¢ÆF—b6Æ73Ò'&÷÷6ÂÖ7&VFRÖG&÷¦öæR"FF×&÷÷6ÂÖG&÷¦öæSÒ"G¶¶–æGÒ"&öÆSÒ&'WGFöâ"F&–æFWƒÒ##ãÇ7â&–Ö†–FFVãÒ'G'VR#î(iÂ÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚w6VÆV7Df–ÆRr’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚vG&÷f–ÆRr’—Ò+rG¶W66T‡FÖÂ‡'VÆRæf÷&ÖG2—Ò+rG·'VÆRæÖ„Ö'Ò	Í	Â÷6ÖÆÃãÂöF—cãÂöF—cæ°¢6öç7B7&VFT7F–öâÒG&gBæf–ÆP¢òÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ&÷÷6ÂÖ7&VFR×7V&Ö—B"G—SÒ&'WGFöâ"FFÖ7&VFRÖ6öÖÖW&6–Â×&÷÷6ÃÒ"G¶¶–æGÒ"G¶G&gBæ'W7’ÇÂG&gBæö&¦V7DæÖRçG&–Ò‚’ÇÂG&gBç6V7F–öäæÖRçG&–Ò‚’òrF—6&ÆVBr¢rwÓâG¶W66T‡FÖÂ‡G"†G&gBæ'W7’òv7&VF–æt6öÖÖW&6–Å&÷÷6Âr¢v7&VFT6öÖÖW&6–Å&÷÷6Âr’—ÓÂö'WGFöãæ ¢¢rs°¢&WGW&âÆ'F–6ÆR6Æ73Ò'&÷÷6ÂÖ7&VFRÖ6&B—2ÒG¶¶–æGÒG¶G&gBæ'W7’òr—2Ö'W7’r¢rwÒ"FFÖ6öÖÖW&6–Â×&÷÷6ÂÖ7&VFRÖ6&CÒ"G¶¶–æGÒ#ãÆ†VFW#ãÇ7â&–Ö†–FFVãÒ'G'VR#âG¶—5&ö¦V7Bò~)jBr¢|ê2wÓÂ÷7ããÆF—cãÆƒ#âG¶W66T‡FÖÂ‡G"‡F—FÆT¶W’’—ÓÂöƒ#ãÇâG¶W66T‡FÖÂ‡G"††–çD¶W’’—ÓÂ÷ãÂöF—cãÂö†VFW#ãÆF—b6Æ73Ò'&÷÷6ÂÖ7&VFRÖf–VÆG2#ãÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"‚vö&¦V7DæÖRr’—ÒÆVÓâ£ÂöVÓãÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#"FF×&÷÷6ÂÖö&¦V7BÖæÖSÒ"G¶¶–æGÒ"fÇVSÒ"G¶W66T‡FÖÂ†G&gBæö&¦V7DæÖR—Ò"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚vö&¦V7EÆ6V†öÆFW"r’—Ò"WFö6ö×ÆWFSÒ&÷&væ—¦F–öâ"óãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"‚w&÷÷6Å6V7F–öäf–VÆBr’—ÒÆVÓâ£ÂöVÓãÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#C"FF×&÷÷6Â×6V7F–öâÖæÖSÒ"G¶¶–æGÒ"fÇVSÒ"G¶W66T‡FÖÂ†G&gBç6V7F–öäæÖR—Ò"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚w&÷÷6Å6V7F–öåÆ6V†öÆFW"r’—Ò"óãÂöÆ&VÃãÂöF—cãÆ–çWB6Æ73Ò&†–FFVâÖf–ÆRÖ–çWB"G—SÒ&f–ÆR"FF×&÷÷6ÂÖf–ÆRÖ–çWCÒ"G¶¶–æGÒ"66WCÒ"G¶W66T‡FÖÂ‡'VÆRæ66WB—Ò"óâG·6VÆV7FVDf–ÆWÓÇ6ÖÆÂ6Æ73Ò'&÷÷6ÂÖ7&VFRÖf–ÆRÖ†–çB#âG¶W66T‡FÖÂ‡G"‚w&÷÷6Äf–ÆT†–çBr’—ÓÂ÷6ÖÆÃâG¶7&VFT7F–öçÓÂö'F–6ÆSæ°§Ð ¦gVæ7F–öâWFFT6öÖÖW&6–Å&÷÷6Ä7&VFT'WGFöâ†6&BÂ¶–æB’°¢6öç7BG&gBÒ6öÖÖW&6–Å&÷÷6ÄG&gG5¶¶–æEÓ°¢6öç7B'WGFöâÒB‚u¶FFÖ7&VFRÖ6öÖÖW&6–Â×&÷÷6ÅÒrÂ6&B“°¢–b†'WGFöâ’'WGFöâæF—6&ÆVBÒG&gBæ'W7’ÇÂG&gBæf–ÆRÇÂG&gBæö&¦V7DæÖRçG&–Ò‚’ÇÂG&gBç6V7F–öäæÖRçG&–Ò‚“°§Ð ¦gVæ7F–öâ6†ö÷6T6öÖÖW&6–Å&÷÷6Äf–ÆR†¶–æBÂf–ÆR’°¢–b‚f–ÆRÇÂ6öÖÖW&6–Å&÷÷6ÄG&gG5¶¶–æEÒ’&WGW&ã°¢6öç7B'VÆRÒWÆöE'VÆW5¶¶–æEÓ°¢–b†f–ÆRç6—¦Râ'VÆRæÖ„Ö"¢#B¢#B’²6†÷uFö7B†G·G"‚vf–ÆUFöôÆ&vRr—Ó¢G·'VÆRæÖ„Ö'Ò	Í	“²&WGW&ã²Ð¢–b‚—4ÆÆ÷vVDf–ÆR†f–ÆRÂ'VÆR’’²6†÷uFö7B†G·G"‚wVç7W÷'FVDf÷&ÖBr—Ó¢G·'VÆRæf÷&ÖG7Ö“²&WGW&ã²Ð¢6öç7BG&gBÒ6öÖÖW&6–Å&÷÷6ÄG&gG5¶¶–æEÓ°¢G&gBæf–ÆRÒf–ÆTÖWFFF†f–ÆR“°¢G&gBç6÷W&6Tf–ÆRÒf–ÆS°¢&VæFW$6öÖÖW&6–Å&÷÷6Ä7&VF÷'2‚“°¢6†÷uFö7B†G·G"‚vf–ÆU6VÆV7FVBr—Ó¢G¶f–ÆRææÖWÖ“°§Ð ¦gVæ7F–öâ&VæFW$6öÖÖW&6–Å&÷÷6Ä7&VF÷'2‚’°¢BB‚u¶FF×&÷÷6ÂÖ7&VFRÖ7F–öç5Òr’æf÷$V6‚‚‡&ö÷DVÆVÖVçB’Óâ°¢&ö÷DVÆVÖVçBæ–ææW$…DÔÂÒ²w&ö¦V7BrÂvW7F–ÖFRuÒæÖ†6öÖÖW&6–Å&÷÷6Ä7&VF–öä6&DÖ&·W’æ¦ö–â‚rr“°¢BB‚u¶FFÖ6öÖÖW&6–Â×&÷÷6ÂÖ7&VFRÖ6&EÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†6&B’Óâ°¢6öç7B¶–æBÒ6&BæFF6WBæ6öÖÖW&6–Å&÷÷6Ä7&VFT6&C°¢6öç7BG&gBÒ6öÖÖW&6–Å&÷÷6ÄG&gG5¶¶–æEÓ°¢6öç7Bö&¦V7D–çWBÒB‚u¶FF×&÷÷6ÂÖö&¦V7BÖæÖUÒrÂ6&B“°¢6öç7B6V7F–öä–çWBÒB‚u¶FF×&÷÷6Â×6V7F–öâÖæÖUÒrÂ6&B“°¢6öç7Bf–ÆT–çWBÒB‚u¶FF×&÷÷6ÂÖf–ÆRÖ–çWEÒrÂ6&B“°¢ö&¦V7D–çWCòæFDWfVçDÆ—7FVæW"‚v–çWBrÂ‚’Óâ²G&gBæö&¦V7DæÖRÒö&¦V7D–çWBçfÇVRç6Æ–6RƒÂ“²ö&¦V7D–çWBç&VÖ÷fTGG&–'WFR‚v&–Ö–çfÆ–Br“²WFFT6öÖÖW&6–Å&÷÷6Ä7&VFT'WGFöâ†6&BÂ¶–æB“²Ò“°¢6V7F–öä–çWCòæFDWfVçDÆ—7FVæW"‚v–çWBrÂ‚’Óâ²G&gBç6V7F–öäæÖRÒ6V7F–öä–çWBçfÇVRç6Æ–6RƒÂC“²6V7F–öä–çWBç&VÖ÷fTGG&–'WFR‚v&–Ö–çfÆ–Br“²WFFT6öÖÖW&6–Å&÷÷6Ä7&VFT'WGFöâ†6&BÂ¶–æB“²Ò“°¢f–ÆT–çWCòæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ²6†ö÷6T6öÖÖW&6–Å&÷÷6Äf–ÆR†¶–æBÂf–ÆT–çWBæf–ÆW3òå³Ò“²f–ÆT–çWBçfÇVRÒrs²Ò“°¢B‚u¶FF×&÷÷6Â×&WÆ6RÖf–ÆUÒrÂ6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâf–ÆT–çWCòæ6Æ–6²‚’“°¢B‚u¶FF×&÷÷6ÂÖFVÆWFRÖf–ÆUÒrÂ6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢G&gBæf–ÆRÒçVÆÃ°¢G&gBç6÷W&6Tf–ÆRÒçVÆÃ°¢&VæFW$6öÖÖW&6–Å&÷÷6Ä7&VF÷'2‚“°¢6†÷uFö7B‡G"‚vf–ÆTFVÆWFVBr’“°¢Ò“°¢6öç7BG&÷¦öæRÒB‚u¶FF×&÷÷6ÂÖG&÷¦öæUÒrÂ6&B“°¢G&÷¦öæSòæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâf–ÆT–çWCòæ6Æ–6²‚’“°¢G&÷¦öæSòæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ²–b†WfVçBæ¶W’ÓÓÒtVçFW"rÇÂWfVçBæ¶W’ÓÓÒrr’²WfVçBç&WfVçDFVfVÇB‚“²f–ÆT–çWCòæ6Æ–6²‚“²ÒÒ“°¢²vG&vVçFW"rÂvG&v÷fW"uÒæf÷$V6‚‚‡G—R’ÓâG&÷¦öæSòæFDWfVçDÆ—7FVæW"‡G—RÂ†WfVçB’Óâ²WfVçBç&WfVçDFVfVÇB‚“²G&÷¦öæRæ6Æ74Æ—7BæFB‚v—2ÖG&vv–ærr“²Ò’“°¢²vG&vÆVfRrÂvG&÷uÒæf÷$V6‚‚‡G—R’ÓâG&÷¦öæSòæFDWfVçDÆ—7FVæW"‡G—RÂ†WfVçB’Óâ²WfVçBç&WfVçDFVfVÇB‚“²G&÷¦öæRæ6Æ74Æ—7Bç&VÖ÷fR‚v—2ÖG&vv–ærr“²Ò’“°¢G&÷¦öæSòæFDWfVçDÆ—7FVæW"‚vG&÷rÂ†WfVçB’Óâ°¢–b†WfVçBæFFG&ç6fW"æf–ÆW2æÆVæwF‚â’6†÷uFö7B‡G"‚vöæÇ”öæTf–ÆRr’“°¢6†ö÷6T6öÖÖW&6–Å&÷÷6Äf–ÆR†¶–æBÂWfVçBæFFG&ç6fW"æf–ÆW3òå³Ò“°¢Ò“°¢B‚u¶FFÖ7&VFRÖ6öÖÖW&6–Â×&÷÷6ÅÒrÂ6&B“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ7&VFT6öÖÖW&6–Å&÷÷6Äg&öÔG&gB†¶–æB’“°¢Ò“°¢Ò“°§Ð ¦7–æ2gVæ7F–öâ7&VFT6öÖÖW&6–Å&÷÷6Äg&öÔG&gB†¶–æB’°¢6öç7BG&gBÒ6öÖÖW&6–Å&÷÷6ÄG&gG5¶¶–æEÓ°¢6öç7B6&BÒB†¶FFÖ6öÖÖW&6–Â×&÷÷6ÂÖ7&VFRÖ6&CÒ"G¶¶–æGÒ%Ö“°¢6öç7Bö&¦V7D–çWBÒB‚u¶FF×&÷÷6ÂÖö&¦V7BÖæÖUÒrÂ6&B“°¢6öç7B6V7F–öä–çWBÒB‚u¶FF×&÷÷6Â×6V7F–öâÖæÖUÒrÂ6&B“°¢G&gBæö&¦V7DæÖRÒö&¦V7D–çWCòçfÇVRçG&–Ò‚’ç6Æ–6RƒÂ’ÇÂG&gBæö&¦V7DæÖRçG&–Ò‚’ç6Æ–6RƒÂ“°¢G&gBç6V7F–öäæÖRÒ6V7F–öä–çWCòçfÇVRçG&–Ò‚’ç6Æ–6RƒÂC’ÇÂG&gBç6V7F–öäæÖRçG&–Ò‚’ç6Æ–6RƒÂC“°¢–b‚G&gBæö&¦V7DæÖR’²ö&¦V7D–çWCòç6WDGG&–'WFR‚v&–Ö–çfÆ–BrÂwG'VRr“²ö&¦V7D–çWCòæfö7W2‚“²6†÷uFö7B‡G"‚vö&¦V7E&WV—&VBr’“²&WGW&ã²Ð¢–b‚G&gBç6V7F–öäæÖR’²6V7F–öä–çWCòç6WDGG&–'WFR‚v&–Ö–çfÆ–BrÂwG'VRr“²6V7F–öä–çWCòæfö7W2‚“²6†÷uFö7B‡G"‚w&ö¦V7DæÖU&WV—&VBr’“²&WGW&ã²Ð¢–b‚G&gBæf–ÆR’²6†÷uFö7B‡G"‚w6VÆV7Df–ÆRr’“²&WGW&ã²Ð¢G&gBæ'W7’ÒG'VS°¢&VæFW$6öÖÖW&6–Å&÷÷6Ä7&VF÷'2‚“°¢G'’°¢6öç7BWÆöFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6öç7B6÷W&6T6FÆörÒG&gBç6÷W&6Tf–ÆRòv—BW‡G&7D66…6÷W&6T6FÆötg&öÔf–ÆR†G&gBç6÷W&6Tf–ÆRÂ¶–æB’¢µÓ°¢6öç7B6÷W&6Tf–ÆRÒ°¢ââæG&gBæf–ÆRÀ¢¶–æBÀ¢&ö¦V7E6V7F–öã¢G&gBç6V7F–öäæÖRÀ¢FFVDC¢WÆöFVDBÀ¢æÇ—6—5VæF–æs¢G'VRÀ¢æÇ—¦VDC¢çVÆÂÀ¢6÷W&6T6FÆörÀ¢6÷W&6T6FÆöu66ææVC¢&ööÆVâ†G&gBç6÷W&6Tf–ÆR¢Ó°¢6öç7B7F÷&VDf–ÆRÒæ÷&ÖÆ—¦Tf–ÆU&V6÷&B‡²ââç6÷W&6Tf–ÆRÂfW'6–öç3¢¶f–ÆUfW'6–öå6æ6†÷B‡6÷W&6Tf–ÆR•ÒÂ6ö×&—6öã¢çVÆÂÒ“°¢6öç7B&÷÷6ÂÒ°¢–C¢&÷÷6ÂÒG¶7&VFTö&¦V7D–B‚—ÖÀ¢ö&¦V7DæÖS¢G&gBæö&¦V7DæÖRÀ¢6V7F–öäæÖS¢G&gBç6V7F–öäæÖRÀ¢¶–æBÀ¢7FGW3¢væÇ—¦–ærrÀ¢7&VFVDC¢WÆöFVDBÀ¢WFFVDC¢WÆöFVDBÀ¢æÇ—¦VDC¢çVÆÂÀ¢f–ÆS¢7F÷&VDf–ÆRÀ¢v÷&·76S¢æ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6Åv÷&·76R†çVÆÂ¢Ó°¢6öÖÖW&6–Å&÷÷6Å&V6÷&G2çVç6†–gB‡&÷÷6Â“°¢7F—fT6öÖÖW&6–Å&÷÷6Å&W7VÇEF"Òw6×"s°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢6öÖÖW&6–Å&÷÷6ÄG&gG5¶¶–æEÒÒ²ö&¦V7DæÖS¢rrÂ6V7F–öäæÖS¢rrÂf–ÆS¢çVÆÂÂ6÷W&6Tf–ÆS¢çVÆÂÂ'W7“¢fÇ6RÓ°¢&VæFW$6öÖÖW&6–Å&÷÷6Ç2‚“°¢6ÆV%F–ÖV÷WB†6öÖÖW&6–Å&÷÷6ÄæÇ—6—5F–ÖW"“°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚v7&VF–æt6öÖÖW&6–Å&÷÷6Âr’’ÂW66T‡FÖÂ‡G"‚w&÷÷6Å6V7F–öå7F÷&vRr’’ÂÆF—b6Æ73Ò&æÇ—6—2ÖÆöFW""FF×&÷÷6ÂÖæÇ—6—2Ö–CÒ"G¶W66T‡FÖÂ‡&÷÷6Âæ–B—Ò#ãÇ7ããÂ÷7ããÇ7ããÂ÷7ããÇ7ããÂ÷7ããÂöF—cæ“°¢6öÖÖW&6–Å&÷÷6ÄæÇ—6—5F–ÖW"Ò6WEF–ÖV÷WB‚‚’Óâ°¢6öç7B7F÷&VE&÷÷6ÂÒ6öÖÖW&6–Å&÷÷6Å&V6÷&G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ&÷÷6Âæ–B“°¢6öç7BfW'6–öâÒÆFW7DFö7VÖVçEfW'6–öâ‡7F÷&VE&÷÷6Ãòæf–ÆR“°¢–b‚7F÷&VE&÷÷6ÂÇÂfW'6–öâ’&WGW&ã°¢6öç7BæÇ—¦VDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6öç7BF6‚Ò²æÇ—6—5VæF–æs¢fÇ6RÂæÇ—¦VDBÓ°¢–b‡7F÷&VE&÷÷6Âæ¶–æBÓÓÒw&ö¦V7Br’F6‚æW7F–ÖFT'&V¶F÷vâÒ&ö¦V7DW7F–ÖFU6æ6†÷B‡fW'6–öâ“°¢WFFTFö7VÖVçEfW'6–öâ‡7F÷&VE&÷÷6Âæf–ÆRÂfW'6–öâæ–BÂF6‚“°¢7F÷&VE&÷÷6Âæf–ÆRÒæ÷&ÖÆ—¦Tf–ÆU&V6÷&B‡7F÷&VE&÷÷6Âæf–ÆR“°¢7F÷&VE&÷÷6Âç7FGW2Òw&VG’s°¢7F÷&VE&÷÷6ÂææÇ—¦VDBÒæÇ—¦VDC°¢7F÷&VE&÷÷6ÂçWFFVDBÒæÇ—¦VDC°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢&VæFW$6öÖÖW&6–Å&÷÷6Ç2‚“°¢–b‚B†¶FF×&÷÷6ÂÖæÇ—6—2Ö–CÒ"G·&÷÷6Âæ–GÒ%Ö’’B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6WEæVÂ‚w&÷÷6Ç2r“°¢6†÷uFö7B‡G"‚v6öÖÖW&6–Å&÷÷6Ä7&VFVBr’“°¢ÒÂ“°¢Ò6F6‚†W'&÷"’°¢6öç6öÆRçv&â‚u7G'V7Dõ26öÖÖW&6–Â&÷÷6Â7&VF–öâf–ÆVC¢rÂW'&÷"“°¢G&gBæ'W7’ÒfÇ6S°¢&VæFW$6öÖÖW&6–Å&÷÷6Ä7&VF÷'2‚“°¢6†÷uFö7B‡G"‚w&÷÷6Ä7&VFTf–ÆVBr’“°¢Ð§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Ä6&DÖ&·W‡&÷÷6Â’°¢6öç7BfW'6–öâÒÆFW7DFö7VÖVçEfW'6–öâ‡&÷÷6Âæf–ÆR“°¢6öç7B&VG’Ò&÷÷6Âç7FGW2ÓÓÒw&VG’rbb—4Fö7VÖVçEfW'6–öäæÇ—¦VB‡fW'6–öâ“°¢6öç7B6÷W&6TÆ&VÂÒG"‡&÷÷6Âæ¶–æBÓÓÒw&ö¦V7Bròw&÷÷6Ä'•&ö¦V7Br¢w&÷÷6Ä'”W7F–ÖFRr“°¢&WGW&âÆ'F–6ÆR6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖ6&BG·&VG’òr—2×&VG’r¢r—2×VæF–ærwÒ#ãÆ†VFW#ãÇ7â&–Ö†–FFVãÒ'G'VR#î(+ÓÂ÷7ããÆ'WGFöâ6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖ6&BÖ6÷’"G—SÒ&'WGFöâ"FFÖ÷VâÖ6öÖÖW&6–Â×&÷÷6ÃÒ"G¶W66T‡FÖÂ‡&÷÷6Âæ–B—Ò#ãÇ6ÖÆÃâG¶W66T‡FÖÂ‡&÷÷6Âç6V7F–öäæÖR—ÓÂ÷6ÖÆÃãÆƒ#âG¶W66T‡FÖÂ‡&÷÷6Âæö&¦V7DæÖR—ÓÂöƒ#ãÇâG¶W66T‡FÖÂ‡6÷W&6TÆ&VÂ—Ò+rG¶W66T‡FÖÂ‡fW'6–öãòææÖRÇÂrr—ÓÂ÷ãÂö'WGFöããÆF—b6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖ6&B×6–FR#ãÆF—b6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖ6&BÖ7F–öç2#ãÆ'WGFöâG—SÒ&'WGFöâ"FF×&VæÖRÖ6öÖÖW&6–Â×&÷÷6ÃÒ"G¶W66T‡FÖÂ‡&÷÷6Âæ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w&VæÖT6öÖÖW&6–Å&÷÷6Âr’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚w&VæÖT6öÖÖW&6–Å&÷÷6Âr’—Ò#ãÇ7â&–Ö†–FFVãÒ'G'VR#î)ÈãÂ÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚w&VæÖRr’—ÓÂ÷7G&öæsãÂö'WGFöããÆ'WGFöâ6Æ73Ò&—2ÖFVÆWFR"G—SÒ&'WGFöâ"FFÖFVÆWFRÖ6öÖÖW&6–Â×&÷÷6ÃÒ"G¶W66T‡FÖÂ‡&÷÷6Âæ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFT6öÖÖW&6–Å&÷÷6Âr’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFT6öÖÖW&6–Å&÷÷6Âr’—Ò#ì9sÂö'WGFöããÂöF—cãÆ#âG¶W66T‡FÖÂ‡G"‡&VG’òw&÷÷6Å&VG’r¢w&÷÷6Äv—F–ætæÇ—6—2r’—ÓÂö#ãÂöF—cãÂö†VFW#ãÆfö÷FW#ãÇ7ãâG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR‡&÷÷6Âæ7&VFVDB’—Ò+rG¶W66T‡FÖÂ‡G"‚w&÷÷6Å6V7F–öå7F÷&vRr’—ÓÂ÷7ããÆ'WGFöâ6Æ73Ò"G·&VG’òv÷WFÆ–æRÖ'WGFöâr¢w&–Ö'’Ö'WGFöâwÒ"G—SÒ&'WGFöâ"FFÖ÷VâÖ6öÖÖW&6–Â×&÷÷6ÃÒ"G¶W66T‡FÖÂ‡&÷÷6Âæ–B—Ò#âG¶W66T‡FÖÂ‡G"‡&VG’òv÷Vä6öÖÖW&6–Å&÷÷6Âr¢w&÷÷6Äv—F–ætæÇ—6—2r’—Ò(i#Âö'WGFöããÂöfö÷FW#ãÂö'F–6ÆSæ°§Ð ¦gVæ7F–öâ&VæÖT6öÖÖW&6–Å&÷÷6Â‡&÷÷6Ä–B’°¢6öç7B&÷÷6ÂÒ6öÖÖW&6–Å&÷÷6Å&V6÷&G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ&÷÷6Ä–B“°¢–b‚&÷÷6Â’&WGW&ã°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚w&VæÖT6öÖÖW&6–Å&÷÷6Âr’’ÂW66T‡FÖÂ‡G"‚w&VæÖT6öÖÖW&6–Å&÷÷6Ä†–çBr’’ÂÆF—b6Æ73Ò&ö&¦V7BÖf÷&Ò6öÖÖW&6–Â×&÷÷6Â×&VæÖRÖf÷&Ò#ãÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"‚vö&¦V7DæÖRr’—ÓÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#"fÇVSÒ"G¶W66T‡FÖÂ‡&÷÷6Âæö&¦V7DæÖR—Ò"FF×&VæÖRÖ6öÖÖW&6–Â×&÷÷6ÂÖö&¦V7BóãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"‚w&÷÷6Å6V7F–öäf–VÆBr’—ÓÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#C"fÇVSÒ"G¶W66T‡FÖÂ‡&÷÷6Âç6V7F–öäæÖR—Ò"FF×&VæÖRÖ6öÖÖW&6–Â×&÷÷6Â×6V7F–öâóãÂöÆ&VÃãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖ6öæf—&ÒÖ6öÖÖW&6–Â×&÷÷6Â×&VæÖSâG¶W66T‡FÖÂ‡G"‚w6fRr’—ÓÂö'WGFöããÂöF—cæ“°¢6öç7B66÷RÒB‚u¶FFÖF–ÆörÖ6öçFVçEÒr“°¢6öç7Bö&¦V7D–çWBÒB‚u¶FF×&VæÖRÖ6öÖÖW&6–Â×&÷÷6ÂÖö&¦V7EÒrÂ66÷R“°¢6öç7B6V7F–öä–çWBÒB‚u¶FF×&VæÖRÖ6öÖÖW&6–Â×&÷÷6Â×6V7F–öåÒrÂ66÷R“°¢6öç7B6fU&÷÷6ÄæÖRÒ‚’Óâ°¢6öç7Bö&¦V7DæÖRÒö&¦V7D–çWCòçfÇVRçG&–Ò‚’ç6Æ–6RƒÂ’ÇÂrs°¢6öç7B6V7F–öäæÖRÒ6V7F–öä–çWCòçfÇVRçG&–Ò‚’ç6Æ–6RƒÂC’ÇÂrs°¢–b‚ö&¦V7DæÖR’²ö&¦V7D–çWCòæfö7W2‚“²&WGW&ã²Ð¢–b‚6V7F–öäæÖR’²6V7F–öä–çWCòæfö7W2‚“²&WGW&ã²Ð¢&÷÷6Âæö&¦V7DæÖRÒö&¦V7DæÖS°¢&÷÷6Âç6V7F–öäæÖRÒ6V7F–öäæÖS°¢&÷÷6ÂçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢&VæFW$6öÖÖW&6–Å&÷÷6Ç2‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚v6öÖÖW&6–Å&÷÷6Å&VæÖVBr’“°¢Ó°¢B‚u¶FFÖ6öæf—&ÒÖ6öÖÖW&6–Â×&÷÷6Â×&VæÖUÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6fU&÷÷6ÄæÖR“°¢¶ö&¦V7D–çWBÂ6V7F–öä–çWEÒæf÷$V6‚‚†–çWB’Óâ–çWCòæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ°¢–b†WfVçBæ¶W’ÓÓÒtVçFW"r’²WfVçBç&WfVçDFVfVÇB‚“²6fU&÷÷6ÄæÖR‚“²Ð¢Ò’“°¢6WEF–ÖV÷WB‚‚’Óâ²ö&¦V7D–çWCòæfö7W2‚“²ö&¦V7D–çWCòç6VÆV7B‚“²ÒÂC“°§Ð ¦gVæ7F–öâFVÆWFT6öÖÖW&6–Å&÷÷6Â‡&÷÷6Ä–B’°¢6öç7B&÷÷6ÂÒ6öÖÖW&6–Å&÷÷6Å&V6÷&G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ&÷÷6Ä–B“°¢–b‚&÷÷6Â’&WGW&ã°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚vFVÆWFT6öÖÖW&6–Å&÷÷6Âr’’ÂW66T‡FÖÂ‡G"‚vFVÆWFT6öÖÖW&6–Å&÷÷6Ä†–çBr’’ÂÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ6æ6VÂÖ6öÖÖW&6–Â×&÷÷6ÂÖFVÆWFSâG¶W66T‡FÖÂ‡G"‚v6æ6VÂr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ—2ÖFævW""G—SÒ&'WGFöâ"FFÖ6öæf—&ÒÖ6öÖÖW&6–Â×&÷÷6ÂÖFVÆWFSâG¶W66T‡FÖÂ‡G"‚vFVÆWFT6öÖÖW&6–Å&÷÷6Âr’—ÓÂö'WGFöããÂöF—cæ“°¢6öç7B66÷RÒB‚u¶FFÖF–ÆörÖ6öçFVçEÒr“°¢B‚u¶FFÖ6æ6VÂÖ6öÖÖW&6–Â×&÷÷6ÂÖFVÆWFUÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚’“°¢B‚u¶FFÖ6öæf—&ÒÖ6öÖÖW&6–Â×&÷÷6ÂÖFVÆWFUÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öÖÖW&6–Å&÷÷6Å&V6÷&G2Ò6öÖÖW&6–Å&÷÷6Å&V6÷&G2æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ–BÓÒ&÷÷6Âæ–B“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢&VæFW$6öÖÖW&6–Å&÷÷6Ç2‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚v6öÖÖW&6–Å&÷÷6ÄFVÆWFVBr’“°¢Ò“°§Ð ¦gVæ7F–öâ÷Vä6öÖÖW&6–Å&÷÷6Ä6&B‡&÷÷6Ä–B’°¢6öç7B&÷÷6ÂÒ6öÖÖW&6–Å&÷÷6Å&V6÷&G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ&÷÷6Ä–B“°¢6öç7BfW'6–öâÒÆFW7DFö7VÖVçEfW'6–öâ‡&÷÷6Ãòæf–ÆR“°¢–b‚&÷÷6ÂÇÂfW'6–öâ’&WGW&ã°¢7F—fT6öÖÖW&6–Å&÷÷6Ä–BÒ&÷÷6Âæ–C°¢7F—fT6öÖÖW&6–Å&÷÷6Ä6öÇVÖâÒw6×"s°¢7F—fT6öÖÖW&6–Å&÷÷6Äw&÷WÒw7V6–f–6F–öåv÷&·2s°¢6WEæVÂ†&÷÷6ÂÖFWF–ÂòG¶Væ6öFUU$”6ö×öæVçB‡&÷÷6Âæ–B—Ö“°§Ð ¦gVæ7F–öâ&VæFW$6öÖÖW&6–Å&÷÷6Ç2‚’°¢&VæFW$6öÖÖW&6–Å&÷÷6Ä7&VF÷'2‚“°¢6öç7B&÷÷6Ç2Ò6öÖÖW&6–Å&÷÷6Å&V6÷&G2ç6Æ–6R‚’ç6÷'B‚†Â"’ÓâæWrFFR†"æ7&VFVDB’ÒæWrFFR†æ7&VFVDB’“°¢6öç7BÖ&·WÒ&÷÷6Ç2æÖ†6öÖÖW&6–Å&÷÷6Ä6&DÖ&·W’æ¦ö–â‚rr“°¢BB‚u¶FFÖ6öÖÖW&6–Â×&÷÷6Ç2ÖÆ—7EÒr’æf÷$V6‚‚†Æ—7B’Óâ°¢Æ—7Bæ–ææW$…DÔÂÒÖ&·W°¢BB‚u¶FFÖ÷VâÖ6öÖÖW&6–Â×&÷÷6ÅÒrÂÆ—7B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä6öÖÖW&6–Å&÷÷6Ä6&B†'WGFöâæFF6WBæ÷Vä6öÖÖW&6–Å&÷÷6Â’’“°¢BB‚u¶FF×&VæÖRÖ6öÖÖW&6–Â×&÷÷6ÅÒrÂÆ—7B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ&VæÖT6öÖÖW&6–Å&÷÷6Â†'WGFöâæFF6WBç&VæÖT6öÖÖW&6–Å&÷÷6Â’’“°¢BB‚u¶FFÖFVÆWFRÖ6öÖÖW&6–Â×&÷÷6ÅÒrÂÆ—7B’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFVÆWFT6öÖÖW&6–Å&÷÷6Â†'WGFöâæFF6WBæFVÆWFT6öÖÖW&6–Å&÷÷6Â’’“°¢Ò“°¢BB‚u¶FFÖ6öÖÖW&6–Â×&÷÷6Ç2Ö6÷VçEÒr’æf÷$V6‚‚†6÷VçB’Óâ²6÷VçBçFW‡D6öçFVçBÒ7G&–ær‡&÷÷6Ç2æÆVæwF‚“²Ò“°¢BB‚u¶FFÖ6öÖÖW&6–Â×&÷÷6Ç2ÖV×G•Òr’æf÷$V6‚‚†V×G’’Óâ²V×G’æ†–FFVâÒ&÷÷6Ç2æÆVæwF‚â²Ò“°§Ð ¦6öç7B&ö¦V7DæÇ—6—5F'2Ò°¢²–C¢w&÷÷6ÂrÂÆ&VÃ¢v6öÖÖW&6–Å&÷÷6ÂrÂ–6öã¢~(+ÒrÒÀ¢²–C¢w6†VWG2rÂÆ&VÃ¢w&ö¦V7D'•6†VWG2rÂ–6öã¢~)jBrÒÀ¢²–C¢w7—7FV×2rÂÆ&VÃ¢w&ö¦V7D'•7—7FV×2rÂ–6öã¢~(É‚rÒÀ¢²–C¢vÖFW&–Ç2rÂÆ&VÃ¢w&ö¦V7DÖFW&–Ç2rÂ–6öã¢~)xrrÒÀ¢²–C¢v&÷rÂÆ&VÃ¢v&–ÆÄöeVçF—F–W2rÂ–6öã¢~(šrÐ¥Ó° ¦gVæ7F–öâ—4ö&¦V7DFö7VÖVçDæÇ—¦VB†ö&¦V7BÂf–ÆR’°¢–b‚ö&¦V7BÇÂf–ÆR’&WGW&âfÇ6S°¢&WGW&â—4Fö7VÖVçEfW'6–öäæÇ—¦VB†ÆFW7DFö7VÖVçEfW'6–öâ†f–ÆR’“°§Ð ¦gVæ7F–öâæÇ—6—4V×G•F&ÆR†6öÇVÖç2’°¢&WGW&âÆF—b6Æ73Ò&æÇ—6—2ÖFWF–Â×F&ÆR×67&öÆÂ#ãÇF&ÆR6Æ73Ò&æÇ—6—2ÖFWF–Â×F&ÆR#ãÇF†VCãÇG#âG¶6öÇVÖç2æÖ‚†¶W’’ÓâÇFƒâG¶W66T‡FÖÂ‡G"†¶W’’—ÓÂ÷Fƒæ’æ¦ö–â‚rr—ÓÂ÷G#ãÂ÷F†VCãÇF&öG“ãÇG"6Æ73Ò&æÇ—6—2ÖFWF–ÂÖV×G’×&÷r#ãÇFB6öÇ7ãÒ"G¶6öÇVÖç2æÆVæwF‡Ò#ãÇ7ãî)xsÂ÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚vW‡G&7F–öåVæF–ærr’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚vW‡G&7F–öåVæF–æt6÷’r’—ÓÂ÷6ÖÆÃãÂ÷FCãÂ÷G#ãÂ÷F&öG“ãÂ÷F&ÆSãÂöF—cæ°§Ð ¦6öç7B$ô¤T5EôU5D”ÔDUôu$õUôÄ”4U2Òö&¦V7Bæg&VW¦R‡°¢–ç7FÆÆF–öåv÷&·3¢æWr6WB…²v–ç7FÆÆF–öçv÷&·2rÂvÖ÷VçF–æwv÷&·2rÂwv÷&·2rÂwv÷&¶—FV×2rÂw6W'f–6W2rÂ}ÍíÝ-mÝ½]í-²rÂ}í-²rÂ}=½==‚uÒ’À¢76ö6–FVEv÷&·3¢æWr6WB…²v76ö6–FVGv÷&·2rÂv6ö×æ–öçv÷&·2rÂvFF—F–öæÇv÷&·2rÂw&VÆFVGv÷&·2rÂv†–FFVçv÷&·2rÂvW†–Æ–'—v÷&·2rÂ}íý=---=í]í-²rÂ}Míýí½Ý-]½ÍÝ½]í-²rÂ}­½-½]í-²uÒ’À¢&ö¦V7DÖFW&–Ç3¢æWr6WB…²w&ö¦V7FÖFW&–Ç2rÂvÖFW&–Ç2rÂvÖFW&–Æ—FV×2rÂvWV—ÖVçBrÂw7V6–f–6F–öârÂw7V6–f–6F–öç2rÂ}Í-]½²rÂ}íí=Mí-ÝRrÂ}ý]mM­mòuÒ’À¢76ö6–FVDÖFW&–Ç3¢æWr6WB…²v76ö6–FVFÖFW&–Ç2rÂv6ö×æ–öæÖFW&–Ç2rÂvÖ÷VçF–ævÖFW&–Ç2rÂv6öç7VÖ&ÆW2rÂvW†–Æ–'–ÖFW&–Ç2rÂw&VÆFVFÖFW&–Ç2rÂ}íý=---=í]Í-]½²rÂ}ÍíÝ-mÝ½]Í-]½²rÂ}]íMÝ½]Í-]½²uÒ§Ò“° ¦gVæ7F–öâÖW&vU&ö¦V7DW7F–ÖFT—FV×2†VçG&–W2’°¢6öç7BÖW&vVBÒæWrÖ‚“°¢„'&’æ—4'&’†VçG&–W2’òVçG&–W2¢µÒ’æf–ÇFW"„&ööÆVâ’æf÷$V6‚‚†VçG'’’Óâ°¢6öç7Bæ÷&ÖÆ—¦VBÒæ÷&ÖÆ—¦T66…6÷W&6T6FÆötVçG'’†VçG'’ÂVçG'’“°¢–b‚æ÷&ÖÆ—¦VB’&WGW&ã°¢6öç7B—FVÒÒ²ââææ÷&ÖÆ—¦VBÂ÷&–v–ã¢VçG'’æ÷&–v–âÓÓÒvæÇ—6—2ròvæÇ—6—2r¢w&ö¦V7BrÓ°¢6öç7B¶W’Ò66…6÷W&6T¶W’†—FVÒææÖR“°¢6öç7B7W'&VçBÒÖW&vVBævWB†¶W’“°¢–b‚7W'&VçB’ÖW&vVBç6WB†¶W’Â—FVÒ“°¢VÇ6RÖW&vVBç6WB†¶W’Â°¢ââæ7W'&VçBÀ¢Væ—C¢7W'&VçBçVæ—BÇÂ—FVÒçVæ—BÀ¢VçF—G“¢7W'&VçBçVçF—G’ÇÂ—FVÒçVçF—G’À¢&–6S¢7W'&VçBç&–6RÇÂ—FVÒç&–6RÀ¢6÷W&6U6†VWC¢7W'&VçBç6÷W&6U6†VWBÇÂ—FVÒç6÷W&6U6†VWBÀ¢6÷W&6TæÖS¢7W'&VçBç6÷W&6TæÖRÇÂ—FVÒç6÷W&6TæÖRÀ¢÷&–v–ã¢7W'&VçBæ÷&–v–âÓÓÒw&ö¦V7BrÇÂ—FVÒæ÷&–v–âÓÓÒw&ö¦V7Bròw&ö¦V7Br¢væÇ—6—2p¢Ò“°¢Ò“°¢&WGW&â²ââæÖW&vVBçfÇVW2‚•Òç6÷'B‚†ÆVgBÂ&–v‡B’ÓâÆVgBææÖRæÆö6ÆT6ö×&R‡&–v‡BææÖRÂ&ö÷BæÆærÇÂw'Rr’’ç6Æ–6RƒÂS“°§Ð ¦gVæ7F–öâ&ö¦V7DW7F–ÖFTVçG&–W4g&öÕfÇVR‡fÇVRÂFVfVÇG2Ò·Ò’°¢6öç7BfÇVW2Ò'&’æ—4'&’‡fÇVR¢òfÇVP¢¢fÇVRbbG—VöbfÇVRÓÓÒvö&¦V7Bp¢ò·fÇVRÂââæ66…6÷W&6T6FÆötg&öÕ7G'V7GW&VDFF‡fÇVRÂFVfVÇG2•Ð¢¢µÓ°¢&WGW&âÖW&vU&ö¦V7DW7F–ÖFT—FV×2‡fÇVW2æÖ‚†VçG'’’Óâ°¢6öç7Bæ÷&ÖÆ—¦VBÒæ÷&ÖÆ—¦T66…6÷W&6T6FÆötVçG'’†VçG'’ÂFVfVÇG2“°¢&WGW&âæ÷&ÖÆ—¦VBò²ââææ÷&ÖÆ—¦VBÂ÷&–v–ã¢FVfVÇG2æ÷&–v–âÇÂVçG'“òæ÷&–v–âÒ¢çVÆÃ°¢Ò’“°§Ð ¦gVæ7F–öâ6öÆÆV7E&ö¦V7DW7F–ÖFTw&÷W2‡&ö÷EfÇVRÂw&÷W2ÂFWF‚Ò’°¢–b‚&ö÷EfÇVRÇÂG—Vöb&ö÷EfÇVRÓÒvö&¦V7BrÇÂFWF‚âb’&WGW&ã°¢ö&¦V7BæVçG&–W2‡&ö÷EfÇVR’æf÷$V6‚‚…¶¶W’Â6†–ÆEÒ’Óâ°¢6öç7Bæ÷&ÖÆ—¦VD¶W’Ò66…6÷W&6T¶W’†¶W’“°¢6öç7Bw&÷W¶W’Òö&¦V7BæVçG&–W2…$ô¤T5EôU5D”ÔDUôu$õUôÄ”4U2’æf–æB‚…²ÂÆ–6W5Ò’ÓâÆ–6W2æ†2†æ÷&ÖÆ—¦VD¶W’’“òå³Ó°¢–b†w&÷W¶W’’°¢w&÷W5¶w&÷W¶W•ÒçW6‚‚ââç&ö¦V7DW7F–ÖFTVçG&–W4g&öÕfÇVR†6†–ÆBÂ°¢6÷W&6T¶–æC¢w&ö¦V7BrÀ¢6÷W&6TæÖS¢G"†w&÷W¶W’ÓÓÒw&ö¦V7DÖFW&–Ç2rÇÂw&÷W¶W’ÓÓÒv–ç7FÆÆF–öåv÷&·2ròvW‡G&7FVDg&öÕ&ö¦V7Br¢v–FVçF–f–VD'”æÇ—6—2r’À¢6FVv÷'“¢w&÷W¶W’æ–æ6ÇVFW2‚uv÷&·2r’òwv÷&²r¢vÖFW&–ÂrÀ¢÷&–v–ã¢w&÷W¶W’ÓÓÒw&ö¦V7DÖFW&–Ç2rÇÂw&÷W¶W’ÓÓÒv–ç7FÆÆF–öåv÷&·2ròw&ö¦V7Br¢væÇ—6—2p¢Ò’“°¢Ð¢–b†6†–ÆBbbG—Vöb6†–ÆBÓÓÒvö&¦V7Br’6öÆÆV7E&ö¦V7DW7F–ÖFTw&÷W2†6†–ÆBÂw&÷W2ÂFWF‚²“°¢Ò“°§Ð ¦gVæ7F–öâ&ö¦V7DW7F–ÖFT6FÆötw&÷W†VçG'’’°¢–b†VçG'’æ6FVv÷'’ÓÓÒwv÷&²r’&WGW&âv–ç7FÆÆF–öåv÷&·2s°¢–b†VçG'’æ6FVv÷'’ÓÓÒvÖFW&–Âr’&WGW&âw&ö¦V7DÖFW&–Ç2s°¢6öç7B¶W’Ò66…6÷W&6T¶W’†VçG'’ææÖR“°¢–b‚òÍíÝ-gÍ=-Ýí'Íýí­½GÍM]ÍíÝ-gÍý=­íÝ½GÍý½-×ÍÝ-í—ÍýíM­½íwÍí'Í=½=7Æ–ç7FÆÇÆÖ÷VçGÆÆ––æwÇFW7F–æwÆ6öÖÖ—76–öçÇ6W'f–6R’÷RçFW7B†¶W’’’&WGW&âv–ç7FÆÆF–öåv÷&·2s°¢&WGW&âw&ö¦V7DÖFW&–Ç2s°§Ð ¦gVæ7F–öâFW&—fVE&ö¦V7DW7F–ÖFT—FVÒ†VçG'’Âw&÷W¶W’’°¢6öç7B&Vf—‚Òw&÷W¶W’ÓÓÒv–ç7FÆÆF–öåv÷&·2ròG"‚v–ç7FÆÆF–öåv÷&·2r’¢w&÷W¶W’ÓÓÒv76ö6–FVEv÷&·2ròG"‚v76ö6–FVEv÷&·2r’¢G"‚v76ö6–FVD–ç7FÆÆF–öäÖFW&–Ç2r“°¢&WGW&â°¢æÖS¢G·&Vf—‡Ó¢G¶VçG'’ææÖWÖÀ¢Væ—C¢w&÷W¶W’ÓÓÒv–ç7FÆÆF–öåv÷&·2ròVçG'’çVæ—B¢rrÀ¢VçF—G“¢w&÷W¶W’ÓÓÒv–ç7FÆÆF–öåv÷&·2ròVçG'’çVçF—G’¢À¢&–6S¢À¢6FVv÷'“¢w&÷W¶W’æ–æ6ÇVFW2‚uv÷&·2r’òwv÷&²r¢vÖFW&–ÂrÀ¢6÷W&6T¶–æC¢w&ö¦V7BrÀ¢6÷W&6TæÖS¢G"‚v–FVçF–f–VD'”æÇ—6—2r’À¢6÷W&6U6†VWC¢VçG'’ç6÷W&6U6†VWBÇÂrrÀ¢÷&–v–ã¢væÇ—6—2p¢Ó°§Ð ¦gVæ7F–öâ&ö¦V7DW7F–ÖFT'&V¶F÷vâ‡fW'6–öâÂ¶–æBÒw&ö¦V7BrÂ÷F–öç2Ò·Ò’°¢6öç7Bw&÷W2Ò²–ç7FÆÆF–öåv÷&·3¢µÒÂ76ö6–FVEv÷&·3¢µÒÂ&ö¦V7DÖFW&–Ç3¢µÒÂ76ö6–FVDÖFW&–Ç3¢µÒÓ°¢6öç7B&ö÷G2Ò°¢fW'6–öãòæW7F–ÖFT'&V¶F÷vâÀ¢fW'6–öãòææÇ—6—4FFÀ¢fW'6–öãòææÇ—6—5&W7VÇBÀ¢fW'6–öãòç&W7VÇBÀ¢fW'6–öãòæW‡G&7FVDFFÀ¢fW'6–öãòæW‡G&7F–öâÀ¢²v÷&·3¢fW'6–öãòçv÷&·2Â6W'f–6W3¢fW'6–öãòç6W'f–6W2ÂÖFW&–Ç3¢fW'6–öãòæÖFW&–Ç2ÂWV—ÖVçC¢fW'6–öãòæWV—ÖVçBÂ7V6–f–6F–öã¢fW'6–öãòç7V6–f–6F–öâÐ¢Ó°¢&ö÷G2æf÷$V6‚‚‡&ö÷EfÇVR’Óâ6öÆÆV7E&ö¦V7DW7F–ÖFTw&÷W2‡&ö÷EfÇVRÂw&÷W2’“°¢66…6÷W&6T6FÆötg&öÔf–ÆU&V6÷&B‡fW'6–öâÂ¶–æB’æf÷$V6‚‚†VçG'’’Óâ°¢w&÷W5·&ö¦V7DW7F–ÖFT6FÆötw&÷W†VçG'’•ÒçW6‚‡²ââæVçG'’Â÷&–v–ã¢w&ö¦V7BrÒ“°¢Ò“°¢ö&¦V7Bæ¶W—2†w&÷W2’æf÷$V6‚‚†w&÷W¶W’’Óâ²w&÷W5¶w&÷W¶W•ÒÒÖW&vU&ö¦V7DW7F–ÖFT—FV×2†w&÷W5¶w&÷W¶W•Ò“²Ò“°¢–b†÷F–öç2æFW&—fRÓÓÒfÇ6RÇÂw&÷W2ç&ö¦V7DÖFW&–Ç2æÆVæwF‚’&WGW&âw&÷W3°¢–b‚w&÷W2æ–ç7FÆÆF–öåv÷&·2æÆVæwF‚’w&÷W2æ–ç7FÆÆF–öåv÷&·2ÒÖW&vU&ö¦V7DW7F–ÖFT—FV×2†w&÷W2ç&ö¦V7DÖFW&–Ç2æÖ‚†VçG'’’ÓâFW&—fVE&ö¦V7DW7F–ÖFT—FVÒ†VçG'’Âv–ç7FÆÆF–öåv÷&·2r’’“°¢–b‚w&÷W2æ76ö6–FVEv÷&·2æÆVæwF‚’w&÷W2æ76ö6–FVEv÷&·2ÒÖW&vU&ö¦V7DW7F–ÖFT—FV×2†w&÷W2ç&ö¦V7DÖFW&–Ç2æÖ‚†VçG'’’ÓâFW&—fVE&ö¦V7DW7F–ÖFT—FVÒ†VçG'’Âv76ö6–FVEv÷&·2r’’“°¢–b‚w&÷W2æ76ö6–FVDÖFW&–Ç2æÆVæwF‚’w&÷W2æ76ö6–FVDÖFW&–Ç2ÒÖW&vU&ö¦V7DW7F–ÖFT—FV×2†w&÷W2ç&ö¦V7DÖFW&–Ç2æÖ‚†VçG'’’ÓâFW&—fVE&ö¦V7DW7F–ÖFT—FVÒ†VçG'’Âv76ö6–FVDÖFW&–Ç2r’’“°¢&WGW&âw&÷W3°§Ð ¦gVæ7F–öâ&ö¦V7DW7F–ÖFU6æ6†÷B‡fW'6–öâ’°¢6öç7Bw&÷W2Ò&ö¦V7DW7F–ÖFT'&V¶F÷vâ‡fW'6–öâÂw&ö¦V7BrÂ²FW&—fS¢fÇ6RÒ“°¢&WGW&â²vVæW&FVDC¢æWrFFR‚’çFô•4õ7G&–ær‚’Âââæw&÷W2Ó°§Ð ¦gVæ7F–öâ&ö¦V7DW7F–ÖFTw&÷WÖ&·W†w&÷W¶W’ÂVçG&–W2Â–6öâ’°¢6öç7B6÷W&6T¶W’Òw&÷W¶W’ÓÓÒv–ç7FÆÆF–öåv÷&·2rÇÂw&÷W¶W’ÓÓÒw&ö¦V7DÖFW&–Ç2ròvW‡G&7FVDg&öÕ&ö¦V7Br¢v–FVçF–f–VD'”æÇ—6—2s°¢6öç7BÆ&VÄ¶W’Òw&÷W¶W’ÓÓÒv76ö6–FVDÖFW&–Ç2ròv76ö6–FVD–ç7FÆÆF–öäÖFW&–Ç2r¢w&÷W¶W“°¢6öç7B&öG’ÒVçG&–W2æÆVæwF€¢òÆF—b6Æ73Ò'&ö¦V7BÖW7F–ÖFRÖÆ—7B#âG¶VçG&–W2ç6Æ–6RƒÂ#’æÖ‚†VçG'’’ÓâÆ'F–6ÆSãÇ7ãâG¶W66T‡FÖÂ†–6öâ—ÓÂ÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ†VçG'’ææÖR—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ†VçG'’ç6÷W&6U6†VWBÇÂVçG'’ç6÷W&6TæÖRÇÂG"‡6÷W&6T¶W’’—ÓÂ÷6ÖÆÃãÂöF—cãÆ#âG¶VçG'’çVçF—G’òW66T‡FÖÂ…7G&–ær†VçG'’çVçF—G’’’¢~(	BwÒG¶VçG'’çVæ—BòG¶W66T‡FÖÂ†VçG'’çVæ—B—Ö¢rwÓÂö#ãÂö'F–6ÆSæ’æ¦ö–â‚rr—ÓÂöF—cæ ¢¢ÆF—b6Æ73Ò'&ö¦V7BÖW7F–ÖFRÖV×G’#ãÇ7ãî)xsÂ÷7ããÇâG¶W66T‡FÖÂ‡G"‚vW7F–ÖFTw&÷WVæF–ærr’—ÓÂ÷ãÂöF—cæ°¢&WGW&âÇ6V7F–öâ6Æ73Ò'&ö¦V7BÖW7F–ÖFRÖw&÷W#ãÆ†VFW#ãÇ7ãâG¶W66T‡FÖÂ†–6öâ—ÓÂ÷7ããÆF—cãÆƒCâG¶W66T‡FÖÂ‡G"†Æ&VÄ¶W’’—ÓÂöƒCãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‡6÷W&6T¶W’’—ÓÂ÷6ÖÆÃãÂöF—cãÆ#âG¶VçG&–W2æÆVæwF‡ÓÂö#ãÂö†VFW#âG¶&öG—ÓÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ&ö¦V7DW7F–ÖFT'&V¶F÷väÖ&·W‡fW'6–öâÂ¶–æBÒw&ö¦V7Br’°¢6öç7Bw&÷W2Ò&ö¦V7DW7F–ÖFT'&V¶F÷vâ‡fW'6–öâÂ¶–æB“°¢6öç7Bv÷&·46÷VçBÒw&÷W2æ–ç7FÆÆF–öåv÷&·2æÆVæwF‚²w&÷W2æ76ö6–FVEv÷&·2æÆVæwFƒ°¢6öç7BÖFW&–Ç46÷VçBÒw&÷W2ç&ö¦V7DÖFW&–Ç2æÆVæwF‚²w&÷W2æ76ö6–FVDÖFW&–Ç2æÆVæwFƒ°¢&WGW&âÇ6V7F–öâ6Æ73Ò'&ö¦V7BÖW7F–ÖFRÖ'&V¶F÷vâ#ãÆ†VFW#ãÆF—cãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ2U5D”ÔDSÂ÷7ããÆƒ3âG¶W66T‡FÖÂ‡G"‚w&ö¦V7DW7F–ÖFRr’—ÓÂöƒ3ãÇâG¶W66T‡FÖÂ‡G"‚vW7F–ÖFTæÇ—6—57VÖÖ'’r’—ÓÂ÷ãÂöF—cãÆF—cãÆ#âG·v÷&·46÷VçGÓÂö#ãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚wv÷&·2r’—ÓÂ÷6ÖÆÃãÆ#âG¶ÖFW&–Ç46÷VçGÓÂö#ãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚vÖFW&–Ç2r’—ÓÂ÷6ÖÆÃãÂöF—cãÂö†VFW#ãÆF—b6Æ73Ò'&ö¦V7BÖW7F–ÖFRÖ6öÇVÖç2#ãÆ'F–6ÆR6Æ73Ò'&ö¦V7BÖW7F–ÖFRÖ6öÇVÖâ—2×v÷&·2#ãÆ†VFW#ãÇ7ãî)©#Â÷7ããÆF—cãÆƒ3âG¶W66T‡FÖÂ‡G"‚v–ç7FÆÆF–öäW7F–ÖFRr’—ÓÂöƒ3ãÇ6ÖÆÃâG·v÷&·46÷VçGÒ+rG¶W66T‡FÖÂ‡G"‚wv÷&·2r’—ÓÂ÷6ÖÆÃãÂöF—cãÂö†VFW#âG·&ö¦V7DW7F–ÖFTw&÷WÖ&·W‚v–ç7FÆÆF–öåv÷&·2rÂw&÷W2æ–ç7FÆÆF–öåv÷&·2Âurr—ÒG·&ö¦V7DW7F–ÖFTw&÷WÖ&·W‚v76ö6–FVEv÷&·2rÂw&÷W2æ76ö6–FVEv÷&·2Âr²r—ÓÂö'F–6ÆSãÆ'F–6ÆR6Æ73Ò'&ö¦V7BÖW7F–ÖFRÖ6öÇVÖâ—2ÖÖFW&–Ç2#ãÆ†VFW#ãÇ7ãî)xsÂ÷7ããÆF—cãÆƒ3âG¶W66T‡FÖÂ‡G"‚w&ö¦V7DÖFW&–Ç4WV—ÖVçBr’—ÓÂöƒ3ãÇ6ÖÆÃâG¶ÖFW&–Ç46÷VçGÒ+rG¶W66T‡FÖÂ‡G"‚vÖFW&–Ç2r’—ÓÂ÷6ÖÆÃãÂöF—cãÂö†VFW#âG·&ö¦V7DW7F–ÖFTw&÷WÖ&·W‚w&ö¦V7DÖFW&–Ç2rÂw&÷W2ç&ö¦V7DÖFW&–Ç2ÂtÒr—ÒG·&ö¦V7DW7F–ÖFTw&÷WÖ&·W‚v76ö6–FVDÖFW&–Ç2rÂw&÷W2æ76ö6–FVDÖFW&–Ç2Âr²r—ÓÂö'F–6ÆSãÂöF—cãÂ÷6V7F–öãæ°§Ð ¦6öç7B4ôÔÔU$4”Åõ$õõ4Åôu$õUôÄ”4U2Òö&¦V7Bæg&VW¦R‡°¢7V6–f–6F–öåv÷&·3¢æWr6WB…²w7V6–f–6F–öåv÷&·2rÂwv÷&·4'•7V6–f–6F–öârÂw&ö¦V7E7V6–f–6F–öåv÷&·2rÂv–ç7FÆÆF–öåv÷&·2rÂvÖ÷VçF–æuv÷&·2rÂwv÷&·2rÂwv÷&´—FV×2rÂw6W'f–6W2rÂ}ýâý]mM­m‚ýí]­-rÂ}í-²ýâý]mM­m‚rÂ}ÍíÝ-mÝ½Rí-²rÂ}í-²rÂ}=½==‚uÒæÖ†66…6÷W&6T¶W’’’À¢÷WG6–FU7V6–f–6F–öåv÷&·3¢æWr6WB…²v÷WG6–FU7V6–f–6F–öåv÷&·2rÂvæöå7V6–f–6F–öåv÷&·2rÂwVæÆ—7FVEv÷&·2rÂwVæ66÷VçFVEv÷&·2rÂvFF—F–öæÅ&ö¦V7Ev÷&·2rÂ}-ÝRý]mM­m‚ýâýí]­-2rÂ}-ÝRý]mM­m‚rÂ}Ý]=}-]ÝÝ½Rí-²rÂ}Ý]=}-ÝÝ½Rí-²uÒæÖ†66…6÷W&6T¶W’’’À¢÷76–&ÆUv÷&·3¢æWr6WB…²w÷76–&ÆUv÷&·2rÂw÷FVçF–Åv÷&·2rÂw&ö¦V7E÷76–&ÆUv÷&·2rÂv÷F–öæÅv÷&·2rÂwv÷&·5÷76–&ÆT'•&ö¦V7BrÂ}í-²-í}ÍímÝ½Rýâýí]­-2rÂ}-í}ÍímÝ½Rí-²rÂ}ý]Mýí½=]Í½Rí-²uÒæÖ†66…6÷W&6T¶W’’’À¢76ö6–FVEv÷&·3¢æWr6WB…²v76ö6–FVEv÷&·2rÂv6ö×æ–öåv÷&·2rÂw&VÆFVEv÷&·2rÂv†–FFVåv÷&·2rÂvW†–Æ–'•v÷&·2rÂ}íý=---=íRí-²rÂ}Míýí½Ý-]½ÍÝ½Rí-²rÂ}­½-½Rí-²uÒæÖ†66…6÷W&6T¶W’’’À¢÷76–&ÆTWV—ÖVçC¢æWr6WB…²w÷76–&ÆTWV—ÖVçBrÂw÷FVçF–ÄWV—ÖVçBrÂv÷F–öæÄWV—ÖVçBrÂvWV—ÖVçE÷76–&ÆT'•&ö¦V7BrÂ}-í}ÍímÝíRíí=Mí-ÝRrÂ}ý]Mýí½=]ÍíRíí=Mí-ÝRuÒæÖ†66…6÷W&6T¶W’’’À¢÷76–&ÆTÖFW&–Ç3¢æWr6WB…²w÷76–&ÆTÖFW&–Ç2rÂw÷FVçF–ÄÖFW&–Ç2rÂv÷F–öæÄÖFW&–Ç2rÂvÖFW&–Ç5÷76–&ÆT'•&ö¦V7BrÂ}-í}ÍímÝ½RÍ-]½²rÂ}ý]Mýí½=]Í½RÍ-]½²uÒæÖ†66…6÷W&6T¶W’’’À¢WV—ÖVçC¢æWr6WB…²vWV—ÖVçBrÂvWV—ÖVçD—FV×2rÂvFWf–6W2rÂw&ö¦V7DWV—ÖVçBrÂ}íí=Mí-ÝRrÂ}ýí²rÂ}=-í--uÒæÖ†66…6÷W&6T¶W’’’À¢ÖFW&–Ç3¢æWr6WB…²vÖFW&–Ç2rÂvÖFW&–Ä—FV×2rÂw&ö¦V7DÖFW&–Ç2rÂw7V6–f–6F–öârÂw7V6–f–6F–öç2rÂ}Í-]½²rÂ}ý]mM­mòuÒæÖ†66…6÷W&6T¶W’’’À¢FööÇ4æD6öç7VÖ&ÆW3¢æWr6WB…²wFööÇ4æD6öç7VÖ&ÆW2rÂwFööÇ2rÂwFööÆ–ærrÂv–ç7G'VÖVçG2rÂ}Ý-=Í]Ý"‚]íMÝ¢rÂ}Ý-=Í]Ý-²rÂ}íÝ-­uÒæÖ†66…6÷W&6T¶W’’’À¢6öç7VÖ&ÆTÖFW&–Ç3¢æWr6WB…²v6öç7VÖ&ÆTÖFW&–Ç2rÂv6öç7VÖ&ÆW2rÂv76ö6–FVDÖFW&–Ç2rÂvÖ÷VçF–ætÖFW&–Ç2rÂ}]íMÝ½RÍ-]½²rÂ}íý=---=íRÍ-]½²rÂ}ÍíÝ-mÝ½RÍ-]½²uÒæÖ†66…6÷W&6T¶W’’’À¢Æ&÷$†÷W'3¢æWr6WB…²vÆ&÷$†÷W'2rÂvÆ&÷W$†÷W'2rÂvÖä†÷W'2rÂwW'6öä†÷W'2rÂwv÷&´†÷W'2rÂvÆ&÷$6÷7G2rÂ}}]½í-]­â}²rÂ}}]½í-]­âÝ}²rÂ}-=Mí}--²uÒæÖ†66…6÷W&6T¶W’’§Ò“° ¦6öç7B4ôÔÔU$4”Åõ$õõ4Åôu$õU2Òö&¦V7Bæg&VW¦R‡°¢7V6–f–6F–öåv÷&·3¢²Æ&VÃ¢w7V6–f–6F–öå&ö¦V7Ev÷&·2rÂ–6öã¢srÂ6÷VçC¢wVçF—G”6÷VçBrÒÀ¢÷WG6–FU7V6–f–6F–öåv÷&·3¢²Æ&VÃ¢v÷WG6–FU7V6–f–6F–öå&ö¦V7Ev÷&·2rÂ–6öã¢s"rÂ6÷VçC¢wVçF—G”6÷VçBrÒÀ¢÷76–&ÆUv÷&·3¢²Æ&VÃ¢w÷76–&ÆU&ö¦V7Ev÷&·2rÂ–6öã¢s2rÂ6÷VçC¢wVçF—G”6÷VçBrÒÀ¢76ö6–FVEv÷&·3¢²Æ&VÃ¢w&÷÷6Ä76ö6–FVEv÷&·2rÂ–6öã¢sBrÂ6÷VçC¢wVçF—G”6÷VçBrÒÀ¢WV—ÖVçC¢²Æ&VÃ¢w&÷÷6ÄWV—ÖVçBrÂ–6öã¢tRrÂ6÷VçC¢wVçF—G”6÷VçBrÒÀ¢ÖFW&–Ç3¢²Æ&VÃ¢w&÷÷6ÄÖFW&–Ä—FV×2rÂ–6öã¢tÒrÂ6÷VçC¢wVçF—G”6÷VçBrÒÀ¢÷76–&ÆTWV—ÖVçC¢²Æ&VÃ¢w&÷÷6Å÷76–&ÆTWV—ÖVçE6†÷'BrÂ–6öã¢r´RrÂ6÷VçC¢wVçF—G”6÷VçBrÒÀ¢÷76–&ÆTÖFW&–Ç3¢²Æ&VÃ¢w&÷÷6Å÷76–&ÆTÖFW&–Ç56†÷'BrÂ–6öã¢r´ÒrÂ6÷VçC¢wVçF—G”6÷VçBrÒÀ¢FööÇ4æD6öç7VÖ&ÆW3¢²Æ&VÃ¢wFööÇ4æD6öç7VÖ&ÆW2rÂ–6öã¢uBrÂ6÷VçC¢w÷6—F–öç46÷VçBrÒÀ¢6öç7VÖ&ÆTÖFW&–Ç3¢²Æ&VÃ¢v6öç7VÖ&ÆTÖFW&–Ç2rÂ–6öã¢u"rÂ6÷VçC¢wVçF—G”6÷VçBrÒÀ¢Æ&÷$†÷W'3¢²Æ&VÃ¢vÆ&÷$†÷W$6÷7G2rÂ–6öã¢t‚rÂ6÷VçC¢wVçF—G”6÷VçBrÐ§Ò“° ¦6öç7B4ôÔÔU$4”Åõ$õõ4Åõ$U5TÅEõD%2Òö&¦V7Bæg&VW¦R…°¢²–C¢w6×"rÂÆ&VÃ¢w&÷÷6Å6×"rÂ–6öã¢~)©"rÂw&÷W3¢²w7V6–f–6F–öåv÷&·2rÂv÷WG6–FU7V6–f–6F–öåv÷&·2rÂw÷76–&ÆUv÷&·2rÂv76ö6–FVEv÷&·2uÒÒÀ¢²–C¢vÖFW&–Ç2rÂÆ&VÃ¢w&÷÷6ÄÖFW&–Ç2rÂ–6öã¢~)xrrÂw&÷W3¢²vWV—ÖVçBrÂvÖFW&–Ç2rÂw÷76–&ÆTWV—ÖVçBrÂw÷76–&ÆTÖFW&–Ç2uÒÒÀ¢²–C¢w&WV—&VBrÂÆ&VÃ¢w&÷÷6Å&WV—&VBrÂ–6öã¢~ûÈ²rÂw&÷W3¢²wFööÇ4æD6öç7VÖ&ÆW2rÂv6öç7VÖ&ÆTÖFW&–Ç2rÂvÆ&÷$†÷W'2uÒÐ¥Ò“° ¦6öç7B4ôÔÔU$4”Åõ$õõ4ÅôTD•Dõ%ô4ôÅTÔå2Òö&¦V7Bæg&VW¦R…°¢°¢–C¢w6×"rÂÆ&VÃ¢w&÷÷6Å6×"rÂ–6öã¢~)©"rÀ¢w&÷W3¢°¢²–C¢w7V6–f–6F–öåv÷&·2rÂÆ&VÃ¢w&÷÷6Ä'•7V6–f–6F–öå6†÷'BrÒÀ¢²–C¢v÷WG6–FU7V6–f–6F–öåv÷&·2rÂÆ&VÃ¢w&÷÷6Ä'•&ö¦V7E6†÷'BrÒÀ¢²–C¢w÷76–&ÆUv÷&·2rÂÆ&VÃ¢w&÷÷6ÄFF—F–öæÅv÷&·56†÷'BrÒÀ¢²–C¢v76ö6–FVEv÷&·2rÂÆ&VÃ¢w&÷÷6Ä76ö6–FVE6†÷'BrÒÀ¢²–C¢v×’rÂÆ&VÃ¢v×”6öÖÖW&6–Å&÷÷6ÂrÐ¢Ð¢ÒÀ¢°¢–C¢vÖFW&–Ç2rÂÆ&VÃ¢w&÷÷6ÄÖFW&–Ç2rÂ–6öã¢~)xrrÀ¢w&÷W3¢°¢²–C¢vWV—ÖVçBrÂÆ&VÃ¢w&÷÷6Å7V6–f–6F–öäWV—ÖVçE6†÷'BrÒÀ¢²–C¢vÖFW&–Ç2rÂÆ&VÃ¢w&÷÷6Å7V6–f–6F–öäÖFW&–Ç56†÷'BrÒÀ¢²–C¢w÷76–&ÆTWV—ÖVçBrÂÆ&VÃ¢w&÷÷6Å÷76–&ÆTWV—ÖVçE6†÷'BrÒÀ¢²–C¢w÷76–&ÆTÖFW&–Ç2rÂÆ&VÃ¢w&÷÷6Å÷76–&ÆTÖFW&–Ç56†÷'BrÒÀ¢²–C¢vÖFW&–Ç4×’rÂÆ&VÃ¢v×”6öÖÖW&6–Å&÷÷6ÂrÐ¢Ð¢ÒÀ¢°¢–C¢vW‡Vç6W2rÂÆ&VÃ¢w&÷÷6Ä÷F†W$W‡Vç6W2rÂ–6öã¢~ûÈ²rÀ¢w&÷W3¢°¢²–C¢wFööÇ4æD6öç7VÖ&ÆW2rÂÆ&VÃ¢wFööÇ4æD6öç7VÖ&ÆW2rÒÀ¢²–C¢v6öç7VÖ&ÆTÖFW&–Ç2rÂÆ&VÃ¢v6öç7VÖ&ÆTÖFW&–Ç2rÒÀ¢²–C¢vÆ&÷$†÷W'2rÂÆ&VÃ¢vÆ&÷$†÷W$6÷7G2rÐ¢Ð¢Ð¥Ò“° ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄVçG&–W4g&öÕfÇVR‡fÇVRÂw&÷W¶W’Â¶–æBÒw&ö¦V7Br’°¢6öç7B—5v÷&²Ò²w7V6–f–6F–öåv÷&·2rÂv÷WG6–FU7V6–f–6F–öåv÷&·2rÂw÷76–&ÆUv÷&·2rÂv76ö6–FVEv÷&·2rÂvÆ&÷$†÷W'2uÒæ–æ6ÇVFW2†w&÷W¶W’“°¢6öç7B—5&ö¦V7E6÷W&6RÒ²w7V6–f–6F–öåv÷&·2rÂvWV—ÖVçBrÂvÖFW&–Ç2uÒæ–æ6ÇVFW2†w&÷W¶W’“°¢6öç7BFVfVÇG2Ò°¢6÷W&6T¶–æC¢¶–æBÀ¢6÷W&6TæÖS¢G"†—5&ö¦V7E6÷W&6Ròw&÷÷6Å6÷W&6Rr¢v–FVçF–f–VD'”æÇ—6—2r’À¢6FVv÷'“¢—5v÷&²òwv÷&²r¢vÖFW&–ÂrÀ¢÷&–v–ã¢—5&ö¦V7E6÷W&6Ròw&ö¦V7Br¢væÇ—6—2p¢Ó°¢–b†w&÷W¶W’ÓÓÒvÆ&÷$†÷W'2r’°¢6öç7B&uF÷FÂÒG—VöbfÇVRÓÓÒvçVÖ&W"rÇÂG—VöbfÇVRÓÓÒw7G&–ærp¢òfÇVP¢¢66…6÷W&6U&÷W'G’‡fÇVRÂ²wF÷FÂrÂv†÷W'2rÂwVçF—G’rÂvÖ÷VçBrÂ}}²rÂ}­í½}]--ârÂ}-=Mí}--²uÒ“°¢6öç7BF÷FÂÒ66…6÷W&6TçVÖ&W"‡&uF÷FÂ“°¢–b‡F÷FÂâ’°¢6öç7BVçG'’Òæ÷&ÖÆ—¦T66…6÷W&6T6FÆötVçG'’‡²æÖS¢G"‚vÆ&÷$†÷W$6÷7G2r’ÂVçF—G“¢F÷FÂÂVæ—C¢G"‚wW'6öä†÷W'5Væ—Br’ÒÂFVfVÇG2“°¢&WGW&âVçG'’ò·²ââæVçG'’Â÷&–v–ã¢væÇ—6—2rÕÒ¢µÓ°¢Ð¢Ð¢&WGW&â&ö¦V7DW7F–ÖFTVçG&–W4g&öÕfÇVR‡fÇVRÂFVfVÇG2“°§Ð ¦gVæ7F–öâ6öÆÆV7D6öÖÖW&6–Å&÷÷6Äw&÷W2‡&ö÷EfÇVRÂw&÷W2Â¶–æBÒw&ö¦V7BrÂFWF‚Ò’°¢–b‚&ö÷EfÇVRÇÂG—Vöb&ö÷EfÇVRÓÒvö&¦V7BrÇÂFWF‚âr’&WGW&ã°¢ö&¦V7BæVçG&–W2‡&ö÷EfÇVR’æf÷$V6‚‚…¶¶W’Â6†–ÆEÒ’Óâ°¢6öç7Bæ÷&ÖÆ—¦VD¶W’Ò66…6÷W&6T¶W’†¶W’“°¢6öç7Bw&÷W¶W’Òö&¦V7BæVçG&–W2„4ôÔÔU$4”Åõ$õõ4Åôu$õUôÄ”4U2’æf–æB‚…²ÂÆ–6W5Ò’ÓâÆ–6W2æ†2†æ÷&ÖÆ—¦VD¶W’’“òå³Ó°¢–b†w&÷W¶W’’w&÷W5¶w&÷W¶W•ÒçW6‚‚ââæ6öÖÖW&6–Å&÷÷6ÄVçG&–W4g&öÕfÇVR†6†–ÆBÂw&÷W¶W’Â¶–æB’“°¢–b†6†–ÆBbbG—Vöb6†–ÆBÓÓÒvö&¦V7Br’6öÆÆV7D6öÖÖW&6–Å&÷÷6Äw&÷W2†6†–ÆBÂw&÷W2Â¶–æBÂFWF‚²“°¢Ò“°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Ä6FÆötw&÷W†VçG'’’°¢6öç7B¶W’Ò66…6÷W&6T¶W’†VçG'’ææÖR“°¢–b‚ò}]½í-]­í}Í-=Mí}-'ÆÆ&÷&†÷W'3÷ÆÆ&÷W&†÷W'3÷ÆÖæ†÷W'3÷ÇW'6öæ†÷W'3ò’÷RçFW7B†¶W’’’&WGW&âvÆ&÷$†÷W'2s°¢–b‚ò-Ý]ý]mM­gÍÝ]=}-]×ÍÝ]=}-×Æ÷WG6–FW7V6–f–6F–öçÆæöç7V6–f–6F–öçÇVæÆ—7FVGÇVæ66÷VçFVB’÷RçFW7B†¶W’’’&WGW&âv÷WG6–FU7V6–f–6F–öåv÷&·2s°¢–b‚ò-í}ÍímÒâ¢íí=Mí-×ÍýíÍ=-í-"—Íý]Mýí½=]Ââ¢íí=Mí-×ÍýíÍ=-í-"—Ç÷76–&ÆVWV—ÖVçGÇ÷FVçF–ÆWV—ÖVçGÆ÷F–öæÆWV—ÖVçB’÷RçFW7B†¶W’’’&WGW&âw÷76–&ÆTWV—ÖVçBs°¢–b‚ò-í}ÍímÒâ­Í-]·Íý]Mýí½=]Ââ­Í-]·Ç÷76–&ÆVÖFW&–Ç3÷Ç÷FVçF–ÆÖFW&–Ç3÷Æ÷F–öæÆÖFW&–Ç3ò’÷RçFW7B†¶W’’’&WGW&âw÷76–&ÆTÖFW&–Ç2s°¢–b‚ò-í}Íím×Íý]Mýí½=]ÇÇ÷76–&ÆWv÷&·Ç÷FVçF–Çv÷&·Æ÷F–öæÇv÷&²’÷RçFW7B†¶W’’’&WGW&âw÷76–&ÆUv÷&·2s°¢–b‚òíý=--'Í­½"â­í'Æ76ö6–FVGv÷&·Æ6ö×æ–öçv÷&·Ç&VÆFVGv÷&·ÆW†–Æ–'—v÷&·Æ†–FFVçv÷&²’÷RçFW7B†¶W’’’&WGW&âv76ö6–FVEv÷&·2s°¢–b‚òÝ-=Í]Ý'ÍíÝ'ÇFööÆ–æwÇFööÇ3ò’÷RçFW7B†¶W’’’&WGW&âwFööÇ4æD6öç7VÖ&ÆW2s°¢–b‚ò]íM×Í­]ý]gÍ­]ýgÍ=]Í]-§Í}í½]Ý'Æ6öç7VÖ&ÆR’÷RçFW7B†¶W’’’&WGW&âv6öç7VÖ&ÆTÖFW&–Ç2s°¢–b‚òíí=Mí-×ÍýíÍ=-í-'Í-]-½ÍÝ§Í­GÍ'ÍÝíÍ-]Ý-½ý-íÆWV—ÖVçGÆFWf–6WÆf—‡GW&WÇæVÇÇV×Æfâ’÷RçFW7B†¶W’’’&WGW&âvWV—ÖVçBs°¢–b†VçG'’æ6FVv÷'’ÓÓÒwv÷&²rÇÂòÍíÝ-gÍ=-Ýí'Íýí­½GÍM]ÍíÝ-gÍý=­íÝ½GÍý½-×ÍÝ-í—ÍýíM­½íwÍí'Í=½=7Æ–ç7FÆÇÆÖ÷VçGÆÆ––æwÇFW7F–æwÆ6öÖÖ—76–öçÇ6W'f–6R’÷RçFW7B†¶W’’’&WGW&âw7V6–f–6F–öåv÷&·2s°¢&WGW&âvÖFW&–Ç2s°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Ä'&V¶F÷vâ‡fW'6–öâÂ¶–æBÒw&ö¦V7Br’°¢6öç7Bw&÷W2Òö&¦V7Bæg&öÔVçG&–W2„ö&¦V7Bæ¶W—2„4ôÔÔU$4”Åõ$õõ4Åôu$õU2’æÖ‚†¶W’’Óâ¶¶W’ÂµÕÒ’“°¢6öç7B&ö÷G2Ò°¢fW'6–öãòæ6öÖÖW&6–Å&÷÷6ÂÀ¢fW'6–öãòç&÷÷6Ä'&V¶F÷vâÀ¢fW'6–öãòæW7F–ÖFT'&V¶F÷vâÀ¢fW'6–öãòææÇ—6—4FFÀ¢fW'6–öãòææÇ—6—5&W7VÇBÀ¢fW'6–öãòç&W7VÇBÀ¢fW'6–öãòæW‡G&7FVDFFÀ¢fW'6–öãòæW‡G&7F–öâÀ¢²v÷&·3¢fW'6–öãòçv÷&·2Â6W'f–6W3¢fW'6–öãòç6W'f–6W2ÂÖFW&–Ç3¢fW'6–öãòæÖFW&–Ç2ÂWV—ÖVçC¢fW'6–öãòæWV—ÖVçBÂ7V6–f–6F–öã¢fW'6–öãòç7V6–f–6F–öâÐ¢Ó°¢&ö÷G2æf÷$V6‚‚‡&ö÷EfÇVR’Óâ6öÆÆV7D6öÖÖW&6–Å&÷÷6Äw&÷W2‡&ö÷EfÇVRÂw&÷W2Â¶–æB’“°¢6öç7B6Æ–ÖVDVçG&–W2ÒæWr6WB„ö&¦V7BçfÇVW2†w&÷W2’æfÆB‚’æÖ‚†VçG'’’Óâ66…6÷W&6T¶W’†VçG'’ææÖR’’“°¢66…6÷W&6T6FÆötg&öÔf–ÆU&V6÷&B‡fW'6–öâÂ¶–æB’æf÷$V6‚‚†VçG'’’Óâ°¢6öç7BVçG'”¶W’Ò66…6÷W&6T¶W’†VçG'’ææÖR“°¢–b†6Æ–ÖVDVçG&–W2æ†2†VçG'”¶W’’’&WGW&ã°¢w&÷W5¶6öÖÖW&6–Å&÷÷6Ä6FÆötw&÷W†VçG'’•ÒçW6‚†VçG'’“°¢6Æ–ÖVDVçG&–W2æFB†VçG'”¶W’“°¢Ò“°¢ö&¦V7Bæ¶W—2†w&÷W2’æf÷$V6‚‚†w&÷W¶W’’Óâ²w&÷W5¶w&÷W¶W•ÒÒÖW&vU&ö¦V7DW7F–ÖFT—FV×2†w&÷W5¶w&÷W¶W•Ò“²Ò“°¢&WGW&âw&÷W3°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Äw&÷WÖWG&–2†w&÷W¶W’ÂVçG&–W2’°¢–b†w&÷W¶W’ÓÒvÆ&÷$†÷W'2r’&WGW&âVçG&–W2æÆVæwFƒ°¢6öç7B†÷W'2ÒVçG&–W2ç&VGV6R‚‡F÷FÂÂVçG'’’ÓâF÷FÂ²„çVÖ&W"†VçG'’çVçF—G’’ÇÂ’Â“°¢&WGW&â†÷W'2âòÖF‚ç&÷VæB††÷W'2¢’ò¢VçG&–W2æÆVæwFƒ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Äw&÷WÖ&·W†w&÷W¶W’ÂVçG&–W2’°¢6öç7B6öæf–rÒ4ôÔÔU$4”Åõ$õõ4Åôu$õU5¶w&÷W¶W•Ó°¢6öç7B6÷VçBÒ6öÖÖW&6–Å&÷÷6Äw&÷WÖWG&–2†w&÷W¶W’ÂVçG&–W2“°¢6öç7B&öG’ÒVçG&–W2æÆVæwF€¢òÆF—b6Æ73Ò'&ö¦V7BÖW7F–ÖFRÖÆ—7B#âG¶VçG&–W2ç6Æ–6RƒÂ#’æÖ‚†VçG'’’ÓâÆ'F–6ÆSãÇ7ãâG¶W66T‡FÖÂ†6öæf–ræ–6öâ—ÓÂ÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ†VçG'’ææÖR—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ†VçG'’ç6÷W&6U6†VWBÇÂVçG'’ç6÷W&6TæÖRÇÂG"‚v–FVçF–f–VD'”æÇ—6—2r’—ÓÂ÷6ÖÆÃãÂöF—cãÆ#âG¶VçG'’çVçF—G’òW66T‡FÖÂ…7G&–ær†VçG'’çVçF—G’’’¢~(	BwÒG¶VçG'’çVæ—BòG¶W66T‡FÖÂ†VçG'’çVæ—B—Ö¢rwÓÂö#ãÂö'F–6ÆSæ’æ¦ö–â‚rr—ÓÂöF—cæ ¢¢ÆF—b6Æ73Ò'&ö¦V7BÖW7F–ÖFRÖV×G’#ãÇ7ãî)xsÂ÷7ããÇâG¶W66T‡FÖÂ‡G"‚vW7F–ÖFTw&÷WVæF–ærr’—ÓÂ÷ãÂöF—cæ°¢&WGW&âÇ6V7F–öâ6Æ73Ò'&ö¦V7BÖW7F–ÖFRÖw&÷W6öÖÖW&6–Â×&÷÷6Â×&W7VÇBÖw&÷W#ãÆ†VFW#ãÇ7ãâG¶W66T‡FÖÂ†6öæf–ræ–6öâ—ÓÂ÷7ããÆF—cãÆƒCâG¶W66T‡FÖÂ‡G"†6öæf–ræÆ&VÂ’—ÓÂöƒCãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"†6öæf–ræ6÷VçB’—Ó¢G¶W66T‡FÖÂ…7G&–ær†6÷VçB’—ÓÂ÷6ÖÆÃãÂöF—cãÆ#âG¶W66T‡FÖÂ…7G&–ær†6÷VçB’—ÓÂö#ãÂö†VFW#âG¶&öG—ÓÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Å&W7VÇDÖ&·W‡fW'6–öâÂ¶–æBÒw&ö¦V7Br’°¢6öç7Bw&÷W2Ò6öÖÖW&6–Å&÷÷6Ä'&V¶F÷vâ‡fW'6–öâÂ¶–æB“°¢6öç7B7F—fUF"Ò4ôÔÔU$4”Åõ$õõ4Åõ$U5TÅEõD%2æf–æB‚‡F"’ÓâF"æ–BÓÓÒ7F—fT6öÖÖW&6–Å&÷÷6Å&W7VÇEF"’ÇÂ4ôÔÔU$4”Åõ$õõ4Åõ$U5TÅEõD%5³Ó°¢6öç7B7VÖÖ'’Ò°¢6×#¢4ôÔÔU$4”Åõ$õõ4Åõ$U5TÅEõD%5³Òæw&÷W2ç&VGV6R‚‡F÷FÂÂ¶W’’ÓâF÷FÂ²w&÷W5¶¶W•ÒæÆVæwF‚Â’À¢ÖFW&–Ç3¢4ôÔÔU$4”Åõ$õõ4Åõ$U5TÅEõD%5³Òæw&÷W2ç&VGV6R‚‡F÷FÂÂ¶W’’ÓâF÷FÂ²w&÷W5¶¶W•ÒæÆVæwF‚Â’À¢&WV—&VC¢4ôÔÔU$4”Åõ$õõ4Åõ$U5TÅEõD%5³%Òæw&÷W2ç&VGV6R‚‡F÷FÂÂ¶W’’ÓâF÷FÂ²w&÷W5¶¶W•ÒæÆVæwF‚Â¢Ó°¢6öç7BF'2Ò4ôÔÔU$4”Åõ$õõ4Åõ$U5TÅEõD%2æÖ‚‡F"’ÓâÆ'WGFöâ6Æ73Ò"G·F"æ–BÓÓÒ7F—fUF"æ–Bòv—2Ö7F—fRr¢rwÒ"G—SÒ&'WGFöâ"FFÖ6öÖÖW&6–Â×&÷÷6Â×&W7VÇB×F#Ò"G·F"æ–GÒ"&–×6VÆV7FVCÒ"Gµ7G&–ær‡F"æ–BÓÓÒ7F—fUF"æ–B—Ò#ãÇ7ãâG·F"æ–6öçÓÂ÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"‡F"æÆ&VÂ’—ÓÂ÷7G&öæsãÆ#âG·7VÖÖ'•·F"æ–E×ÓÂö#ãÂö'WGFöãæ’æ¦ö–â‚rr“°¢6öç7BF÷FÇ2Ò4ôÔÔU$4”Åõ$õõ4Åõ$U5TÅEõD%2æÖ‚‡F"’ÓâÇ7ããÆ#âG·7VÖÖ'•·F"æ–E×ÓÂö#ãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‡F"æÆ&VÂ’—ÓÂ÷6ÖÆÃãÂ÷7ãæ’æ¦ö–â‚rr“°¢&WGW&âÇ6V7F–öâ6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖ–çFVÆÆ–vVæ6R#ãÆ†VFW#ãÆF—cãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ2”åDTÄÄ”tTä4SÂ÷7ããÆƒ3âG¶W66T‡FÖÂ‡G"‚vf÷VæD'”–çFVÆÆ–vVæ6Rr’—ÓÂöƒ3ãÇâG¶W66T‡FÖÂ‡G"‚w&÷÷6Äf÷VæE7VÖÖ'’r’—ÓÂ÷ãÂöF—cãÆF—câG·F÷FÇ7ÓÂöF—cãÂö†VFW#ãÆæb6Æ73Ò&6öÖÖW&6–Â×&÷÷6Â×&W7VÇB×F'2"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚v6öÖÖW&6–Å&÷÷6Âr’—Ò#âG·F'7ÓÂöæcãÆF—b6Æ73Ò&6öÖÖW&6–Â×&÷÷6Â×&W7VÇBÖw&÷W2—2ÒG¶7F—fUF"æ–GÒ#âG¶7F—fUF"æw&÷W2æÖ‚†w&÷W¶W’’Óâ6öÖÖW&6–Å&÷÷6Äw&÷WÖ&·W†w&÷W¶W’Âw&÷W5¶w&÷W¶W•Ò’’æ¦ö–â‚rr—ÓÂöF—cãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄVF—F÷$w&÷W6öæf–r†w&÷W–B’°¢f÷"†6öç7B6öÇVÖâöb4ôÔÔU$4”Åõ$õõ4ÅôTD•Dõ%ô4ôÅTÔå2’°¢6öç7Bw&÷WÒ6öÇVÖâæw&÷W2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒw&÷W–B“°¢–b†w&÷W’&WGW&â²ââæw&÷WÂ6öÇVÖä–C¢6öÇVÖâæ–BÂ6öÇVÖäÆ&VÃ¢6öÇVÖâæÆ&VÂÓ°¢Ð¢&WGW&âçVÆÃ°§Ð ¦gVæ7F–öâ—46öÖÖW&6–Å&÷÷6Ä×”w&÷W†w&÷W–B’°¢&WGW&âw&÷W–BÓÓÒv×’rÇÂw&÷W–BÓÓÒvÖFW&–Ç4×’s°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â’°¢–b‚&÷÷6Âçv÷&·76RÇÂG—Vöb&÷÷6Âçv÷&·76RÓÒvö&¦V7BrÇÂ&÷÷6Âçv÷&·76Ræ—FVÕfÇVW2ÇÂ'&’æ—4'&’‡&÷÷6Âçv÷&·76Ræ7W7FöÔ—FV×2’ÇÂ'&’æ—4'&’‡&÷÷6Âçv÷&·76Ræ×”—FV×2’ÇÂ&÷÷6Âçv÷&·76Ræ6öçF7G2ÇÂ&÷÷6Âçv÷&·76RæÆ&÷%6WGF–æw2ÇÂG—Vöb&÷÷6Âçv÷&·76RæÆ&÷%6WGF–æw2æ—FVÔ†÷W'2ÓÒvö&¦V7Br’°¢&÷÷6Âçv÷&·76RÒæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6Åv÷&·76R‡&÷÷6Âçv÷&·76R“°¢Ð¢&WGW&â&÷÷6Âçv÷&·76S°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄÆ–æT–B†w&÷W–BÂVçG'’Â–æFW‚’°¢6öç7B6÷W&6RÒG¶w&÷W–GÕÇSG¶VçG'“òææÖRÇÂrwÕÇSG¶VçG'“òçVæ—BÇÂrwÕÇSG¶VçG'“òç6÷W&6U6†VWBÇÂrwÕÇSG¶VçG'“òç6÷W&6TæÖRÇÂrwÖ°¢ÆWB†6‚Ò#cc3c#c°¢f÷"†ÆWB÷6—F–öâÒ²÷6—F–öâÂ6÷W&6RæÆVæwFƒ²÷6—F–öâ³Ò’°¢†6‚ãÒ6÷W&6Ræ6†$6öFTB‡÷6—F–öâ“°¢†6‚ÒÖF‚æ–×VÂ††6‚Âcsssc’“°¢Ð¢&WGW&â7ÒG¶w&÷W–GÒÒG²††6‚ããâ’çFõ7G&–ærƒ3b—ÒÒG¶–æFW‡Ö°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄVçG'•v—F…7FFR†VçG'’Â–BÂ6÷W&6Tw&÷WÂ7FFR’°¢6öç7B6fVBÒ7FFRæ—FVÕfÇVW5¶–EÓ°¢6öç7B†5VçF—G’Ò6fVBbbö&¦V7Bç&÷F÷G—Ræ†4÷vå&÷W'G’æ6ÆÂ‡6fVBÂwVçF—G’r“°¢6öç7B†5&–6RÒ6fVBbbö&¦V7Bç&÷F÷G—Ræ†4÷vå&÷W'G’æ6ÆÂ‡6fVBÂw&–6Rr“°¢&WGW&â°¢–BÀ¢6÷W&6Tw&÷WÀ¢æÖS¢7G&–ær†VçG'“òææÖRÇÂrr’çG&–Ò‚’À¢Væ—C¢7G&–ær†VçG'“òçVæ—BÇÂrr’çG&–Ò‚’À¢VçF—G“¢†5VçF—G’ò6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‡6fVBçVçF—G’’¢6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"†VçG'“òçVçF—G’’À¢&–6S¢†5&–6Rò6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‡6fVBç&–6R’¢6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"†VçG'“òç&–6R’À¢6÷W&6TæÖS¢7G&–ær†VçG'“òç6÷W&6TæÖRÇÂrr’çG&–Ò‚’À¢6÷W&6U6†VWC¢7G&–ær†VçG'“òç6÷W&6U6†VWBÇÂrr’çG&–Ò‚’À¢&ö¦V7E6÷W&6S¢6fVCòç&ö¦V7E6÷W&6RÓÓÒw7V2rÇÂ6fVCòç&ö¦V7E6÷W&6RÓÓÒw&ö¦V7Bp¢ò6fVBç&ö¦V7E6÷W&6P¢¢VçG'“òç&ö¦V7E6÷W&6RÓÓÒw7V2ròw7V2r¢w&ö¦V7BrÀ¢76ö6–FVDf÷#¢7G&–ær‡6fVCòæ76ö6–FVDf÷"óòVçG'“òæ76ö6–FVDf÷"óòrr’çG&–Ò‚’ç6Æ–6RƒÂ#C’À¢7W7FöÓ¢&ööÆVâ†VçG'“òæ7W7FöÒ¢Ó°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄVçG&–W4f÷$w&÷W‡&÷÷6ÂÂw&÷W–BÂw&÷W2ÒçVÆÂ’°¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢–b†w&÷W–BÓÓÒv×’r’°¢6öç7Bv÷&´w&÷W2ÒæWr6WB…²w7V6–f–6F–öåv÷&·2rÂv÷WG6–FU7V6–f–6F–öåv÷&·2rÂw÷76–&ÆUv÷&·2rÂv76ö6–FVEv÷&·2rÂv×’uÒ“°¢&WGW&â7FFRæ×”—FV×2æf–ÇFW"‚†VçG'’’Óâv÷&´w&÷W2æ†2†VçG'’ç6÷W&6Tw&÷W’’æÖ‚†VçG'’’Óâ6öÖÖW&6–Å&÷÷6ÄVçG'•v—F…7FFR†VçG'’ÂVçG'’æ–BÂVçG'’ç6÷W&6Tw&÷WÂ7FFR’“°¢Ð¢–b†w&÷W–BÓÓÒvÖFW&–Ç4×’r’°¢6öç7BÖFW&–Äw&÷W2ÒæWr6WB…²vWV—ÖVçBrÂvÖFW&–Ç2rÂw÷76–&ÆTWV—ÖVçBrÂw÷76–&ÆTÖFW&–Ç2rÂvÖFW&–Ç4×’uÒ“°¢&WGW&â7FFRæ×”—FV×2æf–ÇFW"‚†VçG'’’ÓâÖFW&–Äw&÷W2æ†2†VçG'’ç6÷W&6Tw&÷W’’æÖ‚†VçG'’’Óâ6öÖÖW&6–Å&÷÷6ÄVçG'•v—F…7FFR†VçG'’ÂVçG'’æ–BÂVçG'’ç6÷W&6Tw&÷WÂ7FFR’“°¢Ð¢–b†w&÷W–BÓÓÒvÆ&÷$†÷W'2r’°¢6öç7Bv÷&´w&÷W2ÒæWr6WB…²w7V6–f–6F–öåv÷&·2rÂv÷WG6–FU7V6–f–6F–öåv÷&·2rÂw÷76–&ÆUv÷&·2rÂv76ö6–FVEv÷&·2rÂv×’uÒ“°¢6öç7B×•v÷&´VçG&–W2Ò7FFRæ×”—FV×2æf–ÇFW"‚†VçG'’’Óâv÷&´w&÷W2æ†2†VçG'’ç6÷W&6Tw&÷W’’æÖ‚†VçG'’’Óâ‡²ââæ6öÖÖW&6–Å&÷÷6ÄVçG'•v—F…7FFR†VçG'’ÂVçG'’æ–BÂVçG'’ç6÷W&6Tw&÷WÂ7FFR’ÂÆ&÷$÷&–v–ã¢v×’rÒ’“°¢6öç7B6÷W&6Tw&÷W2Òw&÷W2ÇÂ6öÖÖW&6–Å&÷÷6Ä'&V¶F÷vâ†ÆFW7DFö7VÖVçEfW'6–öâ‡&÷÷6Âæf–ÆR’Â&÷÷6Âæ¶–æB“°¢6öç7B7V6–f–6F–öäVçG&–W2Ò6öÖÖW&6–Å&÷÷6ÄVçG&–W4f÷$w&÷W‡&÷÷6ÂÂw7V6–f–6F–öåv÷&·2rÂ6÷W&6Tw&÷W2’æÖ‚†VçG'’’Óâ‡²ââæVçG'’ÂÆ&÷$÷&–v–ã¢w7V6–f–6F–öârÒ’“°¢6öç7B¶æ÷vä–G2ÒæWr6WB‡7V6–f–6F–öäVçG&–W2æÖ‚†VçG'’’ÓâVçG'’æ–B’“°¢6öç7B¶æ÷väÆ–æW2ÒæWr6WB‡7V6–f–6F–öäVçG&–W2æÖ‚†VçG'’’ÓâG¶66…6÷W&6T¶W’†VçG'’ææÖR—ÕÇSG¶66…6÷W&6T¶W’†VçG'’çVæ—B—Ö’“°¢6öç7BVæ—VT×•v÷&´VçG&–W2Ò×•v÷&´VçG&–W2æf–ÇFW"‚†VçG'’’Óâ¶æ÷vä–G2æ†2†VçG'’æ–B’bb¶æ÷väÆ–æW2æ†2†G¶66…6÷W&6T¶W’†VçG'’ææÖR—ÕÇSG¶66…6÷W&6T¶W’†VçG'’çVæ—B—Ö’“°¢6öç7B7W7FöÔÆ&÷$VçG&–W2Ò7FFRæ7W7FöÔ—FV×2æf–ÇFW"‚†VçG'’’ÓâVçG'’ç6÷W&6Tw&÷WÓÓÒw&÷W–B’æÖ‚†VçG'’’Óâ‡²ââæ6öÖÖW&6–Å&÷÷6ÄVçG'•v—F…7FFR†VçG'’ÂVçG'’æ–BÂw&÷W–BÂ7FFR’ÂÆ&÷$÷&–v–ã¢v7W7FöÒrÒ’“°¢&WGW&â²ââç7V6–f–6F–öäVçG&–W2ÂââçVæ—VT×•v÷&´VçG&–W2Âââæ7W7FöÔÆ&÷$VçG&–W5Ó°¢Ð¢6öç7B6÷W&6Tw&÷W2Òw&÷W2ÇÂ6öÖÖW&6–Å&÷÷6Ä'&V¶F÷vâ†ÆFW7DFö7VÖVçEfW'6–öâ‡&÷÷6Âæf–ÆR’Â&÷÷6Âæ¶–æB“°¢–b†w&÷W–BÓÓÒv÷WG6–FU7V6–f–6F–öåv÷&·2r’°¢6öç7B7V6–f–6F–öäVçG&–W2Ò‡6÷W&6Tw&÷W2ç7V6–f–6F–öåv÷&·2ÇÂµÒ’æÖ‚†VçG'’Â–æFW‚’Óâ6öÖÖW&6–Å&÷÷6ÄVçG'•v—F…7FFR€¢²ââæVçG'’Â&ö¦V7E6÷W&6S¢w7V2rÒÀ¢6öÖÖW&6–Å&÷÷6ÄÆ–æT–B‚v÷WG6–FU7V6–f–6F–öåv÷&·2×7V2rÂVçG'’Â–æFW‚’À¢w&÷W–BÀ¢7FFP¢’“°¢6öç7B&ö¦V7DVçG&–W2Ò‡6÷W&6Tw&÷W2æ÷WG6–FU7V6–f–6F–öåv÷&·2ÇÂµÒ’æÖ‚†VçG'’Â–æFW‚’Óâ6öÖÖW&6–Å&÷÷6ÄVçG'•v—F…7FFR€¢²ââæVçG'’Â&ö¦V7E6÷W&6S¢w&ö¦V7BrÒÀ¢6öÖÖW&6–Å&÷÷6ÄÆ–æT–B†w&÷W–BÂVçG'’Â–æFW‚’À¢w&÷W–BÀ¢7FFP¢’“°¢6öç7B7W7FöÔVçG&–W2Ò7FFRæ7W7FöÔ—FV×2æf–ÇFW"‚†VçG'’’ÓâVçG'’ç6÷W&6Tw&÷WÓÓÒw&÷W–B’æÖ‚†VçG'’’Óâ6öÖÖW&6–Å&÷÷6ÄVçG'•v—F…7FFR†VçG'’ÂVçG'’æ–BÂw&÷W–BÂ7FFR’“°¢&WGW&â²ââç7V6–f–6F–öäVçG&–W2Âââç&ö¦V7DVçG&–W2Âââæ7W7FöÔVçG&–W5Ó°¢Ð¢6öç7BW‡G&7FVDVçG&–W2Ò‡6÷W&6Tw&÷W5¶w&÷W–EÒÇÂµÒ’æÖ‚†VçG'’Â–æFW‚’Óâ6öÖÖW&6–Å&÷÷6ÄVçG'•v—F…7FFR†VçG'’Â6öÖÖW&6–Å&÷÷6ÄÆ–æT–B†w&÷W–BÂVçG'’Â–æFW‚’Âw&÷W–BÂ7FFR’“°¢6öç7B7W7FöÔVçG&–W2Ò7FFRæ7W7FöÔ—FV×2æf–ÇFW"‚†VçG'’’ÓâVçG'’ç6÷W&6Tw&÷WÓÓÒw&÷W–B’æÖ‚†VçG'’’Óâ6öÖÖW&6–Å&÷÷6ÄVçG'•v—F…7FFR†VçG'’ÂVçG'’æ–BÂw&÷W–BÂ7FFR’“°¢&WGW&â²ââæW‡G&7FVDVçG&–W2Âââæ7W7FöÔVçG&–W5Ó°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡fÇVR’°¢&WGW&âÖF‚ç&÷VæB‚‚„çVÖ&W"‡fÇVR’ÇÂ’²çVÖ&W"äU4”Äôâ’¢’ò°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄÆ–æTÖ÷VçG2‡VçF—G’Â&–6RÂÖöFT–G2ÒµÒ’°¢6öç7B6VÆV7FVDÖöFT–G2Òæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6ÅF„ÖöFW2†ÖöFT–G2“°¢6öç7BÖöFW2Ò6VÆV7FVDÖöFT–G2æÖ‚†–B’Óâ‡²–BÂââä4ôÔÔU$4”Åõ$õõ4Åõ$”4UôÔôDU5¶–EÒÒ’“°¢6öç7BF—&V7F–öâÒÖöFW5³ÓòæF—&V7F–öâÇÂvæöæRs°¢6öç7BVæ—D&6RÒ6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‡&–6R“°¢6öç7B&6RÒ6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’†6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‡VçF—G’’¢Væ—D&6R“°¢6öç7BVæ—EF†W2ÒÖöFW2æÖ‚†ÖöFR’Óâ‡°¢–C¢ÖöFRæ–BÀ¢Ö÷VçC¢ÖöFRæF—&V7F–öâÓÓÒw7V'G&7Bp¢ò6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡Væ—D&6R¢ÖöFRç&FRòƒ²ÖöFRç&FR’¢¢6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡Væ—D&6R¢ÖöFRç&FR¢Ò’“°¢6öç7BVæ—EF‚Ò6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡Væ—EF†W2ç&VGV6R‚‡F÷FÂÂ—FVÒ’ÓâF÷FÂ²—FVÒæÖ÷VçBÂ’“°¢6öç7BVæ—Df–æÂÒF—&V7F–öâÓÓÒw7V'G&7Bp¢ò6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡Væ—D&6RÒVæ—EF‚¢¢F—&V7F–öâÓÓÒvFBp¢ò6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡Væ—D&6R²Væ—EF‚¢¢Væ—D&6S°¢6öç7BF†W2ÒÖöFW2æÖ‚†ÖöFR’Óâ‡°¢–C¢ÖöFRæ–BÀ¢Ö÷VçC¢ÖöFRæF—&V7F–öâÓÓÒw7V'G&7Bp¢ò6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’†&6R¢ÖöFRç&FRòƒ²ÖöFRç&FR’¢¢6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’†&6R¢ÖöFRç&FR¢Ò’“°¢6öç7BF‚Ò6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F†W2ç&VGV6R‚‡F÷FÂÂ—FVÒ’ÓâF÷FÂ²—FVÒæÖ÷VçBÂ’“°¢6öç7Bf–æÂÒF—&V7F–öâÓÓÒw7V'G&7Bp¢ò6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’†&6RÒF‚¢¢F—&V7F–öâÓÓÒvFBp¢ò6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’†&6R²F‚¢¢&6S°¢&WGW&â²Væ—D&6RÂVæ—EF†W2ÂVæ—EF‚ÂVæ—Df–æÂÂ&6RÂF†W2ÂF‚Âf–æÂÂF—&V7F–öâÓ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄÖöFU6†÷'DÆ&VÂ†ÖöFT–B’°¢6öç7BÆ&VÂÒG"‚„4ôÔÔU$4”Åõ$õõ4Åõ$”4UôÔôDU5¶ÖöFT–EÒÇÂ4ôÔÔU$4”Åõ$õõ4Åõ$”4UôÔôDU2æ66‚’æÆ&VÂ“°¢&WGW&âÆ&VÂæ–æ6ÇVFW2‚s¢r’òÆ&VÂç6Æ–6R†Æ&VÂæ–æFW„öb‚s¢r’²’çG&–Ò‚’¢Æ&VÃ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Ä6öÖ&–æVEF„Æ&VÂ†ÖöFT–G2’°¢&WGW&âæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6ÅF„ÖöFW2†ÖöFT–G2’æÖ‚†ÖöFT–B’Óâ6öÖÖW&6–Å&÷÷6ÄÖöFU6†÷'DÆ&VÂ†ÖöFT–B’’æ¦ö–â‚r²r“°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÅF„Ö÷VçB†Ö÷VçG2ÂÖöFT–B’°¢&WGW&âÖ÷VçG2çF†W2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒÖöFT–B“òæÖ÷VçBÇÂ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Å&–6T6†&7FW%v–GF‚‡fÇVR’°¢6öç7BÆVæwF‚Ò7G&–ær‡fÇVRóòrr’ç&WÆ6R‚õµãÓ’âÂÕÒörÂrr’æÆVæwFƒ°¢&WGW&âÖF‚æÖ–âƒ#ÂÖF‚æÖ‚ƒBÂÆVæwF‚²’“°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Ä6ö×7D6öÇVÖåv–GF‚‡fÇVW2ÒµÒ’°¢6öç7BÆöævW7BÒfÇVW2ç&VGV6R‚†Ö†–×VÒÂfÇVR’ÓâÖF‚æÖ‚†Ö†–×VÒÂ7G&–ær‡fÇVRóòrr’ç&WÆ6R‚õÇ2²örÂrr’çG&–Ò‚’æÆVæwF‚’Â“°¢&WGW&âÖF‚æÖ–âƒ‚ÂÖF‚æÖ‚ƒC‚ÂÖF‚æ6V–Âƒb²ÆöævW7B¢bãB’’“°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Å&Vg&W6…&VæFW&VE&–6T6öÇVÖç2‡F&ÆR’°¢–b‚F&ÆR’&WGW&ã°¢6öç7B&–6T6öÇVÖç2ÒBB‚v6öÅ¶FF×&÷÷6Â×&–6RÖ6öÇVÖåÒrÂF&ÆR“°¢6öç7B&–6Uv–GF‚Ò&–6T6öÇVÖç2ç&VGV6R‚‡F÷FÂÂ6öÇVÖâ’Óâ°¢6öç7B–æFW‚Ò6öÇVÖâæFF6WBç&÷÷6Å&–6T6öÇVÖã°¢6öç7BfÇVW2ÒBB‚u¶FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ"r²–æFW‚²r%ÒrÂF&ÆR’æÖ‚†6VÆÂ’ÓâB‚v–çWBrÂ6VÆÂ“òçfÇVRÇÂ6VÆÂçFW‡D6öçFVçBÇÂrr“°¢6öç7Bv–GF‚Ò6öÖÖW&6–Å&÷÷6Ä6ö×7D6öÇVÖåv–GF‚‡fÇVW2“°¢6öÇVÖâç7G–ÆRçv–GF‚Òv–GF‚²w‚s°¢&WGW&âF÷FÂ²v–GFƒ°¢ÒÂ“°¢6öç7Bf—†VEv–GF‚ÒçVÖ&W"‡F&ÆRæFF6WBç&÷÷6Äf—†VEv–GF‚’ÇÂ°¢F&ÆRç7G–ÆRç6WE&÷W'G’‚rÒ×&÷÷6Â×F&ÆRÖÖ–â×v–GF‚rÂÖF‚æ6V–Â†f—†VEv–GF‚²&–6Uv–GF‚’²w‚r“°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Å&–6TÖöFTÖ&·W‡7FFR’°¢6öç7B6VÆV7FVDÖöFW2Òæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6ÅF„ÖöFW2‡7FFRçF„ÖöFW2“°¢6öç7B÷F–öâÒ†–B’Óâ°¢6öç7B6†V6¶VBÒ–BÓÓÒv66‚rò6VÆV7FVDÖöFW2æÆVæwF‚¢6VÆV7FVDÖöFW2æ–æ6ÇVFW2†–B“°¢&WGW&âÆÆ&VÂ6Æ73Ò"G¶6†V6¶VBòv—2Ö7F—fRr¢rwÒ#ãÆ–çWBG—SÒ&6†V6¶&÷‚"fÇVSÒ"G¶–GÒ"FF×&÷÷6Â×&–6RÖÖöFRG¶6†V6¶VBòr6†V6¶VBr¢rwÒóãÇ7â&–Ö†–FFVãÒ'G'VR#î)É3Â÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"„4ôÔÔU$4”Åõ$õõ4Åõ$”4UôÔôDU5¶–EÒæÆ&VÂ’—ÓÂ÷7G&öæsãÂöÆ&VÃæ°¢Ó°¢&WGW&âÆf–VÆG6WB6Æ73Ò&6öÖÖW&6–Â×&÷÷6Â×&–6RÖÖöFW2#ãÆÆVvVæCâG¶W66T‡FÖÂ‡G"‚w&÷÷6Å&–6TÖöFRr’—ÓÂöÆVvVæCãÆF—b6Æ73Ò'&÷÷6Â×&–6RÖÖöFRÖw&÷W2#ãÇ6V7F–öâ6Æ73Ò&—2Ö66‚#âG¶÷F–öâ‚v66‚r—ÓÂ÷6V7F–öããÇ6V7F–öããÆƒ3âG¶W66T‡FÖÂ‡G"‚w&–6W5v—F…F‚r’—ÓÂöƒ3âG¶÷F–öâ‚v–æ6ÇVFVEfC#"r—ÒG¶÷F–öâ‚v–æ6ÇVFVEFƒbr—ÒG¶÷F–öâ‚v–æ6ÇVFVEfCRr—ÓÂ÷6V7F–öããÇ6V7F–öããÆƒ3âG¶W66T‡FÖÂ‡G"‚w&–6W5v—F†÷WEF‚r’—ÓÂöƒ3âG¶÷F–öâ‚vW†6ÇVFVEfC#"r—ÒG¶÷F–öâ‚vW†6ÇVFVEfCRr—ÒG¶÷F–öâ‚vW†6ÇVFVEFƒbr—ÓÂ÷6V7F–öããÂöF—cãÂöf–VÆG6WCæ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Äw&÷W†–çDÖ&·W†w&÷W–B’°¢6öç7B†–çD¶W’Ò°¢7V6–f–6F–öåv÷&·3¢w&÷÷6Å7V6–f–6F–öåv÷&·4†–çBrÀ¢÷WG6–FU7V6–f–6F–öåv÷&·3¢w&÷÷6Å&ö¦V7Dw&÷W†–çBrÀ¢÷76–&ÆUv÷&·3¢w&÷÷6ÄFF—F–öæÅv÷&·4†–çBrÀ¢76ö6–FVEv÷&·3¢w&÷÷6Ä76ö6–FVEv÷&·4†–çBrÀ¢×“¢w&÷÷6Ä×•v÷&·4†–çBrÀ¢WV—ÖVçC¢w&÷÷6ÄWV—ÖVçD†–çBrÀ¢ÖFW&–Ç3¢w&÷÷6ÄÖFW&–Ç4†–çBrÀ¢÷76–&ÆTWV—ÖVçC¢w&÷÷6Å÷76–&ÆTWV—ÖVçD†–çBrÀ¢÷76–&ÆTÖFW&–Ç3¢w&÷÷6Å÷76–&ÆTÖFW&–Ç4†–çBrÀ¢ÖFW&–Ç4×“¢w&÷÷6Ä×•v÷&·4†–çBrÀ¢FööÇ4æD6öç7VÖ&ÆW3¢w&÷÷6ÅFööÇ4†–çBrÀ¢6öç7VÖ&ÆTÖFW&–Ç3¢w&÷÷6Ä6öç7VÖ&ÆTÖFW&–Ç4†–çBrÀ¢Æ&÷$†÷W'3¢w&÷÷6ÄÆ&÷$†÷W'4†–çBp¢Õ¶w&÷W–EÓ°¢&WGW&â†–çD¶W’òÆF—b6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖw&÷WÖ†–çB#ãÇ7â&–Ö†–FFVãÒ'G'VR#æ“Â÷7ããÇâG¶W66T‡FÖÂ‡G"††–çD¶W’’—ÓÂ÷ãÂöF—cæ¢rs°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Ä6öçF7G4Ö&·W‡7FFR’°¢6öç7B6öçF7G2Ò7FFRæ6öçF7G2ÇÂæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6Åv÷&·76R†çVÆÂ’æ6öçF7G3°¢6öç7Bf–VÆBÒ†¶W’ÂÆ&VÄ¶W’ÂfÇVRÂ÷F–öç2Ò·Ò’ÓâÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"†Æ&VÄ¶W’’—ÓÂ÷7ããÆ–çWBG—SÒ"G¶÷F–öç2çG—RÇÂwFW‡BwÒ"Ö†ÆVæwFƒÒ"G¶÷F–öç2æÖ†ÆVæwF‚ÇÂcÒ"fÇVSÒ"G¶W66T‡FÖÂ‡fÇVRÇÂrr—Ò"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"†Æ&VÄ¶W’’—Ò"WFö6ö×ÆWFSÒ"G¶÷F–öç2æWFö6ö×ÆWFRÇÂvöfbwÒ"FF×&÷÷6ÂÖ6öçF7CÒ"G¶¶W—Ò"óãÂöÆ&VÃæ°¢&WGW&âÇ6V7F–öâ6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖ6öçF7G2#ãÆ†VFW#ãÇ7â&–Ö†–FFVãÒ'G'VR#î)ÊcÂ÷7ããÆF—cãÇ6ÖÆÃí	­	óÂ÷6ÖÆÃãÆƒ#âG¶W66T‡FÖÂ‡G"‚w&÷÷6Å'F–W4†VF–ærr’—ÓÂöƒ#ãÂöF—cãÂö†VFW#ãÆF—cãÆ'F–6ÆSãÆƒ3âG¶W66T‡FÖÂ‡G"‚w&÷÷6Å6VæFW"r’—ÓÂöƒ3âG¶f–VÆB‚w6VæFW$æÖRrÂw&÷÷6Å6VæFW$æÖRrÂ6öçF7G2ç6VæFW$æÖRÂ²WFö6ö×ÆWFS¢væÖRrÒ—ÒG¶f–VÆB‚w6VæFW$÷&væ—¦F–öârÂw&÷÷6Å6VæFW$÷&væ—¦F–öârÂ6öçF7G2ç6VæFW$÷&væ—¦F–öâÂ²Ö†ÆVæwFƒ¢#ÂWFö6ö×ÆWFS¢v÷&væ—¦F–öârÒ—ÒG¶f–VÆB‚w6VæFW%†öæRrÂw&÷÷6Å6VæFW%†öæRrÂ6öçF7G2ç6VæFW%†öæRÂ²G—S¢wFVÂrÂÖ†ÆVæwFƒ¢cÂWFö6ö×ÆWFS¢wFVÂrÒ—ÓÂö'F–6ÆSãÆ'F–6ÆSãÆƒ3âG¶W66T‡FÖÂ‡G"‚w&÷÷6Å&V6—–VçBr’—ÓÂöƒ3âG¶f–VÆB‚w&V6—–VçDæÖRrÂw&÷÷6Å&V6—–VçDæÖRrÂ6öçF7G2ç&V6—–VçDæÖR—ÒG¶f–VÆB‚w&V6—–VçD÷&væ—¦F–öârÂw&÷÷6Å&V6—–VçD÷&væ—¦F–öârÂ6öçF7G2ç&V6—–VçD÷&væ—¦F–öâÂ²Ö†ÆVæwFƒ¢#Ò—ÓÂö'F–6ÆSãÂöF—cãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÅF&ÆTÖ&·W‡&÷÷6ÂÂw&÷W–BÂVçG&–W2’°¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢6öç7B6VÆV7FVDÖöFT–G2Òæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6ÅF„ÖöFW2‡7FFRçF„ÖöFW2“°¢6öç7BF—&V7F–öâÒ4ôÔÔU$4”Åõ$õõ4Åõ$”4UôÔôDU5·6VÆV7FVDÖöFT–G5³ÕÓòæF—&V7F–öâÇÂvæöæRs°¢6öç7B×”–G2ÒæWr6WB‡7FFRæ×”—FV×2æÖ‚†—FVÒ’Óâ—FVÒæ–B’“°¢6öç7B6öÖ&–æVEF„Æ&VÂÒ6öÖÖW&6–Å&÷÷6Ä6öÖ&–æVEF„Æ&VÂ‡6VÆV7FVDÖöFT–G2“°¢6öç7B7V6–Ä†VBÒw&÷W–BÓÓÒv÷WG6–FU7V6–f–6F–öåv÷&·2p¢òÇF‚6Æ73Ò'&÷÷6ÂÖÆ–æRÖÖWFÖ†VB#âG¶W66T‡FÖÂ‡G"‚w&÷÷6Å7V5&ö¦V7D6öÇVÖâr’—ÓÂ÷Fƒæ ¢¢w&÷W–BÓÓÒv76ö6–FVEv÷&·2ròÇF‚6Æ73Ò'&÷÷6ÂÖÆ–æRÖÖWFÖ†VB#âG¶W66T‡FÖÂ‡G"‚w&÷÷6Ä76ö6–FVDf÷$6öÇVÖâr’—ÓÂ÷Fƒæ¢rs°¢6öç7B&–6T†VG2ÒF—&V7F–öâÓÓÒw7V'G&7Bp¢òÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ‡G"‚v–æ6ÇVFVEVæ—E&–6Uv—F†÷WEF‚r’—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ‡G"‚v–æ6ÇVFVEF÷FÅv—F†÷WEF‚r’—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ†G·G"‚v–æ6ÇVFVEVæ—E&–6Uv—F…F‚r—ÒG¶6öÖ&–æVEF„Æ&VÇÖ—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ†G·G"‚v–æ6ÇVFVEF÷FÅv—F…F‚r—ÒG¶6öÖ&–æVEF„Æ&VÇÖ—ÓÂ÷Fƒæ ¢¢F—&V7F–öâÓÓÒvFBp¢òÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ‡G"‚vW†6ÇVFVEVæ—E&–6Uv—F†÷WEF‚r’—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ‡G"‚vW†6ÇVFVEF÷FÅv—F†÷WEF‚r’—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ†G·G"‚vW†6ÇVFVEVæ—E&–6Uv—F…F‚r—ÒG¶6öÖ&–æVEF„Æ&VÇÖ—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ†G·G"‚vW†6ÇVFVEF÷FÅv—F…F‚r—ÒG¶6öÖ&–æVEF„Æ&VÇÖ—ÓÂ÷Fƒæ ¢¢ÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ‡G"‚w&–6Rr’—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ‡G"‚w&÷÷6Äw&÷75&–6Rr’—ÓÂ÷Fƒæ°¢6öç7B7F–öä†VBÒ—46öÖÖW&6–Å&÷÷6Ä×”w&÷W†w&÷W–B’òrr¢W66T‡FÖÂ‡G"‚w6VæEFô×•&÷÷6Âr’“°¢6öç7B&÷w2ÒVçG&–W2æÖ‚†VçG'’Â–æFW‚’Óâ°¢6öç7BÖ÷VçG2Ò6öÖÖW&6–Å&÷÷6ÄÆ–æTÖ÷VçG2†VçG'’çVçF—G’ÂVçG'’ç&–6RÂ6VÆV7FVDÖöFT–G2“°¢6öç7B6÷W&6RÒVçG'’æ7W7FöÒòG"‚v÷vå&÷÷6Å÷6—F–öâr’¢VçG'’ç6÷W&6U6†VWBÇÂVçG'’ç6÷W&6TæÖRÇÂG"‚v–FVçF–f–VD'”æÇ—6—2r“°¢6öç7B&–6T–çWDÆ&VÂÒF—&V7F–öâÓÓÒw7V'G&7Bp¢òG·G"‚v–æ6ÇVFVEVæ—E&–6Uv—F…F‚r—ÒG¶6öÖ&–æVEF„Æ&VÇÖ ¢¢F—&V7F–öâÓÓÒvFBròG"‚vW†6ÇVFVEVæ—E&–6Uv—F†÷WEF‚r’¢G"‚w&–6Rr“°¢6öç7B&–6T–çWBÒÆ–çWB6Æ73Ò'&÷÷6ÂÖçVÖ&W"Ö–çWB"7G–ÆSÒ"Ò×&÷÷6Â×&–6RÖ6ƒ¢G¶6öÖÖW&6–Å&÷÷6Å&–6T6†&7FW%v–GF‚†VçG'’ç&–6R—Ò"G—SÒ&çVÖ&W""Ö–ãÒ#"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"fÇVSÒ"G¶VçG'’ç&–6RòW66T‡FÖÂ…7G&–ær†VçG'’ç&–6R’’¢rwÒ"Æ6V†öÆFW#Ò#"FF×&÷÷6ÂÖÆ–æR×fÇVSÒ'&–6R"FF×&÷÷6ÂÖÆ–æR×fÇVRÖ–CÒ"G¶W66T‡FÖÂ†VçG'’æ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡&–6T–çWDÆ&VÂ—Ò"óæ°¢6öç7B&–6T6VÆÇ2ÒF—&V7F–öâÓÓÒw7V'G&7Bp¢òÇFB6Æ73Ò&—2ÖÖöæW’&÷÷6Â×&–6R×fÇVRÖ6VÆÂ"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ#"FF×&÷÷6ÂÖæWB×Væ—CâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†Ö÷VçG2çVæ—Df–æÂ’—ÓÂ÷FCãÇFB6Æ73Ò&—2ÖÖöæW’—2×F÷FÂ&÷÷6Â×&–6R×fÇVRÖ6VÆÂ"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ#"FF×&÷÷6ÂÖf–æÂ×F÷FÃâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†Ö÷VçG2æf–æÂ’—ÓÂ÷FCãÇFB6Æ73Ò'&÷÷6Â×&–6RÖ–çWBÖ6VÆÂ"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ#"#âG·&–6T–çWGÓÂ÷FCãÇFB6Æ73Ò&—2ÖÖöæW’&÷÷6Â×&–6R×fÇVRÖ6VÆÂ"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ#2"FF×&÷÷6ÂÖ&6R×F÷FÃâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†Ö÷VçG2æ&6R’—ÓÂ÷FCæ ¢¢F—&V7F–öâÓÓÒvFBp¢òÇFB6Æ73Ò'&÷÷6Â×&–6RÖ–çWBÖ6VÆÂ"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ##âG·&–6T–çWGÓÂ÷FCãÇFB6Æ73Ò&—2ÖÖöæW’&÷÷6Â×&–6R×fÇVRÖ6VÆÂ"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ#"FF×&÷÷6ÂÖ&6R×F÷FÃâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†Ö÷VçG2æ&6R’—ÓÂ÷FCãÇFB6Æ73Ò&—2ÖÖöæW’&÷÷6Â×&–6R×fÇVRÖ6VÆÂ"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ#""FF×&÷÷6ÂÖw&÷72×Væ—CâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†Ö÷VçG2çVæ—Df–æÂ’—ÓÂ÷FCãÇFB6Æ73Ò&—2ÖÖöæW’—2×F÷FÂ&÷÷6Â×&–6R×fÇVRÖ6VÆÂ"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ#2"FF×&÷÷6ÂÖf–æÂ×F÷FÃâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†Ö÷VçG2æf–æÂ’—ÓÂ÷FCæ ¢¢ÇFB6Æ73Ò'&÷÷6Â×&–6RÖ–çWBÖ6VÆÂ"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ##âG·&–6T–çWGÓÂ÷FCãÇFB6Æ73Ò&—2ÖÖöæW’—2×F÷FÂ&÷÷6Â×&–6R×fÇVRÖ6VÆÂ"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ#"FF×&÷÷6ÂÖf–æÂ×F÷FÃâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†Ö÷VçG2æf–æÂ’—ÓÂ÷FCæ°¢6öç7B7V6–Ä6VÆÂÒw&÷W–BÓÓÒv÷WG6–FU7V6–f–6F–öåv÷&·2p¢òÇFB6Æ73Ò'&÷÷6ÂÖÆ–æRÖÖWFÖ6VÆÂ#ãÇ6VÆV7BFF×&÷÷6ÂÖÆ–æRÖÖWFÒ'&ö¦V7E6÷W&6R"FF×&÷÷6ÂÖÆ–æRÖÖWFÖ–CÒ"G¶W66T‡FÖÂ†VçG'’æ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w&÷÷6Å7V5&ö¦V7D6öÇVÖâr’—Ò#ãÆ÷F–öâfÇVSÒ'7V2"G¶VçG'’ç&ö¦V7E6÷W&6RÓÓÒw7V2ròr6VÆV7FVBr¢rwÓâG¶W66T‡FÖÂ‡G"‚w&÷÷6Å7V56†÷'Br’—ÓÂö÷F–öããÆ÷F–öâfÇVSÒ'&ö¦V7B"G¶VçG'’ç&ö¦V7E6÷W&6RÓÒw7V2ròr6VÆV7FVBr¢rwÓâG¶W66T‡FÖÂ‡G"‚w&÷÷6Å&ö¦V7E6†÷'Br’—ÓÂö÷F–öããÂ÷6VÆV7CãÂ÷FCæ ¢¢w&÷W–BÓÓÒv76ö6–FVEv÷&·2p¢òÇFB6Æ73Ò'&÷÷6ÂÖÆ–æRÖÖWFÖ6VÆÂ—2Ö76ö6–FVB#ãÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ##C"fÇVSÒ"G¶W66T‡FÖÂ†VçG'’æ76ö6–FVDf÷"—Ò"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚w&÷÷6Ä76ö6–FVDf÷%Æ6V†öÆFW"r’—Ò"FF×&÷÷6ÂÖÆ–æRÖÖWFÒ&76ö6–FVDf÷""FF×&÷÷6ÂÖÆ–æRÖÖWFÖ–CÒ"G¶W66T‡FÖÂ†VçG'’æ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w&÷÷6Ä76ö6–FVDf÷$6öÇVÖâr’—Ò"óãÂ÷FCæ ¢¢rs°¢6öç7B&VÖ÷fT7W7FöÒÒVçG'’æ7W7FöÒòÆ'WGFöâ6Æ73Ò'&÷÷6ÂÖ×’×&VÖ÷fR"G—SÒ&'WGFöâ"FF×&VÖ÷fR×&÷÷6ÂÖ7W7FöÒÖ—FVÓÒ"G¶W66T‡FÖÂ†VçG'’æ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFT÷vå&÷÷6Å÷6—F–öâr’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFT÷vå&÷÷6Å÷6—F–öâr’—Ò#ì9sÂö'WGFöãæ¢rs°¢6öç7B7F–öâÒ—46öÖÖW&6–Å&÷÷6Ä×”w&÷W†w&÷W–B¢òÆ'WGFöâ6Æ73Ò'&÷÷6ÂÖ×’×&VÖ÷fR"G—SÒ&'WGFöâ"FF×&VÖ÷fR×&÷÷6ÂÖ×’Ö—FVÓÒ"G¶W66T‡FÖÂ†VçG'’æ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w&VÖ÷fTg&öÔ×•&÷÷6Âr’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚w&VÖ÷fTg&öÔ×•&÷÷6Âr’—Ò#ì9sÂö'WGFöãæ ¢¢ÆF—b6Æ73Ò'&÷÷6ÂÖÆ–æRÖ6öçG&öÇ2#ãÆÆ&VÂ6Æ73Ò'&÷÷6Â×6VæB×FòÖ×’#ãÆ–çWBG—SÒ&6†V6¶&÷‚"FF×&÷÷6Â×6VæB×FòÖ×“Ò"G¶W66T‡FÖÂ†VçG'’æ–B—Ò"G¶×”–G2æ†2†VçG'’æ–B’òr6†V6¶VBr¢rwÒ&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ†G·G"‚w6VæEFô×•&÷÷6Âr—Ó¢G¶VçG'’ææÖWÖ—Ò"óãÇ7â&–Ö†–FFVãÒ'G'VR#î)É3Â÷7ããÂöÆ&VÃâG·&VÖ÷fT7W7Fö×ÓÂöF—cæ°¢&WGW&âÇG"FF×&÷÷6ÂÖÆ–æR×&÷rFF×&÷÷6ÂÖÆ–æRÖ–CÒ"G¶W66T‡FÖÂ†VçG'’æ–B—Ò#ãÇFB6Æ73Ò'&÷÷6ÂÖÆ–æRÖçVÖ&W"#âG¶–æFW‚²ÓÂ÷FCãÇFB6Æ73Ò'&÷÷6ÂÖÆ–æRÖæÖR#ãÇ7G&öæsâG¶W66T‡FÖÂ†VçG'’ææÖR—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡6÷W&6R—ÓÂ÷6ÖÆÃãÂ÷FCãÇFB6Æ73Ò'&÷÷6ÂÖÆ–æR×Væ—B#âG¶W66T‡FÖÂ†VçG'’çVæ—BÇÂ~(	Br—ÓÂ÷FCãÇFB6Æ73Ò'&÷÷6ÂÖÆ–æR×VçF—G’#ãÆ–çWB6Æ73Ò'&÷÷6ÂÖçVÖ&W"Ö–çWB&÷÷6Â×VçF—G’Ö–çWB"G—SÒ&çVÖ&W""Ö–ãÒ#"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"fÇVSÒ"G¶VçG'’çVçF—G’òW66T‡FÖÂ…7G&–ær†VçG'’çVçF—G’’’¢rwÒ"Æ6V†öÆFW#Ò#"FF×&÷÷6ÂÖÆ–æR×fÇVSÒ'VçF—G’"FF×&÷÷6ÂÖÆ–æR×fÇVRÖ–CÒ"G¶W66T‡FÖÂ†VçG'’æ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚wVçF—G’r’—Ò"óãÂ÷FCâG·7V6–Ä6VÆÇÒG·&–6T6VÆÇ7ÓÇFB6Æ73Ò'&÷÷6ÂÖÆ–æRÖ7F–öâ#âG¶7F–öçÓÂ÷FCãÂ÷G#æ°¢Ò’æ¦ö–â‚rr“°¢6öç7B7V6–Ä6öÇVÖä6÷VçBÒ7V6–Ä†VBò¢°¢6öç7B6öÇVÖä6÷VçBÒ†F—&V7F–öâÓÓÒw7V'G&7BrÇÂF—&V7F–öâÓÓÒvFBrò’¢r’²7V6–Ä6öÇVÖä6÷VçC°¢–b‚VçG&–W2æÆVæwF‚’°¢6öç7BV×G”6öæf–rÒ6öÖÖW&6–Å&÷÷6ÄVF—F÷$w&÷W6öæf–r†w&÷W–B“°¢&WGW&âÆF—b6Æ73Ò&6öÖÖW&6–Â×&÷÷6Â×F&ÆRÖV×G’#ãÇ7ãî)xsÂ÷7ããÆƒ3âG¶W66T‡FÖÂ‡G"†—46öÖÖW&6–Å&÷÷6Ä×”w&÷W†w&÷W–B’òv×”6öÖÖW&6–Å&÷÷6Âr¢V×G”6öæf–sòæÆ&VÂÇÂw&÷÷6Åv÷&·76UF—FÆRr’—ÓÂöƒ3ãÇâG¶W66T‡FÖÂ‡G"†—46öÖÖW&6–Å&÷÷6Ä×”w&÷W†w&÷W–B’òvV×G”×•&÷÷6Âr¢vV×G•&÷÷6Äw&÷Wr’—ÓÂ÷ãÂöF—cæ°¢Ð¢6öç7BÆ–æTÖ÷VçG2ÒVçG&–W2æÖ‚†VçG'’’Óâ6öÖÖW&6–Å&÷÷6ÄÆ–æTÖ÷VçG2†VçG'’çVçF—G’ÂVçG'’ç&–6RÂ6VÆV7FVDÖöFT–G2’“°¢6öç7B&–6T6öÇVÖåfÇVW2ÒF—&V7F–öâÓÓÒw7V'G&7Bp¢ò°¢Æ–æTÖ÷VçG2æÖ‚†Ö÷VçG2’Óâf÷&ÖDÖöæW’†Ö÷VçG2çVæ—Df–æÂ’’À¢Æ–æTÖ÷VçG2æÖ‚†Ö÷VçG2’Óâf÷&ÖDÖöæW’†Ö÷VçG2æf–æÂ’’À¢VçG&–W2æÖ‚†VçG'’’ÓâVçG'’ç&–6RÇÂrr’À¢Æ–æTÖ÷VçG2æÖ‚†Ö÷VçG2’Óâf÷&ÖDÖöæW’†Ö÷VçG2æ&6R’¢Ð¢¢F—&V7F–öâÓÓÒvFBp¢ò°¢VçG&–W2æÖ‚†VçG'’’ÓâVçG'’ç&–6RÇÂrr’À¢Æ–æTÖ÷VçG2æÖ‚†Ö÷VçG2’Óâf÷&ÖDÖöæW’†Ö÷VçG2æ&6R’’À¢Æ–æTÖ÷VçG2æÖ‚†Ö÷VçG2’Óâf÷&ÖDÖöæW’†Ö÷VçG2çVæ—Df–æÂ’’À¢Æ–æTÖ÷VçG2æÖ‚†Ö÷VçG2’Óâf÷&ÖDÖöæW’†Ö÷VçG2æf–æÂ’¢Ð¢¢°¢VçG&–W2æÖ‚†VçG'’’ÓâVçG'’ç&–6RÇÂrr’À¢Æ–æTÖ÷VçG2æÖ‚†Ö÷VçG2’Óâf÷&ÖDÖöæW’†Ö÷VçG2æf–æÂ’¢Ó°¢6öç7B&–6T6öÇVÖåv–GF‡2Ò&–6T6öÇVÖåfÇVW2æÖ‚‡fÇVW2’Óâ6öÖÖW&6–Å&÷÷6Ä6ö×7D6öÇVÖåv–GF‚‡fÇVW2’“°¢6öç7B7V6–Ä6öÇVÖåv–GF‚Òw&÷W–BÓÓÒv76ö6–FVEv÷&·2ròc‚¢w&÷W–BÓÓÒv÷WG6–FU7V6–f–6F–öåv÷&·2rò“b¢°¢6öç7B7F–öä6öÇVÖåv–GF‚Ò—46öÖÖW&6–Å&÷÷6Ä×”w&÷W†w&÷W–B’òS"¢ƒ#°¢6öç7Bf—†VD6öÇVÖåv–GF‚Ò3‚²S‚²c‚²7V6–Ä6öÇVÖåv–GF‚²7F–öä6öÇVÖåv–GF‚²3#°¢6öç7BF&ÆTÖ–åv–GF‚Òf—†VD6öÇVÖåv–GF‚²&–6T6öÇVÖåv–GF‡2ç&VGV6R‚‡F÷FÂÂv–GF‚’ÓâF÷FÂ²v–GF‚Â“°¢6öç7B6öÇVÖäÆ–÷WBÒÆ6öÆw&÷WãÆ6öÂ7G–ÆSÒ'v–GFƒ£3‡‚"óãÆ6öÂóãÆ6öÂ7G–ÆSÒ'v–GFƒ£S‡‚"óãÆ6öÂ7G–ÆSÒ'v–GFƒ£c‡‚"óâG·7V6–Ä6öÇVÖåv–GF‚òÆ6öÂ7G–ÆSÒ'v–GFƒ¢G·7V6–Ä6öÇVÖåv–GF‡×‚"óæ¢rwÒG·&–6T6öÇVÖåv–GF‡2æÖ‚‡v–GF‚Â–æFW‚’ÓâÆ6öÂFF×&÷÷6Â×&–6RÖ6öÇVÖãÒ"G¶–æFW‡Ò"7G–ÆSÒ'v–GFƒ¢G·v–GF‡×‚"óæ’æ¦ö–â‚rr—ÓÆ6öÂ7G–ÆSÒ'v–GFƒ¢G¶7F–öä6öÇVÖåv–GF‡×‚"óãÂö6öÆw&÷Wæ°¢6öç7BF…7VÖÖ&–W2Ò6VÆV7FVDÖöFT–G2æÖ‚†ÖöFT–B’ÓâÇ7ãâG¶W66T‡FÖÂ†6öÖÖW&6–Å&÷÷6ÄÖöFU6†÷'DÆ&VÂ†ÖöFT–B’—Ó¢Æ"FF×&÷÷6Â×F‚Öw&æB×F÷FÃÒ"G¶W66T‡FÖÂ†ÖöFT–B—Ò#âG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†Æ–æTÖ÷VçG2ç&VGV6R‚‡F÷FÂÂÖ÷VçG2’ÓâF÷FÂ²6öÖÖW&6–Å&÷÷6ÅF„Ö÷VçB†Ö÷VçG2ÂÖöFT–B’Â’’—ÓÂö#ãÂ÷7ãæ’æ¦ö–â‚rr“°¢6öç7BF÷FÄÆ&VÂÒF—&V7F–öâÓÓÒw7V'G&7Bròv–æ6ÇVFVEF÷FÅv—F†÷WEF‚r¢F—&V7F–öâÓÓÒvFBròw&–6UF÷FÅv—F…F‚r¢wF÷FÅ&÷÷6Å&–6Rs°¢&WGW&âÆF—b6Æ73Ò&6öÖÖW&6–Â×&÷÷6Â×F&ÆR×67&öÆÂ#ãÇF&ÆR6Æ73Ò&6öÖÖW&6–Â×&÷÷6Â×&–6R×F&ÆR—2Ö6ö×7B×&÷÷6Â×F&ÆR†2ÒG·6VÆV7FVDÖöFT–G2æÆVæwF‡Ò×F†W2G¶F—&V7F–öâÓÓÒw7V'G&7Bròr—2Ö–æ6ÇVFVB×F‚r¢F—&V7F–öâÓÓÒvFBròr—2ÖFFVB×F‚r¢rwÒG·7V6–Ä†VBòr†2×7V6–ÂÖ6öÇVÖâr¢rwÒ"FF×&÷÷6ÂÖ6ö×7B×F&ÆRFF×&÷÷6ÂÖf—†VB×v–GFƒÒ"G¶f—†VD6öÇVÖåv–GF‡Ò"7G–ÆSÒ"Ò×&÷÷6Â×F&ÆRÖÖ–â×v–GFƒ¢G·F&ÆTÖ–åv–GF‡×‚#âG¶6öÇVÖäÆ–÷WGÓÇF†VCãÇG#ãÇF‚6Æ73Ò'&÷÷6ÂÖÆ–æRÖçVÖ&W"#î(IcÂ÷FƒãÇF‚6Æ73Ò'&÷÷6ÂÖÆ–æRÖæÖRÖ†VB#âG¶W66T‡FÖÂ‡G"‚w&÷÷6ÄÆ–æTæÖRr’—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6ÂÖÆ–æR×Væ—BÖ†VB#âG¶W66T‡FÖÂ‡G"‚w&÷÷6ÅVæ—E6†÷'Br’—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6ÂÖÆ–æR×VçF—G’Ö†VB#âG¶W66T‡FÖÂ‡G"‚w&÷÷6ÅVçF—G•6†÷'Br’—ÓÂ÷FƒâG·7V6–Ä†VGÒG·&–6T†VG7ÓÇF‚6Æ73Ò'&÷÷6ÂÖÆ–æRÖ7F–öâÖ†VB#âG¶7F–öä†VGÓÂ÷FƒãÂ÷G#ãÂ÷F†VCãÇF&öG“âG·&÷w7ÓÂ÷F&öG“ãÇFfö÷CãÇG#ãÇFB6öÇ7ãÒ"G¶6öÇVÖä6÷VçGÒ#ãÇ7ãâG¶W66T‡FÖÂ‡G"‚wF÷FÅv÷&µG—W2r’—Ó¢Æ"FF×&÷÷6Â×G—W2×F÷FÃâG¶VçG&–W2æÆVæwF‡ÓÂö#ãÂ÷7ãâG·F…7VÖÖ&–W7ÓÇ7ãâG¶W66T‡FÖÂ‡G"‡F÷FÄÆ&VÂ’—Ó¢Æ"FF×&÷÷6Â×&–6RÖw&æB×F÷FÃâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†Æ–æTÖ÷VçG2ç&VGV6R‚‡F÷FÂÂÖ÷VçG2’ÓâF÷FÂ²Ö÷VçG2æf–æÂÂ’’—ÓÂö#ãÂ÷7ããÂ÷FCãÂ÷G#ãÂ÷Ffö÷CãÂ÷F&ÆSãÂöF—cæ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄÆ&÷$†÷W&Ç•&FR‡7FFR’°¢6öç7B6WGF–æw2Ò7FFRæÆ&÷%6WGF–æw3°¢&WGW&â6WGF–æw2çv÷&¶F”†÷W'2âò6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡6WGF–æw2æF–Ç”6÷7Bò6WGF–æw2çv÷&¶F”†÷W'2’¢°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄÆ&÷$Æ–æTÖ÷VçG2†VçG'’Â7FFR’°¢6öç7BVçF—G’Ò6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"†VçG'’çVçF—G’“°¢6öç7Bv÷&´†÷W'2Ò6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‡7FFRæÆ&÷%6WGF–æw2æ—FVÔ†÷W'5¶VçG'’æ–EÒ“°¢6öç7B†÷W&Ç•&FRÒ6öÖÖW&6–Å&÷÷6ÄÆ&÷$†÷W&Ç•&FR‡7FFR“°¢6öç7BF÷FÄ†÷W'2Ò6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡v÷&´†÷W'2“°¢6öç7BF÷FÂÒ6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F÷FÄ†÷W'2¢†÷W&Ç•&FR“°¢&WGW&â²VçF—G’Âv÷&´†÷W'2Â†÷W&Ç•&FRÂF÷FÄ†÷W'2ÂF÷FÂÓ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄÆ&÷%6WGF–æw4Ö&·W‡7FFR’°¢6öç7B6WGF–æw2Ò7FFRæÆ&÷%6WGF–æw3°¢&WGW&âÇ6V7F–öâ6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖÆ&÷"×6WGF–æw2#ãÆ†VFW#ãÇ7â&–Ö†–FFVãÒ'G'VR#äƒÂ÷7ããÆF—cãÆƒ3âG¶W66T‡FÖÂ‡G"‚vÆ&÷$6Æ7VÆF–öåF—FÆRr’—ÓÂöƒ3ãÇâG¶W66T‡FÖÂ‡G"‚vÆ&÷$6Æ7VÆF–öäf÷&×VÆr’—ÓÂ÷ãÂöF—cãÂö†VFW#ãÆF—cãÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"‚vV×Æ÷–VTF–Ç”6÷7Br’—ÓÂ÷7ããÆF—cãÆ–çWBG—SÒ&çVÖ&W""Ö–ãÒ#"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"fÇVSÒ"G·6WGF–æw2æF–Ç”6÷7BòW66T‡FÖÂ…7G&–ær‡6WGF–æw2æF–Ç”6÷7B’’¢rwÒ"Æ6V†öÆFW#Ò#"FF×&÷÷6ÂÖÆ&÷"×6WGF–æsÒ&F–Ç”6÷7B"óãÆ#î(+ÓÂö#ãÂöF—cãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"‚wv÷&¶–æt†÷W'5W$F’r’—ÓÂ÷7ããÆF—cãÆ–çWBG—SÒ&çVÖ&W""Ö–ãÒ#"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"fÇVSÒ"G·6WGF–æw2çv÷&¶F”†÷W'2òW66T‡FÖÂ…7G&–ær‡6WGF–æw2çv÷&¶F”†÷W'2’’¢rwÒ"Æ6V†öÆFW#Ò#"FF×&÷÷6ÂÖÆ&÷"×6WGF–æsÒ'v÷&¶F”†÷W'2"óãÆ#âG¶W66T‡FÖÂ‡G"‚v†÷W'5Væ—Br’—ÓÂö#ãÂöF—cãÂöÆ&VÃãÆ÷WGWCãÇ7ãâG¶W66T‡FÖÂ‡G"‚v†÷W&Ç”V×Æ÷–VT6÷7Br’—ÓÂ÷7ããÇ7G&öærFF×&÷÷6ÂÖÆ&÷"Ö†÷W&Ç’×&FSâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6ÄÆ&÷$†÷W&Ç•&FR‡7FFR’’—ÓÂ÷7G&öæsãÂö÷WGWCãÂöF—cãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄÆ&÷%F&ÆTÖ&·W‡&÷÷6ÂÂVçG&–W2’°¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢–b‚VçG&–W2æÆVæwF‚’°¢&WGW&âÆF—b6Æ73Ò&6öÖÖW&6–Â×&÷÷6Â×F&ÆRÖV×G’#ãÇ7ãäƒÂ÷7ããÆƒ3âG¶W66T‡FÖÂ‡G"‚vÆ&÷$†÷W$6÷7G2r’—ÓÂöƒ3ãÇâG¶W66T‡FÖÂ‡G"‚vV×G”Æ&÷%&÷÷6Âr’—ÓÂ÷ãÂöF—cæ°¢Ð¢6öç7B&÷w2ÒVçG&–W2æÖ‚†VçG'’Â–æFW‚’Óâ°¢6öç7BÖ÷VçG2Ò6öÖÖW&6–Å&÷÷6ÄÆ&÷$Æ–æTÖ÷VçG2†VçG'’Â7FFR“°¢6öç7B6÷W&6RÒVçG'’æÆ&÷$÷&–v–âÓÓÒv7W7FöÒp¢òG"‚v÷vå&÷÷6Å÷6—F–öâr¢¢VçG'’æÆ&÷$÷&–v–âÓÓÒw7V6–f–6F–öâròG"‚vÆ&÷%v÷&·4g&öÕ7V6–f–6F–öâr’¢G"‚vÆ&÷%v÷&·4g&öÔ×•&÷÷6Âr“°¢6öç7B&VÖ÷fRÒVçG'’æÆ&÷$÷&–v–âÓÓÒv7W7FöÒròÆ'WGFöâ6Æ73Ò'&÷÷6ÂÖÆ&÷"×&VÖ÷fR"G—SÒ&'WGFöâ"FF×&VÖ÷fR×&÷÷6ÂÖ7W7FöÒÖ—FVÓÒ"G¶W66T‡FÖÂ†VçG'’æ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFT÷vå&÷÷6Å÷6—F–öâr’—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFT÷vå&÷÷6Å÷6—F–öâr’—Ò#ì9sÂö'WGFöãæ¢rs°¢&WGW&âÇG"FF×&÷÷6ÂÖÆ&÷"×&÷rFF×&÷÷6ÂÖÆ–æRÖ–CÒ"G¶W66T‡FÖÂ†VçG'’æ–B—Ò#ãÇFB6Æ73Ò'&÷÷6ÂÖÆ–æRÖçVÖ&W"#âG¶–æFW‚²ÓÂ÷FCãÇFB6Æ73Ò'&÷÷6ÂÖÆ–æRÖæÖR#ãÆF—b6Æ73Ò'&÷÷6ÂÖÆ&÷"ÖæÖR#ãÇ7ããÇ7G&öæsâG¶W66T‡FÖÂ†VçG'’ææÖR—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡6÷W&6R—ÓÂ÷6ÖÆÃãÂ÷7ãâG·&VÖ÷fWÓÂöF—cãÂ÷FCãÇFB6Æ73Ò'&÷÷6ÂÖÆ–æR×Væ—B#âG¶W66T‡FÖÂ†VçG'’çVæ—BÇÂ~(	Br—ÓÂ÷FCãÇFB6Æ73Ò'&÷÷6ÂÖÆ&÷"×VçF—G’&÷÷6ÂÖÆ–æR×VçF—G’#âG¶Ö÷VçG2çVçF—G’òW66T‡FÖÂ†æWr–çFÂäçVÖ&W$f÷&ÖB‡&ö÷BæÆærÇÂw'RÕ%RrÂ²Ö†–×VÔg&7F–öäF–v—G3¢"Ò’æf÷&ÖB†Ö÷VçG2çVçF—G’’’¢~(	BwÓÂ÷FCãÇFB6Æ73Ò'&÷÷6ÂÖÆ&÷"Ö†÷W'2#ãÆ–çWB6Æ73Ò'&÷÷6ÂÖçVÖ&W"Ö–çWB"G—SÒ&çVÖ&W""Ö–ãÒ#"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"fÇVSÒ"G¶Ö÷VçG2çv÷&´†÷W'2òW66T‡FÖÂ…7G&–ær†Ö÷VçG2çv÷&´†÷W'2’’¢rwÒ"Æ6V†öÆFW#Ò#"FF×&÷÷6ÂÖÆ&÷"×v÷&²Ö†÷W'3Ò"G¶W66T‡FÖÂ†VçG'’æ–B—Ò"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚wv÷&´†÷W'2r’—Ò"óãÂ÷FCãÇFB6Æ73Ò&—2ÖÖöæW’"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ#"FF×&÷÷6ÂÖÆ&÷"×&÷r×&FSâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†Ö÷VçG2æ†÷W&Ç•&FR’—ÓÂ÷FCãÇFB6Æ73Ò&—2ÖÖöæW’—2×F÷FÂ"FF×&÷÷6Â×&–6RÖ6öÇVÖâÖ–æFWƒÒ#"FF×&÷÷6ÂÖÆ&÷"×&÷r×F÷FÃâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†Ö÷VçG2çF÷FÂ’—ÓÂ÷FCãÂ÷G#æ°¢Ò’æ¦ö–â‚rr“°¢6öç7BF÷FÄ†÷W'2ÒVçG&–W2ç&VGV6R‚‡F÷FÂÂVçG'’’ÓâF÷FÂ²6öÖÖW&6–Å&÷÷6ÄÆ&÷$Æ–æTÖ÷VçG2†VçG'’Â7FFR’çF÷FÄ†÷W'2Â“°¢6öç7BF÷FÄ6÷7BÒVçG&–W2ç&VGV6R‚‡F÷FÂÂVçG'’’ÓâF÷FÂ²6öÖÖW&6–Å&÷÷6ÄÆ&÷$Æ–æTÖ÷VçG2†VçG'’Â7FFR’çF÷FÂÂ“°¢6öç7BÆ&÷$Ö÷VçG2ÒVçG&–W2æÖ‚†VçG'’’Óâ6öÖÖW&6–Å&÷÷6ÄÆ&÷$Æ–æTÖ÷VçG2†VçG'’Â7FFR’“°¢6öç7BÆ&÷%&–6Uv–GF‡2Ò°¢6öÖÖW&6–Å&÷÷6Ä6ö×7D6öÇVÖåv–GF‚†Æ&÷$Ö÷VçG2æÖ‚†Ö÷VçG2’Óâf÷&ÖDÖöæW’†Ö÷VçG2æ†÷W&Ç•&FR’’’À¢6öÖÖW&6–Å&÷÷6Ä6ö×7D6öÇVÖåv–GF‚†Æ&÷$Ö÷VçG2æÖ‚†Ö÷VçG2’Óâf÷&ÖDÖöæW’†Ö÷VçG2çF÷FÂ’’¢Ó°¢6öç7BÆ&÷$f—†VEv–GF‚Ò3‚²S‚²c‚²c‚²3#°¢6öç7BÆ&÷%F&ÆTÖ–åv–GF‚ÒÆ&÷$f—†VEv–GF‚²Æ&÷%&–6Uv–GF‡2ç&VGV6R‚‡F÷FÂÂv–GF‚’ÓâF÷FÂ²v–GF‚Â“°¢6öç7BÆ&÷$6öÇVÖäÆ–÷WBÒÆ6öÆw&÷WãÆ6öÂ7G–ÆSÒ'v–GFƒ£3‡‚"óãÆ6öÂóãÆ6öÂ7G–ÆSÒ'v–GFƒ£S‡‚"óãÆ6öÂ7G–ÆSÒ'v–GFƒ£c‡‚"óãÆ6öÂ7G–ÆSÒ'v–GFƒ£c‡‚"óâG¶Æ&÷%&–6Uv–GF‡2æÖ‚‡v–GF‚Â–æFW‚’ÓâÆ6öÂFF×&÷÷6Â×&–6RÖ6öÇVÖãÒ"G¶–æFW‡Ò"7G–ÆSÒ'v–GFƒ¢G·v–GF‡×‚"óæ’æ¦ö–â‚rr—ÓÂö6öÆw&÷Wæ°¢&WGW&âÆF—b6Æ73Ò&6öÖÖW&6–Â×&÷÷6Â×F&ÆR×67&öÆÂ#ãÇF&ÆR6Æ73Ò&6öÖÖW&6–Â×&÷÷6Â×&–6R×F&ÆR6öÖÖW&6–Â×&÷÷6ÂÖÆ&÷"×F&ÆR—2Ö6ö×7B×&÷÷6Â×F&ÆR"FF×&÷÷6ÂÖ6ö×7B×F&ÆRFF×&÷÷6ÂÖf—†VB×v–GFƒÒ"G¶Æ&÷$f—†VEv–GF‡Ò"7G–ÆSÒ"Ò×&÷÷6Â×F&ÆRÖÖ–â×v–GFƒ¢G¶Æ&÷%F&ÆTÖ–åv–GF‡×‚#âG¶Æ&÷$6öÇVÖäÆ–÷WGÓÇF†VCãÇG#ãÇF‚6Æ73Ò'&÷÷6ÂÖÆ–æRÖçVÖ&W"#î(IcÂ÷FƒãÇF‚6Æ73Ò'&÷÷6ÂÖÆ–æRÖæÖRÖ†VB#âG¶W66T‡FÖÂ‡G"‚vÆ&÷%v÷&´æÖRr’—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6ÂÖÆ–æR×Væ—BÖ†VB#âG¶W66T‡FÖÂ‡G"‚w&÷÷6ÅVæ—E6†÷'Br’—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6ÂÖÆ–æR×VçF—G’Ö†VB#âG¶W66T‡FÖÂ‡G"‚w&÷÷6ÅVçF—G•6†÷'Br’—ÓÂ÷FƒãÇFƒâG¶W66T‡FÖÂ‡G"‚wv÷&´†÷W'2r’—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ‡G"‚v†÷W&Ç”V×Æ÷–VT6÷7Br’—ÓÂ÷FƒãÇF‚6Æ73Ò'&÷÷6Â×&–6RÖ6öÇVÖâÖ†VB#âG¶W66T‡FÖÂ‡G"‚wF÷FÄÆ&÷$6÷7Br’—ÓÂ÷FƒãÂ÷G#ãÂ÷F†VCãÇF&öG“âG·&÷w7ÓÂ÷F&öG“ãÇFfö÷CãÇG#ãÇFB6öÇ7ãÒ#r#ãÇ7ãâG¶W66T‡FÖÂ‡G"‚wF÷FÅv÷&µG—W2r’—Ó¢Æ#âG¶VçG&–W2æÆVæwF‡ÓÂö#ãÂ÷7ããÇ7ãâG¶W66T‡FÖÂ‡G"‚wF÷FÄÖä†÷W'2r’—Ó¢Æ"FF×&÷÷6ÂÖÆ&÷"×F÷FÂÖ†÷W'3âG¶W66T‡FÖÂ†æWr–çFÂäçVÖ&W$f÷&ÖB‡&ö÷BæÆærÇÂw'RÕ%RrÂ²Ö†–×VÔg&7F–öäF–v—G3¢"Ò’æf÷&ÖB‡F÷FÄ†÷W'2’—ÓÂö#ãÂ÷7ããÇ7ãâG¶W66T‡FÖÂ‡G"‚wF÷FÄÆ&÷$6÷7Br’—Ó¢Æ"FF×&÷÷6ÂÖÆ&÷"Öw&æB×F÷FÃâG¶W66T‡FÖÂ†f÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F÷FÄ6÷7B’’—ÓÂö#ãÂ÷7ããÂ÷FCãÂ÷G#ãÂ÷Ffö÷CãÂ÷F&ÆSãÂöF—cæ°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Ä6öÇVÖç4Ö&·W‡&÷÷6ÂÂw&÷W2’°¢&WGW&âÆæb6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖVF—F÷"Ö6öÇVÖç2"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w&÷÷6Åv÷&·76UF—FÆRr’—Ò#âG´4ôÔÔU$4”Åõ$õõ4ÅôTD•Dõ%ô4ôÅTÔå2æÖ‚†6öÇVÖâ’Óâ°¢6öç7B6öÇVÖä6÷VçBÒ6öÇVÖâæw&÷W2æf–ÇFW"‚†w&÷W’Óâ—46öÖÖW&6–Å&÷÷6Ä×”w&÷W†w&÷Wæ–B’’ç&VGV6R‚‡F÷FÂÂw&÷W’ÓâF÷FÂ²6öÖÖW&6–Å&÷÷6ÄVçG&–W4f÷$w&÷W‡&÷÷6ÂÂw&÷Wæ–BÂw&÷W2’æÆVæwF‚Â“°¢6öç7B'WGFöç2Ò6öÇVÖâæw&÷W2æÖ‚†w&÷W’Óâ°¢6öç7B6÷VçBÒ6öÖÖW&6–Å&÷÷6ÄVçG&–W4f÷$w&÷W‡&÷÷6ÂÂw&÷Wæ–BÂw&÷W2’æÆVæwFƒ°¢6öç7B7F—fRÒ7F—fT6öÖÖW&6–Å&÷÷6Äw&÷WÓÓÒw&÷Wæ–C°¢&WGW&âÆ'WGFöâ6Æ73Ò"G¶7F—fRòv—2Ö7F—fRr¢rwÒ"G—SÒ&'WGFöâ"FF×&÷÷6Â×v÷&·76RÖw&÷WÒ"G¶w&÷Wæ–GÒ"FF×&÷÷6Â×v÷&·76RÖ6öÇVÖãÒ"G¶6öÇVÖâæ–GÒ"&–×&W76VCÒ"Gµ7G&–ær†7F—fR—Ò#ãÇ7ãâG¶W66T‡FÖÂ‡G"†w&÷WæÆ&VÂ’—ÓÂ÷7ããÆ#âG¶6÷VçGÓÂö#ãÂö'WGFöãæ°¢Ò’æ¦ö–â‚rr“°¢&WGW&âÇ6V7F–öâ6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖVF—F÷"Ö6öÇVÖâ—2ÒG¶6öÇVÖâæ–GÒG¶7F—fT6öÖÖW&6–Å&÷÷6Ä6öÇVÖâÓÓÒ6öÇVÖâæ–Bòr—2Ö7F—fRr¢rwÒ#ãÆ†VFW#ãÇ7â&–Ö†–FFVãÒ'G'VR#âG¶6öÇVÖâæ–6öçÓÂ÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ‡G"†6öÇVÖâæÆ&VÂ’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶6öÇVÖä6÷VçGÒ+rG¶W66T‡FÖÂ‡G"‚w&÷÷6Äg&vÖVçE÷6—F–öç2r’—ÓÂ÷6ÖÆÃãÂöF—cãÂö†VFW#ãÆF—câG¶'WGFöç7ÓÂöF—cãÂ÷6V7F–öãæ°¢Ò’æ¦ö–â‚rr—ÓÂöæcæ°§Ð ¦gVæ7F–öâWFFT6öÖÖW&6–Å&÷÷6ÅF&ÆT6Æ7VÆF–öç2‡66÷RÂ&÷÷6Â’°¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢6öç7B6VÆV7FVDÖöFT–G2Òæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6ÅF„ÖöFW2‡7FFRçF„ÖöFW2“°¢6öç7BF…F÷FÇ2Òö&¦V7Bæg&öÔVçG&–W2‡6VÆV7FVDÖöFT–G2æÖ‚†ÖöFT–B’Óâ¶ÖöFT–BÂÒ’“°¢ÆWB&–6UF÷FÂÒ°¢6öç7B&÷w2ÒBB‚u¶FF×&÷÷6ÂÖÆ–æR×&÷uÒrÂ66÷R“°¢&÷w2æf÷$V6‚‚‡&÷r’Óâ°¢6öç7BVçF—G’Ò6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‚B‚u¶FF×&÷÷6ÂÖÆ–æR×fÇVSÒ'VçF—G’%ÒrÂ&÷r“òçfÇVR“°¢6öç7B&–6RÒ6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‚B‚u¶FF×&÷÷6ÂÖÆ–æR×fÇVSÒ'&–6R%ÒrÂ&÷r“òçfÇVR“°¢6öç7BÖ÷VçG2Ò6öÖÖW&6–Å&÷÷6ÄÆ–æTÖ÷VçG2‡VçF—G’Â&–6RÂ6VÆV7FVDÖöFT–G2“°¢6öç7BæWEVæ—D6VÆÂÒB‚u¶FF×&÷÷6ÂÖæWB×Væ—EÒrÂ&÷r“°¢6öç7Bw&÷75Væ—D6VÆÂÒB‚u¶FF×&÷÷6ÂÖw&÷72×Væ—EÒrÂ&÷r“°¢6öç7B&6T6VÆÂÒB‚u¶FF×&÷÷6ÂÖ&6R×F÷FÅÒrÂ&÷r“°¢6öç7Bf–æÄ6VÆÂÒB‚u¶FF×&÷÷6ÂÖf–æÂ×F÷FÅÒrÂ&÷r“°¢–b†æWEVæ—D6VÆÂ’æWEVæ—D6VÆÂçFW‡D6öçFVçBÒf÷&ÖDÖöæW’†Ö÷VçG2çVæ—Df–æÂ“°¢–b†w&÷75Væ—D6VÆÂ’w&÷75Væ—D6VÆÂçFW‡D6öçFVçBÒf÷&ÖDÖöæW’†Ö÷VçG2çVæ—Df–æÂ“°¢–b†&6T6VÆÂ’&6T6VÆÂçFW‡D6öçFVçBÒf÷&ÖDÖöæW’†Ö÷VçG2æ&6R“°¢6VÆV7FVDÖöFT–G2æf÷$V6‚‚†ÖöFT–B’Óâ°¢6öç7BF„Ö÷VçBÒ6öÖÖW&6–Å&÷÷6ÅF„Ö÷VçB†Ö÷VçG2ÂÖöFT–B“°¢6öç7BF„6VÆÂÒB†¶FF×&÷÷6Â×F‚×F÷FÃÒ"G¶ÖöFT–GÒ%ÖÂ&÷r“°¢–b‡F„6VÆÂ’F„6VÆÂçFW‡D6öçFVçBÒf÷&ÖDÖöæW’‡F„Ö÷VçB“°¢F…F÷FÇ5¶ÖöFT–EÒ³ÒF„Ö÷VçC°¢Ò“°¢–b†f–æÄ6VÆÂ’f–æÄ6VÆÂçFW‡D6öçFVçBÒf÷&ÖDÖöæW’†Ö÷VçG2æf–æÂ“°¢&–6UF÷FÂ³ÒÖ÷VçG2æf–æÃ°¢Ò“°¢6öç7BG—W5F÷FÂÒB‚u¶FF×&÷÷6Â×G—W2×F÷FÅÒrÂ66÷R“°¢6öç7B&–6Tw&æEF÷FÂÒB‚u¶FF×&÷÷6Â×&–6RÖw&æB×F÷FÅÒrÂ66÷R“°¢–b‡G—W5F÷FÂ’G—W5F÷FÂçFW‡D6öçFVçBÒ7G&–ær‡&÷w2æÆVæwF‚“°¢6VÆV7FVDÖöFT–G2æf÷$V6‚‚†ÖöFT–B’Óâ°¢6öç7BF„w&æEF÷FÂÒB†¶FF×&÷÷6Â×F‚Öw&æB×F÷FÃÒ"G¶ÖöFT–GÒ%ÖÂ66÷R“°¢–b‡F„w&æEF÷FÂ’F„w&æEF÷FÂçFW‡D6öçFVçBÒf÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F…F÷FÇ5¶ÖöFT–EÒ’“°¢Ò“°¢–b‡&–6Tw&æEF÷FÂ’&–6Tw&æEF÷FÂçFW‡D6öçFVçBÒf÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡&–6UF÷FÂ’“°¢BB‚u¶FF×&÷÷6ÂÖ6ö×7B×F&ÆUÒrÂ66÷R’æf÷$V6‚‚‡F&ÆR’Óâ6öÖÖW&6–Å&÷÷6Å&Vg&W6…&VæFW&VE&–6T6öÇVÖç2‡F&ÆR’“°§Ð ¦gVæ7F–öâWFFT6öÖÖW&6–Å&÷÷6ÄÆ&÷$6Æ7VÆF–öç2‡66÷RÂ&÷÷6Â’°¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢6öç7B†÷W&Ç•&FRÒ6öÖÖW&6–Å&÷÷6ÄÆ&÷$†÷W&Ç•&FR‡7FFR“°¢6öç7BVçG&–W4'”–BÒæWrÖ†6öÖÖW&6–Å&÷÷6ÄVçG&–W4f÷$w&÷W‡&÷÷6ÂÂvÆ&÷$†÷W'2r’æÖ‚†VçG'’’Óâ¶VçG'’æ–BÂVçG'•Ò’“°¢ÆWBF÷FÄ†÷W'2Ò°¢ÆWBF÷FÄ6÷7BÒ°¢BB‚u¶FF×&÷÷6ÂÖÆ&÷"×&÷uÒrÂ66÷R’æf÷$V6‚‚‡&÷r’Óâ°¢6öç7B—FVÔ–BÒ&÷ræFF6WBç&÷÷6ÄÆ–æT–C°¢6öç7BVçG'’Ò°¢–C¢—FVÔ–BÀ¢VçF—G“¢VçG&–W4'”–BævWB†—FVÔ–B“òçVçF—G’ÇÂ ¢Ó°¢6öç7BÖ÷VçG2Ò6öÖÖW&6–Å&÷÷6ÄÆ&÷$Æ–æTÖ÷VçG2†VçG'’Â7FFR“°¢B‚u¶FF×&÷÷6ÂÖÆ&÷"×&÷r×&FUÒrÂ&÷r’çFW‡D6öçFVçBÒf÷&ÖDÖöæW’†Ö÷VçG2æ†÷W&Ç•&FR“°¢B‚u¶FF×&÷÷6ÂÖÆ&÷"×&÷r×F÷FÅÒrÂ&÷r’çFW‡D6öçFVçBÒf÷&ÖDÖöæW’†Ö÷VçG2çF÷FÂ“°¢F÷FÄ†÷W'2³ÒÖ÷VçG2çF÷FÄ†÷W'3°¢F÷FÄ6÷7B³ÒÖ÷VçG2çF÷FÃ°¢Ò“°¢6öç7B†÷W&Ç•&FT÷WGWBÒB‚u¶FF×&÷÷6ÂÖÆ&÷"Ö†÷W&Ç’×&FUÒrÂ66÷R“°¢6öç7BF÷FÄ†÷W'4÷WGWBÒB‚u¶FF×&÷÷6ÂÖÆ&÷"×F÷FÂÖ†÷W'5ÒrÂ66÷R“°¢6öç7BF÷FÄ6÷7D÷WGWBÒB‚u¶FF×&÷÷6ÂÖÆ&÷"Öw&æB×F÷FÅÒrÂ66÷R“°¢–b††÷W&Ç•&FT÷WGWB’†÷W&Ç•&FT÷WGWBçFW‡D6öçFVçBÒf÷&ÖDÖöæW’††÷W&Ç•&FR“°¢–b‡F÷FÄ†÷W'4÷WGWB’F÷FÄ†÷W'4÷WGWBçFW‡D6öçFVçBÒæWr–çFÂäçVÖ&W$f÷&ÖB‡&ö÷BæÆærÇÂw'RÕ%RrÂ²Ö†–×VÔg&7F–öäF–v—G3¢"Ò’æf÷&ÖB†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F÷FÄ†÷W'2’“°¢–b‡F÷FÄ6÷7D÷WGWB’F÷FÄ6÷7D÷WGWBçFW‡D6öçFVçBÒf÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F÷FÄ6÷7B’“°¢BB‚u¶FF×&÷÷6ÂÖ6ö×7B×F&ÆUÒrÂ66÷R’æf÷$V6‚‚‡F&ÆR’Óâ6öÖÖW&6–Å&÷÷6Å&Vg&W6…&VæFW&VE&–6T6öÇVÖç2‡F&ÆR’“°§Ð ¦gVæ7F–öâ6fT6öÖÖW&6–Å&÷÷6Ä×•6VÆV7F–öâ‡&÷÷6ÂÂw&÷W–BÂVçG&–W2Â66÷R’°¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢6öç7B6VÆV7FVD–G2ÒæWr6WB‚BB‚u¶FF×&÷÷6Â×6VæB×FòÖ×•Ó¦6†V6¶VBrÂ66÷R’æÖ‚†–çWB’Óâ–çWBæFF6WBç&÷÷6Å6VæEFô×’’“°¢6öç7B6VÆV7FVDVçG&–W2ÒVçG&–W2æf–ÇFW"‚†VçG'’’Óâ6VÆV7FVD–G2æ†2†VçG'’æ–B’’æÖ‚†VçG'’’Óâ°¢6öç7BfÇVW2Ò7FFRæ—FVÕfÇVW5¶VçG'’æ–EÓ°¢&WGW&â°¢ââæVçG'’À¢VçF—G“¢fÇVW2ò6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‡fÇVW2çVçF—G’’¢VçG'’çVçF—G’À¢&–6S¢fÇVW2ò6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‡fÇVW2ç&–6R’¢VçG'’ç&–6P¢Ó°¢Ò“°¢7FFRæ×”—FV×2Ò²ââç7FFRæ×”—FV×2æf–ÇFW"‚†—FVÒ’Óâ—FVÒç6÷W&6Tw&÷WÓÒw&÷W–B’Âââç6VÆV7FVDVçG&–W5Ó°¢6öç7BÆ&÷$VçG'”–G2ÒæWr6WB†6öÖÖW&6–Å&÷÷6ÄVçG&–W4f÷$w&÷W‡&÷÷6ÂÂvÆ&÷$†÷W'2r’æÖ‚†VçG'’’ÓâVçG'’æ–B’“°¢ö&¦V7Bæ¶W—2‡7FFRæÆ&÷%6WGF–æw2æ—FVÔ†÷W'2’æf÷$V6‚‚†–B’Óâ²–b‚Æ&÷$VçG'”–G2æ†2†–B’’FVÆWFR7FFRæÆ&÷%6WGF–æw2æ—FVÔ†÷W'5¶–EÓ²Ò“°¢&÷÷6ÂçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢&VæFW$6öÖÖW&6–Å&÷÷6Åv÷&·76R‚“°¢6†÷uFö7B‡G"‚v×•&÷÷6Å6VÆV7F–öå6fVBr’“°§Ð ¦gVæ7F–öâ÷Vä6öÖÖW&6–Å&÷÷6Ä7W7FöÕ÷6—F–öäF–Æör‡&÷÷6Ä–BÂw&÷W–B’°¢6öç7B&÷÷6ÂÒ6öÖÖW&6–Å&÷÷6Å&V6÷&G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ&÷÷6Ä–B“°¢6öç7Bw&÷W6öæf–rÒ6öÖÖW&6–Å&÷÷6ÄVF—F÷$w&÷W6öæf–r†w&÷W–B“°¢–b‚&÷÷6ÂÇÂw&÷W6öæf–r’&WGW&ã°¢6öç7Bw&÷WÆ&VÂÒG·G"†w&÷W6öæf–ræ6öÇVÖäÆ&VÂ—Ò+rG·G"†w&÷W6öæf–ræÆ&VÂ—Ö°¢6öç7B&–6Tf–VÆBÒw&÷W–BÓÓÒvÆ&÷$†÷W'2ròrr¢ÆÆ&VÂ6Æ73Ò&—2×v–FR#ãÇ7ãâG¶W66T‡FÖÂ‡G"‚w&–6Rr’—ÓÂ÷7ããÆ–çWBG—SÒ&çVÖ&W""Ö–ãÒ#"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"Æ6V†öÆFW#Ò#"FFÖ7W7FöÒ×&÷÷6Â×÷6—F–öâ×&–6RóãÂöÆ&VÃæ°¢6†÷tF–Æör€¢W66T‡FÖÂ‡G"‚vFD÷vå&÷÷6Å÷6—F–öâr’’À¢W66T‡FÖÂ†G·G"‚v÷vå&÷÷6Å÷6—F–öä†–çBr—ÒG¶w&÷WÆ&VÇÖ’À¢ÆF—b6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖ7W7FöÒÖf÷&Ò"&öÆSÒ&f÷&Ò"FFÖ6öÖÖW&6–Â×&÷÷6ÂÖ7W7FöÒÖf÷&ÓãÆÆ&VÂ6Æ73Ò&—2×v–FR#ãÇ7ãâG¶W66T‡FÖÂ‡G"‚v÷vå&÷÷6Å÷6—F–öäæÖRr’—ÒÆVÓâ£ÂöVÓãÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ##C"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚v÷vå&÷÷6Å÷6—F–öäæÖUÆ6V†öÆFW"r’—Ò"WFö6ö×ÆWFSÒ&öfb"FFÖ7W7FöÒ×&÷÷6Â×÷6—F–öâÖæÖRóãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"‚wVæ—Br’—ÓÂ÷7ããÆ–çWBG—SÒ'FW‡B"Ö†ÆVæwFƒÒ#C"Æ6V†öÆFW#Ò.(	B"WFö6ö×ÆWFSÒ&öfb"FFÖ7W7FöÒ×&÷÷6Â×÷6—F–öâ×Væ—BóãÂöÆ&VÃãÆÆ&VÃãÇ7ãâG¶W66T‡FÖÂ‡G"‚wVçF—G’r’—ÓÂ÷7ããÆ–çWBG—SÒ&çVÖ&W""Ö–ãÒ#"7FWÒ#ã"–çWFÖöFSÒ&FV6–ÖÂ"fÇVSÒ#"FFÖ7W7FöÒ×&÷÷6Â×÷6—F–öâ×VçF—G’óãÂöÆ&VÃâG·&–6Tf–VÆGÓÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2—2×v–FR#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ6æ6VÂÖ7W7FöÒ×&÷÷6Â×÷6—F–öãâG¶W66T‡FÖÂ‡G"‚v6æ6VÂr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×6fRÖ7W7FöÒ×&÷÷6Â×÷6—F–öãâ²G¶W66T‡FÖÂ‡G"‚w6fU&÷÷6Å÷6—F–öâr’—ÓÂö'WGFöããÂöF—cãÂöF—cæ ¢“°¢6öç7B66÷RÒB‚u¶FFÖF–ÆörÖ6öçFVçEÒr“°¢6öç7Bf÷&ÒÒB‚u¶FFÖ6öÖÖW&6–Â×&÷÷6ÂÖ7W7FöÒÖf÷&ÕÒrÂ66÷R“°¢6öç7BæÖT–çWBÒB‚u¶FFÖ7W7FöÒ×&÷÷6Â×÷6—F–öâÖæÖUÒrÂf÷&Ò“°¢B‚u¶FFÖ6æ6VÂÖ7W7FöÒ×&÷÷6Â×÷6—F–öåÒrÂf÷&Ò“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚’“°¢6öç7B6fU÷6—F–öâÒ‚’Óâ°¢6öç7BæÖRÒ7G&–ær†æÖT–çWCòçfÇVRÇÂrr’çG&–Ò‚’ç6Æ–6RƒÂ#C“°¢–b‚æÖR’°¢æÖT–çWCòç6WDGG&–'WFR‚v&–Ö–çfÆ–BrÂwG'VRr“°¢æÖT–çWCòæfö7W2‚“°¢&WGW&ã°¢Ð¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢6öç7B–BÒ7Ö7W7FöÒÒG¶7&VFTö&¦V7D–B‚—Ö°¢6öç7BVçF—G’Ò6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‚B‚u¶FFÖ7W7FöÒ×&÷÷6Â×÷6—F–öâ×VçF—G•ÒrÂf÷&Ò“òçfÇVR“°¢6öç7B&–6RÒ6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‚B‚u¶FFÖ7W7FöÒ×&÷÷6Â×÷6—F–öâ×&–6UÒrÂf÷&Ò“òçfÇVR“°¢6öç7BVçG'’Ò°¢–BÀ¢6÷W&6Tw&÷W¢w&÷W–BÀ¢æÖRÀ¢Væ—C¢7G&–ær‚B‚u¶FFÖ7W7FöÒ×&÷÷6Â×÷6—F–öâ×Væ—EÒrÂf÷&Ò“òçfÇVRÇÂrr’çG&–Ò‚’ç6Æ–6RƒÂC’À¢VçF—G’À¢&–6RÀ¢6÷W&6TæÖS¢rrÀ¢6÷W&6U6†VWC¢rrÀ¢&ö¦V7E6÷W&6S¢w&÷W–BÓÓÒv÷WG6–FU7V6–f–6F–öåv÷&·2ròw&ö¦V7Br¢rrÀ¢76ö6–FVDf÷#¢rrÀ¢7W7FöÓ¢G'VP¢Ó°¢7FFRæ—FVÕfÇVW5¶–EÒÒ²VçF—G’Â&–6RÂ&ö¦V7E6÷W&6S¢VçG'’ç&ö¦V7E6÷W&6RÂ76ö6–FVDf÷#¢rrÓ°¢–b†—46öÖÖW&6–Å&÷÷6Ä×”w&÷W†w&÷W–B’’7FFRæ×”—FV×2çW6‚†VçG'’“°¢VÇ6R7FFRæ7W7FöÔ—FV×2çW6‚†VçG'’“°¢&÷÷6ÂçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢&VæFW$6öÖÖW&6–Å&÷÷6Åv÷&·76R‚“°¢6†÷uFö7B‡G"‚w&÷÷6Å÷6—F–öäFFVBr’“°¢Ó°¢B‚u¶FF×6fRÖ7W7FöÒ×&÷÷6Â×÷6—F–öåÒrÂf÷&Ò“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6fU÷6—F–öâ“°¢f÷&ÓòæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ°¢–b†WfVçBæ¶W’ÓÒtVçFW"r’&WGW&ã°¢WfVçBç&WfVçDFVfVÇB‚“°¢6fU÷6—F–öâ‚“°¢Ò“°¢æÖT–çWCòæFDWfVçDÆ—7FVæW"‚v–çWBrÂ‚’ÓâæÖT–çWBç&VÖ÷fTGG&–'WFR‚v&–Ö–çfÆ–Br’“°¢æÖT–çWCòæfö7W2‚“°§Ð ¦gVæ7F–öâ&VÖ÷fT6öÖÖW&6–Å&÷÷6Ä7W7FöÕ÷6—F–öâ‡&÷÷6ÂÂ—FVÔ–B’°¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢6öç7BW†—7G2Ò7FFRæ7W7FöÔ—FV×2ç6öÖR‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ—FVÔ–B“°¢–b‚W†—7G2ÇÂv–æF÷ræ6öæf—&Ò†G·G"‚vFVÆWFT÷vå&÷÷6Å÷6—F–öâr—Óö’’&WGW&ã°¢7FFRæ7W7FöÔ—FV×2Ò7FFRæ7W7FöÔ—FV×2æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ–BÓÒ—FVÔ–B“°¢7FFRæ×”—FV×2Ò7FFRæ×”—FV×2æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ–BÓÒ—FVÔ–B“°¢FVÆWFR7FFRæ—FVÕfÇVW5¶—FVÔ–EÓ°¢FVÆWFR7FFRæÆ&÷%6WGF–æw2æ—FVÔ†÷W'5¶—FVÔ–EÓ°¢&÷÷6ÂçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢&VæFW$6öÖÖW&6–Å&÷÷6Åv÷&·76R‚“°¢6†÷uFö7B‡G"‚v÷vå&÷÷6Å÷6—F–öäFVÆWFVBr’“°§Ð ¦gVæ7F–öâ&VæFW$6öÖÖW&6–Å&÷÷6Åv÷&·76R‚’°¢6öç7B&ö÷DVÆVÖVçBÒB‚u¶FFÖ6öÖÖW&6–Â×&÷÷6Â×v÷&·76UÒr“°¢–b‚&ö÷DVÆVÖVçB’&WGW&ã°¢6öç7B&÷÷6ÂÒ6öÖÖW&6–Å&÷÷6Å&V6÷&G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ7F—fT6öÖÖW&6–Å&÷÷6Ä–B“°¢6öç7BfW'6–öâÒÆFW7DFö7VÖVçEfW'6–öâ‡&÷÷6Ãòæf–ÆR“°¢–b‚&÷÷6ÂÇÂfW'6–öâ’°¢&ö÷DVÆVÖVçBæ–ææW$…DÔÂÒÆF—b6Æ73Ò&V×G’×7FFR#ãÇ7â6Æ73Ò'&÷÷6ÂÖV×G’ÖÖ&²#î(+ÓÂ÷7ããÆƒ#âG¶W66T‡FÖÂ‡G"‚væô6öÖÖW&6–Å&÷÷6Ç2r’—ÓÂöƒ#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ&6²×FòÖ6öÖÖW&6–Â×&÷÷6Ç3î(iG¶W66T‡FÖÂ‡G"‚v&6µFõ&÷÷6ÄÆ—7Br’—ÓÂö'WGFöããÂöF—cæ°¢B‚u¶FFÖ&6²×FòÖ6öÖÖW&6–Â×&÷÷6Ç5ÒrÂ&ö÷DVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6WEæVÂ‚w&÷÷6Ç2r’“°¢&WGW&ã°¢Ð¢6öç7B&VG’Ò&÷÷6Âç7FGW2ÓÓÒw&VG’rbb—4Fö7VÖVçEfW'6–öäæÇ—¦VB‡fW'6–öâ“°¢6öç7B6÷W&6TÆ&VÂÒG"‡&÷÷6Âæ¶–æBÓÓÒw&ö¦V7Bròw&÷÷6Ä'•&ö¦V7Br¢w&÷÷6Ä'”W7F–ÖFRr“°¢–b‚&VG’’°¢&ö÷DVÆVÖVçBæ–ææW$…DÔÂÒÇ6V7F–öâ6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖVF—F÷"#ãÆ†VFW"6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖVF—F÷"Ö†W&ò#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ&6²×FòÖ6öÖÖW&6–Â×&÷÷6Ç3î(iG¶W66T‡FÖÂ‡G"‚v&6µFõ&÷÷6ÄÆ—7Br’—ÓÂö'WGFöããÆF—cãÇ7â&–Ö†–FFVãÒ'G'VR#î(+ÓÂ÷7ããÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡&÷÷6Âç6V7F–öäæÖR—ÓÂ÷6ÖÆÃãÆƒâG¶W66T‡FÖÂ‡&÷÷6Âæö&¦V7DæÖR—ÓÂöƒãÇâG¶W66T‡FÖÂ‡6÷W&6TÆ&VÂ—Ò+rG¶W66T‡FÖÂ‡fW'6–öâææÖR—ÓÂ÷ãÂöF—cãÂöF—cãÆ#âG¶W66T‡FÖÂ‡G"‚w&÷÷6Äv—F–ætæÇ—6—2r’—ÓÂö#ãÂö†VFW#ãÇ6V7F–öâ6Æ73Ò&ö&¦V7B×&÷÷6Â×VæF–ær#ãÇ7â&–Ö†–FFVãÒ'G'VR#î(É³Â÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚w&÷÷6Äv—F–ætæÇ—6—2r’—ÓÂ÷7G&öæsãÇâG¶W66T‡FÖÂ‡G"‚v7&VF–æt6öÖÖW&6–Å&÷÷6Âr’—ÓÂ÷ãÂöF—cãÂ÷6V7F–öããÂ÷6V7F–öãæ°¢B‚u¶FFÖ&6²×FòÖ6öÖÖW&6–Â×&÷÷6Ç5ÒrÂ&ö÷DVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6WEæVÂ‚w&÷÷6Ç2r’“°¢&WGW&ã°¢Ð¢6öç7Bw&÷W6öæf–rÒ6öÖÖW&6–Å&÷÷6ÄVF—F÷$w&÷W6öæf–r†7F—fT6öÖÖW&6–Å&÷÷6Äw&÷W’ÇÂ6öÖÖW&6–Å&÷÷6ÄVF—F÷$w&÷W6öæf–r‚w7V6–f–6F–öåv÷&·2r“°¢7F—fT6öÖÖW&6–Å&÷÷6Äw&÷WÒw&÷W6öæf–ræ–C°¢7F—fT6öÖÖW&6–Å&÷÷6Ä6öÇVÖâÒw&÷W6öæf–ræ6öÇVÖä–C°¢6öç7Bw&÷W2Ò6öÖÖW&6–Å&÷÷6Ä'&V¶F÷vâ‡fW'6–öâÂ&÷÷6Âæ¶–æB“°¢6öç7BVçG&–W2Ò6öÖÖW&6–Å&÷÷6ÄVçG&–W4f÷$w&÷W‡&÷÷6ÂÂ7F—fT6öÖÖW&6–Å&÷÷6Äw&÷WÂw&÷W2“°¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢6öç7B—4Æ&÷$†÷W'2Ò7F—fT6öÖÖW&6–Å&÷÷6Äw&÷WÓÓÒvÆ&÷$†÷W'2s°¢6öç7B6fU6VÆV7F–öâÒ—46öÖÖW&6–Å&÷÷6Ä×”w&÷W†7F—fT6öÖÖW&6–Å&÷÷6Äw&÷W’ÇÂ—4Æ&÷$†÷W'2òrr¢Æ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ6öÖÖW&6–Â×&÷÷6Â×6fRÖ×’"G—SÒ&'WGFöâ"FF×6fRÖ6öÖÖW&6–Â×&÷÷6ÂÖ×’G¶VçG&–W2æÆVæwF‚òrr¢rF—6&ÆVBwÓî)É2G¶W66T‡FÖÂ‡G"‚w6fT×•&÷÷6Å6VÆV7F–öâr’—ÓÂö'WGFöãæ°¢6öç7B÷6—F–öä7F–öç2ÒÆF—b6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖVF—F÷"Ö†VFW"Ö7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ6öÖÖW&6–Â×&÷÷6ÂÖFBÖ÷vâ"G—SÒ&'WGFöâ"FFÖFBÖ÷vâ×&÷÷6Â×÷6—F–öãâ²G¶W66T‡FÖÂ‡G"‚vFD÷vå&÷÷6Å÷6—F–öâr’—ÓÂö'WGFöãâG·6fU6VÆV7F–öçÓÂöF—cæ°¢6öç7BF&ÆUv÷&·76RÒ—4Æ&÷$†÷W'0¢òG¶6öÖÖW&6–Å&÷÷6Äw&÷W†–çDÖ&·W†7F—fT6öÖÖW&6–Å&÷÷6Äw&÷W—ÒG¶6öÖÖW&6–Å&÷÷6ÄÆ&÷%6WGF–æw4Ö&·W‡7FFR—ÒG¶6öÖÖW&6–Å&÷÷6ÄÆ&÷%F&ÆTÖ&·W‡&÷÷6ÂÂVçG&–W2—Ö ¢¢G¶6öÖÖW&6–Å&÷÷6Äw&÷W†–çDÖ&·W†7F—fT6öÖÖW&6–Å&÷÷6Äw&÷W—ÒG¶6öÖÖW&6–Å&÷÷6Å&–6TÖöFTÖ&·W‡7FFR—ÒG¶6öÖÖW&6–Å&÷÷6ÅF&ÆTÖ&·W‡&÷÷6ÂÂ7F—fT6öÖÖW&6–Å&÷÷6Äw&÷WÂVçG&–W2—Ö°¢&ö÷DVÆVÖVçBæ–ææW$…DÔÂÒÇ6V7F–öâ6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖVF—F÷"#ãÆ†VFW"6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖVF—F÷"Ö†W&ò#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ&6²×FòÖ6öÖÖW&6–Â×&÷÷6Ç3î(iG¶W66T‡FÖÂ‡G"‚v&6µFõ&÷÷6ÄÆ—7Br’—ÓÂö'WGFöããÆF—cãÇ7â&–Ö†–FFVãÒ'G'VR#î(+ÓÂ÷7ããÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡&÷÷6Âç6V7F–öäæÖR—ÓÂ÷6ÖÆÃãÆƒâG¶W66T‡FÖÂ‡&÷÷6Âæö&¦V7DæÖR—ÓÂöƒãÇâG¶W66T‡FÖÂ‡6÷W&6TÆ&VÂ—Ò+rG¶W66T‡FÖÂ‡fW'6–öâææÖR—ÓÂ÷ãÂöF—cãÂöF—cãÆ#âG¶W66T‡FÖÂ‡G"‚w&÷÷6Å&VG’r’—ÓÂö#ãÂö†VFW#ãÆF—b6Æ73Ò&æÇ—6—2×G'WF‚Öæ÷FR6öÖÖW&6–Â×&÷÷6ÂÖVF—F÷"Öæ÷FR#ãÇ7ãæ“Â÷7ããÇâG¶W66T‡FÖÂ‡G"‚w&÷÷6Åv÷&·76UvT†–çBr’—ÓÂ÷ãÂöF—câG¶6öÖÖW&6–Å&÷÷6Ä6öçF7G4Ö&·W‡7FFR—ÒG¶6öÖÖW&6–Å&÷÷6Ä6öÇVÖç4Ö&·W‡&÷÷6ÂÂw&÷W2—ÓÇ6V7F–öâ6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖVF—F÷"Ö&öG’#ãÆ†VFW#ãÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"†w&÷W6öæf–ræ6öÇVÖäÆ&VÂ’—ÓÂ÷6ÖÆÃãÆƒ#âG¶W66T‡FÖÂ‡G"†w&÷W6öæf–ræÆ&VÂ’—ÓÂöƒ#ãÇâG¶VçG&–W2æÆVæwF‡Ò+rG¶W66T‡FÖÂ‡G"‚w&÷÷6Äg&vÖVçE÷6—F–öç2r’—ÓÂ÷ãÂöF—câG·÷6—F–öä7F–öç7ÓÂö†VFW#âG·F&ÆUv÷&·76WÓÆfö÷FW"6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖVF—F÷"Ö7F–öç2#ãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖ6öÖÖW&6–Â×&÷÷6ÂÖ7F–öãÒ&F÷væÆöB#ãÇ7â&–Ö†–FFVãÒ'G'VR#î(i3Â÷7ãâG¶W66T‡FÖÂ‡G"‚vF÷væÆöE&÷÷6Âr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ6öÖÖW&6–Â×&÷÷6ÂÖ7F–öãÒ'f–Wr#ãÇ7â&–Ö†–FFVãÒ'G'VR#î)x“Â÷7ãâG¶W66T‡FÖÂ‡G"‚wf–Wu&÷÷6Âr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ6öÖÖW&6–Â×&÷÷6ÂÖ7F–öãÒ'6†&R#ãÇ7â&–Ö†–FFVãÒ'G'VR#î(isÂ÷7ãâG¶W66T‡FÖÂ‡G"‚w6†&U&÷÷6Âr’—ÓÂö'WGFöããÂöfö÷FW#ãÂ÷6V7F–öããÂ÷6V7F–öãæ°¢B‚u¶FFÖ&6²×FòÖ6öÖÖW&6–Â×&÷÷6Ç5ÒrÂ&ö÷DVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6WEæVÂ‚w&÷÷6Ç2r’“°¢BB‚u¶FF×&÷÷6ÂÖ6öçF7EÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v–çWBrÂ‚’Óâ°¢6öç7Bf–VÆBÒ–çWBæFF6WBç&÷÷6Ä6öçF7C°¢–b‚ö&¦V7Bç&÷F÷G—Ræ†4÷vå&÷W'G’æ6ÆÂ‡7FFRæ6öçF7G2Âf–VÆB’’&WGW&ã°¢7FFRæ6öçF7G5¶f–VÆEÒÒ7G&–ær†–çWBçfÇVRÇÂrr’ç6Æ–6RƒÂçVÖ&W"†–çWBæÖ„ÆVæwF‚’ÇÂ#“°¢&÷÷6ÂçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢Ò’“°¢BB‚u¶FF×&÷÷6Â×v÷&·76RÖw&÷WÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢7F—fT6öÖÖW&6–Å&÷÷6Äw&÷WÒ'WGFöâæFF6WBç&÷÷6Åv÷&·76Tw&÷W°¢7F—fT6öÖÖW&6–Å&÷÷6Ä6öÇVÖâÒ'WGFöâæFF6WBç&÷÷6Åv÷&·76T6öÇVÖã°¢&VæFW$6öÖÖW&6–Å&÷÷6Åv÷&·76R‚“°¢Ò’“°¢BB‚u¶FF×&÷÷6Â×&–6RÖÖöFUÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ°¢6öç7BÖöFT–BÒ–çWBçfÇVS°¢–b†ÖöFT–BÓÓÒv66‚r’°¢7FFRçF„ÖöFW2ÒµÓ°¢ÒVÇ6R°¢6öç7B6VÆV7FVDÖöFW2Òæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6ÅF„ÖöFW2‡7FFRçF„ÖöFW2“°¢–b‡6VÆV7FVDÖöFW2æ–æ6ÇVFW2†ÖöFT–B’’°¢7FFRçF„ÖöFW2Ò6VÆV7FVDÖöFW2æf–ÇFW"‚†–B’Óâ–BÓÒÖöFT–B“°¢ÒVÇ6R°¢6öç7BF—&V7F–öâÒ4ôÔÔU$4”Åõ$õõ4Åõ$”4UôÔôDU5¶ÖöFT–EÒæF—&V7F–öã°¢6öç7B6ÖTF—&V7F–öäÖöFW2Ò6VÆV7FVDÖöFW2æf–ÇFW"‚†–B’Óâ4ôÔÔU$4”Åõ$õõ4Åõ$”4UôÔôDU5¶–EÒæF—&V7F–öâÓÓÒF—&V7F–öâ“°¢–b‡6ÖTF—&V7F–öäÖöFW2æÆVæwF‚ãÒ"’°¢–çWBæ6†V6¶VBÒfÇ6S°¢6†÷uFö7B‡G"‚w6VÆV7EWFõGvõF„ÖöFW2r’“°¢&WGW&ã°¢Ð¢7FFRçF„ÖöFW2Ò²ââç6ÖTF—&V7F–öäÖöFW2ÂÖöFT–EÓ°¢Ð¢Ð¢&÷÷6ÂçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢&VæFW$6öÖÖW&6–Å&÷÷6Åv÷&·76R‚“°¢Ò’“°¢BB‚u¶FF×&÷÷6ÂÖÆ–æR×fÇVUÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†–çWB’Óâ°¢6öç7BWFFUfÇVRÒ‚’Óâ°¢6öç7B–BÒ–çWBæFF6WBç&÷÷6ÄÆ–æUfÇVT–C°¢6öç7Bf–VÆBÒ–çWBæFF6WBç&÷÷6ÄÆ–æUfÇVS°¢6öç7B&÷rÒ–çWBæ6Æ÷6W7B‚u¶FF×&÷÷6ÂÖÆ–æR×&÷uÒr“°¢6öç7B7W'&VçBÒ7FFRæ—FVÕfÇVW5¶–EÒÇÂ°¢VçF—G“¢6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‚B‚u¶FF×&÷÷6ÂÖÆ–æR×fÇVSÒ'VçF—G’%ÒrÂ&÷r“òçfÇVR’À¢&–6S¢6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‚B‚u¶FF×&÷÷6ÂÖÆ–æR×fÇVSÒ'&–6R%ÒrÂ&÷r“òçfÇVR¢Ó°¢7W'&VçE¶f–VÆEÒÒ6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"†–çWBçfÇVR“°¢–b†f–VÆBÓÓÒw&–6Rr’–çWBç7G–ÆRç6WE&÷W'G’‚rÒ×&÷÷6Â×&–6RÖ6‚rÂ6öÖÖW&6–Å&÷÷6Å&–6T6†&7FW%v–GF‚†–çWBçfÇVR’“°¢7FFRæ—FVÕfÇVW5¶–EÒÒ7W'&VçC°¢WFFT6öÖÖW&6–Å&÷÷6ÅF&ÆT6Æ7VÆF–öç2‡&ö÷DVÆVÖVçBÂ&÷÷6Â“°¢Ó°¢–çWBæFDWfVçDÆ—7FVæW"‚v–çWBrÂWFFUfÇVR“°¢–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ°¢WFFUfÇVR‚“°¢&÷÷6ÂçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢Ò“°¢Ò“°¢BB‚u¶FF×&÷÷6ÂÖÆ–æRÖÖWFÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†–çWB’Óâ°¢6öç7BWFFTÖWFÒ‚’Óâ°¢6öç7B–BÒ–çWBæFF6WBç&÷÷6ÄÆ–æTÖWF–C°¢6öç7Bf–VÆBÒ–çWBæFF6WBç&÷÷6ÄÆ–æTÖWF°¢6öç7B&÷rÒ–çWBæ6Æ÷6W7B‚u¶FF×&÷÷6ÂÖÆ–æR×&÷uÒr“°¢6öç7B7W'&VçBÒ7FFRæ—FVÕfÇVW5¶–EÒÇÂ°¢VçF—G“¢6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‚B‚u¶FF×&÷÷6ÂÖÆ–æR×fÇVSÒ'VçF—G’%ÒrÂ&÷r“òçfÇVR’À¢&–6S¢6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"‚B‚u¶FF×&÷÷6ÂÖÆ–æR×fÇVSÒ'&–6R%ÒrÂ&÷r“òçfÇVR’À¢&ö¦V7E6÷W&6S¢rrÀ¢76ö6–FVDf÷#¢rp¢Ó°¢7W'&VçE¶f–VÆEÒÒf–VÆBÓÓÒw&ö¦V7E6÷W&6Rp¢ò–çWBçfÇVRÓÓÒw7V2ròw7V2r¢w&ö¦V7Bp¢¢7G&–ær†–çWBçfÇVRÇÂrr’çG&–Ò‚’ç6Æ–6RƒÂ#C“°¢7FFRæ—FVÕfÇVW5¶–EÒÒ7W'&VçC°¢Ó°¢–çWBæFDWfVçDÆ—7FVæW"‚v–çWBrÂWFFTÖWF“°¢–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ°¢WFFTÖWF‚“°¢&÷÷6ÂçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢Ò“°¢Ò“°¢BB‚u¶FF×&÷÷6ÂÖÆ&÷"×6WGF–æuÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†–çWB’Óâ°¢6öç7BWFFUfÇVRÒ‚’Óâ°¢7FFRæÆ&÷%6WGF–æw5¶–çWBæFF6WBç&÷÷6ÄÆ&÷%6WGF–æuÒÒ6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"†–çWBçfÇVR“°¢WFFT6öÖÖW&6–Å&÷÷6ÄÆ&÷$6Æ7VÆF–öç2‡&ö÷DVÆVÖVçBÂ&÷÷6Â“°¢Ó°¢–çWBæFDWfVçDÆ—7FVæW"‚v–çWBrÂWFFUfÇVR“°¢–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ°¢WFFUfÇVR‚“°¢&÷÷6ÂçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢Ò“°¢Ò“°¢BB‚u¶FF×&÷÷6ÂÖÆ&÷"×v÷&²Ö†÷W'5ÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†–çWB’Óâ°¢6öç7BWFFUfÇVRÒ‚’Óâ°¢7FFRæÆ&÷%6WGF–æw2æ—FVÔ†÷W'5¶–çWBæFF6WBç&÷÷6ÄÆ&÷%v÷&´†÷W'5ÒÒ6öÖÖW&6–Å&÷÷6Åv÷&·76TçVÖ&W"†–çWBçfÇVR“°¢WFFT6öÖÖW&6–Å&÷÷6ÄÆ&÷$6Æ7VÆF–öç2‡&ö÷DVÆVÖVçBÂ&÷÷6Â“°¢Ó°¢–çWBæFDWfVçDÆ—7FVæW"‚v–çWBrÂWFFUfÇVR“°¢–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ°¢WFFUfÇVR‚“°¢&÷÷6ÂçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢Ò“°¢Ò“°¢B‚u¶FFÖFBÖ÷vâ×&÷÷6Â×÷6—F–öåÒrÂ&ö÷DVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä6öÖÖW&6–Å&÷÷6Ä7W7FöÕ÷6—F–öäF–Æör‡&÷÷6Âæ–BÂ7F—fT6öÖÖW&6–Å&÷÷6Äw&÷W’“°¢B‚u¶FF×6fRÖ6öÖÖW&6–Â×&÷÷6ÂÖ×•ÒrÂ&ö÷DVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6fT6öÖÖW&6–Å&÷÷6Ä×•6VÆV7F–öâ‡&÷÷6ÂÂ7F—fT6öÖÖW&6–Å&÷÷6Äw&÷WÂVçG&–W2Â&ö÷DVÆVÖVçB’“°¢BB‚u¶FF×&VÖ÷fR×&÷÷6ÂÖ7W7FöÒÖ—FVÕÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ&VÖ÷fT6öÖÖW&6–Å&÷÷6Ä7W7FöÕ÷6—F–öâ‡&÷÷6ÂÂ'WGFöâæFF6WBç&VÖ÷fU&÷÷6Ä7W7FöÔ—FVÒ’’“°¢BB‚u¶FF×&VÖ÷fR×&÷÷6ÂÖ×’Ö—FVÕÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7B&VÖ÷fVBÒ7FFRæ×”—FV×2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ'WGFöâæFF6WBç&VÖ÷fU&÷÷6Ä×”—FVÒ“°¢7FFRæ×”—FV×2Ò7FFRæ×”—FV×2æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ–BÓÒ'WGFöâæFF6WBç&VÖ÷fU&÷÷6Ä×”—FVÒ“°¢–b‡&VÖ÷fVCòç6÷W&6Tw&÷WÓÓÒv×’r’FVÆWFR7FFRæ—FVÕfÇVW5·&VÖ÷fVBæ–EÓ°¢FVÆWFR7FFRæÆ&÷%6WGF–æw2æ—FVÔ†÷W'5¶'WGFöâæFF6WBç&VÖ÷fU&÷÷6Ä×”—FVÕÓ°¢&÷÷6ÂçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT6öÖÖW&6–Å&÷÷6Å&V6÷&G2‚“°¢&VæFW$6öÖÖW&6–Å&÷÷6Åv÷&·76R‚“°¢Ò’“°¢BB‚u¶FFÖ6öÖÖW&6–Â×&÷÷6ÂÖ7F–öåÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä6öÖÖW&6–Å&÷÷6Äg&vÖVçDF–Æör‡&÷÷6Âæ–BÂ'WGFöâæFF6WBæ6öÖÖW&6–Å&÷÷6Ä7F–öâ’’“°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Å&W÷'D6öÇVÖç2†ÖöFT–G2ÒµÒÂw&÷W–BÒrrÂ&÷w2ÒµÒ’°¢6öç7B6VÆV7FVDÖöFT–G2Òæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6ÅF„ÖöFW2†ÖöFT–G2“°¢6öç7BF—&V7F–öâÒ4ôÔÔU$4”Åõ$õõ4Åõ$”4UôÔôDU5·6VÆV7FVDÖöFT–G5³ÕÓòæF—&V7F–öâÇÂvæöæRs°¢6öç7B6öÖ&–æVEF„Æ&VÂÒ6öÖÖW&6–Å&÷÷6Ä6öÖ&–æVEF„Æ&VÂ‡6VÆV7FVDÖöFT–G2“°¢6öç7BÖöæW”6öÇVÖåv–GF‚Ò†¶W’’Óâ°¢6öç7B&–6T6†&7FW'2Ò&÷w2ç&VGV6R‚†Ö†–×VÒÂ&÷r’ÓâÖF‚æÖ‚†Ö†–×VÒÂæWr–çFÂäçVÖ&W$f÷&ÖB‡&ö÷BæÆærÇÂw'RÕ%RrÂ²Ö†–×VÔg&7F–öäF–v—G3¢"Ò’æf÷&ÖB„ÖF‚æ'2„çVÖ&W"‡&÷sòå¶¶W•Ò’ÇÂ’’æÆVæwF‚’Â“°¢&WGW&âÖF‚æÖ–âƒs"ÂÖF‚æÖ‚ƒ3‚ÂÖF‚æ6V–Âƒ‚²&–6T6†&7FW'2¢"ã‚’’“°¢Ó°¢6öç7B&6RÒ°¢²Æ&VÃ¢~(IbrÂ¶W“¢vçVÖ&W"rÂv–GFƒ¢#ÂçVÖ&W#¢G'VRÒÀ¢²Æ&VÃ¢G"‚w&÷÷6ÄÆ–æTæÖRr’Â¶W“¢væÖRrÂv–GFƒ¢r¢rÒÀ¢²Æ&VÃ¢G"‚w&÷÷6ÅVæ—E6†÷'Br’Â¶W“¢wVæ—BrÂv–GFƒ¢3ÒÀ¢²Æ&VÃ¢G"‚w&÷÷6ÅVçF—G•6†÷'Br’Â¶W“¢wVçF—G’rÂv–GFƒ¢3bÂçVÖ&W#¢G'VRÐ¢Ó°¢–b†w&÷W–BÓÓÒv÷WG6–FU7V6–f–6F–öåv÷&·2r’&6RçW6‚‡²Æ&VÃ¢G"‚w&÷÷6Å7V5&ö¦V7D6öÇVÖâr’Â¶W“¢w&ö¦V7E6÷W&6RrÂv–GFƒ¢C‚Ò“°¢–b†w&÷W–BÓÓÒv76ö6–FVEv÷&·2r’&6RçW6‚‡²Æ&VÃ¢G"‚w&÷÷6Ä76ö6–FVDf÷$6öÇVÖâr’Â¶W“¢v76ö6–FVDf÷"rÂv–GFƒ¢s"Ò“°¢–b†F—&V7F–öâÓÓÒvæöæRr’&WGW&â²ââæ&6RÂ²Æ&VÃ¢G"‚w&–6Rr’Â¶W“¢wVæ—E&–6RrÂv–GFƒ¢ÖöæW”6öÇVÖåv–GF‚‚wVæ—E&–6Rr’ÂÖöæW“¢G'VRÒÂ²Æ&VÃ¢G"‚w&÷÷6Äw&÷75&–6Rr’Â¶W“¢vf–æÅF÷FÂrÂv–GFƒ¢ÖöæW”6öÇVÖåv–GF‚‚vf–æÅF÷FÂr’ÂÖöæW“¢G'VRÕÓ°¢–b†F—&V7F–öâÓÓÒw7V'G&7Br’°¢&WGW&â°¢ââæ&6RÀ¢²Æ&VÃ¢G"‚v–æ6ÇVFVEVæ—E&–6Uv—F†÷WEF‚r’Â¶W“¢væWEVæ—E&–6RrÂv–GFƒ¢ÖöæW”6öÇVÖåv–GF‚‚væWEVæ—E&–6Rr’ÂÖöæW“¢G'VRÒÀ¢²Æ&VÃ¢G"‚v–æ6ÇVFVEF÷FÅv—F†÷WEF‚r’Â¶W“¢vf–æÅF÷FÂrÂv–GFƒ¢ÖöæW”6öÇVÖåv–GF‚‚vf–æÅF÷FÂr’ÂÖöæW“¢G'VRÒÀ¢²Æ&VÃ¢G·G"‚v–æ6ÇVFVEVæ—E&–6Uv—F…F‚r—ÒG¶6öÖ&–æVEF„Æ&VÇÖÂ¶W“¢wVæ—E&–6RrÂv–GFƒ¢ÖöæW”6öÇVÖåv–GF‚‚wVæ—E&–6Rr’ÂÖöæW“¢G'VRÒÀ¢²Æ&VÃ¢G·G"‚v–æ6ÇVFVEF÷FÅv—F…F‚r—ÒG¶6öÖ&–æVEF„Æ&VÇÖÂ¶W“¢v&6UF÷FÂrÂv–GFƒ¢ÖöæW”6öÇVÖåv–GF‚‚v&6UF÷FÂr’ÂÖöæW“¢G'VRÒÀ¢Ó°¢Ð¢&WGW&â°¢ââæ&6RÀ¢²Æ&VÃ¢G"‚vW†6ÇVFVEVæ—E&–6Uv—F†÷WEF‚r’Â¶W“¢wVæ—E&–6RrÂv–GFƒ¢ÖöæW”6öÇVÖåv–GF‚‚wVæ—E&–6Rr’ÂÖöæW“¢G'VRÒÀ¢²Æ&VÃ¢G"‚vW†6ÇVFVEF÷FÅv—F†÷WEF‚r’Â¶W“¢v&6UF÷FÂrÂv–GFƒ¢ÖöæW”6öÇVÖåv–GF‚‚v&6UF÷FÂr’ÂÖöæW“¢G'VRÒÀ¢²Æ&VÃ¢G·G"‚vW†6ÇVFVEVæ—E&–6Uv—F…F‚r—ÒG¶6öÖ&–æVEF„Æ&VÇÖÂ¶W“¢vw&÷75Væ—E&–6RrÂv–GFƒ¢ÖöæW”6öÇVÖåv–GF‚‚vw&÷75Væ—E&–6Rr’ÂÖöæW“¢G'VRÒÀ¢²Æ&VÃ¢G·G"‚vW†6ÇVFVEF÷FÅv—F…F‚r—ÒG¶6öÖ&–æVEF„Æ&VÇÖÂ¶W“¢vf–æÅF÷FÂrÂv–GFƒ¢ÖöæW”6öÇVÖåv–GF‚‚vf–æÅF÷FÂr’ÂÖöæW“¢G'VRÒÀ¢Ó°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Å&W÷'EF&ÆR‡&÷÷6ÂÂg&vÖVçBÂVçG&–W2’°¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢6öç7B6VÆV7FVDÖöFT–G2Òæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6ÅF„ÖöFW2‡7FFRçF„ÖöFW2“°¢6öç7BF—&V7F–öâÒ4ôÔÔU$4”Åõ$õõ4Åõ$”4UôÔôDU5·6VÆV7FVDÖöFT–G5³ÕÓòæF—&V7F–öâÇÂvæöæRs°¢6öç7BF…F÷FÇ2Òö&¦V7Bæg&öÔVçG&–W2‡6VÆV7FVDÖöFT–G2æÖ‚†ÖöFT–B’Óâ¶ÖöFT–BÂÒ’“°¢ÆWB&–6UF÷FÂÒ°¢ÆWBæWEF÷FÂÒ°¢ÆWBw&÷75F÷FÂÒ°¢6öç7B&÷w2ÒVçG&–W2æÖ‚†VçG'’Â–æFW‚’Óâ°¢6öç7BÖ÷VçG2Ò6öÖÖW&6–Å&÷÷6ÄÆ–æTÖ÷VçG2†VçG'’çVçF—G’ÂVçG'’ç&–6RÂ6VÆV7FVDÖöFT–G2“°¢6öç7BF…fÇVW2Òö&¦V7Bæg&öÔVçG&–W2‡6VÆV7FVDÖöFT–G2æÖ‚†ÖöFT–B’Óâ°¢6öç7BÖ÷VçBÒ6öÖÖW&6–Å&÷÷6ÅF„Ö÷VçB†Ö÷VçG2ÂÖöFT–B“°¢F…F÷FÇ5¶ÖöFT–EÒ³ÒÖ÷VçC°¢&WGW&â¶F…òG¶ÖöFT–GÖÂÖ÷VçEÓ°¢Ò’“°¢&–6UF÷FÂ³ÒÖ÷VçG2æf–æÃ°¢æWEF÷FÂ³ÒF—&V7F–öâÓÓÒw7V'G&7BròÖ÷VçG2æf–æÂ¢Ö÷VçG2æ&6S°¢w&÷75F÷FÂ³ÒF—&V7F–öâÓÓÒw7V'G&7BròÖ÷VçG2æ&6R¢Ö÷VçG2æf–æÃ°¢&WGW&â°¢çVÖ&W#¢–æFW‚²À¢æÖS¢VçG'’ææÖRÀ¢Væ—C¢VçG'’çVæ—BÇÂ~(	BrÀ¢VçF—G“¢VçG'’çVçF—G’À¢&ö¦V7E6÷W&6S¢VçG'’ç&ö¦V7E6÷W&6RÓÓÒw7V2ròG"‚w&÷÷6Å7V56†÷'Br’¢G"‚w&÷÷6Å&ö¦V7E6†÷'Br’À¢76ö6–FVDf÷#¢VçG'’æ76ö6–FVDf÷"ÇÂ~(	BrÀ¢æWEVæ—E&–6S¢Ö÷VçG2çVæ—Df–æÂÀ¢w&÷75Væ—E&–6S¢Ö÷VçG2çVæ—Df–æÂÀ¢Væ—E&–6S¢VçG'’ç&–6RÀ¢&6UF÷FÃ¢Ö÷VçG2æ&6RÀ¢ââçF…fÇVW2À¢f–æÅF÷FÃ¢Ö÷VçG2æf–æÀ¢Ó°¢Ò“°¢6öç7B6VÆV7FVDÖöFTÆ&VÂÒ6VÆV7FVDÖöFT–G2æÆVæwF€¢ò6VÆV7FVDÖöFT–G2æÖ‚†ÖöFT–B’Óâ6öÖÖW&6–Å&÷÷6ÄÖöFU6†÷'DÆ&VÂ†ÖöFT–B’’æ¦ö–â‚r²r¢¢G"„4ôÔÔU$4”Åõ$õõ4Åõ$”4UôÔôDU2æ66‚æÆ&VÂ“°¢6öç7B7VÖÖ&–W2Ò°¢G·G"‚w&÷÷6Å&–6TÖöFRr—Ó¢G·6VÆV7FVDÖöFTÆ&VÇÖÀ¢G·G"‚wF÷FÅv÷&µG—W2r—Ó¢G¶VçG&–W2æÆVæwF‡Ö ¢Ó°¢6VÆV7FVDÖöFT–G2æf÷$V6‚‚†ÖöFT–B’Óâ7VÖÖ&–W2çW6‚†G¶6öÖÖW&6–Å&÷÷6ÄÖöFU6†÷'DÆ&VÂ†ÖöFT–B—Ó¢G¶f÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F…F÷FÇ5¶ÖöFT–EÒ’—Ö’“°¢6öç7BF÷FÄÆ&VÂÒF—&V7F–öâÓÓÒw7V'G&7Bròv–æ6ÇVFVEF÷FÅv—F†÷WEF‚r¢F—&V7F–öâÓÓÒvFBròw&–6UF÷FÅv—F…F‚r¢wF÷FÅ&÷÷6Å&–6Rs°¢7VÖÖ&–W2çW6‚†G·G"‡F÷FÄÆ&VÂ—Ó¢G¶f÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡&–6UF÷FÂ’—Ö“°¢&WGW&â°¢F—FÆS¢G"†g&vÖVçBæÆ&VÂ’À¢6öÇVÖç3¢6öÖÖW&6–Å&÷÷6Å&W÷'D6öÇVÖç2‡6VÆV7FVDÖöFT–G2Âg&vÖVçBæ–BÂ&÷w2’À¢&÷w2À¢7VÖÖ&–W2À¢&÷÷6ÅF÷FÇ3¢°¢æWEF÷FÃ¢6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’†æWEF÷FÂ’À¢w&÷75F÷FÃ¢6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’†w&÷75F÷FÂ’À¢F…F÷FÃ¢6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’„ö&¦V7BçfÇVW2‡F…F÷FÇ2’ç&VGV6R‚‡F÷FÂÂfÇVR’ÓâF÷FÂ²fÇVRÂ’’À¢÷6—F–öä6÷VçC¢VçG&–W2æÆVæwF€¢Ð¢Ó°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6ÄÆ&÷%&W÷'EF&ÆR‡&÷÷6ÂÂg&vÖVçBÂVçG&–W2’°¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢ÆWBF÷FÄ†÷W'2Ò°¢ÆWBF÷FÄ6÷7BÒ°¢6öç7B&÷w2ÒVçG&–W2æÖ‚†VçG'’Â–æFW‚’Óâ°¢6öç7BÖ÷VçG2Ò6öÖÖW&6–Å&÷÷6ÄÆ&÷$Æ–æTÖ÷VçG2†VçG'’Â7FFR“°¢F÷FÄ†÷W'2³ÒÖ÷VçG2çF÷FÄ†÷W'3°¢F÷FÄ6÷7B³ÒÖ÷VçG2çF÷FÃ°¢&WGW&â°¢çVÖ&W#¢–æFW‚²À¢æÖS¢VçG'’ææÖRÀ¢Væ—C¢VçG'’çVæ—BÇÂ~(	BrÀ¢VçF—G“¢Ö÷VçG2çVçF—G’À¢v÷&´†÷W'3¢Ö÷VçG2çv÷&´†÷W'2À¢†÷W&Ç•&FS¢Ö÷VçG2æ†÷W&Ç•&FRÀ¢F÷FÄ6÷7C¢Ö÷VçG2çF÷FÀ¢Ó°¢Ò“°¢6öç7BçVÖ&W$f÷&ÖBÒæWr–çFÂäçVÖ&W$f÷&ÖB‡&ö÷BæÆærÇÂw'RÕ%RrÂ²Ö†–×VÔg&7F–öäF–v—G3¢"Ò“°¢&WGW&â°¢F—FÆS¢G"†g&vÖVçBæÆ&VÂ’À¢6öÇVÖç3¢°¢²Æ&VÃ¢~(IbrÂ¶W“¢vçVÖ&W"rÂv–GFƒ¢#ÂçVÖ&W#¢G'VRÒÀ¢²Æ&VÃ¢G"‚vÆ&÷%v÷&´æÖRr’Â¶W“¢væÖRrÂv–GFƒ¢r¢rÒÀ¢²Æ&VÃ¢G"‚w&÷÷6ÅVæ—E6†÷'Br’Â¶W“¢wVæ—BrÂv–GFƒ¢3ÒÀ¢²Æ&VÃ¢G"‚w&÷÷6ÅVçF—G•6†÷'Br’Â¶W“¢wVçF—G’rÂv–GFƒ¢3bÂçVÖ&W#¢G'VRÒÀ¢²Æ&VÃ¢G"‚wv÷&´†÷W'2r’Â¶W“¢wv÷&´†÷W'2rÂv–GFƒ¢SÂçVÖ&W#¢G'VRÒÀ¢²Æ&VÃ¢G"‚v†÷W&Ç”V×Æ÷–VT6÷7Br’Â¶W“¢v†÷W&Ç•&FRrÂv–GFƒ¢c"ÂÖöæW“¢G'VRÒÀ¢²Æ&VÃ¢G"‚wF÷FÄÆ&÷$6÷7Br’Â¶W“¢wF÷FÄ6÷7BrÂv–GFƒ¢cbÂÖöæW“¢G'VRÐ¢ÒÀ¢&÷w2À¢7VÖÖ&–W3¢°¢G·G"‚vV×Æ÷–VTF–Ç”6÷7Br—Ó¢G¶f÷&ÖDÖöæW’‡7FFRæÆ&÷%6WGF–æw2æF–Ç”6÷7B—ÖÀ¢G·G"‚wv÷&¶–æt†÷W'5W$F’r—Ó¢G¶çVÖ&W$f÷&ÖBæf÷&ÖB‡7FFRæÆ&÷%6WGF–æw2çv÷&¶F”†÷W'2—ÖÀ¢G·G"‚v†÷W&Ç”V×Æ÷–VT6÷7Br—Ó¢G¶f÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6ÄÆ&÷$†÷W&Ç•&FR‡7FFR’—ÖÀ¢G·G"‚wF÷FÅv÷&µG—W2r—Ó¢G¶VçG&–W2æÆVæwF‡ÖÀ¢G·G"‚wF÷FÄÖä†÷W'2r—Ó¢G¶çVÖ&W$f÷&ÖBæf÷&ÖB†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F÷FÄ†÷W'2’—ÖÀ¢G·G"‚wF÷FÄÆ&÷$6÷7Br—Ó¢G¶f÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F÷FÄ6÷7B’—Ö ¢ÒÀ¢&÷÷6ÅF÷FÇ3¢°¢æWEF÷FÃ¢6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F÷FÄ6÷7B’À¢w&÷75F÷FÃ¢6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F÷FÄ6÷7B’À¢F…F÷FÃ¢À¢÷6—F–öä6÷VçC¢VçG&–W2æÆVæwF€¢Ð¢Ó°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Äg&vÖVçD6öæf–w2‚’°¢&WGW&â4ôÔÔU$4”Åõ$õõ4ÅôTD•Dõ%ô4ôÅTÔå2æfÆDÖ‚†6öÇVÖâ’Óâ6öÇVÖâæw&÷W2æÖ‚†w&÷W’Óâ‡²ââæw&÷WÂ6öÇVÖä–C¢6öÇVÖâæ–BÂ6öÇVÖäÆ&VÃ¢6öÇVÖâæÆ&VÂÒ’’“°§Ð ¦gVæ7F–öâ6öÖÖW&6–Å&÷÷6Å&W÷'B‡&÷÷6ÂÂg&vÖVçD–G2’°¢6öç7BfW'6–öâÒÆFW7DFö7VÖVçEfW'6–öâ‡&÷÷6Âæf–ÆR“°¢6öç7Bw&÷W2Ò6öÖÖW&6–Å&÷÷6Ä'&V¶F÷vâ‡fW'6–öâÂ&÷÷6Âæ¶–æB“°¢6öç7B6VÆV7FVBÒæWr6WB†g&vÖVçD–G2“°¢6öç7BF&ÆW2Ò6öÖÖW&6–Å&÷÷6Äg&vÖVçD6öæf–w2‚’æf–ÇFW"‚†g&vÖVçB’Óâ6VÆV7FVBæ†2†g&vÖVçBæ–B’’æÖ‚†g&vÖVçB’Óâ°¢6öç7BVçG&–W2Ò6öÖÖW&6–Å&÷÷6ÄVçG&–W4f÷$w&÷W‡&÷÷6ÂÂg&vÖVçBæ–BÂw&÷W2“°¢–b‚VçG&–W2æÆVæwF‚’&WGW&âçVÆÃ°¢&WGW&âg&vÖVçBæ–BÓÓÒvÆ&÷$†÷W'2rò6öÖÖW&6–Å&÷÷6ÄÆ&÷%&W÷'EF&ÆR‡&÷÷6ÂÂg&vÖVçBÂVçG&–W2’¢6öÖÖW&6–Å&÷÷6Å&W÷'EF&ÆR‡&÷÷6ÂÂg&vÖVçBÂVçG&–W2“°¢Ò’æf–ÇFW"„&ööÆVâ“°¢6öç7B7FFRÒ6öÖÖW&6–Å&÷÷6Åv÷&·76U7FFR‡&÷÷6Â“°¢6öç7B6öçF7G2Ò7FFRæ6öçF7G2ÇÂæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6Åv÷&·76R†çVÆÂ’æ6öçF7G3°¢6öç7BF÷FÇ2ÒF&ÆW2ç&VGV6R‚‡&W7VÇBÂF&ÆR’Óâ°¢6öç7BF&ÆUF÷FÇ2ÒF&ÆRç&÷÷6ÅF÷FÇ2ÇÂ·Ó°¢&W7VÇBææWEF÷FÂ³ÒçVÖ&W"‡F&ÆUF÷FÇ2ææWEF÷FÂ’ÇÂ°¢&W7VÇBæw&÷75F÷FÂ³ÒçVÖ&W"‡F&ÆUF÷FÇ2æw&÷75F÷FÂ’ÇÂ°¢&W7VÇBçF…F÷FÂ³ÒçVÖ&W"‡F&ÆUF÷FÇ2çF…F÷FÂ’ÇÂ°¢&W7VÇBç÷6—F–öä6÷VçB³ÒçVÖ&W"‡F&ÆUF÷FÇ2ç÷6—F–öä6÷VçB’ÇÂ°¢&WGW&â&W7VÇC°¢ÒÂ²æWEF÷FÃ¢Âw&÷75F÷FÃ¢ÂF…F÷FÃ¢Â÷6—F–öä6÷VçC¢Ò“°¢6öç7B6VÆV7FVDÖöFT–G2Òæ÷&ÖÆ—¦T6öÖÖW&6–Å&÷÷6ÅF„ÖöFW2‡7FFRçF„ÖöFW2“°¢6öç7BF„Æ&VÂÒ6öÖÖW&6–Å&÷÷6Ä6öÖ&–æVEF„Æ&VÂ‡6VÆV7FVDÖöFT–G2’ÇÂG"‚w&÷÷6ÅF„æ÷E6VÆV7FVBr“°¢6öç7Bv—F…F„Æ&VÂÒG"‚w&÷÷6Å7VÖÖ'•&–6Uv—F…F‚r’ç&WÆ6R‚w·F‡ÒrÂF„Æ&VÂ“°¢6öç7BF…F÷FÄÆ&VÂÒG"‚w&÷÷6Å7VÖÖ'•F…F÷FÂr’ç&WÆ6R‚w·F‡ÒrÂF„Æ&VÂ“°¢6öç7B6VæFW%6–væGW&RÒ¶6öçF7G2ç6VæFW$æÖRÂ6öçF7G2ç6VæFW%†öæUÒæÖ‚‡fÇVR’Óâ7G&–ær‡fÇVRÇÂrr’çG&–Ò‚’’æf–ÇFW"„&ööÆVâ’æ¦ö–â‚rÂr’ÇÂ~(	Bs°¢&WGW&â°¢F—FÆS¢G"‚w&÷÷6Åv÷&·76UF—FÆRr’À¢ö&¦V7DæÖS¢&÷÷6Âæö&¦V7DæÖRÀ¢6V7F–öäæÖS¢&÷÷6Âç6V7F–öäæÖRÀ¢ö&¦V7DÆ&VÃ¢G"‚vö&¦V7DæÖRr’À¢6V7F–öäÆ&VÃ¢G"‚w&÷÷6Å6V7F–öäæÖTÆ&VÂr’À¢F&ÆW2À¢'F–W3¢çVÆÂÀ¢&÷÷6ÄFö7VÖVçC¢°¢w&VWF–æs¢G"‚w&÷÷6Äw&VWF–ærr’À¢–çG&ó¢G"‚w&÷÷6Ä–çG&òr’À¢6öçF7G3¢°¢6VæFW#¢²F—FÆS¢G"‚w&÷÷6Å6VæFW"r’ÂæÖS¢6öçF7G2ç6VæFW$æÖRÂ÷&væ—¦F–öã¢6öçF7G2ç6VæFW$÷&væ—¦F–öâÂ†öæS¢6öçF7G2ç6VæFW%†öæRÒÀ¢&V6—–VçC¢²F—FÆS¢G"‚w&÷÷6Å&V6—–VçBr’ÂæÖS¢6öçF7G2ç&V6—–VçDæÖRÂ÷&væ—¦F–öã¢6öçF7G2ç&V6—–VçD÷&væ—¦F–öâÐ¢ÒÀ¢f–æÅ7VÖÖ'“¢°¢F—FÆS¢G"‚w&÷÷6Äf–æÅ7VÖÖ'’r’À¢&÷w3¢°¢²Æ&VÃ¢G"‚w&÷÷6Å7VÖÖ'•&–6UF÷FÂr’ÂfÇVS¢f÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F÷FÇ2ææWEF÷FÂ’’ÒÀ¢²Æ&VÃ¢v—F…F„Æ&VÂÂfÇVS¢f÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F÷FÇ2æw&÷75F÷FÂ’’ÒÀ¢²Æ&VÃ¢F…F÷FÄÆ&VÂÂfÇVS¢f÷&ÖDÖöæW’†6öÖÖW&6–Å&÷÷6Å&÷VæDÖöæW’‡F÷FÇ2çF…F÷FÂ’’ÒÀ¢²Æ&VÃ¢G"‚w&÷÷6Å7VÖÖ'•÷6—F–öç2r’ÂfÇVS¢7G&–ær‡F÷FÇ2ç÷6—F–öä6÷VçB’Ð¢Ð¢ÒÀ¢6Æ÷6–æs¢G"‚w&÷÷6Ä6Æ÷6–ærr’À¢&W7V7FgVÆÇ“¢G"‚w&÷÷6Å&W7V7FgVÆÇ’r’À¢6–væGW&S¢6VæFW%6–væGW&P¢Ð¢Ó°§Ð ¦gVæ7F–öâ÷Vä6öÖÖW&6–Å&÷÷6Å&W÷'E&Wf–Wr‡&W÷'B’°¢6öç7BF–ÆörÒB‚u¶FF×&W÷'B×&Wf–WrÖF–ÆöuÒr“°¢–b‚F–Æör’&WGW&ã°¢&VÆV6T66„÷&væ—¦F–öå&Wf–Wr‚“°¢B‚u¶FF×&W÷'B×&Wf–Wr×F—FÆUÒrÂF–Æör’çFW‡D6öçFVçBÒG"‚w&÷÷6Åv÷&·76UF—FÆRr“°¢B‚u¶FF×&W÷'B×&Wf–WrÖ†–çEÒrÂF–Æör’çFW‡D6öçFVçBÒG·&W÷'Bæö&¦V7DæÖWÒ+rG·&W÷'Bç6V7F–öäæÖWÖ°¢B‚u¶FF×&W÷'B×&Wf–WrÖ6öçFVçEÒrÂF–Æör’æ–ææW$…DÔÂÒ&W÷'E&Wf–WtÖ&·W‡&W÷'B“°¢B‚u¶FF×&W÷'B×&Wf–WrÖ7F–öç5ÒrÂF–Æör’æ–ææW$…DÔÂÒrs°¢–b‚F–Æöræ÷Vâ’F–Æörç6†÷tÖöFÂ‚“°§Ð ¦gVæ7F–öâ÷Vä6öÖÖW&6–Å&÷÷6Äg&vÖVçDF–Æör‡&÷÷6Ä–BÂ7F–öâ’°¢6öç7B&÷÷6ÂÒ6öÖÖW&6–Å&÷÷6Å&V6÷&G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ&÷÷6Ä–B“°¢6öç7BfW'6–öâÒÆFW7DFö7VÖVçEfW'6–öâ‡&÷÷6Ãòæf–ÆR“°¢–b‚&÷÷6ÂÇÂfW'6–öâ’&WGW&ã°¢6öç7Bw&÷W2Ò6öÖÖW&6–Å&÷÷6Ä'&V¶F÷vâ‡fW'6–öâÂ&÷÷6Âæ¶–æB“°¢6öç7Bg&vÖVçG2Ò6öÖÖW&6–Å&÷÷6Äg&vÖVçD6öæf–w2‚’æÖ‚†g&vÖVçB’Óâ‡°¢ââæg&vÖVçBÀ¢6÷VçC¢6öÖÖW&6–Å&÷÷6ÄVçG&–W4f÷$w&÷W‡&÷÷6ÂÂg&vÖVçBæ–BÂw&÷W2’æÆVæwF€¢Ò’“°¢6öç7B7F–öä¶W’Ò²F÷væÆöC¢vF÷væÆöE&÷÷6ÂrÂf–Ws¢wf–Wu&÷÷6ÂrÂ6†&S¢w6†&U&÷÷6ÂrÕ¶7F–öåÒÇÂwf–Wu&÷÷6Âs°¢6öç7Bg&vÖVçDÖ&·WÒg&vÖVçG2æÖ‚†g&vÖVçB’ÓâÆÆ&VÂ6Æ73Ò"G¶g&vÖVçBæ6÷VçBòrr¢v—2ÖV×G’wÒ#ãÆ–çWBG—SÒ&6†V6¶&÷‚"fÇVSÒ"G¶g&vÖVçBæ–GÒ"FFÖ6öÖÖW&6–Â×&÷÷6ÂÖg&vÖVçBG¶g&vÖVçBæ6÷VçBòrr¢rF—6&ÆVBwÒóãÇ7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"†g&vÖVçBæÆ&VÂ’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"†g&vÖVçBæ6öÇVÖäÆ&VÂ’—Ò+rG¶g&vÖVçBæ6÷VçGÒG¶W66T‡FÖÂ‡G"‚w&÷÷6Äg&vÖVçE÷6—F–öç2r’—ÓÂ÷6ÖÆÃãÂ÷7ããÂöÆ&VÃæ’æ¦ö–â‚rr“°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚v6†ö÷6U&÷÷6Äg&vÖVçG2r’’ÂW66T‡FÖÂ‡G"‚v6†ö÷6U&÷÷6Äg&vÖVçG4†–çBr’’ÂÆF—b6Æ73Ò&6öÖÖW&6–Â×&÷÷6ÂÖg&vÖVçBÖÆ—7B#âG¶g&vÖVçDÖ&·WÓÂöF—cãÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ6æ6VÂÖ6öÖÖW&6–Â×&÷÷6ÂÖg&vÖVçG3âG¶W66T‡FÖÂ‡G"‚v6æ6VÂr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖ6öæf—&ÒÖ6öÖÖW&6–Â×&÷÷6ÂÖg&vÖVçG3âG¶W66T‡FÖÂ‡G"†7F–öä¶W’’—ÓÂö'WGFöããÂöF—cæ“°¢6öç7B66÷RÒB‚u¶FFÖF–ÆörÖ6öçFVçEÒr“°¢B‚u¶FFÖ6æ6VÂÖ6öÖÖW&6–Â×&÷÷6ÂÖg&vÖVçG5ÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚’“°¢B‚u¶FFÖ6öæf—&ÒÖ6öÖÖW&6–Â×&÷÷6ÂÖg&vÖVçG5ÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ7–æ2†WfVçB’Óâ°¢6öç7Bg&vÖVçD–G2ÒBB‚u¶FFÖ6öÖÖW&6–Â×&÷÷6ÂÖg&vÖVçEÓ¦6†V6¶VBrÂ66÷R’æÖ‚†–çWB’Óâ–çWBçfÇVR“°¢–b‚g&vÖVçD–G2æÆVæwF‚’²6†÷uFö7B‡G"‚w6VÆV7E&÷÷6Äg&vÖVçG2r’“²&WGW&ã²Ð¢6öç7B&W÷'BÒ6öÖÖW&6–Å&÷÷6Å&W÷'B‡&÷÷6ÂÂg&vÖVçD–G2“°¢–b‚&W÷'BçF&ÆW2æÆVæwF‚’²6†÷uFö7B‡G"‚w6VÆV7E&÷÷6Äg&vÖVçG2r’“²&WGW&ã²Ð¢–b†7F–öâÓÓÒwf–Wrr’°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢÷Vä6öÖÖW&6–Å&÷÷6Å&W÷'E&Wf–Wr‡&W÷'B“°¢&WGW&ã°¢Ð¢6öç7B'WGFöâÒWfVçBæ7W'&VçEF&vWC°¢'WGFöâæF—6&ÆVBÒG'VS°¢G'’°¢v—BFVÆ—fW$66…&W÷'B‡&W÷'BÂwFbrÂ7F–öâÓÓÒw6†&Rr“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢Ò6F6‚†W'&÷"’°¢–b†W'&÷#òææÖRÓÒt&÷'DW'&÷"r’²6öç6öÆRæW'&÷"†W'&÷"“²6†÷uFö7B‡G"‚v6öÖ–æu6ööâr’“²Ð¢Òf–æÆÇ’°¢'WGFöâæF—6&ÆVBÒfÇ6S°¢Ð¢Ò“°§Ð ¦gVæ7F–öâ&ö¦V7DæÇ—6—5F$6öçFVçB‡F"ÂfW'6–öâÒçVÆÂÂ¶–æBÒw&ö¦V7Br’°¢–b‡F"ÓÓÒw&÷÷6Ârbb¶–æBÓÓÒw&ö¦V7Br’&WGW&â&ö¦V7DW7F–ÖFT'&V¶F÷väÖ&·W‡fW'6–öâÂ¶–æB“°¢6öç7B6FÆörÒfW'6–öâò66…6÷W&6T6FÆötg&öÔf–ÆU&V6÷&B‡fW'6–öâÂ¶–æB’¢µÓ°¢–b†6FÆöræÆVæwF‚’°¢–b‡F"ÓÓÒw6†VWG2r’°¢6öç7B6†VWG2Ò²ââææWr6WB†6FÆöræÖ‚†VçG'’’ÓâVçG'’ç6÷W&6U6†VWB’æf–ÇFW"„&ööÆVâ’•Ó°¢–b‡6†VWG2æÆVæwF‚’&WGW&âÆF—b6Æ73Ò&æÇ—6—2ÖFWF–Â×F&ÆR×67&öÆÂ#ãÇF&ÆR6Æ73Ò&æÇ—6—2ÖFWF–Â×F&ÆR#ãÇF†VCãÇG#âGµ²w6†VWDçVÖ&W"rÂw6†VWDæÖRrÂw7—7FVÒrÂw7FGW4Æ&VÂuÒæÖ‚†¶W’’ÓâÇFƒâG¶W66T‡FÖÂ‡G"†¶W’’—ÓÂ÷Fƒæ’æ¦ö–â‚rr—ÓÂ÷G#ãÂ÷F†VCãÇF&öG“âG·6†VWG2æÖ‚‡6†VWBÂ–æFW‚’ÓâÇG#ãÇFCâG¶–æFW‚²ÓÂ÷FCãÇFCâG¶W66T‡FÖÂ‡6†VWB—ÓÂ÷FCãÇFCî(	CÂ÷FCãÇFCâG¶W66T‡FÖÂ‡G"‚væÇ—¦VBr’—ÓÂ÷FCãÂ÷G#æ’æ¦ö–â‚rr—ÓÂ÷F&öG“ãÂ÷F&ÆSãÂöF—cæ°¢Ð¢–b‡F"ÓÓÒw&÷÷6Âr’°¢6öç7B&÷w2Ò6FÆörç6Æ–6RƒÂc’æÖ‚†VçG'’’ÓâÇG#ãÇFCâG¶W66T‡FÖÂ†VçG'’ç6÷W&6U6†VWBÇÂG"†VçG'’ç6÷W&6T¶–æB’—ÓÂ÷FCãÇFCâG¶W66T‡FÖÂ†VçG'’ææÖR—ÓÂ÷FCãÇFCâG¶W66T‡FÖÂ†VçG'’çVæ—BÇÂ~(	Br—ÓÂ÷FCãÇFCâG¶VçG'’çVçF—G’ÇÂ~(	BwÓÂ÷FCãÇFCâG¶VçG'’ç&–6RòW66T‡FÖÂ†f÷&ÖDÖöæW’†VçG'’ç&–6R’’¢~(	BwÓÂ÷FCãÇFCâG¶VçG'’ç&–6RbbVçG'’çVçF—G’òW66T‡FÖÂ†f÷&ÖDÖöæW’†VçG'’ç&–6R¢VçG'’çVçF—G’’’¢~(	BwÓÂ÷FCãÂ÷G#æ’æ¦ö–â‚rr“°¢&WGW&âÆF—b6Æ73Ò&æÇ—6—2ÖFWF–Â×F&ÆR×67&öÆÂ#ãÇF&ÆR6Æ73Ò&æÇ—6—2ÖFWF–Â×F&ÆR#ãÇF†VCãÇG#âGµ²w6V7F–öârÂwv÷&´æÖRrÂwVæ—BrÂwVçF—G’rÂw&–6RrÂw&÷uF÷FÂuÒæÖ‚†¶W’’ÓâÇFƒâG¶W66T‡FÖÂ‡G"†¶W’’—ÓÂ÷Fƒæ’æ¦ö–â‚rr—ÓÂ÷G#ãÂ÷F†VCãÇF&öG“âG·&÷w7ÓÂ÷F&öG“ãÂ÷F&ÆSãÂöF—cæ°¢Ð¢–b‡F"ÓÓÒvÖFW&–Ç2r’°¢6öç7B6VÆV7FVBÒ6FÆöræf–ÇFW"‚†VçG'’’ÓâVçG'’æ6FVv÷'’ÓÓÒvÖFW&–Âr“°¢6öç7B&÷w2Ò‡6VÆV7FVBæÆVæwF‚ò6VÆV7FVB¢6FÆör’ç6Æ–6RƒÂc’æÖ‚†VçG'’Â–æFW‚’ÓâÇG#ãÇFCâG¶–æFW‚²ÓÂ÷FCãÇFCâG¶W66T‡FÖÂ†VçG'’ææÖR—ÓÂ÷FCãÇFCî(	CÂ÷FCãÇFCâG¶W66T‡FÖÂ†VçG'’çVæ—BÇÂ~(	Br—ÓÂ÷FCãÇFCâG¶VçG'’çVçF—G’ÇÂ~(	BwÓÂ÷FCãÇFCâG¶W66T‡FÖÂ†VçG'’ç6÷W&6U6†VWBÇÂVçG'’ç6÷W&6TæÖRÇÂG"†VçG'’ç6÷W&6T¶–æB’—ÓÂ÷FCãÂ÷G#æ’æ¦ö–â‚rr“°¢&WGW&âÆF—b6Æ73Ò&æÇ—6—2ÖFWF–Â×F&ÆR×67&öÆÂ#ãÇF&ÆR6Æ73Ò&æÇ—6—2ÖFWF–Â×F&ÆR#ãÇF†VCãÇG#âGµ²w&V6÷&DçVÖ&W"rÂvÖFW&–ÄæÖRrÂvÖ&µG—RrÂwVæ—BrÂwVçF—G’rÂw6÷W&6RuÒæÖ‚†¶W’’ÓâÇFƒâG¶W66T‡FÖÂ‡G"†¶W’’—ÓÂ÷Fƒæ’æ¦ö–â‚rr—ÓÂ÷G#ãÂ÷F†VCãÇF&öG“âG·&÷w7ÓÂ÷F&öG“ãÂ÷F&ÆSãÂöF—cæ°¢Ð¢–b‡F"ÓÓÒv&÷r’°¢6öç7B6VÆV7FVBÒ6FÆöræf–ÇFW"‚†VçG'’’ÓâVçG'’æ6FVv÷'’ÓÓÒwv÷&²r“°¢6öç7B&÷w2Ò‡6VÆV7FVBæÆVæwF‚ò6VÆV7FVB¢6FÆör’ç6Æ–6RƒÂc’æÖ‚†VçG'’Â–æFW‚’ÓâÇG#ãÇFCâG¶–æFW‚²ÓÂ÷FCãÇFCâG¶W66T‡FÖÂ†VçG'’ææÖR—ÓÂ÷FCãÇFCâG¶W66T‡FÖÂ†VçG'’çVæ—BÇÂ~(	Br—ÓÂ÷FCãÇFCâG¶VçG'’çVçF—G’ÇÂ~(	BwÓÂ÷FCãÇFCâG¶W66T‡FÖÂ†VçG'’ç6÷W&6U6†VWBÇÂVçG'’ç6÷W&6TæÖRÇÂG"†VçG'’ç6÷W&6T¶–æB’—ÓÂ÷FCãÂ÷G#æ’æ¦ö–â‚rr“°¢&WGW&âÆF—b6Æ73Ò&æÇ—6—2ÖFWF–Â×F&ÆR×67&öÆÂ#ãÇF&ÆR6Æ73Ò&æÇ—6—2ÖFWF–Â×F&ÆR#ãÇF†VCãÇG#âGµ²w&V6÷&DçVÖ&W"rÂwv÷&´æÖRrÂwVæ—BrÂwVçF—G’rÂw6÷W&6RuÒæÖ‚†¶W’’ÓâÇFƒâG¶W66T‡FÖÂ‡G"†¶W’’—ÓÂ÷Fƒæ’æ¦ö–â‚rr—ÓÂ÷G#ãÂ÷F†VCãÇF&öG“âG·&÷w7ÓÂ÷F&öG“ãÂ÷F&ÆSãÂöF—cæ°¢Ð¢Ð¢–b‡F"ÓÓÒw&÷÷6Âr’&WGW&âæÇ—6—4V×G•F&ÆR…²w6V7F–öârÂwv÷&´æÖRrÂwVæ—BrÂwVçF—G’rÂw&–6RrÂw&÷uF÷FÂuÒ“°¢–b‡F"ÓÓÒw6†VWG2r’&WGW&âæÇ—6—4V×G•F&ÆR…²w6†VWDçVÖ&W"rÂw6†VWDæÖRrÂw7—7FVÒrÂw7FGW4Æ&VÂuÒ“°¢–b‡F"ÓÓÒw7—7FV×2r’&WGW&âæÇ—6—4V×G•F&ÆR…²w7—7FVÒrÂw6†VWG2rÂvÖFW&–Ç2rÂwv÷&·2rÂw7FGW4Æ&VÂuÒ“°¢–b‡F"ÓÓÒvÖFW&–Ç2r’&WGW&âæÇ—6—4V×G•F&ÆR…²w&V6÷&DçVÖ&W"rÂvÖFW&–ÄæÖRrÂvÖ&µG—RrÂwVæ—BrÂwVçF—G’rÂw6÷W&6RuÒ“°¢&WGW&âæÇ—6—4V×G•F&ÆR…²w&V6÷&DçVÖ&W"rÂwv÷&´æÖRrÂwVæ—BrÂwVçF—G’rÂw6÷W&6RuÒ“°§Ð ¦gVæ7F–öâfW'6–öä6FÆötF–ffW&Væ6W2‡&Wf–÷W2Â7W'&VçBÂ¶–æB’°¢6öç7B&Vf÷&T6FÆörÒ66…6÷W&6T6FÆötg&öÔf–ÆU&V6÷&B‡&Wf–÷W2Â¶–æB“°¢6öç7BgFW$6FÆörÒ66…6÷W&6T6FÆötg&öÔf–ÆU&V6÷&B†7W'&VçBÂ¶–æB“°¢6öç7B&Vf÷&RÒæWrÖ†&Vf÷&T6FÆöræÖ‚†VçG'’’Óâ¶66…6÷W&6T¶W’†VçG'’ææÖR’ÂVçG'•Ò’“°¢6öç7BgFW"ÒæWrÖ†gFW$6FÆöræÖ‚†VçG'’’Óâ¶66…6÷W&6T¶W’†VçG'’ææÖR’ÂVçG'•Ò’“°¢6öç7BFFVBÒgFW$6FÆöræf–ÇFW"‚†VçG'’’Óâ&Vf÷&Ræ†2†66…6÷W&6T¶W’†VçG'’ææÖR’’“°¢6öç7B&VÖ÷fVBÒ&Vf÷&T6FÆöræf–ÇFW"‚†VçG'’’ÓâgFW"æ†2†66…6÷W&6T¶W’†VçG'’ææÖR’’“°¢6öç7B6†ævVBÒgFW$6FÆöræfÆDÖ‚†VçG'’’Óâ°¢6öç7BöÆBÒ&Vf÷&RævWB†66…6÷W&6T¶W’†VçG'’ææÖR’“°¢–b‚öÆB’&WGW&âµÓ°¢&WGW&âöÆBçVæ—BÓÒVçG'’çVæ—BÇÂçVÖ&W"†öÆBçVçF—G’’ÓÒçVÖ&W"†VçG'’çVçF—G’’ÇÂçVÖ&W"†öÆBç&–6R’ÓÒçVÖ&W"†VçG'’ç&–6R’ò·²&Vf÷&S¢öÆBÂgFW#¢VçG'’ÕÒ¢µÓ°¢Ò“°¢&WGW&â²&Vf÷&T6FÆörÂgFW$6FÆörÂFFVBÂ&VÖ÷fVBÂ6†ævVBÓ°§Ð ¦gVæ7F–öâfW'6–öä6FÆöufÇVR†VçG'’’°¢–b‚VçG'’’&WGW&â~(	Bs°¢&WGW&â¶VçG'’çVæ—BÂVçG'’çVçF—G’ò7G&–ær†VçG'’çVçF—G’’¢rrÂVçG'’ç&–6Ròf÷&ÖDÖöæW’†VçG'’ç&–6R’¢ruÒæf–ÇFW"„&ööÆVâ’æ¦ö–â‚r+rr’ÇÂ~(	Bs°§Ð ¦gVæ7F–öâ&Wf—6–öä6ö×&—6öäÖ&·W†f–ÆRÂ÷F–öç2Ò·Ò’°¢6öç7BfW'6–öç2Òf–ÆUfW'6–öç2†f–ÆR“°¢–b‡fW'6–öç2æÆVæwF‚Â"’&WGW&ârs°¢6öç7B6ö×&—6öâÒf–ÆRæ6ö×&—6öâÇÂ·Ó°¢6öç7B&Wf–÷W2Òf–ÆUfW'6–öå6æ6†÷B†÷F–öç2ç&Wf–÷W2ÇÂ6ö×&—6öâç&Wf–÷W2ÇÂfW'6–öç5·fW'6–öç2æÆVæwF‚Ò%Ò“°¢6öç7B7W'&VçBÒf–ÆUfW'6–öå6æ6†÷B†÷F–öç2æ7W'&VçBÇÂ6ö×&—6öâæ7W'&VçBÇÂfW'6–öç5·fW'6–öç2æÆVæwF‚ÒÒ“°¢6öç7B¶–æBÒ÷F–öç2æ¶–æBÇÂf–ÆRæ¶–æBÇÂw&ö¦V7Bs°¢6öç7B6†ævW2ÒfW'6–öä6ö×&—6öä6†ævW2‡&Wf–÷W2Â7W'&VçB“°¢–b„ö&¦V7Bç&÷F÷G—Ræ†4÷vå&÷W'G’æ6ÆÂ‡&Wf–÷W2Âv6öçG&7DçVÖ&W"r’ÇÂö&¦V7Bç&÷F÷G—Ræ†4÷vå&÷W'G’æ6ÆÂ†7W'&VçBÂv6öçG&7DçVÖ&W"r’’°¢6†ævW2çW6‚‡²¶W“¢v6öçG&7DçVÖ&W$Æ&VÂrÂ&Vf÷&S¢&Wf–÷W2æ6öçG&7DçVÖ&W"ÇÂ~(	BrÂgFW#¢7W'&VçBæ6öçG&7DçVÖ&W"ÇÂ~(	BrÂ6†ævVC¢&Wf–÷W2æ6öçG&7DçVÖ&W"ÓÒ7W'&VçBæ6öçG&7DçVÖ&W"Ò“°¢Ð¢6öç7B6FÆötF–ffW&Væ6W2ÒfW'6–öä6FÆötF–ffW&Væ6W2‡&Wf–÷W2Â7W'&VçBÂ¶–æB“°¢6öç7B6öçFVçD6†ævVD6÷VçBÒ6FÆötF–ffW&Væ6W2æFFVBæÆVæwF‚²6FÆötF–ffW&Væ6W2ç&VÖ÷fVBæÆVæwF‚²6FÆötF–ffW&Væ6W2æ6†ævVBæÆVæwFƒ°¢6öç7B6†ævVD6÷VçBÒ6†ævW2æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ6†ævVB’æÆVæwF‚²6öçFVçD6†ævVD6÷VçC°¢6öç7B—5VæF–ærÒ—4Fö7VÖVçEfW'6–öäæÇ—¦VB‡&Wf–÷W2’ÇÂ—4Fö7VÖVçEfW'6–öäæÇ—¦VB†7W'&VçB“°¢6öç7B&÷w2Ò6†ævW2æÖ‚†—FVÒ’ÓâÇG#ãÇFƒâG¶W66T‡FÖÂ‡G"†—FVÒæ¶W’’—ÓÂ÷FƒãÇFCâG¶W66T‡FÖÂ†—FVÒæ&Vf÷&R—ÓÂ÷FCãÇFCâG¶W66T‡FÖÂ†—FVÒægFW"—ÓÂ÷FCãÇFCãÇ7â6Æ73Ò'&Wf—6–öâÖ6†ævR×7FGW2G¶—FVÒæ6†ævVBòv—2Ö6†ævVBr¢v—2×Væ6†ævVBwÒ#âG¶W66T‡FÖÂ‡G"†—FVÒæ6†ævVBòv6†ævVBr¢wVæ6†ævVBr’—ÓÂ÷7ããÂ÷FCãÂ÷G#æ’æ¦ö–â‚rr“°¢6öç7B6öçFVçE&÷w2Ò°¢ââæ6FÆötF–ffW&Væ6W2æFFVBæÖ‚†VçG'’’Óâ‡²æÖS¢VçG'’ææÖRÂ&Vf÷&S¢çVÆÂÂgFW#¢VçG'’Â7FGW3¢w÷6—F–öäFFVBrÒ’’À¢ââæ6FÆötF–ffW&Væ6W2ç&VÖ÷fVBæÖ‚†VçG'’’Óâ‡²æÖS¢VçG'’ææÖRÂ&Vf÷&S¢VçG'’ÂgFW#¢çVÆÂÂ7FGW3¢w÷6—F–öå&VÖ÷fVBrÒ’’À¢ââæ6FÆötF–ffW&Væ6W2æ6†ævVBæÖ‚†VçG'’’Óâ‡²æÖS¢VçG'’ægFW"ææÖRÂ&Vf÷&S¢VçG'’æ&Vf÷&RÂgFW#¢VçG'’ægFW"Â7FGW3¢w÷6—F–öä6†ævVBrÒ’¢Òç6Æ–6RƒÂ#’æÖ‚†VçG'’’ÓâÇG#ãÇFƒâG¶W66T‡FÖÂ†VçG'’ææÖR—ÓÂ÷FƒãÇFCâG¶W66T‡FÖÂ‡fW'6–öä6FÆöufÇVR†VçG'’æ&Vf÷&R’—ÓÂ÷FCãÇFCâG¶W66T‡FÖÂ‡fW'6–öä6FÆöufÇVR†VçG'’ægFW"’—ÓÂ÷FCãÇFCãÇ7â6Æ73Ò'&Wf—6–öâÖ6†ævR×7FGW2—2Ö6†ævVB#âG¶W66T‡FÖÂ‡G"†VçG'’ç7FGW2’—ÓÂ÷7ããÂ÷FCãÂ÷G#æ’æ¦ö–â‚rr“°¢6öç7B6öçFVçDÖ&·WÒ—5VæF–æp¢òÇ6V7F–öâ6Æ73Ò'&Wf—6–öâÖ6öçFVçB×7FGW2#ãÇ7ãâÂ÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚v6ö×&—6öäæVVG4æÇ—6—2r’—ÓÂ÷7G&öæsãÇâG¶W66T‡FÖÂ‡G"‚v6ö×&—6öäæVVG4æÇ—6—46÷’r’—ÓÂ÷ãÂöF—cãÂ÷6V7F–öãæ ¢¢6FÆötF–ffW&Væ6W2æ&Vf÷&T6FÆöræÆVæwF‚ÇÂ6FÆötF–ffW&Væ6W2ægFW$6FÆöræÆVæwF€¢òÇ6V7F–öâ6Æ73Ò'&Wf—6–öâÖ6FÆörÖF–ffW&Væ6W2#ãÆF—b6Æ73Ò'&Wf—6–öâÖ6öçFVçB×7VÖÖ'’#ãÆ'F–6ÆSãÇ7ãâG¶W66T‡FÖÂ‡G"‚w÷6—F–öç4FFVBr’—ÓÂ÷7ããÆ#âG¶6FÆötF–ffW&Væ6W2æFFVBæÆVæwF‡ÓÂö#ãÂö'F–6ÆSãÆ'F–6ÆSãÇ7ãâG¶W66T‡FÖÂ‡G"‚w÷6—F–öç5&VÖ÷fVBr’—ÓÂ÷7ããÆ#âG¶6FÆötF–ffW&Væ6W2ç&VÖ÷fVBæÆVæwF‡ÓÂö#ãÂö'F–6ÆSãÆ'F–6ÆSãÇ7ãâG¶W66T‡FÖÂ‡G"‚w÷6—F–öç46†ævVBr’—ÓÂ÷7ããÆ#âG¶6FÆötF–ffW&Væ6W2æ6†ævVBæÆVæwF‡ÓÂö#ãÂö'F–6ÆSãÂöF—câG¶6öçFVçE&÷w2òÆF—b6Æ73Ò'&Wf—6–öâÖF–ffW&Væ6R×67&öÆÂ#ãÇF&ÆSãÇF†VCãÇG#ãÇFƒâG¶W66T‡FÖÂ‡G"‚wv÷&´÷$ÖFW&–ÄæÖRr’—ÓÂ÷FƒãÇFƒâG¶W66T‡FÖÂ‡G"‚v&Vf÷&Rr’—ÓÂ÷FƒãÇFƒâG¶W66T‡FÖÂ‡G"‚vgFW"r’—ÓÂ÷FƒãÇFƒâG¶W66T‡FÖÂ‡G"‚w7FGW4Æ&VÂr’—ÓÂ÷FƒãÂ÷G#ãÂ÷F†VCãÇF&öG“âG¶6öçFVçE&÷w7ÓÂ÷F&öG“ãÂ÷F&ÆSãÂöF—cæ¢Ç6Æ73Ò'&Wf—6–öâÖæòÖ6öçFVçBÖF–ffW&Væ6W2#âG¶W66T‡FÖÂ‡G"‚væôW‡G&7FVDF–ffW&Væ6W2r’—ÓÂ÷æÓÂ÷6V7F–öãæ ¢¢Ç6V7F–öâ6Æ73Ò'&Wf—6–öâÖ6öçFVçB×7FGW2#ãÇ7ãî)xsÂ÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚v6öçFVçDF–ffW&Væ6W2r’—Ó¢G¶W66T‡FÖÂ‡G"‚v6öçFVçD6ö×&—6öåVæF–ærr’—ÓÂ÷7G&öæsãÇâG¶W66T‡FÖÂ‡G"‚v6öçFVçD6ö×&—6öåVæF–æt6÷’r’—ÓÂ÷ãÂöF—cãÂ÷6V7F–öãæ°¢6öç7B†—7F÷'’ÒfW'6–öç2ç6Æ–6R‚’ç&WfW'6R‚’æÖ‚‡fW'6–öâÂ&WfW'6T–æFW‚’Óâ°¢6öç7BçVÖ&W"ÒfW'6–öç2æÆVæwF‚Ò&WfW'6T–æFWƒ°¢&WGW&âÆÆ“ãÆ#çbG¶çVÖ&W'ÓÂö#ãÇ7ããÇ7G&öæsâG¶W66T‡FÖÂ‡fW'6–öâææÖR—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR‡fW'6–öâç6—¦R’—Ò+rG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR‡fW'6–öâæFFVDB’—ÓÂ÷6ÖÆÃãÂ÷7ããÂöÆ“æ°¢Ò’æ¦ö–â‚rr“°¢&WGW&âÇ6V7F–öâ6Æ73Ò'&Wf—6–öâÖ6ö×&—6öâG¶—5VæF–æròv—2×VæF–ærr¢v—2×&VG’wÒ#ãÆ†VFW#ãÆF—cãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ2dU%4”ôâ4ôåE$ôÃÂ÷7ããÆƒ#âG¶W66T‡FÖÂ‡G"‚wfW'6–öä6ö×&—6öâr’—ÓÂöƒ#ãÇâG¶6†ævVD6÷VçGÒG¶W66T‡FÖÂ‡G"‚v6†ævW4f÷VæBr’—ÓÂ÷ãÂöF—cãÇ7â6Æ73Ò'&Wf—6–öâÖ6ö×&—6öâÖ6†—#âG¶W66T‡FÖÂ‡G"†—5VæF–æròv6ö×&—6öä–å&öw&W72r¢v6ö×&—6öä6ö×ÆWFRr’—ÓÂ÷7ããÂö†VFW#ãÆF—b6Æ73Ò'&Wf—6–öâ×fW'6–öâ×—"#ãÆ'F–6ÆSãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚w&Wf–÷W5fW'6–öâr’—ÓÂ÷6ÖÆÃãÆ#âG¶W66T‡FÖÂ‡&Wf–÷W2ææÖR—ÓÂö#ãÇ7ãâG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR‡&Wf–÷W2ç6—¦R’—Ò+rG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR‡&Wf–÷W2æFFVDB’—ÓÂ÷7ããÂö'F–6ÆSãÆ’&–Ö†–FFVãÒ'G'VR#î(i#Âö“ãÆ'F–6ÆSãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚v7W'&VçEfW'6–öâr’—ÓÂ÷6ÖÆÃãÆ#âG¶W66T‡FÖÂ†7W'&VçBææÖR—ÓÂö#ãÇ7ãâG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR†7W'&VçBç6—¦R’—Ò+rG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR†7W'&VçBæFFVDB’—ÓÂ÷7ããÂö'F–6ÆSãÂöF—cãÇ6V7F–öâ6Æ73Ò'&Wf—6–öâÖF–ffW&Væ6W2#ãÆƒ3âG¶W66T‡FÖÂ‡G"‚vÖWFFFF–ffW&Væ6W2r’—ÓÂöƒ3ãÆF—b6Æ73Ò'&Wf—6–öâÖF–ffW&Væ6R×67&öÆÂ#ãÇF&ÆSãÇF†VCãÇG#ãÇFƒãÂ÷FƒãÇFƒâG¶W66T‡FÖÂ‡G"‚v&Vf÷&Rr’—ÓÂ÷FƒãÇFƒâG¶W66T‡FÖÂ‡G"‚vgFW"r’—ÓÂ÷FƒãÇFƒâG¶W66T‡FÖÂ‡G"‚w7FGW4Æ&VÂr’—ÓÂ÷FƒãÂ÷G#ãÂ÷F†VCãÇF&öG“âG·&÷w7ÓÂ÷F&öG“ãÂ÷F&ÆSãÂöF—cãÂ÷6V7F–öãâG¶6öçFVçDÖ&·WÓÆFWF–Ç26Æ73Ò'&Wf—6–öâÖ†—7F÷'’#ãÇ7VÖÖ'“âG¶W66T‡FÖÂ‡G"‚wfW'6–öä†—7F÷'’r’—Ò+rG·fW'6–öç2æÆVæwF‡ÓÂ÷7VÖÖ'“ãÆöÃâG¶†—7F÷'—ÓÂööÃãÂöFWF–Ç3ãÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâæÇ—6—4FWF–Ä†VFW"†ö&¦V7BÂ¶–æBÂf–ÆRÂfW'6–öâ’°¢6öç7BG—TÆ&VÂÒ¶–æBÓÓÒw&ö¦V7BròG"‚w&ö¦V7DæÇ—6—2r’¢G"†¶–æB“°¢6öç7BfW'6–öç2Òf–ÆUfW'6–öç2†f–ÆR“°¢6öç7BfW'6–öäçVÖ&W"ÒÖF‚æÖ‚ƒÂfW'6–öç2æf–æD–æFW‚‚†—FVÒ’Óâ—FVÒæ–BÓÓÒfW'6–öâæ–B’²“°¢&WGW&âÆ†VFW"6Æ73Ò&æÇ—6—2ÖFWF–ÂÖ†VB#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖæÇ—6—2Ö&6³î(iG¶W66T‡FÖÂ‡G"‚v&6µFõ&ö¦V7G2r’—ÓÂö'WGFöããÆF—cãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ2äÅ•D”53Â÷7ããÆƒâG¶W66T‡FÖÂ‡G—TÆ&VÂ—ÓÂöƒãÇâG¶W66T‡FÖÂ†ö&¦V7BææÖR—ÓÂ÷ãÂöF—cãÇ7â6Æ73Ò&æÇ—6—2ÖFWF–Â×7FGW2#âG¶W66T‡FÖÂ‡G"†—4Fö7VÖVçEfW'6–öäæÇ—¦VB‡fW'6–öâ’òvæÇ—¦VBr¢wVæF–ætæÇ—6—2r’—ÓÂ÷7ããÂö†VFW#ãÇ6V7F–öâ6Æ73Ò&æÇ—6—2ÖFWF–Â×6÷W&6R#ãÇ7ãâG¶¶–æBÓÓÒw&ö¦V7Brò~)jBr¢¶–æBÓÓÒv6öçG&7Brò~(šr¢~(+ÒwÓÂ÷7ããÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚w6÷W&6Tf–ÆRr’—Ò+rbG·fW'6–öäçVÖ&W'ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡fW'6–öâææÖR—ÓÂ÷7G&öæsãÆVÓâG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR‡fW'6–öâç6—¦R’—Ò+rG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR‡fW'6–öâæFFVDB’—ÓÂöVÓãÂöF—cãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖæÇ—6—2×&Wf—6–öãÒ"G¶W66T‡FÖÂ†¶–æB—Ò#â²G¶W66T‡FÖÂ‡G"‚wWÆöDFF—F–öæÄf–ÆRr’—ÓÂö'WGFöããÂ÷6V7F–öãæ°§Ð ¦gVæ7F–öâ&VæFW$æÇ—6—4FWF–Â‚’°¢6öç7B&ö÷DVÆVÖVçBÒB‚u¶FFÖæÇ—6—2ÖFWF–ÅÒr“°¢–b‚&ö÷DVÆVÖVçB’&WGW&ã°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ7F—fTæÇ—6—4Fö7VÖVçBæö&¦V7D–B“°¢6öç7B¶–æBÒ7F—fTæÇ—6—4Fö7VÖVçBæ¶–æC°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢6öç7BfW'6–öâÒFö7VÖVçEfW'6–öä'”–B†f–ÆRÂ7F—fTæÇ—6—4Fö7VÖVçBçfW'6–öä–B“°¢–b‚ö&¦V7BÇÂf–ÆR’°¢&ö÷DVÆVÖVçBæ–ææW$…DÔÂÒÆF—b6Æ73Ò&V×G’×7FFR#ãÆƒ#âG¶W66T‡FÖÂ‡G"‚væô×•&ö¦V7G2r’—ÓÂöƒ#ãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖæÇ—6—2Ö&6³âG¶W66T‡FÖÂ‡G"‚v&6µFõ&ö¦V7G2r’—ÓÂö'WGFöããÂöF—cæ°¢ÒVÇ6R–b‚fW'6–öâÇÂ—4Fö7VÖVçEfW'6–öäæÇ—¦VB‡fW'6–öâ’’°¢&ö÷DVÆVÖVçBæ–ææW$…DÔÂÒG·fW'6–öâòæÇ—6—4FWF–Ä†VFW"†ö&¦V7BÂ¶–æBÂf–ÆRÂfW'6–öâ’¢rwÓÇ6V7F–öâ6Æ73Ò&æÇ—6—2ÖFö7VÖVçB×Æ6V†öÆFW"#ãÇ7ãî(É³Â÷7ããÆƒ#âG¶W66T‡FÖÂ‡G"‚vf–ÆTv—F–ætæÇ—6—2r’—ÓÂöƒ#ãÇâG¶W66T‡FÖÂ‡G"‚vf–ÆTv—F–ætæÇ—6—46÷’r’—ÓÂ÷âG·fW'6–öâòÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖæÇ—¦RÖ7F—fR×fW'6–öãâG¶W66T‡FÖÂ‡G"‚væÇ—¦Rr’—ÓÂö'WGFöãæ¢rwÓÂ÷6V7F–öãæ°¢ÒVÇ6R–b†¶–æBÓÓÒw&ö¦V7Br’°¢6öç7BF'2Ò&ö¦V7DæÇ—6—5F'2æÖ‚‡F"’ÓâÆ'WGFöâ6Æ73Ò"G·F"æ–BÓÓÒ7F—fU&ö¦V7DæÇ—6—5F"òv—2Ö7F—fRr¢rwÒ"G—SÒ&'WGFöâ"FF×&ö¦V7BÖæÇ—6—2×F#Ò"G·F"æ–GÒ"&–×6VÆV7FVCÒ"G·F"æ–BÓÓÒ7F—fU&ö¦V7DæÇ—6—5F'Ò#ãÇ7ãâG·F"æ–6öçÓÂ÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"‡F"æÆ&VÂ’—ÓÂ÷7G&öæsãÂö'WGFöãæ’æ¦ö–â‚rr“°¢&ö÷DVÆVÖVçBæ–ææW$…DÔÂÒG¶æÇ—6—4FWF–Ä†VFW"†ö&¦V7BÂ¶–æBÂf–ÆRÂfW'6–öâ—ÓÇ6V7F–öâ6Æ73Ò&æÇ—6—2×G'WF‚Öæ÷FR#ãÇ7ãâÂ÷7ããÇâG¶W66T‡FÖÂ‡G"‚væÇ—¦VDFFöæÇ’r’—ÓÂ÷ãÂ÷6V7F–öããÆæb6Æ73Ò'&ö¦V7BÖæÇ—6—2×F'2"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚w&ö¦V7DæÇ—6—2r’—Ò#âG·F'7ÓÂöæcãÇ6V7F–öâ6Æ73Ò'&ö¦V7BÖæÇ—6—2Ö6öçFVçB#ãÆ†VFW#ãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ2DUD”ÃÂ÷7ããÆƒ#âG¶W66T‡FÖÂ‡G"‡&ö¦V7DæÇ—6—5F'2æf–æB‚‡F"’ÓâF"æ–BÓÓÒ7F—fU&ö¦V7DæÇ—6—5F"“òæÆ&VÂÇÂw&ö¦V7DW7F–ÖFRr’—ÓÂöƒ#ãÂö†VFW#âG·&ö¦V7DæÇ—6—5F$6öçFVçB†7F—fU&ö¦V7DæÇ—6—5F"ÂfW'6–öâÂ¶–æB—ÓÂ÷6V7F–öãæ°¢ÒVÇ6R–b†¶–æBÓÓÒvW7F–ÖFRr’°¢&ö÷DVÆVÖVçBæ–ææW$…DÔÂÒG¶æÇ—6—4FWF–Ä†VFW"†ö&¦V7BÂ¶–æBÂf–ÆRÂfW'6–öâ—ÓÇ6V7F–öâ6Æ73Ò&æÇ—6—2×G'WF‚Öæ÷FR#ãÇ7ãâÂ÷7ããÇâG¶W66T‡FÖÂ‡G"‚væÇ—¦VDFFöæÇ’r’—ÓÂ÷ãÂ÷6V7F–öããÇ6V7F–öâ6Æ73Ò'&ö¦V7BÖæÇ—6—2Ö6öçFVçB#ãÆ†VFW#ãÇ7â6Æ73Ò&W–V'&÷r#å5E%T5Dõ2U5D”ÔDSÂ÷7ããÆƒ#âG¶W66T‡FÖÂ‡G"‚vW7F–ÖFRr’—ÓÂöƒ#ãÂö†VFW#âG·&ö¦V7DæÇ—6—5F$6öçFVçB‚w&÷÷6ÂrÂfW'6–öâÂ¶–æB—ÓÂ÷6V7F–öãæ°¢ÒVÇ6R°¢&ö÷DVÆVÖVçBæ–ææW$…DÔÂÒG¶æÇ—6—4FWF–Ä†VFW"†ö&¦V7BÂ¶–æBÂf–ÆRÂfW'6–öâ—ÓÇ6V7F–öâ6Æ73Ò&æÇ—6—2×G'WF‚Öæ÷FR#ãÇ7ãâÂ÷7ããÇâG¶W66T‡FÖÂ‡G"‚væÇ—¦VDFFöæÇ’r’—ÓÂ÷ãÂ÷6V7F–öããÇ6V7F–öâ6Æ73Ò&æÇ—6—2ÖFö7VÖVçB×Æ6V†öÆFW"#ãÇ7ãî(šÂ÷7ããÆƒ#âG¶W66T‡FÖÂ‡G"‚væÇ—¦VDFö7VÖVçEvRr’—ÓÂöƒ#ãÇâG¶W66T‡FÖÂ‡G"‚væÇ—¦VDFö7VÖVçEvT6÷’r’—ÓÂ÷ãÂ÷6V7F–öãæ°¢Ð¢BB‚u¶FFÖæÇ—6—2Ö&6µÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6WEæVÂ‚w&ö¦V7G2r’’“°¢B‚u¶FFÖæÇ—6—2×&Wf—6–öåÒrÂ&ö÷DVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ†WfVçB’Óâ÷VåWÆöDF–Æör†WfVçBæ7W'&VçEF&vWBæFF6WBææÇ—6—5&Wf—6–öâÂö&¦V7Còæ–BÂw&Wf—6–öâr’“°¢B‚u¶FFÖæÇ—¦RÖ7F—fR×fW'6–öåÒrÂ&ö÷DVÆVÖVçB“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâæÇ—¦Tö&¦V7DFö7VÖVçB†ö&¦V7Còæ–BÂ¶–æBÂfW'6–öãòæ–B’“°¢BB‚u¶FF×&ö¦V7BÖæÇ—6—2×F%ÒrÂ&ö÷DVÆVÖVçB’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²7F—fU&ö¦V7DæÇ—6—5F"Ò'WGFöâæFF6WBç&ö¦V7DæÇ—6—5F#²&VæFW$æÇ—6—4FWF–Â‚“²Ò’“°§Ð ¦gVæ7F–öâ&ö×DFö7VÖVçDæÇ—6—2†ö&¦V7BÂ¶–æBÂfW'6–öä–BÒçVÆÂ’°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢6öç7BfW'6–öâÒFö7VÖVçEfW'6–öä'”–B†f–ÆRÂfW'6–öä–B“°¢6†÷tF–Æör‡G"‚væÇ—6—4æ÷E&VG’r’ÂG"‚væÇ—6—4æ÷E&VG”†–çBr’ÂÆF—b6Æ73Ò&F–ÆörÖ÷F–öç2#ãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×'VâÖæÇ—6—2Öæ÷sâG¶W66T‡FÖÂ‡G"‚w'VäæÇ—6—4æ÷rr’—ÓÂö'WGFöããÂöF—cæ“°¢B‚u¶FF×'VâÖæÇ—6—2Öæ÷uÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢–b†f–ÆRbbfW'6–öâ’æÇ—¦Tö&¦V7DFö7VÖVçB†ö&¦V7Bæ–BÂ¶–æBÂfW'6–öâæ–B“°¢Ò“°§Ð ¦gVæ7F–öâæÇ—¦Tö&¦V7DFö7VÖVçB†ö&¦V7D–BÂ¶–æBÂfW'6–öä–BÒçVÆÂÂ÷F–öç2Ò·Ò’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢6öç7BfW'6–öâÒFö7VÖVçEfW'6–öä'”–B†f–ÆRÂfW'6–öä–B“°¢–b‚ö&¦V7BÇÂf–ÆRÇÂfW'6–öâ’&WGW&ã°¢–b†—4Fö7VÖVçEfW'6–öäæÇ—¦VB‡fW'6–öâ’’°¢–b†÷F–öç2æ–æÆ–æRÇÂ÷F–öç2æF–Æör’°¢6VÆV7FVE&ö¦V7EfW'6–öä–G2ç6WB‡&ö¦V7DFö7VÖVçDw&÷W¶W’†ö&¦V7D–BÂ¶–æB’ÂfW'6–öâæ–B“°¢–b†÷F–öç2æF–Æör’÷Väö&¦V7D6&B†ö&¦V7D–B“°¢VÇ6R&VæFW$×•&ö¦V7G2‚“°¢ÒVÇ6R÷VäæÇ—¦VDFö7VÖVçB†ö&¦V7D–BÂ¶–æBÂfW'6–öâæ–B“°¢&WGW&ã°¢Ð¢6ÆV%F–ÖV÷WB†æÇ—6—5F–ÖW"“°¢6†÷tF–Æör‡G"‚væÇ—¦–ætFö7VÖVçBr’ÂG"‚væÇ—¦–ætFö7VÖVçD†–çBr’ÂÆF—b6Æ73Ò&æÇ—6—2×&VG’Öf–ÆW2#ãÆF—cãÇ7ãî)É3Â÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"†¶–æB’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡fW'6–öâææÖR—ÓÂ÷6ÖÆÃãÂöF—cãÂöF—cãÆF—b6Æ73Ò&æÇ—6—2ÖÆöFW"#ãÇ7ããÂ÷7ããÇ7ããÂ÷7ããÇ7ããÂ÷7ããÂöF—cæ“°¢æÇ—6—5F–ÖW"Ò6WEF–ÖV÷WB‚‚’Óâ°¢6öç7B7W'&VçDö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢6öç7B7W'&VçDf–ÆRÒö&¦V7Df–ÆR†7W'&VçDö&¦V7BÂ¶–æB“°¢6öç7B7W'&VçEfW'6–öâÒFö7VÖVçEfW'6–öä'”–B†7W'&VçDf–ÆRÂfW'6–öâæ–B“°¢–b‚7W'&VçDö&¦V7BÇÂ7W'&VçDf–ÆRÇÂ7W'&VçEfW'6–öâ’&WGW&ã°¢6öç7BæÇ—¦VDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6öç7BæÇ—6—5F6‚Ò²æÇ—6—5VæF–æs¢fÇ6RÂæÇ—¦VDBÓ°¢–b†¶–æBÓÓÒw&ö¦V7Br’æÇ—6—5F6‚æW7F–ÖFT'&V¶F÷vâÒ&ö¦V7DW7F–ÖFU6æ6†÷B†7W'&VçEfW'6–öâ“°¢6öç7BæÇ—¦VEfW'6–öâÒWFFTFö7VÖVçEfW'6–öâ†7W'&VçDf–ÆRÂ7W'&VçEfW'6–öâæ–BÂæÇ—6—5F6‚“°¢–b†¶–æBÓÓÒv6öçG&7BrbbÆFW7DFö7VÖVçEfW'6–öâ†7W'&VçDf–ÆR“òæ–BÓÓÒæÇ—¦VEfW'6–öãòæ–B’7W'&VçDö&¦V7Bæ6öçG&7DçVÖ&W"Ò7G&–ær†æÇ—¦VEfW'6–öâæ6öçG&7DçVÖ&W"ÇÂW‡G&7D6öçG&7DçVÖ&W$g&öÔæÖR†æÇ—¦VEfW'6–öâææÖR’ÇÂ7W'&VçDö&¦V7Bæ6öçG&7DçVÖ&W"ÇÂrr“°¢7W'&VçDö&¦V7BææÇ—¦VDBÒæÇ—¦VDC°¢–b†7W'&VçDö&¦V7Bç7FGW2ÓÓÒwWÆöFVBrbb7W'&VçDö&¦V7Bæf–ÆW3òæÆVæwF‚bb7W'&VçDö&¦V7Bæf–ÆW2æWfW'’‚†—FVÒ’Óâ—4ö&¦V7DFö7VÖVçDæÇ—¦VB†7W'&VçDö&¦V7BÂ—FVÒ’’’7W'&VçDö&¦V7Bç7FGW2Òw&VG’s°¢6VÆV7Dö&¦V7Df÷$æÇ—6—2†7W'&VçDö&¦V7B“°¢6fTö&¦V7G2‚“°¢6fUWÆöG2‚“°¢&VæFW%v–FvWG2‚“°¢7F—fTæÇ—6—4Fö7VÖVçBÒ²ö&¦V7D–BÂ¶–æBÂfW'6–öä–C¢7W'&VçEfW'6–öâæ–BÓ°¢7F—fU&ö¦V7DæÇ—6—5F"Òw&÷÷6Âs°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢–b†÷F–öç2æ–æÆ–æRÇÂ÷F–öç2æF–Æör’°¢6VÆV7FVE&ö¦V7EfW'6–öä–G2ç6WB‡&ö¦V7DFö7VÖVçDw&÷W¶W’†ö&¦V7D–BÂ¶–æB’Â7W'&VçEfW'6–öâæ–B“°¢&VæFW$ö&¦V7G2‚“°¢–b†÷F–öç2æF–Æör’÷Väö&¦V7D6&B†ö&¦V7D–B“°¢VÇ6R6WEæVÂ‚w&ö¦V7G2r“°¢ÒVÇ6R°¢&VæFW$ö&¦V7G2‚“°¢6WEæVÂ‚væÇ—6—2ÖFWF–Âr“°¢Ð¢ÒÂ“°§Ð ¦gVæ7F–öâæÇ—¦Tö&¦V7DFö7VÖVçG2†ö&¦V7D–BÂ&WVW7FVD¶–æG2ÒµÒ’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢–b‚ö&¦V7B’&WGW&ã°¢6öç7B¶–æG2Ò²ââææWr6WB‡&WVW7FVD¶–æG2•Ð¢æf–ÇFW"‚†¶–æB’ÓâWÆöE'VÆW5¶¶–æEÒ¢æf–ÇFW"‚†¶–æB’Óâ°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢&WGW&âf–ÆRbb—4ö&¦V7DFö7VÖVçDæÇ—¦VB†ö&¦V7BÂf–ÆR“°¢Ò“°¢–b‚¶–æG2æÆVæwF‚’²÷Vå&W÷'D6†ö÷6W"†ö&¦V7B“²&WGW&ã²Ð¢–b†¶–æG2æÆVæwF‚ÓÓÒ’²æÇ—¦Tö&¦V7DFö7VÖVçB†ö&¦V7D–BÂ¶–æG5³Ò“²&WGW&ã²Ð¢6öç7Bf–ÆW4Ö&·WÒÆF—b6Æ73Ò&æÇ—6—2×&VG’Öf–ÆW2#âG¶¶–æG2æÖ‚†¶–æB’Óâ²6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“²&WGW&âÆF—cãÇ7ãî)É3Â÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"†¶–æB’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ†f–ÆRææÖR—ÓÂ÷6ÖÆÃãÂöF—cæ²Ò’æ¦ö–â‚rr—ÓÂöF—cæ°¢6ÆV%F–ÖV÷WB†æÇ—6—5F–ÖW"“°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚væÇ—¦–ætFö7VÖVçG2r’’ÂW66T‡FÖÂ‡G"‚væÇ—¦–ætFö7VÖVçG4†–çBr’’ÂG¶f–ÆW4Ö&·WÓÆF—b6Æ73Ò&æÇ—6—2ÖÆöFW"#ãÇ7ããÂ÷7ããÇ7ããÂ÷7ããÇ7ããÂ÷7ããÂöF—cæ“°¢æÇ—6—5F–ÖW"Ò6WEF–ÖV÷WB‚‚’Óâ°¢6öç7B7W'&VçDö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢–b‚7W'&VçDö&¦V7B’&WGW&ã°¢6öç7BæÇ—¦VDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢¶–æG2æf÷$V6‚‚†¶–æB’Óâ°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†7W'&VçDö&¦V7BÂ¶–æB“°¢–b‚f–ÆR’&WGW&ã°¢6öç7BÆFW7EfW'6–öâÒÆFW7DFö7VÖVçEfW'6–öâ†f–ÆR“°¢–b‚ÆFW7EfW'6–öâ’&WGW&ã°¢6öç7BæÇ—6—5F6‚Ò²æÇ—6—5VæF–æs¢fÇ6RÂæÇ—¦VDBÓ°¢–b†¶–æBÓÓÒw&ö¦V7Br’æÇ—6—5F6‚æW7F–ÖFT'&V¶F÷vâÒ&ö¦V7DW7F–ÖFU6æ6†÷B†ÆFW7EfW'6–öâ“°¢WFFTFö7VÖVçEfW'6–öâ†f–ÆRÂÆFW7EfW'6–öâæ–BÂæÇ—6—5F6‚“°¢–b†¶–æBÓÓÒv6öçG&7Br’7W'&VçDö&¦V7Bæ6öçG&7DçVÖ&W"Ò7G&–ær†f–ÆRæ6öçG&7DçVÖ&W"ÇÂW‡G&7D6öçG&7DçVÖ&W$g&öÔæÖR†f–ÆRææÖR’ÇÂ7W'&VçDö&¦V7Bæ6öçG&7DçVÖ&W"ÇÂrr“°¢Ò“°¢7W'&VçDö&¦V7BææÇ—¦VDBÒæÇ—¦VDC°¢–b†7W'&VçDö&¦V7Bç7FGW2ÓÓÒwWÆöFVBrbb7W'&VçDö&¦V7Bæf–ÆW3òæÆVæwF‚bb7W'&VçDö&¦V7Bæf–ÆW2æWfW'’‚†—FVÒ’Óâ—4ö&¦V7DFö7VÖVçDæÇ—¦VB†7W'&VçDö&¦V7BÂ—FVÒ’’’7W'&VçDö&¦V7Bç7FGW2Òw&VG’s°¢6VÆV7Dö&¦V7Df÷$æÇ—6—2†7W'&VçDö&¦V7B“°¢6fTö&¦V7G2‚“°¢6fUWÆöG2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚vÆÄFö7VÖVçG4æÇ—¦VBr’’ÂW66T‡FÖÂ‡G"‚vÆÄFö7VÖVçG4æÇ—¦VD6÷’r’’ÂÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FF×f–Wr×&W÷'CâG¶W66T‡FÖÂ‡G"‚wf–Wu&W÷'Br’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×7F'BÖö&¦V7CâG¶W66T‡FÖÂ‡G"‚w7F'Dö&¦V7Br’—ÓÂö'WGFöããÂöF—cæ“°¢B‚u¶FF×f–Wr×&W÷'EÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vå&W÷'D6†ö÷6W"†7W'&VçDö&¦V7B’“°¢B‚u¶FF×7F'BÖö&¦V7EÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ7F'E&VG”ö&¦V7B†7W'&VçDö&¦V7Bæ–B’“°¢ÒÂ“°§Ð ¦gVæ7F–öâæÇ—¦UVæF–ætö&¦V7DFö7VÖVçG2†ö&¦V7D–B’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢–b‚ö&¦V7B’&WGW&ã°¢6öç7BVæF–æt¶–æG2Òö&¦V7Bæ¶W—2‡WÆöE'VÆW2’æf–ÇFW"‚†¶–æB’Óâ°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢&WGW&âf–ÆRbb—4ö&¦V7DFö7VÖVçDæÇ—¦VB†ö&¦V7BÂf–ÆR“°¢Ò“°¢–b‡VæF–æt¶–æG2æÆVæwF‚’æÇ—¦Tö&¦V7DFö7VÖVçG2†ö&¦V7D–BÂVæF–æt¶–æG2“°¢VÇ6R÷Vå&W÷'D6†ö÷6W"†ö&¦V7B“°§Ð ¦gVæ7F–öâFVÆWFTö&¦V7DFö7VÖVçB†ö&¦V7D–BÂ¶–æB’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢–b‚ö&¦V7BÇÂf–ÆR’&WGW&ã°¢6†÷tF–Æör‡G"‚vFVÆWFTFö7VÖVçEF—FÆRr’ÂG"‚vFVÆWFTFö7VÖVçD†–çBr’ÂÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ6æ6VÂÖFö7VÖVçBÖFVÆWFSâG¶W66T‡FÖÂ‡G"‚v6æ6VÂr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ—2ÖFævW""G—SÒ&'WGFöâ"FFÖ6öæf—&ÒÖFö7VÖVçBÖFVÆWFSâG¶W66T‡FÖÂ‡G"‚vFVÆWFTFö7VÖVçBr’—ÓÂö'WGFöããÂöF—cæ“°¢B‚u¶FFÖ6æ6VÂÖFö7VÖVçBÖFVÆWFUÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚’“°¢B‚u¶FFÖ6öæf—&ÒÖFö7VÖVçBÖFVÆWFUÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢ö&¦V7Bæf–ÆW2Ò†ö&¦V7Bæf–ÆW2ÇÂµÒ’æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ¶–æBÓÒ¶–æB“°¢–b†¶–æBÓÓÒv6öçG&7Br’ö&¦V7Bæ6öçG&7DçVÖ&W"Òrs°¢–b‡6VÆV7FVDf–ÆW5¶¶–æEÒbb6ÖTf–ÆTÖWFFF‡6VÆV7FVDf–ÆW5¶¶–æEÒÂf–ÆR’’6VÆV7FVDf–ÆW5¶¶–æEÒÒçVÆÃ°¢–b‚ö&¦V7Bæf–ÆW2æÆVæwF‚bbö&¦V7Bç7FGW2ÓÓÒw&VG’r’²ö&¦V7Bç7FGW2ÒwWÆöFVBs²ö&¦V7BææÇ—¦VDBÒçVÆÃ²Ð¢6fTö&¦V7G2‚“°¢6fUWÆöG2‚“°¢&VæFW$æÇ—6—46&G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚vFö7VÖVçDFVÆWFVBr’“°¢Ò“°§Ð ¦gVæ7F–öâFVÆWFTö&¦V7DFö7VÖVçEfW'6–öâ†ö&¦V7D–BÂ¶–æBÂfW'6–öä–B’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢6öç7BfW'6–öâÒFö7VÖVçEfW'6–öä'”–B†f–ÆRÂfW'6–öä–B“°¢–b‚ö&¦V7BÇÂf–ÆRÇÂfW'6–öâ’&WGW&ã°¢6†÷tF–Æör‡G"‚vFVÆWFTf–ÆUfW'6–öâr’ÂG"‚vFVÆWFTf–ÆUfW'6–öä6÷’r’ÂÇ6V7F–öâ6Æ73Ò'&Wf—6–öâ×WÆöB×6÷W&6R#ãÇ7ãì9sÂ÷7ããÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"†¶–æB’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡fW'6–öâææÖR—ÓÂ÷7G&öæsãÆVÓâG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR‡fW'6–öâç6—¦R’—Ò+rG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR‡fW'6–öâæFFVDB’—ÓÂöVÓãÂöF—cãÂ÷6V7F–öããÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ6æ6VÂ×fW'6–öâÖFVÆWFSâG¶W66T‡FÖÂ‡G"‚v6æ6VÂr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ—2ÖFævW""G—SÒ&'WGFöâ"FFÖ6öæf—&Ò×fW'6–öâÖFVÆWFSâG¶W66T‡FÖÂ‡G"‚vFVÆWFTFö7VÖVçBr’—ÓÂö'WGFöããÂöF—cæ“°¢B‚u¶FFÖ6æ6VÂ×fW'6–öâÖFVÆWFUÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚’“°¢B‚u¶FFÖ6öæf—&Ò×fW'6–öâÖFVÆWFUÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7BfW'6–öç2Òf–ÆUfW'6–öç2†f–ÆR’æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ–BÓÒfW'6–öâæ–B“°¢–b‚fW'6–öç2æÆVæwF‚’ö&¦V7Bæf–ÆW2Ò†ö&¦V7Bæf–ÆW2ÇÂµÒ’æf–ÇFW"‚†—FVÒ’Óâ—FVÒæ¶–æBÓÒ¶–æB“°¢VÇ6R°¢f–ÆRæ6ö×&—6öâÒçVÆÃ°¢7–æ4ÆFW7DFö7VÖVçEfW'6–öâ†f–ÆRÂfW'6–öç2“°¢Ð¢–b†¶–æBÓÓÒv6öçG&7Br’ö&¦V7Bæ6öçG&7DçVÖ&W"Ò7G&–ær†ÆFW7DFö7VÖVçEfW'6–öâ†ö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB’“òæ6öçG&7DçVÖ&W"ÇÂrr“°¢6öç7Bw&÷W¶W’Ò&ö¦V7DFö7VÖVçDw&÷W¶W’†ö&¦V7D–BÂ¶–æB“°¢–b‡6VÆV7FVE&ö¦V7EfW'6–öä–G2ævWB†w&÷W¶W’’ÓÓÒfW'6–öâæ–B’6VÆV7FVE&ö¦V7EfW'6–öä–G2æFVÆWFR†w&÷W¶W’“°¢6VÆV7FVE&ö¦V7EfW'6–öåF'2æFVÆWFR†G¶w&÷W¶W—Ó¢G·fW'6–öâæ–GÖ“°¢–b‡fW'6–öç2æÆVæwF‚Â"’°¢f—6–&ÆU&ö¦V7D6ö×&—6öç2æFVÆWFR†w&÷W¶W’“°¢W‡æFVE&ö¦V7D6ö×&—6öç2æFVÆWFR†w&÷W¶W’“°¢Ð¢–b†ö&¦V7Bç7FGW2ÓÓÒwWÆöFVBrbbö&¦V7Bæf–ÆW3òæÆVæwF‚bbö&¦V7Bæf–ÆW2æWfW'’‚†—FVÒ’Óâ—4ö&¦V7DFö7VÖVçDæÇ—¦VB†ö&¦V7BÂ—FVÒ’’’ö&¦V7Bç7FGW2Òw&VG’s°¢ö&¦V7BçWFFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6VÆV7Dö&¦V7Df÷$æÇ—6—2†ö&¦V7B“°¢6fTö&¦V7G2‚“°¢6fUWÆöG2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚vf–ÆUfW'6–öäFVÆWFVBr’“°¢Ò“°§Ð ¦gVæ7F–öâ÷VäæÇ—¦VDFö7VÖVçB†ö&¦V7D–BÂ¶–æBÂfW'6–öä–BÒçVÆÂ’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢6öç7BfW'6–öâÒFö7VÖVçEfW'6–öä'”–B†f–ÆRÂfW'6–öä–B“°¢–b‚ö&¦V7BÇÂf–ÆRÇÂfW'6–öâ’&WGW&ã°¢–b‚—4Fö7VÖVçEfW'6–öäæÇ—¦VB‡fW'6–öâ’’²&ö×DFö7VÖVçDæÇ—6—2†ö&¦V7BÂ¶–æBÂfW'6–öâæ–B“²&WGW&ã²Ð¢7F—fTæÇ—6—4Fö7VÖVçBÒ²ö&¦V7D–C¢ö&¦V7Bæ–BÂ¶–æBÂfW'6–öä–C¢fW'6–öâæ–BÓ°¢7F—fU&ö¦V7DæÇ—6—5F"Òw&÷÷6Âs°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6WEæVÂ‚væÇ—6—2ÖFWF–Âr“°§Ð ¦gVæ7F–öâ÷Vå&W÷'D6†ö÷6W"†ö&¦V7D÷$–B’°¢6öç7Bö&¦V7BÒG—Vöbö&¦V7D÷$–BÓÓÒw7G&–ærròö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D÷$–B’¢ö&¦V7D÷$–C°¢–b‚ö&¦V7B’&WGW&ã°¢6öç7Bf–Æ&ÆRÒö&¦V7Bæ¶W—2‡WÆöE'VÆW2’æÖ‚†¶–æB’Óâ¶¶–æBÂö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB•Ò’æf–ÇFW"‚…²Âf–ÆUÒ’Óâf–ÆR“°¢–b‚f–Æ&ÆRæÆVæwF‚’²6†÷uFö7B‡G"‚wWÆöDf—'7Br’“²&WGW&ã²Ð¢6öç7B6†ö–6W2Òf–Æ&ÆRæÖ‚…¶¶–æBÂf–ÆUÒ’ÓâÆ'WGFöâ6Æ73Ò'&W÷'BÖFö7VÖVçBÖ6†ö–6R"G—SÒ&'WGFöâ"FFÖ÷Vâ×&W÷'BÖFö7VÖVçCÒ"G¶W66T‡FÖÂ†¶–æB—Ò#ãÇ7ãâG¶¶–æBÓÓÒw&ö¦V7Brò~)jBr¢¶–æBÓÓÒv6öçG&7Brò~(šr¢~(+ÒwÓÂ÷7ããÆF—cãÇ7G&öæsâG¶W66T‡FÖÂ‡G"†¶–æB’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ†f–ÆRææÖR—ÓÂ÷6ÖÆÃãÂöF—cãÆ“î(£Âö“ãÂö'WGFöãæ’æ¦ö–â‚rr“°¢6†÷tF–Æör‡G"‚v6†ö÷6U&W÷'DFö7VÖVçBr’ÂG"‚v6†ö÷6U&W÷'DFö7VÖVçD†–çBr’ÂÆF—b6Æ73Ò'&W÷'BÖFö7VÖVçBÖÆ—7B#âG¶6†ö–6W7ÓÂöF—cæ“°¢BB‚u¶FFÖ÷Vâ×&W÷'BÖFö7VÖVçEÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷VäæÇ—¦VDFö7VÖVçB†ö&¦V7Bæ–BÂ'WGFöâæFF6WBæ÷Vå&W÷'DFö7VÖVçB’’“°§Ð ¦gVæ7F–öâ6öÖ&–æVDÖævVDö&¦V7G2‚’°¢6öç7B6÷&Tö&¦V7G2Òö&¦V7E&Vv—7G'¢æf–ÇFW"‚†ö&¦V7B’Óâö&¦V7Bç7FGW2ÓÓÒv7F—fRrÇÂö&¦V7Bç7FGW2ÓÓÒv6ö×ÆWFVBr¢æÖ‚†ö&¦V7B’Óâ‡°¢¶W“¢6÷&S¢G¶ö&¦V7Bæ–GÖÀ¢–C¢ö&¦V7Bæ–BÀ¢6÷W&6S¢v6÷&RrÀ¢æÖS¢ö&¦V7BææÖRÀ¢G—TÆ&VÃ¢G"‚vgVÆÄ7–6ÆTö&¦V7Br’À¢6ö×ÆWFVC¢ö&¦V7Bç7FGW2ÓÓÒv6ö×ÆWFVBrÀ¢FFS¢ö&¦V7Bç7F'FVDBÇÂö&¦V7BææÇ—¦VDBÇÂö&¦V7BçWÆöFVDBÀ¢6ö×ÆWFVDC¢ö&¦V7Bæ6ö×ÆWFVDBÇÂçVÆÂÀ¢FWF–Ç3¢G²†ö&¦V7Bæf–ÆW2ÇÂµÒ’æÆVæwF‡ÒG·G"‚vGF6†VDFö7VÖVçG2r—Ò+rG·G"‚vÖVÖ÷'•W6VBr—Ó¢G¶f÷&ÖE7F÷&vR‚†ö&¦V7Bæf–ÆW2ÇÂµÒ’ç&VGV6R‚‡F÷FÂÂf–ÆR’ÓâF÷FÂ²„çVÖ&W"†f–ÆRç6—¦R’ÇÂ’Â’—Ö ¢Ò’“°¢6öç7BV–6´ö&¦V7G2Ò66†fÆ÷tö&¦V7G2æÖ‚†ö&¦V7B’Óâ‡°¢¶W“¢V–6³¢G¶ö&¦V7Bæ–GÖÀ¢–C¢ö&¦V7Bæ–BÀ¢6÷W&6S¢wV–6²rÀ¢æÖS¢ö&¦V7BææÖRÀ¢G—TÆ&VÃ¢G"‚wV–6´ö&¦V7Br’À¢6ö×ÆWFVC¢&ööÆVâ†ö&¦V7Bæ6ö×ÆWFVB’À¢FFS¢ö&¦V7Bæ7&VFVDBÀ¢6ö×ÆWFVDC¢ö&¦V7Bæ6ö×ÆWFVDBÇÂçVÆÂÀ¢FWF–Ç3¢G¶ö&¦V7Bç6V7F–öç2æÆVæwF‡ÒG·G"‚w6V7F–öä6Æ7VÆF–öç2r—Ö ¢Ò’“°¢6öç7B–çf—FVDÖævVDö&¦V7G2Ò–çf—FVDö&¦V7G2æf–ÇFW"‚†ö&¦V7B’Óâ²v7F—fRrÂv6ö×ÆWFVBuÒæ–æ6ÇVFW2†ö&¦V7Bç7FGW2’’æÖ‚†ö&¦V7B’Óâ‡°¢¶W“¢–çf—FVC¢G¶ö&¦V7Bæ–GÖÀ¢–C¢ö&¦V7Bæ–BÀ¢6÷W&6S¢v–çf—FVBrÀ¢æÖS¢–çf—FVDö&¦V7DæÖR†ö&¦V7B’À¢G—TÆ&VÃ¢G"‚v–çf—FVDö&¦V7Br’À¢6ö×ÆWFVC¢ö&¦V7Bç7FGW2ÓÓÒv6ö×ÆWFVBrÀ¢FFS¢ö&¦V7Bæ–çf—FVDBÀ¢6ö×ÆWFVDC¢ö&¦V7Bæ6ö×ÆWFVDBÇÂçVÆÂÀ¢FWF–Ç3¢G·G"‚v–çf—FVE&öÆRr—Ó¢G·G"†ö&¦V7Bç&öÆT¶W’ÇÂvö&¦V7E'F–6—çBr—Ò+rG·G"‚v–çf—FVD'’r—Ó¢G¶ö&¦V7Bæ–çf—FVD'—Ö ¢Ò’“°¢6öç7Bö&¦V7G2Ò²ââæ6÷&Tö&¦V7G2ÂââçV–6´ö&¦V7G2Âââæ–çf—FVDÖævVDö&¦V7G5Ó°¢6öç7B÷&FW$–æFW‚ÒæWrÖ‡Væ–f–VDö&¦V7D÷&FW"æÖ‚†¶W’Â–æFW‚’Óâ¶¶W’Â–æFW…Ò’“°¢6öç7B7F—fRÒö&¦V7G2æf–ÇFW"‚†ö&¦V7B’Óâö&¦V7Bæ6ö×ÆWFVB’ç6÷'B‚†Â"’Óâ°¢6öç7B÷&FW"Ò÷&FW$–æFW‚ævWB†æ¶W’“°¢6öç7B$÷&FW"Ò÷&FW$–æFW‚ævWB†"æ¶W’“°¢–b†÷&FW"ÓÒVæFVf–æVBbb$÷&FW"ÓÒVæFVf–æVB’&WGW&â÷&FW"Ò$÷&FW#°¢–b†÷&FW"ÓÒVæFVf–æVB’&WGW&â°¢–b†$÷&FW"ÓÒVæFVf–æVB’&WGW&âÓ°¢&WGW&âæWrFFR†"æFFRÇÂ’ÒæWrFFR†æFFRÇÂ“°¢Ò“°¢6öç7B6ö×ÆWFVBÒö&¦V7G2æf–ÇFW"‚†ö&¦V7B’Óâö&¦V7Bæ6ö×ÆWFVB’ç6÷'B‚†Â"’ÓâæWrFFR†"æ6ö×ÆWFVDBÇÂ"æFFRÇÂ’ÒæWrFFR†æ6ö×ÆWFVDBÇÂæFFRÇÂ’“°¢&WGW&â²ââæ7F—fRÂââæ6ö×ÆWFVEÓ°§Ð ¦gVæ7F–öâVæ–f–VDö&¦V7E&÷tÖ&·W†ö&¦V7B’°¢6öç7BFFUfÇVRÒö&¦V7Bæ6ö×ÆWFVBòö&¦V7Bæ6ö×ÆWFVDBÇÂö&¦V7BæFFR¢ö&¦V7BæFFS°¢6öç7B7FGW2ÒG"†ö&¦V7Bæ6ö×ÆWFVBòv6ö×ÆWFVDÆ—7Dö&¦V7Br¢v–åv÷&²r“°¢6öç7BÖWFÒG·7FGW7Ó¢G¶f÷&ÖDö&¦V7DFFR†FFUfÇVR—Ò+rG¶ö&¦V7BæFWF–Ç7Ö°¢6öç7B†æFÆRÒö&¦V7Bæ6ö×ÆWFV@¢òsÇ7â6Æ73Ò'Væ–f–VBÖG&r×Æ6V†öÆFW""&–Ö†–FFVãÒ'G'VR#î)É3Â÷7ãâp¢¢Æ'WGFöâ6Æ73Ò'Væ–f–VBÖG&rÖ†æFÆR"G—SÒ&'WGFöâ"FF×Væ–f–VBÖG&r&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ†G·G"‚vG&tö&¦V7Br—Ó¢G¶ö&¦V7BææÖWÖ—Ò"F—FÆSÒ"G¶W66T‡FÖÂ‡G"‚vG&tö&¦V7Br’—Ò#ãÇ7ããÂ÷7ããÇ7ããÂ÷7ããÇ7ããÂ÷7ããÂö'WGFöãæ°¢6öç7B–çf—FF–öä&FvRÒö&¦V7Bç6÷W&6RÓÓÒv–çf—FVBròÇ7â6Æ73Ò&–çf—FVBÖö&¦V7B×&–&&öâ#ãÆ’&–Ö†–FFVãÒ'G'VR#ãÂö“âG¶W66T‡FÖÂ‡G"‚v'”–çf—FF–öâr’—ÓÂ÷7ãæ¢rs°¢&WGW&âÆ'F–6ÆR6Æ73Ò'Væ–f–VBÖö&¦V7B×&÷r—2ÒG¶ö&¦V7Bç6÷W&6WÒG¶ö&¦V7Bæ6ö×ÆWFVBòr—2Ö6ö×ÆWFVBr¢rwÒ"FF×Væ–f–VBÖö&¦V7CÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ¶W’—Ò"FFÖ÷Vâ×Væ–f–VCÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ¶W’—Ò"&öÆSÒ&'WGFöâ"F&–æFWƒÒ#"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ†G·G"‚v÷Väö&¦V7D7F–öâr—Ó¢G¶ö&¦V7BææÖWÖ—Ò#âG¶–çf—FF–öä&FvWÒG¶†æFÆWÓÆF—b6Æ73Ò'Væ–f–VBÖö&¦V7BÖ÷Vâ#ãÇ7â6Æ73Ò'Væ–f–VBÖö&¦V7BÖ–6öâ"&–Ö†–FFVãÒ'G'VR#âG¶ö&¦V7Bç6÷W&6RÓÓÒwV–6²ròr¾(+Þ(‰"r¢ö&¦V7Bç6÷W&6RÓÓÒv–çf—FVBrò~(irr¢~(È"wÓÂ÷7ããÇ7â6Æ73Ò'Væ–f–VBÖö&¦V7BÖ6÷’#ãÇ7G&öæsâG¶W66T‡FÖÂ†ö&¦V7BææÖR—ÓÂ÷7G&öæsãÇ7â6Æ73Ò'Væ–f–VBÖö&¦V7BÖ&FvW2#ãÆ"6Æ73Ò&—2ÒG¶ö&¦V7Bç6÷W&6WÒ#âG¶W66T‡FÖÂ†ö&¦V7BçG—TÆ&VÂ—ÓÂö#ãÆ"6Æ73Ò&—2×7FGW2#âG¶W66T‡FÖÂ‡7FGW2—ÓÂö#ãÂ÷7ããÇ6ÖÆÃâG¶W66T‡FÖÂ†ÖWF—ÓÂ÷6ÖÆÃãÂ÷7ããÇ7â6Æ73Ò'Væ–f–VBÖö&¦V7BÖ'&÷r"&–Ö†–FFVãÒ'G'VR#î(£Â÷7ããÂöF—cãÂö'F–6ÆSæ°§Ð ¦gVæ7F–öâ÷VåVæ–f–VDö&¦V7B†¶W’’°¢–b†¶W’ç7F'G5v—F‚‚wV–6³¢r’’°¢6öç7B–BÒ¶W’ç6Æ–6R‚wV–6³¢ræÆVæwF‚“°¢–b‚66†fÆ÷tö&¦V7G2ç6öÖR‚†ö&¦V7B’Óâö&¦V7Bæ–BÓÓÒ–B’’&WGW&ã°¢7F—fT66„ö&¦V7D–BÒ–C°¢6WEæVÂ‚v66†fÆ÷rr“°¢&WGW&ã°¢Ð¢–b†¶W’ç7F'G5v—F‚‚v–çf—FVC¢r’’²÷Vä–çf—FVDö&¦V7D6&B†¶W’ç6Æ–6R‚v–çf—FVC¢ræÆVæwF‚’“²&WGW&ã²Ð¢–b†¶W’ç7F'G5v—F‚‚v6÷&S¢r’’÷Väö&¦V7D6&B†¶W’ç6Æ–6R‚v6÷&S¢ræÆVæwF‚’“°§Ð ¦gVæ7F–öâ6öæf—&ÔFV6Æ–æT–çf—FF–öâ†–B’°¢6öç7Bö&¦V7BÒ–çf—FVDö&¦V7G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ–Bbb²wVæF–ærrÂv7F—fRuÒæ–æ6ÇVFW2†—FVÒç7FGW2’“°¢–b‚ö&¦V7B’&WGW&ã°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚vFV6Æ–æT–çf—FF–öåF—FÆRr’’ÂG"‚vFV6Æ–æT–çf—FF–öä†–çBr’ÂÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FFÖ6æ6VÂÖ–çf—FF–öâÖFV6Æ–æSâG¶W66T‡FÖÂ‡G"‚v6æ6VÂr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ—2ÖFævW""G—SÒ&'WGFöâ"FFÖ6öæf—&ÒÖ–çf—FF–öâÖFV6Æ–æSâG¶W66T‡FÖÂ‡G"‚vFV6Æ–æT–çf—FF–öâr’—ÓÂö'WGFöããÂöF—cæ“°¢B‚u¶FFÖ6æ6VÂÖ–çf—FF–öâÖFV6Æ–æUÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚’“°¢B‚u¶FFÖ6öæf—&ÒÖ–çf—FF–öâÖFV6Æ–æUÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢ö&¦V7Bç7FGW2ÒvFV6Æ–æVBs°¢ö&¦V7BæFV6Æ–æVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT–çf—FVDö&¦V7G2‚“°¢&VæFW$†öÖT–æ&÷‚‚“°¢&VæFW$ö&¦V7G2‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚v–çf—FF–öäFV6Æ–æVBr’“°¢Ò“°§Ð ¦gVæ7F–öâ66WD–çf—FF–öâ†–B’°¢6öç7Bö&¦V7BÒ–çf—FVDö&¦V7G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ–Bbb—FVÒç7FGW2ÓÓÒwVæF–ærr“°¢–b‚ö&¦V7B’&WGW&ã°¢ö&¦V7Bç7FGW2Òv7F—fRs°¢ö&¦V7Bæ66WFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6fT–çf—FVDö&¦V7G2‚“°¢&VæFW$†öÖT–æ&÷‚‚“°¢&VæFW$ö&¦V7G2‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚v–çf—FF–öä66WFVBr’“°§Ð ¦gVæ7F–öâ÷Vä–çf—FVDö&¦V7D6&B†–B’°¢6öç7Bö&¦V7BÒ–çf—FVDö&¦V7G2æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ–B“°¢–b‚ö&¦V7B’&WGW&ã°¢6öç7BæÖRÒ–çf—FVDö&¦V7DæÖR†ö&¦V7B“°¢6öç7BFö7VÖVçG2Òö&¦V7Bæ¶W—2‡WÆöE'VÆW2’æÖ‚†¶–æB’Óâ°¢6öç7Bf–ÆRÒö&¦V7Bæf–ÆW2æf–æB‚†—FVÒ’Óâ—FVÒæ¶–æBÓÓÒ¶–æB“°¢&WGW&âÆ'WGFöâ6Æ73Ò&ö&¦V7BÖFö7VÖVçBÖ6†ö–6RG¶f–ÆRòr†2Öf–ÆRr¢rwÒ"G—SÒ&'WGFöâ"FFÖ–çf—FVBÖFö7VÖVçCãÇ7ãâG¶f–ÆRò~)É2r¢r²wÓÂ÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"†¶–æB’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ†f–ÆSòææÖRÇÂG"‚v÷væW%v–ÆÅ6†&Rr’—ÓÂ÷6ÖÆÃãÂö'WGFöãæ°¢Ò’æ¦ö–â‚rr“°¢6öç7B—5VæF–ærÒö&¦V7Bç7FGW2ÓÓÒwVæF–ærs°¢6öç7B–çf—FF–öä7F–öç2Ò²wVæF–ærrÂv7F—fRuÒæ–æ6ÇVFW2†ö&¦V7Bç7FGW2’òÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2–çf—FVBÖö&¦V7BÖ7F–öç2#âG¶—5VæF–æròÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖ66WBÖ–çf—FF–öãâG¶W66T‡FÖÂ‡G"‚v66WD–çf—FF–öâr’—ÓÂö'WGFöãæ¢rwÓÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ—2ÖFævW""G—SÒ&'WGFöâ"FFÖFV6Æ–æRÖ–çf—FF–öãâG¶W66T‡FÖÂ‡G"‚vFV6Æ–æT–çf—FF–öâr’—ÓÂö'WGFöããÂöF—cæ¢rs°¢6†÷tF–Æör†W66T‡FÖÂ†æÖR’ÂG"‚v–çf—FVEFôö&¦V7Br’ÂÇ6V7F–öâ6Æ73Ò&–çf—FVBÖö&¦V7BÖ6&B#ãÆF—b6Æ73Ò&–çf—FVBÖö&¦V7B×7FGW2#ãÇ7ãî(isÂ÷7ããÆF—cãÆ#âG·G"‚v–çf—FVDö&¦V7Br—ÓÂö#ãÇ6ÖÆÃâG·G"†—5VæF–æròv–çf—FF–öåVæF–ærr¢v–åv÷&²r—ÓÂ÷6ÖÆÃãÂöF—cãÂöF—cãÆFÃãÆF—cãÆGCâG·G"‚v–çf—FVE&öÆRr—ÓÂöGCãÆFCâG·G"†ö&¦V7Bç&öÆT¶W’ÇÂvö&¦V7E'F–6—çBr—ÓÂöFCãÂöF—cãÆF—cãÆGCâG·G"‚v–çf—FVD'’r—ÓÂöGCãÆFCâG¶W66T‡FÖÂ†ö&¦V7Bæ–çf—FVD'’—ÓÂöFCãÂöF—cãÆF—cãÆGCâG·G"‚v–çf—FVDBr—ÓÂöGCãÆFCâG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR†ö&¦V7Bæ–çf—FVDB’—ÓÂöFCãÂöF—cãÂöFÃãÇâG·G"‚v–çf—FVDFö7VÖVçG4†–çBr—ÓÂ÷ãÆF—b6Æ73Ò&ö&¦V7BÖFö7VÖVçBÖ6†ö÷6W"#âG¶Fö7VÖVçG7ÓÂöF—câG¶–çf—FF–öä7F–öç7ÓÂ÷6V7F–öãæ“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ74Æ—7BæFB‚v–çf—FVBÖö&¦V7BÖF–Æörr“°¢BB‚u¶FFÖ–çf—FVBÖFö7VÖVçEÒrÂB‚u¶FFÖF–ÆörÖ6öçFVçEÒr’’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6†÷uFö7B‡G"‚v÷væW%v–ÆÅ6†&Rr’’’“°¢B‚u¶FFÖ66WBÖ–çf—FF–öåÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ66WD–çf—FF–öâ†ö&¦V7Bæ–B’“°¢B‚u¶FFÖFV6Æ–æRÖ–çf—FF–öåÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6öæf—&ÔFV6Æ–æT–çf—FF–öâ†ö&¦V7Bæ–B’“°§Ð ¦gVæ7F–öâW'6—7EVæ–f–VDö&¦V7D÷&FW"†Æ—7B’°¢Væ–f–VDö&¦V7D÷&FW"ÒBB‚u¶FF×Væ–f–VBÖö&¦V7EÓ¦æ÷B‚æ—2Ö6ö×ÆWFVB’rÂÆ—7B’æÖ‚†6&B’Óâ6&BæFF6WBçVæ–f–VDö&¦V7B“°¢Æö6Å7F÷&vRç6WD—FVÒ„ô$¤T5Eôõ$DU%ô´U’Â¥4ôâç7G&–æv–g’‡Væ–f–VDö&¦V7D÷&FW"’“°§Ð ¦gVæ7F–öâVæ&ÆUVæ–f–VDö&¦V7E6÷'F–ær††æFÆRÂ6&BÂÆ—7B’°¢ÆWBö–çFW$–BÒçVÆÃ°¢ÆWBÖ÷fVBÒfÇ6S°¢ÆWB7F'E’Ò°¢6öç7BÖ÷fT6&BÒ†F—&V7F–öâ’Óâ°¢6öç7B7F—fT6&G2ÒBB‚u¶FF×Væ–f–VBÖö&¦V7EÓ¦æ÷B‚æ—2Ö6ö×ÆWFVB’rÂÆ—7B“°¢6öç7B–æFW‚Ò7F—fT6&G2æ–æFW„öb†6&B“°¢6öç7BæW‡D–æFW‚ÒÖF‚æÖ‚ƒÂÖF‚æÖ–â†7F—fT6&G2æÆVæwF‚ÒÂ–æFW‚²F—&V7F–öâ’“°¢6öç7BF&vWBÒ7F—fT6&G5¶æW‡D–æFW…Ó°¢–b‚F&vWBÇÂF&vWBÓÓÒ6&B’&WGW&ã°¢–b†F—&V7F–öâÂ’Æ—7Bæ–ç6W'D&Vf÷&R†6&BÂF&vWB“°¢VÇ6RÆ—7Bæ–ç6W'D&Vf÷&R†6&BÂF&vWBææW‡E6–&Æ–ær“°¢W'6—7EVæ–f–VDö&¦V7D÷&FW"†Æ—7B“°¢6†÷uFö7B‡G"‚v÷&FW%6fVBr’“°¢Ó°¢†æFÆRæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ°¢–b‚²t'&÷uWrÂt'&÷tF÷vâuÒæ–æ6ÇVFW2†WfVçBæ¶W’’’&WGW&ã°¢WfVçBç&WfVçDFVfVÇB‚“°¢Ö÷fT6&B†WfVçBæ¶W’ÓÓÒt'&÷uWròÓ¢“°¢Ò“°¢†æFÆRæFDWfVçDÆ—7FVæW"‚wö–çFW&F÷vârÂ†WfVçB’Óâ°¢WfVçBç&WfVçDFVfVÇB‚“°¢ö–çFW$–BÒWfVçBçö–çFW$–C°¢7F'E’ÒWfVçBæ6Æ–VçE“°¢Ö÷fVBÒfÇ6S°¢6&Bæ6Æ74Æ—7BæFB‚v—2ÖG&vv–ærr“°¢†æFÆRç6WEö–çFW$6GW&R†WfVçBçö–çFW$–B“°¢Ò“°¢†æFÆRæFDWfVçDÆ—7FVæW"‚wö–çFW&Ö÷fRrÂ†WfVçB’Óâ°¢–b†WfVçBçö–çFW$–BÓÒö–çFW$–B’&WGW&ã°¢WfVçBç&WfVçDFVfVÇB‚“°¢Ö÷fVBÇÃÒÖF‚æ'2†WfVçBæ6Æ–VçE’Ò7F'E’’âS°¢6öç7B7F—fT6&G2ÒBB‚u¶FF×Væ–f–VBÖö&¦V7EÓ¦æ÷B‚æ—2Ö6ö×ÆWFVB’rÂÆ—7B’æf–ÇFW"‚†—FVÒ’Óâ—FVÒÓÒ6&B“°¢6öç7BæW‡BÒ7F—fT6&G2æf–æB‚†—FVÒ’ÓâWfVçBæ6Æ–VçE’Â—FVÒævWD&÷VæF–æt6Æ–VçE&V7B‚’çF÷²—FVÒæöfg6WD†V–v‡Bò"“°¢6öç7Bf—'7D6ö×ÆWFVBÒB‚u¶FF×Væ–f–VBÖö&¦V7EÒæ—2Ö6ö×ÆWFVBrÂÆ—7B“°¢–b†æW‡B’Æ—7Bæ–ç6W'D&Vf÷&R†6&BÂæW‡B“°¢VÇ6R–b†f—'7D6ö×ÆWFVB’Æ—7Bæ–ç6W'D&Vf÷&R†6&BÂf—'7D6ö×ÆWFVB“°¢VÇ6RÆ—7BæVæB†6&B“°¢Ò“°¢6öç7Bf–æ—6‚Ò†WfVçB’Óâ°¢–b†WfVçBçö–çFW$–BÓÒö–çFW$–B’&WGW&ã°¢–b††æFÆRæ†5ö–çFW$6GW&R†WfVçBçö–çFW$–B’’†æFÆRç&VÆV6Uö–çFW$6GW&R†WfVçBçö–çFW$–B“°¢ö–çFW$–BÒçVÆÃ°¢6&Bæ6Æ74Æ—7Bç&VÖ÷fR‚v—2ÖG&vv–ærr“°¢–b†Ö÷fVB’²W'6—7EVæ–f–VDö&¦V7D÷&FW"†Æ—7B“²6†÷uFö7B‡G"‚v÷&FW%6fVBr’“²Ð¢Ó°¢†æFÆRæFDWfVçDÆ—7FVæW"‚wö–çFW'WrÂf–æ—6‚“°¢†æFÆRæFDWfVçDÆ—7FVæW"‚wö–çFW&6æ6VÂrÂf–æ—6‚“°§Ð ¦gVæ7F–öâ&VæFW$ö&¦V7G2‚’°¢6öç7BWÆöFVBÒö&¦V7E&Vv—7G'’æf–ÇFW"‚†ö&¦V7B’Óâö&¦V7Bç7FGW2ÓÓÒwWÆöFVBr“°¢6öç7B&VG’Òö&¦V7E&Vv—7G'’æf–ÇFW"‚†ö&¦V7B’Óâö&¦V7Bç7FGW2ÓÓÒw&VG’r“°¢6öç7B7F—fRÒö&¦V7E&Vv—7G'’æf–ÇFW"‚†ö&¦V7B’Óâö&¦V7Bç7FGW2ÓÓÒv7F—fRr“°¢6öç7B6öÖ&–æVBÒ6öÖ&–æVDÖævVDö&¦V7G2‚“°¢BB‚u¶FF×WÆöFVBÖö&¦V7G2ÖÆ—7EÒr’æf÷$V6‚‚†Æ—7B’Óâ²Æ—7Bæ–ææW$…DÔÂÒWÆöFVBæÖ†ö&¦V7E&÷tÖ&·W’æ¦ö–â‚rr“²Ò“°¢BB‚u¶FF×&VG’Öö&¦V7G2ÖÆ—7EÒr’æf÷$V6‚‚†Æ—7B’Óâ²Æ—7Bæ–ææW$…DÔÂÒ&VG’æÖ†ö&¦V7E&÷tÖ&·W’æ¦ö–â‚rr“²Ò“°¢BB‚u¶FFÖ7F—fRÖö&¦V7G2ÖÆ—7EÒr’æf÷$V6‚‚†Æ—7B’Óâ²Æ—7Bæ–ææW$…DÔÂÒ7F—fRæÖ†ö&¦V7E&÷tÖ&·W’æ¦ö–â‚rr“²Ò“°¢BB‚u¶FFÖÆÂÖö&¦V7G2ÖÆ—7EÒr’æf÷$V6‚‚†Æ—7B’Óâ°¢Æ—7Bæ–ææW$…DÔÂÒ6öÖ&–æVBæÖ‡Væ–f–VDö&¦V7E&÷tÖ&·W’æ¦ö–â‚rr“°¢BB‚u¶FFÖ÷Vâ×Væ–f–VEÒrÂÆ—7B’æf÷$V6‚‚†6&B’Óâ°¢6&BæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ†WfVçB’Óâ²–b‚WfVçBçF&vWBæ6Æ÷6W7B‚u¶FF×Væ–f–VBÖG&uÒr’’÷VåVæ–f–VDö&¦V7B†6&BæFF6WBæ÷VåVæ–f–VB“²Ò“°¢6&BæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ²–b†WfVçBçF&vWBÓÒ6&BÇÂ²tVçFW"rÂruÒæ–æ6ÇVFW2†WfVçBæ¶W’’’&WGW&ã²WfVçBç&WfVçDFVfVÇB‚“²÷VåVæ–f–VDö&¦V7B†6&BæFF6WBæ÷VåVæ–f–VB“²Ò“°¢Ò“°¢BB‚u¶FF×Væ–f–VBÖG&uÒrÂÆ—7B’æf÷$V6‚‚††æFÆR’ÓâVæ&ÆUVæ–f–VDö&¦V7E6÷'F–ær††æFÆRÂ†æFÆRæ6Æ÷6W7B‚u¶FF×Væ–f–VBÖö&¦V7EÒr’ÂÆ—7B’“°¢Ò“°¢BB‚u¶FF×WÆöFVBÖ6÷VçEÒr’æf÷$V6‚‚†6÷VçB’Óâ²6÷VçBçFW‡D6öçFVçBÒ7G&–ær‡WÆöFVBæÆVæwF‚“²Ò“°¢BB‚u¶FF×&VG’Ö6÷VçEÒr’æf÷$V6‚‚†6÷VçB’Óâ²6÷VçBçFW‡D6öçFVçBÒ7G&–ær‡&VG’æÆVæwF‚“²Ò“°¢BB‚u¶FFÖ7F—fRÖ6÷VçEÒr’æf÷$V6‚‚†6÷VçB’Óâ²6÷VçBçFW‡D6öçFVçBÒ7G&–ær†7F—fRæÆVæwF‚“²Ò“°¢BB‚u¶FFÖÆÂÖ7F—fRÖ6÷VçEÒr’æf÷$V6‚‚†6÷VçB’Óâ²6÷VçBçFW‡D6öçFVçBÒ7G&–ær†6öÖ&–æVBæf–ÇFW"‚†ö&¦V7B’Óâö&¦V7Bæ6ö×ÆWFVB’æÆVæwF‚“²Ò“°¢BB‚u¶FFÖ7F—fRÖf–Æ&ÆUÒr’æf÷$V6‚‚†6÷VçB’Óâ²6÷VçBçFW‡D6öçFVçBÒ7G&–ær„ÖF‚æÖ‚ƒÂ5D•dUôô$¤T5EôÄ”Ô•BÒ7F—fRæÆVæwF‚’“²Ò“°¢BB‚u¶FF×WÆöFVBÖV×G•Òr’æf÷$V6‚‚†V×G’’Óâ²V×G’æ†–FFVâÒWÆöFVBæÆVæwF‚â²Ò“°¢BB‚u¶FF×&VG’ÖV×G•Òr’æf÷$V6‚‚†V×G’’Óâ²V×G’æ†–FFVâÒ&VG’æÆVæwF‚â²Ò“°¢BB‚u¶FFÖ7F—fRÖV×G•Òr’æf÷$V6‚‚†V×G’’Óâ²V×G’æ†–FFVâÒ7F—fRæÆVæwF‚â²Ò“°¢BB‚u¶FFÖÆÂÖö&¦V7G2ÖV×G•Òr’æf÷$V6‚‚†V×G’’Óâ²V×G’æ†–FFVâÒ6öÖ&–æVBæÆVæwF‚â²Ò“°¢BB‚u¶FF×7F'B×&VG•Òr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ7F'E&VG”ö&¦V7B†'WGFöâæFF6WBç7F'E&VG’’’“°¢BB‚u¶FFÖFVÆWFR×&VG•Òr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFVÆWFU&VG”ö&¦V7B†'WGFöâæFF6WBæFVÆWFU&VG’’’“°¢BB‚u¶FFÖ÷VâÖö&¦V7EÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Väö&¦V7D6&B†'WGFöâæFF6WBæ÷Väö&¦V7B’’“°¢&VæFW$×•&ö¦V7G2‚“°¢&VæFW$6öÖÖW&6–Å&÷÷6Ç2‚“°¢&VæFW$†öÖT–æ&÷‚‚“°§Ð ¦gVæ7F–öâ÷Väö&¦V7D6&B†–B’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ–B“°¢–b‚ö&¦V7B’&WGW&ã°¢6öç7BFö7VÖVçD6†ö–6W2Òö&¦V7Bæ¶W—2‡WÆöE'VÆW2’æÖ‚†¶–æB’Óâ×•&ö¦V7DFö7VÖVçDw&÷WÖ&·W†ö&¦V7BÂ¶–æB’’æ¦ö–â‚rr“°¢6öç7BÆ–fV7–6ÆT7F–öâÒ²v7F—fRrÂv6ö×ÆWFVBuÒæ–æ6ÇVFW2†ö&¦V7Bç7FGW2¢òÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâö&¦V7BÖÆ–fV7–6ÆRÖ'WGFöâG¶ö&¦V7Bç7FGW2ÓÓÒv7F—fRròr—2ÖFævW"r¢rwÒ"G—SÒ&'WGFöâ"FF×FövvÆRÖ6÷&RÖö&¦V7CâG¶W66T‡FÖÂ‡G"†ö&¦V7Bç7FGW2ÓÓÒv7F—fRròvf–æ—6„ö&¦V7Br¢w&V÷Väö&¦V7Br’—ÓÂö'WGFöãæ ¢¢ö&¦V7Bç7FGW2ÓÓÒw&VG’p¢òÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâö&¦V7B×7F'B×&ö¦V7B"G—SÒ&'WGFöâ"FF×7F'BÖ6÷&RÖö&¦V7CâG¶W66T‡FÖÂ‡G"‚w7F'Dö&¦V7Br’—ÓÂö'WGFöãæ ¢¢rs°¢6öç7B&W÷'D7F–öâÒö&¦V7Bæf–ÆW3òæÆVæwF‚òÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâö&¦V7B×f–Wr×&W÷'B"G—SÒ&'WGFöâ"FF×f–WrÖö&¦V7B×&W÷'CâG¶W66T‡FÖÂ‡G"‚wf–Wu&W÷'Br’—ÓÂö'WGFöãæ¢rs°¢6öç7BFö7VÖVçG46öçFVçBÒÆF—b6Æ73Ò&ö&¦V7BÖFö7VÖVçBÖ6†ö÷6W"—2×fW'6–öæVB×’×&ö¦V7BÖFö7VÖVçG2#âG¶Fö7VÖVçD6†ö–6W7ÓÂöF—cãÆF—b6Æ73Ò&ö&¦V7BÖ6&BÖ7F–öç2#âG·&W÷'D7F–öçÓÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâö&¦V7B×&VæÖRÖ'WGFöâ"G—SÒ&'WGFöâ"FF×&VæÖRÖ6÷&RÖö&¦V7CâG¶W66T‡FÖÂ‡G"‚w&VæÖRr’—ÓÂö'WGFöãâG¶Æ–fV7–6ÆT7F–öçÓÂöF—cæ°¢6†÷tF–Æör†W66T‡FÖÂ†ö&¦V7BææÖR’ÂW66T‡FÖÂ‡G"‚v6†ö÷6Tö&¦V7DFö7VÖVçBr’’ÂFö7VÖVçG46öçFVçB“°¢6öç7B66÷RÒB‚u¶FFÖF–ÆörÖ6öçFVçEÒr“°¢B‚u¶FFÖÆVæ6‚×&ö¦V7EÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vå&ö¦V7DÆVæ6„F–Æör†ö&¦V7Bæ–B’“°¢BB‚u¶FFÖ×’×&ö¦V7B×&VæÖRÖFö7VÖVçEÒrÂ66÷R’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ&VæÖU&ö¦V7DFö7VÖVçB†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ×•&ö¦V7E&VæÖTFö7VÖVçB’’“°¢BB‚u¶FFÖ×’×&ö¦V7B×WÆöEÒrÂ66÷R’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷VåWÆöDF–Æör†'WGFöâæFF6WBæ×•&ö¦V7EWÆöBÂ'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBçfW'6–öäÖöFR’’“°¢BB‚u¶FF×FövvÆR×&ö¦V7B×fW'6–öåÒrÂ66÷R’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7B¶W’Ò&ö¦V7DFö7VÖVçDw&÷W¶W’†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ¶–æB“°¢–b‡6VÆV7FVE&ö¦V7EfW'6–öä–G2ævWB†¶W’’ÓÓÒ'WGFöâæFF6WBçFövvÆU&ö¦V7EfW'6–öâ’6VÆV7FVE&ö¦V7EfW'6–öä–G2æFVÆWFR†¶W’“°¢VÇ6R6VÆV7FVE&ö¦V7EfW'6–öä–G2ç6WB†¶W’Â'WGFöâæFF6WBçFövvÆU&ö¦V7EfW'6–öâ“°¢÷Väö&¦V7D6&B†ö&¦V7Bæ–B“°¢Ò’“°¢BB‚u¶FFÖæÇ—¦R×&ö¦V7B×fW'6–öåÒrÂ66÷R’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâæÇ—¦Tö&¦V7DFö7VÖVçB†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ¶–æBÂ'WGFöâæFF6WBææÇ—¦U&ö¦V7EfW'6–öâÂ²F–Æös¢G'VRÒ’’“°¢BB‚u¶FFÖ÷Vâ×&ö¦V7B×fW'6–öåÒrÂ66÷R’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷VäæÇ—¦VDFö7VÖVçB†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ¶–æBÂ'WGFöâæFF6WBæ÷Vå&ö¦V7EfW'6–öâ’’“°¢BB‚u¶FFÖFVÆWFR×&ö¦V7B×fW'6–öåÒrÂ66÷R’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFVÆWFTö&¦V7DFö7VÖVçEfW'6–öâ†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ¶–æBÂ'WGFöâæFF6WBæFVÆWFU&ö¦V7EfW'6–öâ’’“°¢BB‚u¶FF×6†÷r×&ö¦V7BÖ6ö×&—6öåÒrÂ66÷R’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7B¶W’Ò&ö¦V7DFö7VÖVçDw&÷W¶W’†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBç6†÷u&ö¦V7D6ö×&—6öâ“°¢f—6–&ÆU&ö¦V7D6ö×&—6öç2æFB†¶W’“²W‡æFVE&ö¦V7D6ö×&—6öç2æFVÆWFR†¶W’“²÷Väö&¦V7D6&B†ö&¦V7Bæ–B“°¢Ò’“°¢BB‚u¶FF×FövvÆR×&ö¦V7BÖ6ö×&—6öåÒrÂ66÷R’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7B¶W’Ò&ö¦V7DFö7VÖVçDw&÷W¶W’†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBçFövvÆU&ö¦V7D6ö×&—6öâ“°¢–b†W‡æFVE&ö¦V7D6ö×&—6öç2æ†2†¶W’’’W‡æFVE&ö¦V7D6ö×&—6öç2æFVÆWFR†¶W’“²VÇ6RW‡æFVE&ö¦V7D6ö×&—6öç2æFB†¶W’“°¢÷Väö&¦V7D6&B†ö&¦V7Bæ–B“°¢Ò’“°¢BB‚u¶FF×&ö¦V7B×fW'6–öâ×F%ÒrÂ66÷R’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6VÆV7FVE&ö¦V7EfW'6–öåF'2ç6WB†G·&ö¦V7DFö7VÖVçDw&÷W¶W’†'WGFöâæFF6WBæö&¦V7D–BÂ'WGFöâæFF6WBæ¶–æB—Ó¢G¶'WGFöâæFF6WBçfW'6–öä–GÖÂ'WGFöâæFF6WBç&ö¦V7EfW'6–öåF"“°¢÷Väö&¦V7D6&B†ö&¦V7Bæ–B“°¢Ò’“°¢B‚u¶FF×f–WrÖö&¦V7B×&W÷'EÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vå&W÷'D6†ö÷6W"†ö&¦V7B’“°¢B‚u¶FF×&VæÖRÖ6÷&RÖö&¦V7EÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ&VæÖT6÷&Tö&¦V7B†ö&¦V7Bæ–B’“°¢B‚u¶FF×7F'BÖ6÷&RÖö&¦V7EÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ7F'E&VG”ö&¦V7B†ö&¦V7Bæ–B’“°¢B‚u¶FF×FövvÆRÖ6÷&RÖö&¦V7EÒrÂ66÷R“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâFövvÆT6÷&Tö&¦V7D6ö×ÆWF–öâ†ö&¦V7Bæ–B’“°§Ð ¦gVæ7F–öâ&VæÖT6÷&Tö&¦V7B†–B’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ–B“°¢–b‚ö&¦V7B’&WGW&ã°¢6öç7B&Wf–÷W4æÖRÒö&¦V7BææÖS°¢÷Vå&VæÖTF–Æör‡G"‚w&VæÖTö&¦V7Br’Âö&¦V7BææÖRÂÂ†æÖR’Óâ°¢ö&¦V7BææÖRÒæÖS°¢–b†Æö6Å7F÷&vRævWD—FVÒ„ô$¤T5EôäÔUô´U’’ÓÓÒ&Wf–÷W4æÖR’Æö6Å7F÷&vRç6WD—FVÒ„ô$¤T5EôäÔUô´U’ÂæÖR“°¢6fTö&¦V7G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢Ò“°§Ð ¦gVæ7F–öâFövvÆT6÷&Tö&¦V7D6ö×ÆWF–öâ†–B’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ–B“°¢–b‚ö&¦V7BÇÂ²v7F—fRrÂv6ö×ÆWFVBuÒæ–æ6ÇVFW2†ö&¦V7Bç7FGW2’’&WGW&ã°¢–b†ö&¦V7Bç7FGW2ÓÓÒv6ö×ÆWFVBr’°¢–b†ö&¦V7E&Vv—7G'’æf–ÇFW"‚†—FVÒ’Óâ—FVÒç7FGW2ÓÓÒv7F—fRr’æÆVæwF‚ãÒ5D•dUôô$¤T5EôÄ”Ô•B’²6†÷t7F—fTÆ–Ö—B‚“²&WGW&ã²Ð¢ö&¦V7Bç7FGW2Òv7F—fRs°¢ö&¦V7Bæ6ö×ÆWFVDBÒçVÆÃ°¢ö&¦V7Bç7F'FVDBÇÃÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6†÷uFö7B‡G"‚vö&¦V7E&V÷VæVBr’“°¢ÒVÇ6R°¢ö&¦V7Bç7FGW2Òv6ö×ÆWFVBs°¢ö&¦V7Bæ6ö×ÆWFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6†÷uFö7B‡G"‚v6ö×ÆWFVDö&¦V7Br’“°¢Ð¢6fTö&¦V7G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°§Ð ¦gVæ7F–öâ&Vv—7FW$æÇ—¦VDö&¦V7B†æÖRÂ&VG”f–ÆW2’°¢6öç7Bæ÷&ÖÆ—¦VDæÖRÒ7G&–ær†æÖR’çG&–Ò‚’çFôÆö6ÆTÆ÷vW$66R‚“°¢6öç7BW†—7F–ærÒö&¦V7E&Vv—7G'’æf–æB‚†ö&¦V7B’Óâö&¦V7BææÖRçG&–Ò‚’çFôÆö6ÆTÆ÷vW$66R‚’ÓÓÒæ÷&ÖÆ—¦VDæÖR“°¢6öç7BæÇ—¦VDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢6öç7Bf–ÆW2Ò&VG”f–ÆW2æÖ‚…¶¶–æBÂf–ÆUÒ’Óâ°¢6öç7B&V6÷&BÒ²ââæf–ÆRÂ¶–æBÂæÖS¢f–ÆRææÖRÂ6—¦S¢f–ÆRç6—¦RÇÂÂæÇ—6—5VæF–æs¢fÇ6RÂæÇ—¦VDBÓ°¢–b†¶–æBÓÓÒw&ö¦V7Br’&V6÷&BæW7F–ÖFT'&V¶F÷vâÒ&ö¦V7DW7F–ÖFU6æ6†÷B‡&V6÷&B“°¢&WGW&â²ââç&V6÷&BÂfW'6–öç3¢¶f–ÆUfW'6–öå6æ6†÷B‡&V6÷&B•ÒÓ°¢Ò“°¢–b†W†—7F–ær’°¢W†—7F–ærç&ö¦V7EF—FÆRÇÃÒ7G&–ær†æÖR’çG&–Ò‚“°¢W†—7F–ærç&ö¦V7E6V7F–öâÇÃÒW†—7F–ærç&ö¦V7EF—FÆS°¢W†—7F–æræFö7VÖVçEF—FÆW2Òæ÷&ÖÆ—¦U&ö¦V7DFö7VÖVçEF—FÆW2†W†—7F–æræFö7VÖVçEF—FÆW2“°¢W†—7F–ærçWFFVDBÒæÇ—¦VDC°¢W†—7F–ærææÇ—¦VDBÒæÇ—¦VDC°¢W†—7F–æræf–ÆW2Òf–ÆW3°¢–b‚²v7F—fRrÂv6ö×ÆWFVBuÒæ–æ6ÇVFW2†W†—7F–ærç7FGW2’’°¢W†—7F–ærç7FGW2Òw&VG’s°¢W†—7F–ærç7F'FVDBÒçVÆÃ°¢W†—7F–æræ6ö×ÆWFVDBÒçVÆÃ°¢Ð¢6fTö&¦V7G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢&WGW&âW†—7F–æs°¢Ð¢6öç7Bö&¦V7BÒ²–C¢7&VFTö&¦V7D–B‚’ÂæÖS¢7G&–ær†æÖR’çG&–Ò‚’Â&ö¦V7EF—FÆS¢7G&–ær†æÖR’çG&–Ò‚’Â&ö¦V7E6V7F–öã¢7G&–ær†æÖR’çG&–Ò‚’ÂFö7VÖVçEF—FÆW3¢æ÷&ÖÆ—¦U&ö¦V7DFö7VÖVçEF—FÆW2‚’Â6öçG&7DçVÖ&W#¢rrÂ7FGW3¢w&VG’rÂ7&VFVDC¢æÇ—¦VDBÂWFFVDC¢æÇ—¦VDBÂWÆöFVDC¢æÇ—¦VDBÂæÇ—¦VDBÂ7F'FVDC¢çVÆÂÂf–ÆW2Ó°¢ö&¦V7E&Vv—7G'’çVç6†–gB†ö&¦V7B“°¢6fTö&¦V7G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢&WGW&âö&¦V7C°§Ð ¦gVæ7F–öâ6†÷t7F—fTÆ–Ö—B‚’°¢6†÷tF–Æör‡G"‚v7F—fTÆ–Ö—EF—FÆRr’ÂG"‚v7F—fTÆ–Ö—D6÷’r’“°§Ð ¦gVæ7F–öâ7F'E&VG”ö&¦V7B†–B’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ–B“°¢–b‚ö&¦V7B’&WGW&ã°¢–b†ö&¦V7Bç7FGW2ÓÓÒv7F—fRr’°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6WEæVÂ‚vö&¦V7G2r“°¢&WGW&ã°¢Ð¢6öç7B7F—fT6÷VçBÒö&¦V7E&Vv—7G'’æf–ÇFW"‚†—FVÒ’Óâ—FVÒç7FGW2ÓÓÒv7F—fRr’æÆVæwFƒ°¢–b†7F—fT6÷VçBãÒ5D•dUôô$¤T5EôÄ”Ô•B’°¢6†÷t7F—fTÆ–Ö—B‚“°¢&WGW&ã°¢Ð¢ö&¦V7Bç7FGW2Òv7F—fRs°¢ö&¦V7Bç7F'FVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢ö&¦V7Bæ6ö×ÆWFVDBÒçVÆÃ°¢6fTö&¦V7G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚vö&¦V7E7F'FVBr’“°§Ð ¦gVæ7F–öâFVÆWFU&VG”ö&¦V7B†–B’°¢6öç7BæW‡E&Vv—7G'’Òö&¦V7E&Vv—7G'’æf–ÇFW"‚†ö&¦V7B’Óâö&¦V7Bæ–BÓÒ–BÇÂö&¦V7Bç7FGW2ÓÒw&VG’r“°¢–b†æW‡E&Vv—7G'’æÆVæwF‚ÓÓÒö&¦V7E&Vv—7G'’æÆVæwF‚’&WGW&ã°¢ö&¦V7E&Vv—7G'’ÒæW‡E&Vv—7G'“°¢6fTö&¦V7G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢6†÷uFö7B‡G"‚vö&¦V7DFVÆWFVBr’“°§Ð ¦gVæ7F–öâ—4ÆÆ÷vVDf–ÆR†f–ÆRÂ'VÆR’°¢6öç7BW‡FVç6–öâÒ7G&–ær†f–ÆRææÖRÇÂrr’ç7Æ—B‚râr’ç÷‚“òçFôÆ÷vW$66R‚“°¢&WGW&â'VÆRæW‡FVç6–öç2æ–æ6ÇVFW2†W‡FVç6–öâ’ÇÂ7G&–ær†f–ÆRçG—RÇÂrr’ç7F'G5v—F‚‚v–ÖvRòr“°§Ð ¦gVæ7F–öâf–ÆTÖWFFF†f–ÆR’°¢&WGW&â°¢æÖS¢7G&–ær†f–ÆRææÖRÇÂG"‚w6VÆV7Df–ÆRr’’À¢6—¦S¢çVÖ&W"†f–ÆRç6—¦R’ÇÂÀ¢G—S¢7G&–ær†f–ÆRçG—RÇÂrr’À¢Æ7DÖöF–f–VC¢çVÖ&W"†f–ÆRæÆ7DÖöF–f–VB’ÇÂFFRææ÷r‚’À¢FFVDC¢æWrFFR‚’çFô•4õ7G&–ær‚¢Ó°§Ð ¦gVæ7F–öâ&VæFW%WÆöDf–ÆR‚’°¢6öç7B6VÆV7FVBÒB‚u¶FF×WÆöB×6VÆV7FVEÒr“°¢6öç7BG&÷¦öæRÒB‚u¶FF×WÆöBÖG&÷¦öæUÒr“°¢6öç7B7F–öç2ÒB‚u¶FF×WÆöBÖFWf–6RÖ7F–öç5Òr“°¢–b‚6VÆV7FVBÇÂG&÷¦öæRÇÂ7F–öç2’&WGW&ã°¢6VÆV7FVBæ†–FFVâÒVæF–ætf–ÆS°¢G&÷¦öæRæ†–FFVâÒ&ööÆVâ‡VæF–ætf–ÆR“°¢7F–öç2æ†–FFVâÒ&ööÆVâ‡VæF–ætf–ÆR“°¢–b‡VæF–ætf–ÆR’°¢B‚u¶FF×WÆöBÖf–ÆRÖæÖUÒr’çFW‡D6öçFVçBÒVæF–ætf–ÆRææÖS°¢B‚u¶FF×WÆöBÖf–ÆRÖÖWFÒr’çFW‡D6öçFVçBÒG·VæF–ætf–ÆRçG—RÇÂ}
+M²wÒ+rG¶f–ÆU6—¦R‡VæF–ætf–ÆRç6—¦R—Ö°¢Ð¢6öç7Bö&¦V7DæÖRÒB‚u¶FFÖæÇ—6—2Öö&¦V7BÖæÖUÒr“°¢6öç7B6öæf—&ÒÒB‚u¶FFÖ6öæf—&Ò×WÆöEÒr“°¢–b†6öæf—&Ò’6öæf—&ÒæF—6&ÆVBÒ‡VæF–ætf–ÆRbbö&¦V7DæÖSòçfÇVRçG&–Ò‚’“°§Ð ¦gVæ7F–öâ6†ö÷6UWÆöDf–ÆR†f–ÆR’°¢–b‚f–ÆR’&WGW&ã°¢6öç7B'VÆRÒWÆöE'VÆW5¶7F—fUWÆöD¶–æEÓ°¢–b†f–ÆRç6—¦Râ'VÆRæÖ„Ö"¢#B¢#B’°¢6†÷uFö7B†G·G"‚vf–ÆUFöôÆ&vRr—Ó¢G·'VÆRæÖ„Ö'Ò	Í	“°¢&WGW&ã°¢Ð¢–b‚—4ÆÆ÷vVDf–ÆR†f–ÆRÂ'VÆR’’°¢6†÷uFö7B†G·G"‚wVç7W÷'FVDf÷&ÖBr—Ó¢G·'VÆRæf÷&ÖG7Ö“°¢&WGW&ã°¢Ð¢VæF–ætf–ÆRÒf–ÆTÖWFFF†f–ÆR“°¢VæF–æuWÆöE6÷W&6Tf–ÆRÒf–ÆS°¢&VæFW%WÆöDf–ÆR‚“°¢6†÷uFö7B†G·G"‚vf–ÆU6VÆV7FVBr—Ó¢G¶f–ÆRææÖWÖ“°§Ð ¦gVæ7F–öâ&VÖ÷fUWÆöDf–ÆR‚’°¢VæF–ætf–ÆRÒçVÆÃ°¢VæF–æuWÆöE6÷W&6Tf–ÆRÒçVÆÃ°¢–b†7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öâr’°¢&VæFW%WÆöDf–ÆR‚“°¢&WGW&ã°¢Ð¢–b‡6VÆV7FVDf–ÆW5¶7F—fUWÆöD¶–æEÒ’°¢6VÆV7FVDf–ÆW5¶7F—fUWÆöD¶–æEÒÒçVÆÃ°¢6fUWÆöG2‚“°¢&VæFW$æÇ—6—46&G2‚“°¢6†÷uFö7B‡G"‚vf–ÆTFVÆWFVBr’“°¢Ð¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒ7F—fUWÆöDö&¦V7D–B“°¢–b†ö&¦V7Bbbö&¦V7Df–ÆR†ö&¦V7BÂ7F—fUWÆöD¶–æB’’°¢ö&¦V7Bæf–ÆW2Òö&¦V7Bæf–ÆW2æf–ÇFW"‚†f–ÆR’Óâf–ÆRæ¶–æBÓÒ7F—fUWÆöD¶–æB“°¢6fTö&¦V7G2‚“°¢&VæFW$ö&¦V7G2‚“°¢Ð¢&VæFW%WÆöDf–ÆR‚“°§Ð ¦gVæ7F–öâ÷VåfW'6–öä6ö×&—6öâ†ö&¦V7D–BÂ¶–æB’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢–b‚ö&¦V7BÇÂf–ÆR’&WGW&ã°¢7F—fTæÇ—6—4Fö7VÖVçBÒ²ö&¦V7D–BÂ¶–æBÂfW'6–öä–C¢ÆFW7DFö7VÖVçEfW'6–öâ†f–ÆR“òæ–BÇÂçVÆÂÓ°¢7F—fU&ö¦V7DæÇ—6—5F"Òw&÷÷6Âs°¢B‚u¶FFÖF–ÆöuÒr“òæ6Æ÷6R‚“°¢6WEæVÂ‚væÇ—6—2ÖFWF–Âr“°§Ð ¦gVæ7F–öâ7F'E&Wf—6–öä6ö×&—6öâ†ö&¦V7D–BÂ¶–æBÂ6ö×&—6öä–B’°¢6öç7Bö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢6öç7Bf–ÆRÒö&¦V7Df–ÆR†ö&¦V7BÂ¶–æB“°¢–b‚ö&¦V7BÇÂf–ÆRÇÂf–ÆRæ6ö×&—6öãòæ–BÓÒ6ö×&—6öä–B’&WGW&ã°¢7F—fU&Wf—6–öä6ö×&—6öä–BÒ6ö×&—6öä–C°¢6†÷tF–Æör‡G"‚v6ö×&—6öä–å&öw&W72r’ÂG"‚v6ö×&—6öä–å&öw&W746÷’r’ÂÆF—bFF×&Wf—6–öâÖæÇ—6—3Ò"G¶W66T‡FÖÂ†6ö×&—6öä–B—Ò#âG·&Wf—6–öä6ö×&—6öäÖ&·W†f–ÆR—ÓÆF—b6Æ73Ò&æÇ—6—2ÖÆöFW"#ãÇ7ããÂ÷7ããÇ7ããÂ÷7ããÇ7ããÂ÷7ããÂöF—cãÂöF—cæ“°¢&Wf—6–öäæÇ—6—5F–ÖW"Ò6WEF–ÖV÷WB‚‚’Óâ°¢6öç7B7W'&VçDö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†—FVÒ’Óâ—FVÒæ–BÓÓÒö&¦V7D–B“°¢6öç7B7W'&VçDf–ÆRÒö&¦V7Df–ÆR†7W'&VçDö&¦V7BÂ¶–æB“°¢–b‚7W'&VçDö&¦V7BÇÂ7W'&VçDf–ÆRÇÂ7W'&VçDf–ÆRæ6ö×&—6öãòæ–BÓÒ6ö×&—6öä–B’&WGW&ã°¢6öç7BæÇ—¦VDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢7W'&VçDf–ÆRæ6ö×&—6öâç7FGW2Òw&VG’s°¢7W'&VçDf–ÆRæ6ö×&—6öâææÇ—¦VDBÒæÇ—¦VDC°¢7W'&VçDf–ÆRæ6ö×&—6öâæ7W'&VçBææÇ—¦VDBÒæÇ—¦VDC°¢7W'&VçDf–ÆRææÇ—6—5VæF–ærÒfÇ6S°¢7W'&VçDf–ÆRææÇ—¦VDBÒæÇ—¦VDC°¢7W'&VçDf–ÆRçfW'6–öç2Òf–ÆUfW'6–öç2†7W'&VçDf–ÆR’æÖ‚‡fW'6–öâÂ–æFW‚ÂfW'6–öç2’Óâ–æFW‚ÓÓÒfW'6–öç2æÆVæwF‚Òò²ââçfW'6–öâÂæÇ—¦VDBÒ¢fW'6–öâ“°¢7W'&VçDö&¦V7BææÇ—¦VDBÒæÇ—¦VDC°¢–b†7W'&VçDö&¦V7Bç7FGW2ÓÓÒwWÆöFVBrbb7W'&VçDö&¦V7Bæf–ÆW3òæÆVæwF‚bb7W'&VçDö&¦V7Bæf–ÆW2æWfW'’‚†—FVÒ’Óâ—4ö&¦V7DFö7VÖVçDæÇ—¦VB†7W'&VçDö&¦V7BÂ—FVÒ’’’7W'&VçDö&¦V7Bç7FGW2Òw&VG’s°¢6VÆV7Dö&¦V7Df÷$æÇ—6—2†7W'&VçDö&¦V7B“°¢6fTö&¦V7G2‚“°¢6fUWÆöG2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢–b†7F—fU&Wf—6–öä6ö×&—6öä–BÓÓÒ6ö×&—6öä–BbbB‚u¶FFÖF–ÆöuÒr“òæ÷VâbbB†¶FF×&Wf—6–öâÖæÇ—6—3Ò"G¶6ö×&—6öä–GÒ%Ö’’°¢6†÷tF–Æör‡G"‚v6ö×&—6öä6ö×ÆWFRr’ÂG"‚v6ö×&—6öä6ö×ÆWFT6÷’r’ÂG·&Wf—6–öä6ö×&—6öäÖ&·W†7W'&VçDf–ÆR—ÓÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×f–Wr×fW'6–öâÖ6ö×&—6öãâG¶W66T‡FÖÂ‡G"‚wf–Wt6ö×&—6öâr’—ÓÂö'WGFöããÂöF—cæ“°¢B‚u¶FF×f–Wr×fW'6–öâÖ6ö×&—6öåÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷VåfW'6–öä6ö×&—6öâ†ö&¦V7D–BÂ¶–æB’“°¢ÒVÇ6R°¢6†÷uFö7B‡G"‚wfW'6–öå6fVBr’“°¢Ð¢ÒÂ“°§Ð ¦7–æ2gVæ7F–öâ6öæf—&ÕWÆöB‚’°¢6öç7Bö&¦V7DæÖT–çWBÒB‚u¶FFÖæÇ—6—2Öö&¦V7BÖæÖUÒr“°¢6öç7B6VÆV7FVEF&vWD–BÒB‚u¶FF×WÆöBÖö&¦V7B×F&vWEÒr“òçfÇVRÇÂ7F—fUWÆöDö&¦V7D–C°¢ÆWBFW7F–æF–öâÒö&¦V7E&Vv—7G'’æf–æB‚†ö&¦V7B’Óâö&¦V7Bæ–BÓÓÒ6VÆV7FVEF&vWD–B“°¢6öç7Bö&¦V7DæÖRÒFW7F–æF–öãòææÖRÇÂö&¦V7DæÖT–çWCòçfÇVRçG&–Ò‚“°¢–b‚ö&¦V7DæÖR’°¢ö&¦V7DæÖT–çWCòæ6Æ74Æ—7BæFB‚vf–VÆBÖW'&÷"r“°¢ö&¦V7DæÖT–çWCòæfö7W2‚“°¢6†÷uFö7B‡G"‚vö&¦V7E&WV—&VBr’“°¢&WGW&ã°¢Ð¢–b‚VæF–ætf–ÆR’°¢6†÷uFö7B‡G"‚w6VÆV7Df–ÆRr’“°¢&WGW&ã°¢Ð¢ö&¦V7DæÖT–çWBæ6Æ74Æ—7Bç&VÖ÷fR‚vf–VÆBÖW'&÷"r“°¢6öç7BWÆöFVDBÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢–b‚FW7F–æF–öâ’FW7F–æF–öâÒö&¦V7E&Vv—7G'’æf–æB‚†ö&¦V7B’Óâö&¦V7BææÖRçG&–Ò‚’çFôÆö6ÆTÆ÷vW$66R‚’ÓÓÒö&¦V7DæÖRçFôÆö6ÆTÆ÷vW$66R‚’“°¢6öç7B&Wf–÷W4f–ÆRÒö&¦V7Df–ÆR†FW7F–æF–öâÂ7F—fUWÆöD¶–æB“°¢–b†7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öârbb&Wf–÷W4f–ÆR’°¢6†÷uFö7B‡G"‚wWÆöDf—'7Br’“°¢&WGW&ã°¢Ð¢–b‡&Wf–÷W4f–ÆRbb6ÖTf–ÆTÖWFFF‡&Wf–÷W4f–ÆRÂVæF–ætf–ÆR’’°¢–b†7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öâr’°¢6†÷uFö7B‡G"‚w6ÖTf–ÆU6VÆV7FVBr’“°¢&WGW&ã°¢Ð¢VæF–æuWÆöE6÷W&6Tf–ÆRÒçVÆÃ°¢B‚u¶FFÖF–ÆöuÒr’æ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚wWÆöD6ö×ÆWFRr’“°¢&WGW&ã°¢Ð¢6öç7B6÷W&6Tf–ÆRÒVæF–æuWÆöE6÷W&6Tf–ÆS°¢6öç7B6†÷VÆDW‡G&7E6÷W&6T6FÆörÒ&ööÆVâ‡6÷W&6Tf–ÆRbb44…õ4õU$4UôDô5TÔTåEô´”äE2æ–æ6ÇVFW2†7F—fUWÆöD¶–æB’“°¢6öç7B6öæf—&Ô'WGFöâÒB‚u¶FFÖ6öæf—&Ò×WÆöEÒr“°¢–b†6öæf—&Ô'WGFöâ’6öæf—&Ô'WGFöâæF—6&ÆVBÒG'VS°¢6öç7B6÷W&6T6FÆörÒ6†÷VÆDW‡G&7E6÷W&6T6FÆöròv—BW‡G&7D66…6÷W&6T6FÆötg&öÔf–ÆR‡6÷W&6Tf–ÆRÂ7F—fUWÆöD¶–æB’¢µÓ°¢–b†6öæf—&Ô'WGFöãòæ—46öææV7FVB’6öæf—&Ô'WGFöâæF—6&ÆVBÒfÇ6S°¢ÆWBWÆöFVDf–ÆRÒ²ââçVæF–ætf–ÆRÂ¶–æC¢7F—fUWÆöD¶–æBÂFFVDC¢WÆöFVDBÂæÇ—6—5VæF–æs¢G'VRÂæÇ—¦VDC¢çVÆÂÂ6÷W&6T6FÆörÂ6÷W&6T6FÆöu66ææVC¢6†÷VÆDW‡G&7E6÷W&6T6FÆörÓ°¢–b†7F—fUWÆöD¶–æBÓÓÒv6öçG&7Br’WÆöFVDf–ÆRæ6öçG&7DçVÖ&W"Ò7G&–ær‡VæF–ætf–ÆRæ6öçG&7DçVÖ&W"ÇÂW‡G&7D6öçG&7DçVÖ&W$g&öÔæÖR‡VæF–ætf–ÆRææÖR’ÇÂrr“°¢–b‚FW7F–æF–öâ’°¢FW7F–æF–öâÒ²–C¢7&VFTö&¦V7D–B‚’ÂæÖS¢ö&¦V7DæÖRÂ&ö¦V7EF—FÆS¢ö&¦V7DæÖRÂ&ö¦V7E6V7F–öã¢ö&¦V7DæÖRÂFö7VÖVçEF—FÆW3¢æ÷&ÖÆ—¦U&ö¦V7DFö7VÖVçEF—FÆW2‚’Â6öçG&7DçVÖ&W#¢rrÂ7FGW3¢wWÆöFVBrÂ7&VFVDC¢WÆöFVDBÂWFFVDC¢WÆöFVDBÂWÆöFVDBÂæÇ—¦VDC¢çVÆÂÂ7F'FVDC¢çVÆÂÂf–ÆW3¢µÒÓ°¢ö&¦V7E&Vv—7G'’çVç6†–gB†FW7F–æF–öâ“°¢Ð¢–b‡&Wf–÷W4f–ÆR’°¢6öç7Bæ÷&ÖÆ—¦VE&Wf–÷W2Òæ÷&ÖÆ—¦Tf–ÆU&V6÷&B‡&Wf–÷W4f–ÆR“°¢6öç7B7W'&VçBÒf–ÆUfW'6–öå6æ6†÷B‡WÆöFVDf–ÆR“°¢6öç7BfW'6–öç2Òf–ÆUfW'6–öç2†æ÷&ÖÆ—¦VE&Wf–÷W2“°¢–b‚6ÖTf–ÆTÖWFFF‡fW'6–öç5·fW'6–öç2æÆVæwF‚ÒÒÂ7W'&VçB’’fW'6–öç2çW6‚†7W'&VçB“°¢WÆöFVDf–ÆRÒ°¢ââçWÆöFVDf–ÆRÀ¢fW'6–öç2À¢6ö×&—6öã¢çVÆÀ¢Ó°¢ÒVÇ6R°¢WÆöFVDf–ÆRÒ²ââçWÆöFVDf–ÆRÂfW'6–öç3¢¶f–ÆUfW'6–öå6æ6†÷B‡WÆöFVDf–ÆR•ÒÂ6ö×&—6öã¢çVÆÂÓ°¢Ð¢FW7F–æF–öâæf–ÆW2Ò²âââ†FW7F–æF–öâæf–ÆW2ÇÂµÒ’æf–ÇFW"‚†f–ÆR’Óâf–ÆRæ¶–æBÓÒ7F—fUWÆöD¶–æB’ÂWÆöFVDf–ÆUÓ°¢FW7F–æF–öâç&ö¦V7EF—FÆRÇÃÒFW7F–æF–öâææÖS°¢FW7F–æF–öâç&ö¦V7E6V7F–öâÇÃÒFW7F–æF–öâç&ö¦V7EF—FÆS°¢FW7F–æF–öâæFö7VÖVçEF—FÆW2Òæ÷&ÖÆ—¦U&ö¦V7DFö7VÖVçEF—FÆW2†FW7F–æF–öâæFö7VÖVçEF—FÆW2“°¢–b†7F—fUWÆöD¶–æBÓÓÒv6öçG&7Br’FW7F–æF–öâæ6öçG&7DçVÖ&W"Ò7G&–ær‡WÆöFVDf–ÆRæ6öçG&7DçVÖ&W"ÇÂW‡G&7D6öçG&7DçVÖ&W$g&öÔæÖR‡WÆöFVDf–ÆRææÖR’ÇÂrr“°¢FW7F–æF–öâçWFFVDBÒWÆöFVDC°¢FW7F–æF–öâçWÆöFVDBÒWÆöFVDC°¢–b†FW7F–æF–öâç7FGW2ÓÓÒw&VG’r’FW7F–æF–öâç7FGW2ÒwWÆöFVBs°¢7F—fUWÆöDö&¦V7D–BÒFW7F–æF–öâæ–C°¢6VÆV7Dö&¦V7Df÷$æÇ—6—2†FW7F–æF–öâ“°¢6fTö&¦V7G2‚“°¢&VæFW$æÇ—6—46&G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢VæF–æuWÆöE6÷W&6Tf–ÆRÒçVÆÃ°¢B‚u¶FFÖF–ÆöuÒr’æ6Æ÷6R‚“°¢6†÷uFö7B‡G"‡&Wf–÷W4f–ÆRòwfW'6–öå6fVBr¢wWÆöD6ö×ÆWFRr’“°§Ð ¦gVæ7F–öâ÷VåWÆöDF–Æör†¶–æBÂö&¦V7D–BÒçVÆÂÂÖöFRÒw7FæF&Br’°¢7F—fUWÆöD¶–æBÒWÆöE'VÆW5¶¶–æEÒò¶–æB¢w&ö¦V7Bs°¢7F—fUWÆöDÖöFRÒÖöFRÓÓÒw&Wf—6–öâròw&Wf—6–öâr¢w7FæF&Bs°¢6VÆV7DæÇ—6—2†7F—fUWÆöD¶–æB“°¢7F—fUWÆöDö&¦V7D–BÒö&¦V7E&Vv—7G'’ç6öÖR‚†ö&¦V7B’Óâö&¦V7Bæ–BÓÓÒö&¦V7D–B’òö&¦V7D–B¢çVÆÃ°¢6öç7B6VÆV7FVDö&¦V7BÒö&¦V7E&Vv—7G'’æf–æB‚†ö&¦V7B’Óâö&¦V7Bæ–BÓÓÒ7F—fUWÆöDö&¦V7D–B“°¢6öç7B7F÷&VDf–ÆRÒö&¦V7Df–ÆR‡6VÆV7FVDö&¦V7BÂ7F—fUWÆöD¶–æB“°¢–b†7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öârbb7F÷&VDf–ÆR’7F—fUWÆöDÖöFRÒw7FæF&Bs°¢VæF–æuWÆöE6÷W&6Tf–ÆRÒçVÆÃ°¢VæF–ætf–ÆRÒ7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öâròçVÆÂ¢‡6VÆV7FVDö&¦V7Bò‡7F÷&VDf–ÆRò²ââç7F÷&VDf–ÆRÒ¢çVÆÂ’¢‡6VÆV7FVDf–ÆW5¶7F—fUWÆöD¶–æEÒò²ââç6VÆV7FVDf–ÆW5¶7F—fUWÆöD¶–æEÒÒ¢çVÆÂ’“°¢6öç7B'VÆRÒWÆöE'VÆW5¶7F—fUWÆöD¶–æEÓ°¢æWtö&¦V7DæÖTG&gBÒ6VÆV7FVDö&¦V7Bòrr¢†Æö6Å7F÷&vRævWD—FVÒ„ô$¤T5EôäÔUô´U’’ÇÂrr“°¢6öç7BF&vWD÷F–öç2Òö&¦V7E&Vv—7G'’æÖ‚†ö&¦V7B’ÓâÆ÷F–öâfÇVSÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò"G¶ö&¦V7Bæ–BÓÓÒ7F—fUWÆöDö&¦V7D–Bòw6VÆV7FVBr¢rwÓâG¶W66T‡FÖÂ†ö&¦V7BææÖR—Ò+rG¶W66T‡FÖÂ‡G"†ö&¦V7Bç7FGW2ÓÓÒv7F—fRròv–åv÷&²r¢ö&¦V7Bç7FGW2ÓÓÒw&VG’ròw&VG•7FGW2r¢wWÆöFVBr’—ÓÂö÷F–öãæ’æ¦ö–â‚rr“°¢6öç7B&Wf—6–öå6÷W&6RÒ7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öârbb7F÷&VDf–ÆRòÇ6V7F–öâ6Æ73Ò'&Wf—6–öâ×WÆöB×6÷W&6R#ãÇ7ãçbG¶f–ÆUfW'6–öä6÷VçB‡7F÷&VDf–ÆR—ÓÂ÷7ããÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚v7W'&VçE7F÷&VEfW'6–öâr’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡7F÷&VDf–ÆRææÖR—ÓÂ÷7G&öæsãÆVÓâG¶W66T‡FÖÂ†f÷&ÖE7F÷&vR‡7F÷&VDf–ÆRç6—¦R’—Ò+rG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR‡7F÷&VDf–ÆRæFFVDB’—ÓÂöVÓãÂöF—cãÂ÷6V7F–öãæ¢rs°¢6öç7BÖ&·WÒ ¢ÆF—b6Æ73Ò'WÆöBÖÆ–Ö—G2"&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚wW6W%WÆöEÆâr’—Ò#à¢Ç7ããÆ#âG¶W66T‡FÖÂ‡G"‚vÖ„f–ÆU6—¦Rr’—ÓÂö#âG·'VÆRæÖ„Ö'Ò	Í	Â÷7ãà¢Ç7ããÆ#âG¶W66T‡FÖÂ‡G"‚vÆÆ÷vVDf÷&ÖG2r’—ÓÂö#âG·'VÆRæf÷&ÖG7ÓÂ÷7ãà¢Ç6ÖÆÃâG¶W66T‡FÖÂ‡G"‚wW6W%WÆöEÆâr’—ÓÂ÷6ÖÆÃà¢ÂöF—cà¢ÆÆ&VÂ6Æ73Ò'WÆöB×F&vWBÖf–VÆBG¶7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öâròr—2Öf—†VBr¢rwÒ#à¢Ç7ãâG¶W66T‡FÖÂ‡G"‚vFEFôö&¦V7Br’—ÓÂ÷7ãà¢Ç6VÆV7BFF×WÆöBÖö&¦V7B×F&vWBG¶7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öâròvF—6&ÆVBr¢rwÓãÆ÷F–öâfÇVSÒ"#âG¶W66T‡FÖÂ‡G"‚væWtö&¦V7Br’—ÓÂö÷F–öãâG·F&vWD÷F–öç7ÓÂ÷6VÆV7Cà¢ÂöÆ&VÃà¢ÆÆ&VÂ6Æ73Ò'WÆöBÖö&¦V7BÖf–VÆB#à¢Ç7ãâG¶W66T‡FÖÂ‡G"‚vö&¦V7DæÖRr’—ÒÆVÓâ£ÂöVÓãÂ÷7ãà¢Æ–çWBFFÖæÇ—6—2Öö&¦V7BÖæÖRÖ†ÆVæwFƒÒ#"WFö6ö×ÆWFSÒ&÷&væ—¦F–öâ"Æ6V†öÆFW#Ò"G¶W66T‡FÖÂ‡G"‚vö&¦V7EÆ6V†öÆFW"r’—Ò"fÇVSÒ"G¶W66T‡FÖÂ‡6VÆV7FVDö&¦V7CòææÖRÇÂæWtö&¦V7DæÖTG&gB—Ò"G·6VÆV7FVDö&¦V7Bòw&VFöæÇ’r¢rwÒóà¢Ç6ÖÆÃâG¶W66T‡FÖÂ‡G"‚vö&¦V7DæÖT†–çBr’—ÓÂ÷6ÖÆÃà¢ÂöÆ&VÃà¢G·&Wf—6–öå6÷W&6WÐ¢ÆF—b6Æ73Ò&æÇ—6—2ÖG&÷¦öæR"FF×WÆöBÖG&÷¦öæR&öÆSÒ&'WGFöâ"F&–æFWƒÒ##à¢Ç7frf–Wt&÷ƒÒ##B#B"&–Ö†–FFVãÒ'G'VR#ãÇF‚CÒ$Ó"ecDÓr–ÃRÓRRTÓRWcVƒGbÓR"óãÂ÷7fsà¢Ç7G&öæsâG¶W66T‡FÖÂ‡G"‚w6VÆV7Df–ÆRr’—ÓÂ÷7G&öæsà¢Ç7ãâG¶W66T‡FÖÂ‡G"‚vG&÷f–ÆRr’—ÓÂ÷7ãà¢Ç6ÖÆÃâG·'VÆRæf÷&ÖG7Ò+rG·'VÆRæÖ„Ö'Ò	Í	Â÷6ÖÆÃà¢ÂöF—cà¢Æ–çWB6Æ73Ò&†–FFVâÖf–ÆRÖ–çWB"FF×WÆöBÖf–ÆRÖ–çWBG—SÒ&f–ÆR"66WCÒ"G·'VÆRæ66WGÒ"óà¢Æ–çWB6Æ73Ò&†–FFVâÖf–ÆRÖ–çWB"FF×WÆöB×†÷FòÖ–çWBG—SÒ&f–ÆR"66WCÒ&–ÖvRò¢"6GW&SÒ&Vçf—&öæÖVçB"óà¢ÆF—b6Æ73Ò'WÆöBÖFWf–6RÖ7F–öç2"FF×WÆöBÖFWf–6RÖ7F–öç3à¢Æ'WGFöâG—SÒ&'WGFöâ"FFÖ6†ö÷6RÖFWf–6SâG¶W66T‡FÖÂ‡G"‚vFWf–6Tf–ÆRr’—ÓÂö'WGFöãà¢Æ'WGFöâG—SÒ&'WGFöâ"FFÖ6†ö÷6R×†÷FóâG¶W66T‡FÖÂ‡G"‚w†÷Fô÷$6ÖW&r’—ÓÂö'WGFöãà¢ÂöF—cà¢ÆF—b6Æ73Ò&F6†&ö&B×6VÆV7FVBÖf–ÆR"FF×WÆöB×6VÆV7FVB†–FFVãà¢Ç7â6Æ73Ò&F6†&ö&BÖf–ÆRÖ–6öâ#î)jCÂ÷7ãà¢ÆF—cãÇ7G&öærFF×WÆöBÖf–ÆRÖæÖSãÂ÷7G&öæsãÇ6ÖÆÂFF×WÆöBÖf–ÆRÖÖWFãÂ÷6ÖÆÃãÂöF—cà¢Æ'WGFöâG—SÒ&'WGFöâ"FF×&WÆ6RÖf–ÆSâG¶W66T‡FÖÂ‡G"‚w&WÆ6Rr’—ÓÂö'WGFöãà¢Æ'WGFöâ6Æ73Ò&F6†&ö&BÖFVÆWFRÖf–ÆR"G—SÒ&'WGFöâ"FFÖFVÆWFRÖf–ÆR&–ÖÆ&VÃÒ"G¶W66T‡FÖÂ‡G"‚vFVÆWFTf–ÆRr’—Ò#ì9sÂö'WGFöãà¢ÂöF—cà¢Æ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâF6†&ö&B×WÆöBÖ6öæf—&Ò"G—SÒ&'WGFöâ"FFÖ6öæf—&Ò×WÆöCâG¶W66T‡FÖÂ‡G"†7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öâròwWÆöDæD6ö×&Rr¢wWÆöBr’—ÓÂö'WGFöãæ°¢6†÷tF–Æör†7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öâròG¶W66T‡FÖÂ‡G"‚væWufW'6–öâr’—Ó¢G¶W66T‡FÖÂ‡G"†7F—fUWÆöD¶–æB’—Ö¢WÆöEF—FÆR†7F—fUWÆöD¶–æB’ÂG"†7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öâròw&Wf—6–öåWÆöD†–çBr¢vöæTf–ÆUW$6FVv÷'’r’ÂÖ&·W“° ¢6öç7Bf–ÆT–çWBÒB‚u¶FF×WÆöBÖf–ÆRÖ–çWEÒr“°¢6öç7B†÷Fô–çWBÒB‚u¶FF×WÆöB×†÷FòÖ–çWEÒr“°¢6öç7BG&÷¦öæRÒB‚u¶FF×WÆöBÖG&÷¦öæUÒr“°¢6öç7Bö&¦V7DæÖT–çWBÒB‚u¶FFÖæÇ—6—2Öö&¦V7BÖæÖUÒr“°¢6öç7BF&vWE6VÆV7BÒB‚u¶FF×WÆöBÖö&¦V7B×F&vWEÒr“°¢f–ÆT–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ6†ö÷6UWÆöDf–ÆR†f–ÆT–çWBæf–ÆW3òå³Ò’“°¢†÷Fô–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ6†ö÷6UWÆöDf–ÆR‡†÷Fô–çWBæf–ÆW3òå³Ò’“°¢B‚u¶FFÖ6†ö÷6RÖFWf–6UÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâf–ÆT–çWBæ6Æ–6²‚’“°¢B‚u¶FFÖ6†ö÷6R×†÷FõÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ†÷Fô–çWBæ6Æ–6²‚’“°¢B‚u¶FF×&WÆ6RÖf–ÆUÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâf–ÆT–çWBæ6Æ–6²‚’“°¢B‚u¶FFÖFVÆWFRÖf–ÆUÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ&VÖ÷fUWÆöDf–ÆR“°¢B‚u¶FFÖ6öæf—&Ò×WÆöEÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6öæf—&ÕWÆöB“°¢ö&¦V7DæÖT–çWBæFDWfVçDÆ—7FVæW"‚v–çWBrÂ‚’Óâ²ö&¦V7DæÖT–çWBæ6Æ74Æ—7Bç&VÖ÷fR‚vf–VÆBÖW'&÷"r“²æWtö&¦V7DæÖTG&gBÒö&¦V7DæÖT–çWBçfÇVS²&VæFW%WÆöDf–ÆR‚“²Ò“°¢F&vWE6VÆV7BæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ‚’Óâ°¢–b†7F—fUWÆöDÖöFRÓÓÒw&Wf—6–öâr’&WGW&ã°¢6öç7BF&vWBÒö&¦V7E&Vv—7G'’æf–æB‚†ö&¦V7B’Óâö&¦V7Bæ–BÓÓÒF&vWE6VÆV7BçfÇVR“°¢7F—fUWÆöDö&¦V7D–BÒF&vWCòæ–BÇÂçVÆÃ°¢ö&¦V7DæÖT–çWBç&VDöæÇ’Ò&ööÆVâ‡F&vWB“°¢ö&¦V7DæÖT–çWBçfÇVRÒF&vWCòææÖRÇÂæWtö&¦V7DæÖTG&gC°¢VæF–æuWÆöE6÷W&6Tf–ÆRÒçVÆÃ°¢VæF–ætf–ÆRÒF&vWBbbö&¦V7Df–ÆR‡F&vWBÂ7F—fUWÆöD¶–æB’ò²ââæö&¦V7Df–ÆR‡F&vWBÂ7F—fUWÆöD¶–æB’Ò¢çVÆÃ°¢&VæFW%WÆöDf–ÆR‚“°¢Ò“°¢G&÷¦öæRæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâf–ÆT–çWBæ6Æ–6²‚’“°¢G&÷¦öæRæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ²–b†WfVçBæ¶W’ÓÓÒtVçFW"rÇÂWfVçBæ¶W’ÓÓÒrr’²WfVçBç&WfVçDFVfVÇB‚“²f–ÆT–çWBæ6Æ–6²‚“²ÒÒ“°¢²vG&vVçFW"rÂvG&v÷fW"uÒæf÷$V6‚‚‡G—R’ÓâG&÷¦öæRæFDWfVçDÆ—7FVæW"‡G—RÂ†WfVçB’Óâ²WfVçBç&WfVçDFVfVÇB‚“²G&÷¦öæRæ6Æ74Æ—7BæFB‚v—2ÖG&vv–ærr“²Ò’“°¢²vG&vÆVfRrÂvG&÷uÒæf÷$V6‚‚‡G—R’ÓâG&÷¦öæRæFDWfVçDÆ—7FVæW"‡G—RÂ†WfVçB’Óâ²WfVçBç&WfVçDFVfVÇB‚“²G&÷¦öæRæ6Æ74Æ—7Bç&VÖ÷fR‚v—2ÖG&vv–ærr“²Ò’“°¢G&÷¦öæRæFDWfVçDÆ—7FVæW"‚vG&÷rÂ†WfVçB’Óâ°¢–b†WfVçBæFFG&ç6fW"æf–ÆW2æÆVæwF‚â’6†÷uFö7B‡G"‚vöæÇ”öæTf–ÆRr’“°¢6†ö÷6UWÆöDf–ÆR†WfVçBæFFG&ç6fW"æf–ÆW3òå³Ò“°¢Ò“°¢&VæFW%WÆöDf–ÆR‚“°§Ð ¦gVæ7F–öâ6VÆV7DæÇ—6—2‡G—R’°¢6VÆV7FVDæÇ—6—2Ò²w&ö¦V7BrÂv6öçG&7BrÂvW7F–ÖFRuÒæ–æ6ÇVFW2‡G—R’òG—R¢w&ö¦V7Bs°¢BB‚u¶FFÖæÇ—6—2×G—UÒr’æf÷$V6‚‚†6&B’Óâ°¢6öç7B6VÆV7FVBÒ6&BæFF6WBææÇ—6—5G—RÓÓÒ6VÆV7FVDæÇ—6—3°¢6&Bæ6Æ74Æ—7BçFövvÆR‚v—2×6VÆV7FVBrÂ6VÆV7FVB“°¢6&Bç6WDGG&–'WFR‚v&–×&W76VBrÂ7G&–ær‡6VÆV7FVB’“°¢Ò“°§Ð ¦gVæ7F–öâ'VäæÇ—6—2‚’°¢6öç7B&VG”f–ÆW2Òö&¦V7BæVçG&–W2‡6VÆV7FVDf–ÆW2’æf–ÇFW"‚…²Âf–ÆUÒ’Óâf–ÆR“°¢–b‚&VG”f–ÆW2æÆVæwF‚’°¢6†÷uFö7B‡G"‚wWÆöDf—'7Br’“°¢÷VåWÆöDF–Æör‡6VÆV7FVDæÇ—6—2“°¢&WGW&ã°¢Ð¢6öç7Bö&¦V7DæÖRÒÆö6Å7F÷&vRævWD—FVÒ„ô$¤T5EôäÔUô´U’’ÇÂG"‚væÇ—6—2r“°¢6öç7BF—FÆRÒW66T‡FÖÂ†ö&¦V7DæÖR“°¢6öç7Bf–ÆW4Ö&·WÒÆF—b6Æ73Ò&æÇ—6—2×&VG’Öf–ÆW2#âG·&VG”f–ÆW2æÖ‚…¶¶–æBÂf–ÆUÒ’ÓâÆF—cãÇ7ãî)É3Â÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"†¶–æB’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ†f–ÆRææÖR—ÓÂ÷6ÖÆÃãÂöF—cæ’æ¦ö–â‚rr—ÓÂöF—cæ°¢6ÆV%F–ÖV÷WB†æÇ—6—5F–ÖW"“°¢6†÷tF–Æör†G·G"‚væÇ—6—2r—Ó¢G·F—FÆWÖÂG·G"‚vf–ÆW5&VG’r—Ó¢G·&VG”f–ÆW2æÆVæwF‡ÒG·G"‚væÇ—6—4f–ÆW46÷VçBr—ÖÂG¶f–ÆW4Ö&·WÓÆF—b6Æ73Ò&æÇ—6—2ÖÆöFW"#ãÇ7ããÂ÷7ããÇ7ããÂ÷7ããÇ7ããÂ÷7ããÂöF—cæ“°¢æÇ—6—5F–ÖW"Ò6WEF–ÖV÷WB‚‚’Óâ°¢–b‚B‚u¶FFÖF–ÆöuÒr’æ÷Vâ’&WGW&ã°¢6öç7BæÇ—¦VDö&¦V7BÒ&Vv—7FW$æÇ—¦VDö&¦V7B†ö&¦V7DæÖRÂ&VG”f–ÆW2“°¢6†÷tF–Æör‡G"‚væÇ—6—46ö×ÆWFRr’ÂG"‚væÇ—6—46ö×ÆWFT6÷’r’ÂÆF—b6Æ73Ò'&W7VÇBÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FF×f–Wr×&W÷'CâG·G"‚wf–Wu&W÷'Br—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×7F'BÖö&¦V7CâG·G"‚w7F'Dö&¦V7Br—ÓÂö'WGFöããÂöF—cæ“°¢B‚u¶FF×f–Wr×&W÷'EÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vå&W÷'D6†ö÷6W"†æÇ—¦VDö&¦V7B’“°¢B‚u¶FF×7F'BÖö&¦V7EÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ7F'E&VG”ö&¦V7B†æÇ—¦VDö&¦V7Bæ–B’“°¢ÒÂ“°§Ð ¦gVæ7F–öâ÷Vä–çf—FF–öç46VçFW"‚’°¢6öç7B7F—fRÒ†öÖUVæF–æt–çf—FF–öç2‚“°¢6öç7BÖ&·WÒ7F—fRæÆVæwF€¢òÆF—b6Æ73Ò&†öÖRÖ–çf—FF–öâÖÆ—7B#âG¶7F—fRæÖ‚†ö&¦V7B’ÓâÆ'WGFöâG—SÒ&'WGFöâ"FFÖ÷VâÖ†öÖRÖ–çf—FF–öãÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò#ãÇ7ãî(isÂ÷7ããÇ7ããÇ7G&öæsâG¶W66T‡FÖÂ†–çf—FVDö&¦V7DæÖR†ö&¦V7B’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"†ö&¦V7Bç&öÆT¶W’ÇÂvö&¦V7E'F–6—çBr’—Ò+rG¶W66T‡FÖÂ†f÷&ÖDö&¦V7DFFR†ö&¦V7Bæ–çf—FVDB’—ÓÂ÷6ÖÆÃãÂ÷7ããÆ“î(£Âö“ãÂö'WGFöãæ’æ¦ö–â‚rr—ÓÂöF—cæ ¢¢ÆF—b6Æ73Ò&†—7F÷'’ÖV×G’#âG¶W66T‡FÖÂ‡G"‚væôö&¦V7G2r’—ÓÂöF—cæ°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚v–çf—FF–öç46VçFW"r’’ÂG¶7F—fRæÆVæwF‡Ò+rG¶W66T‡FÖÂ‡G"‚v–çf—FF–öç2r’—ÖÂÖ&·W“°¢BB‚u¶FFÖ÷VâÖ†öÖRÖ–çf—FF–öåÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vä–çf—FVDö&¦V7D6&B†'WGFöâæFF6WBæ÷Vä†öÖT–çf—FF–öâ’’“°§Ð ¦gVæ7F–öâ—4ÆTÖö&–ÆTFWf–6R‚’°¢&WGW&âö•GÆ•†öæWÆ•öBö’çFW7B†æf–vF÷"çW6W$vVçB¢ÇÂ†æf–vF÷"çÆFf÷&ÒÓÓÒtÖ4–çFVÂrbbæf–vF÷"æÖ…F÷V6…ö–çG2â“°§Ð ¦gVæ7F–öâ—4–ç7FÆÆVEvV$‚’°¢&WGW&âv–æF÷ræÖF6„ÖVF–òâ‚r†F—7Æ’ÖÖöFS¢7FæFÆöæR’r’æÖF6†W2ÇÂæf–vF÷"ç7FæFÆöæRÓÓÒG'VS°§Ð ¦gVæ7F–öâ7W÷'G5W6„æ÷F–f–6F–öç2‚’°¢&WGW&âw6W'f–6Uv÷&¶W"r–âæf–vF÷"bbuW6„ÖævW"r–âv–æF÷rbbtæ÷F–f–6F–öâr–âv–æF÷s°§Ð ¦gVæ7F–öâ—4FVÖô66÷VçB‚’°¢G'’²&WGW&â¥4ôâç'6R†Æö6Å7F÷&vRævWD—FVÒ„DTÔõõ4U54”ôåô´U’’ÇÂvçVÆÂr“òæVÖ–ÂÓÓÒw7G$7G"æ6öÒs²Ð¢6F6‚²&WGW&âfÇ6S²Ð§Ð ¦7–æ2gVæ7F–öâW6…&Vv—7G&F–öâ‚’°¢6öç7B7W'&VçBÒv—Bæf–vF÷"ç6W'f–6Uv÷&¶W"ævWE&Vv—7G&F–öâ‚“°¢–b†7W'&VçB’&WGW&â7W'&VçC°¢&WGW&âæf–vF÷"ç6W'f–6Uv÷&¶W"ç&Vv—7FW"‚râ÷7ræ§3÷cÓ"rÂ²WFFUf–66†S¢væöæRrÒ“°§Ð ¦7–æ2gVæ7F–öâW6„æ÷F–f–6F–öå7FFR‚’°¢–b‚7W÷'G5W6„æ÷F–f–6F–öç2‚’’&WGW&âwVç7W÷'FVBs°¢–b†—4ÆTÖö&–ÆTFWf–6R‚’bb—4–ç7FÆÆVEvV$‚’’&WGW&âv–ç7FÆÂs°¢–b„æ÷F–f–6F–öâçW&Ö—76–öâÓÓÒvFVæ–VBr’&WGW&âvFVæ–VBs°¢6öç7B&Vv—7G&F–öâÒv—BW6…&Vv—7G&F–öâ‚“°¢6öç7B7V'67&—F–öâÒv—B&Vv—7G&F–öâçW6„ÖævW"ævWE7V'67&—F–öâ‚“°¢–b„æ÷F–f–6F–öâçW&Ö—76–öâÓÓÒvw&çFVBrbb7V'67&—F–öâ’&WGW&âvVæ&ÆVBs°¢–b„æ÷F–f–6F–öâçW&Ö—76–öâÓÓÒvw&çFVBr’&WGW&âvÆö6Âs°¢&WGW&âvF—6&ÆVBs°§Ð ¦gVæ7F–öâ&6ScEW&Ä'—FW2‡fÇVR’°¢6öç7BFF–ærÒsÒrç&WVB‚ƒBÒ‡fÇVRæÆVæwF‚RB’’RB“°¢6öç7B&–æ'’ÒFö"‚‡fÇVR²FF–ær’ç&WÆ6R‚òÒörÂr²r’ç&WÆ6R‚õòörÂròr’“°¢&WGW&âV–çC„'&’æg&öÒ†&–æ'’Â†6†&7FW"’Óâ6†&7FW"æ6†$6öFTBƒ’“°§Ð ¦7–æ2gVæ7F–öâ–çfö¶UW6„’†&öG’’°¢–b‚WF„6Æ–VçB’F‡&÷ræWrW'&÷"‚u7G'V7Dõ266÷VçB&WV—&VBr“°¢6öç7B²FFÂW'&÷"ÒÒv—BWF„6Æ–VçBægVæ7F–öç2æ–çfö¶R‚w7G'V7F÷2×W6‚rÂ²&öG’Ò“°¢–b†W'&÷"’F‡&÷rW'&÷#°¢–b‚FFòæö²’F‡&÷ræWrW'&÷"†FFòæW'&÷"ÇÂG"‚wW6„W'&÷"r’“°¢&WGW&âFF°§Ð ¦gVæ7F–öâW6„FWf–6TæÖR‚’°¢–b†—4ÆTÖö&–ÆTFWf–6R‚’’&WGW&âæf–vF÷"æÖ…F÷V6…ö–çG2âbbö•†öæRö’çFW7B†æf–vF÷"çW6W$vVçB’òv•Br¢v•†öæRs°¢–b‚ôæG&ö–Bö’çFW7B†æf–vF÷"çW6W$vVçB’’&WGW&âtæG&ö–Bs°¢&WGW&âuvV"s°§Ð ¦7–æ2gVæ7F–öâVæ&ÆUW6„æ÷F–f–6F–öç2‡²&V÷Vä6VçFW"ÒG'VRÒÒ·Ò’°¢–b‚7W÷'G5W6„æ÷F–f–6F–öç2‚’’²6†÷uFö7B‡G"‚wW6…Vç7W÷'FVBr’“²&WGW&âfÇ6S²Ð¢–b†—4ÆTÖö&–ÆTFWf–6R‚’bb—4–ç7FÆÆVEvV$‚’’²6†÷uFö7B‡G"‚wW6„–ç7FÆÅ&WV—&VBr’“²&WGW&âfÇ6S²Ð¢G'’°¢6öç7BW&Ö—76–öâÒæ÷F–f–6F–öâçW&Ö—76–öâÓÓÒvFVfVÇBròv—Bæ÷F–f–6F–öâç&WVW7EW&Ö—76–öâ‚’¢æ÷F–f–6F–öâçW&Ö—76–öã°¢–b‡W&Ö—76–öâÓÒvw&çFVBr’²–b‡&V÷Vä6VçFW"’v—B÷Väæ÷F–f–6F–öç46VçFW"‚“²&WGW&âfÇ6S²Ð¢6öç7B&Vv—7G&F–öâÒv—BW6…&Vv—7G&F–öâ‚“°¢v—B&Vv—7G&F–öâçWFFR‚’æ6F6‚‚‚’Óâ·Ò“°¢–b‚WF„6Æ–VçBÇÂ—4FVÖô66÷VçB‚’’°¢6†÷uFö7B‡G"‚wW6„Æö6ÄöæÇ’r’“°¢–b‡&V÷Vä6VçFW"’v—B÷Väæ÷F–f–6F–öç46VçFW"‚“°¢&WGW&âG'VS°¢Ð¢6öç7B²V&Æ–4¶W’ÒÒv—B–çfö¶UW6„’‡²7F–öã¢wV&Æ–2Ö¶W’rÒ“°¢ÆWB7V'67&—F–öâÒv—B&Vv—7G&F–öâçW6„ÖævW"ævWE7V'67&—F–öâ‚“°¢–b‚7V'67&—F–öâ’°¢7V'67&—F–öâÒv—B&Vv—7G&F–öâçW6„ÖævW"ç7V'67&–&R‡²W6W%f—6–&ÆTöæÇ“¢G'VRÂÆ–6F–öå6W'fW$¶W“¢&6ScEW&Ä'—FW2‡V&Æ–4¶W’’Ò“°¢Ð¢G'’°¢v—B–çfö¶UW6„’‡²7F–öã¢w7V'67&–&RrÂ7V'67&—F–öã¢7V'67&—F–öâçFô¥4ôâ‚’ÂFWf–6TæÖS¢W6„FWf–6TæÖR‚’ÂÆæwVvRÒ“°¢Ò6F6‚†W'&÷"’°¢v—B7V'67&—F–öâçVç7V'67&–&R‚’æ6F6‚‚‚’Óâ·Ò“°¢F‡&÷rW'&÷#°¢Ð¢6†÷uFö7B‡G"‚wW6„Væ&ÆVEFö7Br’“°¢–b‡&V÷Vä6VçFW"’v—B÷Väæ÷F–f–6F–öç46VçFW"‚“°¢&WGW&âG'VS°¢Ò6F6‚†W'&÷"’°¢6öç6öÆRæW'&÷"‚u7G'V7Dõ2W6‚6WGWf–ÆVC¢rÂW'&÷"“°¢6†÷uFö7B‡G"‚wW6„W'&÷"r’“°¢&WGW&âfÇ6S°¢Ð§Ð ¦7–æ2gVæ7F–öâF—6&ÆUW6„æ÷F–f–6F–öç2‚’°¢G'’°¢6öç7B&Vv—7G&F–öâÒv—BW6…&Vv—7G&F–öâ‚“°¢6öç7B7V'67&—F–öâÒv—B&Vv—7G&F–öâçW6„ÖævW"ævWE7V'67&—F–öâ‚“°¢–b‡7V'67&—F–öâbbWF„6Æ–VçBbb—4FVÖô66÷VçB‚’’°¢v—B–çfö¶UW6„’‡²7F–öã¢wVç7V'67&–&RrÂVæGö–çC¢7V'67&—F–öâæVæGö–çBÒ’æ6F6‚‚‚’Óâ·Ò“°¢Ð¢v—B7V'67&—F–öãòçVç7V'67&–&R‚“°¢6†÷uFö7B‡G"‚wW6„F—6&ÆVEFö7Br’“°¢v—B÷Väæ÷F–f–6F–öç46VçFW"‚“°¢Ò6F6‚†W'&÷"’°¢6öç6öÆRæW'&÷"‚u7G'V7Dõ2W6‚F—6&ÆRf–ÆVC¢rÂW'&÷"“°¢6†÷uFö7B‡G"‚wW6„W'&÷"r’“°¢Ð§Ð ¦7–æ2gVæ7F–öâFW7EW6„æ÷F–f–6F–öâ‚’°¢G'’°¢6öç7B&Vv—7G&F–öâÒv—BW6…&Vv—7G&F–öâ‚“°¢6öç7B7V'67&—F–öâÒv—B&Vv—7G&F–öâçW6„ÖævW"ævWE7V'67&—F–öâ‚“°¢–b‡7V'67&—F–öâbbWF„6Æ–VçBbb—4FVÖô66÷VçB‚’’°¢v—B–çfö¶UW6„’‡²7F–öã¢w6VæB×FW7BrÂÆæwVvRÒ“°¢ÒVÇ6R°¢–b„æ÷F–f–6F–öâçW&Ö—76–öâÓÒvw&çFVBr’²v—BVæ&ÆUW6„æ÷F–f–6F–öç2‚“²&WGW&ã²Ð¢v—B&Vv—7G&F–öâç6†÷tæ÷F–f–6F–öâ‡G"‚wW6…FW7EF—FÆRr’Â²&öG“¢G"‚wW6…FW7D&öG’r’Â–6öã¢râö76WG2öff–6öâÓ“"çærrÂ&FvS¢râö76WG2öff–6öâÓ“"çærrÂFs¢w7G'V7F÷2×FW7BrÂ&Væ÷F–g“¢G'VRÂf–'&FS¢³“ÂCÂ“ÒÂFF¢²W&Ã¢æWrU$Â‚râöF6†&ö&Bæ‡FÖÂ6æ÷F–f–6F–öç2rÂÆö6F–öâæ‡&Vb’æ‡&VbÒÒ“°¢Ð¢6†÷uFö7B‡G"‚wW6…FW7E6VçBr’“°¢Ò6F6‚†W'&÷"’°¢6öç6öÆRæW'&÷"‚u7G'V7Dõ2W6‚FW7Bf–ÆVC¢rÂW'&÷"“°¢6†÷uFö7B‡G"‚wW6„W'&÷"r’“°¢Ð§Ð ¦gVæ7F–öâW6…6WGF–æw4Ö&·W‡7FFR’°¢6öç7BÆ&VÇ2Ò²Væ&ÆVC¢wW6„Væ&ÆVBrÂÆö6Ã¢wW6„Æö6ÄöæÇ’rÂF—6&ÆVC¢wW6„F—6&ÆVBrÂFVæ–VC¢wW6„FVæ–VBrÂ–ç7FÆÃ¢wW6„–ç7FÆÅ&WV—&VBrÂVç7W÷'FVC¢wW6…Vç7W÷'FVBrÓ°¢6öç7B†–çG2Ò7FFRÓÓÒv–ç7FÆÂròG"‚wW6„–ç7FÆÄ†–çBr’¢7FFRÓÓÒvFVæ–VBròG"‚wW6„FVæ–VD†–çBr’¢7FFRÓÓÒvÆö6Ârbb‚WF„6Æ–VçBÇÂ—4FVÖô66÷VçB‚’’òG"‚wW6„66÷VçD†–çBr’¢G"‚wW6„æ÷F–f–6F–öç4†–çBr“°¢6öç7BVæ&ÆRÒ7FFRÓÓÒvF—6&ÆVBrÇÂ‡7FFRÓÓÒvÆö6ÂrbbWF„6Æ–VçBbb—4FVÖô66÷VçB‚’“°¢6öç7BFW7BÒ7FFRÓÓÒvVæ&ÆVBrÇÂ7FFRÓÓÒvÆö6Âs°¢&WGW&âÇ6V7F–öâ6Æ73Ò'W6‚×6WGF–æw2Ö6&B—2ÒG·7FFWÒ#ãÆ†VFW#ãÇ7â&–Ö†–FFVãÒ'G'VR#âG·7FFRÓÓÒvVæ&ÆVBrÇÂ7FFRÓÓÒvÆö6Ârò~)É2r¢rwÓÂ÷7ããÆF—cãÇ6ÖÆÃå5E%T5Dõ2U4ƒÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚wW6„æ÷F–f–6F–öç5F—FÆRr’—ÓÂ÷7G&öæsãÆVÓâG¶W66T‡FÖÂ‡G"†Æ&VÇ5·7FFUÒ’—ÓÂöVÓãÂöF—cãÂö†VFW#ãÇâG¶W66T‡FÖÂ††–çG2—ÓÂ÷ãÆF—b6Æ73Ò'W6‚×6WGF–æw2Ö7F–öç2#âG¶Væ&ÆRòÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖVæ&ÆR×W6ƒâG¶W66T‡FÖÂ‡G"‚vVæ&ÆUW6‚r’—ÓÂö'WGFöãæ¢rwÒG·FW7BòÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FF×FW7B×W6ƒâG¶W66T‡FÖÂ‡G"‚wFW7EW6‚r’—ÓÂö'WGFöãæ¢rwÒG·7FFRÓÓÒvVæ&ÆVBròÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ—2ÖFævW""G—SÒ&'WGFöâ"FFÖF—6&ÆR×W6ƒâG¶W66T‡FÖÂ‡G"‚vF—6&ÆUW6‚r’—ÓÂö'WGFöãæ¢rwÓÂöF—cãÂ÷6V7F–öãæ°§Ð ¦7–æ2gVæ7F–öâ÷Väæ÷F–f–6F–öç46VçFW"‚’°¢6öç7Bæ÷F–f–6F–öç2Ò†öÖUVæF–ætæ÷F–f–6F–öç2‚“°¢ÆWBW6…7FFRÒwVç7W÷'FVBs°¢G'’²W6…7FFRÒv—BW6„æ÷F–f–6F–öå7FFR‚“²Ð¢6F6‚†W'&÷"’²6öç6öÆRçv&â‚u7G'V7Dõ2W6‚7FFRVæf–Æ&ÆS¢rÂW'&÷"“²Ð¢6öç7BÖ&·WÒæ÷F–f–6F–öç2æÆVæwF€¢òÆF—b6Æ73Ò&†öÖRÖ–çf—FF–öâÖÆ—7B†öÖRÖæ÷F–f–6F–öâÖÆ—7B#âG¶æ÷F–f–6F–öç2æÖ‚‡²ö&¦V7BÂf–ÆRÒ’ÓâÆ'WGFöâG—SÒ&'WGFöâ"FFÖ÷VâÖ†öÖRÖæ÷F–f–6F–öãÒ"G¶W66T‡FÖÂ†ö&¦V7Bæ–B—Ò#ãÇ7ãâÂ÷7ããÇ7ããÇ7G&öæsâG¶W66T‡FÖÂ†ö&¦V7Bç&ö¦V7EF—FÆRÇÂö&¦V7BææÖR—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"†f–ÆRæ¶–æB’—Ò+rG¶W66T‡FÖÂ‡G"‚wVæF–ætæÇ—6—2r’—ÓÂ÷6ÖÆÃãÂ÷7ããÆ“î(£Âö“ãÂö'WGFöãæ’æ¦ö–â‚rr—ÓÂöF—cæ ¢¢Ç6V7F–öâ6Æ73Ò&†öÖRÖæ÷F–f–6F–öç2ÖV×G’#ãÇ7ãî)É3Â÷7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚væôæWtæ÷F–f–6F–öç2r’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚væôæWtæ÷F–f–6F–öç4†–çBr’—ÓÂ÷6ÖÆÃãÂ÷6V7F–öãæ°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚væ÷F–f–6F–öç2r’’ÂG¶æ÷F–f–6F–öç2æÆVæwF‡Ò+rG¶W66T‡FÖÂ‡G"‚væ÷F–f–6F–öç2r’—ÖÂG·W6…6WGF–æw4Ö&·W‡W6…7FFR—ÒG¶Ö&·WÖ“°¢B‚u¶FFÖVæ&ÆR×W6…Òr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂVæ&ÆUW6„æ÷F–f–6F–öç2“°¢B‚u¶FFÖF—6&ÆR×W6…Òr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂF—6&ÆUW6„æ÷F–f–6F–öç2“°¢B‚u¶FF×FW7B×W6…Òr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂFW7EW6„æ÷F–f–6F–öâ“°¢BB‚u¶FFÖ÷VâÖ†öÖRÖæ÷F–f–6F–öåÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Väö&¦V7D6&B†'WGFöâæFF6WBæ÷Vä†öÖTæ÷F–f–6F–öâ’’“°¢Ö&´†öÖTæ÷F–f–6F–öç5&VB†æ÷F–f–6F–öç2“°§Ð ¦gVæ7F–öâ÷Våf–Wr‡f–Wr’°¢–b‡f–WrÓÓÒw&öf–ÆRr’²6WEæVÂ‚w&öf–ÆRr“²&WGW&ã²Ð¢–b‡f–WrÓÓÒw77÷'Br’²6WEæVÂ‚w77÷'Br“²&WGW&ã²Ð¢–b‡f–WrÓÓÒw&ö¦V7G2r’²6WEæVÂ‚w&ö¦V7G2r“²&WGW&ã²Ð¢–b‡f–WrÓÓÒw&÷÷6Ç2r’²6WEæVÂ‚w&÷÷6Ç2r“²&WGW&ã²Ð¢–b‡f–WrÓÓÒvvÖW2r’²6WEæVÂ‚vvÖW2r“²&WGW&ã²Ð¢–b‡f–WrÓÓÒvö&¦V7G2r’²6WEæVÂ‚vö&¦V7G2r“²&WGW&ã²Ð¢–b‡f–WrÓÓÒv–çf—FF–öç2r’²÷Vä–çf—FF–öç46VçFW"‚“²&WGW&ã²Ð¢–b‡f–WrÓÓÒvæ÷F–f–6F–öç2r’²÷Väæ÷F–f–6F–öç46VçFW"‚“²&WGW&ã²Ð¢–b‡f–WrÓÓÒwF6·2r’²÷VåFöFôF–Æör‚“²&WGW&ã²Ð¢–b‡f–WrÓÓÒv6ÆVæF"r’²÷Vä6ÆVæF$F–Æör‚“²&WGW&ã²Ð¢–b‡f–WrÓÓÒvG&v–ærr’²÷VäG&v–æu7GVF–ò‚“²&WGW&ã²Ð¢–b‡f–WrÓÓÒw&ö¦V7BrÇÂf–WrÓÓÒvæÇ—6—2r’°¢÷Vå&ö¦V7Dö&¦V7Ev—¦&B‡²V–6µ&ö¦V7DöæÇ“¢G'VRÒ“°¢&WGW&ã°¢Ð¢–b‡f–WrÓÓÒv6öçG&7BrÇÂf–WrÓÓÒvW7F–ÖFRr’°¢÷VåWÆöDF–Æör‡f–Wr“°¢&WGW&ã°¢Ð¢–b‡f–WrÓÓÒv&Ææ6Rr’²÷Vä&Ææ6TF–Æör‚“²&WGW&ã²Ð¢–b‡f–WrÓÓÒv&Ææ6T&öçW6W2r’²÷Väf–ææ6T‡V$F–Æör‚“²&WGW&ã²Ð¢–b‡f–WrÓÓÒvf–ææ6Rr’²6WEæVÂ‚v66†fÆ÷rr“²&WGW&ã²Ð¢–b‡f–WrÓÓÒv&öçW6W2r’²÷Vä&öçW4F–Æör‚“²&WGW&ã²Ð¢–b‡f–WrÓÓÒw7V'67&—F–öâr’²÷Vå7V'67&—F–öäF–Æör‚“²&WGW&ã²Ð¢–b‡f–WrÓÓÒv6öææV7F–öç2r’²÷Vä6öææV7F–öç4F–Æör‚“²&WGW&ã²Ð¢6öç7BÆ&VÇ2Ò²7V'67&—F–öã¢wF&–fe7V'67&—F–öârÂ–çf—FF–öç3¢v–çf—FF–öç2rÂ–çf—FS¢v–çf—FRrÂæ÷F–f–6F–öç3¢væ÷F–f–6F–öç2rÂFö7VÖVçG3¢vFö7VÖVçG2rÂ6öææV7F–öç3¢v6öææV7F–öç2rÂ6WGF–æw3¢w6WGF–æw2rÂ7G3¢wv–FvWD7G2rÂGFVçF–öã¢vGFVçF–öârÂF6·3¢wv–FvWEF6·2rÂFVÓ¢wv–FvWEFVÒrÓ°¢6†÷tF–Æör‡G"†Æ&VÇ5·f–WuÒÇÂw6WGF–æw2r’ÂG"‚v6öÖ–æu6ööâr’ÂÆF—b6Æ73Ò&F–ÆörÖ÷F–öç2#ãÆF—b6Æ73Ò&F–ÆörÖ÷F–öâ#ãÇ7ãå7G'V7Dõ3Â÷7ããÇ7ãî(i#Â÷7ããÂöF—cãÂöF—cæ“°§Ð ¦6öç7BôddÄ”äUõ5”ä5ô4DTtõ$”U2Òö&¦V7Bæg&VW¦R…°¢²–C¢w&ö¦V7G2rÂÆ&VÄ¶W“¢w7–æ46FVv÷'•&ö¦V7G2rÂ†–çD¶W“¢w7–æ46FVv÷'•&ö¦V7G4†–çBrÂ–6öã¢~)j2rÒÀ¢²–C¢w7FfbrÂÆ&VÄ¶W“¢w7–æ46FVv÷'•7FfbrÂ†–çD¶W“¢w7–æ46FVv÷'•7Ffd†–çBrÂ–6öã¢~K«¢rÒÀ¢²–C¢vf–ææ6RrÂÆ&VÄ¶W“¢w7–æ46FVv÷'”f–ææ6RrÂ†–çD¶W“¢w7–æ46FVv÷'”f–ææ6T†–çBrÂ–6öã¢~(+ÒrÒÀ¢²–C¢wv&V†÷W6RrÂÆ&VÄ¶W“¢w7–æ46FVv÷'•v&V†÷W6RrÂ†–çD¶W“¢w7–æ46FVv÷'•v&V†÷W6T†–çBrÂ–6öã¢~)xrrÒÀ¢²–C¢vFö7VÖVçG2rÂÆ&VÄ¶W“¢w7–æ46FVv÷'”Fö7VÖVçG2rÂ†–çD¶W“¢w7–æ46FVv÷'”Fö7VÖVçG4†–çBrÂ–6öã¢~)jBrÒÀ¢²–C¢w&öf–ÆRrÂÆ&VÄ¶W“¢w7–æ46FVv÷'•&öf–ÆRrÂ†–çD¶W“¢w7–æ46FVv÷'•&öf–ÆT†–çBrÂ–6öã¢t”BrÐ¥Ò“° ¦gVæ7F–öâöffÆ–æT§6öä6÷’‡fÇVR’°¢&WGW&â¥4ôâç'6R„¥4ôâç7G&–æv–g’‡fÇVR’“°§Ð ¦gVæ7F–öâ66„ö&¦V7D–FVçF—G•6æ6†÷B†ö&¦V7B’°¢&WGW&â°¢–C¢ö&¦V7Bæ–BÀ¢6÷W&6U&ö¦V7D–C¢ö&¦V7Bç6÷W&6U&ö¦V7D–BÀ¢æÖS¢ö&¦V7BææÖRÀ¢7&VFVDC¢ö&¦V7Bæ7&VFVDBÀ¢6ö×ÆWFVC¢ö&¦V7Bæ6ö×ÆWFVBÀ¢6ö×ÆWFVDC¢ö&¦V7Bæ6ö×ÆWFVD@¢Ó°§Ð ¦gVæ7F–öâ66„f–ææ6U6V7F–öå6æ6†÷B‡6V7F–öâ’°¢&WGW&â°¢–C¢6V7F–öâæ–BÀ¢6÷W&6U&ö¦V7D–C¢6V7F–öâç6÷W&6U&ö¦V7D–BÀ¢æÖS¢6V7F–öâææÖRÀ¢7&VFVDC¢6V7F–öâæ7&VFVDBÀ¢7&VFVDÖçVÆÇ“¢6V7F–öâæ7&VFVDÖçVÆÇ’À¢6öçG&7DÖöFS¢6V7F–öâæ6öçG&7DÖöFRÀ¢f7DÖöFS¢6V7F–öâæf7DÖöFRÀ¢6öçG&7DÖ÷VçC¢6V7F–öâæ6öçG&7DÖ÷VçBÀ¢Gfæ6W3¢6V7F–öâæGfæ6W2À¢W‡Vç6W3¢6V7F–öâæW‡Vç6W2À¢÷vä–çfW7FÖVçG3¢6V7F–öâæ÷vä–çfW7FÖVçG2À¢÷vå&WGW&ç3¢6V7F–öâæ÷vå&WGW&ç2À¢f7D–æ6öÖS¢6V7F–öâæf7D–æ6öÖRÀ¢f7DW‡Vç6W3¢6V7F–öâæf7DW‡Vç6W2À¢f7D÷vä–çfW7FÖVçG3¢6V7F–öâæf7D÷vä–çfW7FÖVçG2À¢f7D÷vå&WGW&ç3¢6V7F–öâæf7D÷vå&WGW&ç0¢Ó°§Ð ¦gVæ7F–öâ66„Fö7VÖVçE6V7F–öå6æ6†÷B‡6V7F–öâ’°¢&WGW&â°¢–C¢6V7F–öâæ–BÀ¢6÷W&6U&ö¦V7D–C¢6V7F–öâç6÷W&6U&ö¦V7D–BÀ¢æÖS¢6V7F–öâææÖRÀ¢GF6†ÖVçG3¢6V7F–öâæGF6†ÖVçG2À¢7FFVÖVçC¢6V7F–öâç7FFVÖVçBÀ¢7C¢6V7F–öâæ7BÀ¢&W÷'D†—7F÷'“¢6V7F–öâç&W÷'D†—7F÷'¢Ó°§Ð ¦7–æ2gVæ7F–öâ–æFW†VE7F÷&T¶W—2†FF&6Tf7F÷'’Â7F÷&TæÖR’°¢G'’°¢6öç7BFF&6RÒv—BFF&6Tf7F÷'’‚“°¢&WGW&âv—BæWr&öÖ—6R‚‡&W6öÇfRÂ&V¦V7B’Óâ°¢6öç7BG&ç67F–öâÒFF&6RçG&ç67F–öâ‡7F÷&TæÖRÂw&VFöæÇ’r“°¢6öç7B&WVW7BÒG&ç67F–öâæö&¦V7E7F÷&R‡7F÷&TæÖR’ævWDÆÄ¶W—2‚“°¢&WVW7Bæöç7V66W72Ò‚’Óâ&W6öÇfR‡&WVW7Bç&W7VÇBæÖ…7G&–ær’ç6÷'B‚’“°¢&WVW7BæöæW'&÷"Ò‚’Óâ&V¦V7B‡&WVW7BæW'&÷"ÇÂæWrW'&÷"‚tÆö6Âf–ÆR–çfVçF÷'’f–ÆVBr’“°¢Ò“°¢Ò6F6‚°¢&WGW&âµÓ°¢Ð§Ð ¦7–æ2gVæ7F–öâ6öÆÆV7DöffÆ–æU7–æ46FVv÷'’†6FVv÷'’’°¢–b†6FVv÷'’ÓÓÒw&ö¦V7G2r’°¢&WGW&âöffÆ–æT§6öä6÷’‡°¢66†VÖfW'6–öã¢À¢ö&¦V7G3¢ö&¦V7E&Vv—7G'’À¢6öÖÖW&6–Å&÷÷6Ç3¢6öÖÖW&6–Å&÷÷6Å&V6÷&G2À¢–çf—FVDö&¦V7G2À¢ö&¦V7D÷&FW#¢Væ–f–VDö&¦V7D÷&FW"À¢7W'&VçEWÆöG3¢6VÆV7FVDf–ÆW2À¢6öÆÆ6VE&ö¦V7D–G3¢²ââæ6öÆÆ6VE&ö¦V7D–G5Òç6÷'B‚¢Ò“°¢Ð ¢–b†6FVv÷'’ÓÓÒw7Ffbr’°¢&WGW&âöffÆ–æT§6öä6÷’‡°¢66†VÖfW'6–öã¢À¢ö&¦V7G3¢66†fÆ÷tö&¦V7G2æÖ‚†ö&¦V7B’Óâ‡°¢ââæ66„ö&¦V7D–FVçF—G•6æ6†÷B†ö&¦V7B’À¢6V7F–öç3¢ö&¦V7Bç6V7F–öç0¢æf–ÇFW"‚‡6V7F–öâ’Óâ6V7F–öâç7Fff–ætÖöFRÇÂ6V7F–öâç7Fff–æu6†–gG3òæÆVæwF‚¢æÖ‚‡6V7F–öâ’Óâ‡²–C¢6V7F–öâæ–BÂæÖS¢6V7F–öâææÖRÂ7Fff–ætÖöFS¢6V7F–öâç7Fff–ætÖöFRÂ7Fff–æu6†–gG3¢6V7F–öâç7Fff–æu6†–gG2Ò’¢Ò’’æf–ÇFW"‚†ö&¦V7B’Óâö&¦V7Bç6V7F–öç2æÆVæwF‚¢Ò“°¢Ð ¢–b†6FVv÷'’ÓÓÒvf–ææ6Rr’°¢&WGW&âöffÆ–æT§6öä6÷’‡°¢66†VÖfW'6–öã¢À¢66÷VçC¢f–ææ6RÀ¢ö&¦V7G3¢66†fÆ÷tö&¦V7G2æÖ‚†ö&¦V7B’Óâ‡°¢ââæ66„ö&¦V7D–FVçF—G•6æ6†÷B†ö&¦V7B’À¢6V7F–öç3¢ö&¦V7Bç6V7F–öç2æÖ†66„f–ææ6U6V7F–öå6æ6†÷B¢Ò’¢Ò“°¢Ð ¢–b†6FVv÷'’ÓÓÒwv&V†÷W6Rr’°¢&WGW&âöffÆ–æT§6öä6÷’‡°¢66†VÖfW'6–öã¢À¢&ö¦V7G3¢ö&¦V7E&Vv—7G'’æÖ‚†ö&¦V7B’Óâ‡°¢–C¢ö&¦V7Bæ–BÀ¢æÖS¢ö&¦V7BææÖRÀ¢f–ÆW3¢ö&¦V7Bæf–ÆW2æÖ‚†f–ÆR’Óâ‡°¢–C¢f–ÆRæ–BÀ¢¶–æC¢f–ÆRæ¶–æBÀ¢æÖS¢f–ÆRææÖRÀ¢6÷W&6T6FÆös¢f–ÆRç6÷W&6T6FÆörÀ¢ÖFW&–Ç3¢f–ÆRæÖFW&–Ç2À¢WV—ÖVçC¢f–ÆRæWV—ÖVçBÀ¢7V6–f–6F–öã¢f–ÆRç7V6–f–6F–öâÀ¢fW'6–öç3¢f–ÆUfW'6–öç2†f–ÆR’æÖ‚‡fW'6–öâ’Óâ‡°¢–C¢fW'6–öâæ–BÀ¢6÷W&6T6FÆös¢fW'6–öâç6÷W&6T6FÆörÀ¢ÖFW&–Ç3¢fW'6–öâæÖFW&–Ç2À¢WV—ÖVçC¢fW'6–öâæWV—ÖVçBÀ¢7V6–f–6F–öã¢fW'6–öâç7V6–f–6F–öà¢Ò’¢Ò’¢Ò’’À¢66†fÆ÷s¢66†fÆ÷tö&¦V7G2æÖ‚†ö&¦V7B’Óâ‡°¢–C¢ö&¦V7Bæ–BÀ¢6V7F–öç3¢ö&¦V7Bç6V7F–öç2æÖ‚‡6V7F–öâ’Óâ‡²–C¢6V7F–öâæ–BÂæÖS¢6V7F–öâææÖRÂ6÷W&6T6FÆös¢6V7F–öâç6÷W&6T6FÆörÒ’¢Ò’¢Ò“°¢Ð ¢–b†6FVv÷'’ÓÓÒvFö7VÖVçG2r’°¢6öç7B¶66†fÆ÷tf–ÆT–G2ÂG&v–æt–G5ÒÒv—B&öÖ—6RæÆÂ…°¢–æFW†VE7F÷&T¶W—2†÷Vä66†fÆ÷tf–ÆTF"Â44„dÄõuôd”ÄUõ5Dõ$R’À¢–æFW†VE7F÷&T¶W—2†G&v–ætFF&6RÂvG&v–æw2r¢Ò“°¢&WGW&âöffÆ–æT§6öä6÷’‡°¢66†VÖfW'6–öã¢À¢&ö¦V7G3¢ö&¦V7E&Vv—7G'’æÖ‚†ö&¦V7B’Óâ‡²–C¢ö&¦V7Bæ–BÂæÖS¢ö&¦V7BææÖRÂf–ÆW3¢ö&¦V7Bæf–ÆW2Ò’’À¢6öÖÖW&6–Å&÷÷6Ç3¢6öÖÖW&6–Å&÷÷6Å&V6÷&G2À¢66†fÆ÷s¢66†fÆ÷tö&¦V7G2æÖ‚†ö&¦V7B’Óâ‡°¢ââæ66„ö&¦V7D–FVçF—G•6æ6†÷B†ö&¦V7B’À¢÷&væ—¦F–öäFö7VÖVçG3¢ö&¦V7Bæ÷&væ—¦F–öäFö7VÖVçG2À¢6V7F–öç3¢ö&¦V7Bç6V7F–öç2æÖ†66„Fö7VÖVçE6V7F–öå6æ6†÷B¢Ò’’À¢Æö6Äf–ÆT–çfVçF÷'“¢²66†fÆ÷tf–ÆT–G2ÂG&v–æt–G2Ð¢Ò“°¢Ð ¢–b†6FVv÷'’ÓÓÒw&öf–ÆRr’°¢&WGW&âöffÆ–æT§6öä6÷’‡°¢66†VÖfW'6–öã¢À¢W'6öã¢W'6öäFFÀ¢&öf–ÆS¢&öf–ÆTFFÀ¢'V–ÆFW%77÷'BÀ¢Æã¢&öf–ÆUÆâÀ¢6öææV7F–öç3¢7G'V7F÷46öææV7F–öç2À¢&VfW&Væ6W3¢°¢ÆæwVvRÀ¢F†VÖS¢&ö÷BæFF6WBçF†VÖRÇÂvF&²rÀ¢6VÆV7FVEv–FvWG2À¢v–FvWE÷6—F–öç2À¢v–FvWE6—¦W2À¢v–FvWE7G–ÆW2À¢FöFô—FV×2À¢7F—f—G”Æöp¢Ð¢Ò“°¢Ð ¢&WGW&â²66†VÖfW'6–öã¢Ó°§Ð ¦gVæ7F–öâöffÆ–æU7–æ4†5fÇVR‡fÇVR’°¢–b‡fÇVRÓÒçVÆÂ’&WGW&âfÇ6S°¢–b„'&’æ—4'&’‡fÇVR’’&WGW&âfÇVRæÆVæwF‚â°¢–b‡G—VöbfÇVRÓÓÒvö&¦V7Br’&WGW&âö&¦V7BçfÇVW2‡fÇVR’ç6öÖR†öffÆ–æU7–æ4†5fÇVR“°¢–b‡G—VöbfÇVRÓÓÒw7G&–ærr’&WGW&âfÇVRçG&–Ò‚’æÆVæwF‚â°¢&WGW&âG'VS°§Ð ¦gVæ7F–öâ6÷VçDöffÆ–æU7–æ57V'6V7F–öç2†6FVv÷'’Â–ÆöBÒ·Ò’°¢–b†6FVv÷'’ÓÓÒw&ö¦V7G2r’°¢6öç7Bö&¦V7D–G2ÒæWr6WB…²âââ‡–ÆöBæö&¦V7G2ÇÂµÒ’Ââââ‡–ÆöBæ–çf—FVDö&¦V7G2ÇÂµÒ•ÒæÖ‚†ö&¦V7B’Óâö&¦V7Còæ–B’æf–ÇFW"„&ööÆVâ’“°¢6öç7B7F—fUWÆöG2Òö&¦V7BçfÇVW2‡–ÆöBæ7W'&VçEWÆöG2ÇÂ·Ò’æf–ÇFW"†öffÆ–æU7–æ4†5fÇVR’æÆVæwFƒ°¢&WGW&âö&¦V7D–G2ç6—¦R²7F—fUWÆöG3°¢Ð ¢–b†6FVv÷'’ÓÓÒw7Ffbr’°¢&WGW&â‡–ÆöBæö&¦V7G2ÇÂµÒ’ç&VGV6R‚‡F÷FÂÂö&¦V7B’ÓâF÷FÂ²†ö&¦V7Bç6V7F–öç2ÇÂµÒ’æÆVæwF‚Â“°¢Ð ¢–b†6FVv÷'’ÓÓÒvf–ææ6Rr’°¢6öç7Bf–ææ6U6V7F–öç2Ò‡–ÆöBæö&¦V7G2ÇÂµÒ’ç&VGV6R‚‡F÷FÂÂö&¦V7B’ÓâF÷FÂ²†ö&¦V7Bç6V7F–öç2ÇÂµÒ’æÆVæwF‚Â“°¢&WGW&âf–ææ6U6V7F–öç2²†öffÆ–æU7–æ4†5fÇVR‡–ÆöBæ66÷VçB’ò¢“°¢Ð ¢–b†6FVv÷'’ÓÓÒwv&V†÷W6Rr’°¢6öç7B&ö¦V7Df–ÆW2Ò‡–ÆöBç&ö¦V7G2ÇÂµÒ’ç&VGV6R‚‡F÷FÂÂ&ö¦V7B’ÓâF÷FÂ²‡&ö¦V7Bæf–ÆW2ÇÂµÒ’æf–ÇFW"‚†f–ÆR’Óà¢öffÆ–æU7–æ4†5fÇVR†f–ÆRç6÷W&6T6FÆör’ÇÂöffÆ–æU7–æ4†5fÇVR†f–ÆRæÖFW&–Ç2’ÇÂöffÆ–æU7–æ4†5fÇVR†f–ÆRæWV—ÖVçB’ÇÂöffÆ–æU7–æ4†5fÇVR†f–ÆRç7V6–f–6F–öâ¢’æÆVæwF‚Â“°¢6öç7B66†fÆ÷u6V7F–öç2Ò‡–ÆöBæ66†fÆ÷rÇÂµÒ’ç&VGV6R‚‡F÷FÂÂö&¦V7B’ÓâF÷FÂ²†ö&¦V7Bç6V7F–öç2ÇÂµÒ’æf–ÇFW"‚‡6V7F–öâ’ÓâöffÆ–æU7–æ4†5fÇVR‡6V7F–öâç6÷W&6T6FÆör’’æÆVæwF‚Â“°¢&WGW&â&ö¦V7Df–ÆW2²66†fÆ÷u6V7F–öç3°¢Ð ¢–b†6FVv÷'’ÓÓÒvFö7VÖVçG2r’°¢6öç7B&ö¦V7Df–ÆW2Ò‡–ÆöBç&ö¦V7G2ÇÂµÒ’ç&VGV6R‚‡F÷FÂÂ&ö¦V7B’ÓâF÷FÂ²‡&ö¦V7Bæf–ÆW2ÇÂµÒ’æÆVæwF‚Â“°¢6öç7B66†fÆ÷tFö7VÖVçG2Ò‡–ÆöBæ66†fÆ÷rÇÂµÒ’ç&VGV6R‚‡F÷FÂÂö&¦V7B’Óâ°¢6öç7B÷&væ—¦F–öäFö7VÖVçG2ÒöffÆ–æU7–æ4†5fÇVR†ö&¦V7Bæ÷&væ—¦F–öäFö7VÖVçG2’ò¢°¢6öç7B6V7F–öäFö7VÖVçG2Ò†ö&¦V7Bç6V7F–öç2ÇÂµÒ’æf–ÇFW"‚‡6V7F–öâ’Óà¢öffÆ–æU7–æ4†5fÇVR‡6V7F–öâæGF6†ÖVçG2’ÇÂöffÆ–æU7–æ4†5fÇVR‡6V7F–öâç7FFVÖVçB’ÇÂöffÆ–æU7–æ4†5fÇVR‡6V7F–öâæ7B’ÇÂöffÆ–æU7–æ4†5fÇVR‡6V7F–öâç&W÷'D†—7F÷'’¢’æÆVæwFƒ°¢&WGW&âF÷FÂ²÷&væ—¦F–öäFö7VÖVçG2²6V7F–öäFö7VÖVçG3°¢ÒÂ“°¢6öç7BÆö6Äf–ÆW2Ò‡–ÆöBæÆö6Äf–ÆT–çfVçF÷'“òæ66†fÆ÷tf–ÆT–G2ÇÂµÒ’æÆVæwF‚²‡–ÆöBæÆö6Äf–ÆT–çfVçF÷'“òæG&v–æt–G2ÇÂµÒ’æÆVæwFƒ°¢&WGW&â&ö¦V7Df–ÆW2²66†fÆ÷tFö7VÖVçG2²Æö6Äf–ÆW3°¢Ð ¢–b†6FVv÷'’ÓÓÒw&öf–ÆRr’°¢&WGW&â²wW'6öârÂw&öf–ÆRrÂv'V–ÆFW%77÷'BrÂwÆârÂv6öææV7F–öç2rÂw&VfW&Væ6W2uÐ¢æf–ÇFW"‚†¶W’’ÓâöffÆ–æU7–æ4†5fÇVR‡–ÆöE¶¶W•Ò’’æÆVæwFƒ°¢Ð ¢&WGW&â°§Ð ¦6öç7BöffÆ–æU7–æ2Ò7&VFTöffÆ–æU7–æ4Væv–æR‡°¢6FVv÷&–W3¢ôddÄ”äUõ5”ä5ô4DTtõ$”U2æÖ‚†6FVv÷'’’Óâ6FVv÷'’æ–B’À¢6öÆÆV7D6FVv÷'“¢6öÆÆV7DöffÆ–æU7–æ46FVv÷'’À¢6÷VçE7V'6V7F–öç3¢6÷VçDöffÆ–æU7–æ57V'6V7F–öç0§Ò“°¦ÆWBöffÆ–æU7–æ57FFRÒöffÆ–æU7–æ2ævWE7FFR‚“°¦ÆWBöffÆ–æU7–æ4æWGv÷&´ÖöFRÒæf–vF÷"æöäÆ–æRòvöæÆ–æRr¢vöffÆ–æRs°¦ÆWBöffÆ–æU7–æ5&W7F÷&VEF–ÖW#° ¦gVæ7F–öâöffÆ–æU7–æ4FFR‡fÇVR’°¢–b‚fÇVR’&WGW&ârs°¢G'’°¢&WGW&âæWr–çFÂäFFUF–ÖTf÷&ÖB‡&ö÷BæÆærÇÂw'RrÂ²F“¢s"ÖF–v—BrÂÖöçFƒ¢w6†÷'BrÂ†÷W#¢s"ÖF–v—BrÂÖ–çWFS¢s"ÖF–v—BrÒ’æf÷&ÖB†æWrFFR‡fÇVR’“°¢Ò6F6‚°¢&WGW&ârs°¢Ð§Ð ¦gVæ7F–öâöffÆ–æU7–æ46÷VçEv÷&B‡&Vf—‚Â6÷VçB’°¢–b†ÆæwVvRÓÓÒu%Rr’°¢6öç7BÆ7EGvòÒ6÷VçBR°¢6öç7BÆ7BÒ6÷VçBR°¢–b†Æ7BÓÓÒbbÆ7EGvòÓÒ’&WGW&âG"†G·&Vf—‡ÔöæV“°¢–b†Æ7BãÒ"bbÆ7BÃÒBbb†Æ7EGvòÂ"ÇÂÆ7EGvòâB’’&WGW&âG"†G·&Vf—‡ÔfWv“°¢ÒVÇ6R–b†ÆæwVvRÓÓÒtTârbb6÷VçBÓÓÒ’°¢&WGW&âG"†G·&Vf—‡ÔöæV“°¢Ð¢&WGW&âG"†G·&Vf—‡ÔÖç–“°§Ð ¦gVæ7F–öâ&VæFW$öffÆ–æU7–æ57FFR‡7FFRÒöffÆ–æU7–æ57FFR’°¢6öç7B6V7F–öâÒB‚ræ†öÖR×7–æ2×6V7F–öâr“°¢6öç7B7FGW2ÒB‚u¶FF×7–æ2ÖÆ—fR×7FGW5Òr“°¢–b‚6V7F–öâÇÂ7FGW2’&WGW&ã°¢6V7F–öâæFF6WBç7–æ4æWGv÷&²Ò7FFRæöæÆ–æRòöffÆ–æU7–æ4æWGv÷&´ÖöFR¢vöffÆ–æRs°¢6öç7BVæF–æu7VÖÖ'’ÒB‚u¶FF×7–æ2×VæF–ær×7VÖÖ'•ÒrÂ6V7F–öâ“°¢6öç7BVæF–æu6V7F–öç2ÒÖF‚æÖ‚ƒÂçVÖ&W"‡7FFRçVæF–æt6÷VçB’ÇÂ“°¢6öç7BVæF–æu7V'6V7F–öç2ÒÖF‚æÖ‚ƒÂçVÖ&W"‡7FFRçVæF–æu7V'6V7F–öä6÷VçB’ÇÂ“°¢–b‡VæF–æu7VÖÖ'’’°¢VæF–æu7VÖÖ'’æ6Æ74Æ—7BçFövvÆR‚v—2×7–æ6VBrÂVæF–æu6V7F–öç2ÓÓÒbbVæF–æu7V'6V7F–öç2ÓÓÒ“°¢B‚u¶FF×7–æ2×VæF–ær×6V7F–öç5ÒrÂVæF–æu7VÖÖ'’’çFW‡D6öçFVçBÒ7G&–ær‡VæF–æu6V7F–öç2“°¢B‚u¶FF×7–æ2×VæF–ær×6V7F–öâÖÆ&VÅÒrÂVæF–æu7VÖÖ'’’çFW‡D6öçFVçBÒöffÆ–æU7–æ46÷VçEv÷&B‚w7–æ56V7F–öârÂVæF–æu6V7F–öç2“°¢B‚u¶FF×7–æ2×VæF–ær×7V'6V7F–öç5ÒrÂVæF–æu7VÖÖ'’’çFW‡D6öçFVçBÒ7G&–ær‡VæF–æu7V'6V7F–öç2“°¢B‚u¶FF×7–æ2×VæF–ær×7V'6V7F–öâÖÆ&VÅÒrÂVæF–æu7VÖÖ'’’çFW‡D6öçFVçBÒöffÆ–æU7–æ46÷VçEv÷&B‚w7–æ57V'6V7F–öârÂVæF–æu7V'6V7F–öç2“°¢Ð¢7FGW2æ6Æ74Æ—7Bç&VÖ÷fR‚v—2×&VG’rÂv—2×7–æ6VBrÂv—2ÖöffÆ–æRrÂv—2×7–æ6–ærrÂv—2ÖW'&÷"r“° ¢ÆWBF—FÆRÒG"‚w7–æ57FFU&W&–æuF—FÆRr“°¢ÆWB6÷•FW‡BÒG"‚w7–æ57FFU&W&–æt6÷’r“°¢ÆWB7FGW46Æ72Òv—2×7–æ6–ærs°¢–b‚7FFRæöæÆ–æR’°¢F—FÆRÒG"‚w7–æ57FFTöffÆ–æUF—FÆRr“°¢6÷•FW‡BÒG"‚w7–æ57FFTöffÆ–æT6÷’r“°¢7FGW46Æ72Òv—2ÖöffÆ–æRs°¢ÒVÇ6R–b‡7FFRç†6RÓÓÒvW'&÷"r’°¢F—FÆRÒG"‚w7–æ57FFTW'&÷%F—FÆRr“°¢6÷•FW‡BÒG"‚w7–æ57FFTW'&÷$6÷’r“°¢7FGW46Æ72Òv—2ÖW'&÷"s°¢ÒVÇ6R–b‡7FFRç7–æ6–ær’°¢F—FÆRÒG"‚w7–æ57FFU&W&–æuF—FÆRr“°¢6÷•FW‡BÒ7FFRç†6RÓÓÒwW6†–ærrÇÂ7FFRç†6RÓÓÒwVÆÆ–ærròG"‚w7–æ5&öw&W746Æ÷VBr’¢G"‚w7–æ5&öw&W756f–ærr“°¢7FGW46Æ72Òv—2×7–æ6–ærs°¢ÒVÇ6R–b‡7FFRç†6RÓÓÒw7–æ6VBr’°¢F—FÆRÒG"‚w7–æ57FFU7–æ6VEF—FÆRr“°¢6÷•FW‡BÒG"‚w7–æ57FFU7–æ6VD6÷’r“°¢7FGW46Æ72Òv—2×7–æ6VBs°¢ÒVÇ6R–b‡7FFRæFWf–6U&VG’’°¢F—FÆRÒG"‚w7–æ57FFU&VG•F—FÆRr“°¢6÷•FW‡BÒG"‚w7–æ57FFU&VG”6÷’r“°¢7FGW46Æ72Òv—2×&VG’s°¢Ð ¢6öç7B6fVDBÒöffÆ–æU7–æ4FFR‡7FFRæÆ7DÆö6Å6fTB“°¢–b‡6fVDBbb7FFRç7–æ6–ær’6÷•FW‡BÒG¶6÷•FW‡GÒ+rG·G"‚w7–æ4Æ7E6fVBr—Ó¢G·6fVDGÖ°¢7FGW2æ6Æ74Æ—7BæFB‡7FGW46Æ72“°¢B‚u¶FF×7–æ2ÖÆ—fR×F—FÆUÒrÂ7FGW2’çFW‡D6öçFVçBÒF—FÆS°¢B‚u¶FF×7–æ2ÖÆ—fRÖ6÷•ÒrÂ7FGW2’çFW‡D6öçFVçBÒ6÷•FW‡C°¢B‚u¶FF×7–æ2ÖÆ—fRÖ7F–öåÒrÂ7FGW2’çFW‡D6öçFVçBÒG"‚w7–æ4÷Vâr“°§Ð ¦gVæ7F–öâ†æFÆTöffÆ–æU7–æ57FFR†æW‡E7FFR’°¢6öç7Bv4öæÆ–æRÒöffÆ–æU7–æ57FFRæöæÆ–æS°¢öffÆ–æU7–æ57FFRÒæW‡E7FFS°¢6ÆV%F–ÖV÷WB†öffÆ–æU7–æ5&W7F÷&VEF–ÖW"“°¢–b‚v4öæÆ–æRbbæW‡E7FFRæöæÆ–æR’°¢öffÆ–æU7–æ4æWGv÷&´ÖöFRÒw&W7F÷&VBs°¢öffÆ–æU7–æ5&W7F÷&VEF–ÖW"Ò6WEF–ÖV÷WB‚‚’Óâ°¢öffÆ–æU7–æ4æWGv÷&´ÖöFRÒæf–vF÷"æöäÆ–æRòvöæÆ–æRr¢vöffÆ–æRs°¢&VæFW$öffÆ–æU7–æ57FFR‚“°¢ÒÂC#“°¢ÒVÇ6R–b‚æW‡E7FFRæöæÆ–æR’°¢öffÆ–æU7–æ4æWGv÷&´ÖöFRÒvöffÆ–æRs°¢ÒVÇ6R–b†öffÆ–æU7–æ4æWGv÷&´ÖöFRÓÒw&W7F÷&VBr’°¢öffÆ–æU7–æ4æWGv÷&´ÖöFRÒvöæÆ–æRs°¢Ð¢&VæFW$öffÆ–æU7–æ57FFR†æW‡E7FFR“°§Ð ¦gVæ7F–öâ7–æ46FVv÷'”Ö&·W†6FVv÷'’’°¢&WGW&âÆÆ&VÂ6Æ73Ò'7–æ2Ö6FVv÷'’Ö÷F–öâ#ãÆ–çWBG—SÒ&6†V6¶&÷‚"fÇVSÒ"G¶6FVv÷'’æ–GÒ"FF×7–æ2Ö6FVv÷'’óãÇ7ããÆ#âG¶6FVv÷'’æ–6öçÓÂö#ãÇ7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"†6FVv÷'’æÆ&VÄ¶W’’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"†6FVv÷'’æ†–çD¶W’’—ÓÂ÷6ÖÆÃãÂ÷7ããÆ"6Æ73Ò'7–æ2Ö6FVv÷'’Ö6†V6²#î)É3Âö#ãÂ÷7ããÂöÆ&VÃæ°§Ð ¦gVæ7F–öâ÷VäöffÆ–æU7–æ4F–Æör‚’°¢6öç7BöæÆ–æRÒæf–vF÷"æöäÆ–æS°¢6öç7B&6†—FV7GW&RÒÆF—b6Æ73Ò'7–æ2Ö&6†—FV7GW&R#ãÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚w7–æ56W'fW%&öÆRr’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚w7–æ56W'fW$Ö–âr’—ÓÂ÷7G&öæsãÂöF—cãÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚w7–æ4FWf–6U&öÆRr’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚w7–æ4FWf–6T6÷’r’—ÓÂ÷7G&öæsãÂöF—cãÆF—cãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"‚w7–æ4Væv–æU&öÆRr’—ÓÂ÷6ÖÆÃãÇ7G&öæsâG¶W66T‡FÖÂ‡G"‚w7–æ4Væv–æT6÷’r’—ÓÂ÷7G&öæsãÂöF—cãÂöF—cæ°¢6öç7BW‡G&ÒÆF—b6Æ73Ò'7–æ2ÖF–ÆörÖ–çG&òG¶öæÆ–æRòrr¢r—2ÖöffÆ–æRwÒ#ãÆ“ãÂö“ãÇ7ããÇ7G&öæsâG¶W66T‡FÖÂ‡G"†öæÆ–æRòw7–æ4öæÆ–æUF—FÆRr¢w7–æ4öffÆ–æUF—FÆRr’—ÓÂ÷7G&öæsãÇ6ÖÆÃâG¶W66T‡FÖÂ‡G"†öæÆ–æRòw7–æ4öæÆ–æT6÷’r¢w7–æ4öffÆ–æT6÷’r’—ÓÂ÷6ÖÆÃãÂ÷7ããÂöF—cà¢Æf–VÆG6WB6Æ73Ò'7–æ2Ö6FVv÷'’Öf–VÆG6WB#ãÆÆVvVæCâG¶W66T‡FÖÂ‡G"‚w7–æ46†ö÷6TFFr’—ÓÂöÆVvVæCãÆF—b6Æ73Ò'7–æ2Ö6FVv÷'’Öw&–B#âG´ôddÄ”äUõ5”ä5ô4DTtõ$”U2æÖ‡7–æ46FVv÷'”Ö&·W’æ¦ö–â‚rr—ÓÂöF—cãÂöf–VÆG6WCà¢ÆF—b6Æ73Ò'7–æ2×6W'fW"ÖöæÇ’Öæ÷FR#ãÆ#âÂö#ãÇ7ãâG¶W66T‡FÖÂ‡G"‚w7–æ56W'fW$öæÇ”æ÷FRr’—ÓÂ÷7ããÂöF—cà¢G¶&6†—FV7GW&WÐ¢ÆF—b6Æ73Ò'7–æ2ÖF–Æör×&öw&W72"FF×7–æ2×&öw&W72†–FFVããÇ7ããÆ“ãÂö“ãÂ÷7ããÇ6ÖÆÂFF×7–æ2×&öw&W72Ö6÷“âG¶W66T‡FÖÂ‡G"‚w7–æ5&öw&W756f–ærr’—ÓÂ÷6ÖÆÃãÂöF—cà¢ÆF—b6Æ73Ò'7–æ2ÖF–ÆörÖ7F–öç2#ãÆ'WGFöâ6Æ73Ò&÷WFÆ–æRÖ'WGFöâ"G—SÒ&'WGFöâ"FF×7–æ2×6VÆV7FVBF—6&ÆVCâG¶W66T‡FÖÂ‡G"‚w7–æ56VÆV7FVBr’—ÓÂö'WGFöããÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FF×7–æ2ÖÆÃâG¶W66T‡FÖÂ‡G"‚w7–æ4ÆÂr’—ÓÂö'WGFöããÂöF—cæ°¢6†÷tF–Æör†W66T‡FÖÂ‡G"‚w7–æ4F–ÆöuF—FÆRr’’ÂW66T‡FÖÂ‡G"‚w7–æ4F–Æöt†–çBr’’ÂW‡G&“°¢6öç7BF–ÆörÒB‚u¶FFÖF–ÆöuÒr“°¢F–Æöræ6Æ74Æ—7BæFB‚w7–æ2ÖF–Æörr“°¢6öç7B66÷RÒB‚u¶FFÖF–ÆörÖ6öçFVçEÒr“°¢6öç7B6VÆV7FVD'WGFöâÒB‚u¶FF×7–æ2×6VÆV7FVEÒrÂ66÷R“°¢6öç7BÆÄ'WGFöâÒB‚u¶FF×7–æ2ÖÆÅÒrÂ66÷R“°¢6öç7B&öw&W72ÒB‚u¶FF×7–æ2×&öw&W75ÒrÂ66÷R“°¢6öç7B&öw&W746÷’ÒB‚u¶FF×7–æ2×&öw&W72Ö6÷•ÒrÂ66÷R“° ¢6öç7B6VÆV7F–öâÒ‚’ÓâBB‚u¶FF×7–æ2Ö6FVv÷'•Ó¦6†V6¶VBrÂ66÷R’æÖ‚†–çWB’Óâ–çWBçfÇVR“°¢6öç7BWFFU6VÆV7F–öâÒ‚’Óâ²6VÆV7FVD'WGFöâæF—6&ÆVBÒ6VÆV7F–öâ‚’æÆVæwF‚ÓÓÒ²Ó°¢BB‚u¶FF×7–æ2Ö6FVv÷'•ÒrÂ66÷R’æf÷$V6‚‚†–çWB’Óâ–çWBæFDWfVçDÆ—7FVæW"‚v6†ævRrÂWFFU6VÆV7F–öâ’“° ¢6öç7B7–æ6‡&öæ—¦RÒ7–æ2†6FVv÷&–W2’Óâ°¢–b‚6FVv÷&–W2æÆVæwF‚’²6†÷uFö7B‡G"‚w7–æ56VÆV7DöæRr’“²&WGW&ã²Ð¢6VÆV7FVD'WGFöâæF—6&ÆVBÒG'VS°¢ÆÄ'WGFöâæF—6&ÆVBÒG'VS°¢BB‚u¶FF×7–æ2Ö6FVv÷'•ÒrÂ66÷R’æf÷$V6‚‚†–çWB’Óâ²–çWBæF—6&ÆVBÒG'VS²Ò“°¢&öw&W72æ†–FFVâÒfÇ6S°¢&öw&W746÷’çFW‡D6öçFVçBÒG"‚w7–æ5&öw&W756f–ærr“°¢6öç7B6Æ÷VE†6UF–ÖW"Ò6WEF–ÖV÷WB‚‚’Óâ²–b†æf–vF÷"æöäÆ–æR’&öw&W746÷’çFW‡D6öçFVçBÒG"‚w7–æ5&öw&W746Æ÷VBr“²ÒÂ3#“°¢6öç7B&W7VÇBÒv—BöffÆ–æU7–æ2ç&W&R†6FVv÷&–W2“°¢6ÆV%F–ÖV÷WB†6Æ÷VE†6UF–ÖW"“°¢–b‡&W7VÇCòæ6Æ÷VB’6†÷uFö7B‡G"‚w7–æ5Fö7D6Æ÷VBr’“°¢VÇ6R–b‡&W7VÇCòæöffÆ–æR’6†÷uFö7B‡G"‚w7–æ5Fö7DöffÆ–æRr’“°¢VÇ6R6†÷uFö7B‡G"‚w7–æ5Fö7DFWf–6Rr’“°¢6WEF–ÖV÷WB‚‚’Óâ²–b†F–Æöræ÷Vâ’F–Æöræ6Æ÷6R‚“²ÒÂ#c“°¢Ó° ¢6VÆV7FVD'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ7–æ6‡&öæ—¦R‡6VÆV7F–öâ‚’’“°¢ÆÄ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ7–æ6‡&öæ—¦R„ôddÄ”äUõ5”ä5ô4DTtõ$”U2æÖ‚†6FVv÷'’’Óâ6FVv÷'’æ–B’’“°§Ð ¦öffÆ–æU7–æ2ç7V'67&–&R††æFÆTöffÆ–æU7–æ57FFR“° ¦gVæ7F–öâ÷Väö&¦V7DF–Æör‚’°¢–b†ö&¦V7E&Vv—7G'’æf–ÇFW"‚†ö&¦V7B’Óâö&¦V7Bç7FGW2ÓÓÒv7F—fRr’æÆVæwF‚ãÒ5D•dUôô$¤T5EôÄ”Ô•B’°¢6†÷t7F—fTÆ–Ö—B‚“°¢&WGW&ã°¢Ð¢6†÷tF–Æör‡G"‚vFDö&¦V7Br’ÂG"‚væôö&¦V7G46÷’r’ÂÆF—b6Æ73Ò&ö&¦V7BÖf÷&Ò#ãÆÆ&VÃãÇ7â6Æ73Ò'7"ÖöæÇ’#âG·G"‚vö&¦V7DæÖRr—ÓÂ÷7ããÆ–çWBFFÖö&¦V7BÖæÖRÖ†ÆVæwFƒÒ#ƒ"Æ6V†öÆFW#Ò"G·G"‚vö&¦V7EÆ6V†öÆFW"r—Ò"óãÂöÆ&VÃãÆ'WGFöâ6Æ73Ò'&–Ö'’Ö'WGFöâ"G—SÒ&'WGFöâ"FFÖ7&VFRÖö&¦V7CâG·G"‚v7&VFRr—ÓÂö'WGFöããÂöF—cæ“°¢6WEF–ÖV÷WB‚‚’ÓâB‚u¶FFÖö&¦V7BÖæÖUÒr“òæfö7W2‚’ÂC“°¢B‚u¶FFÖ7&VFRÖö&¦V7EÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7BæÖRÒB‚u¶FFÖö&¦V7BÖæÖUÒr’çfÇVRçG&–Ò‚“°¢–b‚æÖR’²B‚u¶FFÖö&¦V7BÖæÖUÒr’æfö7W2‚“²&WGW&ã²Ð¢6öç7Bæ÷rÒæWrFFR‚’çFô•4õ7G&–ær‚“°¢ö&¦V7E&Vv—7G'’çVç6†–gB‡²–C¢7&VFTö&¦V7D–B‚’ÂæÖRÂ&ö¦V7EF—FÆS¢æÖRÂ&ö¦V7E6V7F–öã¢æÖRÂFö7VÖVçEF—FÆW3¢æ÷&ÖÆ—¦U&ö¦V7DFö7VÖVçEF—FÆW2‚’Â6öçG&7DçVÖ&W#¢rrÂ7FGW3¢v7F—fRrÂ7&VFVDC¢æ÷rÂWFFVDC¢æ÷rÂWÆöFVDC¢æ÷rÂæÇ—¦VDC¢æ÷rÂ7F'FVDC¢æ÷rÂ6ö×ÆWFVDC¢çVÆÂÂf–ÆW3¢µÒÒ“°¢6fTö&¦V7G2‚“°¢&VæFW$ö&¦V7G2‚“°¢&VæFW%v–FvWG2‚“°¢B‚u¶FFÖF–ÆöuÒr’æ6Æ÷6R‚“°¢6†÷uFö7B‡G"‚vö&¦V7D7&VFVBr’“°¢Ò“°§Ð ¦7–æ2gVæ7F–öâÆöv÷WB‚’°¢Æö6Å7F÷&vRç&VÖ÷fT—FVÒ„DTÔõõ4U54”ôåô´U’“°¢–b†WF„6Æ–VçB’v—BWF„6Æ–VçBæWF‚ç6–vä÷WB‚“°¢v–æF÷ræÆö6F–öâç&WÆ6R‚vÆöv–âæ‡FÖÂ6Æöv–âr“°§Ð ¦7–æ2gVæ7F–öâf÷&6U&Vg&W6‚‚’°¢6öç7B'WGFöâÒB‚u¶FFÖf÷&6R×&Vg&W6…Òr“°¢'WGFöâæ6Æ74Æ—7BæFB‚v—2×&Vg&W6†–ærr“°¢'WGFöâæF—6&ÆVBÒG'VS°¢G'’°¢–b‚v66†W2r–âv–æF÷r’°¢6öç7B¶W—2Òv—B66†W2æ¶W—2‚“°¢v—B&öÖ—6RæÆÂ†¶W—2æf–ÇFW"‚†¶W’’Óâ¶W’ç7F'G5v—F‚‚w7G'V7F÷2Òr’’æÖ‚†¶W’’Óâ66†W2æFVÆWFR†¶W’’’“°¢Ð¢–b‚w6W'f–6Uv÷&¶W"r–âæf–vF÷"’°¢6öç7B&Vv—7G&F–öâÒv—Bæf–vF÷"ç6W'f–6Uv÷&¶W"ævWE&Vv—7G&F–öâ‚“°¢v—B&Vv—7G&F–öãòçWFFR‚“°¢Ð¢Ò6F6‚·Ð¢6öç7BW&ÂÒæWrU$Â‡v–æF÷ræÆö6F–öâæ‡&Vb“°¢W&Âç6V&6…&×2ç6WB‚w&Vg&W6‚rÂFFRææ÷r‚’çFõ7G&–ær‚’“°¢W&Âæ†6‚Òw76Rs°¢v–æF÷ræÆö6F–öâç&WÆ6R‡W&Â“°§Ð ¢B‚u¶FFÖÆæwVvUÒr’æFDWfVçDÆ—7FVæW"‚v6†ævRrÂ†WfVçB’ÓâÇ”ÆæwVvR†WfVçBçF&vWBçfÇVR’“°¢B‚u¶FF×&Vg&W6‚×vUÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ†WfVçB’Óâ°¢WfVçBæ7W'&VçEF&vWBæ6Æ74Æ—7BæFB‚v—2×&Vg&W6†–ærr“°¢6WEF–ÖV÷WB‚‚’Óâv–æF÷ræÆö6F–öâç&VÆöB‚’Âƒ“°§Ò“°¢B‚u¶FFÖf÷&6R×&Vg&W6…Òr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂf÷&6U&Vg&W6‚“°¢B‚u¶FF×F†VÖR×FövvÆUÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâÇ•F†VÖR‡&ö÷BæFF6WBçF†VÖRÓÓÒvF&²ròvÆ–v‡Br¢vF&²r’“°¢B‚u¶FFÖÖVçRÖ÷VåÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ÷VäÖVçR“°¢BB‚u¶FFÖÖVçRÖ6Æ÷6UÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6Æ÷6TÖVçR’“°¢BB‚u¶FFÖ6÷’Ö–EÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6÷”–B’“°¢BB‚u¶FFÖ6÷’×&VfW'&ÅÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6÷•&VfW'&Â’“°¢BB‚u¶FF×6†&R×&VfW'&ÅÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6†&U&VfW'&Â’“°¦6öç7B&÷GFöÔÖVçUFövvÆRÒB‚u¶FFÖ&÷GFöÒÖÖVçR×FövvÆUÒr“°¦&÷GFöÔÖVçUFövvÆSòæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6WD&÷GFöÔÖVçR‚B‚u¶FFÖ&÷GFöÒÖÖVçUÒr’æ6Æ74Æ—7Bæ6öçF–ç2‚v—2Ö÷Vâr’’“°¢BB‚u¶FF×F%Òr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6WEæVÂ†'WGFöâæFF6WBçF"’’“°¢BB‚u¶FFÖ÷Vâ×æVÅÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ6WEæVÂ†'WGFöâæFF6WBæ÷VåæVÂ’’“°¢BB‚u¶FF×&ö¦V7BÖÖVçR×Æ6V†öÆFW%Òr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7BÆ&VÂÒG"†'WGFöâæFF6WBç&ö¦V7DÖVçUÆ6V†öÆFW"“°¢6†÷uFö7B‡G"‚w&ö¦V7DÖVçU&W&VBr’ç&WÆ6R‚w¶æÖWÒrÂÆ&VÂ’“°§Ò’“°¢BB‚u¶FFÖÆVæ6‚×GW&æ¶W’Öö&¦V7EÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vå&ö¦V7Dö&¦V7Ev—¦&B‡²v÷&·76T÷&–v–ã¢wGW&æ¶W’rÒ’’“°¢BB‚u¶FFÖ÷Vâ×f–WuÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Våf–Wr†'WGFöâæFF6WBæ÷Våf–Wr’’“°¢BB‚u¶FFÖ7F–öåÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Våf–Wr†'WGFöâæFF6WBæ7F–öâ’’“°¢BB‚u¶FFÖV&âÖ7F–öåÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7B7F–öâÒ'WGFöâæFF6WBæV&ä7F–öã°¢–b†7F–öâÓÓÒw77÷'Br’6WEæVÂ‚w77÷'Br“°¢–b†7F–öâÓÓÒv6öææV7F–öç2r’÷Vä6öææV7F–öç4F–Æör‚“°¢–b†7F–öâÓÓÒw&VfW'&Âr’6†&U&VfW'&Â‚“°¢–b†7F–öâÓÓÒvvÖW2r’6WEæVÂ‚vvÖW2r“°§Ò’“°§v–æF÷ræFDWfVçDÆ—7FVæW"‚w7G'V7F÷3¦vÖR×&Wv&BrÂ†WfVçB’Óâv&DvÖUv–â†WfVçBæFWF–ÃòævÖR’“°¢BB‚u¶FFÖæÇ—6—2×G—UÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷VåWÆöDF–Æör†'WGFöâæFF6WBææÇ—6—5G—R’’“°¢B‚u¶FF×'VâÖæÇ—6—5Òr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ'VäæÇ—6—2“°¢BB‚u¶FFÖ7&VFR×&ö¦V7BÖö&¦V7EÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vå&ö¦V7Dö&¦V7Ev—¦&B‚’’“°¢B‚u¶FF×V–6²×&ö¦V7BÖæÇ—6—5Òr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ÷Vå&ö¦V7Dö&¦V7Ev—¦&B‡²V–6µ&ö¦V7DöæÇ“¢G'VRÒ’“°¢B‚u¶FF×V–6²Öö&¦V7B×7F'EÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ÷Vä66„ö&¦V7DF–Æör“°¢B‚u¶FFÖ÷Vâ×7–æ2ÖF–ÆöuÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ÷VäöffÆ–æU7–æ4F–Æör“°¢BB‚u¶FFÖFBÖö&¦V7EÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ÷Väö&¦V7DF–Æör’“°¢BB‚u¶FFÖFBÖ66‚Öö&¦V7EÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ÷Vä66„ö&¦V7DF–Æör’“°¢B‚u¶FFÖW‡÷'BÖÆÂÖ66†fÆ÷uÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ÷VäÆÄ66†fÆ÷tW‡÷'DF–Æör“°¢B‚u¶FF×&öf–ÆRÖÖVçUÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB‚ræG&vW"Öw&÷Wr’æ6Æ74Æ—7BçFövvÆR‚v—2Ö÷Vâr’“°¢B‚u¶FFÖÆöv÷WEÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂÆöv÷WB“°¢B‚u¶FF×76R×6WGF–æw5Òr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ°¢6öç7BFööÆ&"ÒB‚u¶FF×76R×FööÆ&%Òr“°¢FööÆ&"æ†–FFVâÒFööÆ&"æ†–FFVã°¢B‚u¶FF×76R×6WGF–æw5Òr’ç6WDGG&–'WFR‚v&–ÖW‡æFVBrÂ7G&–ær‚FööÆ&"æ†–FFVâ’“°§Ò“°¢B‚u¶FF×76RÖFöæUÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²B‚u¶FF×76R×FööÆ&%Òr’æ†–FFVâÒG'VS²B‚u¶FF×76R×6WGF–æw5Òr’ç6WDGG&–'WFR‚v&–ÖW‡æFVBrÂvfÇ6Rr“²Ò“°¢B‚u¶FFÖVF—B×&öf–ÆUÒr’æFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ÷Vå&öf–ÆTVF—F÷"“°¢B‚u¶FFÖVF—B×&öf–ÆR×W'6öæÅÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ÷Vå&öf–ÆTVF—F÷"“°¢B‚u¶FFÖG&v–ærÖ6Æ÷6UÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6Æ÷6TG&v–æu7GVF–ò“°¢B‚u¶FFÖG&v–ærÖÖ–æ–Ö—¦UÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂÖ–æ–Ö—¦TG&v–æu7GVF–ò“°¢B‚u¶FFÖG&v–ær×&W7F÷&UÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ÷VäG&v–æu7GVF–ò“°¢B‚u¶FFÖG&v–ærÖæWuÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂæWtG&v–ætfÆ÷r“°¢B‚u¶FFÖG&v–ær×VæFõÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂVæFôG&v–ær“°¢B‚u¶FFÖG&v–ærÖ6ÆV%Òr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²6ÆV$G&v–æt6çf2‚“²7W'&VçDG&v–æt–BÒçVÆÃ²G&v–ætF—'G’ÒG'VS²Ò“°¢B‚u¶FFÖG&v–ær×F—FÆUÒr“òæFDWfVçDÆ—7FVæW"‚v–çWBrÂ‚’Óâ²–b†G&v–æt–æ—F–Æ—¦VB’G&v–ætF—'G’ÒG'VS²Ò“°¢B‚u¶FFÖG&v–ær×WÆöEÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB‚u¶FFÖG&v–ærÖf–ÆUÒr’æ6Æ–6²‚’“°¢B‚u¶FFÖG&v–ærÖf–ÆUÒr“òæFDWfVçDÆ—7FVæW"‚v6†ævRrÂ†WfVçB’Óâ°¢ÆöDG&v–æt&6¶w&÷VæB†WfVçBæ7W'&VçEF&vWBæf–ÆW3òå³Ò“°¢WfVçBæ7W'&VçEF&vWBçfÇVRÒrs°§Ò“°¢B‚u¶FFÖG&v–ær×6fUÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6fTG&v–æu&V6÷&B“°¢B‚u¶FFÖG&v–ær×6fVEÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ&VæFW$G&v–ætvÆÆW'’“°¢B‚u¶FFÖG&v–ærÖvÆÆW'’Ö6Æ÷6UÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’Óâ²B‚u¶FFÖG&v–ærÖvÆÆW'•Òr’æ†–FFVâÒG'VS²Ò“°¢B‚u¶FFÖG&v–ær×6†&UÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ6†&TG&v–ætf–ÆR“°¢BB‚u¶FF×&W÷'B×&Wf–WrÖ6Æ÷6UÒr’æf÷$V6‚‚†'WGFöâ’Óâ'WGFöâæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂ‚’ÓâB‚u¶FF×&W÷'B×&Wf–WrÖF–ÆöuÒr“òæ6Æ÷6R‚’’“°¢B‚u¶FF×&W÷'B×&Wf–WrÖF–ÆöuÒr“òæFDWfVçDÆ—7FVæW"‚v6Æ÷6RrÂ‚’Óâ°¢&VÆV6T66„÷&væ—¦F–öå&Wf–Wr‚“°¢6öç7B6öçFVçBÒB‚u¶FF×&W÷'B×&Wf–WrÖ6öçFVçEÒr“°¢6öç7B7F–öç2ÒB‚u¶FF×&W÷'B×&Wf–WrÖ7F–öç5Òr“°¢–b†6öçFVçB’6öçFVçBæ–ææW$…DÔÂÒrs°¢–b†7F–öç2’7F–öç2æ–ææW$…DÔÂÒrs°§Ò“°¦G&v–ætF–ÆösòæFDWfVçDÆ—7FVæW"‚v6æ6VÂrÂ‚’Óâ°¢G&v–ætÖ–æ–Ö—¦VBÒfÇ6S°¢B‚u¶FFÖG&v–ær×&W7F÷&UÒr’æ†–FFVâÒG'VS°§Ò“°¦G&v–ætF–ÆösòæFDWfVçDÆ—7FVæW"‚v6Æ÷6RrÂ‚’Óâ°¢–b‚G&v–ætÖ–æ–Ö—¦VB’B‚u¶FFÖG&v–ær×&W7F÷&UÒr’æ†–FFVâÒG'VS°§Ò“°¦Fö7VÖVçBæFDWfVçDÆ—7FVæW"‚v¶W–F÷vârÂ†WfVçB’Óâ²–b†WfVçBæ¶W’ÓÓÒtW66Rr’6Æ÷6TÖVçR‚“²Ò“°§v–æF÷ræFDWfVçDÆ—7FVæW"‚w&W6—¦RrÂ&VæFW%v–FvWG2“°§v–æF÷ræFDWfVçDÆ—7FVæW"‚wvV†–FRrÂW'6—7D–FVçF—G”Æö6Â“° ¦6öç7BVæF–æuG&ç6fW$–×÷'BÒ–×÷'EVæF–æuG&ç6fW"‚“°¦Ç•77÷'E&Wv&G2‡77÷'D6ö×ÆWF–öâ‚’“°¦Ç•F†VÖR†Æö6Å7F÷&vRævWD—FVÒ‚w7G'V7F÷2×F†VÖRr’ÓÓÒvÆ–v‡BròvÆ–v‡Br¢vF&²r“°¦Ç”ÆæwVvR†ÆæwVvR“°§7F'D†öÖU7FF—7F–746Æö6²‚“°§&VæFW%v–FvWE–6¶W"‚“°§&VæFW%v–FvWG2‚“°§6VÆV7DæÇ—6—2‡6VÆV7FVDæÇ—6—2“°§&VæFW$æÇ—6—46&G2‚“°§&VæFW$ö&¦V7G2‚“°§&VæFW$66†fÆ÷r‚“°§&VæFW%&öf–ÆUW'6öæÄFF‚“°§&VæFW$6öææV7F–öç57VÖÖ'’‚“°¦öffÆ–æU7–æ2æ–æ—F–Æ—¦R‚“°§&V6÷&D7F—f—G’‚v6&–æWBrÂvF–Ç’×6W76–öârÂ²F–Ç“¢G'VRÒ“°¦Fö7VÖVçBæFDWfVçDÆ—7FVæW"‚v6Æ–6²rÂG&6´6öç7G'V7F–öä7F—f—G’ÂG'VR“°§6WEæVÂ‡VæF–æuG&ç6fW$–×÷'Còæ–çFVçBÓÓÒv6öÖÖW&6–Â×&÷÷6Âròw&÷÷6Ç2r¢†Æö6F–öâæ†6‚ç6Æ–6Rƒ’ÇÂv†öÖRr’“°§&W7F÷&T&÷GFöÔÖVçU7FFR‚“°¦6öç7B6&–æWE&öÆRÒv—B–æ—DWF‚‚“°¦–b†6&–æWE&öÆR’Æ”6&–æWEvVÆ6öÖR†6&–æWE&öÆR“°¦6öç7BF–Ç•&Wv&FVBÒv&DF–Ç”Æöv–å&Wv&B‚“°§7F'D7F—fT&öçW467'VÂ‚“°§v–æF÷rç6WEF–ÖV÷WB‚‚’Óâ'VäÆöv–å&ö×G2†F–Ç•&Wv&FVB’Âv–æF÷ræÖF6„ÖVF–‚r‡&VfW'2×&VGV6VBÖÖ÷F–öã¢&VGV6R’r’æÖF6†W2ò¢3sS“°¦–b‡VæF–æuG&ç6fW$–×÷'Còæ–çFVçBÓÓÒv6öÖÖW&6–Â×&÷÷6ÂrÇÂÆö6F–öâæ†6‚ÓÓÒr7&÷÷6Ç2r’Æö6Å7F÷&vRç&VÖ÷fT—FVÒ„UD…õ$UEU$åô´U’“° ¦–b‚w6W'f–6Uv÷&¶W"r–âæf–vF÷"’v–æF÷ræFDWfVçDÆ—7FVæW"‚vÆöBrÂ‚’Óâæf–vF÷"ç6W'f–6Uv÷&¶W"ç&Vv—7FW"‚râ÷7ræ§3÷cÓ"rÂ²WFFUf–66†S¢væöæRrÒ’æ6F6‚‚‚’Óâ·Ò’“°
