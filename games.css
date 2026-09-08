@@ -122,9 +122,6 @@
 .backgammon-chip { width: min(26px,5vw); height: min(26px,5vw); flex: 0 0 auto; display:grid; place-items:center; border:2px solid rgba(255,255,255,.65); border-radius:50%; background:#f4f7ff; color:#15243a; box-shadow:0 2px 4px rgba(0,0,0,.35); font-size:9px; font-weight:900; }
 .backgammon-chip.is-black { color:#fff; border-color:#536b87; background:#08192e; }.backgammon-dice { display:flex; align-items:center; justify-content:center; gap:8px; }.backgammon-dice span { width:38px; height:38px; display:grid; place-items:center; border:1px solid var(--line-strong); border-radius:9px; background:#fff; color:#08234a; font-size:20px; font-weight:900; }
 
-.bottom-menu .bottom-nav-items { grid-template-columns: repeat(7,minmax(0,1fr)); }
-.bottom-menu.is-building .bottom-nav-items > button:nth-child(7) { animation-delay: .91s; }
-
 @keyframes bonusLivePulse { 0%,100% { opacity:.65; transform:scale(.82); } 50% { opacity:1; transform:scale(1.12); } }
 @keyframes bonusRunnerFill { from { transform:scaleX(.01); } to { transform:scaleX(1); } }
 @keyframes bonusRunnerDot { from { left:0; } to { left:100%; } }
