@@ -706,6 +706,11 @@ Object.assign(copy.EN, { proposalUnitShort: 'Unit', proposalQuantityShort: 'Qty'
 Object.assign(copy.KY, { proposalUnitShort: 'Өлч. бир.', proposalQuantityShort: 'Саны' });
 Object.assign(copy.TJ, { proposalUnitShort: 'Воҳ. чен.', proposalQuantityShort: 'Миқдор' });
 
+Object.assign(copy.RU, { proposalCustomTax: 'Свой налог', proposalCustomTaxApply: 'Применить свой налог', proposalCustomTaxName: 'Название налога', proposalCustomTaxRate: 'Ставка', proposalCustomTaxNamePlaceholder: 'Например: Региональный налог', proposalCustomTaxCombineHint: 'Можно применять одновременно с любыми выбранными налогами.' });
+Object.assign(copy.EN, { proposalCustomTax: 'Custom tax', proposalCustomTaxApply: 'Apply custom tax', proposalCustomTaxName: 'Tax name', proposalCustomTaxRate: 'Rate', proposalCustomTaxNamePlaceholder: 'For example: Regional tax', proposalCustomTaxCombineHint: 'Can be applied together with any selected taxes.' });
+Object.assign(copy.KY, { proposalCustomTax: 'Өз салыгыңыз', proposalCustomTaxApply: 'Өз салыгын колдонуу', proposalCustomTaxName: 'Салыктын аталышы', proposalCustomTaxRate: 'Чен', proposalCustomTaxNamePlaceholder: 'Мисалы: Аймактык салык', proposalCustomTaxCombineHint: 'Каалаган тандалган салыктар менен бирге колдонсо болот.' });
+Object.assign(copy.TJ, { proposalCustomTax: 'Андози худ', proposalCustomTaxApply: 'Андози худро татбиқ кардан', proposalCustomTaxName: 'Номи андоз', proposalCustomTaxRate: 'Меъёр', proposalCustomTaxNamePlaceholder: 'Масалан: Андози минтақавӣ', proposalCustomTaxCombineHint: 'Метавонад ҳамзамон бо ҳар гуна андози интихобшуда истифода шавад.' });
+
 Object.assign(copy.RU, {
   proposalProjectGroupHint: 'Это все позиции спецификации и пропущенные позиции из спецификации, которые есть в проекте.',
   proposalAdditionalWorksHint: 'Работы, не отобразившиеся в проекте и спецификации, но которые, возможно, потребуются.',
@@ -1334,11 +1339,9 @@ const COMMERCIAL_PROPOSAL_PRICE_MODES = Object.freeze({
   cash: { label: 'priceCash', direction: 'none', rate: 0 },
   includedVat22: { label: 'priceIncludesVat22', direction: 'subtract', rate: .22 },
   includedTax6: { label: 'priceIncludesTax6', direction: 'subtract', rate: .06 },
-  includedVat5: { label: 'priceIncludesVat5', direction: 'subtract', rate: .05 },
-  excludedVat22: { label: 'priceExcludesVat22', direction: 'add', rate: .22 },
-  excludedVat5: { label: 'priceExcludesVat5', direction: 'add', rate: .05 },
-  excludedTax6: { label: 'priceExcludesTax6', direction: 'add', rate: .06 }
+  includedVat5: { label: 'priceIncludesVat5', direction: 'subtract', rate: .05 }
 });
+const COMMERCIAL_PROPOSAL_CUSTOM_TAX_ID = 'customTax';
 const widgetColors = ['#0b63ce', '#00a9df', '#04a77b', '#41a447', '#d5a800', '#e87919', '#d64254', '#7957d5', '#c04ea3', '#44546a'];
 
 function loadFinance() {
@@ -1629,15 +1632,21 @@ function commercialProposalWorkspaceNumber(value) {
 function normalizeCommercialProposalTaxModes(value, legacyMode = 'cash') {
   const rawModes = Array.isArray(value) ? value : [legacyMode];
   const normalized = [];
-  let direction = null;
   rawModes.forEach((id) => {
     const mode = COMMERCIAL_PROPOSAL_PRICE_MODES[id];
-    if (!mode || mode.direction === 'none' || normalized.includes(id) || normalized.length >= 2) return;
-    if (direction && mode.direction !== direction) return;
-    direction = mode.direction;
+    if (!mode || mode.direction !== 'subtract' || normalized.includes(id)) return;
     normalized.push(id);
   });
   return normalized;
+}
+
+function normalizeCommercialProposalCustomTax(value) {
+  const customTax = value && typeof value === 'object' ? value : {};
+  return {
+    enabled: Boolean(customTax.enabled),
+    name: String(customTax.name || '').trim().slice(0, 80),
+    rate: Math.min(100, commercialProposalWorkspaceNumber(customTax.rate))
+  };
 }
 
 function normalizeCommercialProposalWorkspace(value) {
@@ -1657,6 +1666,7 @@ function normalizeCommercialProposalWorkspace(value) {
   });
   const savedLaborSettings = workspace.laborSettings && typeof workspace.laborSettings === 'object' ? workspace.laborSettings : {};
   const savedContacts = workspace.contacts && typeof workspace.contacts === 'object' ? workspace.contacts : {};
+  const customTax = normalizeCommercialProposalCustomTax(workspace.customTax);
   const laborItemHours = {};
   Object.entries(savedLaborSettings.itemHours && typeof savedLaborSettings.itemHours === 'object' ? savedLaborSettings.itemHours : {}).slice(0, 2000).forEach(([id, hours]) => {
     const safeId = String(id || '').slice(0, 160);
@@ -1685,6 +1695,7 @@ function normalizeCommercialProposalWorkspace(value) {
   const myItems = Array.isArray(workspace.myItems) ? workspace.myItems.slice(0, 1000).map((item) => normalizeWorkspaceItem(item, true)).filter(Boolean) : [];
   return {
     taxModes: normalizeCommercialProposalTaxModes(workspace.taxModes, workspace.taxMode),
+    customTax,
     itemValues,
     customItems,
     myItems,
@@ -7974,7 +7985,7 @@ function isCommercialProposalMyGroup(groupId) {
 }
 
 function commercialProposalWorkspaceState(proposal) {
-  if (!proposal.workspace || typeof proposal.workspace !== 'object' || !proposal.workspace.itemValues || !Array.isArray(proposal.workspace.customItems) || !Array.isArray(proposal.workspace.myItems) || !proposal.workspace.contacts || !proposal.workspace.laborSettings || typeof proposal.workspace.laborSettings.itemHours !== 'object') {
+  if (!proposal.workspace || typeof proposal.workspace !== 'object' || !proposal.workspace.itemValues || !Array.isArray(proposal.workspace.customItems) || !Array.isArray(proposal.workspace.myItems) || !proposal.workspace.customTax || !proposal.workspace.contacts || !proposal.workspace.laborSettings || typeof proposal.workspace.laborSettings.itemHours !== 'object') {
     proposal.workspace = normalizeCommercialProposalWorkspace(proposal.workspace);
   }
   return proposal.workspace;
@@ -8058,46 +8069,58 @@ function commercialProposalRoundMoney(value) {
   return Math.round(((Number(value) || 0) + Number.EPSILON) * 100) / 100;
 }
 
-function commercialProposalLineAmounts(quantity, price, modeIds = []) {
-  const selectedModeIds = normalizeCommercialProposalTaxModes(modeIds);
-  const modes = selectedModeIds.map((id) => ({ id, ...COMMERCIAL_PROPOSAL_PRICE_MODES[id] }));
+function commercialProposalTaxModeDefinitions(modeIds = [], customTaxValue = null) {
+  const modes = normalizeCommercialProposalTaxModes(modeIds).map((id) => ({ id, ...COMMERCIAL_PROPOSAL_PRICE_MODES[id] }));
+  const customTax = normalizeCommercialProposalCustomTax(customTaxValue);
+  if (customTax.enabled && customTax.rate > 0) {
+    modes.push({ id: COMMERCIAL_PROPOSAL_CUSTOM_TAX_ID, direction: 'subtract', rate: customTax.rate / 100 });
+  }
+  return modes;
+}
+
+function commercialProposalActiveTaxModeIds(state) {
+  return commercialProposalTaxModeDefinitions(state?.taxModes, state?.customTax).map((mode) => mode.id);
+}
+
+function commercialProposalLineAmounts(quantity, price, modeIds = [], customTaxValue = null) {
+  const modes = commercialProposalTaxModeDefinitions(modeIds, customTaxValue);
   const direction = modes[0]?.direction || 'none';
   const unitBase = commercialProposalWorkspaceNumber(price);
   const base = commercialProposalRoundMoney(commercialProposalWorkspaceNumber(quantity) * unitBase);
-  const unitTaxes = modes.map((mode) => ({
-    id: mode.id,
-    amount: mode.direction === 'subtract'
-      ? commercialProposalRoundMoney(unitBase * mode.rate / (1 + mode.rate))
-      : commercialProposalRoundMoney(unitBase * mode.rate)
-  }));
-  const unitTax = commercialProposalRoundMoney(unitTaxes.reduce((total, item) => total + item.amount, 0));
-  const unitFinal = direction === 'subtract'
-    ? commercialProposalRoundMoney(unitBase - unitTax)
-    : direction === 'add'
-      ? commercialProposalRoundMoney(unitBase + unitTax)
-      : unitBase;
-  const taxes = modes.map((mode) => ({
-    id: mode.id,
-    amount: mode.direction === 'subtract'
-      ? commercialProposalRoundMoney(base * mode.rate / (1 + mode.rate))
-      : commercialProposalRoundMoney(base * mode.rate)
-  }));
-  const tax = commercialProposalRoundMoney(taxes.reduce((total, item) => total + item.amount, 0));
-  const final = direction === 'subtract'
-    ? commercialProposalRoundMoney(base - tax)
-    : direction === 'add'
-      ? commercialProposalRoundMoney(base + tax)
-      : base;
+  const combinedRate = modes.reduce((total, mode) => total + mode.rate, 0);
+  const allocateIncludedTaxes = (gross, net) => {
+    const totalTax = commercialProposalRoundMoney(gross - net);
+    let allocated = 0;
+    return modes.map((mode, index) => {
+      const amount = index === modes.length - 1
+        ? commercialProposalRoundMoney(totalTax - allocated)
+        : commercialProposalRoundMoney(net * mode.rate);
+      allocated = commercialProposalRoundMoney(allocated + amount);
+      return { id: mode.id, amount };
+    });
+  };
+  const unitFinal = direction === 'subtract' && combinedRate > 0 ? commercialProposalRoundMoney(unitBase / (1 + combinedRate)) : unitBase;
+  const unitTaxes = direction === 'subtract' ? allocateIncludedTaxes(unitBase, unitFinal) : [];
+  const unitTax = commercialProposalRoundMoney(unitBase - unitFinal);
+  const final = direction === 'subtract' && combinedRate > 0 ? commercialProposalRoundMoney(base / (1 + combinedRate)) : base;
+  const taxes = direction === 'subtract' ? allocateIncludedTaxes(base, final) : [];
+  const tax = commercialProposalRoundMoney(base - final);
   return { unitBase, unitTaxes, unitTax, unitFinal, base, taxes, tax, final, direction };
 }
 
-function commercialProposalModeShortLabel(modeId) {
+function commercialProposalModeShortLabel(modeId, customTaxValue = null) {
+  if (modeId === COMMERCIAL_PROPOSAL_CUSTOM_TAX_ID) {
+    const customTax = normalizeCommercialProposalCustomTax(customTaxValue);
+    const name = customTax.name || tr('proposalCustomTax');
+    const rate = new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(customTax.rate);
+    return `${name} ${rate}%`;
+  }
   const label = tr((COMMERCIAL_PROPOSAL_PRICE_MODES[modeId] || COMMERCIAL_PROPOSAL_PRICE_MODES.cash).label);
   return label.includes(':') ? label.slice(label.indexOf(':') + 1).trim() : label;
 }
 
-function commercialProposalCombinedTaxLabel(modeIds) {
-  return normalizeCommercialProposalTaxModes(modeIds).map((modeId) => commercialProposalModeShortLabel(modeId)).join(' + ');
+function commercialProposalCombinedTaxLabel(modeIds, customTaxValue = null) {
+  return commercialProposalTaxModeDefinitions(modeIds, customTaxValue).map((mode) => commercialProposalModeShortLabel(mode.id, customTaxValue)).join(' + ');
 }
 
 function commercialProposalTaxAmount(amounts, modeId) {
@@ -8130,11 +8153,14 @@ function commercialProposalRefreshRenderedPriceColumns(table) {
 
 function commercialProposalPriceModeMarkup(state) {
   const selectedModes = normalizeCommercialProposalTaxModes(state.taxModes);
+  const customTax = normalizeCommercialProposalCustomTax(state.customTax);
+  const activeModes = commercialProposalActiveTaxModeIds(state);
   const option = (id) => {
-    const checked = id === 'cash' ? !selectedModes.length : selectedModes.includes(id);
-    return `<label class="${checked ? 'is-active' : ''}"><input type="checkbox" value="${id}" data-proposal-price-mode${checked ? ' checked' : ''} /><span aria-hidden="true">✓</span><strong>${escapeHtml(tr(COMMERCIAL_PROPOSAL_PRICE_MODES[id].label))}</strong></label>`;
+    const checked = id === 'cash' ? !activeModes.length : selectedModes.includes(id);
+    return `<label class="proposal-tax-option${checked ? ' is-active' : ''}"><input type="checkbox" value="${id}" data-proposal-price-mode${checked ? ' checked' : ''} /><span aria-hidden="true">✓</span><strong>${escapeHtml(tr(COMMERCIAL_PROPOSAL_PRICE_MODES[id].label))}</strong></label>`;
   };
-  return `<fieldset class="commercial-proposal-price-modes"><legend>${escapeHtml(tr('proposalPriceMode'))}</legend><div class="proposal-price-mode-groups"><section class="is-cash">${option('cash')}</section><section><h3>${escapeHtml(tr('pricesWithTax'))}</h3>${option('includedVat22')}${option('includedTax6')}${option('includedVat5')}</section><section><h3>${escapeHtml(tr('pricesWithoutTax'))}</h3>${option('excludedVat22')}${option('excludedVat5')}${option('excludedTax6')}</section></div></fieldset>`;
+  const customChecked = customTax.enabled;
+  return `<fieldset class="commercial-proposal-price-modes"><legend>${escapeHtml(tr('proposalPriceMode'))}</legend><div class="proposal-price-mode-groups"><section class="is-cash">${option('cash')}</section><section><h3>${escapeHtml(tr('pricesWithTax'))}</h3>${option('includedVat22')}${option('includedTax6')}${option('includedVat5')}</section><section class="is-custom-tax"><h3>${escapeHtml(tr('proposalCustomTax'))}</h3><label class="proposal-tax-option${customChecked ? ' is-active' : ''}"><input type="checkbox" data-proposal-custom-tax-enabled${customChecked ? ' checked' : ''} /><span aria-hidden="true">✓</span><strong>${escapeHtml(tr('proposalCustomTaxApply'))}</strong></label><div class="proposal-custom-tax-fields"><label class="proposal-custom-tax-field"><span>${escapeHtml(tr('proposalCustomTaxName'))}</span><input type="text" maxlength="80" value="${escapeHtml(customTax.name)}" placeholder="${escapeHtml(tr('proposalCustomTaxNamePlaceholder'))}" data-proposal-custom-tax-field="name" /></label><label class="proposal-custom-tax-field"><span>${escapeHtml(tr('proposalCustomTaxRate'))}</span><div><input type="number" min="0" max="100" step="0.01" inputmode="decimal" value="${customTax.rate ? escapeHtml(String(customTax.rate)) : ''}" placeholder="0" data-proposal-custom-tax-field="rate" /><b>%</b></div></label></div><small class="proposal-custom-tax-hint">${escapeHtml(tr('proposalCustomTaxCombineHint'))}</small></section></div></fieldset>`;
 }
 
 function commercialProposalGroupHintMarkup(groupId) {
@@ -8164,10 +8190,10 @@ function commercialProposalContactsMarkup(state) {
 
 function commercialProposalTableMarkup(proposal, groupId, entries) {
   const state = commercialProposalWorkspaceState(proposal);
-  const selectedModeIds = normalizeCommercialProposalTaxModes(state.taxModes);
-  const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[selectedModeIds[0]]?.direction || 'none';
+  const selectedModeIds = commercialProposalActiveTaxModeIds(state);
+  const direction = commercialProposalTaxModeDefinitions(state.taxModes, state.customTax)[0]?.direction || 'none';
   const myIds = new Set(state.myItems.map((item) => item.id));
-  const combinedTaxLabel = commercialProposalCombinedTaxLabel(selectedModeIds);
+  const combinedTaxLabel = commercialProposalCombinedTaxLabel(state.taxModes, state.customTax);
   const specialHead = groupId === 'outsideSpecificationWorks'
     ? `<th class="proposal-line-meta-head">${escapeHtml(tr('proposalSpecProjectColumn'))}</th>`
     : groupId === 'associatedWorks' ? `<th class="proposal-line-meta-head">${escapeHtml(tr('proposalAssociatedForColumn'))}</th>` : '';
@@ -8178,7 +8204,7 @@ function commercialProposalTableMarkup(proposal, groupId, entries) {
       : `<th class="proposal-price-column-head">${escapeHtml(tr('price'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('proposalGrossPrice'))}</th>`;
   const actionHead = isCommercialProposalMyGroup(groupId) ? '' : escapeHtml(tr('sendToMyProposal'));
   const rows = entries.map((entry, index) => {
-    const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds);
+    const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, state.taxModes, state.customTax);
     const source = entry.custom ? tr('ownProposalPosition') : entry.sourceSheet || entry.sourceName || tr('identifiedByAnalysis');
     const priceInputLabel = direction === 'subtract'
       ? `${tr('includedUnitPriceWithTax')} ${combinedTaxLabel}`
@@ -8206,7 +8232,7 @@ function commercialProposalTableMarkup(proposal, groupId, entries) {
     const emptyConfig = commercialProposalEditorGroupConfig(groupId);
     return `<div class="commercial-proposal-table-empty"><span>◇</span><h3>${escapeHtml(tr(isCommercialProposalMyGroup(groupId) ? 'myCommercialProposal' : emptyConfig?.label || 'proposalWorkspaceTitle'))}</h3><p>${escapeHtml(tr(isCommercialProposalMyGroup(groupId) ? 'emptyMyProposal' : 'emptyProposalGroup'))}</p></div>`;
   }
-  const lineAmounts = entries.map((entry) => commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds));
+  const lineAmounts = entries.map((entry) => commercialProposalLineAmounts(entry.quantity, entry.price, state.taxModes, state.customTax));
   const priceColumnValues = direction === 'subtract'
     ? [
         lineAmounts.map((amounts) => formatMoney(amounts.unitFinal)),
@@ -8231,7 +8257,7 @@ function commercialProposalTableMarkup(proposal, groupId, entries) {
   const fixedColumnWidth = 38 + 58 + 68 + specialColumnWidth + actionColumnWidth + 320;
   const tableMinWidth = fixedColumnWidth + priceColumnWidths.reduce((total, width) => total + width, 0);
   const columnLayout = `<colgroup><col style="width:38px" /><col /><col style="width:58px" /><col style="width:68px" />${specialColumnWidth ? `<col style="width:${specialColumnWidth}px" />` : ''}${priceColumnWidths.map((width, index) => `<col data-proposal-price-column="${index}" style="width:${width}px" />`).join('')}<col style="width:${actionColumnWidth}px" /></colgroup>`;
-  const taxSummaries = selectedModeIds.map((modeId) => `<span>${escapeHtml(commercialProposalModeShortLabel(modeId))}: <b data-proposal-tax-grand-total="${escapeHtml(modeId)}">${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + commercialProposalTaxAmount(amounts, modeId), 0)))}</b></span>`).join('');
+  const taxSummaries = selectedModeIds.map((modeId) => `<span>${escapeHtml(commercialProposalModeShortLabel(modeId, state.customTax))}: <b data-proposal-tax-grand-total="${escapeHtml(modeId)}">${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + commercialProposalTaxAmount(amounts, modeId), 0)))}</b></span>`).join('');
   const totalLabel = direction === 'subtract' ? 'includedTotalWithoutTax' : direction === 'add' ? 'priceTotalWithTax' : 'totalProposalPrice';
   return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table is-compact-proposal-table has-${selectedModeIds.length}-taxes${direction === 'subtract' ? ' is-included-tax' : direction === 'add' ? ' is-added-tax' : ''}${specialHead ? ' has-special-column' : ''}" data-proposal-compact-table data-proposal-fixed-width="${fixedColumnWidth}" style="--proposal-table-min-width:${tableMinWidth}px">${columnLayout}<thead><tr><th class="proposal-line-number">№</th><th class="proposal-line-name-head">${escapeHtml(tr('proposalLineName'))}</th><th class="proposal-line-unit-head">${escapeHtml(tr('proposalUnitShort'))}</th><th class="proposal-line-quantity-head">${escapeHtml(tr('proposalQuantityShort'))}</th>${specialHead}${priceHeads}<th class="proposal-line-action-head">${actionHead}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="${columnCount}"><span>${escapeHtml(tr('totalWorkTypes'))}: <b data-proposal-types-total>${entries.length}</b></span>${taxSummaries}<span>${escapeHtml(tr(totalLabel))}: <b data-proposal-price-grand-total>${escapeHtml(formatMoney(lineAmounts.reduce((total, amounts) => total + amounts.final, 0)))}</b></span></td></tr></tfoot></table></div>`;
 }
@@ -8295,14 +8321,14 @@ function commercialProposalColumnsMarkup(proposal, groups) {
 
 function updateCommercialProposalTableCalculations(scope, proposal) {
   const state = commercialProposalWorkspaceState(proposal);
-  const selectedModeIds = normalizeCommercialProposalTaxModes(state.taxModes);
+  const selectedModeIds = commercialProposalActiveTaxModeIds(state);
   const taxTotals = Object.fromEntries(selectedModeIds.map((modeId) => [modeId, 0]));
   let priceTotal = 0;
   const rows = $$('[data-proposal-line-row]', scope);
   rows.forEach((row) => {
     const quantity = commercialProposalWorkspaceNumber($('[data-proposal-line-value="quantity"]', row)?.value);
     const price = commercialProposalWorkspaceNumber($('[data-proposal-line-value="price"]', row)?.value);
-    const amounts = commercialProposalLineAmounts(quantity, price, selectedModeIds);
+    const amounts = commercialProposalLineAmounts(quantity, price, state.taxModes, state.customTax);
     const netUnitCell = $('[data-proposal-net-unit]', row);
     const grossUnitCell = $('[data-proposal-gross-unit]', row);
     const baseCell = $('[data-proposal-base-total]', row);
@@ -8496,25 +8522,39 @@ function renderCommercialProposalWorkspace() {
     const modeId = input.value;
     if (modeId === 'cash') {
       state.taxModes = [];
+      state.customTax.enabled = false;
     } else {
       const selectedModes = normalizeCommercialProposalTaxModes(state.taxModes);
       if (selectedModes.includes(modeId)) {
         state.taxModes = selectedModes.filter((id) => id !== modeId);
       } else {
-        const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[modeId].direction;
-        const sameDirectionModes = selectedModes.filter((id) => COMMERCIAL_PROPOSAL_PRICE_MODES[id].direction === direction);
-        if (sameDirectionModes.length >= 2) {
-          input.checked = false;
-          showToast(tr('selectUpToTwoTaxModes'));
-          return;
-        }
-        state.taxModes = [...sameDirectionModes, modeId];
+        state.taxModes = [...selectedModes, modeId];
       }
     }
     proposal.updatedAt = new Date().toISOString();
     saveCommercialProposalRecords();
     renderCommercialProposalWorkspace();
   }));
+  $('[data-proposal-custom-tax-enabled]', rootElement)?.addEventListener('change', (event) => {
+    state.customTax.enabled = Boolean(event.currentTarget.checked);
+    proposal.updatedAt = new Date().toISOString();
+    saveCommercialProposalRecords();
+    renderCommercialProposalWorkspace();
+  });
+  $$('[data-proposal-custom-tax-field]', rootElement).forEach((input) => {
+    const updateCustomTax = () => {
+      const field = input.dataset.proposalCustomTaxField;
+      if (field === 'name') state.customTax.name = String(input.value || '').trim().slice(0, 80);
+      if (field === 'rate') state.customTax.rate = Math.min(100, commercialProposalWorkspaceNumber(input.value));
+      proposal.updatedAt = new Date().toISOString();
+      saveCommercialProposalRecords();
+    };
+    input.addEventListener('input', updateCustomTax);
+    input.addEventListener('change', () => {
+      updateCustomTax();
+      renderCommercialProposalWorkspace();
+    });
+  });
   $$('[data-proposal-line-value]', rootElement).forEach((input) => {
     const updateValue = () => {
       const id = input.dataset.proposalLineValueId;
@@ -8598,10 +8638,10 @@ function renderCommercialProposalWorkspace() {
   $$('[data-commercial-proposal-action]', rootElement).forEach((button) => button.addEventListener('click', () => openCommercialProposalFragmentDialog(proposal.id, button.dataset.commercialProposalAction)));
 }
 
-function commercialProposalReportColumns(modeIds = [], groupId = '', rows = []) {
-  const selectedModeIds = normalizeCommercialProposalTaxModes(modeIds);
-  const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[selectedModeIds[0]]?.direction || 'none';
-  const combinedTaxLabel = commercialProposalCombinedTaxLabel(selectedModeIds);
+function commercialProposalReportColumns(modeIds = [], customTaxValue = null, groupId = '', rows = []) {
+  const selectedModeIds = commercialProposalTaxModeDefinitions(modeIds, customTaxValue).map((mode) => mode.id);
+  const direction = commercialProposalTaxModeDefinitions(modeIds, customTaxValue)[0]?.direction || 'none';
+  const combinedTaxLabel = commercialProposalCombinedTaxLabel(modeIds, customTaxValue);
   const moneyColumnWidth = (key) => {
     const priceCharacters = rows.reduce((maximum, row) => Math.max(maximum, new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(Math.abs(Number(row?.[key]) || 0)).length), 1);
     return Math.min(72, Math.max(38, Math.ceil(18 + priceCharacters * 2.8)));
@@ -8635,14 +8675,14 @@ function commercialProposalReportColumns(modeIds = [], groupId = '', rows = []) 
 
 function commercialProposalReportTable(proposal, fragment, entries) {
   const state = commercialProposalWorkspaceState(proposal);
-  const selectedModeIds = normalizeCommercialProposalTaxModes(state.taxModes);
-  const direction = COMMERCIAL_PROPOSAL_PRICE_MODES[selectedModeIds[0]]?.direction || 'none';
+  const selectedModeIds = commercialProposalActiveTaxModeIds(state);
+  const direction = commercialProposalTaxModeDefinitions(state.taxModes, state.customTax)[0]?.direction || 'none';
   const taxTotals = Object.fromEntries(selectedModeIds.map((modeId) => [modeId, 0]));
   let priceTotal = 0;
   let netTotal = 0;
   let grossTotal = 0;
   const rows = entries.map((entry, index) => {
-    const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, selectedModeIds);
+    const amounts = commercialProposalLineAmounts(entry.quantity, entry.price, state.taxModes, state.customTax);
     const taxValues = Object.fromEntries(selectedModeIds.map((modeId) => {
       const amount = commercialProposalTaxAmount(amounts, modeId);
       taxTotals[modeId] += amount;
@@ -8667,18 +8707,18 @@ function commercialProposalReportTable(proposal, fragment, entries) {
     };
   });
   const selectedModeLabel = selectedModeIds.length
-    ? selectedModeIds.map((modeId) => commercialProposalModeShortLabel(modeId)).join(' + ')
+    ? selectedModeIds.map((modeId) => commercialProposalModeShortLabel(modeId, state.customTax)).join(' + ')
     : tr(COMMERCIAL_PROPOSAL_PRICE_MODES.cash.label);
   const summaries = [
     `${tr('proposalPriceMode')}: ${selectedModeLabel}`,
     `${tr('totalWorkTypes')}: ${entries.length}`
   ];
-  selectedModeIds.forEach((modeId) => summaries.push(`${commercialProposalModeShortLabel(modeId)}: ${formatMoney(commercialProposalRoundMoney(taxTotals[modeId]))}`));
+  selectedModeIds.forEach((modeId) => summaries.push(`${commercialProposalModeShortLabel(modeId, state.customTax)}: ${formatMoney(commercialProposalRoundMoney(taxTotals[modeId]))}`));
   const totalLabel = direction === 'subtract' ? 'includedTotalWithoutTax' : direction === 'add' ? 'priceTotalWithTax' : 'totalProposalPrice';
   summaries.push(`${tr(totalLabel)}: ${formatMoney(commercialProposalRoundMoney(priceTotal))}`);
   return {
     title: tr(fragment.label),
-    columns: commercialProposalReportColumns(selectedModeIds, fragment.id, rows),
+    columns: commercialProposalReportColumns(state.taxModes, state.customTax, fragment.id, rows),
     rows,
     summaries,
     proposalTotals: {
@@ -8761,8 +8801,7 @@ function commercialProposalReport(proposal, fragmentIds) {
     result.positionCount += Number(tableTotals.positionCount) || 0;
     return result;
   }, { netTotal: 0, grossTotal: 0, taxTotal: 0, positionCount: 0 });
-  const selectedModeIds = normalizeCommercialProposalTaxModes(state.taxModes);
-  const taxLabel = commercialProposalCombinedTaxLabel(selectedModeIds) || tr('proposalTaxNotSelected');
+  const taxLabel = commercialProposalCombinedTaxLabel(state.taxModes, state.customTax) || tr('proposalTaxNotSelected');
   const withTaxLabel = tr('proposalSummaryPriceWithTax').replace('{tax}', taxLabel);
   const taxTotalLabel = tr('proposalSummaryTaxTotal').replace('{tax}', taxLabel);
   const senderSignature = [contacts.senderName, contacts.senderPhone].map((value) => String(value || '').trim()).filter(Boolean).join(', ') || '—';
@@ -9834,7 +9873,7 @@ function isDemoAccount() {
 async function pushRegistration() {
   const current = await navigator.serviceWorker.getRegistration();
   if (current) return current;
-  return navigator.serviceWorker.register('./sw.js?v=102', { updateViaCache: 'none' });
+  return navigator.serviceWorker.register('./sw.js?v=103', { updateViaCache: 'none' });
 }
 
 async function pushNotificationState() {
@@ -10523,4 +10562,4 @@ startActiveBonusAccrual();
 window.setTimeout(() => runLoginPrompts(dailyRewarded), window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1100 : 3750);
 if (pendingTransferImport?.intent === 'commercial-proposal' || location.hash === '#proposals') localStorage.removeItem(AUTH_RETURN_KEY);
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=102', { updateViaCache: 'none' }).catch(() => {}));
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=103', { updateViaCache: 'none' }).catch(() => {}));
