@@ -1433,11 +1433,15 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .proposal-custom-tax-field input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,119,255,.1); }
 .proposal-custom-tax-hint { color: var(--muted); font-size: 9px; line-height: 1.35; }
 .commercial-proposal-labor-settings { margin: 16px 0; padding: 13px; display: grid; gap: 12px; border: 1px solid rgba(47,184,255,.38); border-radius: 14px; background: linear-gradient(135deg,var(--surface-soft),color-mix(in srgb,var(--surface-soft) 94%,#0878e9)); }
-.commercial-proposal-labor-settings > header { display: grid; grid-template-columns: 38px minmax(0,1fr); align-items: center; gap: 10px; }
+.commercial-proposal-labor-settings > header { display: grid; grid-template-columns: 38px minmax(0,1fr) auto; align-items: center; gap: 10px; }
 .commercial-proposal-labor-settings > header > span { width: 38px; height: 38px; display: grid; place-items: center; color: var(--cyan); border: 1px solid var(--line-strong); border-radius: 11px; background: var(--surface); font-size: 16px; font-weight: 850; }
 .commercial-proposal-labor-settings h3,.commercial-proposal-labor-settings p { margin: 0; }
 .commercial-proposal-labor-settings h3 { font-size: 15px; }
 .commercial-proposal-labor-settings p { margin-top: 3px; color: var(--muted); font-size: 11px; line-height: 1.4; }
+.proposal-labor-source-button { min-height: 42px; white-space: nowrap; }
+.proposal-labor-source-button > span { color: var(--cyan); font-size: 17px; }
+.commercial-proposal-labor-settings .proposal-labor-selected-sources { margin: -3px 0 0 48px; display: flex; flex-wrap: wrap; align-items: center; gap: 5px 10px; color: var(--text); font-weight: 750; }
+.proposal-labor-selected-sources small { color: var(--muted); font-size: 10px; font-weight: 600; }
 .commercial-proposal-labor-settings > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)) minmax(180px,.75fr); gap: 8px; }
 .commercial-proposal-labor-settings label,.commercial-proposal-labor-settings output { min-width: 0; min-height: 70px; padding: 9px; display: grid; align-content: space-between; gap: 6px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); }
 .commercial-proposal-labor-settings label > span,.commercial-proposal-labor-settings output > span { color: var(--muted); font-size: 11px; font-weight: 700; }
@@ -1447,6 +1451,42 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .commercial-proposal-labor-settings label b { color: var(--muted); font-size: 12px; }
 .commercial-proposal-labor-settings output { border-color: rgba(47,209,164,.4); background: color-mix(in srgb,var(--surface) 92%,#13ae83); }
 .commercial-proposal-labor-settings output strong { color: #38d9a4; font-size: 18px; }
+.proposal-labor-source-picker { display: grid; gap: 8px; }
+.proposal-labor-source-option { min-height: 56px; padding: 9px 11px; display: grid; grid-template-columns: 24px minmax(0,1fr); align-items: center; gap: 9px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface-soft); cursor: pointer; }
+.proposal-labor-source-option input { position: absolute; opacity: 0; pointer-events: none; }
+.proposal-labor-source-option > span { width: 24px; height: 24px; display: grid; place-items: center; color: transparent; border: 1px solid var(--line-strong); border-radius: 7px; background: var(--surface); font-size: 13px; font-weight: 900; }
+.proposal-labor-source-option.is-active { border-color: rgba(47,184,255,.58); background: color-mix(in srgb,var(--surface-soft) 90%,#0878e9); }
+.proposal-labor-source-option.is-active > span { color: #fff; border-color: var(--blue); background: linear-gradient(135deg,var(--blue),var(--cyan)); }
+.proposal-labor-source-option strong,.proposal-labor-source-option small { display: block; }
+.proposal-labor-source-option strong { font-size: 13px; }
+.proposal-labor-source-option small { margin-top: 3px; color: var(--muted); font-size: 10px; font-weight: 650; }
+.commercial-proposal-labor-summary { margin-top: 14px; padding: 13px; display: grid; gap: 12px; border: 1px solid rgba(47,209,164,.38); border-radius: 14px; background: linear-gradient(145deg,var(--surface-soft),color-mix(in srgb,var(--surface-soft) 94%,#13ae83)); }
+.commercial-proposal-labor-summary > header { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
+.commercial-proposal-labor-summary > header > div { min-height: 78px; padding: 11px; display: grid; align-content: space-between; gap: 7px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); }
+.commercial-proposal-labor-summary small,.commercial-proposal-labor-summary label > span,.commercial-proposal-labor-summary output > span { color: var(--muted); font-size: 11px; font-weight: 700; }
+.commercial-proposal-labor-summary > header strong { color: #38d9a4; font-size: 19px; }
+.proposal-labor-people { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; }
+.proposal-labor-people > label,.proposal-labor-people > output { min-height: 74px; padding: 10px; display: grid; align-content: space-between; gap: 7px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); }
+.proposal-labor-people label > div { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 7px; }
+.proposal-labor-people input { width: 100%; min-width: 0; min-height: 38px; padding: 0 8px; color: var(--text); text-align: right; border: 1px solid var(--line); border-radius: 8px; outline: 0; background: var(--surface-soft); font: inherit; }
+.proposal-labor-people input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,119,255,.1); }
+.proposal-labor-people b { color: var(--muted); font-size: 12px; }
+.proposal-labor-people output { border-color: rgba(47,184,255,.4); }
+.proposal-labor-people output strong { color: var(--cyan); font-size: 18px; }
+.proposal-project-team { display: grid; gap: 8px; }
+.proposal-project-team h3 { margin: 0; font-size: 14px; }
+.proposal-project-team table { width: 100%; min-width: 620px; border-collapse: collapse; background: var(--surface); }
+.proposal-project-team th,.proposal-project-team td { padding: 8px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: left; font-size: 11px; }
+.proposal-project-team th { color: var(--muted); background: var(--surface-soft); font-size: 10px; }
+.proposal-project-team th:nth-child(2),.proposal-project-team td:nth-child(2) { width: 110px; }
+.proposal-project-team th:nth-child(3),.proposal-project-team td:nth-child(3) { width: 170px; }
+.proposal-project-team th:last-child,.proposal-project-team td:last-child { width: 160px; text-align: right; }
+.proposal-project-team .proposal-number-input { min-height: 36px; }
+.proposal-staff-money-input { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 6px; }
+.proposal-staff-money-input b { color: var(--muted); font-size: 12px; }
+.commercial-proposal-labor-summary > footer { min-height: 58px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid rgba(47,209,164,.42); border-radius: 11px; background: color-mix(in srgb,var(--surface) 91%,#13ae83); }
+.commercial-proposal-labor-summary > footer span { font-size: 13px; font-weight: 800; }
+.commercial-proposal-labor-summary > footer strong { color: #38d9a4; font-size: 22px; }
 .commercial-proposal-table-scroll { max-width: 100%; overflow-x: auto; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-soft); }
 .commercial-proposal-price-table { width: 100%; min-width: 930px; border-collapse: collapse; }
 .commercial-proposal-price-table.has-1-taxes { min-width: 1040px; }
@@ -2387,7 +2427,12 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
   .commercial-proposal-editor-body > header { align-items: stretch; flex-direction: column; }
   .commercial-proposal-editor-header-actions { justify-content: stretch; }
   .commercial-proposal-add-own,.commercial-proposal-save-my { flex: 1 1 220px; }
+  .commercial-proposal-labor-settings > header { grid-template-columns: 38px minmax(0,1fr); }
+  .proposal-labor-source-button { grid-column: 1/-1; width: 100%; }
+  .commercial-proposal-labor-settings .proposal-labor-selected-sources { margin-left: 0; }
   .commercial-proposal-labor-settings > div { grid-template-columns: 1fr; }
+  .commercial-proposal-labor-summary > header,.proposal-labor-people { grid-template-columns: 1fr; }
+  .commercial-proposal-labor-summary > footer { align-items: flex-start; flex-direction: column; }
   .commercial-proposal-fragment-list { grid-template-columns: 1fr; }
 }
 

@@ -712,6 +712,59 @@ Object.assign(copy.KY, { proposalCustomTax: 'Өз салыгыңыз', proposalC
 Object.assign(copy.TJ, { proposalCustomTax: 'Андози худ', proposalCustomTaxApply: 'Андози худро татбиқ кардан', proposalCustomTaxName: 'Номи андоз', proposalCustomTaxRate: 'Меъёр', proposalCustomTaxNamePlaceholder: 'Масалан: Андози минтақавӣ', proposalCustomTaxCombineHint: 'Метавонад ҳамзамон бо ҳар гуна андози интихобшуда истифода шавад.' });
 
 Object.assign(copy.RU, {
+  proposalToolsHint: 'Необходимый инструмент и расходники к нему, для производства работ, кол-во выставляется пользователем.',
+  proposalLaborHoursHint: 'Загрузите позиции из нужных разделов и укажите время работы по каждой позиции. Ниже StructOS рассчитает общее количество часов, срок и стоимость проекта.',
+  loadSpecification: 'Загрузить спецификацию', laborSourceDialogTitle: 'Загрузить спецификацию',
+  laborSourceDialogHint: 'Выберите, из каких разделов загрузить позиции для расчёта времени работы.',
+  loadSelectedPositions: 'Загрузить позиции', laborSourceSelectionRequired: 'Выберите хотя бы один раздел',
+  laborSourcesSelected: 'Выбрано источников: {count}', laborSpecificationLoaded: 'Позиции для расчёта загружены',
+  totalHoursShort: 'Итого часов', onePersonDuration: '1 человек', daysUnit: 'дн.', peopleUnit: 'чел.', staffRole: 'Должность',
+  laborWorkersCost: 'Стоимость работ', workersCount: 'Количество людей', projectDuration: 'Срок выполнения',
+  projectTeam: 'Управление проектом', foreman: 'Прораб', projectManager: 'Руководитель проекта',
+  staffQuantity: 'Количество', dailyRate: 'Стоимость дня', staffTotalCost: 'Стоимость за проект',
+  totalProjectCost: 'Стоимость всего проекта'
+});
+Object.assign(copy.EN, {
+  proposalToolsHint: 'Required tools and related consumables for carrying out the works. Quantities are entered by the user.',
+  proposalLaborHoursHint: 'Load lines from the required sections and enter the work time for each line. StructOS will calculate total hours, duration, and project cost below.',
+  loadSpecification: 'Load specification', laborSourceDialogTitle: 'Load specification',
+  laborSourceDialogHint: 'Choose the sections from which to load lines for work-time calculation.',
+  loadSelectedPositions: 'Load lines', laborSourceSelectionRequired: 'Select at least one section',
+  laborSourcesSelected: 'Sources selected: {count}', laborSpecificationLoaded: 'Calculation lines loaded',
+  totalHoursShort: 'Total hours', onePersonDuration: '1 person', daysUnit: 'days', peopleUnit: 'people', staffRole: 'Role',
+  laborWorkersCost: 'Work cost', workersCount: 'Number of people', projectDuration: 'Completion time',
+  projectTeam: 'Project management', foreman: 'Foreman', projectManager: 'Project manager',
+  staffQuantity: 'Quantity', dailyRate: 'Daily rate', staffTotalCost: 'Project cost',
+  totalProjectCost: 'Total project cost'
+});
+Object.assign(copy.KY, {
+  proposalToolsHint: 'Иштерди аткаруу үчүн керектүү аспаптар жана аларга сарпталуучу нерселер. Санды колдонуучу өзү көрсөтөт.',
+  proposalLaborHoursHint: 'Керектүү бөлүмдөрдөн позицияларды жүктөп, ар бирине жумуш убактысын көрсөтүңүз. StructOS жалпы саатты, мөөнөттү жана долбоордун наркын эсептейт.',
+  loadSpecification: 'Спецификацияны жүктөө', laborSourceDialogTitle: 'Спецификацияны жүктөө',
+  laborSourceDialogHint: 'Жумуш убактысын эсептөө үчүн позициялар кайсы бөлүмдөрдөн жүктөлөрүн тандаңыз.',
+  loadSelectedPositions: 'Позицияларды жүктөө', laborSourceSelectionRequired: 'Жок дегенде бир бөлүмдү тандаңыз',
+  laborSourcesSelected: 'Тандалган булактар: {count}', laborSpecificationLoaded: 'Эсептөө позициялары жүктөлдү',
+  totalHoursShort: 'Жалпы саат', onePersonDuration: '1 адам', daysUnit: 'күн', peopleUnit: 'адам', staffRole: 'Кызмат',
+  laborWorkersCost: 'Иштин наркы', workersCount: 'Адамдардын саны', projectDuration: 'Аткаруу мөөнөтү',
+  projectTeam: 'Долбоорду башкаруу', foreman: 'Прораб', projectManager: 'Долбоор жетекчиси',
+  staffQuantity: 'Саны', dailyRate: 'Бир күндүк баа', staffTotalCost: 'Долбоор үчүн нарк',
+  totalProjectCost: 'Долбоордун жалпы наркы'
+});
+Object.assign(copy.TJ, {
+  proposalToolsHint: 'Асбобҳои зарурӣ ва масрафшавандаҳои онҳо барои иҷрои кор. Миқдорро корбар ворид мекунад.',
+  proposalLaborHoursHint: 'Мавқеъҳоро аз бахшҳои лозим бор карда, вақти кори ҳар мавқеъро нишон диҳед. StructOS соатҳои умумӣ, муҳлат ва арзиши лоиҳаро ҳисоб мекунад.',
+  loadSpecification: 'Бор кардани мушаххасот', laborSourceDialogTitle: 'Бор кардани мушаххасот',
+  laborSourceDialogHint: 'Интихоб кунед, ки мавқеъҳо барои ҳисоби вақти кор аз кадом бахшҳо бор шаванд.',
+  loadSelectedPositions: 'Бор кардани мавқеъҳо', laborSourceSelectionRequired: 'Ақаллан як бахшро интихоб кунед',
+  laborSourcesSelected: 'Манбаъҳои интихобшуда: {count}', laborSpecificationLoaded: 'Мавқеъҳои ҳисоб бор шуданд',
+  totalHoursShort: 'Ҷамъи соатҳо', onePersonDuration: '1 нафар', daysUnit: 'рӯз', peopleUnit: 'нафар', staffRole: 'Вазифа',
+  laborWorkersCost: 'Арзиши кор', workersCount: 'Шумораи одамон', projectDuration: 'Муҳлати иҷро',
+  projectTeam: 'Идоракунии лоиҳа', foreman: 'Прораб', projectManager: 'Роҳбари лоиҳа',
+  staffQuantity: 'Миқдор', dailyRate: 'Арзиши як рӯз', staffTotalCost: 'Арзиши лоиҳа',
+  totalProjectCost: 'Арзиши умумии лоиҳа'
+});
+
+Object.assign(copy.RU, {
   proposalProjectGroupHint: 'Это все позиции спецификации и пропущенные позиции из спецификации, которые есть в проекте.',
   proposalAdditionalWorksHint: 'Работы, не отобразившиеся в проекте и спецификации, но которые, возможно, потребуются.',
   proposalAssociatedWorksHint: 'Работы, возможные для монтажа. Укажите, каким видам работ сопутствует каждая позиция.',
@@ -1649,6 +1702,14 @@ function normalizeCommercialProposalCustomTax(value) {
   };
 }
 
+const COMMERCIAL_PROPOSAL_LABOR_SOURCE_IDS = Object.freeze([
+  'specificationWorks',
+  'outsideSpecificationWorks',
+  'possibleWorks',
+  'associatedWorks',
+  'my'
+]);
+
 function normalizeCommercialProposalWorkspace(value) {
   const workspace = value && typeof value === 'object' ? value : {};
   const sourceGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'equipment', 'materials', 'possibleEquipment', 'possibleMaterials', 'toolsAndConsumables', 'consumableMaterials', 'laborHours']);
@@ -1672,6 +1733,9 @@ function normalizeCommercialProposalWorkspace(value) {
     const safeId = String(id || '').slice(0, 160);
     if (safeId) laborItemHours[safeId] = commercialProposalWorkspaceNumber(hours);
   });
+  const selectedLaborSources = Array.isArray(savedLaborSettings.sourceGroups)
+    ? COMMERCIAL_PROPOSAL_LABOR_SOURCE_IDS.filter((id) => savedLaborSettings.sourceGroups.includes(id))
+    : ['specificationWorks', 'my'];
   const normalizeWorkspaceItem = (item, allowMy = false) => {
     const id = String(item?.id || '').slice(0, 160);
     const name = String(item?.name || '').trim().slice(0, 240);
@@ -1709,6 +1773,12 @@ function normalizeCommercialProposalWorkspace(value) {
     laborSettings: {
       dailyCost: commercialProposalWorkspaceNumber(savedLaborSettings.dailyCost),
       workdayHours: commercialProposalWorkspaceNumber(savedLaborSettings.workdayHours),
+      sourceGroups: selectedLaborSources.length ? selectedLaborSources : ['specificationWorks'],
+      peopleCount: Math.max(1, Math.round(commercialProposalWorkspaceNumber(savedLaborSettings.peopleCount)) || 1),
+      foremanCount: Math.max(0, Math.round(commercialProposalWorkspaceNumber(savedLaborSettings.foremanCount))),
+      foremanDailyCost: commercialProposalWorkspaceNumber(savedLaborSettings.foremanDailyCost),
+      projectManagerCount: Math.max(0, Math.round(commercialProposalWorkspaceNumber(savedLaborSettings.projectManagerCount))),
+      projectManagerDailyCost: commercialProposalWorkspaceNumber(savedLaborSettings.projectManagerDailyCost),
       itemHours: laborItemHours
     }
   };
@@ -7838,7 +7908,15 @@ const COMMERCIAL_PROPOSAL_GROUPS = Object.freeze({
 const COMMERCIAL_PROPOSAL_RESULT_TABS = Object.freeze([
   { id: 'smr', label: 'proposalSmr', icon: '⚒', groups: ['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks'] },
   { id: 'materials', label: 'proposalMaterials', icon: '◇', groups: ['equipment', 'materials', 'possibleEquipment', 'possibleMaterials'] },
-  { id: 'required', label: 'proposalRequired', icon: '＋', groups: ['toolsAndConsumables', 'consumableMaterials', 'laborHours'] }
+  { id: 'required', label: 'proposalRequired', icon: '＋', groups: ['toolsAndConsumables', 'laborHours'] }
+]);
+
+const COMMERCIAL_PROPOSAL_LABOR_SOURCE_OPTIONS = Object.freeze([
+  { id: 'specificationWorks', label: 'proposalBySpecificationShort' },
+  { id: 'outsideSpecificationWorks', label: 'proposalByProjectShort' },
+  { id: 'possibleWorks', label: 'proposalAdditionalWorksShort' },
+  { id: 'associatedWorks', label: 'proposalAssociatedShort' },
+  { id: 'my', label: 'myCommercialProposal' }
 ]);
 
 const COMMERCIAL_PROPOSAL_EDITOR_COLUMNS = Object.freeze([
@@ -7866,7 +7944,6 @@ const COMMERCIAL_PROPOSAL_EDITOR_COLUMNS = Object.freeze([
     id: 'expenses', label: 'proposalOtherExpenses', icon: '＋',
     groups: [
       { id: 'toolsAndConsumables', label: 'toolsAndConsumables' },
-      { id: 'consumableMaterials', label: 'consumableMaterials' },
       { id: 'laborHours', label: 'laborHourCosts' }
     ]
   }
@@ -7941,6 +8018,8 @@ function commercialProposalBreakdown(version, kind = 'project') {
     claimedEntries.add(entryKey);
   });
   Object.keys(groups).forEach((groupKey) => { groups[groupKey] = mergeProjectEstimateItems(groups[groupKey]); });
+  groups.toolsAndConsumables = mergeProjectEstimateItems([...(groups.toolsAndConsumables || []), ...(groups.consumableMaterials || [])]);
+  groups.consumableMaterials = [];
   return groups;
 }
 
@@ -7985,7 +8064,8 @@ function isCommercialProposalMyGroup(groupId) {
 }
 
 function commercialProposalWorkspaceState(proposal) {
-  if (!proposal.workspace || typeof proposal.workspace !== 'object' || !proposal.workspace.itemValues || !Array.isArray(proposal.workspace.customItems) || !Array.isArray(proposal.workspace.myItems) || !proposal.workspace.customTax || !proposal.workspace.contacts || !proposal.workspace.laborSettings || typeof proposal.workspace.laborSettings.itemHours !== 'object') {
+  const laborSettings = proposal.workspace?.laborSettings;
+  if (!proposal.workspace || typeof proposal.workspace !== 'object' || !proposal.workspace.itemValues || !Array.isArray(proposal.workspace.customItems) || !Array.isArray(proposal.workspace.myItems) || !proposal.workspace.customTax || !proposal.workspace.contacts || !laborSettings || typeof laborSettings.itemHours !== 'object' || !Array.isArray(laborSettings.sourceGroups) || !Number.isFinite(Number(laborSettings.peopleCount)) || !Number.isFinite(Number(laborSettings.foremanCount)) || !Number.isFinite(Number(laborSettings.foremanDailyCost)) || !Number.isFinite(Number(laborSettings.projectManagerCount)) || !Number.isFinite(Number(laborSettings.projectManagerDailyCost))) {
     proposal.workspace = normalizeCommercialProposalWorkspace(proposal.workspace);
   }
   return proposal.workspace;
@@ -8022,6 +8102,19 @@ function commercialProposalEntryWithState(entry, id, sourceGroup, state) {
   };
 }
 
+function commercialProposalLaborEntriesForSource(proposal, sourceId, sourceGroups, state) {
+  if (sourceId === 'my') {
+    const workGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'my']);
+    return state.myItems
+      .filter((entry) => workGroups.has(entry.sourceGroup))
+      .map((entry) => commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state));
+  }
+  return [
+    ...(sourceGroups[sourceId] || []).map((entry, index) => commercialProposalEntryWithState(entry, commercialProposalLineId(sourceId, entry, index), sourceId, state)),
+    ...state.customItems.filter((entry) => entry.sourceGroup === sourceId).map((entry) => commercialProposalEntryWithState(entry, entry.id, sourceId, state))
+  ];
+}
+
 function commercialProposalEntriesForGroup(proposal, groupId, groups = null) {
   const state = commercialProposalWorkspaceState(proposal);
   if (groupId === 'my') {
@@ -8033,15 +8126,32 @@ function commercialProposalEntriesForGroup(proposal, groupId, groups = null) {
     return state.myItems.filter((entry) => materialGroups.has(entry.sourceGroup)).map((entry) => commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state));
   }
   if (groupId === 'laborHours') {
-    const workGroups = new Set(['specificationWorks', 'outsideSpecificationWorks', 'possibleWorks', 'associatedWorks', 'my']);
-    const myWorkEntries = state.myItems.filter((entry) => workGroups.has(entry.sourceGroup)).map((entry) => ({ ...commercialProposalEntryWithState(entry, entry.id, entry.sourceGroup, state), laborOrigin: 'my' }));
     const sourceGroups = groups || commercialProposalBreakdown(latestDocumentVersion(proposal.file), proposal.kind);
-    const specificationEntries = commercialProposalEntriesForGroup(proposal, 'specificationWorks', sourceGroups).map((entry) => ({ ...entry, laborOrigin: 'specification' }));
-    const knownIds = new Set(specificationEntries.map((entry) => entry.id));
-    const knownLines = new Set(specificationEntries.map((entry) => `${cashSourceKey(entry.name)}\u0000${cashSourceKey(entry.unit)}`));
-    const uniqueMyWorkEntries = myWorkEntries.filter((entry) => !knownIds.has(entry.id) && !knownLines.has(`${cashSourceKey(entry.name)}\u0000${cashSourceKey(entry.unit)}`));
+    const selectedSources = COMMERCIAL_PROPOSAL_LABOR_SOURCE_IDS.filter((id) => state.laborSettings.sourceGroups.includes(id));
+    const combinedEntries = [];
+    const knownIds = new Set();
+    const knownLines = new Set();
+    selectedSources.forEach((sourceId) => {
+      const sourceEntries = commercialProposalLaborEntriesForSource(proposal, sourceId, sourceGroups, state);
+      sourceEntries.forEach((entry) => {
+        const lineKey = `${cashSourceKey(entry.name)}\u0000${cashSourceKey(entry.unit)}`;
+        if (knownIds.has(entry.id) || knownLines.has(lineKey)) return;
+        knownIds.add(entry.id);
+        knownLines.add(lineKey);
+        combinedEntries.push({ ...entry, laborOrigin: sourceId });
+      });
+    });
     const customLaborEntries = state.customItems.filter((entry) => entry.sourceGroup === groupId).map((entry) => ({ ...commercialProposalEntryWithState(entry, entry.id, groupId, state), laborOrigin: 'custom' }));
-    return [...specificationEntries, ...uniqueMyWorkEntries, ...customLaborEntries];
+    return [...combinedEntries, ...customLaborEntries];
+  }
+  if (groupId === 'toolsAndConsumables') {
+    const sourceGroups = groups || commercialProposalBreakdown(latestDocumentVersion(proposal.file), proposal.kind);
+    const extractedEntries = mergeProjectEstimateItems([...(sourceGroups.toolsAndConsumables || []), ...(sourceGroups.consumableMaterials || [])])
+      .map((entry, index) => commercialProposalEntryWithState(entry, commercialProposalLineId(groupId, entry, index), groupId, state));
+    const customEntries = state.customItems
+      .filter((entry) => entry.sourceGroup === groupId || entry.sourceGroup === 'consumableMaterials')
+      .map((entry) => commercialProposalEntryWithState(entry, entry.id, groupId, state));
+    return [...extractedEntries, ...customEntries];
   }
   const sourceGroups = groups || commercialProposalBreakdown(latestDocumentVersion(proposal.file), proposal.kind);
   if (groupId === 'outsideSpecificationWorks') {
@@ -8267,6 +8377,30 @@ function commercialProposalLaborHourlyRate(state) {
   return settings.workdayHours > 0 ? commercialProposalRoundMoney(settings.dailyCost / settings.workdayHours) : 0;
 }
 
+function commercialProposalLaborSourceLabel(sourceId) {
+  const option = COMMERCIAL_PROPOSAL_LABOR_SOURCE_OPTIONS.find((item) => item.id === sourceId);
+  return option ? tr(option.label) : tr('identifiedByAnalysis');
+}
+
+function commercialProposalLaborPlanningTotals(state, totalHours, workerCost) {
+  const settings = state.laborSettings;
+  const workdayHours = commercialProposalWorkspaceNumber(settings.workdayHours);
+  const peopleCount = Math.max(1, Math.round(commercialProposalWorkspaceNumber(settings.peopleCount)) || 1);
+  const onePersonDays = workdayHours > 0 ? totalHours / workdayHours : 0;
+  const durationDays = onePersonDays / peopleCount;
+  const foremanCost = durationDays * Math.max(0, Math.round(commercialProposalWorkspaceNumber(settings.foremanCount))) * commercialProposalWorkspaceNumber(settings.foremanDailyCost);
+  const projectManagerCost = durationDays * Math.max(0, Math.round(commercialProposalWorkspaceNumber(settings.projectManagerCount))) * commercialProposalWorkspaceNumber(settings.projectManagerDailyCost);
+  return {
+    peopleCount,
+    onePersonDays: commercialProposalRoundMoney(onePersonDays),
+    durationDays: commercialProposalRoundMoney(durationDays),
+    workerCost: commercialProposalRoundMoney(workerCost),
+    foremanCost: commercialProposalRoundMoney(foremanCost),
+    projectManagerCost: commercialProposalRoundMoney(projectManagerCost),
+    projectTotal: commercialProposalRoundMoney(workerCost + foremanCost + projectManagerCost)
+  };
+}
+
 function commercialProposalLaborLineAmounts(entry, state) {
   const quantity = commercialProposalWorkspaceNumber(entry.quantity);
   const workHours = commercialProposalWorkspaceNumber(state.laborSettings.itemHours[entry.id]);
@@ -8278,7 +8412,8 @@ function commercialProposalLaborLineAmounts(entry, state) {
 
 function commercialProposalLaborSettingsMarkup(state) {
   const settings = state.laborSettings;
-  return `<section class="commercial-proposal-labor-settings"><header><span aria-hidden="true">H</span><div><h3>${escapeHtml(tr('laborCalculationTitle'))}</h3><p>${escapeHtml(tr('laborCalculationFormula'))}</p></div></header><div><label><span>${escapeHtml(tr('employeeDailyCost'))}</span><div><input type="number" min="0" step="0.01" inputmode="decimal" value="${settings.dailyCost ? escapeHtml(String(settings.dailyCost)) : ''}" placeholder="0" data-proposal-labor-setting="dailyCost" /><b>₽</b></div></label><label><span>${escapeHtml(tr('workingHoursPerDay'))}</span><div><input type="number" min="0" step="0.01" inputmode="decimal" value="${settings.workdayHours ? escapeHtml(String(settings.workdayHours)) : ''}" placeholder="0" data-proposal-labor-setting="workdayHours" /><b>${escapeHtml(tr('hoursUnit'))}</b></div></label><output><span>${escapeHtml(tr('hourlyEmployeeCost'))}</span><strong data-proposal-labor-hourly-rate>${escapeHtml(formatMoney(commercialProposalLaborHourlyRate(state)))}</strong></output></div></section>`;
+  const sourceNames = settings.sourceGroups.map((id) => commercialProposalLaborSourceLabel(id)).join(' · ');
+  return `<section class="commercial-proposal-labor-settings"><header><span aria-hidden="true">H</span><div><h3>${escapeHtml(tr('laborCalculationTitle'))}</h3><p>${escapeHtml(tr('laborCalculationFormula'))}</p></div><button class="outline-button proposal-labor-source-button" type="button" data-load-labor-specification><span aria-hidden="true">↑</span>${escapeHtml(tr('loadSpecification'))}</button></header><p class="proposal-labor-selected-sources">${escapeHtml(tr('laborSourcesSelected').replace('{count}', String(settings.sourceGroups.length)))}<small>${escapeHtml(sourceNames)}</small></p><div class="proposal-labor-rate-grid"><label><span>${escapeHtml(tr('employeeDailyCost'))}</span><div><input type="number" min="0" step="0.01" inputmode="decimal" value="${settings.dailyCost ? escapeHtml(String(settings.dailyCost)) : ''}" placeholder="0" data-proposal-labor-setting="dailyCost" /><b>₽</b></div></label><label><span>${escapeHtml(tr('workingHoursPerDay'))}</span><div><input type="number" min="0" step="0.01" inputmode="decimal" value="${settings.workdayHours ? escapeHtml(String(settings.workdayHours)) : ''}" placeholder="0" data-proposal-labor-setting="workdayHours" /><b>${escapeHtml(tr('hoursUnit'))}</b></div></label><output><span>${escapeHtml(tr('hourlyEmployeeCost'))}</span><strong data-proposal-labor-hourly-rate>${escapeHtml(formatMoney(commercialProposalLaborHourlyRate(state)))}</strong></output></div></section>`;
 }
 
 function commercialProposalLaborTableMarkup(proposal, entries) {
@@ -8288,9 +8423,7 @@ function commercialProposalLaborTableMarkup(proposal, entries) {
   }
   const rows = entries.map((entry, index) => {
     const amounts = commercialProposalLaborLineAmounts(entry, state);
-    const source = entry.laborOrigin === 'custom'
-      ? tr('ownProposalPosition')
-      : entry.laborOrigin === 'specification' ? tr('laborWorksFromSpecification') : tr('laborWorksFromMyProposal');
+    const source = entry.laborOrigin === 'custom' ? tr('ownProposalPosition') : commercialProposalLaborSourceLabel(entry.laborOrigin);
     const remove = entry.laborOrigin === 'custom' ? `<button class="proposal-labor-remove" type="button" data-remove-proposal-custom-item="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('deleteOwnProposalPosition'))}" title="${escapeHtml(tr('deleteOwnProposalPosition'))}">×</button>` : '';
     return `<tr data-proposal-labor-row data-proposal-line-id="${escapeHtml(entry.id)}"><td class="proposal-line-number">${index + 1}</td><td class="proposal-line-name"><div class="proposal-labor-name"><span><strong>${escapeHtml(entry.name)}</strong><small>${escapeHtml(source)}</small></span>${remove}</div></td><td class="proposal-line-unit">${escapeHtml(entry.unit || '—')}</td><td class="proposal-labor-quantity proposal-line-quantity">${amounts.quantity ? escapeHtml(new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(amounts.quantity)) : '—'}</td><td class="proposal-labor-hours"><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${amounts.workHours ? escapeHtml(String(amounts.workHours)) : ''}" placeholder="0" data-proposal-labor-work-hours="${escapeHtml(entry.id)}" aria-label="${escapeHtml(tr('workHours'))}" /></td><td class="is-money" data-proposal-price-column-index="0" data-proposal-labor-row-rate>${escapeHtml(formatMoney(amounts.hourlyRate))}</td><td class="is-money is-total" data-proposal-price-column-index="1" data-proposal-labor-row-total>${escapeHtml(formatMoney(amounts.total))}</td></tr>`;
   }).join('');
@@ -8304,7 +8437,45 @@ function commercialProposalLaborTableMarkup(proposal, entries) {
   const laborFixedWidth = 38 + 58 + 68 + 68 + 320;
   const laborTableMinWidth = laborFixedWidth + laborPriceWidths.reduce((total, width) => total + width, 0);
   const laborColumnLayout = `<colgroup><col style="width:38px" /><col /><col style="width:58px" /><col style="width:68px" /><col style="width:68px" />${laborPriceWidths.map((width, index) => `<col data-proposal-price-column="${index}" style="width:${width}px" />`).join('')}</colgroup>`;
-  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table commercial-proposal-labor-table is-compact-proposal-table" data-proposal-compact-table data-proposal-fixed-width="${laborFixedWidth}" style="--proposal-table-min-width:${laborTableMinWidth}px">${laborColumnLayout}<thead><tr><th class="proposal-line-number">№</th><th class="proposal-line-name-head">${escapeHtml(tr('laborWorkName'))}</th><th class="proposal-line-unit-head">${escapeHtml(tr('proposalUnitShort'))}</th><th class="proposal-line-quantity-head">${escapeHtml(tr('proposalQuantityShort'))}</th><th>${escapeHtml(tr('workHours'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('hourlyEmployeeCost'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('totalLaborCost'))}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="7"><span>${escapeHtml(tr('totalWorkTypes'))}: <b>${entries.length}</b></span><span>${escapeHtml(tr('totalManHours'))}: <b data-proposal-labor-total-hours>${escapeHtml(new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(totalHours))}</b></span><span>${escapeHtml(tr('totalLaborCost'))}: <b data-proposal-labor-grand-total>${escapeHtml(formatMoney(commercialProposalRoundMoney(totalCost)))}</b></span></td></tr></tfoot></table></div>`;
+  return `<div class="commercial-proposal-table-scroll"><table class="commercial-proposal-price-table commercial-proposal-labor-table is-compact-proposal-table" data-proposal-compact-table data-proposal-fixed-width="${laborFixedWidth}" style="--proposal-table-min-width:${laborTableMinWidth}px">${laborColumnLayout}<thead><tr><th class="proposal-line-number">№</th><th class="proposal-line-name-head">${escapeHtml(tr('laborWorkName'))}</th><th class="proposal-line-unit-head">${escapeHtml(tr('proposalUnitShort'))}</th><th class="proposal-line-quantity-head">${escapeHtml(tr('proposalQuantityShort'))}</th><th>${escapeHtml(tr('workHours'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('hourlyEmployeeCost'))}</th><th class="proposal-price-column-head">${escapeHtml(tr('totalLaborCost'))}</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="7"><span>${escapeHtml(tr('totalWorkTypes'))}: <b>${entries.length}</b></span><span>${escapeHtml(tr('totalManHours'))}: <b data-proposal-labor-total-hours>${escapeHtml(new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(totalHours))}</b></span><span>${escapeHtml(tr('laborWorkersCost'))}: <b data-proposal-labor-worker-cost>${escapeHtml(formatMoney(commercialProposalRoundMoney(totalCost)))}</b></span></td></tr></tfoot></table></div>`;
+}
+
+function commercialProposalLaborSummaryMarkup(proposal, entries) {
+  const state = commercialProposalWorkspaceState(proposal);
+  const settings = state.laborSettings;
+  const totalHours = entries.reduce((total, entry) => total + commercialProposalLaborLineAmounts(entry, state).totalHours, 0);
+  const workerCost = entries.reduce((total, entry) => total + commercialProposalLaborLineAmounts(entry, state).total, 0);
+  const totals = commercialProposalLaborPlanningTotals(state, totalHours, workerCost);
+  const formatNumber = (value) => new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(commercialProposalRoundMoney(value));
+  const staffRow = (roleKey, countKey, dailyCostKey, totalData, totalValue) => `<tr><td><strong>${escapeHtml(tr(roleKey))}</strong></td><td><input class="proposal-number-input" type="number" min="0" step="1" inputmode="numeric" value="${settings[countKey] ? escapeHtml(String(settings[countKey])) : ''}" placeholder="0" data-proposal-labor-setting="${countKey}" aria-label="${escapeHtml(`${tr(roleKey)}: ${tr('staffQuantity')}`)}" /></td><td><div class="proposal-staff-money-input"><input class="proposal-number-input" type="number" min="0" step="0.01" inputmode="decimal" value="${settings[dailyCostKey] ? escapeHtml(String(settings[dailyCostKey])) : ''}" placeholder="0" data-proposal-labor-setting="${dailyCostKey}" aria-label="${escapeHtml(`${tr(roleKey)}: ${tr('dailyRate')}`)}" /><b>₽</b></div></td><td><strong data-${totalData}>${escapeHtml(formatMoney(totalValue))}</strong></td></tr>`;
+  return `<section class="commercial-proposal-labor-summary"><header><div><small>${escapeHtml(tr('totalHoursShort'))}</small><strong data-proposal-labor-total-hours>${escapeHtml(formatNumber(totalHours))} ${escapeHtml(tr('hoursUnit'))}</strong></div><div><small>${escapeHtml(tr('onePersonDuration'))}</small><strong data-proposal-labor-one-person-days>${escapeHtml(formatNumber(totals.onePersonDays))} ${escapeHtml(tr('daysUnit'))}</strong></div><div><small>${escapeHtml(tr('laborWorkersCost'))}</small><strong data-proposal-labor-worker-cost>${escapeHtml(formatMoney(totals.workerCost))}</strong></div></header><div class="proposal-labor-people"><label><span>${escapeHtml(tr('workersCount'))}</span><div><input type="number" min="1" step="1" inputmode="numeric" value="${escapeHtml(String(totals.peopleCount))}" data-proposal-labor-setting="peopleCount" /><b>${escapeHtml(tr('peopleUnit'))}</b></div></label><output><span>${escapeHtml(tr('projectDuration'))}</span><strong data-proposal-labor-duration-days>${escapeHtml(formatNumber(totals.durationDays))} ${escapeHtml(tr('daysUnit'))}</strong></output></div><section class="proposal-project-team"><h3>${escapeHtml(tr('projectTeam'))}</h3><div class="commercial-proposal-table-scroll"><table><thead><tr><th>${escapeHtml(tr('staffRole'))}</th><th>${escapeHtml(tr('staffQuantity'))}</th><th>${escapeHtml(tr('dailyRate'))}</th><th>${escapeHtml(tr('staffTotalCost'))}</th></tr></thead><tbody>${staffRow('foreman', 'foremanCount', 'foremanDailyCost', 'proposal-labor-foreman-cost', totals.foremanCost)}${staffRow('projectManager', 'projectManagerCount', 'projectManagerDailyCost', 'proposal-labor-project-manager-cost', totals.projectManagerCost)}</tbody></table></div></section><footer><span>${escapeHtml(tr('totalProjectCost'))}</span><strong data-proposal-labor-project-total>${escapeHtml(formatMoney(totals.projectTotal))}</strong></footer></section>`;
+}
+
+function openCommercialProposalLaborSourceDialog(proposal) {
+  const state = commercialProposalWorkspaceState(proposal);
+  const groups = commercialProposalBreakdown(latestDocumentVersion(proposal.file), proposal.kind);
+  const options = COMMERCIAL_PROPOSAL_LABOR_SOURCE_OPTIONS.map((option) => {
+    const count = commercialProposalLaborEntriesForSource(proposal, option.id, groups, state).length;
+    const checked = state.laborSettings.sourceGroups.includes(option.id);
+    return `<label class="proposal-labor-source-option${checked ? ' is-active' : ''}"><input type="checkbox" value="${option.id}" data-proposal-labor-source${checked ? ' checked' : ''} /><span aria-hidden="true">✓</span><strong>${escapeHtml(tr(option.label))}<small>${count} · ${escapeHtml(tr('proposalFragmentPositions'))}</small></strong></label>`;
+  }).join('');
+  showDialog(escapeHtml(tr('laborSourceDialogTitle')), escapeHtml(tr('laborSourceDialogHint')), `<div class="proposal-labor-source-picker">${options}</div><div class="result-actions"><button class="outline-button" type="button" data-cancel-labor-source>${escapeHtml(tr('cancel'))}</button><button class="primary-button" type="button" data-save-labor-source>${escapeHtml(tr('loadSelectedPositions'))}</button></div>`);
+  const scope = $('[data-dialog-content]');
+  $$('[data-proposal-labor-source]', scope).forEach((input) => input.addEventListener('change', () => input.closest('.proposal-labor-source-option')?.classList.toggle('is-active', input.checked)));
+  $('[data-cancel-labor-source]', scope)?.addEventListener('click', () => $('[data-dialog]')?.close());
+  $('[data-save-labor-source]', scope)?.addEventListener('click', () => {
+    const selected = COMMERCIAL_PROPOSAL_LABOR_SOURCE_IDS.filter((id) => $(`[data-proposal-labor-source][value="${id}"]`, scope)?.checked);
+    if (!selected.length) {
+      showToast(tr('laborSourceSelectionRequired'));
+      return;
+    }
+    state.laborSettings.sourceGroups = selected;
+    proposal.updatedAt = new Date().toISOString();
+    saveCommercialProposalRecords();
+    $('[data-dialog]')?.close();
+    renderCommercialProposalWorkspace();
+    showToast(tr('laborSpecificationLoaded'));
+  });
 }
 
 function commercialProposalColumnsMarkup(proposal, groups) {
@@ -8374,12 +8545,22 @@ function updateCommercialProposalLaborCalculations(scope, proposal) {
     totalHours += amounts.totalHours;
     totalCost += amounts.total;
   });
+  const totals = commercialProposalLaborPlanningTotals(state, totalHours, totalCost);
+  const formatNumber = (value) => new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(commercialProposalRoundMoney(value));
   const hourlyRateOutput = $('[data-proposal-labor-hourly-rate]', scope);
-  const totalHoursOutput = $('[data-proposal-labor-total-hours]', scope);
-  const totalCostOutput = $('[data-proposal-labor-grand-total]', scope);
   if (hourlyRateOutput) hourlyRateOutput.textContent = formatMoney(hourlyRate);
-  if (totalHoursOutput) totalHoursOutput.textContent = new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 }).format(commercialProposalRoundMoney(totalHours));
-  if (totalCostOutput) totalCostOutput.textContent = formatMoney(commercialProposalRoundMoney(totalCost));
+  $$('[data-proposal-labor-total-hours]', scope).forEach((output) => { output.textContent = `${formatNumber(totalHours)}${output.closest('.commercial-proposal-labor-summary') ? ` ${tr('hoursUnit')}` : ''}`; });
+  $$('[data-proposal-labor-worker-cost]', scope).forEach((output) => { output.textContent = formatMoney(totals.workerCost); });
+  const onePersonDaysOutput = $('[data-proposal-labor-one-person-days]', scope);
+  const durationDaysOutput = $('[data-proposal-labor-duration-days]', scope);
+  const foremanCostOutput = $('[data-proposal-labor-foreman-cost]', scope);
+  const projectManagerCostOutput = $('[data-proposal-labor-project-manager-cost]', scope);
+  const projectTotalOutput = $('[data-proposal-labor-project-total]', scope);
+  if (onePersonDaysOutput) onePersonDaysOutput.textContent = `${formatNumber(totals.onePersonDays)} ${tr('daysUnit')}`;
+  if (durationDaysOutput) durationDaysOutput.textContent = `${formatNumber(totals.durationDays)} ${tr('daysUnit')}`;
+  if (foremanCostOutput) foremanCostOutput.textContent = formatMoney(totals.foremanCost);
+  if (projectManagerCostOutput) projectManagerCostOutput.textContent = formatMoney(totals.projectManagerCost);
+  if (projectTotalOutput) projectTotalOutput.textContent = formatMoney(totals.projectTotal);
   $$('[data-proposal-compact-table]', scope).forEach((table) => commercialProposalRefreshRenderedPriceColumns(table));
 }
 
@@ -8502,7 +8683,7 @@ function renderCommercialProposalWorkspace() {
   const saveSelection = isCommercialProposalMyGroup(activeCommercialProposalGroup) || isLaborHours ? '' : `<button class="primary-button commercial-proposal-save-my" type="button" data-save-commercial-proposal-my${entries.length ? '' : ' disabled'}>✓ ${escapeHtml(tr('saveMyProposalSelection'))}</button>`;
   const positionActions = `<div class="commercial-proposal-editor-header-actions"><button class="outline-button commercial-proposal-add-own" type="button" data-add-own-proposal-position>+ ${escapeHtml(tr('addOwnProposalPosition'))}</button>${saveSelection}</div>`;
   const tableWorkspace = isLaborHours
-    ? `${commercialProposalGroupHintMarkup(activeCommercialProposalGroup)}${commercialProposalLaborSettingsMarkup(state)}${commercialProposalLaborTableMarkup(proposal, entries)}`
+    ? `${commercialProposalGroupHintMarkup(activeCommercialProposalGroup)}${commercialProposalLaborSettingsMarkup(state)}${commercialProposalLaborTableMarkup(proposal, entries)}${commercialProposalLaborSummaryMarkup(proposal, entries)}`
     : `${commercialProposalGroupHintMarkup(activeCommercialProposalGroup)}${commercialProposalPriceModeMarkup(state)}${commercialProposalTableMarkup(proposal, activeCommercialProposalGroup, entries)}`;
   rootElement.innerHTML = `<section class="commercial-proposal-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-back-to-commercial-proposals>← ${escapeHtml(tr('backToProposalList'))}</button><div><span aria-hidden="true">₽</span><div><small>${escapeHtml(proposal.sectionName)}</small><h1>${escapeHtml(proposal.objectName)}</h1><p>${escapeHtml(sourceLabel)} · ${escapeHtml(version.name)}</p></div></div><b>${escapeHtml(tr('proposalReady'))}</b></header><div class="analysis-truth-note commercial-proposal-editor-note"><span>i</span><p>${escapeHtml(tr('proposalWorkspacePageHint'))}</p></div>${commercialProposalContactsMarkup(state)}${commercialProposalColumnsMarkup(proposal, groups)}<section class="commercial-proposal-editor-body"><header><div><small>${escapeHtml(tr(groupConfig.columnLabel))}</small><h2>${escapeHtml(tr(groupConfig.label))}</h2><p>${entries.length} · ${escapeHtml(tr('proposalFragmentPositions'))}</p></div>${positionActions}</header>${tableWorkspace}<footer class="commercial-proposal-editor-actions"><button class="primary-button" type="button" data-commercial-proposal-action="download"><span aria-hidden="true">↓</span>${escapeHtml(tr('downloadProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="view"><span aria-hidden="true">◉</span>${escapeHtml(tr('viewProposal'))}</button><button class="outline-button" type="button" data-commercial-proposal-action="share"><span aria-hidden="true">↗</span>${escapeHtml(tr('shareProposal'))}</button></footer></section></section>`;
   $('[data-back-to-commercial-proposals]', rootElement)?.addEventListener('click', () => setPanel('proposals'));
@@ -8601,7 +8782,11 @@ function renderCommercialProposalWorkspace() {
   });
   $$('[data-proposal-labor-setting]', rootElement).forEach((input) => {
     const updateValue = () => {
-      state.laborSettings[input.dataset.proposalLaborSetting] = commercialProposalWorkspaceNumber(input.value);
+      const field = input.dataset.proposalLaborSetting;
+      const value = commercialProposalWorkspaceNumber(input.value);
+      state.laborSettings[field] = field === 'peopleCount'
+        ? Math.max(1, Math.round(value) || 1)
+        : field === 'foremanCount' || field === 'projectManagerCount' ? Math.max(0, Math.round(value)) : value;
       updateCommercialProposalLaborCalculations(rootElement, proposal);
     };
     input.addEventListener('input', updateValue);
@@ -8611,6 +8796,7 @@ function renderCommercialProposalWorkspace() {
       saveCommercialProposalRecords();
     });
   });
+  $('[data-load-labor-specification]', rootElement)?.addEventListener('click', () => openCommercialProposalLaborSourceDialog(proposal));
   $$('[data-proposal-labor-work-hours]', rootElement).forEach((input) => {
     const updateValue = () => {
       state.laborSettings.itemHours[input.dataset.proposalLaborWorkHours] = commercialProposalWorkspaceNumber(input.value);
@@ -8749,6 +8935,7 @@ function commercialProposalLaborReportTable(proposal, fragment, entries) {
     };
   });
   const numberFormat = new Intl.NumberFormat(root.lang || 'ru-RU', { maximumFractionDigits: 2 });
+  const totals = commercialProposalLaborPlanningTotals(state, totalHours, totalCost);
   return {
     title: tr(fragment.label),
     columns: [
@@ -8767,11 +8954,17 @@ function commercialProposalLaborReportTable(proposal, fragment, entries) {
       `${tr('hourlyEmployeeCost')}: ${formatMoney(commercialProposalLaborHourlyRate(state))}`,
       `${tr('totalWorkTypes')}: ${entries.length}`,
       `${tr('totalManHours')}: ${numberFormat.format(commercialProposalRoundMoney(totalHours))}`,
-      `${tr('totalLaborCost')}: ${formatMoney(commercialProposalRoundMoney(totalCost))}`
+      `${tr('onePersonDuration')}: ${numberFormat.format(totals.onePersonDays)} ${tr('daysUnit')}`,
+      `${tr('workersCount')}: ${totals.peopleCount}`,
+      `${tr('projectDuration')}: ${numberFormat.format(totals.durationDays)} ${tr('daysUnit')}`,
+      `${tr('laborWorkersCost')}: ${formatMoney(totals.workerCost)}`,
+      `${tr('foreman')}: ${state.laborSettings.foremanCount} × ${formatMoney(state.laborSettings.foremanDailyCost)} / ${tr('daysUnit')} = ${formatMoney(totals.foremanCost)}`,
+      `${tr('projectManager')}: ${state.laborSettings.projectManagerCount} × ${formatMoney(state.laborSettings.projectManagerDailyCost)} / ${tr('daysUnit')} = ${formatMoney(totals.projectManagerCost)}`,
+      `${tr('totalProjectCost')}: ${formatMoney(totals.projectTotal)}`
     ],
     proposalTotals: {
-      netTotal: commercialProposalRoundMoney(totalCost),
-      grossTotal: commercialProposalRoundMoney(totalCost),
+      netTotal: totals.projectTotal,
+      grossTotal: totals.projectTotal,
       taxTotal: 0,
       positionCount: entries.length
     }
