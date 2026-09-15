@@ -4,6 +4,7 @@ const CONTRACT_TASKS_KEY = 'structos-contract-tasks-v1';
 const CONTRACT_DB_NAME = 'structos-contract-originals-v1';
 const CONTRACT_DB_STORE = 'originals';
 const CONTRACT_MAX_FILE_SIZE = 100 * 1024 * 1024;
+const CONTRACT_PARTY_FIELDS = Object.freeze(['company', 'inn', 'kpp', 'ogrn', 'address', 'bank', 'bik', 'settlementAccount', 'correspondentAccount', 'signer', 'phone', 'email']);
 
 const CONTRACT_ROLES = Object.freeze({
   customer: 'Заказчик',
@@ -67,6 +68,39 @@ const fileExtension = (name) => String(name || '').split('.').pop()?.toLowerCase
 const riskLabel = (risk) => ({ critical: 'Критично', attention: 'Требует внимания', normal: 'Нормально' })[risk] || 'Не определено';
 const riskIcon = (risk) => ({ critical: '🔴', attention: '🟡', normal: '🟢' })[risk] || '⚪';
 
+function normalizeContractParticipant(value = {}, fallbackCompany = '') {
+  const normalized = {
+    company: asText(value.company || fallbackCompany, 240),
+    inn: String(value.inn || '').replace(/\D+/g, '').slice(0, 12),
+    kpp: String(value.kpp || '').replace(/\D+/g, '').slice(0, 9),
+    ogrn: String(value.ogrn || '').replace(/\D+/g, '').slice(0, 15),
+    address: asText(value.address, 360),
+    bank: asText(value.bank, 240),
+    bik: String(value.bik || '').replace(/\D+/g, '').slice(0, 9),
+    settlementAccount: String(value.settlementAccount || '').replace(/\D+/g, '').slice(0, 20),
+    correspondentAccount: String(value.correspondentAccount || '').replace(/\D+/g, '').slice(0, 20),
+    signer: asText(value.signer, 240),
+    phone: asText(value.phone, 80),
+    email: asText(value.email, 160),
+    attachment: value.attachment?.name ? {
+      name: asText(value.attachment.name, 240),
+      size: Math.max(0, Number(value.attachment.size) || 0),
+      type: asText(value.attachment.type, 120),
+      addedAt: value.attachment.addedAt || nowIso()
+    } : null,
+    source: ['contract', 'card', 'manual'].includes(value.source) ? value.source : '',
+    manualOpen: Boolean(value.manualOpen)
+  };
+  return normalized;
+}
+
+function normalizeContractParticipants(value, metadata = {}) {
+  return {
+    executor: normalizeContractParticipant(value?.executor, metadata.contractor === 'Не обнаружено' ? '' : metadata.contractor),
+    customer: normalizeContractParticipant(value?.customer, metadata.customer === 'Не обнаружено' ? '' : metadata.customer)
+  };
+}
+
 function readJson(key, fallback) {
   try { return JSON.parse(localStorage.getItem(key) || 'null') ?? fallback; }
   catch { return fallback; }
@@ -86,6 +120,7 @@ function normalizeRecord(record) {
   const clauses = Array.isArray(record.clauses) ? record.clauses.filter((item) => item?.id && item?.originalText != null).slice(0, 180) : [];
   const additions = Array.isArray(record.additions) ? record.additions.filter((item) => item?.id && item?.text).slice(0, 120) : [];
   const decisions = Object.fromEntries(Object.entries(record.decisions || {}).map(([key, value]) => [key, normalizeDecision(value)]));
+  const metadata = record.metadata && typeof record.metadata === 'object' ? record.metadata : {};
   return {
     ...record,
     id: asText(record.id, 160) || uid(),
@@ -94,8 +129,10 @@ function normalizeRecord(record) {
     role: CONTRACT_ROLES[record.role] ? record.role : 'contractor',
     objectId: asText(record.objectId, 180),
     objectName: asText(record.objectName, 180),
+    sectionName: asText(record.sectionName, 180),
     original: { ...record.original, immutable: true, name: asText(record.original?.name, 240) || 'Договор', previewText: asText(record.original?.previewText, 120000) },
-    metadata: record.metadata && typeof record.metadata === 'object' ? record.metadata : {},
+    metadata,
+    participants: normalizeContractParticipants(record.participants, metadata),
     clauses,
     decisions,
     additions,
@@ -201,6 +238,16 @@ async function getOriginal(id) {
     const request = db.transaction(CONTRACT_DB_STORE, 'readonly').objectStore(CONTRACT_DB_STORE).get(id);
     request.onsuccess = () => { db.close(); resolve(request.result || null); };
     request.onerror = () => { db.close(); reject(request.error); };
+  });
+}
+
+async function deleteStoredFile(id) {
+  const db = await openContractDb();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(CONTRACT_DB_STORE, 'readwrite');
+    tx.objectStore(CONTRACT_DB_STORE).delete(id);
+    tx.oncomplete = () => { db.close(); resolve(true); };
+    tx.onerror = () => { db.close(); reject(tx.error); };
   });
 }
 
@@ -530,6 +577,53 @@ function detectMetadata(text, clauses, fileName) {
   };
 }
 
+function contractPartySegment(text, role) {
+  const source = String(text || '').replace(/\r/g, '');
+  const markers = [];
+  const markerPattern = /^\s*(?:реквизиты\s+(?:и\s+подписи\s+)?(?:стороны\s+)?|сторона\s+)?(заказчик|исполнитель|генподрядчик|подрядчик|субподрядчик|поставщик)\s*(?::|$)/gimu;
+  for (const match of source.matchAll(markerPattern)) markers.push({ index: match.index || 0, end: (match.index || 0) + match[0].length, label: match[1].toLowerCase() });
+  const wanted = role === 'customer' ? /заказчик/u : /исполнитель|генподрядчик|подрядчик|субподрядчик|поставщик/u;
+  const candidate = markers.filter((item) => wanted.test(item.label)).at(-1);
+  if (!candidate) return '';
+  const next = markers.find((item) => item.index > candidate.index);
+  return source.slice(candidate.end, Math.min(next?.index || source.length, candidate.end + 5000));
+}
+
+function organizationDetailsFromText(text, fallbackCompany = '') {
+  const source = String(text || '').replace(/\r/g, '');
+  const cleanLine = (value) => asText(value, 360).replace(/^[\s:;,.—–-]+|[\s;,.]+$/gu, '');
+  const value = (pattern, max = 360) => cleanLine(firstMatch(source, pattern, '')).slice(0, max);
+  const legalName = value(/((?:(?:ООО|АО|ПАО|ОАО|ЗАО|ИП|ГБУ|ФГБУ|МУП|ГУП)\s*[«"']?[^\n;,]{2,180}[»"']?))/iu, 240);
+  const settlementAccount = firstMatch(source, /(?:р\/с|расч[её]тн(?:ый|ого)\s+сч[её]т(?:а)?|расч\.\s*сч[её]т)\s*[:№—-]*\s*(\d{20})/iu);
+  const correspondentAccount = firstMatch(source, /(?:к\/с|корр?\.?\s*сч[её]т|корреспондентск(?:ий|ого)\s+сч[её]т(?:а)?)\s*[:№—-]*\s*(\d{20})/iu);
+  const bank = value(/(?:наименование\s+банка|банк)\s*[:—-]\s*([^\n;]{3,240})/iu, 240)
+    || value(/(?:р\/с|расч[её]тн(?:ый|ого)\s+сч[её]т(?:а)?)\s*[:№—-]*\s*\d{20}\s*(?:в|,)?\s*([^\n;]{3,200}?)(?=\s+(?:бик|к\/с|корр)|$)/iu, 240);
+  return normalizeContractParticipant({
+    company: legalName || fallbackCompany,
+    inn: firstMatch(source, /\bИНН\s*[:№—-]*\s*(\d{10}|\d{12})\b/iu),
+    kpp: firstMatch(source, /\bКПП\s*[:№—-]*\s*(\d{9})\b/iu),
+    ogrn: firstMatch(source, /\bОГРН(?:ИП)?\s*[:№—-]*\s*(\d{13}|\d{15})\b/iu),
+    address: value(/(?:(?:юридическ(?:ий|ого)|почтов(?:ый|ого))\s+)?адрес\s*[:—-]\s*([^\n;]{5,360})/iu),
+    bank,
+    bik: firstMatch(source, /\bБИК\s*[:№—-]*\s*(\d{9})\b/iu),
+    settlementAccount,
+    correspondentAccount,
+    signer: value(/(?:генеральный\s+директор|директор|руководитель|в\s+лице)\s*[:—-]?\s*([^\n;]{3,220})/iu, 240),
+    phone: value(/(?:телефон|тел\.)\s*[:—-]\s*([^\n;]{5,80})/iu, 80),
+    email: firstMatch(source, /\b([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})\b/iu, ''),
+    source: 'contract'
+  }, fallbackCompany);
+}
+
+function detectContractParticipants(text, metadata) {
+  const executorText = contractPartySegment(text, 'executor');
+  const customerText = contractPartySegment(text, 'customer');
+  return normalizeContractParticipants({
+    executor: organizationDetailsFromText(executorText, metadata.contractor === 'Не обнаружено' ? '' : metadata.contractor),
+    customer: organizationDetailsFromText(customerText, metadata.customer === 'Не обнаружено' ? '' : metadata.customer)
+  }, metadata);
+}
+
 function detectCalendar(text, clauses, metadata) {
   const events = [];
   const add = (title, when, clause, kind = 'date') => {
@@ -556,7 +650,7 @@ function detectMissing(text) {
   return MISSING_CONDITIONS.filter((item) => !item.test.test(text)).map((item) => ({ ...item, risk: ['idle-pay', 'extras-order', 'workfront'].includes(item.id) ? 'critical' : 'attention', addedId: '' }));
 }
 
-function analyzeTextRecord({ text, file, role, objectId = '', objectName = '', origin = 'upload', pages = null, method = '' }) {
+function analyzeTextRecord({ text, file, role, objectId = '', objectName = '', sectionName = '', origin = 'upload', pages = null, method = '' }) {
   const baseClauses = applyRoleToClauses(splitClauses(text), role);
   const metadata = detectMetadata(text, baseClauses, file?.name || 'Договор');
   if (objectName && metadata.object === 'Не обнаружено') metadata.object = objectName;
@@ -567,6 +661,7 @@ function analyzeTextRecord({ text, file, role, objectId = '', objectName = '', o
     role,
     objectId,
     objectName: objectName || (metadata.object !== 'Не обнаружено' ? metadata.object : ''),
+    sectionName,
     origin,
     original: {
       immutable: true,
@@ -580,6 +675,7 @@ function analyzeTextRecord({ text, file, role, objectId = '', objectName = '', o
       extractionStatus: baseClauses.length ? 'ready' : 'needs-recognition'
     },
     metadata,
+    participants: detectContractParticipants(text, metadata),
     clauses: baseClauses,
     decisions: Object.fromEntries(baseClauses.map((clause) => [clause.id, normalizeDecision({ action: 'keep' })])),
     additions: [],
@@ -591,9 +687,9 @@ function analyzeTextRecord({ text, file, role, objectId = '', objectName = '', o
   return normalizeRecord(record);
 }
 
-function makeEmptyUploadedRecord({ file, role, objectId = '', objectName = '', method = '' }) {
+function makeEmptyUploadedRecord({ file, role, objectId = '', objectName = '', sectionName = '', method = '' }) {
   return normalizeRecord({
-    id: uid('contract'), createdAt: nowIso(), updatedAt: nowIso(), role, objectId, objectName, origin: 'upload',
+    id: uid('contract'), createdAt: nowIso(), updatedAt: nowIso(), role, objectId, objectName, sectionName, origin: 'upload',
     original: { immutable: true, name: file.name, size: file.size, type: file.type, storedAt: nowIso(), previewText: '', pages: null, extractionMethod: method, extractionStatus: 'needs-recognition' },
     metadata: { number: firstMatch(file.name, /(?:договор|contract)[-_\s]*(?:№|n)?[-_\s]*([\p{L}\d._/-]+)/iu), date: 'Не обнаружено', customer: 'Не обнаружено', contractor: 'Не обнаружено', object: objectName || 'Не обнаружено', subject: 'Не обнаружено', price: 'Не обнаружено', advance: 'Не обнаружено', paymentOrder: 'Не обнаружено', paymentTerm: 'Не обнаружено', start: 'Не обнаружено', end: 'Не обнаружено', warranty: 'Не обнаружено', retention: 'Не обнаружено', attachments: 'Не обнаружено', amendments: 'Не обнаружено', sources: {} },
     clauses: [], decisions: {}, additions: [], versions: [], missing: [], calendar: [], chat: []
@@ -692,6 +788,11 @@ function openContractLabTab() {
 }
 
 function launchContractWorkspace(action, recordId = '') {
+  if (action === 'upload') {
+    showContractLauncherView();
+    openContractCreateDialog();
+    return;
+  }
   if (recordId && workspace.records.some((item) => item.id === recordId)) {
     workspace.selectedId = recordId;
     saveWorkspace();
@@ -705,10 +806,222 @@ function launchContractWorkspace(action, recordId = '') {
   }
   renderContract();
   openContractLabTab();
-  if (action === 'upload') {
-    pendingObjectId = '';
-    document.querySelector('[data-contract-file-input]')?.click();
+}
+
+function contractUploadAllowed(file) {
+  if (!file) return false;
+  if (file.size > CONTRACT_MAX_FILE_SIZE) { showContractToast('Файл больше 100 МБ'); return false; }
+  if (!['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png', 'webp', 'heic', 'txt', 'rtf'].includes(fileExtension(file.name))) {
+    showContractToast('Поддерживаются PDF, DOCX, DOC, изображения и TXT');
+    return false;
   }
+  return true;
+}
+
+function showContractLauncherView() {
+  const launcher = document.querySelector('[data-contract-launcher-view]');
+  const detail = document.querySelector('[data-contract-main-detail]');
+  if (launcher) launcher.hidden = false;
+  if (detail) { detail.hidden = true; detail.innerHTML = ''; }
+  renderContractLauncher();
+}
+
+function openContractCreateDialog() {
+  let selectedFile = null;
+  const { dialog, form } = openContractDialog({
+    kicker: 'STRUCTOS CONTRACT',
+    title: 'Загрузить договор',
+    copyText: 'Заполните объект и раздел, загрузите один договор и запустите анализ.',
+    body: `<div class="contract-create-dialog"><div class="proposal-create-fields contract-create-dialog-fields"><label><span>Название объекта <em>*</em></span><input name="objectName" type="text" maxlength="100" placeholder="Например: Больница ГКБ №15" autocomplete="organization" /></label><label><span>Название раздела <em>*</em></span><input name="sectionName" type="text" maxlength="140" placeholder="Например: ЭОМ" /></label></div><label class="contract-dialog-field"><span>Ваша сторона в договоре</span><select name="role">${Object.entries(CONTRACT_ROLES).map(([id, label]) => `<option value="${id}"${id === 'contractor' ? ' selected' : ''}>${escapeHtml(label)}</option>`).join('')}</select></label><input class="hidden-file-input" type="file" data-contract-create-file accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.heic,.txt,.rtf,image/*" /><div class="contract-create-file-state" data-contract-create-file-state tabindex="0"></div><small class="proposal-create-file-hint">Один договор · PDF, DOC, DOCX или изображение · до 100 МБ</small><div class="contract-create-progress" data-contract-create-progress hidden><div class="analysis-loader"><span></span><span></span><span></span></div><p>StructOS анализирует договор и заполняет карточку участников…</p></div><div class="contract-dialog-safety"><span>▣</span><p><strong>Оригинал сохраняется отдельно.</strong> Анализ и последующие изменения не перезапишут загруженный файл.</p></div></div>`,
+    submitLabel: 'Анализ договора',
+    onSubmit: async (data) => {
+      const objectName = asText(data.get('objectName'), 100);
+      const sectionName = asText(data.get('sectionName'), 140);
+      const objectInput = form.querySelector('[name="objectName"]');
+      const sectionInput = form.querySelector('[name="sectionName"]');
+      if (!objectName) { objectInput?.setAttribute('aria-invalid', 'true'); objectInput?.focus(); showContractToast('Введите название объекта'); return; }
+      if (!sectionName) { sectionInput?.setAttribute('aria-invalid', 'true'); sectionInput?.focus(); showContractToast('Введите название раздела'); return; }
+      if (!selectedFile) { showContractToast('Сначала загрузите договор'); return; }
+      const submit = form.querySelector('button[type="submit"]');
+      if (submit) { submit.disabled = true; submit.textContent = 'Анализируем договор…'; }
+      form.querySelector('[data-contract-create-progress]').hidden = false;
+      try {
+        await analyzeUploadedFile(selectedFile, String(data.get('role') || 'contractor'), '', { objectName, sectionName });
+        closeContractDialog();
+        showContractLauncherView();
+      } catch (error) {
+        console.error('Contract creation failed:', error);
+        form.querySelector('[data-contract-create-progress]').hidden = true;
+        if (submit) { submit.disabled = false; submit.textContent = 'Анализ договора'; }
+        showContractToast('Не удалось создать карточку договора');
+      }
+    },
+    wide: true
+  });
+  const fileInput = form.querySelector('[data-contract-create-file]');
+  const fileState = form.querySelector('[data-contract-create-file-state]');
+  const submit = form.querySelector('button[type="submit"]');
+  const objectInput = form.querySelector('[name="objectName"]');
+  const sectionInput = form.querySelector('[name="sectionName"]');
+  const renderFileState = () => {
+    fileState.innerHTML = selectedFile
+      ? `<div class="proposal-create-selected-file"><span aria-hidden="true">≡</span><div><strong>${escapeHtml(selectedFile.name)}</strong><small>${Math.max(1, Math.ceil(selectedFile.size / 1024))} КБ</small></div><button type="button" data-contract-create-file-replace>Заменить</button><button class="proposal-create-delete-file" type="button" data-contract-create-file-delete aria-label="Удалить файл" title="Удалить файл">×</button></div>`
+      : '<div class="proposal-create-dropzone" data-contract-create-file-select role="button"><span aria-hidden="true">↑</span><div><strong>Выбрать договор</strong><small>Нажмите или перетащите файл сюда</small></div></div>';
+  };
+  const refreshSubmit = () => {
+    if (submit) submit.disabled = !selectedFile || !objectInput.value.trim() || !sectionInput.value.trim();
+  };
+  const chooseFile = (file) => {
+    if (!contractUploadAllowed(file)) return;
+    selectedFile = file;
+    renderFileState();
+    refreshSubmit();
+    showContractToast(`Файл выбран: ${file.name}`);
+  };
+  renderFileState();
+  refreshSubmit();
+  [objectInput, sectionInput].forEach((input) => input?.addEventListener('input', () => { input.removeAttribute('aria-invalid'); refreshSubmit(); }));
+  fileInput?.addEventListener('change', () => { chooseFile(fileInput.files?.[0]); fileInput.value = ''; });
+  fileState.addEventListener('click', (event) => {
+    if (event.target.closest('[data-contract-create-file-delete]')) { selectedFile = null; renderFileState(); refreshSubmit(); return; }
+    if (event.target.closest('[data-contract-create-file-select],[data-contract-create-file-replace]')) fileInput?.click();
+  });
+  fileState.addEventListener('keydown', (event) => { if ((event.key === 'Enter' || event.key === ' ') && !selectedFile) { event.preventDefault(); fileInput?.click(); } });
+  ['dragenter', 'dragover'].forEach((type) => fileState.addEventListener(type, (event) => { event.preventDefault(); fileState.classList.add('is-dragging'); }));
+  ['dragleave', 'drop'].forEach((type) => fileState.addEventListener(type, (event) => { event.preventDefault(); fileState.classList.remove('is-dragging'); }));
+  fileState.addEventListener('drop', (event) => { if (event.dataTransfer.files.length > 1) showContractToast('Можно загрузить только один договор'); chooseFile(event.dataTransfer.files?.[0]); });
+}
+
+function contractParticipantHasDetails(participant) {
+  return CONTRACT_PARTY_FIELDS.some((field) => Boolean(String(participant?.[field] || '').trim()));
+}
+
+function contractParticipantFieldsMarkup(participant) {
+  const fields = [
+    ['company', 'Название организации', 'text', 'organization'],
+    ['inn', 'ИНН', 'text', 'off'],
+    ['kpp', 'КПП', 'text', 'off'],
+    ['ogrn', 'ОГРН / ОГРНИП', 'text', 'off'],
+    ['address', 'Юридический адрес', 'text', 'street-address'],
+    ['bank', 'Наименование банка', 'text', 'off'],
+    ['bik', 'БИК', 'text', 'off'],
+    ['settlementAccount', 'Расчётный счёт', 'text', 'off'],
+    ['correspondentAccount', 'Корреспондентский счёт', 'text', 'off'],
+    ['signer', 'Руководитель / подписант', 'text', 'name'],
+    ['phone', 'Телефон', 'tel', 'tel'],
+    ['email', 'Email', 'email', 'email']
+  ];
+  return fields.map(([key, label, type, autocomplete]) => `<label class="${['company', 'address', 'bank'].includes(key) ? 'is-wide' : ''}"><span>${label}</span><input type="${type}" autocomplete="${autocomplete}" value="${escapeHtml(participant[key] || '')}" data-contract-party-field="${key}"${['inn', 'kpp', 'ogrn', 'bik', 'settlementAccount', 'correspondentAccount'].includes(key) ? ' inputmode="numeric"' : ''} /></label>`).join('');
+}
+
+function contractParticipantCardMarkup(record, role) {
+  const participant = record.participants[role];
+  const executor = role === 'executor';
+  const title = executor ? 'Исполнитель' : 'Заказчик';
+  const source = participant.source === 'card' ? 'Реквизиты заполнены из карточки предприятия' : participant.source === 'manual' ? 'Реквизиты сохранены пользователем' : contractParticipantHasDetails(participant) ? 'StructOS заполнил реквизиты из договора' : 'Реквизиты в договоре не обнаружены';
+  const summary = [participant.inn && `ИНН ${participant.inn}`, participant.kpp && `КПП ${participant.kpp}`, participant.bank].filter(Boolean).join(' · ') || 'Можно загрузить карточку предприятия или заполнить данные вручную';
+  return `<article class="contract-party-card is-${role}" data-contract-party="${role}"><header><span aria-hidden="true">${executor ? 'И' : 'З'}</span><div><small>УЧАСТНИК ДОГОВОРА</small><h3>${title}</h3></div><b>${contractParticipantHasDetails(participant) ? 'Заполнено' : 'Не заполнено'}</b></header><div class="contract-party-summary"><strong>${escapeHtml(participant.company || 'Организация не указана')}</strong><p>${escapeHtml(summary)}</p><small><span>OS</span>${escapeHtml(source)}</small></div><input class="hidden-file-input" type="file" data-contract-party-file="${role}" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.heic,.txt,.rtf,image/*" />${participant.attachment ? `<div class="contract-party-file"><span aria-hidden="true">▤</span><div><strong>${escapeHtml(participant.attachment.name)}</strong><small>${Math.max(1, Math.ceil(participant.attachment.size / 1024))} КБ · карточка предприятия</small></div><button type="button" data-contract-party-view="${role}" aria-label="Просмотреть карточку" title="Просмотреть карточку">◉</button><button type="button" data-contract-party-remove="${role}" aria-label="Удалить карточку" title="Удалить карточку">×</button></div>` : ''}<div class="contract-party-actions"><button class="outline-button" type="button" data-contract-party-select="${role}">↑ ${participant.attachment ? 'Заменить карточку' : 'Загрузить карточку предприятия'}</button><button class="outline-button" type="button" data-contract-party-manual="${role}" aria-expanded="${String(participant.manualOpen)}">✎ Вбить реквизиты вручную</button></div><section class="contract-party-manual"${participant.manualOpen ? '' : ' hidden'}><header><div><small>РУЧНОЕ ЗАПОЛНЕНИЕ</small><strong>${title}</strong></div><p>Все поля необязательны — заполните только нужные реквизиты.</p></header><div class="contract-party-fields">${contractParticipantFieldsMarkup(participant)}</div><button class="primary-button" type="button" data-contract-party-save="${role}">Сохранить реквизиты</button></section></article>`;
+}
+
+function renderContractMainDetail(record) {
+  const root = document.querySelector('[data-contract-main-detail]');
+  if (!root || !record) return;
+  const status = recordStatus(record);
+  root.innerHTML = `<section class="commercial-proposal-editor contract-main-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-contract-main-back>← Договоры</button><div><span aria-hidden="true">≡</span><div><small>${escapeHtml(record.sectionName || 'Раздел не указан')}</small><h1>${escapeHtml(record.objectName || recordTitle(record))}</h1><p>${escapeHtml(recordTitle(record))} · ${escapeHtml(record.original.name)}</p></div></div><b>${escapeHtml(status.label)}</b></header><div class="analysis-truth-note commercial-proposal-editor-note"><span>i</span><p>StructOS переносит в карточки только найденные реквизиты. Любое поле можно исправить или оставить пустым.</p></div><section class="commercial-proposal-contacts contract-participants"><header><span aria-hidden="true">✦</span><div><small>ДОГОВОР</small><h2>Участники договора</h2></div></header><div>${contractParticipantCardMarkup(record, 'executor')}${contractParticipantCardMarkup(record, 'customer')}</div></section></section>`;
+}
+
+function openContractMainDetail(recordId) {
+  const record = workspace.records.find((item) => item.id === recordId);
+  if (!record) return;
+  workspace.selectedId = recordId;
+  saveWorkspace();
+  const panel = document.querySelector('[data-panel="contract-review"]');
+  if (panel?.hidden) document.querySelector('[data-open-panel="contract-review"]')?.click();
+  const launcher = document.querySelector('[data-contract-launcher-view]');
+  const detail = document.querySelector('[data-contract-main-detail]');
+  if (launcher) launcher.hidden = true;
+  if (detail) detail.hidden = false;
+  renderContractMainDetail(currentRecord());
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function saveContractParticipant(record, role, card) {
+  const participant = record.participants[role];
+  card.querySelectorAll('[data-contract-party-field]').forEach((input) => { participant[input.dataset.contractPartyField] = input.value; });
+  participant.source = 'manual';
+  participant.manualOpen = true;
+  appendAudit(record, { type: 'party-details-saved', number: role === 'executor' ? 'Исполнитель' : 'Заказчик', reason: 'Реквизиты участника сохранены пользователем' });
+  updateRecord(record);
+  renderContractMainDetail(currentRecord());
+  showContractToast('Реквизиты сохранены');
+}
+
+async function uploadContractParticipantCard(record, role, file) {
+  if (!contractUploadAllowed(file)) return;
+  const participant = record.participants[role];
+  showContractToast('StructOS читает карточку предприятия…');
+  try { await storeOriginal(`${record.id}:party:${role}`, file); }
+  catch (error) { console.warn('Organization card storage failed:', error); }
+  let extraction = { text: '', method: 'Требуется распознавание' };
+  try { extraction = await extractContractText(file); }
+  catch (error) { console.warn('Organization card extraction failed:', error); }
+  const extracted = organizationDetailsFromText(extraction.text || '');
+  const found = CONTRACT_PARTY_FIELDS.filter((field) => Boolean(String(extracted[field] || '').trim()));
+  found.forEach((field) => { participant[field] = extracted[field]; });
+  participant.attachment = { name: file.name, size: file.size, type: file.type, addedAt: nowIso() };
+  participant.source = 'card';
+  participant.manualOpen = found.length === 0;
+  appendAudit(record, { type: 'party-card-uploaded', number: role === 'executor' ? 'Исполнитель' : 'Заказчик', reason: `${file.name} · найдено реквизитов: ${found.length}` });
+  updateRecord(record);
+  renderContractMainDetail(currentRecord());
+  showContractToast(found.length ? `Карточка загружена: найдено реквизитов — ${found.length}` : 'Карточка сохранена. Реквизиты можно заполнить вручную.');
+}
+
+async function viewContractParticipantCard(record, role) {
+  const file = await getOriginal(`${record.id}:party:${role}`).catch(() => null);
+  if (!file) { showContractToast('Файл карточки недоступен на этом устройстве'); return; }
+  const url = URL.createObjectURL(file);
+  const preview = window.open(url, '_blank');
+  if (preview) preview.opener = null;
+  else downloadBlob(file, record.participants[role].attachment?.name || 'Карточка предприятия');
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+}
+
+async function removeContractParticipantCard(record, role) {
+  await deleteStoredFile(`${record.id}:party:${role}`).catch(() => {});
+  record.participants[role].attachment = null;
+  appendAudit(record, { type: 'party-card-removed', number: role === 'executor' ? 'Исполнитель' : 'Заказчик', reason: 'Загруженная карточка удалена; реквизиты сохранены' });
+  updateRecord(record);
+  renderContractMainDetail(currentRecord());
+  showContractToast('Карточка удалена. Заполненные реквизиты сохранены.');
+}
+
+function handleContractMainClick(event) {
+  const button = event.target.closest('button');
+  if (!button) return;
+  const record = currentRecord();
+  if (button.matches('[data-contract-main-back]')) { showContractLauncherView(); return; }
+  const role = button.dataset.contractPartySelect || button.dataset.contractPartyManual || button.dataset.contractPartySave || button.dataset.contractPartyView || button.dataset.contractPartyRemove;
+  if (!record || !['executor', 'customer'].includes(role)) return;
+  const card = button.closest('[data-contract-party]');
+  if (button.dataset.contractPartySelect) { card?.querySelector('[data-contract-party-file]')?.click(); return; }
+  if (button.dataset.contractPartyManual) {
+    record.participants[role].manualOpen = !record.participants[role].manualOpen;
+    updateRecord(record);
+    renderContractMainDetail(currentRecord());
+    return;
+  }
+  if (button.dataset.contractPartySave) { saveContractParticipant(record, role, card); return; }
+  if (button.dataset.contractPartyView) { viewContractParticipantCard(record, role); return; }
+  if (button.dataset.contractPartyRemove) removeContractParticipantCard(record, role);
+}
+
+function handleContractMainChange(event) {
+  const input = event.target.closest('[data-contract-party-file]');
+  if (!input) return;
+  const file = input.files?.[0];
+  input.value = '';
+  if (file && currentRecord()) uploadContractParticipantCard(currentRecord(), input.dataset.contractPartyFile, file);
 }
 
 function renderContractLauncher() {
@@ -719,9 +1032,9 @@ function renderContractLauncher() {
     list.innerHTML = records.map((record) => {
       const stats = changeStats(record);
       const status = recordStatus(record);
-      return `<article class="commercial-proposal-card contract-launcher-card ${status.className === 'ready' ? 'is-ready' : ''}"><header><span aria-hidden="true">≡</span><button class="commercial-proposal-card-copy" type="button" data-contract-launch-open="${escapeHtml(record.id)}"><small>${record.origin === 'builder' ? 'МОЙ ДОГОВОР' : 'ДОГОВОР НА РАССМОТРЕНИИ'}</small><h2>${escapeHtml(recordTitle(record))}</h2><p>${escapeHtml(record.objectName || record.original.name)}</p></button><div class="commercial-proposal-card-side"><b>${escapeHtml(status.label)}</b></div></header><footer><span>${escapeHtml(CONTRACT_ROLES[record.role])} · ${stats.changed + stats.deleted + stats.added} изменений · ${formatDateTime(record.updatedAt)}</span><button class="primary-button" type="button" data-contract-launch-open="${escapeHtml(record.id)}">Открыть договор →</button></footer></article>`;
+      return `<article class="commercial-proposal-card contract-launcher-card ${status.className === 'ready' ? 'is-ready' : ''}"><header><span aria-hidden="true">≡</span><button class="commercial-proposal-card-copy" type="button" data-contract-launch-open="${escapeHtml(record.id)}"><small>${escapeHtml(record.sectionName || (record.origin === 'builder' ? 'МОЙ ДОГОВОР' : 'РАЗДЕЛ НЕ УКАЗАН'))}</small><h2>${escapeHtml(record.objectName || recordTitle(record))}</h2><p>${escapeHtml(recordTitle(record))} · ${escapeHtml(record.original.name)}</p></button><div class="commercial-proposal-card-side"><b>${escapeHtml(status.label)}</b></div></header><footer><span>${escapeHtml(CONTRACT_ROLES[record.role])} · ${stats.changed + stats.deleted + stats.added} изменений · ${formatDateTime(record.updatedAt)}</span><button class="primary-button" type="button" data-contract-launch-open="${escapeHtml(record.id)}">Открыть договор →</button></footer></article>`;
     }).join('');
-    list.querySelectorAll('[data-contract-launch-open]').forEach((button) => button.addEventListener('click', () => launchContractWorkspace('open', button.dataset.contractLaunchOpen)));
+    list.querySelectorAll('[data-contract-launch-open]').forEach((button) => button.addEventListener('click', () => openContractMainDetail(button.dataset.contractLaunchOpen)));
   });
 }
 
@@ -1164,8 +1477,10 @@ function uploadSetup(file) {
   });
 }
 
-async function analyzeUploadedFile(file, role, objectId) {
+async function analyzeUploadedFile(file, role, objectId, options = {}) {
   const object = objectRegistry().find((item) => String(item.id) === objectId);
+  const objectName = asText(options.objectName, 180) || object?.name || '';
+  const sectionName = asText(options.sectionName, 180);
   const recordId = uid('contract');
   loadingMessage = 'Сохраняем неизменяемый оригинал';
   renderContract();
@@ -1180,8 +1495,8 @@ async function analyzeUploadedFile(file, role, objectId) {
   loadingMessage = hasText ? 'Связываем выводы с пунктами договора' : 'Проверяем доступность текста';
   renderContract();
   let record = hasText
-    ? analyzeTextRecord({ text: extraction.text, file, role, objectId, objectName: object?.name || '', pages: extraction.pages, method: extraction.method })
-    : makeEmptyUploadedRecord({ file, role, objectId, objectName: object?.name || '', method: extraction.method });
+    ? analyzeTextRecord({ text: extraction.text, file, role, objectId, objectName, sectionName, pages: extraction.pages, method: extraction.method })
+    : makeEmptyUploadedRecord({ file, role, objectId, objectName, sectionName, method: extraction.method });
   record.id = recordId;
   record.original.storedAt = nowIso();
   updateRecord(record);
@@ -1193,6 +1508,7 @@ async function analyzeUploadedFile(file, role, objectId) {
   pendingObjectId = '';
   renderContract();
   showContractToast(hasText ? 'Разбор договора готов' : 'Оригинал сохранён. Для выводов нужен распознанный текст.');
+  return record;
 }
 
 function openPasteText(record) {
@@ -1502,7 +1818,10 @@ function auditTypeLabel(type) {
     'structos-proposal-accepted': 'принято предложение StructOS',
     'version-saved': 'версия сохранена',
     'version-restored': 'версия открыта как рабочая редакция',
-    'passport-updated': 'паспорт договора уточнён'
+    'passport-updated': 'паспорт договора уточнён',
+    'party-details-saved': 'реквизиты участника сохранены',
+    'party-card-uploaded': 'карточка предприятия загружена',
+    'party-card-removed': 'карточка предприятия удалена'
   })[type] || type || 'действие';
 }
 
@@ -1780,4 +2099,8 @@ if (contractRoot) {
 }
 document.querySelectorAll('[data-contract-launch]').forEach((button) => button.addEventListener('click', () => launchContractWorkspace(button.dataset.contractLaunch)));
 document.querySelectorAll('[data-tab="contract-lab"]').forEach((button) => button.addEventListener('click', showContractLabPanel));
+document.querySelectorAll('[data-open-panel="contract-review"]').forEach((button) => button.addEventListener('click', showContractLauncherView));
+const contractMainDetailRoot = document.querySelector('[data-contract-main-detail]');
+contractMainDetailRoot?.addEventListener('click', handleContractMainClick);
+contractMainDetailRoot?.addEventListener('change', handleContractMainChange);
 renderContractLauncher();

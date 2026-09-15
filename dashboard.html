@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="dashboard.css?v=65" />
-    <link rel="stylesheet" href="contract.css?v=2" />
+    <link rel="stylesheet" href="contract.css?v=3" />
     <link rel="stylesheet" href="home-dashboard.css?v=2" />
     <link rel="stylesheet" href="games.css?v=3" />
   </head>
@@ -310,22 +310,25 @@
         </section>
 
         <section class="tab-panel proposals-panel contract-overview-panel" data-panel="contract-review" aria-label="Договоры на рассмотрении" hidden>
-          <div class="page-title proposals-page-title"><div><span class="eyebrow">STRUCTOS CONTRACT</span><h1 data-i18n="contractsUnderReview">Договоры на рассмотрении</h1><p>Анализируйте загруженный договор или собирайте собственную редакцию</p></div><button class="outline-button" type="button" data-open-panel="projects">← <span data-i18n="myProjects">Мои проекты</span></button></div>
-          <div class="proposal-create-actions contract-create-actions" aria-label="Работа с договором">
-            <article class="proposal-create-card is-project contract-launch-card">
-              <header><span aria-hidden="true">≡</span><div><h2>Детально разобрать договор</h2><p>Загрузить договор и получить условия, деньги, сроки и риски простым языком</p></div></header>
-              <div class="contract-launch-card-copy"><strong>Исходный договор</strong><small>PDF, DOC, DOCX или изображение · до 100 МБ</small></div>
-              <button class="primary-button proposal-create-submit" type="button" data-contract-launch="upload">Загрузить договор</button>
-            </article>
-            <article class="proposal-create-card is-estimate contract-launch-card is-my-contract">
-              <header><span aria-hidden="true">✎</span><div><h2>Мой договор</h2><p>Создать договор с нуля или продолжить работу с собственной редакцией</p></div></header>
-              <div class="contract-launch-card-copy"><strong>Конструктор договора</strong><small>Пункты, версии, протокол разногласий и готовые документы</small></div>
-              <button class="primary-button proposal-create-submit" type="button" data-contract-launch="builder">Открыть «Мой договор»</button>
-            </article>
+          <div data-contract-launcher-view>
+            <div class="page-title proposals-page-title"><div><span class="eyebrow">STRUCTOS CONTRACT</span><h1 data-i18n="contractsUnderReview">Договоры на рассмотрении</h1><p>Анализируйте загруженный договор или собирайте собственную редакцию</p></div><button class="outline-button" type="button" data-open-panel="projects">← <span data-i18n="myProjects">Мои проекты</span></button></div>
+            <div class="proposal-create-actions contract-create-actions" aria-label="Работа с договором">
+              <article class="proposal-create-card is-project contract-launch-card">
+                <header><span aria-hidden="true">≡</span><div><h2>Детально разобрать договор</h2><p>Загрузить договор и получить условия, деньги, сроки и риски простым языком</p></div></header>
+                <div class="contract-launch-card-copy"><strong>Исходный договор</strong><small>PDF, DOC, DOCX или изображение · до 100 МБ</small></div>
+                <button class="primary-button proposal-create-submit" type="button" data-contract-launch="upload">Загрузить договор</button>
+              </article>
+              <article class="proposal-create-card is-estimate contract-launch-card is-my-contract">
+                <header><span aria-hidden="true">✎</span><div><h2>Мой договор</h2><p>Создать договор с нуля или продолжить работу с собственной редакцией</p></div></header>
+                <div class="contract-launch-card-copy"><strong>Конструктор договора</strong><small>Пункты, версии, протокол разногласий и готовые документы</small></div>
+                <button class="primary-button proposal-create-submit" type="button" data-contract-launch="builder">Открыть «Мой договор»</button>
+              </article>
+            </div>
+            <section class="proposal-workspace-summary contract-workspace-summary"><span>≡</span><div><small>Мои договоры</small><strong data-contract-launcher-count>0</strong></div><p>Оригинал хранится отдельно, а каждая редакция сохраняется как новая версия</p></section>
+            <div class="commercial-proposals-list contract-launcher-list" data-contract-launcher-list></div>
+            <div class="empty-state" data-contract-launcher-empty><span class="proposal-empty-mark">≡</span><h2>Договоров пока нет</h2><p>Выберите «Разобрать договор» или создайте собственный документ в разделе «Мой договор».</p></div>
           </div>
-          <section class="proposal-workspace-summary contract-workspace-summary"><span>≡</span><div><small>Мои договоры</small><strong data-contract-launcher-count>0</strong></div><p>Оригинал хранится отдельно, а каждая редакция сохраняется как новая версия</p></section>
-          <div class="commercial-proposals-list contract-launcher-list" data-contract-launcher-list></div>
-          <div class="empty-state" data-contract-launcher-empty><span class="proposal-empty-mark">≡</span><h2>Договоров пока нет</h2><p>Выберите «Разобрать договор» или создайте собственный документ в разделе «Мой договор».</p></div>
+          <div class="contract-main-detail" data-contract-main-detail hidden></div>
         </section>
 
         <section class="tab-panel project-workflow-panel" data-panel="estimate-analysis" aria-label="Анализ сметы" hidden>
@@ -461,13 +464,13 @@
     </div>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js?v=106', { updateViaCache: 'none' })
+        navigator.serviceWorker.register('./sw.js?v=107', { updateViaCache: 'none' })
           .then((registration) => registration.update())
           .catch(() => {});
       }
     </script>
     <script type="module" src="dashboard.js?v=72"></script>
-    <script type="module" src="contract.js?v=2"></script>
+    <script type="module" src="contract.js?v=3"></script>
     <script type="module" src="home-dashboard.js?v=1"></script>
     <script type="module" src="games.js?v=2"></script>
   </body>
