@@ -1825,7 +1825,7 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
   z-index: 2;
   min-width: 0;
   display: grid;
-  grid-template-columns: repeat(6,minmax(0,1fr));
+  grid-template-columns: repeat(7,minmax(0,1fr));
   gap: 3px;
   overflow: hidden;
   opacity: 1;
@@ -2008,6 +2008,7 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .bottom-menu.is-building .bottom-nav-items > button:nth-child(4) { animation-delay: .73s; }
 .bottom-menu.is-building .bottom-nav-items > button:nth-child(5) { animation-delay: .79s; }
 .bottom-menu.is-building .bottom-nav-items > button:nth-child(6) { animation-delay: .85s; }
+.bottom-menu.is-building .bottom-nav-items > button:nth-child(7) { animation-delay: .91s; }
 .bottom-menu.is-building .bottom-menu-logo-mark img { animation: bottom-menu-logo-rise .64s .1s ease-out both; }
 .bottom-menu.is-building .bottom-menu-logo-mark > i { animation: bottom-menu-logo-foundation .42s ease-out both; }
 

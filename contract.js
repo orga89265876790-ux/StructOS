@@ -138,6 +138,7 @@ function updateRecord(record) {
   else workspace.records.unshift(normalizeRecord(record));
   workspace.selectedId = record.id;
   saveWorkspace();
+  renderContractLauncher();
 }
 
 function appendAudit(record, entry) {
@@ -667,6 +668,61 @@ function recordStatus(record) {
   const critical = record.clauses.filter((item) => item.risk === 'critical').length;
   if (critical) return { className: 'critical', label: `${critical} критических риска` };
   return { className: 'ready', label: 'Разбор готов' };
+}
+
+function showContractLabPanel() {
+  const panel = document.querySelector('[data-panel="contract-lab"]');
+  if (!panel) return;
+  document.querySelector('[data-dashboard]')?.classList.remove('is-space-mode');
+  const spaceToolbar = document.querySelector('[data-space-toolbar]');
+  if (spaceToolbar) spaceToolbar.hidden = true;
+  document.querySelector('[data-space-settings]')?.setAttribute('aria-expanded', 'false');
+  document.querySelectorAll('[data-panel]').forEach((item) => {
+    const active = item === panel;
+    item.hidden = !active;
+    item.classList.toggle('is-active', active);
+  });
+  document.querySelectorAll('[data-tab]').forEach((button) => button.classList.toggle('is-active', button.dataset.tab === 'contract-lab'));
+  history.replaceState(null, '', '#contract-lab');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function openContractLabTab() {
+  showContractLabPanel();
+}
+
+function launchContractWorkspace(action, recordId = '') {
+  if (recordId && workspace.records.some((item) => item.id === recordId)) {
+    workspace.selectedId = recordId;
+    saveWorkspace();
+  }
+  if (action === 'builder') {
+    view.product = 'builder';
+  } else {
+    view.product = 'analysis';
+    view.section = 'overview';
+    view.mode = 'simple';
+  }
+  renderContract();
+  openContractLabTab();
+  if (action === 'upload') {
+    pendingObjectId = '';
+    document.querySelector('[data-contract-file-input]')?.click();
+  }
+}
+
+function renderContractLauncher() {
+  const records = workspace.records;
+  document.querySelectorAll('[data-contract-launcher-count]').forEach((item) => { item.textContent = String(records.length); });
+  document.querySelectorAll('[data-contract-launcher-empty]').forEach((item) => { item.hidden = records.length > 0; });
+  document.querySelectorAll('[data-contract-launcher-list]').forEach((list) => {
+    list.innerHTML = records.map((record) => {
+      const stats = changeStats(record);
+      const status = recordStatus(record);
+      return `<article class="commercial-proposal-card contract-launcher-card ${status.className === 'ready' ? 'is-ready' : ''}"><header><span aria-hidden="true">≡</span><button class="commercial-proposal-card-copy" type="button" data-contract-launch-open="${escapeHtml(record.id)}"><small>${record.origin === 'builder' ? 'МОЙ ДОГОВОР' : 'ДОГОВОР НА РАССМОТРЕНИИ'}</small><h2>${escapeHtml(recordTitle(record))}</h2><p>${escapeHtml(record.objectName || record.original.name)}</p></button><div class="commercial-proposal-card-side"><b>${escapeHtml(status.label)}</b></div></header><footer><span>${escapeHtml(CONTRACT_ROLES[record.role])} · ${stats.changed + stats.deleted + stats.added} изменений · ${formatDateTime(record.updatedAt)}</span><button class="primary-button" type="button" data-contract-launch-open="${escapeHtml(record.id)}">Открыть договор →</button></footer></article>`;
+    }).join('');
+    list.querySelectorAll('[data-contract-launch-open]').forEach((button) => button.addEventListener('click', () => launchContractWorkspace('open', button.dataset.contractLaunchOpen)));
+  });
 }
 
 function renderTop(record) {
@@ -1722,3 +1778,6 @@ if (contractRoot) {
   document.querySelector('[data-language]')?.addEventListener('change', () => requestAnimationFrame(renderContract));
   renderContract();
 }
+document.querySelectorAll('[data-contract-launch]').forEach((button) => button.addEventListener('click', () => launchContractWorkspace(button.dataset.contractLaunch)));
+document.querySelectorAll('[data-tab="contract-lab"]').forEach((button) => button.addEventListener('click', showContractLabPanel));
+renderContractLauncher();

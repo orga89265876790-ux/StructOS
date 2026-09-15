@@ -9,8 +9,8 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=64" />
-    <link rel="stylesheet" href="contract.css?v=1" />
+    <link rel="stylesheet" href="dashboard.css?v=65" />
+    <link rel="stylesheet" href="contract.css?v=2" />
     <link rel="stylesheet" href="home-dashboard.css?v=2" />
     <link rel="stylesheet" href="games.css?v=3" />
   </head>
@@ -249,6 +249,10 @@
           </div>
         </section>
 
+        <section class="tab-panel contract-panel contract-lab-panel" data-panel="contract-lab" aria-label="Договор посмотрим" hidden>
+          <div data-contract-app></div>
+        </section>
+
         <section class="tab-panel games-panel" data-panel="games" aria-label="Игры" hidden>
           <div class="page-title games-page-title"><div><span class="eyebrow">STRUCTOS GAMES</span><h1 data-i18n="games">Игры</h1><p data-i18n="gamesDescription">Настоящие мини-игры для короткого перерыва. Сетевая игра появится позже.</p></div><strong class="games-bonus-badge"><span data-i18n="gameBonusBalance">Бонусы</span><b data-bonus-value>200,0</b></strong></div>
           <div class="games-library" role="list">
@@ -270,7 +274,7 @@
             <div class="projects-entry-primary">
               <button class="project-entry-button is-proposal" type="button" data-open-panel="proposals"><span aria-hidden="true">₽</span><strong data-i18n="commercialProposals">Коммерческие предложения</strong><i aria-hidden="true">→</i></button>
               <button class="project-entry-button is-analysis" type="button" data-open-panel="project-analysis"><span aria-hidden="true">▤</span><strong data-i18n="detailedProjectAnalysis">Детально разобрать проект</strong><i aria-hidden="true">→</i></button>
-              <button class="project-entry-button is-contract" type="button" data-open-panel="contract-review"><span aria-hidden="true">≡</span><strong>StructOS Contract</strong><i aria-hidden="true">→</i></button>
+              <button class="project-entry-button is-contract" type="button" data-open-panel="contract-review"><span aria-hidden="true">≡</span><strong data-i18n="contractsUnderReview">Договоры на рассмотрении</strong><i aria-hidden="true">→</i></button>
               <button class="project-entry-button is-estimate" type="button" data-open-panel="estimate-analysis"><span aria-hidden="true">Σ</span><strong data-i18n="estimateAnalysis">Анализ сметы</strong><i aria-hidden="true">→</i></button>
             </div>
             <button class="project-turnkey-button" type="button" data-launch-turnkey-object><span aria-hidden="true">⌂</span><strong data-i18n="turnkeyObject">Запустить объект в один клик</strong><i aria-hidden="true">→</i></button>
@@ -305,8 +309,23 @@
           <section class="workflow-action-stage is-project"><span aria-hidden="true">▤</span><button class="primary-button" type="button" data-project-menu-placeholder="detailedProjectAnalysis" data-i18n="detailedProjectAnalysis">Детально разобрать проект</button></section>
         </section>
 
-        <section class="tab-panel contract-panel" data-panel="contract-review" aria-label="StructOS Contract" hidden>
-          <div data-contract-app></div>
+        <section class="tab-panel proposals-panel contract-overview-panel" data-panel="contract-review" aria-label="Договоры на рассмотрении" hidden>
+          <div class="page-title proposals-page-title"><div><span class="eyebrow">STRUCTOS CONTRACT</span><h1 data-i18n="contractsUnderReview">Договоры на рассмотрении</h1><p>Анализируйте загруженный договор или собирайте собственную редакцию</p></div><button class="outline-button" type="button" data-open-panel="projects">← <span data-i18n="myProjects">Мои проекты</span></button></div>
+          <div class="proposal-create-actions contract-create-actions" aria-label="Работа с договором">
+            <article class="proposal-create-card is-project contract-launch-card">
+              <header><span aria-hidden="true">≡</span><div><h2>Детально разобрать договор</h2><p>Загрузить договор и получить условия, деньги, сроки и риски простым языком</p></div></header>
+              <div class="contract-launch-card-copy"><strong>Исходный договор</strong><small>PDF, DOC, DOCX или изображение · до 100 МБ</small></div>
+              <button class="primary-button proposal-create-submit" type="button" data-contract-launch="upload">Загрузить договор</button>
+            </article>
+            <article class="proposal-create-card is-estimate contract-launch-card is-my-contract">
+              <header><span aria-hidden="true">✎</span><div><h2>Мой договор</h2><p>Создать договор с нуля или продолжить работу с собственной редакцией</p></div></header>
+              <div class="contract-launch-card-copy"><strong>Конструктор договора</strong><small>Пункты, версии, протокол разногласий и готовые документы</small></div>
+              <button class="primary-button proposal-create-submit" type="button" data-contract-launch="builder">Открыть «Мой договор»</button>
+            </article>
+          </div>
+          <section class="proposal-workspace-summary contract-workspace-summary"><span>≡</span><div><small>Мои договоры</small><strong data-contract-launcher-count>0</strong></div><p>Оригинал хранится отдельно, а каждая редакция сохраняется как новая версия</p></section>
+          <div class="commercial-proposals-list contract-launcher-list" data-contract-launcher-list></div>
+          <div class="empty-state" data-contract-launcher-empty><span class="proposal-empty-mark">≡</span><h2>Договоров пока нет</h2><p>Выберите «Разобрать договор» или создайте собственный документ в разделе «Мой договор».</p></div>
         </section>
 
         <section class="tab-panel project-workflow-panel" data-panel="estimate-analysis" aria-label="Анализ сметы" hidden>
@@ -366,6 +385,7 @@
             <button class="is-active" type="button" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v10h-6v-6H9v6H3V11Z"/></svg><span data-i18n="home">Главная</span></button>
             <button type="button" data-tab="projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h7l2 2h9v11H3zM3 7V4h7l2 3"/></svg><span data-i18n="myProjects">Мои проекты</span></button>
             <button type="button" data-tab="space"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span data-i18n="space">Пространство</span></button>
+            <button type="button" data-tab="contract-lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM15 3v5h5M9 12h7M9 16h7"/></svg><span>Договор посмотрим</span></button>
             <button type="button" data-tab="objects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h2M14 10h2"/></svg><span data-i18n="objects">Объекты</span></button>
             <button type="button" data-tab="cashflow"><span class="cashflow-nav-icon" aria-hidden="true">+₽−</span><span data-i18n="money">Быстрый объект</span></button>
             <button type="button" data-tab="profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="profile">Профиль</span></button>
@@ -441,13 +461,13 @@
     </div>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js?v=105', { updateViaCache: 'none' })
+        navigator.serviceWorker.register('./sw.js?v=106', { updateViaCache: 'none' })
           .then((registration) => registration.update())
           .catch(() => {});
       }
     </script>
     <script type="module" src="dashboard.js?v=72"></script>
-    <script type="module" src="contract.js?v=1"></script>
+    <script type="module" src="contract.js?v=2"></script>
     <script type="module" src="home-dashboard.js?v=1"></script>
     <script type="module" src="games.js?v=2"></script>
   </body>

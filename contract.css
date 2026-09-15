@@ -793,3 +793,52 @@ button.contract-source:hover { color: var(--contract-cyan); }
 .contract-version-actions button,
 .contract-chat-suggestions button,
 .contract-chat-messages article button { font-size: .75rem; }
+
+/* Contract entry point follows the Commercial Proposals layout. */
+.contract-overview-panel { display: grid; align-content: start; }
+.contract-overview-panel[hidden] { display: none; }
+.contract-launch-card-copy {
+  min-height: 88px;
+  padding: 14px;
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  border: 1px dashed rgba(50,185,255,.48);
+  border-radius: 13px;
+  background: color-mix(in srgb,var(--surface-soft) 90%,#087ee0);
+}
+.contract-launch-card-copy strong { font-size: 13px; }
+.contract-launch-card-copy small { color: var(--muted); font-size: 11px; line-height: 1.4; }
+.contract-launch-card.is-my-contract {
+  border-color: rgba(141,124,244,.4);
+  border-top-color: #8d7cf4;
+  background: linear-gradient(145deg,var(--surface),color-mix(in srgb,var(--surface-soft) 94%,#6c53d5));
+}
+.contract-launch-card.is-my-contract > header > span {
+  background: linear-gradient(145deg,#6550d4,#9b8cf7);
+  box-shadow: 0 0 20px rgba(141,124,244,.22);
+}
+.contract-launch-card.is-my-contract .contract-launch-card-copy {
+  border-color: rgba(141,124,244,.48);
+  background: color-mix(in srgb,var(--surface-soft) 91%,#6c53d5);
+}
+.contract-workspace-summary {
+  border-color: rgba(141,124,244,.4);
+  background: linear-gradient(135deg,color-mix(in srgb,var(--surface) 92%,#6550d4),color-mix(in srgb,var(--surface-soft) 94%,#0878df));
+}
+.contract-workspace-summary > span { background: linear-gradient(145deg,#6550d4,#168fdc); }
+.contract-workspace-summary small { color: #b7aaff; }
+.contract-launcher-card > footer > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.contract-launcher-card > footer > button { flex: 0 0 auto; }
+
+@media (max-width: 620px) {
+  .contract-launch-card-copy { min-height: 78px; padding: 12px; }
+  .contract-launcher-card > footer { align-items: stretch; flex-direction: column; }
+  .contract-launcher-card > footer > span { white-space: normal; }
+  .contract-launcher-card > footer > button { width: 100%; }
+}
