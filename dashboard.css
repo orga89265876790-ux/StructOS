@@ -1318,6 +1318,7 @@ body.is-cabinet-entering.is-cabinet-ready .dashboard-app { opacity: 1; transform
 .workflow-action-stage::after { position: absolute; right: -70px; top: -90px; width: 230px; height: 230px; content: ''; border: 1px solid rgba(50,184,255,.14); border-radius: 50%; box-shadow: 0 0 0 35px rgba(41,164,242,.03),0 0 0 70px rgba(35,147,224,.02); pointer-events: none; }
 .workflow-action-stage > span { position: relative; z-index: 1; width: 64px; height: 64px; display: grid; place-items: center; color: var(--cyan); border: 1px solid var(--line-strong); border-radius: 18px; background: rgba(12,118,226,.11); box-shadow: 0 0 26px rgba(42,180,255,.13); font-size: 28px; font-weight: 850; }
 .workflow-action-stage > button { position: relative; z-index: 1; width: min(100%,420px); min-height: 52px; font-size: 10px; }
+.workflow-action-stage > p { position: relative; z-index: 1; margin: 0; color: var(--muted); font-size: 12px; font-weight: 700; text-align: center; }
 .workflow-action-stage.is-contract { border-color: rgba(141,124,244,.35); }.workflow-action-stage.is-contract > span { color: #b7aaff; border-color: rgba(141,124,244,.4); background: rgba(108,83,213,.1); }
 .workflow-action-stage.is-estimate { border-color: rgba(231,175,79,.35); }.workflow-action-stage.is-estimate > span { color: #f0bc63; border-color: rgba(231,175,79,.4); background: rgba(196,129,23,.09); }
 .commercial-proposals-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }

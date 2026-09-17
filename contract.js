@@ -116,6 +116,59 @@ function normalizeDecision(value) {
   return { action, text: asText(value?.text, 12000), reason: asText(value?.reason, 1000), updatedAt: value?.updatedAt || null, actor: asText(value?.actor, 120) || 'Пользователь', acceptedStructos: Boolean(value?.acceptedStructos) };
 }
 
+function normalizeComparisonFile(value) {
+  if (!value?.name) return null;
+  return {
+    name: asText(value.name, 240),
+    size: Math.max(0, Number(value.size) || 0),
+    type: asText(value.type, 120),
+    addedAt: value.addedAt || nowIso()
+  };
+}
+
+function normalizeComparisonResult(value) {
+  if (!value || typeof value !== 'object') return null;
+  const items = Array.isArray(value.items) ? value.items.slice(0, 180).map((item) => ({
+    id: asText(item?.id, 160) || uid('difference'),
+    type: ['changed', 'added', 'removed'].includes(item?.type) ? item.type : 'changed',
+    number: asText(item?.number, 80),
+    approvedNumber: asText(item?.approvedNumber, 80),
+    submittedNumber: asText(item?.submittedNumber, 80),
+    title: asText(item?.title, 240),
+    summary: asText(item?.summary, 500),
+    before: asText(item?.before, 8000),
+    after: asText(item?.after, 8000),
+    approvedPage: Math.max(0, Number(item?.approvedPage) || 0),
+    submittedPage: Math.max(0, Number(item?.submittedPage) || 0)
+  })) : [];
+  const missing = Array.isArray(value.missing) ? value.missing.slice(0, 120).map((item) => ({
+    id: asText(item?.id, 160) || uid('missing'),
+    kind: item?.kind === 'important' ? 'important' : 'removed',
+    title: asText(item?.title, 240),
+    why: asText(item?.why, 1000),
+    number: asText(item?.number, 80)
+  })) : [];
+  return {
+    generatedAt: value.generatedAt || nowIso(),
+    items,
+    missing,
+    stats: {
+      changed: Math.max(0, Number(value.stats?.changed) || items.filter((item) => item.type === 'changed').length),
+      added: Math.max(0, Number(value.stats?.added) || items.filter((item) => item.type === 'added').length),
+      removed: Math.max(0, Number(value.stats?.removed) || items.filter((item) => item.type === 'removed').length),
+      missing: Math.max(0, Number(value.stats?.missing) || missing.length)
+    }
+  };
+}
+
+function normalizeContractComparison(value) {
+  return {
+    approved: normalizeComparisonFile(value?.approved),
+    submitted: normalizeComparisonFile(value?.submitted),
+    result: normalizeComparisonResult(value?.result)
+  };
+}
+
 function normalizeRecord(record) {
   if (!record || typeof record !== 'object') return null;
   const clauses = Array.isArray(record.clauses) ? record.clauses.filter((item) => item?.id && item?.originalText != null).slice(0, 180) : [];
@@ -134,6 +187,7 @@ function normalizeRecord(record) {
     original: { ...record.original, immutable: true, name: asText(record.original?.name, 240) || 'Договор', previewText: asText(record.original?.previewText, 120000) },
     metadata,
     participants: normalizeContractParticipants(record.participants, metadata),
+    comparison: normalizeContractComparison(record.comparison),
     clauses,
     decisions,
     additions,
@@ -157,6 +211,7 @@ let pendingFile = null;
 let pendingObjectId = '';
 let loadingMessage = '';
 let toastTimer = null;
+let comparisonBusyRecordId = '';
 const view = { product: 'analysis', section: 'overview', mode: 'simple', chatOpen: false, clauseFilter: 'all', selectedVersionId: null };
 
 function saveWorkspace() {
@@ -924,11 +979,114 @@ function contractParticipantCardMarkup(record, role) {
   return `<article class="contract-party-card is-${role}" data-contract-party="${role}"><header><span aria-hidden="true">${executor ? 'И' : 'З'}</span><div><small>УЧАСТНИК ДОГОВОРА</small><h3>${title}</h3></div><b>${contractParticipantHasDetails(participant) ? 'Заполнено' : 'Не заполнено'}</b></header><div class="contract-party-summary"><strong>${escapeHtml(participant.company || 'Организация не указана')}</strong><p>${escapeHtml(summary)}</p><small><span>OS</span>${escapeHtml(source)}</small></div><input class="hidden-file-input" type="file" data-contract-party-file="${role}" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp,.heic,.txt,.rtf,image/*" />${participant.attachment ? `<div class="contract-party-file"><span aria-hidden="true">▤</span><div><strong>${escapeHtml(participant.attachment.name)}</strong><small>${Math.max(1, Math.ceil(participant.attachment.size / 1024))} КБ · карточка предприятия</small></div><button type="button" data-contract-party-view="${role}" aria-label="Просмотреть карточку" title="Просмотреть карточку">◉</button><button type="button" data-contract-party-remove="${role}" aria-label="Удалить карточку" title="Удалить карточку">×</button></div>` : ''}<div class="contract-party-actions"><button class="outline-button" type="button" data-contract-party-select="${role}">↑ ${participant.attachment ? 'Заменить карточку' : 'Загрузить карточку предприятия'}</button><button class="outline-button" type="button" data-contract-party-manual="${role}" aria-expanded="${String(participant.manualOpen)}">✎ Вбить реквизиты вручную</button></div><section class="contract-party-manual"${participant.manualOpen ? '' : ' hidden'}><header><div><small>РУЧНОЕ ЗАПОЛНЕНИЕ</small><strong>${title}</strong></div><p>Все поля необязательны — заполните только нужные реквизиты.</p></header><div class="contract-party-fields">${contractParticipantFieldsMarkup(participant)}</div><button class="primary-button" type="button" data-contract-party-save="${role}">Сохранить реквизиты</button></section></article>`;
 }
 
+function comparisonText(value) {
+  return String(value || '').toLowerCase().replace(/ё/g, 'е').replace(/[^\p{L}\p{N}%]+/gu, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function comparisonSimilarity(first, second) {
+  const left = new Set(comparisonText(first).split(' ').filter((item) => item.length > 2));
+  const right = new Set(comparisonText(second).split(' ').filter((item) => item.length > 2));
+  if (!left.size || !right.size) return 0;
+  let common = 0;
+  left.forEach((item) => { if (right.has(item)) common += 1; });
+  return common / Math.max(left.size, right.size);
+}
+
+function compareContractTexts(approvedText, submittedText) {
+  const approved = splitClauses(approvedText);
+  const submitted = splitClauses(submittedText);
+  const approvedUsed = new Set();
+  const submittedUsed = new Set();
+  const items = [];
+  const addChanged = (sentClause, approvedClause) => {
+    submittedUsed.add(sentClause.id);
+    approvedUsed.add(approvedClause.id);
+    const before = sentClause.originalText;
+    const after = approvedClause.originalText;
+    if (comparisonText(before) === comparisonText(after) && sentClause.number === approvedClause.number) return;
+    const renumbered = sentClause.number !== approvedClause.number;
+    items.push({
+      id: uid('difference'),
+      type: 'changed',
+      number: approvedClause.number || sentClause.number,
+      submittedNumber: sentClause.number,
+      approvedNumber: approvedClause.number,
+      title: sectionTitle(approvedClause.section || sentClause.section),
+      summary: renumbered ? `Пункт перенумерован: ${sentClause.number} → ${approvedClause.number}${comparisonText(before) === comparisonText(after) ? '' : ', текст изменён'}` : 'Текст пункта изменён',
+      before,
+      after,
+      submittedPage: sentClause.source?.page || 0,
+      approvedPage: approvedClause.source?.page || 0
+    });
+  };
+
+  submitted.forEach((sentClause) => {
+    const sameNumber = approved.find((item) => !approvedUsed.has(item.id) && item.number === sentClause.number);
+    if (sameNumber) addChanged(sentClause, sameNumber);
+  });
+  submitted.filter((item) => !submittedUsed.has(item.id)).forEach((sentClause) => {
+    const exact = approved.find((item) => !approvedUsed.has(item.id) && comparisonText(item.originalText) === comparisonText(sentClause.originalText));
+    if (exact) { addChanged(sentClause, exact); return; }
+    let best = null;
+    let bestScore = 0;
+    approved.filter((item) => !approvedUsed.has(item.id)).forEach((candidate) => {
+      const score = comparisonSimilarity(sentClause.originalText, candidate.originalText);
+      if (score > bestScore) { best = candidate; bestScore = score; }
+    });
+    if (best && bestScore >= 0.72) addChanged(sentClause, best);
+  });
+  submitted.filter((item) => !submittedUsed.has(item.id)).forEach((clause) => items.push({
+    id: uid('difference'), type: 'removed', number: clause.number, submittedNumber: clause.number, approvedNumber: '', title: sectionTitle(clause.section), summary: 'Пункт убран из утверждённого договора', before: clause.originalText, after: '', submittedPage: clause.source?.page || 0, approvedPage: 0
+  }));
+  approved.filter((item) => !approvedUsed.has(item.id)).forEach((clause) => items.push({
+    id: uid('difference'), type: 'added', number: clause.number, submittedNumber: '', approvedNumber: clause.number, title: sectionTitle(clause.section), summary: 'Пункт добавлен в утверждённый договор', before: '', after: clause.originalText, submittedPage: 0, approvedPage: clause.source?.page || 0
+  }));
+
+  const missing = items.filter((item) => item.type === 'removed').map((item) => ({ id: uid('missing'), kind: 'removed', number: item.submittedNumber, title: `Пункт ${item.submittedNumber} отсутствует`, why: 'Этот пункт был в договоре, отправленном на утверждение, но отсутствует в утверждённом договоре.' }));
+  detectMissing(approvedText).forEach((item) => {
+    if (!missing.some((current) => comparisonText(current.title) === comparisonText(item.title))) missing.push({ id: uid('missing'), kind: 'important', number: '', title: item.title, why: item.why });
+  });
+  return normalizeComparisonResult({
+    generatedAt: nowIso(),
+    items,
+    missing,
+    stats: {
+      changed: items.filter((item) => item.type === 'changed').length,
+      added: items.filter((item) => item.type === 'added').length,
+      removed: items.filter((item) => item.type === 'removed').length,
+      missing: missing.length
+    }
+  });
+}
+
+function contractComparisonFileMarkup(record, kind) {
+  const file = record.comparison[kind];
+  const title = kind === 'approved' ? 'Утверждённый договор' : 'Договор отправленный на утверждение';
+  const marker = kind === 'approved' ? 'У' : 'О';
+  return `<article class="contract-comparison-file is-${kind}"><input class="hidden-file-input" type="file" data-contract-comparison-file="${kind}" accept=".pdf,.doc,.docx,.txt,.rtf" /><header><span>${marker}</span><div><small>${kind === 'approved' ? 'ИТОГОВАЯ ВЕРСИЯ' : 'БАЗОВАЯ ВЕРСИЯ'}</small><strong>${title}</strong></div></header>${file ? `<div class="contract-comparison-file-ready"><span>✓</span><div><strong>${escapeHtml(file.name)}</strong><small>${Math.max(1, Math.ceil(file.size / 1024))} КБ · ${formatDateTime(file.addedAt)}</small></div><button type="button" data-contract-comparison-view="${kind}" title="Открыть файл" aria-label="Открыть файл">◉</button><button type="button" data-contract-comparison-remove="${kind}" title="Убрать файл из сравнения" aria-label="Убрать файл из сравнения">×</button></div>` : '<p>Загрузите договор, который был получен после согласования.</p>'.replace('получен после согласования', kind === 'approved' ? 'получен после согласования' : 'вы отправляли на согласование')}<button class="outline-button" type="button" data-contract-comparison-select="${kind}">↑ ${file ? 'Заменить договор' : 'Загрузить договор'}</button></article>`;
+}
+
+function contractComparisonResultMarkup(record) {
+  const result = record.comparison.result;
+  if (!result) return '<div class="contract-comparison-empty"><span>⇄</span><div><strong>Результат сравнения появится здесь</strong><p>StructOS покажет изменённые, добавленные и удалённые пункты, а ниже — чего не хватает в утверждённом договоре.</p></div></div>';
+  const labels = { changed: 'Изменено', added: 'Добавлено', removed: 'Убрано' };
+  const rows = result.items.length ? result.items.map((item) => `<article class="contract-comparison-difference is-${item.type}"><header><span>${labels[item.type]}</span><div><strong>${item.number ? `Пункт ${escapeHtml(item.number)} · ` : ''}${escapeHtml(item.title)}</strong><p>${escapeHtml(item.summary)}</p></div></header><div class="contract-comparison-before-after"><section><small>ДОГОВОР, ОТПРАВЛЕННЫЙ НА УТВЕРЖДЕНИЕ</small><p>${escapeHtml(item.before || 'Отсутствовал')}</p>${item.submittedPage ? `<i>Источник → стр. ${item.submittedPage} → пункт ${escapeHtml(item.submittedNumber || item.number)}</i>` : ''}</section><section><small>УТВЕРЖДЁННЫЙ ДОГОВОР</small><p>${escapeHtml(item.after || 'Отсутствует')}</p>${item.approvedPage ? `<i>Источник → стр. ${item.approvedPage} → пункт ${escapeHtml(item.approvedNumber || item.number)}</i>` : ''}</section></div></article>`).join('') : '<div class="contract-empty-inline"><strong>Различий в распознанных пунктах не обнаружено</strong></div>';
+  const missing = result.missing.length ? `<section class="contract-comparison-missing"><header><span>!</span><div><small>ПРОВЕРИТЬ ПЕРЕД ПОДПИСАНИЕМ</small><h3>Чего не хватает в утверждённом договоре</h3></div><b>${result.missing.length}</b></header><div>${result.missing.map((item) => `<article class="is-${item.kind}"><span>${item.kind === 'removed' ? '−' : '!'}</span><div><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.why)}</p></div></article>`).join('')}</div></section>` : '';
+  return `<section class="contract-comparison-result"><header><div><small>СРАВНЕНИЕ ЗАВЕРШЕНО</small><strong>${formatDateTime(result.generatedAt)}</strong></div><div><span><b>${result.stats.changed}</b> изменено</span><span><b>${result.stats.added}</b> добавлено</span><span><b>${result.stats.removed}</b> убрано</span><span><b>${result.stats.missing}</b> не хватает</span></div></header><div class="contract-comparison-differences">${rows}</div>${missing}</section>`;
+}
+
+function contractDocumentBlocksMarkup(record) {
+  const stats = changeStats(record);
+  const comparisonReady = Boolean(record.comparison.approved && record.comparison.submitted);
+  const busy = comparisonBusyRecordId === record.id;
+  return `<section class="contract-document-workspace"><header><span aria-hidden="true">≡</span><div><small>РАБОТА С ДОГОВОРОМ</small><h2>Документы и версии</h2></div></header><div class="contract-document-blocks"><article class="contract-document-block is-original"><header><span>01</span><div><small>НЕИЗМЕНЯЕМЫЙ ФАЙЛ</small><h3>Оригинал договора</h3></div><b>Сохранён</b></header><p>Здесь хранится исходный договор. StructOS никогда не перезаписывает этот файл.</p><div><button class="primary-button" type="button" data-contract-main-original="view">Открыть оригинал</button><button class="outline-button" type="button" data-contract-main-original="download">Скачать</button></div></article><article class="contract-document-block is-analysis"><header><span>02</span><div><small>ГЛАВЫ И ПУНКТЫ</small><h3>Анализ договора</h3></div><b>${record.clauses.length} пунктов</b></header><p>Полный разбор всех найденных глав и пунктов: деньги, сроки, обязанности, риски и рекомендации.</p><div><button class="primary-button" type="button" data-contract-main-open="analysis">Открыть анализ</button></div></article><article class="contract-document-block is-edited"><header><span>03</span><div><small>РАБОЧАЯ РЕДАКЦИЯ</small><h3>Договор с изменениями</h3></div><b>${stats.changed + stats.deleted + stats.added} правок</b></header><p>Чистый договор с принятыми изменениями, готовый для проверки и скачивания.</p><div><button class="primary-button" type="button" data-contract-main-open="changes">Открыть правки</button><button class="outline-button" type="button" data-contract-main-export="docx">DOCX</button><button class="outline-button" type="button" data-contract-main-export="pdf">PDF</button></div></article><article class="contract-document-block is-comparison"><header><span>04</span><div><small>КОНТРОЛЬ ПОСЛЕ СОГЛАСОВАНИЯ</small><h3>Сравнение договоров после всех правок</h3></div><b>${record.comparison.result ? 'Сравнено' : 'Ожидает файлы'}</b></header><p>Загрузите версию, которую отправляли на утверждение, и полученный утверждённый договор. StructOS покажет все различия.</p><div class="contract-comparison-files">${contractComparisonFileMarkup(record, 'submitted')}${contractComparisonFileMarkup(record, 'approved')}</div><button class="primary-button contract-comparison-run" type="button" data-contract-comparison-run ${comparisonReady && !busy ? '' : 'disabled'}>${busy ? 'Сравниваем договоры…' : 'Сравнить договоры'}</button>${contractComparisonResultMarkup(record)}</article></div></section>`;
+}
+
 function renderContractMainDetail(record) {
   const root = document.querySelector('[data-contract-main-detail]');
   if (!root || !record) return;
   const status = recordStatus(record);
-  root.innerHTML = `<section class="commercial-proposal-editor contract-main-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-contract-main-back>← Договоры</button><div><span aria-hidden="true">≡</span><div><small>${escapeHtml(record.sectionName || 'Раздел не указан')}</small><h1>${escapeHtml(record.objectName || recordTitle(record))}</h1><p>${escapeHtml(recordTitle(record))} · ${escapeHtml(record.original.name)}</p></div></div><b>${escapeHtml(status.label)}</b></header><div class="analysis-truth-note commercial-proposal-editor-note"><span>i</span><p>StructOS переносит в карточки только найденные реквизиты. Любое поле можно исправить или оставить пустым.</p></div><section class="commercial-proposal-contacts contract-participants"><header><span aria-hidden="true">✦</span><div><small>ДОГОВОР</small><h2>Участники договора</h2></div></header><div>${contractParticipantCardMarkup(record, 'executor')}${contractParticipantCardMarkup(record, 'customer')}</div></section></section>`;
+  root.innerHTML = `<section class="commercial-proposal-editor contract-main-editor"><header class="commercial-proposal-editor-hero"><button class="outline-button" type="button" data-contract-main-back>← Договоры</button><div><span aria-hidden="true">≡</span><div><small>${escapeHtml(record.sectionName || 'Раздел не указан')}</small><h1>${escapeHtml(record.objectName || recordTitle(record))}</h1><p>${escapeHtml(recordTitle(record))} · ${escapeHtml(record.original.name)}</p></div></div><b>${escapeHtml(status.label)}</b></header><div class="analysis-truth-note commercial-proposal-editor-note"><span>i</span><p>Оригинал хранится отдельно и не изменяется. Анализ, рабочая редакция и результаты сравнения сохраняются в карточке договора.</p></div><section class="commercial-proposal-contacts contract-participants"><header><span aria-hidden="true">✦</span><div><small>ДОГОВОР</small><h2>Участники договора</h2></div></header><div>${contractParticipantCardMarkup(record, 'executor')}${contractParticipantCardMarkup(record, 'customer')}</div></section>${contractDocumentBlocksMarkup(record)}</section>`;
 }
 
 function openContractMainDetail(recordId) {
@@ -997,13 +1155,132 @@ async function removeContractParticipantCard(record, role) {
   showContractToast('Карточка удалена. Заполненные реквизиты сохранены.');
 }
 
+async function openContractOriginal(record) {
+  const preview = window.open('about:blank', '_blank');
+  if (preview) preview.opener = null;
+  const file = await getOriginal(record.id).catch(() => null);
+  if (file) {
+    const url = URL.createObjectURL(file);
+    if (preview) preview.location.href = url;
+    else downloadBlob(file, record.original.name);
+    setTimeout(() => URL.revokeObjectURL(url), 60000);
+    return;
+  }
+  preview?.close();
+  if (record.original.previewText) {
+    view.product = 'analysis';
+    view.section = 'overview';
+    view.mode = 'original';
+    renderContract();
+    openContractLabTab();
+    return;
+  }
+  showContractToast('Оригинальный файл недоступен на этом устройстве');
+}
+
+function openContractMainWorkspace(record, target) {
+  workspace.selectedId = record.id;
+  saveWorkspace();
+  if (target === 'changes') {
+    view.product = 'negotiation';
+    view.section = 'clauses';
+    view.mode = 'detailed';
+    view.clauseFilter = 'all';
+  } else {
+    view.product = 'analysis';
+    view.section = 'overview';
+    view.mode = 'simple';
+  }
+  renderContract();
+  openContractLabTab();
+}
+
+async function uploadComparisonContract(record, kind, file) {
+  if (!contractUploadAllowed(file) || !['pdf', 'doc', 'docx', 'txt', 'rtf'].includes(fileExtension(file.name))) {
+    showContractToast('Для сравнения загрузите PDF, DOC, DOCX, TXT или RTF');
+    return;
+  }
+  try {
+    await storeOriginal(`${record.id}:comparison:${kind}`, file);
+  } catch (error) {
+    console.warn('Comparison contract storage failed:', error);
+    showContractToast('Не удалось сохранить договор для сравнения');
+    return;
+  }
+  record.comparison[kind] = { name: file.name, size: file.size, type: file.type, addedAt: nowIso() };
+  record.comparison.result = null;
+  appendAudit(record, { type: 'comparison-file-uploaded', number: kind === 'approved' ? 'Утверждённый договор' : 'Отправленный на утверждение договор', reason: file.name });
+  updateRecord(record);
+  renderContractMainDetail(currentRecord());
+  showContractToast(`${kind === 'approved' ? 'Утверждённый' : 'Отправленный на утверждение'} договор загружен`);
+}
+
+async function viewComparisonContract(record, kind) {
+  const file = await getOriginal(`${record.id}:comparison:${kind}`).catch(() => null);
+  if (!file) { showContractToast('Файл недоступен на этом устройстве'); return; }
+  const url = URL.createObjectURL(file);
+  const preview = window.open(url, '_blank');
+  if (preview) preview.opener = null;
+  else downloadBlob(file, record.comparison[kind]?.name || 'Договор');
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+}
+
+async function removeComparisonContract(record, kind) {
+  await deleteStoredFile(`${record.id}:comparison:${kind}`).catch(() => {});
+  record.comparison[kind] = null;
+  record.comparison.result = null;
+  appendAudit(record, { type: 'comparison-file-removed', number: kind === 'approved' ? 'Утверждённый договор' : 'Отправленный на утверждение договор', reason: 'Файл убран из сравнения' });
+  updateRecord(record);
+  renderContractMainDetail(currentRecord());
+  showContractToast('Файл убран из сравнения');
+}
+
+async function runContractComparison(record) {
+  if (!record.comparison.approved || !record.comparison.submitted || comparisonBusyRecordId) return;
+  comparisonBusyRecordId = record.id;
+  renderContractMainDetail(record);
+  showContractToast('StructOS сравнивает главы и пункты…');
+  try {
+    const [approvedFile, submittedFile] = await Promise.all([
+      getOriginal(`${record.id}:comparison:approved`),
+      getOriginal(`${record.id}:comparison:submitted`)
+    ]);
+    if (!approvedFile || !submittedFile) throw new Error('Сохранённые файлы не найдены');
+    const [approved, submitted] = await Promise.all([extractContractText(approvedFile), extractContractText(submittedFile)]);
+    if (approved.text.replace(/\s/g, '').length < 80 || submitted.text.replace(/\s/g, '').length < 80) throw new Error('В одном из файлов не удалось распознать текст. Загрузите PDF с текстовым слоем или DOCX.');
+    record.comparison.result = compareContractTexts(approved.text, submitted.text);
+    appendAudit(record, { type: 'contracts-compared', number: 'Сравнение договоров', reason: `${record.comparison.result.items.length} различий · ${record.comparison.result.missing.length} отсутствующих условий` });
+    comparisonBusyRecordId = '';
+    updateRecord(record);
+    renderContractMainDetail(currentRecord());
+    showContractToast(`Сравнение готово: найдено различий — ${record.comparison.result.items.length}`);
+  } catch (error) {
+    console.error('Contract comparison failed:', error);
+    comparisonBusyRecordId = '';
+    renderContractMainDetail(currentRecord());
+    showContractToast(error.message || 'Не удалось сравнить договоры');
+  }
+}
+
 function handleContractMainClick(event) {
   const button = event.target.closest('button');
   if (!button) return;
   const record = currentRecord();
   if (button.matches('[data-contract-main-back]')) { showContractLauncherView(); return; }
+  if (!record) return;
+  if (button.dataset.contractMainOriginal === 'view') { openContractOriginal(record); return; }
+  if (button.dataset.contractMainOriginal === 'download') { downloadOriginal(record); return; }
+  if (button.dataset.contractMainOpen) { openContractMainWorkspace(record, button.dataset.contractMainOpen); return; }
+  if (button.dataset.contractMainExport) { exportContract(record, 'corrected', button.dataset.contractMainExport); return; }
+  if (button.dataset.contractComparisonSelect) {
+    button.closest('.contract-comparison-file')?.querySelector(`[data-contract-comparison-file="${button.dataset.contractComparisonSelect}"]`)?.click();
+    return;
+  }
+  if (button.dataset.contractComparisonView) { viewComparisonContract(record, button.dataset.contractComparisonView); return; }
+  if (button.dataset.contractComparisonRemove) { removeComparisonContract(record, button.dataset.contractComparisonRemove); return; }
+  if (button.matches('[data-contract-comparison-run]')) { runContractComparison(record); return; }
   const role = button.dataset.contractPartySelect || button.dataset.contractPartyManual || button.dataset.contractPartySave || button.dataset.contractPartyView || button.dataset.contractPartyRemove;
-  if (!record || !['executor', 'customer'].includes(role)) return;
+  if (!['executor', 'customer'].includes(role)) return;
   const card = button.closest('[data-contract-party]');
   if (button.dataset.contractPartySelect) { card?.querySelector('[data-contract-party-file]')?.click(); return; }
   if (button.dataset.contractPartyManual) {
@@ -1018,6 +1295,13 @@ function handleContractMainClick(event) {
 }
 
 function handleContractMainChange(event) {
+  const comparisonInput = event.target.closest('[data-contract-comparison-file]');
+  if (comparisonInput) {
+    const file = comparisonInput.files?.[0];
+    comparisonInput.value = '';
+    if (file && currentRecord()) uploadComparisonContract(currentRecord(), comparisonInput.dataset.contractComparisonFile, file);
+    return;
+  }
   const input = event.target.closest('[data-contract-party-file]');
   if (!input) return;
   const file = input.files?.[0];
@@ -1893,7 +2177,10 @@ function auditTypeLabel(type) {
     'party-card-uploaded': 'карточка предприятия загружена',
     'party-card-removed': 'карточка предприятия удалена',
     'contract-card-renamed': 'название карточки изменено',
-    'contract-card-archived': 'карточка удалена из активного списка'
+    'contract-card-archived': 'карточка удалена из активного списка',
+    'comparison-file-uploaded': 'договор загружен для сравнения',
+    'comparison-file-removed': 'договор убран из сравнения',
+    'contracts-compared': 'договоры сравнены'
   })[type] || type || 'действие';
 }
 

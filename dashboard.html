@@ -9,8 +9,8 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=65" />
-    <link rel="stylesheet" href="contract.css?v=4" />
+    <link rel="stylesheet" href="dashboard.css?v=66" />
+    <link rel="stylesheet" href="contract.css?v=5" />
     <link rel="stylesheet" href="home-dashboard.css?v=2" />
     <link rel="stylesheet" href="games.css?v=3" />
   </head>
@@ -333,7 +333,7 @@
 
         <section class="tab-panel project-workflow-panel" data-panel="estimate-analysis" aria-label="Анализ сметы" hidden>
           <div class="page-title workflow-page-title"><div><span class="eyebrow">STRUCTOS ESTIMATE ANALYSIS</span><h1 data-i18n="estimateAnalysis">Анализ сметы</h1></div><button class="outline-button" type="button" data-open-panel="projects">← <span data-i18n="myProjects">Мои проекты</span></button></div>
-          <section class="workflow-action-stage is-estimate"><span aria-hidden="true">Σ</span><button class="primary-button" type="button" data-project-menu-placeholder="estimateAnalysis" data-i18n="estimateAnalysis">Анализ сметы</button></section>
+          <section class="workflow-action-stage is-estimate"><span aria-hidden="true">Σ</span><p>Страница находится в разработке</p><button class="primary-button" type="button" disabled>В разработке</button></section>
         </section>
 
         <section class="tab-panel analysis-detail-panel" data-panel="analysis-detail" aria-label="Детальный анализ" hidden>
@@ -466,18 +466,18 @@
       if ('serviceWorker' in navigator) {
         let reloadingForUpdate = false;
         navigator.serviceWorker.addEventListener('controllerchange', () => {
-          if (reloadingForUpdate || sessionStorage.getItem('structos-sw-reload-v109') === '1') return;
+          if (reloadingForUpdate || sessionStorage.getItem('structos-sw-reload-v110') === '1') return;
           reloadingForUpdate = true;
-          sessionStorage.setItem('structos-sw-reload-v109', '1');
+          sessionStorage.setItem('structos-sw-reload-v110', '1');
           window.location.reload();
         });
-        navigator.serviceWorker.register('./sw.js?v=109', { updateViaCache: 'none' })
+        navigator.serviceWorker.register('./sw.js?v=110', { updateViaCache: 'none' })
           .then((registration) => registration.update())
           .catch(() => {});
       }
     </script>
     <script type="module" src="dashboard.js?v=72"></script>
-    <script type="module" src="contract.js?v=4"></script>
+    <script type="module" src="contract.js?v=5"></script>
     <script type="module" src="home-dashboard.js?v=1"></script>
     <script type="module" src="games.js?v=2"></script>
   </body>
