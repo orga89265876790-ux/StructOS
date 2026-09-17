@@ -855,6 +855,9 @@ button.contract-source:hover { color: var(--contract-cyan); }
 .contract-create-progress .analysis-loader { margin: 0; }
 .contract-create-progress p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
 .contract-dialog-window > footer button[type="submit"]:disabled { opacity: .5; cursor: not-allowed; }
+.contract-delete-confirm { min-height: 48px; padding: 10px 12px; display: grid; grid-template-columns: 22px minmax(0,1fr); align-items: center; gap: 9px; color: var(--text); border: 1px solid rgba(255,88,108,.34); border-radius: 11px; background: rgba(218,34,59,.07); cursor: pointer; }
+.contract-delete-confirm input { width: 19px; height: 19px; accent-color: #e63850; }
+.contract-delete-confirm span { font-size: 11px; font-weight: 700; line-height: 1.35; }
 
 .contract-main-detail[hidden] { display: none; }
 .contract-main-editor { display: grid; gap: 12px; }

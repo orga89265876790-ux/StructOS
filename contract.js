@@ -1,4 +1,5 @@
 const CONTRACT_STORAGE_KEY = 'structos-contract-workspace-v1';
+const CONTRACT_ARCHIVE_KEY = 'structos-contract-archive-v1';
 const CONTRACT_OBJECTS_KEY = 'structos-objects-v1';
 const CONTRACT_TASKS_KEY = 'structos-contract-tasks-v1';
 const CONTRACT_DB_NAME = 'structos-contract-originals-v1';
@@ -1032,9 +1033,78 @@ function renderContractLauncher() {
     list.innerHTML = records.map((record) => {
       const stats = changeStats(record);
       const status = recordStatus(record);
-      return `<article class="commercial-proposal-card contract-launcher-card ${status.className === 'ready' ? 'is-ready' : ''}"><header><span aria-hidden="true">≡</span><button class="commercial-proposal-card-copy" type="button" data-contract-launch-open="${escapeHtml(record.id)}"><small>${escapeHtml(record.sectionName || (record.origin === 'builder' ? 'МОЙ ДОГОВОР' : 'РАЗДЕЛ НЕ УКАЗАН'))}</small><h2>${escapeHtml(record.objectName || recordTitle(record))}</h2><p>${escapeHtml(recordTitle(record))} · ${escapeHtml(record.original.name)}</p></button><div class="commercial-proposal-card-side"><b>${escapeHtml(status.label)}</b></div></header><footer><span>${escapeHtml(CONTRACT_ROLES[record.role])} · ${stats.changed + stats.deleted + stats.added} изменений · ${formatDateTime(record.updatedAt)}</span><button class="primary-button" type="button" data-contract-launch-open="${escapeHtml(record.id)}">Открыть договор →</button></footer></article>`;
+      return `<article class="commercial-proposal-card contract-launcher-card ${status.className === 'ready' ? 'is-ready' : ''}"><header><span aria-hidden="true">≡</span><button class="commercial-proposal-card-copy" type="button" data-contract-launch-open="${escapeHtml(record.id)}"><small>${escapeHtml(record.sectionName || (record.origin === 'builder' ? 'МОЙ ДОГОВОР' : 'РАЗДЕЛ НЕ УКАЗАН'))}</small><h2>${escapeHtml(record.objectName || recordTitle(record))}</h2><p>${escapeHtml(recordTitle(record))} · ${escapeHtml(record.original.name)}</p></button><div class="commercial-proposal-card-side"><div class="commercial-proposal-card-actions"><button type="button" data-contract-launch-edit="${escapeHtml(record.id)}" aria-label="Редактировать название договора" title="Редактировать название договора"><span aria-hidden="true">✎</span><strong>Редактировать</strong></button><button class="is-delete" type="button" data-contract-launch-delete="${escapeHtml(record.id)}" aria-label="Удалить договор" title="Удалить договор">×</button></div><b>${escapeHtml(status.label)}</b></div></header><footer><span>${escapeHtml(CONTRACT_ROLES[record.role])} · ${stats.changed + stats.deleted + stats.added} изменений · ${formatDateTime(record.updatedAt)}</span><button class="primary-button" type="button" data-contract-launch-open="${escapeHtml(record.id)}">Открыть договор →</button></footer></article>`;
     }).join('');
     list.querySelectorAll('[data-contract-launch-open]').forEach((button) => button.addEventListener('click', () => openContractMainDetail(button.dataset.contractLaunchOpen)));
+    list.querySelectorAll('[data-contract-launch-edit]').forEach((button) => button.addEventListener('click', () => openContractCardRename(button.dataset.contractLaunchEdit)));
+    list.querySelectorAll('[data-contract-launch-delete]').forEach((button) => button.addEventListener('click', () => openContractCardDelete(button.dataset.contractLaunchDelete)));
+  });
+}
+
+function openContractCardRename(recordId) {
+  const record = workspace.records.find((item) => item.id === recordId);
+  if (!record) return;
+  openContractDialog({
+    title: 'Редактировать договор',
+    copyText: 'Изменится только название карточки. Текст исходного договора останется без изменений.',
+    body: `<div class="proposal-create-fields contract-create-dialog-fields"><label><span>Название объекта <em>*</em></span><input name="objectName" type="text" maxlength="100" value="${escapeHtml(record.objectName || '')}" placeholder="Название объекта" /></label><label><span>Название раздела <em>*</em></span><input name="sectionName" type="text" maxlength="140" value="${escapeHtml(record.sectionName || '')}" placeholder="Название раздела" /></label></div>`,
+    submitLabel: 'Сохранить изменения',
+    onSubmit: (data, form) => {
+      const objectName = asText(data.get('objectName'), 100);
+      const sectionName = asText(data.get('sectionName'), 140);
+      const objectInput = form.querySelector('[name="objectName"]');
+      const sectionInput = form.querySelector('[name="sectionName"]');
+      if (!objectName) { objectInput?.setAttribute('aria-invalid', 'true'); objectInput?.focus(); return; }
+      if (!sectionName) { sectionInput?.setAttribute('aria-invalid', 'true'); sectionInput?.focus(); return; }
+      const before = `${record.objectName || 'Без названия'} · ${record.sectionName || 'Без раздела'}`;
+      record.objectName = objectName;
+      record.sectionName = sectionName;
+      appendAudit(record, { type: 'contract-card-renamed', before, after: `${objectName} · ${sectionName}`, reason: 'Изменено пользователем' });
+      updateRecord(record);
+      closeContractDialog();
+      renderContractLauncher();
+      showContractToast('Название объекта и раздел сохранены');
+    }
+  });
+}
+
+function archiveContractRecord(record) {
+  const archived = readJson(CONTRACT_ARCHIVE_KEY, []);
+  const entry = {
+    ...clone(record),
+    archivedAt: nowIso(),
+    archivedBy: currentActor(),
+    archiveReason: 'Карточка удалена пользователем. Неизменяемый оригинал сохранён отдельно.'
+  };
+  try {
+    localStorage.setItem(CONTRACT_ARCHIVE_KEY, JSON.stringify([entry, ...(Array.isArray(archived) ? archived.filter((item) => item?.id !== record.id) : [])].slice(0, 50)));
+  } catch (error) {
+    console.warn('Contract archive save failed:', error);
+    showContractToast('Не удалось сохранить защищённый архив. Блок не удалён.');
+    return false;
+  }
+  workspace.records = workspace.records.filter((item) => item.id !== record.id);
+  workspace.selectedId = workspace.records[0]?.id || null;
+  saveWorkspace();
+  return true;
+}
+
+function openContractCardDelete(recordId) {
+  const record = workspace.records.find((item) => item.id === recordId);
+  if (!record) return;
+  openContractDialog({
+    title: 'Удалить блок договора?',
+    copyText: `${record.objectName || recordTitle(record)} · ${record.sectionName || 'Раздел не указан'}`,
+    body: `<section class="contract-delete-preview"><span>ЧТО БУДЕТ УДАЛЕНО ИЗ СПИСКА</span><p>Карточка договора, результат анализа и рабочая редакция перестанут отображаться в разделе «Договоры на рассмотрении».</p></section><div class="contract-dialog-safety"><span>▣</span><p><strong>Исходный договор не уничтожается.</strong> Он останется в защищённом локальном архиве и не будет перезаписан.</p></div><label class="contract-delete-confirm"><input type="checkbox" name="confirmDelete" required><span>Подтверждаю удаление блока договора</span></label>`,
+    submitLabel: 'Удалить блок',
+    onSubmit: (data) => {
+      if (data.get('confirmDelete') !== 'on') { showContractToast('Подтвердите удаление блока'); return; }
+      appendAudit(record, { type: 'contract-card-archived', before: recordTitle(record), after: 'Удалён из активного списка', reason: 'Удалено пользователем' });
+      if (!archiveContractRecord(record)) return;
+      closeContractDialog();
+      showContractLauncherView();
+      showContractToast('Блок договора удалён. Оригинал сохранён в защищённом архиве.');
+    }
   });
 }
 
@@ -1821,7 +1891,9 @@ function auditTypeLabel(type) {
     'passport-updated': 'паспорт договора уточнён',
     'party-details-saved': 'реквизиты участника сохранены',
     'party-card-uploaded': 'карточка предприятия загружена',
-    'party-card-removed': 'карточка предприятия удалена'
+    'party-card-removed': 'карточка предприятия удалена',
+    'contract-card-renamed': 'название карточки изменено',
+    'contract-card-archived': 'карточка удалена из активного списка'
   })[type] || type || 'действие';
 }
 
