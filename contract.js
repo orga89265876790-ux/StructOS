@@ -840,7 +840,7 @@ function recordStatus(record) {
 }
 
 function showContractLabPanel() {
-  const panel = document.querySelector('[data-panel="contract-lab"]');
+  const panel = document.querySelector('[data-panel="contract-workspace"]');
   if (!panel) return;
   document.querySelector('[data-dashboard]')?.classList.remove('is-space-mode');
   const spaceToolbar = document.querySelector('[data-space-toolbar]');
@@ -851,8 +851,8 @@ function showContractLabPanel() {
     item.hidden = !active;
     item.classList.toggle('is-active', active);
   });
-  document.querySelectorAll('[data-tab]').forEach((button) => button.classList.toggle('is-active', button.dataset.tab === 'contract-lab'));
-  history.replaceState(null, '', '#contract-lab');
+  document.querySelectorAll('[data-tab]').forEach((button) => button.classList.toggle('is-active', button.dataset.tab === 'contract-review'));
+  history.replaceState(null, '', '#contract-workspace');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -1113,7 +1113,7 @@ function openContractMainDetail(recordId) {
   workspace.selectedId = recordId;
   saveWorkspace();
   const panel = document.querySelector('[data-panel="contract-review"]');
-  if (panel?.hidden) document.querySelector('[data-open-panel="contract-review"]')?.click();
+  if (panel?.hidden) document.querySelector('[data-tab="contract-review"]')?.click();
   const launcher = document.querySelector('[data-contract-launcher-view]');
   const detail = document.querySelector('[data-contract-main-detail]');
   if (launcher) launcher.hidden = true;
@@ -1398,7 +1398,7 @@ function openContractCardDelete(recordId) {
   openContractDialog({
     title: 'Удалить блок договора?',
     copyText: `${record.objectName || recordTitle(record)} · ${record.sectionName || 'Раздел не указан'}`,
-    body: `<section class="contract-delete-preview"><span>ЧТО БУДЕТ УДАЛЕНО ИЗ СПИСКА</span><p>Карточка договора, результат анализа и рабочая редакция перестанут отображаться в разделе «Договоры на рассмотрении».</p></section><div class="contract-dialog-safety"><span>▣</span><p><strong>Исходный договор не уничтожается.</strong> Он останется в защищённом локальном архиве и не будет перезаписан.</p></div><label class="contract-delete-confirm"><input type="checkbox" name="confirmDelete" required><span>Подтверждаю удаление блока договора</span></label>`,
+    body: `<section class="contract-delete-preview"><span>ЧТО БУДЕТ УДАЛЕНО ИЗ СПИСКА</span><p>Карточка договора, результат анализа и рабочая редакция перестанут отображаться в разделе «Мой договор».</p></section><div class="contract-dialog-safety"><span>▣</span><p><strong>Исходный договор не уничтожается.</strong> Он останется в защищённом локальном архиве и не будет перезаписан.</p></div><label class="contract-delete-confirm"><input type="checkbox" name="confirmDelete" required><span>Подтверждаю удаление блока договора</span></label>`,
     submitLabel: 'Удалить блок',
     onSubmit: (data) => {
       if (data.get('confirmDelete') !== 'on') { showContractToast('Подтвердите удаление блока'); return; }
@@ -2563,7 +2563,6 @@ if (contractRoot) {
   renderContract();
 }
 document.querySelectorAll('[data-contract-launch]').forEach((button) => button.addEventListener('click', () => launchContractWorkspace(button.dataset.contractLaunch)));
-document.querySelectorAll('[data-tab="contract-lab"]').forEach((button) => button.addEventListener('click', showContractLabPanel));
 document.querySelectorAll('[data-open-panel="contract-review"]').forEach((button) => button.addEventListener('click', showContractLauncherView));
 const contractMainDetailRoot = document.querySelector('[data-contract-main-detail]');
 contractMainDetailRoot?.addEventListener('click', handleContractMainClick);
