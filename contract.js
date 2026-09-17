@@ -799,6 +799,23 @@ function changeStats(record, decisions = record.decisions, additions = record.ad
   };
 }
 
+function clauseReviewState(record, clause) {
+  if (clause.added) return clause.deleted ? 'rejected' : 'accepted';
+  const decision = decisionFor(record, clause);
+  if (!decision.updatedAt) return 'pending';
+  return decision.action === 'deleted' ? 'rejected' : 'accepted';
+}
+
+function reviewStats(record) {
+  const states = record.clauses.map((clause) => clauseReviewState(record, clause));
+  return {
+    total: states.length,
+    accepted: states.filter((state) => state === 'accepted').length,
+    rejected: states.filter((state) => state === 'rejected').length,
+    pending: states.filter((state) => state === 'pending').length
+  };
+}
+
 function sourceLabel(clause) {
   if (clause?.added || clause?.source?.generated) return 'Предложение StructOS — отсутствует в исходном договоре';
   const source = clause?.source || {};
@@ -1077,9 +1094,10 @@ function contractComparisonResultMarkup(record) {
 
 function contractDocumentBlocksMarkup(record) {
   const stats = changeStats(record);
+  const reviewed = reviewStats(record);
   const comparisonReady = Boolean(record.comparison.approved && record.comparison.submitted);
   const busy = comparisonBusyRecordId === record.id;
-  return `<section class="contract-document-workspace"><header><span aria-hidden="true">≡</span><div><small>РАБОТА С ДОГОВОРОМ</small><h2>Документы и версии</h2></div></header><div class="contract-document-blocks"><article class="contract-document-block is-original"><header><span>01</span><div><small>НЕИЗМЕНЯЕМЫЙ ФАЙЛ</small><h3>Оригинал договора</h3></div><b>Сохранён</b></header><p>Здесь хранится исходный договор. StructOS никогда не перезаписывает этот файл.</p><div><button class="primary-button" type="button" data-contract-main-original="view">Открыть оригинал</button><button class="outline-button" type="button" data-contract-main-original="download">Скачать</button></div></article><article class="contract-document-block is-analysis"><header><span>02</span><div><small>ГЛАВЫ И ПУНКТЫ</small><h3>Анализ договора</h3></div><b>${record.clauses.length} пунктов</b></header><p>Полный разбор всех найденных глав и пунктов: деньги, сроки, обязанности, риски и рекомендации.</p><div><button class="primary-button" type="button" data-contract-main-open="analysis">Открыть анализ</button></div></article><article class="contract-document-block is-edited"><header><span>03</span><div><small>РАБОЧАЯ РЕДАКЦИЯ</small><h3>Договор с изменениями</h3></div><b>${stats.changed + stats.deleted + stats.added} правок</b></header><p>Чистый договор с принятыми изменениями, готовый для проверки и скачивания.</p><div><button class="primary-button" type="button" data-contract-main-open="changes">Открыть правки</button><button class="outline-button" type="button" data-contract-main-export="docx">DOCX</button><button class="outline-button" type="button" data-contract-main-export="pdf">PDF</button></div></article><article class="contract-document-block is-comparison"><header><span>04</span><div><small>КОНТРОЛЬ ПОСЛЕ СОГЛАСОВАНИЯ</small><h3>Сравнение договоров после всех правок</h3></div><b>${record.comparison.result ? 'Сравнено' : 'Ожидает файлы'}</b></header><p>Загрузите версию, которую отправляли на утверждение, и полученный утверждённый договор. StructOS покажет все различия.</p><div class="contract-comparison-files">${contractComparisonFileMarkup(record, 'submitted')}${contractComparisonFileMarkup(record, 'approved')}</div><button class="primary-button contract-comparison-run" type="button" data-contract-comparison-run ${comparisonReady && !busy ? '' : 'disabled'}>${busy ? 'Сравниваем договоры…' : 'Сравнить договоры'}</button>${contractComparisonResultMarkup(record)}</article></div></section>`;
+  return `<section class="contract-document-workspace"><header><span aria-hidden="true">≡</span><div><small>РАБОТА С ДОГОВОРОМ</small><h2>Документы и версии</h2></div></header><div class="contract-document-blocks"><article class="contract-document-block is-original"><header><span>01</span><div><small>НЕИЗМЕНЯЕМЫЙ ФАЙЛ</small><h3>Оригинал договора</h3></div><b>Сохранён</b></header><p>Здесь хранится исходный договор. StructOS никогда не перезаписывает этот файл.</p><div><button class="primary-button" type="button" data-contract-main-original="view">Открыть оригинал</button><button class="outline-button" type="button" data-contract-main-original="download">Скачать</button></div></article><article class="contract-document-block is-analysis"><header><span>02</span><div><small>ГЛАВЫ И ПУНКТЫ</small><h3>Анализ договора</h3></div><b>${reviewed.accepted + reviewed.rejected}/${reviewed.total}</b></header><p>Пройдите каждый пункт, оцените риск и выберите: оригинал, вариант StructOS или собственную редакцию.</p><div><button class="primary-button" type="button" data-contract-main-open="analysis">Открыть анализ</button></div></article><article class="contract-document-block is-edited"><header><span>03</span><div><small>БЫЛО / СТАЛО</small><h3>Договор с изменениями</h3></div><b>${reviewed.accepted + reviewed.rejected + stats.added} решений</b></header><p>Все принятые и отклонённые пункты наглядно фиксируются здесь для проверки и отправки второй стороне.</p><div><button class="primary-button" type="button" data-contract-main-open="changes">Открыть правки</button><button class="outline-button" type="button" data-contract-main-export="docx">DOCX</button><button class="outline-button" type="button" data-contract-main-export="pdf">PDF</button></div></article><article class="contract-document-block is-comparison"><header><span>04</span><div><small>КОНТРОЛЬ ПОСЛЕ СОГЛАСОВАНИЯ</small><h3>Сравнение договоров после всех правок</h3></div><b>${record.comparison.result ? 'Сравнено' : 'Ожидает файлы'}</b></header><p>Загрузите версию, которую отправляли на утверждение, и полученный утверждённый договор. StructOS покажет все различия.</p><div class="contract-comparison-files">${contractComparisonFileMarkup(record, 'submitted')}${contractComparisonFileMarkup(record, 'approved')}</div><button class="primary-button contract-comparison-run" type="button" data-contract-comparison-run ${comparisonReady && !busy ? '' : 'disabled'}>${busy ? 'Сравниваем договоры…' : 'Сравнить договоры'}</button>${contractComparisonResultMarkup(record)}</article></div></section>`;
 }
 
 function renderContractMainDetail(record) {
@@ -1188,8 +1206,9 @@ function openContractMainWorkspace(record, target) {
     view.clauseFilter = 'all';
   } else {
     view.product = 'analysis';
-    view.section = 'overview';
-    view.mode = 'simple';
+    view.section = 'clauses';
+    view.mode = 'detailed';
+    view.clauseFilter = 'all';
   }
   renderContract();
   openContractLabTab();
@@ -1455,8 +1474,9 @@ function renderWorkspaceNav(record) {
   const critical = record.clauses.filter((item) => item.risk === 'critical').length;
   const attention = record.clauses.filter((item) => item.risk === 'attention').length;
   const changed = changeStats(record);
+  const reviewed = reviewStats(record);
   const sections = view.product === 'negotiation'
-    ? [['clauses', 'Редактор пунктов', changed.changed + changed.deleted], ['missing', 'Чего не хватает', record.missing.filter((item) => !item.addedId).length], ['versions', 'Версии договора', record.versions.length], ['crosscheck', 'Связать документы', 0]]
+    ? [['clauses', 'Договор с изменениями', reviewed.accepted + reviewed.rejected + record.additions.length], ['missing', 'Чего не хватает', record.missing.filter((item) => !item.addedId).length], ['versions', 'Версии договора', record.versions.length], ['crosscheck', 'Связать документы', 0]]
     : [['overview', 'Паспорт договора', 0], ['meaning', 'Что это значит', 0], ['money', 'Деньги', 0], ['calendar', 'Календарь', record.calendar.length], ['unpaid', 'За что не заплатят', critical], ['risks', 'Штрафы и риски', critical + attention], ['sections', 'Разделы договора', record.clauses.length], ['clauses', 'Все пункты', record.clauses.length], ['missing', 'Чего не хватает', record.missing.length], ['crosscheck', 'Проект ↔ Смета ↔ Договор', 0], ['versions', 'Версии', record.versions.length]];
   return `<aside class="contract-section-nav"><span class="contract-nav-label">${view.product === 'analysis' ? 'РАЗБОР ДОГОВОРА' : 'РАБОЧАЯ РЕДАКЦИЯ'}</span>${sections.map(([id, label, count]) => `<button type="button" data-contract-section="${id}" class="${view.section === id ? 'is-active' : ''}"><span>${escapeHtml(label)}</span>${count ? `<b>${count}</b>` : '<i>›</i>'}</button>`).join('')}</aside>`;
 }
@@ -1666,15 +1686,69 @@ function renderClauseCard(record, clause) {
   </article>`;
 }
 
+function riskReviewScale(activeRisk) {
+  return `<div class="contract-review-risk-scale" aria-label="Оценка риска"><span class="is-critical${activeRisk === 'critical' ? ' is-active' : ''}"><i></i>Опасно</span><span class="is-attention${activeRisk === 'attention' ? ' is-active' : ''}"><i></i>Внимание</span><span class="is-normal${activeRisk === 'normal' ? ' is-active' : ''}"><i></i>Всё хорошо</span></div>`;
+}
+
+function renderAnalysisReviewCard(record, clause, index) {
+  const decision = decisionFor(record, clause);
+  const state = clauseReviewState(record, clause);
+  const proposal = contextualProposal(record, clause);
+  const acceptedLabel = state === 'pending' ? 'Решение не принято' : state === 'rejected' ? 'Пункт отклонён' : decision.action === 'modified' ? (decision.acceptedStructos ? 'Принят вариант StructOS' : 'Принят свой вариант') : 'Оригинал принят';
+  return `<article class="contract-review-card is-${clause.risk || 'attention'} is-${state}" data-contract-review-card="${escapeHtml(clause.id)}">
+    <header><div><span>${String(index + 1).padStart(2, '0')} · ПУНКТ ${escapeHtml(clause.number)}</span><h3>${escapeHtml(clause.title || sectionTitle(clause.section))}</h3></div><b class="is-${state}">${escapeHtml(acceptedLabel)}</b></header>
+    <div class="contract-review-columns">
+      <section class="contract-review-original"><div class="contract-review-column-title"><span>ОРИГИНАЛ</span><small>Текст исходного договора</small></div>${riskReviewScale(clause.risk)}<p>${escapeHtml(clause.originalText)}</p>${sourceButton(clause)}<div class="contract-review-original-actions"><button class="contract-button is-primary" type="button" data-contract-review-accept="original" data-clause-id="${escapeHtml(clause.id)}">Принять</button><button class="contract-button is-danger" type="button" data-contract-review-reject data-clause-id="${escapeHtml(clause.id)}">Отклонить</button></div></section>
+      <section class="contract-review-meaning"><div class="contract-review-column-title"><span>КАК ПОНЯТЬ</span><small>Объяснение от StructOS</small></div><div><strong>Простыми словами</strong><p>${escapeHtml(clause.simple || simpleMeaning(clause.section, record.role))}</p></div><div><strong>Что это значит для вас</strong><p>${escapeHtml(clause.required || 'Проверить условие и назначить ответственное лицо.')}</p></div><div class="is-risk"><strong>Почему ${escapeHtml(riskLabel(clause.risk).toLowerCase())}</strong><p>${escapeHtml(clause.why || 'Требуется оценка в контексте всего договора.')}</p></div></section>
+      <section class="contract-review-variants"><div class="contract-review-column-title"><span>ПОМЕНЯТЬ</span><small>Выберите одну редакцию</small></div><article class="is-original"><span>1 · ОРИГИНАЛ</span><p>${escapeHtml(clause.originalText)}</p><button type="button" data-contract-review-accept="original" data-clause-id="${escapeHtml(clause.id)}">Принять оригинал</button></article><article class="is-structos"><span>2 · ПРЕДЛОЖЕНИЕ STRUCTOS</span><p>${escapeHtml(proposal)}</p><small>${escapeHtml(clause.recommendation || recommendationFor(clause.section, clause.risk))}</small><button type="button" data-contract-review-accept="structos" data-clause-id="${escapeHtml(clause.id)}">Принять вариант StructOS</button></article><article class="is-custom"><span>3 · СВОЙ ВАРИАНТ</span><textarea rows="6" maxlength="12000" placeholder="Напишите свою редакцию пункта">${decision.action === 'modified' && !decision.acceptedStructos ? escapeHtml(decision.text) : ''}</textarea><button type="button" data-contract-review-accept="custom" data-clause-id="${escapeHtml(clause.id)}">Принять свой вариант</button></article></section>
+    </div>
+  </article>`;
+}
+
+function renderAnalysisReview(record) {
+  const clauses = filteredClauses(record).filter((clause) => !clause.added);
+  const stats = reviewStats(record);
+  const progress = stats.total ? Math.round(((stats.accepted + stats.rejected) / stats.total) * 100) : 0;
+  return `<section class="contract-surface contract-review-surface">
+    <section class="contract-review-hint"><span>i</span><div><strong>Как собрать собственную редакцию договора</strong><p>Проходя каждый пункт и нажимая «Принять», вы включаете выбранную редакцию в собственный договор. Готовый результат можно посмотреть в главном меню «Договор с изменениями». Обратите внимание на индикацию риска и статус решения по каждому пункту.</p></div></section>
+    <div class="contract-review-progress"><div><span>РАССМОТРЕНО ${stats.accepted + stats.rejected} ИЗ ${stats.total}</span><strong>${progress}%</strong></div><i><b style="width:${progress}%"></b></i><div class="contract-review-progress-stats"><span>✓ Принято: ${stats.accepted}</span><span>× Отклонено: ${stats.rejected}</span><span>◷ Осталось: ${stats.pending}</span></div></div>
+    <div class="contract-clause-filters">${[['all', 'Все'], ['critical', 'Красные'], ['attention', 'Жёлтые'], ['normal', 'Зелёные'], ['changed', 'С решением']].map(([id, label]) => `<button type="button" data-contract-clause-filter="${id}" class="${view.clauseFilter === id ? 'is-active' : ''}">${label}</button>`).join('')}</div>
+    <div class="contract-review-list">${clauses.length ? clauses.map((clause, index) => renderAnalysisReviewCard(record, clause, index)).join('') : '<div class="contract-empty-surface"><span>≡</span><h3>Пунктов по этому фильтру нет</h3><p>Выберите другой фильтр.</p></div>'}</div>
+  </section>`;
+}
+
+function renderChangedContract(record) {
+  const reviewed = record.clauses.filter((clause) => clauseReviewState(record, clause) !== 'pending');
+  const additions = record.additions.map((item) => ({ ...item, added: true }));
+  const items = [...reviewed, ...additions];
+  const stats = reviewStats(record);
+  const card = (clause) => {
+    const decision = decisionFor(record, clause);
+    const deleted = clause.added ? clause.deleted : decision.action === 'deleted';
+    const before = clause.added ? 'Отсутствовал в исходном договоре' : clause.originalText;
+    const after = deleted ? 'Пункт исключён из рабочей редакции' : effectiveText(record, clause);
+    const status = deleted ? 'Отклонён' : clause.added ? 'Добавлен' : decision.action === 'modified' ? (decision.acceptedStructos ? 'Редакция StructOS' : 'Своя редакция') : 'Принят без изменений';
+    return `<article class="contract-change-review is-${deleted ? 'deleted' : decision.action}"><header><div><span>${clause.added ? 'НОВЫЙ ПУНКТ' : `ПУНКТ ${escapeHtml(clause.number)}`}</span><h3>${escapeHtml(clause.title || sectionTitle(clause.section))}</h3></div><b>${escapeHtml(status)}</b></header><div><section><small>БЫЛО</small><p>${escapeHtml(before)}</p></section><section><small>СТАЛО</small><p>${escapeHtml(after)}</p></section></div>${decision.reason || clause.reason ? `<footer><strong>Причина:</strong> ${escapeHtml(decision.reason || clause.reason)}</footer>` : ''}</article>`;
+  };
+  return `<section class="contract-surface contract-changes-surface">
+    ${surfaceHead('ДОГОВОР С ИЗМЕНЕНИЯМИ', 'Было / Стало по каждому принятому решению', 'Здесь наглядно фиксируется, какие пункты оставлены, изменены, добавлены или отклонены. Этот вариант можно показать Заказчику или Подрядчику.', '<button class="contract-button is-primary" type="button" data-contract-export="changes">Скачать «Было / Стало»</button>')}
+    <div class="contract-changes-summary"><span>Принято <b>${stats.accepted}</b></span><span>Отклонено <b>${stats.rejected}</b></span><span>Добавлено <b>${record.additions.filter((item) => !item.deleted).length}</b></span><span class="${stats.pending ? 'is-pending' : 'is-ready'}">Не рассмотрено <b>${stats.pending}</b></span></div>
+    ${stats.pending ? `<div class="contract-changes-pending"><span>!</span><p>Осталось рассмотреть ${stats.pending} ${stats.pending === 1 ? 'пункт' : 'пунктов'}. Они пока не отмечены как принятые или отклонённые.</p><button type="button" data-contract-product="analysis" data-contract-section-jump="clauses">Продолжить анализ</button></div>` : ''}
+    <div class="contract-changes-list">${items.length ? items.map(card).join('') : '<div class="contract-empty-surface"><span>◷</span><h3>Решений пока нет</h3><p>Откройте анализ и примите оригинал, вариант StructOS или собственную редакцию каждого пункта.</p></div>'}</div>
+  </section>`;
+}
+
 function filteredClauses(record) {
   const all = [...record.clauses, ...record.additions.map((item) => ({ ...item, added: true }))];
   if (view.clauseFilter === 'all') return all;
-  if (view.clauseFilter === 'changed') return all.filter((item) => item.added || decisionFor(record, item).action !== 'keep');
+  if (view.clauseFilter === 'changed') return all.filter((item) => item.added || Boolean(decisionFor(record, item).updatedAt));
   if (['critical', 'attention', 'normal'].includes(view.clauseFilter)) return all.filter((item) => item.risk === view.clauseFilter);
   return all.filter((item) => item.section === view.clauseFilter);
 }
 
 function renderClauses(record) {
+  if (view.product === 'analysis') return renderAnalysisReview(record);
+  if (view.product === 'negotiation') return renderChangedContract(record);
   const clauses = filteredClauses(record);
   return `<section class="contract-surface">
     ${surfaceHead('РЕДАКТОР ДОГОВОРА', 'Каждый пункт — отдельное решение', 'Оригинал защищён. Любое действие записывается только в рабочую редакцию.', '<button class="contract-button is-primary" type="button" data-contract-action="add-clause">＋ Добавить пункт</button>')}
@@ -2078,9 +2152,39 @@ function restoreClause(record, clause) {
 
 function keepClause(record, clause) {
   const previousText = effectiveText(record, clause);
-  if (!clause.added) record.decisions[clause.id] = normalizeDecision({ action: 'keep' });
+  if (!clause.added) record.decisions[clause.id] = normalizeDecision({ action: 'keep', updatedAt: nowIso(), actor: currentActor() });
   appendAudit(record, { type: 'clause-kept', clauseId: clause.id, number: clause.number, before: previousText, after: clause.originalText });
   updateRecord(record); renderContract(); showContractToast('Оригинальная редакция пункта сохранена');
+}
+
+function acceptReviewVariant(record, clause, variant, card) {
+  if (!clause || clause.added) return;
+  const previousText = effectiveText(record, clause);
+  if (variant === 'original') {
+    record.decisions[clause.id] = normalizeDecision({ action: 'keep', updatedAt: nowIso(), actor: currentActor() });
+    appendAudit(record, { type: 'clause-kept', clauseId: clause.id, number: clause.number, before: previousText, after: clause.originalText, reason: 'Оригинал принят при разборе договора' });
+  } else {
+    const text = variant === 'structos' ? contextualProposal(record, clause) : asText(card?.querySelector('.contract-review-variants .is-custom textarea')?.value, 12000);
+    if (!text) { showContractToast('Введите свой вариант пункта'); return; }
+    const acceptedStructos = variant === 'structos';
+    const reason = acceptedStructos ? (clause.recommendation || 'Рекомендация StructOS') : 'Собственная редакция пользователя';
+    record.decisions[clause.id] = normalizeDecision({ action: text === clause.originalText ? 'keep' : 'modified', text, reason, updatedAt: nowIso(), actor: currentActor(), acceptedStructos });
+    appendAudit(record, { type: acceptedStructos ? 'structos-proposal-accepted' : 'clause-modified', clauseId: clause.id, number: clause.number, before: previousText, after: text, reason, source: acceptedStructos ? 'structos' : 'user' });
+  }
+  updateRecord(record);
+  renderContract();
+  showContractToast(variant === 'original' ? 'Оригинал пункта принят' : variant === 'structos' ? 'Вариант StructOS принят' : 'Свой вариант принят');
+}
+
+function rejectReviewClause(record, clause) {
+  if (!clause || clause.added) return;
+  const previousText = effectiveText(record, clause);
+  const reason = 'Пункт отклонён при анализе договора';
+  record.decisions[clause.id] = normalizeDecision({ action: 'deleted', reason, updatedAt: nowIso(), actor: currentActor() });
+  appendAudit(record, { type: 'clause-deleted', clauseId: clause.id, number: clause.number, before: previousText, after: 'Отклонён и исключён из рабочей редакции', reason });
+  updateRecord(record);
+  renderContract();
+  showContractToast('Пункт отклонён и отмечен в «Договоре с изменениями»');
 }
 
 function openSaveVersion(record) {
@@ -2382,6 +2486,8 @@ function handleContractClick(event) {
   if (button.dataset.contractSectionJump) { view.section = button.dataset.contractSectionJump; renderContract(); return; }
   if (button.dataset.contractSectionFilter) { view.section = 'clauses'; view.clauseFilter = button.dataset.contractSectionFilter; renderContract(); return; }
   if (button.dataset.contractClauseFilter) { view.clauseFilter = button.dataset.contractClauseFilter; renderContract(); return; }
+  if (button.dataset.contractReviewAccept && record) { const clause = clauseById(record, button.dataset.clauseId); acceptReviewVariant(record, clause, button.dataset.contractReviewAccept, button.closest('[data-contract-review-card]')); return; }
+  if (button.hasAttribute('data-contract-review-reject') && record) { rejectReviewClause(record, clauseById(record, button.dataset.clauseId)); return; }
   if (button.dataset.contractOpenRecord) { workspace.selectedId = button.dataset.contractOpenRecord; saveWorkspace(); view.product = 'analysis'; view.section = 'overview'; renderContract(); return; }
   if (button.dataset.contractLinkedUpload) { pendingObjectId = button.dataset.contractLinkedUpload; document.querySelector('[data-contract-file-input]')?.click(); return; }
   if (button.dataset.contractChatQuestion && record) { askContract(record, button.dataset.contractChatQuestion); return; }
