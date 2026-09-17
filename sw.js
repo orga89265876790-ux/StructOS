@@ -1,4 +1,4 @@
-const CACHE_NAME = 'structos-offline-v108';
+const CACHE_NAME = 'structos-offline-v109';
 const CORE_PAGES = ['./', './dashboard.html', './passport.html', './login.html', './manifest.webmanifest'];
 const OPTIONAL_SOURCE_ASSETS = [
   './dashboard.js',
@@ -78,10 +78,17 @@ async function navigationResponse(request) {
 async function staticResponse(request) {
   const cache = await caches.open(CACHE_NAME);
   const cached = await cache.match(request, { ignoreSearch: true });
-  const refresh = fetch(request).then(async (response) => {
+  const refresh = fetch(request, { cache: 'no-cache' }).then(async (response) => {
     if (response.ok && response.type === 'basic') await cache.put(request, response.clone());
     return response;
   });
+  if (['script', 'style', 'manifest'].includes(request.destination)) {
+    try {
+      return await refresh;
+    } catch {
+      return cached || Response.error();
+    }
+  }
   if (cached) {
     refresh.catch(() => {});
     return cached;

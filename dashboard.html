@@ -464,7 +464,14 @@
     </div>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js?v=108', { updateViaCache: 'none' })
+        let reloadingForUpdate = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (reloadingForUpdate || sessionStorage.getItem('structos-sw-reload-v109') === '1') return;
+          reloadingForUpdate = true;
+          sessionStorage.setItem('structos-sw-reload-v109', '1');
+          window.location.reload();
+        });
+        navigator.serviceWorker.register('./sw.js?v=109', { updateViaCache: 'none' })
           .then((registration) => registration.update())
           .catch(() => {});
       }
