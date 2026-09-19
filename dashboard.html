@@ -279,6 +279,17 @@
             <button class="outline-button" type="button" data-open-panel="projects">← <span data-i18n="myProjects">Мои проекты</span></button>
           </div>
           <div class="proposal-create-actions detailed-project-create-actions" data-detailed-project-upload aria-label="Загрузка проекта для детального анализа"></div>
+          <section class="proposal-workspace-summary detailed-projects-summary">
+            <span>▤</span>
+            <div><small>Проекты на разборе</small><strong data-detailed-projects-count>0</strong></div>
+            <p>Название · раздел · файл · размер</p>
+          </section>
+          <div class="commercial-proposals-list detailed-projects-list" data-detailed-projects-list></div>
+          <div class="empty-state" data-detailed-projects-empty>
+            <span class="proposal-empty-mark">▤</span>
+            <h2>Проектов пока нет</h2>
+            <p>После нажатия «Разобрать проект» проект появится здесь.</p>
+          </div>
         </section>
 
         <section class="tab-panel analysis-detail-panel" data-panel="analysis-detail" aria-label="Детальный анализ" hidden>
@@ -419,7 +430,7 @@
           .catch(() => {});
       }
     </script>
-    <script type="module" src="dashboard.js?v=75"></script>
+    <script type="module" src="dashboard.js?v=76"></script>
     <script type="module" src="home-dashboard.js?v=1"></script>
   </body>
 </html>
