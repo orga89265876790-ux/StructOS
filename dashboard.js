@@ -10801,11 +10801,13 @@ function deleteDetailedProject(recordId) {
   const scope = $('[data-dialog-content]');
   $('[data-cancel-detailed-project-delete]', scope)?.addEventListener('click', () => $('[data-dialog]')?.close());
   $('[data-confirm-detailed-project-delete]', scope)?.addEventListener('click', () => {
+    const wasActive = activeDetailedProjectId === record.id;
     detailedProjectRecords = detailedProjectRecords.filter((item) => item.id !== record.id);
-    if (activeDetailedProjectId === record.id) activeDetailedProjectId = null;
+    if (wasActive) activeDetailedProjectId = null;
     saveDetailedProjectRecords();
     renderDetailedProjectRecords();
     $('[data-dialog]')?.close();
+    if (wasActive) setPanel('project-analysis');
     showToast('Проект удалён');
   });
 }
