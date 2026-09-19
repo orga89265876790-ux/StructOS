@@ -1988,6 +1988,7 @@ function applyLanguage(next) {
   renderWidgets();
   renderWidgetPicker();
 renderDetailedProjectUpload();
+renderDetailedProjectRecords();
   renderCashflow();
   renderPersonIdentity();
   renderProfilePersonalData();
@@ -3047,7 +3048,7 @@ function setPanel(name) {
     try { activeCommercialProposalId = decodeURIComponent(pathParts.join('/')); }
     catch { activeCommercialProposalId = pathParts.join('/'); }
   }
-  const projectPanels = ['proposals', 'proposal-detail', 'project-analysis', 'contract-review', 'analysis-detail'];
+  const projectPanels = ['proposals', 'proposal-detail', 'project-analysis', 'detailed-project-detail', 'contract-review', 'analysis-detail'];
   const next = ['home', 'projects', ...projectPanels, 'space', 'games', 'objects', 'cashflow', 'profile', 'passport'].includes(requestedPanel) ? requestedPanel : 'home';
   $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
   if (next !== 'space') {
@@ -3067,6 +3068,7 @@ function setPanel(name) {
   if (next === 'projects') renderMyProjects();
   if (next === 'proposals') renderCommercialProposals();
   if (next === 'proposal-detail') renderCommercialProposalWorkspace();
+  if (next === 'detailed-project-detail') renderDetailedProjectDetail();
   if (next === 'analysis-detail') renderAnalysisDetail();
   if (next === 'objects') renderObjects();
   if (next === 'cashflow') renderCashflow();
@@ -10657,11 +10659,31 @@ const detailedProjectDraft = {
   uploaded: false
 };
 
+let detailedProjectRecords = [];
+let activeDetailedProjectId = null;
+
 try {
   const savedDetailedProjectDraft = JSON.parse(localStorage.getItem('structos-detailed-project-draft') || 'null');
   if (savedDetailedProjectDraft && typeof savedDetailedProjectDraft === 'object') {
     detailedProjectDraft.projectName = String(savedDetailedProjectDraft.projectName || '').slice(0, 120);
     detailedProjectDraft.sectionName = String(savedDetailedProjectDraft.sectionName || '').slice(0, 140);
+  }
+} catch {}
+
+try {
+  const savedDetailedProjects = JSON.parse(localStorage.getItem('structos-detailed-project-records') || '[]');
+  if (Array.isArray(savedDetailedProjects)) {
+    detailedProjectRecords = savedDetailedProjects
+      .filter((item) => item && item.id && item.projectName && item.sectionName)
+      .map((item) => ({
+        id: String(item.id),
+        projectName: String(item.projectName).slice(0, 120),
+        sectionName: String(item.sectionName).slice(0, 140),
+        createdAt: item.createdAt || new Date().toISOString(),
+        updatedAt: item.updatedAt || item.createdAt || new Date().toISOString(),
+        status: item.status || 'analysis',
+        file: item.file && typeof item.file === 'object' ? item.file : null
+      }));
   }
 } catch {}
 
@@ -10672,6 +10694,10 @@ function saveDetailedProjectDraft() {
     file: detailedProjectDraft.file,
     uploaded: detailedProjectDraft.uploaded
   }));
+}
+
+function saveDetailedProjectRecords() {
+  localStorage.setItem('structos-detailed-project-records', JSON.stringify(detailedProjectRecords));
 }
 
 function detailedProjectUploadMarkup() {
@@ -10692,6 +10718,140 @@ function detailedProjectUploadMarkup() {
     <button class="primary-button proposal-create-submit" type="button" data-detailed-project-upload-submit${disabled ? ' disabled' : ''}>${detailedProjectDraft.uploaded ? 'Проект загружен' : 'Загрузить проект'}</button>
     ${detailedProjectDraft.uploaded ? '<button class="primary-button proposal-create-submit" type="button" data-detailed-project-analyze>Разобрать проект</button>' : ''}
   </article>`;
+}
+
+function detailedProjectCardMarkup(record) {
+  const sizeLabel = record.file ? fileSize(Number(record.file.size || 0)) : '—';
+  const formatLabel = record.file ? fileFormatLabel(record.file) : '—';
+  return `<article class="commercial-proposal-card is-ready detailed-project-card">
+    <header>
+      <span aria-hidden="true">▤</span>
+      <button class="commercial-proposal-card-copy" type="button" data-open-detailed-project="${escapeHtml(record.id)}">
+        <small>${escapeHtml(record.sectionName)}</small>
+        <h2>${escapeHtml(record.projectName)}</h2>
+        <p>${escapeHtml(record.file?.name || 'Файл проекта')} · ${escapeHtml(sizeLabel)}</p>
+      </button>
+      <div class="commercial-proposal-card-side">
+        <div class="commercial-proposal-card-actions">
+          <button type="button" data-rename-detailed-project="${escapeHtml(record.id)}" aria-label="Переименовать" title="Переименовать"><span aria-hidden="true">✎</span><strong>Переименовать</strong></button>
+          <button class="is-delete" type="button" data-delete-detailed-project="${escapeHtml(record.id)}" aria-label="Удалить" title="Удалить">×</button>
+        </div>
+        <b>Разбор запущен</b>
+      </div>
+    </header>
+    <footer>
+      <span>${escapeHtml(formatObjectDate(record.createdAt))} · ${escapeHtml(formatLabel)} · ${escapeHtml(sizeLabel)}</span>
+      <button class="outline-button" type="button" data-open-detailed-project="${escapeHtml(record.id)}">Открыть →</button>
+    </footer>
+  </article>`;
+}
+
+function renderDetailedProjectRecords() {
+  const records = detailedProjectRecords.slice().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  const markup = records.map(detailedProjectCardMarkup).join('');
+  $$('[data-detailed-projects-list]').forEach((list) => {
+    list.innerHTML = markup;
+    $$('[data-open-detailed-project]', list).forEach((button) => button.addEventListener('click', () => openDetailedProject(button.dataset.openDetailedProject)));
+    $$('[data-rename-detailed-project]', list).forEach((button) => button.addEventListener('click', () => renameDetailedProject(button.dataset.renameDetailedProject)));
+    $$('[data-delete-detailed-project]', list).forEach((button) => button.addEventListener('click', () => deleteDetailedProject(button.dataset.deleteDetailedProject)));
+  });
+  $$('[data-detailed-projects-count]').forEach((count) => { count.textContent = String(records.length); });
+  $$('[data-detailed-projects-empty]').forEach((empty) => { empty.hidden = records.length > 0; });
+}
+
+function renameDetailedProject(recordId) {
+  const record = detailedProjectRecords.find((item) => item.id === recordId);
+  if (!record) return;
+  showDialog('Переименовать проект', 'Измените название проекта или раздел.', `<div class="object-form commercial-proposal-rename-form">
+    <label><span>Название проекта</span><input type="text" maxlength="120" value="${escapeHtml(record.projectName)}" data-rename-detailed-project-name /></label>
+    <label><span>Раздел</span><input type="text" maxlength="140" value="${escapeHtml(record.sectionName)}" data-rename-detailed-project-section /></label>
+    <button class="primary-button" type="button" data-confirm-detailed-project-rename>Сохранить</button>
+  </div>`);
+  const scope = $('[data-dialog-content]');
+  const nameInput = $('[data-rename-detailed-project-name]', scope);
+  const sectionInput = $('[data-rename-detailed-project-section]', scope);
+  const save = () => {
+    const name = nameInput?.value.trim().slice(0, 120) || '';
+    const section = sectionInput?.value.trim().slice(0, 140) || '';
+    if (!name) { nameInput?.focus(); return; }
+    if (!section) { sectionInput?.focus(); return; }
+    record.projectName = name;
+    record.sectionName = section;
+    record.updatedAt = new Date().toISOString();
+    saveDetailedProjectRecords();
+    renderDetailedProjectRecords();
+    if (activeDetailedProjectId === record.id) renderDetailedProjectDetail();
+    $('[data-dialog]')?.close();
+    showToast('Проект переименован');
+  };
+  $('[data-confirm-detailed-project-rename]', scope)?.addEventListener('click', save);
+  [nameInput, sectionInput].forEach((input) => input?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') { event.preventDefault(); save(); }
+  }));
+  setTimeout(() => { nameInput?.focus(); nameInput?.select(); }, 40);
+}
+
+function deleteDetailedProject(recordId) {
+  const record = detailedProjectRecords.find((item) => item.id === recordId);
+  if (!record) return;
+  showDialog('Удалить проект', `Удалить «${escapeHtml(record.projectName)}» из списка проектов на разборе?`, `<div class="result-actions">
+    <button class="outline-button" type="button" data-cancel-detailed-project-delete>Отмена</button>
+    <button class="primary-button is-danger" type="button" data-confirm-detailed-project-delete>Удалить</button>
+  </div>`);
+  const scope = $('[data-dialog-content]');
+  $('[data-cancel-detailed-project-delete]', scope)?.addEventListener('click', () => $('[data-dialog]')?.close());
+  $('[data-confirm-detailed-project-delete]', scope)?.addEventListener('click', () => {
+    detailedProjectRecords = detailedProjectRecords.filter((item) => item.id !== record.id);
+    if (activeDetailedProjectId === record.id) activeDetailedProjectId = null;
+    saveDetailedProjectRecords();
+    renderDetailedProjectRecords();
+    $('[data-dialog]')?.close();
+    showToast('Проект удалён');
+  });
+}
+
+function openDetailedProject(recordId) {
+  const record = detailedProjectRecords.find((item) => item.id === recordId);
+  if (!record) return;
+  activeDetailedProjectId = record.id;
+  setPanel('detailed-project-detail');
+}
+
+function renderDetailedProjectDetail() {
+  const rootElement = $('[data-detailed-project-detail]');
+  if (!rootElement) return;
+  const record = detailedProjectRecords.find((item) => item.id === activeDetailedProjectId);
+  if (!record) {
+    rootElement.innerHTML = `<div class="page-title"><div><span class="eyebrow">STRUCTOS PROJECT ANALYSIS</span><h1>Проект не найден</h1></div><button class="outline-button" type="button" data-back-detailed-projects>← Проекты</button></div>`;
+    $('[data-back-detailed-projects]', rootElement)?.addEventListener('click', () => setPanel('project-analysis'));
+    return;
+  }
+  const sizeLabel = record.file ? fileSize(Number(record.file.size || 0)) : '—';
+  const formatLabel = record.file ? fileFormatLabel(record.file) : '—';
+  rootElement.innerHTML = `
+    <div class="page-title workflow-page-title">
+      <div><span class="eyebrow">STRUCTOS PROJECT ANALYSIS</span><h1>${escapeHtml(record.projectName)}</h1><p>Раздел: ${escapeHtml(record.sectionName)}</p></div>
+      <button class="outline-button" type="button" data-back-detailed-projects>← К списку проектов</button>
+    </div>
+    <section class="proposal-workspace-summary detailed-project-open-summary">
+      <span>▤</span>
+      <div><small>Файл проекта</small><strong>${escapeHtml(record.file?.name || '—')}</strong></div>
+      <p>${escapeHtml(formatLabel)} · ${escapeHtml(sizeLabel)} · загружен ${escapeHtml(formatObjectDate(record.createdAt))}</p>
+    </section>
+    <div class="result-actions">
+      <button class="outline-button" type="button" data-rename-open-detailed-project>Переименовать</button>
+      <button class="outline-button is-danger" type="button" data-delete-open-detailed-project>Удалить</button>
+    </div>
+    <section class="empty-state">
+      <span class="proposal-empty-mark">⌁</span>
+      <h2>Разбор проекта запущен</h2>
+      <p>Следующие блоки анализа будут добавляться сюда по порядку.</p>
+    </section>`;
+  $('[data-back-detailed-projects]', rootElement)?.addEventListener('click', () => setPanel('project-analysis'));
+  $('[data-rename-open-detailed-project]', rootElement)?.addEventListener('click', () => renameDetailedProject(record.id));
+  $('[data-delete-open-detailed-project]', rootElement)?.addEventListener('click', () => {
+    deleteDetailedProject(record.id);
+  });
 }
 
 function renderDetailedProjectUpload() {
@@ -10789,10 +10949,30 @@ function renderDetailedProjectUpload() {
     showToast(`Проект «${detailedProjectDraft.projectName}» · ${detailedProjectDraft.sectionName} загружен`);
   });
   $('[data-detailed-project-analyze]', rootElement)?.addEventListener('click', () => {
-    showToast(`Запускаем разбор проекта «${detailedProjectDraft.projectName}» · ${detailedProjectDraft.sectionName}`);
+    if (!detailedProjectDraft.file || !detailedProjectDraft.projectName.trim() || !detailedProjectDraft.sectionName.trim()) return;
+    const now = new Date().toISOString();
+    detailedProjectRecords.unshift({
+      id: `detailed-project-${Date.now()}-${Math.random().toString(16).slice(2)}`,
+      projectName: detailedProjectDraft.projectName.trim().slice(0, 120),
+      sectionName: detailedProjectDraft.sectionName.trim().slice(0, 140),
+      file: { ...detailedProjectDraft.file },
+      createdAt: now,
+      updatedAt: now,
+      status: 'analysis'
+    });
+    saveDetailedProjectRecords();
+    const createdName = detailedProjectDraft.projectName;
+    detailedProjectDraft.projectName = '';
+    detailedProjectDraft.sectionName = '';
+    detailedProjectDraft.file = null;
+    detailedProjectDraft.sourceFile = null;
+    detailedProjectDraft.uploaded = false;
+    saveDetailedProjectDraft();
+    renderDetailedProjectUpload();
+    renderDetailedProjectRecords();
+    showToast(`Проект «${createdName}» добавлен в разбор`);
   });
 }
-
 
 $('[data-refresh-page]').addEventListener('click', (event) => {
   event.currentTarget.classList.add('is-refreshing');
