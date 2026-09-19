@@ -10677,20 +10677,20 @@ function saveDetailedProjectDraft() {
 function detailedProjectUploadMarkup() {
   const rule = uploadRules.project;
   const selectedFile = detailedProjectDraft.file
-    ? \`<div class="proposal-create-selected-file"><span aria-hidden="true">▤</span><div><strong>\${escapeHtml(detailedProjectDraft.file.name)}</strong><small>\${escapeHtml(fileFormatLabel(detailedProjectDraft.file))} · \${escapeHtml(fileSize(detailedProjectDraft.file.size))}</small></div><button type="button" data-detailed-project-replace-file>\${escapeHtml(tr('replace'))}</button><button class="proposal-create-delete-file" type="button" data-detailed-project-delete-file aria-label="\${escapeHtml(tr('deleteFile'))}" title="\${escapeHtml(tr('deleteFile'))}">×</button></div>\`
-    : \`<div class="proposal-create-dropzone" data-detailed-project-dropzone role="button" tabindex="0"><span aria-hidden="true">↑</span><div><strong>Выбрать проект</strong><small>Перетащите файл сюда или нажмите для выбора · \${escapeHtml(rule.formats)} · до \${rule.maxMb} МБ</small></div></div>\`;
+    ? `<div class="proposal-create-selected-file"><span aria-hidden="true">▤</span><div><strong>${escapeHtml(detailedProjectDraft.file.name)}</strong><small>${escapeHtml(fileFormatLabel(detailedProjectDraft.file))} · ${escapeHtml(fileSize(detailedProjectDraft.file.size))}</small></div><button type="button" data-detailed-project-replace-file>${escapeHtml(tr('replace'))}</button><button class="proposal-create-delete-file" type="button" data-detailed-project-delete-file aria-label="${escapeHtml(tr('deleteFile'))}" title="${escapeHtml(tr('deleteFile'))}">×</button></div>`
+    : `<div class="proposal-create-dropzone" data-detailed-project-dropzone role="button" tabindex="0"><span aria-hidden="true">↑</span><div><strong>Выбрать проект</strong><small>Перетащите файл сюда или нажмите для выбора · ${escapeHtml(rule.formats)} · до ${rule.maxMb} МБ</small></div></div>`;
   const disabled = !detailedProjectDraft.file || !detailedProjectDraft.projectName.trim() || !detailedProjectDraft.sectionName.trim() || detailedProjectDraft.uploaded;
-  return \`<article class="proposal-create-card is-project detailed-project-upload-card">
+  return `<article class="proposal-create-card is-project detailed-project-upload-card">
     <header><span aria-hidden="true">▤</span><div><h2>Загрузить проект</h2><p>Укажите название проекта и раздел, затем загрузите один файл проекта.</p></div></header>
     <div class="proposal-create-fields">
-      <label><span>Название проекта <em>*</em></span><input type="text" maxlength="120" data-detailed-project-name value="\${escapeHtml(detailedProjectDraft.projectName)}" placeholder="Например: Жилой комплекс, корпус 1" autocomplete="off" /></label>
-      <label><span>Раздел <em>*</em></span><input type="text" maxlength="140" data-detailed-project-section value="\${escapeHtml(detailedProjectDraft.sectionName)}" placeholder="Например: АР, КР, ОВ, ВК, ЭОМ, АПС" autocomplete="off" /></label>
+      <label><span>Название проекта <em>*</em></span><input type="text" maxlength="120" data-detailed-project-name value="${escapeHtml(detailedProjectDraft.projectName)}" placeholder="Например: Жилой комплекс, корпус 1" autocomplete="off" /></label>
+      <label><span>Раздел <em>*</em></span><input type="text" maxlength="140" data-detailed-project-section value="${escapeHtml(detailedProjectDraft.sectionName)}" placeholder="Например: АР, КР, ОВ, ВК, ЭОМ, АПС" autocomplete="off" /></label>
     </div>
-    <input class="hidden-file-input" type="file" data-detailed-project-file accept="\${escapeHtml(rule.accept)}" />
-    \${selectedFile}
+    <input class="hidden-file-input" type="file" data-detailed-project-file accept="${escapeHtml(rule.accept)}" />
+    ${selectedFile}
     <small class="proposal-create-file-hint">Один проект — один файл. Название проекта и раздел обязательны.</small>
-    <button class="primary-button proposal-create-submit" type="button" data-detailed-project-upload-submit\${disabled ? ' disabled' : ''}>\${detailedProjectDraft.uploaded ? 'Проект загружен' : 'Загрузить проект'}</button>
-  </article>\`;
+    <button class="primary-button proposal-create-submit" type="button" data-detailed-project-upload-submit${disabled ? ' disabled' : ''}>${detailedProjectDraft.uploaded ? 'Проект загружен' : 'Загрузить проект'}</button>
+  </article>`;
 }
 
 function renderDetailedProjectUpload() {
@@ -10721,14 +10721,14 @@ function renderDetailedProjectUpload() {
   });
   const chooseFile = (file) => {
     if (!file) return;
-    if (file.size > rule.maxMb * 1024 * 1024) { showToast(\`\${tr('fileTooLarge')}: \${rule.maxMb} МБ\`); return; }
-    if (!isAllowedFile(file, rule)) { showToast(\`\${tr('unsupportedFormat')}: \${rule.formats}\`); return; }
+    if (file.size > rule.maxMb * 1024 * 1024) { showToast(`${tr('fileTooLarge')}: ${rule.maxMb} МБ`); return; }
+    if (!isAllowedFile(file, rule)) { showToast(`${tr('unsupportedFormat')}: ${rule.formats}`); return; }
     detailedProjectDraft.file = fileMetadata(file);
     detailedProjectDraft.sourceFile = file;
     detailedProjectDraft.uploaded = false;
     saveDetailedProjectDraft();
     renderDetailedProjectUpload();
-    showToast(\`Файл выбран: \${file.name}\`);
+    showToast(`Файл выбран: ${file.name}`);
   };
   fileInput?.addEventListener('change', () => {
     chooseFile(fileInput.files?.[0]);
@@ -10785,7 +10785,7 @@ function renderDetailedProjectUpload() {
     detailedProjectDraft.uploaded = true;
     saveDetailedProjectDraft();
     renderDetailedProjectUpload();
-    showToast(\`Проект «\${detailedProjectDraft.projectName}» · \${detailedProjectDraft.sectionName} загружен\`);
+    showToast(`Проект «${detailedProjectDraft.projectName}» · ${detailedProjectDraft.sectionName} загружен`);
   });
 }
 
