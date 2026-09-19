@@ -10694,6 +10694,7 @@ function detailedProjectUploadMarkup() {
 }
 
 function renderDetailedProjectUpload() {
+  const rule = uploadRules.project;
   const rootElement = $('[data-detailed-project-upload]');
   if (!rootElement) return;
   rootElement.innerHTML = detailedProjectUploadMarkup();
