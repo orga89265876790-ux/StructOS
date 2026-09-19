@@ -1987,6 +1987,7 @@ function applyLanguage(next) {
   renderObjects();
   renderWidgets();
   renderWidgetPicker();
+renderDetailedProjectUpload();
   renderCashflow();
   renderPersonIdentity();
   renderProfilePersonalData();
@@ -10067,7 +10068,7 @@ function isDemoAccount() {
 async function pushRegistration() {
   const current = await navigator.serviceWorker.getRegistration();
   if (current) return current;
-  return navigator.serviceWorker.register('./sw.js?v=112', { updateViaCache: 'none' });
+  return navigator.serviceWorker.register('./sw.js?v=113', { updateViaCache: 'none' });
 }
 
 async function pushNotificationState() {
@@ -10647,6 +10648,147 @@ async function forceRefresh() {
 }
 
 $('[data-language]').addEventListener('change', (event) => applyLanguage(event.target.value));
+
+const detailedProjectDraft = {
+  projectName: '',
+  sectionName: '',
+  file: null,
+  sourceFile: null,
+  uploaded: false
+};
+
+try {
+  const savedDetailedProjectDraft = JSON.parse(localStorage.getItem('structos-detailed-project-draft') || 'null');
+  if (savedDetailedProjectDraft && typeof savedDetailedProjectDraft === 'object') {
+    detailedProjectDraft.projectName = String(savedDetailedProjectDraft.projectName || '').slice(0, 120);
+    detailedProjectDraft.sectionName = String(savedDetailedProjectDraft.sectionName || '').slice(0, 140);
+  }
+} catch {}
+
+function saveDetailedProjectDraft() {
+  localStorage.setItem('structos-detailed-project-draft', JSON.stringify({
+    projectName: detailedProjectDraft.projectName,
+    sectionName: detailedProjectDraft.sectionName,
+    file: detailedProjectDraft.file,
+    uploaded: detailedProjectDraft.uploaded
+  }));
+}
+
+function detailedProjectUploadMarkup() {
+  const rule = uploadRules.project;
+  const selectedFile = detailedProjectDraft.file
+    ? \`<div class="proposal-create-selected-file"><span aria-hidden="true">▤</span><div><strong>\${escapeHtml(detailedProjectDraft.file.name)}</strong><small>\${escapeHtml(fileFormatLabel(detailedProjectDraft.file))} · \${escapeHtml(fileSize(detailedProjectDraft.file.size))}</small></div><button type="button" data-detailed-project-replace-file>\${escapeHtml(tr('replace'))}</button><button class="proposal-create-delete-file" type="button" data-detailed-project-delete-file aria-label="\${escapeHtml(tr('deleteFile'))}" title="\${escapeHtml(tr('deleteFile'))}">×</button></div>\`
+    : \`<div class="proposal-create-dropzone" data-detailed-project-dropzone role="button" tabindex="0"><span aria-hidden="true">↑</span><div><strong>Выбрать проект</strong><small>Перетащите файл сюда или нажмите для выбора · \${escapeHtml(rule.formats)} · до \${rule.maxMb} МБ</small></div></div>\`;
+  const disabled = !detailedProjectDraft.file || !detailedProjectDraft.projectName.trim() || !detailedProjectDraft.sectionName.trim() || detailedProjectDraft.uploaded;
+  return \`<article class="proposal-create-card is-project detailed-project-upload-card">
+    <header><span aria-hidden="true">▤</span><div><h2>Загрузить проект</h2><p>Укажите название проекта и раздел, затем загрузите один файл проекта.</p></div></header>
+    <div class="proposal-create-fields">
+      <label><span>Название проекта <em>*</em></span><input type="text" maxlength="120" data-detailed-project-name value="\${escapeHtml(detailedProjectDraft.projectName)}" placeholder="Например: Жилой комплекс, корпус 1" autocomplete="off" /></label>
+      <label><span>Раздел <em>*</em></span><input type="text" maxlength="140" data-detailed-project-section value="\${escapeHtml(detailedProjectDraft.sectionName)}" placeholder="Например: АР, КР, ОВ, ВК, ЭОМ, АПС" autocomplete="off" /></label>
+    </div>
+    <input class="hidden-file-input" type="file" data-detailed-project-file accept="\${escapeHtml(rule.accept)}" />
+    \${selectedFile}
+    <small class="proposal-create-file-hint">Один проект — один файл. Название проекта и раздел обязательны.</small>
+    <button class="primary-button proposal-create-submit" type="button" data-detailed-project-upload-submit\${disabled ? ' disabled' : ''}>\${detailedProjectDraft.uploaded ? 'Проект загружен' : 'Загрузить проект'}</button>
+  </article>\`;
+}
+
+function renderDetailedProjectUpload() {
+  const rootElement = $('[data-detailed-project-upload]');
+  if (!rootElement) return;
+  rootElement.innerHTML = detailedProjectUploadMarkup();
+  const nameInput = $('[data-detailed-project-name]', rootElement);
+  const sectionInput = $('[data-detailed-project-section]', rootElement);
+  const fileInput = $('[data-detailed-project-file]', rootElement);
+  const refreshSubmit = () => {
+    const button = $('[data-detailed-project-upload-submit]', rootElement);
+    if (button) button.disabled = !detailedProjectDraft.file || !detailedProjectDraft.projectName.trim() || !detailedProjectDraft.sectionName.trim() || detailedProjectDraft.uploaded;
+  };
+  nameInput?.addEventListener('input', () => {
+    detailedProjectDraft.projectName = nameInput.value.slice(0, 120);
+    detailedProjectDraft.uploaded = false;
+    nameInput.removeAttribute('aria-invalid');
+    saveDetailedProjectDraft();
+    refreshSubmit();
+  });
+  sectionInput?.addEventListener('input', () => {
+    detailedProjectDraft.sectionName = sectionInput.value.slice(0, 140);
+    detailedProjectDraft.uploaded = false;
+    sectionInput.removeAttribute('aria-invalid');
+    saveDetailedProjectDraft();
+    refreshSubmit();
+  });
+  const chooseFile = (file) => {
+    if (!file) return;
+    if (file.size > rule.maxMb * 1024 * 1024) { showToast(\`\${tr('fileTooLarge')}: \${rule.maxMb} МБ\`); return; }
+    if (!isAllowedFile(file, rule)) { showToast(\`\${tr('unsupportedFormat')}: \${rule.formats}\`); return; }
+    detailedProjectDraft.file = fileMetadata(file);
+    detailedProjectDraft.sourceFile = file;
+    detailedProjectDraft.uploaded = false;
+    saveDetailedProjectDraft();
+    renderDetailedProjectUpload();
+    showToast(\`Файл выбран: \${file.name}\`);
+  };
+  fileInput?.addEventListener('change', () => {
+    chooseFile(fileInput.files?.[0]);
+    fileInput.value = '';
+  });
+  $('[data-detailed-project-replace-file]', rootElement)?.addEventListener('click', () => fileInput?.click());
+  $('[data-detailed-project-delete-file]', rootElement)?.addEventListener('click', () => {
+    detailedProjectDraft.file = null;
+    detailedProjectDraft.sourceFile = null;
+    detailedProjectDraft.uploaded = false;
+    saveDetailedProjectDraft();
+    renderDetailedProjectUpload();
+    showToast(tr('fileDeleted'));
+  });
+  const dropzone = $('[data-detailed-project-dropzone]', rootElement);
+  dropzone?.addEventListener('click', () => fileInput?.click());
+  dropzone?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      fileInput?.click();
+    }
+  });
+  ['dragenter', 'dragover'].forEach((type) => dropzone?.addEventListener(type, (event) => {
+    event.preventDefault();
+    dropzone.classList.add('is-dragging');
+  }));
+  ['dragleave', 'drop'].forEach((type) => dropzone?.addEventListener(type, (event) => {
+    event.preventDefault();
+    dropzone.classList.remove('is-dragging');
+  }));
+  dropzone?.addEventListener('drop', (event) => {
+    if (event.dataTransfer.files.length > 1) showToast(tr('onlyOneFile'));
+    chooseFile(event.dataTransfer.files?.[0]);
+  });
+  $('[data-detailed-project-upload-submit]', rootElement)?.addEventListener('click', () => {
+    detailedProjectDraft.projectName = nameInput?.value.trim().slice(0, 120) || '';
+    detailedProjectDraft.sectionName = sectionInput?.value.trim().slice(0, 140) || '';
+    if (!detailedProjectDraft.projectName) {
+      nameInput?.setAttribute('aria-invalid', 'true');
+      nameInput?.focus();
+      showToast('Укажите название проекта');
+      return;
+    }
+    if (!detailedProjectDraft.sectionName) {
+      sectionInput?.setAttribute('aria-invalid', 'true');
+      sectionInput?.focus();
+      showToast('Укажите раздел проекта');
+      return;
+    }
+    if (!detailedProjectDraft.file) {
+      showToast('Загрузите файл проекта');
+      return;
+    }
+    detailedProjectDraft.uploaded = true;
+    saveDetailedProjectDraft();
+    renderDetailedProjectUpload();
+    showToast(\`Проект «\${detailedProjectDraft.projectName}» · \${detailedProjectDraft.sectionName} загружен\`);
+  });
+}
+
+
 $('[data-refresh-page]').addEventListener('click', (event) => {
   event.currentTarget.classList.add('is-refreshing');
   setTimeout(() => window.location.reload(), 180);
