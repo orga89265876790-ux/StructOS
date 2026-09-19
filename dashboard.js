@@ -10690,6 +10690,7 @@ function detailedProjectUploadMarkup() {
     ${selectedFile}
     <small class="proposal-create-file-hint">Один проект — один файл. Название проекта и раздел обязательны.</small>
     <button class="primary-button proposal-create-submit" type="button" data-detailed-project-upload-submit${disabled ? ' disabled' : ''}>${detailedProjectDraft.uploaded ? 'Проект загружен' : 'Загрузить проект'}</button>
+    ${detailedProjectDraft.uploaded ? '<button class="primary-button proposal-create-submit" type="button" data-detailed-project-analyze>Разобрать проект</button>' : ''}
   </article>`;
 }
 
@@ -10786,6 +10787,9 @@ function renderDetailedProjectUpload() {
     saveDetailedProjectDraft();
     renderDetailedProjectUpload();
     showToast(`Проект «${detailedProjectDraft.projectName}» · ${detailedProjectDraft.sectionName} загружен`);
+  });
+  $('[data-detailed-project-analyze]', rootElement)?.addEventListener('click', () => {
+    showToast(`Запускаем разбор проекта «${detailedProjectDraft.projectName}» · ${detailedProjectDraft.sectionName}`);
   });
 }
 
