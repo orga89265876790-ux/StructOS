@@ -3172,3 +3172,250 @@ table.commercial-proposal-labor-table.is-compact-proposal-table td:nth-last-chil
   .project-drawing-canvas { height: 270px; }.drawing-focus { left: 38%; width: 94px; height: 70px; }
   .project-drawing-scene > footer b { width: 100%; margin-left: 0; }
 }
+
+/* Responsive QA pass: detailed project workspace */
+.detailed-project-detail-panel,
+.detailed-project-detail-panel > div,
+.project-deep-workspace,
+.project-deep-section,
+.project-deep-section-head > div,
+.project-info-hero > header > div { min-width: 0; max-width: 100%; }
+.detailed-project-detail-panel { overflow-x: clip; }
+.project-deep-workspace :is(h2, h3, p, strong, small, dd, em),
+.detailed-project-open-summary :is(strong, p) { overflow-wrap: anywhere; }
+
+/* Desktop readability: the first version scaled the interface down too far. */
+.project-info-hero p { font-size: 11px; }
+.project-demo-notice p { font-size: 10px; }
+.project-deep-nav a { font-size: 9px; }
+.project-deep-section-head small { font-size: 8px; }
+.project-deep-section-head p { font-size: 10px; }
+.project-sheet-card header small { font-size: 8px; }
+.project-sheet-card h3 { font-size: 13px; }
+.project-sheet-card > p { font-size: 10px; }
+.project-sheet-card > section > strong { font-size: 10px; }
+.project-sheet-card li { font-size: 8px; }
+.project-sheet-question label { font-size: 9px; }
+.project-sheet-question input,
+.project-sheet-question button,
+.project-sheet-download,
+.project-drawing-button { font-size: 9px; }
+.project-sheet-question > small { font-size: 8px; }
+.project-spec-table th { font-size: 9px; }
+.project-spec-table td { font-size: 10px; }
+.project-spec-table td strong { font-size: 11px; }
+.project-spec-table td small { font-size: 8px; }
+.project-sheet-pill { font-size: 9px; }
+.project-spec-actions .outline-button,
+.project-spec-actions .project-drawing-button { font-size: 9px; }
+.project-visual-grid small { font-size: 8px; }
+.project-visual-grid h3 { font-size: 12px; }
+.project-visual-grid p { font-size: 10px; }
+.project-insight-card > header > span,
+.project-severity { font-size: 8px; }
+.project-insight-card h3 { font-size: 12px; }
+.project-insight-card p { font-size: 10px; }
+.project-question-columns header small { font-size: 8px; }
+.project-question-columns h3 { font-size: 13px; }
+.project-question-columns li strong { font-size: 10px; }
+.project-question-columns li small { font-size: 8px; }
+.project-question-columns .project-drawing-button { font-size: 8px; }
+.project-error-group h3 { font-size: 12px; }
+.project-error-group header p { font-size: 8px; }
+.project-error-group .project-insight-card h3 { font-size: 11px; }
+.project-error-group .project-drawing-button { font-size: 8px; }
+.project-extra-grid h3 { font-size: 11px; }
+.project-extra-grid p { font-size: 9px; }
+.project-extra-grid small { font-size: 8px; }
+.project-extra-grid .project-drawing-button { font-size: 8px; }
+.project-sequence-list small { font-size: 8px; }
+.project-sequence-list h3 { font-size: 12px; }
+.project-sequence-list p { font-size: 9px; }
+.project-sequence-list em { font-size: 8px; }
+.project-mismatch-list h3 { font-size: 11px; }
+.project-mismatch-list header b { font-size: 8px; }
+.project-mismatch-list section small { font-size: 7px; }
+.project-mismatch-list section strong { font-size: 10px; }
+.project-equipment-grid header small { font-size: 8px; }
+.project-equipment-grid h3 { font-size: 11px; }
+.project-equipment-grid header b { font-size: 9px; }
+.project-equipment-grid dt { font-size: 8px; }
+.project-equipment-grid dd { font-size: 9px; }
+.project-material-columns h3 { font-size: 10px; }
+.project-material-columns li > span,
+.project-material-columns > article > p { font-size: 9px; }
+.project-material-columns .project-drawing-button { font-size: 8px; }
+.project-drawing-scene header small,
+.project-drawing-scene footer > span,
+.project-drawing-scene footer b { font-size: 8px; }
+.project-drawing-scene header strong { font-size: 12px; }
+.project-drawing-scene header b { font-size: 8px; }
+.project-drawing-explanation strong { font-size: 10px; }
+.project-drawing-explanation p { font-size: 9px; }
+.project-spec-viewer > nav button { font-size: 9px; }
+.project-install-guide > div > small,
+.project-install-guide > small { font-size: 8px; }
+.project-install-guide > div > p,
+.project-install-guide li p { font-size: 10px; }
+.project-install-guide > section > strong { font-size: 11px; }
+.project-install-guide > section span { font-size: 8px; }
+
+@media (max-width: 980px) {
+  .project-question-columns,
+  .project-equipment-grid,
+  .project-two-up { grid-template-columns: 1fr; }
+  .project-material-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* A specification becomes a two-column card grid on tablets instead of a 930px table. */
+@media (max-width: 900px) {
+  .project-spec-table-scroll { overflow: visible; border: 0; border-radius: 0; }
+  .project-spec-table { min-width: 0; display: block; }
+  .project-spec-table thead { display: none; }
+  .project-spec-table tbody { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .project-spec-table tr { min-width: 0; padding: 11px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-soft); box-shadow: 0 8px 20px rgba(4, 65, 124, .07); }
+  .project-spec-table td { min-width: 0; padding: 8px 0; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; border-bottom: 1px solid var(--line); }
+  .project-spec-table td::before { content: attr(data-label); color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+  .project-spec-table td:nth-child(3),
+  .project-spec-table td:nth-child(6),
+  .project-spec-table td:nth-child(7) { grid-column: 1 / -1; }
+  .project-spec-table td:nth-child(7) { padding-bottom: 0; border-bottom: 0; }
+  .project-spec-table td strong { max-width: none; }
+  .project-spec-actions { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-spec-actions .outline-button,
+  .project-spec-actions .project-drawing-button { width: 100%; min-height: 42px; white-space: normal; }
+  .project-spec-empty-row { grid-column: 1 / -1; }
+  .project-spec-empty-row td { grid-column: 1 / -1; border-bottom: 0; }
+  .project-spec-empty-row td::before { display: none; }
+}
+
+@media (max-width: 720px) {
+  .detailed-project-detail-panel { margin-inline: -2px; }
+  .project-deep-workspace { gap: 10px; margin-top: 10px; }
+  .project-deep-nav { top: 5px; margin-inline: -2px; padding: 5px; }
+  .project-deep-nav a { min-height: 44px; padding-inline: 12px; font-size: 11px; }
+  .project-info-hero h2 { font-size: 24px; }
+  .project-info-hero p { font-size: 12px; line-height: 1.45; }
+  .project-info-hero > header > b { font-size: 9px; }
+  .project-info-stats article > small { font-size: 10px; }
+  .project-demo-notice { align-items: flex-start; }
+  .project-demo-notice p { font-size: 12px; line-height: 1.5; }
+  .project-deep-section-head { align-items: start; }
+  .project-deep-section-head small { font-size: 9px; }
+  .project-deep-section-head h2 { font-size: 19px; line-height: 1.18; }
+  .project-deep-section-head p { font-size: 12px; line-height: 1.45; }
+  .project-deep-section-head > button { width: 100%; min-height: 44px; font-size: 11px; white-space: normal; }
+  .project-sheet-card { padding: 12px; }
+  .project-sheet-card header small { font-size: 9px; }
+  .project-sheet-card h3 { font-size: 15px; }
+  .project-sheet-card > p { min-height: 0; font-size: 12px; }
+  .project-sheet-card > section > strong { font-size: 12px; }
+  .project-sheet-card li { padding: 6px 9px; font-size: 10px; }
+  .project-sheet-download,
+  .project-drawing-button,
+  .project-sheet-question input,
+  .project-sheet-question button { min-height: 44px; font-size: 11px; }
+  .project-sheet-question label { font-size: 11px; line-height: 1.4; }
+  .project-sheet-question input { font-size: 12px; }
+  .project-sheet-question > small { font-size: 10px; }
+  .project-spec-table tbody { grid-template-columns: 1fr; }
+  .project-spec-table td { font-size: 12px; }
+  .project-spec-table td::before { font-size: 9px; }
+  .project-spec-table td strong { font-size: 13px; }
+  .project-spec-table td small { font-size: 10px; line-height: 1.4; }
+  .project-sheet-pill { font-size: 10px; }
+  .project-spec-actions .outline-button,
+  .project-spec-actions .project-drawing-button { min-height: 44px; font-size: 11px; }
+  .project-visual-grid small { font-size: 9px; }
+  .project-visual-grid h3 { font-size: 14px; }
+  .project-visual-grid p { font-size: 12px; }
+  .project-insight-card > header { align-items: flex-start; flex-wrap: wrap; }
+  .project-insight-card > header > span,
+  .project-severity { font-size: 9px; }
+  .project-insight-card h3 { font-size: 14px; }
+  .project-insight-card p { font-size: 12px; }
+  .project-question-columns header small { font-size: 9px; }
+  .project-question-columns h3 { font-size: 14px; }
+  .project-question-columns li { min-height: 72px; padding: 11px; }
+  .project-question-columns li strong { font-size: 12px; }
+  .project-question-columns li small { font-size: 10px; }
+  .project-question-columns .project-drawing-button { min-height: 44px; font-size: 11px; }
+  .project-error-group h3 { font-size: 14px; }
+  .project-error-group header p { font-size: 10px; }
+  .project-error-group .project-insight-card h3 { font-size: 13px; }
+  .project-error-group .project-drawing-button { min-height: 44px; font-size: 11px; }
+  .project-extra-grid > article,
+  .project-sequence-list > li { align-items: start; }
+  .project-extra-grid h3,
+  .project-sequence-list h3 { font-size: 13px; }
+  .project-extra-grid p,
+  .project-sequence-list p { font-size: 11px; }
+  .project-extra-grid small,
+  .project-sequence-list small,
+  .project-sequence-list em { font-size: 9px; }
+  .project-extra-grid .project-drawing-button,
+  .project-sequence-list .project-drawing-button { min-height: 44px; font-size: 11px; }
+  .project-mismatch-list h3 { font-size: 13px; }
+  .project-mismatch-list header b { font-size: 9px; }
+  .project-mismatch-list section small { font-size: 8px; }
+  .project-mismatch-list section strong { font-size: 11px; }
+  .project-equipment-grid header small { font-size: 9px; }
+  .project-equipment-grid h3 { font-size: 13px; }
+  .project-equipment-grid header b { font-size: 10px; }
+  .project-equipment-grid dt { font-size: 9px; }
+  .project-equipment-grid dd { font-size: 11px; }
+  .project-material-columns h3 { font-size: 12px; }
+  .project-material-columns li > span,
+  .project-material-columns > article > p { font-size: 11px; }
+  .project-material-columns .project-drawing-button { min-height: 44px; font-size: 11px; }
+  .detailed-project-open-summary strong { font-size: 17px; line-height: 1.2; }
+  .detailed-project-open-summary p { font-size: 11px; }
+  .app-dialog.project-analysis-dialog { width: 100vw; max-width: none; height: 100dvh; max-height: none; margin: 0; border: 0; border-radius: 0; }
+  .app-dialog.project-analysis-dialog form { max-height: 100dvh; padding: calc(16px + env(safe-area-inset-top)) 12px calc(16px + env(safe-area-inset-bottom)); }
+  .project-spec-viewer > nav button { min-height: 46px; font-size: 11px; }
+  .project-drawing-scene header small,
+  .project-drawing-scene footer > span,
+  .project-drawing-scene footer b { font-size: 9px; }
+  .project-drawing-scene header strong { font-size: 14px; }
+  .project-drawing-scene header b { font-size: 9px; }
+  .project-drawing-explanation strong { font-size: 12px; }
+  .project-drawing-explanation p { font-size: 11px; }
+  .project-install-guide > div > small,
+  .project-install-guide > small { font-size: 9px; }
+  .project-install-guide > div > p,
+  .project-install-guide li p { font-size: 12px; }
+  .project-install-guide > section > strong { font-size: 12px; }
+  .project-install-guide > section span { font-size: 10px; }
+}
+
+@media (max-width: 480px) {
+  .project-analysis-launch-summary { padding: 12px; }
+  .project-analysis-launch-summary strong { font-size: 21px; line-height: 1.15; }
+  .project-analysis-launch-summary p { font-size: 11px; }
+  .project-analysis-launch-card { padding: 12px; }
+  .project-analysis-launch-card small { font-size: 9px; }
+  .project-analysis-launch-card h2 { font-size: 14px; white-space: normal; }
+  .project-analysis-launch-card p { font-size: 11px; white-space: normal; }
+  .project-analysis-launch-card > b { font-size: 9px; }
+  .project-info-stats { gap: 6px; }
+  .project-info-stats article { min-width: 0; }
+  .project-info-stats article > strong { font-size: 19px; }
+  .project-info-stats article > small { font-size: 9px; }
+  .project-deep-section { padding: 10px; border-radius: 14px; }
+  .project-deep-section-head { grid-template-columns: 36px minmax(0, 1fr); gap: 9px; }
+  .project-deep-section-head > span { width: 36px; height: 36px; }
+  .project-deep-section-head > button { grid-column: 1 / -1; }
+  .project-sheet-card > header { gap: 8px; }
+  .project-sheet-download { grid-column: 1 / -1; width: 100%; justify-content: center; }
+  .project-sheet-actions .project-drawing-button { width: 100%; }
+  .project-spec-table tr { grid-template-columns: 1fr 1fr; padding: 10px; }
+  .project-spec-actions { grid-template-columns: 1fr; }
+  .project-mismatch-list > article > div { grid-template-columns: 1fr; }
+  .project-mismatch-list > article > div > i { justify-self: center; transform: rotate(90deg); }
+  .project-equipment-grid > article > header { grid-template-columns: 37px minmax(0, 1fr); }
+  .project-equipment-grid header b { grid-column: 2; justify-self: start; }
+  .project-material-columns > article > header { min-height: 58px; }
+  .project-drawing-scene > header { align-items: flex-start; flex-direction: column; }
+  .project-drawing-canvas { height: min(42dvh, 250px); }
+  .drawing-focus { left: 33%; width: 88px; height: 66px; }
+}
