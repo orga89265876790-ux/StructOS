@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=66" />
+    <link rel="stylesheet" href="dashboard.css?v=67" />
     <link rel="stylesheet" href="home-dashboard.css?v=2" />
   </head>
   <body class="is-cabinet-entering">
@@ -275,7 +275,7 @@
 
         <section class="tab-panel project-workflow-panel" data-panel="project-analysis" aria-label="Детально разобрать проект" hidden>
           <div class="page-title workflow-page-title">
-            <div><span class="eyebrow">STRUCTOS PROJECT ANALYSIS</span><h1 data-i18n="detailedProjectAnalysis">Детально разобрать проект</h1><p>Загрузите проект, укажите его название и раздел. Дальше StructOS будет разбирать проект по этапам.</p></div>
+            <div><span class="eyebrow">STRUCTOS PROJECT ANALYSIS</span><h1 data-i18n="detailedProjectAnalysis">Детально разобрать проект</h1><p>Листы, спецификация, риски, вопросы и последовательность монтажа в одном месте.</p></div>
             <button class="outline-button" type="button" data-open-panel="projects">← <span data-i18n="myProjects">Мои проекты</span></button>
           </div>
           <div class="proposal-create-actions detailed-project-create-actions" data-detailed-project-upload aria-label="Загрузка проекта для детального анализа"></div>
@@ -424,17 +424,17 @@
       if ('serviceWorker' in navigator) {
         let reloadingForUpdate = false;
         navigator.serviceWorker.addEventListener('controllerchange', () => {
-          if (reloadingForUpdate || sessionStorage.getItem('structos-sw-reload-v113') === '1') return;
+          if (reloadingForUpdate || sessionStorage.getItem('structos-sw-reload-v114') === '1') return;
           reloadingForUpdate = true;
-          sessionStorage.setItem('structos-sw-reload-v113', '1');
+          sessionStorage.setItem('structos-sw-reload-v114', '1');
           window.location.reload();
         });
-        navigator.serviceWorker.register('./sw.js?v=113', { updateViaCache: 'none' })
+        navigator.serviceWorker.register('./sw.js?v=114', { updateViaCache: 'none' })
           .then((registration) => registration.update())
           .catch(() => {});
       }
     </script>
-    <script type="module" src="dashboard.js?v=77"></script>
+    <script type="module" src="dashboard.js?v=78"></script>
     <script type="module" src="home-dashboard.js?v=1"></script>
   </body>
 </html>

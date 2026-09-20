@@ -3068,6 +3068,7 @@ function setPanel(name) {
   if (next === 'projects') renderMyProjects();
   if (next === 'proposals') renderCommercialProposals();
   if (next === 'proposal-detail') renderCommercialProposalWorkspace();
+  if (next === 'project-analysis') { renderDetailedProjectUpload(); renderDetailedProjectRecords(); }
   if (next === 'detailed-project-detail') renderDetailedProjectDetail();
   if (next === 'analysis-detail') renderAnalysisDetail();
   if (next === 'objects') renderObjects();
@@ -7747,6 +7748,36 @@ const projectAnalysisTabs = [
   { id: 'boq', label: 'billOfQuantities', icon: '≡' }
 ];
 
+const PROJECT_SHEET_QUESTIONS_KEY = 'structos-project-sheet-questions-v1';
+
+function projectAnalysisLauncherCard(object) {
+  const file = objectFile(object, 'project');
+  const version = latestDocumentVersion(file);
+  if (!file || !version) return '';
+  const analyzed = isDocumentVersionAnalyzed(version);
+  const section = projectSectionFor(object);
+  return `<article class="project-analysis-launch-card ${analyzed ? 'is-ready' : 'is-pending'}"><span aria-hidden="true">${analyzed ? '✓' : '…'}</span><div><small>${escapeHtml(section)}</small><h2>${escapeHtml(object.name)}</h2><p>${escapeHtml(version.name)} · ${escapeHtml(formatStorage(version.size))}</p></div><b>${escapeHtml(analyzed ? 'Разбор готов' : 'Ожидает анализа')}</b><button class="${analyzed ? 'outline-button' : 'primary-button'}" type="button" data-launch-deep-project="${escapeHtml(object.id)}" data-project-version-id="${escapeHtml(version.id)}">${escapeHtml(analyzed ? 'Открыть разбор' : 'Анализировать проект')}</button></article>`;
+}
+
+function renderProjectAnalysisLauncher() {
+  const rootElement = $('[data-project-analysis-launcher]');
+  if (!rootElement) return;
+  const projects = myProjectObjects().filter((object) => objectFile(object, 'project'));
+  if (!projects.length) {
+    rootElement.innerHTML = `<section class="project-analysis-launch-empty"><span aria-hidden="true">▤</span><h2>Сначала загрузите проект</h2><p>После анализа здесь появятся листы, спецификация, риски, вопросы и монтажные подсказки.</p><button class="primary-button" type="button" data-create-analysis-project>＋ Загрузить проект</button></section>`;
+  } else {
+    rootElement.innerHTML = `<section class="project-analysis-launch-summary"><span aria-hidden="true">▤</span><div><small>ПРОЕКТЫ ДЛЯ РАЗБОРА</small><strong>${projects.length}</strong></div><p>Выберите проект — StructOS откроет полный разбор по листам и позициям.</p></section><div class="project-analysis-launch-list">${projects.map(projectAnalysisLauncherCard).join('')}</div><button class="outline-button project-analysis-add" type="button" data-create-analysis-project>＋ Добавить ещё проект</button>`;
+  }
+  $$('[data-launch-deep-project]', rootElement).forEach((button) => button.addEventListener('click', () => {
+    const object = objectRegistry.find((item) => item.id === button.dataset.launchDeepProject);
+    const version = documentVersionById(objectFile(object, 'project'), button.dataset.projectVersionId);
+    if (!object || !version) return;
+    if (isDocumentVersionAnalyzed(version)) openAnalyzedDocument(object.id, 'project', version.id);
+    else analyzeObjectDocument(object.id, 'project', version.id);
+  }));
+  $$('[data-create-analysis-project]', rootElement).forEach((button) => button.addEventListener('click', () => openProjectObjectWizard({ quickProjectOnly: true, workspaceOrigin: 'project-analysis' })));
+}
+
 function isObjectDocumentAnalyzed(object, file) {
   if (!object || !file) return false;
   return isDocumentVersionAnalyzed(latestDocumentVersion(file));
@@ -9111,6 +9142,357 @@ function projectAnalysisTabContent(tab, version = null, kind = 'project') {
   return analysisEmptyTable(['recordNumber', 'workName', 'unit', 'quantity', 'source']);
 }
 
+const PROJECT_ANALYSIS_DEMO = Object.freeze({
+  sheets: [
+    { number: '01', title: 'Общие данные', description: 'Состав проекта, условные обозначения, общие требования и ведомость листов.', requires: ['Проверить исходные данные', 'Сверить условные обозначения', 'Подготовить ППР'] },
+    { number: '05', title: 'План размещения оборудования', description: 'Точки установки оборудования, привязки к осям и высотные отметки.', requires: ['Разметка', 'Лазерный уровень', 'Крепёж по основанию'] },
+    { number: '12', title: 'План кабельных трасс', description: 'Основные трассы, направления прокладки и места пересечения конструкций.', requires: ['Кабель', 'Лоток', 'Проходки', 'Огнезаделка'] },
+    { number: '18', title: 'Схема подключения', description: 'Подключение оборудования, номера линий, питание и сигнальные цепи.', requires: ['Маркировка', 'Наконечники', 'Измерительный инструмент'] },
+    { number: '27', title: 'Узлы проходок и креплений', description: 'Типовые узлы крепления, проходы через стены и требования к заделке.', requires: ['Бурение', 'Анкеры', 'Огнестойкий герметик'] },
+    { number: '43', title: 'Спецификация оборудования', description: 'Перечень оборудования и материалов с обозначениями и количеством.', requires: ['Проверка комплектности', 'Входной контроль', 'Складирование'] }
+  ],
+  specification: [
+    { designation: 'ППКП-01', name: 'Прибор приёмно-контрольный', unit: 'шт.', quantity: 1, sheet: '05', category: 'equipment', characteristics: '24 В · 8 шлейфов', place: 'Помещение охраны', connection: '220 В / резерв 24 В', related: 'АКБ, извещатели, оповещатели' },
+    { designation: 'ИП 212-141', name: 'Извещатель пожарный дымовой', unit: 'шт.', quantity: 48, sheet: '05', category: 'equipment', characteristics: 'Адресный, потолочный', place: 'Коридоры и помещения', connection: 'Линия К1', related: 'База извещателя' },
+    { designation: 'ОПОП 1-R3', name: 'Оповещатель светозвуковой', unit: 'шт.', quantity: 8, sheet: '05', category: 'equipment', characteristics: '12–24 В, IP41', place: 'Пути эвакуации', connection: 'Линия ОП1', related: 'Коробка подключения' },
+    { designation: 'ВВГнг-LS 5×6', name: 'Кабель силовой', unit: 'м', quantity: 320, sheet: '12', category: 'material', characteristics: '0,66 кВ · нг-LS', place: 'Основная трасса', connection: 'Щит — оборудование', related: 'Лоток, крепления' },
+    { designation: 'КПСнг(А)-FRLS 2×2×0,75', name: 'Кабель огнестойкий', unit: 'м', quantity: 1240, sheet: '12', category: 'material', characteristics: 'FRLS · 180 мин', place: 'Линии пожарной автоматики', connection: 'Шлейфы К1–К8', related: 'Гофра, маркировка' },
+    { designation: 'ЛМ 100×50', name: 'Лоток металлический', unit: 'м', quantity: 185, sheet: '12', category: 'material', characteristics: 'Оцинкованный, перфорированный', place: 'Под потолком', connection: 'Заземление трассы', related: 'Кронштейны, крышка' },
+    { designation: 'КМ-О 70', name: 'Коробка монтажная огнестойкая', unit: 'шт.', quantity: 36, sheet: '18', category: 'material', characteristics: 'IP55 · E90', place: 'Ответвления линий', connection: 'Кабельные линии', related: 'Клеммы, вводы' },
+    { designation: 'АКБ 12-17', name: 'Аккумуляторная батарея', unit: 'шт.', quantity: 2, sheet: '18', category: 'equipment', characteristics: '12 В · 17 А·ч', place: 'Шкаф ППКП', connection: 'Резервное питание', related: 'ППКП-01' }
+  ],
+  risks: [
+    { severity: 'critical', title: 'Не определён тип огнезаделки', text: 'На проходках через противопожарные стены нет марки системы и предела огнестойкости.', source: 'Лист 27 · узел 4' },
+    { severity: 'critical', title: 'Нет трассы между точками К1.18 и К1.19', text: 'Монтаж невозможно однозначно выполнить без уточнения маршрута.', source: 'Лист 12 · зона Б–В/4–5' },
+    { severity: 'warning', title: 'Высота установки указана не для всех приборов', text: 'Потребуется согласование отметок до начала разметки.', source: 'Лист 05 · примечание 6' },
+    { severity: 'warning', title: 'Не показано резервное питание', text: 'В спецификации есть АКБ, но цепь подключения на схеме не раскрыта.', source: 'Лист 18 · ППКП-01' }
+  ],
+  customerQuestions: [
+    { title: 'Кто выполняет отверстия и восстановление отделки?', source: 'Лист 27 · проходки' },
+    { title: 'Когда будет передан готовый фронт работ?', source: 'Лист 05 · помещения 101–118' },
+    { title: 'Кто предоставляет подъёмник для монтажа выше 4 м?', source: 'Лист 05 · атриум' },
+    { title: 'Где согласовано место складирования материалов?', source: 'Общие данные · организация работ' }
+  ],
+  designerQuestions: [
+    { title: 'Уточнить марку кабеля линии К1.', source: 'Лист 18 · линия К1' },
+    { title: 'Уточнить высоту установки оборудования в коридорах.', source: 'Лист 05 · помещения 103–116' },
+    { title: 'На плане отсутствует трасса между точками К1.18 и К1.19.', source: 'Лист 12 · зона Б–В/4–5' },
+    { title: 'Количество извещателей расходится со спецификацией.', source: 'Лист 05 ↔ лист 43' },
+    { title: 'Не указан способ проходки противопожарной стены.', source: 'Лист 27 · узел 4' }
+  ],
+  errors: [
+    { severity: 'critical', title: 'Разрыв кабельной трассы', text: 'Отсутствует участок между двумя проектными точками.', source: 'Лист 12 · К1.18–К1.19' },
+    { severity: 'critical', title: 'Не определён узел огнезаделки', text: 'Нельзя подтвердить требуемый предел огнестойкости.', source: 'Лист 27 · узел 4' },
+    { severity: 'warning', title: 'Количество не совпадает', text: 'На плане 46 извещателей, в спецификации — 48.', source: 'Лист 05 ↔ лист 43' },
+    { severity: 'warning', title: 'Нет отметки установки', text: 'Для трёх оповещателей не указана высота.', source: 'Лист 05 · ОП1.4–ОП1.6' },
+    { severity: 'warning', title: 'Не раскрыто резервное питание', text: 'АКБ есть в спецификации, но нет на схеме подключения.', source: 'Лист 18 · ППКП-01' },
+    { severity: 'minor', title: 'Разные обозначения одной линии', text: 'В плане «К-1», на схеме «К1».', source: 'Листы 12 и 18' },
+    { severity: 'minor', title: 'Нет ссылки на типовой узел', text: 'Крепление показано без номера узла.', source: 'Лист 12 · ось Г' }
+  ],
+  additionalWorks: [
+    { title: 'Отверстия и проходки', text: 'Разметка и бурение конструкций', source: 'Лист 27' },
+    { title: 'Огнезаделка', text: 'Заделка проходок сертифицированной системой', source: 'Лист 27 · узел 4' },
+    { title: 'Крепления', text: 'Кронштейны, анкеры и подвесы трасс', source: 'Лист 12' },
+    { title: 'Маркировка', text: 'Маркировка кабелей, коробок и оборудования', source: 'Лист 18' },
+    { title: 'Заземление', text: 'Соединение металлических лотков с PE', source: 'Лист 12' },
+    { title: 'Демонтаж', text: 'Локальный демонтаж мешающих элементов', source: 'Лист 05' },
+    { title: 'Восстановление отделки', text: 'Заделка штроб и мест проходок', source: 'Лист 27' },
+    { title: 'Подъём материала', text: 'Доставка оборудования на этажи', source: 'Общие данные' },
+    { title: 'Леса / вышки', text: 'Доступ к точкам выше 4 метров', source: 'Лист 05 · атриум' },
+    { title: 'Исполнительная документация', text: 'Схемы, акты скрытых работ и протоколы', source: 'Общие данные' }
+  ],
+  sequence: [
+    { title: 'Проверка исходных данных', text: 'Сверить листы, спецификацию и фактическую готовность помещений.', source: 'Лист 01' },
+    { title: 'Разметка трасс и оборудования', text: 'Перенести проектные точки и отметки на объект.', source: 'Листы 05, 12' },
+    { title: 'Проходки и крепёж', text: 'Выполнить отверстия, установить подвесы и кронштейны.', source: 'Лист 27' },
+    { title: 'Монтаж кабеленесущих систем', text: 'Собрать лотки и обеспечить непрерывность заземления.', source: 'Лист 12' },
+    { title: 'Прокладка и маркировка кабеля', text: 'Проложить линии с соблюдением радиусов и огнестойкости.', source: 'Листы 12, 18' },
+    { title: 'Установка и подключение оборудования', text: 'Смонтировать приборы, выполнить оконцевание и подключение.', source: 'Листы 05, 18' },
+    { title: 'Испытания и сдача', text: 'Провести измерения, пусконаладку и собрать исполнительную документацию.', source: 'Лист 01' }
+  ],
+  missing: [
+    { title: 'Кабельные вводы M20', text: 'Есть в спецификации — на узлах и планах не показаны.', source: 'Спецификация · поз. 84' },
+    { title: 'Модуль изоляции линии', text: 'Учтён в количестве 6 шт., место установки не определено.', source: 'Спецификация · поз. 31' },
+    { title: 'Комплект заземления лотка', text: 'Указан в ведомости, точки подключения отсутствуют.', source: 'Спецификация · поз. 112' }
+  ],
+  mismatches: [
+    { title: 'Кабель силовой', drawing: 'ВВГнг-LS 5×6', specification: 'ВВГнг-LS 5×4', source: 'Лист 18 ↔ спецификация поз. 67' },
+    { title: 'Коробка монтажная', drawing: 'IP55', specification: 'IP44', source: 'Лист 27 ↔ спецификация поз. 42' },
+    { title: 'Аккумуляторная батарея', drawing: '2 × 17 А·ч', specification: '2 × 12 А·ч', source: 'Лист 18 ↔ спецификация поз. 9' }
+  ],
+  materials: {
+    main: ['Кабель силовой ВВГнг-LS', 'Кабель огнестойкий КПСнг-FRLS', 'Лоток металлический'],
+    installation: ['Гофротруба', 'Коробки монтажные', 'Кронштейны и подвесы'],
+    fasteners: ['Анкеры М8', 'Дюбель-гвозди', 'Шпилька резьбовая'],
+    consumables: ['Наконечники', 'Маркировка', 'Стяжки', 'Изолента'],
+    possible: ['Огнестойкий герметик', 'Гильзы проходок', 'Материалы восстановления отделки']
+  }
+});
+
+function projectAnalysisFindCollection(version, aliases) {
+  const keys = new Set(aliases.map(cashSourceKey));
+  let result = null;
+  const walk = (node, depth = 0) => {
+    if (result || node == null || depth > 6 || typeof node !== 'object') return;
+    if (Array.isArray(node)) { node.forEach((item) => walk(item, depth + 1)); return; }
+    Object.entries(node).forEach(([key, value]) => {
+      if (result) return;
+      if (keys.has(cashSourceKey(key)) && Array.isArray(value) && value.length) { result = value; return; }
+      walk(value, depth + 1);
+    });
+  };
+  walk(version);
+  return result || [];
+}
+
+function projectAnalysisFindMetric(version, aliases, fallback = 0) {
+  const keys = new Set(aliases.map(cashSourceKey));
+  let result = null;
+  const walk = (node, depth = 0) => {
+    if (result != null || node == null || depth > 6 || typeof node !== 'object') return;
+    Object.entries(node).forEach(([key, value]) => {
+      if (result != null) return;
+      if (keys.has(cashSourceKey(key))) {
+        const number = Number(value);
+        if (Number.isFinite(number) && number >= 0) { result = number; return; }
+      }
+      if (value && typeof value === 'object') walk(value, depth + 1);
+    });
+  };
+  walk(version);
+  return result == null ? fallback : result;
+}
+
+function normalizeProjectSheet(entry, index) {
+  if (typeof entry === 'string' || typeof entry === 'number') return { id: `sheet-${index + 1}`, number: String(index + 1).padStart(2, '0'), title: String(entry), description: 'Содержание листа определено при анализе проекта.', requires: ['Проверить привязки', 'Подготовить материалы'] };
+  const item = entry && typeof entry === 'object' ? entry : {};
+  const number = item.number ?? item.sheetNumber ?? item.sheet ?? item.page ?? item.pageNumber ?? index + 1;
+  const title = item.title || item.name || item.sheetName || item.pageName || item.description || `Лист ${number}`;
+  const description = item.summary || item.description || item.content || item.explanation || 'Содержание листа определено при анализе проекта.';
+  const rawRequirements = item.requires || item.requirements || item.tools || item.needed || [];
+  const requires = Array.isArray(rawRequirements) ? rawRequirements.map((value) => typeof value === 'object' ? value.name || value.title || JSON.stringify(value) : String(value)).filter(Boolean).slice(0, 6) : [String(rawRequirements)].filter(Boolean);
+  return { id: `sheet-${index + 1}`, number: String(number), title: String(title), description: String(description), requires: requires.length ? requires : ['Проверить привязки', 'Подготовить материалы'] };
+}
+
+function normalizeProjectInsight(entry, index, severity = 'warning') {
+  if (typeof entry === 'string' || typeof entry === 'number') return { id: `insight-${index + 1}`, severity, title: String(entry), text: '', source: 'Источник в проекте' };
+  const item = entry && typeof entry === 'object' ? entry : {};
+  const rawSeverity = String(item.severity || item.level || item.risk || severity).toLowerCase();
+  const normalizedSeverity = /critical|крит|high|red/.test(rawSeverity) ? 'critical' : /minor|низ|low|green/.test(rawSeverity) ? 'minor' : 'warning';
+  return {
+    id: `insight-${index + 1}`,
+    severity: normalizedSeverity,
+    title: String(item.title || item.name || item.question || item.issue || item.text || `Позиция ${index + 1}`),
+    text: String(item.description || item.details || item.explanation || item.reason || ''),
+    source: String(item.source || item.sheet || item.page || item.location || 'Источник в проекте')
+  };
+}
+
+function loadProjectSheetQuestions() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(PROJECT_SHEET_QUESTIONS_KEY) || '[]');
+    return Array.isArray(saved) ? saved.filter((item) => item?.text && item?.objectId) : [];
+  } catch { return []; }
+}
+
+function saveProjectSheetQuestions(questions) {
+  localStorage.setItem(PROJECT_SHEET_QUESTIONS_KEY, JSON.stringify((Array.isArray(questions) ? questions : []).slice(-500)));
+}
+
+function questionsForProjectVersion(objectId, versionId) {
+  return loadProjectSheetQuestions().filter((item) => item.objectId === objectId && item.versionId === versionId);
+}
+
+function projectAnalysisModel(object, version) {
+  const catalog = cashSourceCatalogFromFileRecord(version, 'project');
+  const extractedSheets = projectAnalysisFindCollection(version, ['sheets', 'pages', 'drawings', 'projectSheets', 'листы', 'страницы', 'чертежи']);
+  const catalogSheets = [...new Set(catalog.map((entry) => entry.sourceSheet).filter(Boolean))];
+  const rawSheets = extractedSheets.length ? extractedSheets : catalogSheets;
+  const isDemo = !catalog.length && !rawSheets.length;
+  const sheets = (isDemo ? PROJECT_ANALYSIS_DEMO.sheets : rawSheets).map(normalizeProjectSheet);
+  const activeSheets = sheets.length ? sheets : PROJECT_ANALYSIS_DEMO.sheets.map(normalizeProjectSheet);
+  const specification = (catalog.length ? catalog : PROJECT_ANALYSIS_DEMO.specification).slice(0, 300).map((entry, index) => ({
+    id: `spec-${index + 1}`,
+    designation: String(entry.designation || entry.code || entry.mark || (catalog.length ? `П-${String(index + 1).padStart(3, '0')}` : '—')),
+    name: String(entry.name || entry.title || `Позиция ${index + 1}`),
+    unit: String(entry.unit || 'шт.'),
+    quantity: Number(entry.quantity) || 0,
+    sheet: String(entry.sheet || entry.sourceSheet || activeSheets[index % activeSheets.length]?.number || '—'),
+    category: String(entry.category || 'position'),
+    characteristics: String(entry.characteristics || entry.specification || 'По проекту'),
+    place: String(entry.place || entry.location || 'Смотреть на листе'),
+    connection: String(entry.connection || entry.power || 'По схеме подключения'),
+    related: String(entry.related || entry.relatedEquipment || 'Связанные позиции проекта')
+  }));
+  const collection = (aliases, fallback, severity) => {
+    const extracted = projectAnalysisFindCollection(version, aliases);
+    return (extracted.length ? extracted : isDemo ? fallback : []).map((entry, index) => normalizeProjectInsight(entry, index, severity));
+  };
+  const risks = collection(['risks', 'projectRisks', 'риски'], PROJECT_ANALYSIS_DEMO.risks, 'warning');
+  const customerQuestions = collection(['customerQuestions', 'clientQuestions', 'вопросыЗаказчику'], PROJECT_ANALYSIS_DEMO.customerQuestions, 'warning');
+  const designerQuestions = collection(['designerQuestions', 'authorQuestions', 'rdQuestions', 'вопросыПроектировщику'], PROJECT_ANALYSIS_DEMO.designerQuestions, 'warning');
+  const errors = collection(['errors', 'issues', 'discrepancies', 'mismatches', 'ошибки', 'несоответствия'], PROJECT_ANALYSIS_DEMO.errors, 'warning');
+  const additionalWorks = collection(['additionalWorks', 'extraWorks', 'дополнительныеРаботы'], PROJECT_ANALYSIS_DEMO.additionalWorks, 'warning');
+  const sequence = collection(['sequence', 'workSequence', 'installationSequence', 'последовательностьРабот'], PROJECT_ANALYSIS_DEMO.sequence, 'minor');
+  const missing = collection(['missingOnDrawings', 'specificationMissing', 'missingPositions', 'нетНаЧертежах'], PROJECT_ANALYSIS_DEMO.missing, 'warning');
+  const mismatchCollection = projectAnalysisFindCollection(version, ['characteristicMismatches', 'markMismatches', 'расхожденияХарактеристик']);
+  const mismatches = (mismatchCollection.length ? mismatchCollection : isDemo ? PROJECT_ANALYSIS_DEMO.mismatches : []).map((entry, index) => ({
+    id: `mismatch-${index + 1}`,
+    title: String(entry.title || entry.name || `Расхождение ${index + 1}`),
+    drawing: String(entry.drawing || entry.onDrawing || entry.project || '—'),
+    specification: String(entry.specification || entry.inSpecification || entry.spec || '—'),
+    source: String(entry.source || entry.sheet || 'Источник в проекте')
+  }));
+  const userQuestions = questionsForProjectVersion(object.id, version.id);
+  const summary = {
+    sheets: projectAnalysisFindMetric(version, ['sheetCount', 'sheetsCount', 'pageCount', 'pagesCount', 'количествоЛистов'], isDemo ? 74 : activeSheets.length),
+    positions: projectAnalysisFindMetric(version, ['positionCount', 'positionsCount', 'itemsCount', 'specificationCount', 'количествоПозиций'], isDemo ? 286 : specification.length),
+    discrepancies: projectAnalysisFindMetric(version, ['discrepancyCount', 'discrepanciesCount', 'mismatchCount', 'расхождения'], isDemo ? 17 : errors.length + mismatches.length),
+    remarks: projectAnalysisFindMetric(version, ['remarkCount', 'remarksCount', 'commentsCount', 'замечания'], isDemo ? 8 : risks.length),
+    questions: projectAnalysisFindMetric(version, ['questionCount', 'questionsCount', 'вопросы'], isDemo ? 12 + userQuestions.length : customerQuestions.length + designerQuestions.length + userQuestions.length)
+  };
+  const equipment = specification.filter((entry) => entry.category === 'equipment').slice(0, 20);
+  const materialEntries = specification.filter((entry) => entry.category === 'material' || entry.category === 'position');
+  const materials = isDemo ? PROJECT_ANALYSIS_DEMO.materials : {
+    main: materialEntries.slice(0, 8).map((entry) => entry.name),
+    installation: [], fasteners: [], consumables: [], possible: []
+  };
+  return { isDemo, sheets: activeSheets, specification, risks, customerQuestions, designerQuestions, errors, additionalWorks, sequence, missing, mismatches, equipment, materials, summary, userQuestions };
+}
+
+function projectDrawingButton(title, source, label = 'Показать на чертеже') {
+  return `<button class="project-drawing-button" type="button" data-project-drawing-title="${escapeHtml(title)}" data-project-drawing-source="${escapeHtml(source)}"><span aria-hidden="true">⌖</span>${escapeHtml(label)}</button>`;
+}
+
+function projectAnalysisSectionHead(icon, eyebrow, title, copy = '', actions = '') {
+  return `<header class="project-deep-section-head"><span aria-hidden="true">${icon}</span><div><small>${escapeHtml(eyebrow)}</small><h2>${escapeHtml(title)}</h2>${copy ? `<p>${escapeHtml(copy)}</p>` : ''}</div>${actions}</header>`;
+}
+
+function projectInsightCard(item, options = {}) {
+  const severityLabels = { critical: 'Критично', warning: 'Требует уточнения', minor: 'Незначительно' };
+  const badge = options.showSeverity === false ? '' : `<b class="project-severity is-${escapeHtml(item.severity || 'warning')}">${escapeHtml(severityLabels[item.severity] || severityLabels.warning)}</b>`;
+  return `<article class="project-insight-card is-${escapeHtml(item.severity || 'warning')}"><header>${badge}<span>${escapeHtml(item.source || 'Источник в проекте')}</span></header><h3>${escapeHtml(item.title)}</h3>${item.text ? `<p>${escapeHtml(item.text)}</p>` : ''}<footer>${projectDrawingButton(item.title, item.source)}</footer></article>`;
+}
+
+function projectAnalysisWorkspaceMarkup(object, version, model) {
+  const stats = [
+    ['▤', model.summary.sheets, 'листов'],
+    ['≡', model.summary.positions, 'позиций'],
+    ['⇄', model.summary.discrepancies, 'расхождений'],
+    ['!', model.summary.remarks, 'замечаний'],
+    ['?', model.summary.questions, 'вопросов']
+  ].map(([icon, value, label], index) => `<article class="${index === 2 || index === 3 ? 'has-warning' : ''}"><span>${icon}</span><strong ${label === 'вопросов' ? 'data-project-question-count' : ''}>${escapeHtml(value)}</strong><small>${escapeHtml(label)}</small></article>`).join('');
+  const nav = [
+    ['project-block-sheets', 'Оригинал по листам'], ['project-block-spec', 'Спецификация'], ['project-block-visual', 'Визуальный разбор'], ['project-block-risks', 'Риски'], ['project-block-questions', 'Вопросы'], ['project-block-errors', 'Несоответствия'], ['project-block-extra', 'Доп. работы'], ['project-block-sequence', 'Последовательность'], ['project-block-equipment', 'Оборудование'], ['project-block-materials', 'Материалы']
+  ].map(([id, label]) => `<a href="#${id}">${escapeHtml(label)}</a>`).join('');
+  const sheets = model.sheets.slice(0, 18).map((sheet) => {
+    const count = model.userQuestions.filter((question) => question.sheetId === sheet.id).length;
+    const requirements = sheet.requires.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+    return `<article class="project-sheet-card"><header><span>${escapeHtml(sheet.number)}</span><div><small>ЛИСТ ${escapeHtml(sheet.number)}</small><h3>${escapeHtml(sheet.title)}</h3></div><button class="project-sheet-download" type="button" data-project-sheet-download="${escapeHtml(sheet.id)}" title="Скачать лист"><span aria-hidden="true">↓</span>Скачать лист</button></header><p>${escapeHtml(sheet.description)}</p><section><strong>Что потребуется для выполнения</strong><ul>${requirements}</ul></section><div class="project-sheet-actions">${projectDrawingButton(sheet.title, `Лист ${sheet.number}`)}</div><form class="project-sheet-question" data-project-sheet-question="${escapeHtml(sheet.id)}"><label for="question-${escapeHtml(sheet.id)}">Задать вопрос по этому листу${count ? ` · сохранено ${count}` : ''}</label><div><input id="question-${escapeHtml(sheet.id)}" maxlength="400" placeholder="Например: на какой высоте установить оборудование?" /><button class="primary-button" type="submit">Задать</button></div><small data-sheet-question-status></small></form></article>`;
+  }).join('');
+  const specificationRows = model.specification.slice(0, 80).map((item, index) => `<tr><td>${index + 1}</td><td><b>${escapeHtml(item.designation)}</b></td><td><strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.characteristics)}</small></td><td>${escapeHtml(item.unit)}</td><td>${escapeHtml(item.quantity || '—')}</td><td><span class="project-sheet-pill">Лист ${escapeHtml(item.sheet)}</span></td><td><div class="project-spec-actions"><button class="outline-button" type="button" data-project-spec-view="${escapeHtml(item.id)}">Смотреть</button>${projectDrawingButton(item.name, `Лист ${item.sheet}`, 'На чертеже')}</div></td></tr>`).join('');
+  const visualItems = model.specification.slice(0, 6).map((item, index) => `<article><div class="project-visual-mini"><i style="--visual-x:${18 + index * 12}%;--visual-y:${25 + (index % 3) * 22}%"></i><span>${index + 1}</span><b></b></div><small>${escapeHtml(item.designation)}</small><h3>${escapeHtml(item.name)}</h3><p>StructOS покажет оборудование, линию, направление монтажа, этапы и источник.</p>${projectDrawingButton(item.name, `Лист ${item.sheet}`, 'Показать на проекте')}</article>`).join('');
+  const riskCards = model.risks.length ? model.risks.map((item) => projectInsightCard(item)).join('') : '<p class="project-deep-empty">Риски в данных анализа не обнаружены.</p>';
+  const questionList = (items, group) => items.length ? items.map((item, index) => `<li><span>${index + 1}</span><div><strong>${escapeHtml(item.title)}</strong><small>${escapeHtml(item.source)}</small></div>${projectDrawingButton(item.title, item.source)}</li>`).join('') : `<li class="project-question-empty">Вопросы для блока «${escapeHtml(group)}» пока не сформированы.</li>`;
+  const errorGroups = [
+    ['critical', 'Критические', 'Могут помешать выполнить проект'],
+    ['warning', 'Значимые', 'Требуют уточнения'],
+    ['minor', 'Незначительные', 'Не мешают монтажу, но лучше исправить']
+  ].map(([severity, title, copy]) => {
+    const items = model.errors.filter((item) => item.severity === severity);
+    return `<section class="project-error-group is-${severity}"><header><span>${severity === 'critical' ? '!' : severity === 'warning' ? '△' : 'i'}</span><div><h3>${title}</h3><p>${copy}</p></div><b>${items.length}</b></header><div>${items.length ? items.map((item) => projectInsightCard(item, { showSeverity: false })).join('') : '<p class="project-deep-empty">Не обнаружено</p>'}</div></section>`;
+  }).join('');
+  const extraWorks = model.additionalWorks.length ? model.additionalWorks.map((item) => `<article><span>＋</span><div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.text)}</p><small>${escapeHtml(item.source)}</small></div>${projectDrawingButton(item.title, item.source)}</article>`).join('') : '<p class="project-deep-empty">Дополнительные работы в анализе не определены.</p>';
+  const sequence = model.sequence.length ? model.sequence.map((item, index) => `<li><span>${index + 1}</span><div><small>ЭТАП ${index + 1}</small><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.text)}</p><em>${escapeHtml(item.source)}</em></div>${projectDrawingButton(item.title, item.source)}</li>`).join('') : '<li class="project-question-empty">Последовательность пока не сформирована.</li>';
+  const missing = model.missing.length ? model.missing.map((item) => projectInsightCard(item, { showSeverity: false })).join('') : '<p class="project-deep-empty">Позиций из спецификации без привязки к чертежам не обнаружено.</p>';
+  const mismatches = model.mismatches.length ? model.mismatches.map((item) => `<article><header><span>⇄</span><h3>${escapeHtml(item.title)}</h3><b>${escapeHtml(item.source)}</b></header><div><section><small>НА ЧЕРТЕЖЕ</small><strong>${escapeHtml(item.drawing)}</strong></section><i>≠</i><section><small>В СПЕЦИФИКАЦИИ</small><strong>${escapeHtml(item.specification)}</strong></section></div>${projectDrawingButton(item.title, item.source)}</article>`).join('') : '<p class="project-deep-empty">Расхождения марок и характеристик не обнаружены.</p>';
+  const equipment = model.equipment.length ? model.equipment.map((item) => `<article><header><span>▣</span><div><small>${escapeHtml(item.designation)}</small><h3>${escapeHtml(item.name)}</h3></div><b>${escapeHtml(item.quantity || '—')} ${escapeHtml(item.unit)}</b></header><dl><div><dt>Характеристики</dt><dd>${escapeHtml(item.characteristics)}</dd></div><div><dt>Место установки</dt><dd>${escapeHtml(item.place)}</dd></div><div><dt>Питание / подключение</dt><dd>${escapeHtml(item.connection)}</dd></div><div><dt>Связанное оборудование</dt><dd>${escapeHtml(item.related)}</dd></div></dl>${projectDrawingButton(item.name, `Лист ${item.sheet}`)}</article>`).join('') : '<p class="project-deep-empty">Основное оборудование в спецификации не выделено.</p>';
+  const materialLabels = { main: ['Основные', '◇'], installation: ['Монтажные', '⌘'], fasteners: ['Крепёж', '⊕'], consumables: ['Расходные', '≈'], possible: ['Возможные дополнительные', '＋'] };
+  const materials = Object.entries(materialLabels).map(([key, [label, icon]]) => `<article><header><span>${icon}</span><h3>${label}</h3><b>${model.materials[key]?.length || 0}</b></header>${model.materials[key]?.length ? `<ul>${model.materials[key].map((item) => `<li><span>${escapeHtml(item)}</span>${projectDrawingButton(item, 'Спецификация проекта', 'На чертеже')}</li>`).join('')}</ul>` : '<p>Не выделено в анализе</p>'}</article>`).join('');
+  return `<main class="project-deep-workspace"><section class="project-info-hero"><header><div><span class="eyebrow">STRUCTOS PROJECT INTELLIGENCE</span><h2>Информация по проекту</h2><p>${escapeHtml(object.name)} · ${escapeHtml(projectSectionFor(object))}</p></div><b>АНАЛИЗ ЗАВЕРШЁН</b></header><div class="project-info-stats">${stats}</div></section>${model.isDemo ? '<section class="project-demo-notice"><span>i</span><p><strong>Демонстрационное наполнение интерфейса.</strong> Когда серверное распознавание передаст структуру файла, примеры автоматически заменятся данными загруженного проекта.</p></section>' : ''}<nav class="project-deep-nav" aria-label="Разделы анализа">${nav}</nav><section class="project-deep-section" id="project-block-sheets">${projectAnalysisSectionHead('▤', 'PROJECT SHEETS', 'Оригинал проекта по листам', `Каждый лист отдельно: название, содержание, подготовка и вопрос StructOS. Показано ${model.sheets.length} из ${model.summary.sheets}.`)}<div class="project-sheets-grid">${sheets}</div></section><section class="project-deep-section" id="project-block-spec">${projectAnalysisSectionHead('≡', 'FULL SPECIFICATION', 'Весь проект по спецификации', 'Все позиции с привязкой к листу, области монтажа и пошаговой инструкции.')}<div class="project-spec-table-scroll"><table class="project-spec-table"><thead><tr><th>№</th><th>Обозначение</th><th>Наименование / характеристики</th><th>Ед.</th><th>Кол-во</th><th>Где находится</th><th>Действия</th></tr></thead><tbody>${specificationRows || '<tr><td colspan="7">Спецификация не извлечена</td></tr>'}</tbody></table></div></section><section class="project-deep-section" id="project-block-visual">${projectAnalysisSectionHead('⌖', 'VISUAL PROJECT', 'Визуальный разбор проекта', 'StructOS показывает на проекте оборудование, линию, направление, номера этапов и точный источник.')}<div class="project-visual-grid">${visualItems || '<p class="project-deep-empty">Позиции для визуального разбора пока не определены.</p>'}</div></section><section class="project-deep-section" id="project-block-risks">${projectAnalysisSectionHead('!', 'PROJECT RISKS', 'Риски проекта', 'Что может помешать монтажу, увеличить объём работ или потребовать согласования.')}<div class="project-insight-grid">${riskCards}</div></section><section class="project-deep-section" id="project-block-questions">${projectAnalysisSectionHead('?', 'READY QUESTIONS', 'Вопросы по проекту', 'Готовые списки для заказчика, РД и авторского надзора.', '<button class="outline-button" type="button" data-download-project-questions>↓ Скачать вопросы</button>')}<div class="project-question-columns"><section><header><span>З</span><div><small>ДЛЯ СОГЛАСОВАНИЯ</small><h3>Вопросы заказчику</h3></div><b>${model.customerQuestions.length}</b></header><ol>${questionList(model.customerQuestions, 'Заказчик')}</ol></section><section><header><span>П</span><div><small>РД / АВТОРСКИЙ НАДЗОР</small><h3>Вопросы проектировщику</h3></div><b>${model.designerQuestions.length}</b></header><ol>${questionList(model.designerQuestions, 'Проектировщик')}</ol></section></div></section><section class="project-deep-section" id="project-block-errors">${projectAnalysisSectionHead('⇄', 'ISSUES & CONFLICTS', 'Ошибки и несоответствия', 'Разделены по влиянию на выполнение проекта.')}<div class="project-error-columns">${errorGroups}</div></section><section class="project-deep-section" id="project-block-extra">${projectAnalysisSectionHead('＋', 'UNSHOWN WORKS', 'Дополнительные работы', 'То, что непосредственно не нарисовано, но почти наверняка потребуется для выполнения.')}<div class="project-extra-grid">${extraWorks}</div></section><section class="project-deep-section" id="project-block-sequence">${projectAnalysisSectionHead('→', 'WORK SEQUENCE', 'Последовательность выполнения работ', 'Рекомендуемый порядок от проверки исходных данных до сдачи исполнительной документации.')}<ol class="project-sequence-list">${sequence}</ol></section><section class="project-deep-section project-two-up"><section>${projectAnalysisSectionHead('∅', 'SPECIFICATION CHECK', 'Позиции из спецификации, которых нет на чертежах', 'Позиции требуют привязки до заказа и монтажа.')}<div class="project-insight-grid is-single">${missing}</div></section><section>${projectAnalysisSectionHead('≠', 'MARK CHECK', 'Расхождения марок и характеристик', 'Сравнение обозначений на схеме и в спецификации.')}<div class="project-mismatch-list">${mismatches}</div></section></section><section class="project-deep-section" id="project-block-equipment">${projectAnalysisSectionHead('▣', 'MAIN EQUIPMENT', 'Основное оборудование', 'Количество, характеристики, место установки, питание и связанные позиции.')}<div class="project-equipment-grid">${equipment}</div></section><section class="project-deep-section" id="project-block-materials">${projectAnalysisSectionHead('◇', 'PROJECT MATERIALS', 'Материалы', 'Основные, монтажные, крепёж, расходные и возможные дополнительные материалы.')}<div class="project-material-columns">${materials}</div></section></main>`;
+}
+
+function projectDrawingSceneMarkup(title, source, mode = 'focus') {
+  const isOriginal = mode === 'original';
+  return `<section class="project-drawing-scene ${isOriginal ? 'is-original' : 'is-focused'}"><header><div><small>ЧЕРТЁЖ · ${escapeHtml(source)}</small><strong>${escapeHtml(title)}</strong></div><b>${isOriginal ? 'ОРИГИНАЛ' : 'ОБЛАСТЬ ВЫДЕЛЕНА'}</b></header><div class="project-drawing-canvas"><i class="drawing-wall is-one"></i><i class="drawing-wall is-two"></i><i class="drawing-wall is-three"></i><span class="drawing-axis is-a">А</span><span class="drawing-axis is-b">Б</span><span class="drawing-axis is-one">1</span><span class="drawing-axis is-two">2</span>${isOriginal ? '' : '<div class="drawing-focus"><span>1</span><strong>Оборудование</strong></div><div class="drawing-route"><i></i><b>→</b></div><span class="drawing-stage is-two">2</span><span class="drawing-stage is-three">3</span>'}</div><footer><span><i class="is-equipment"></i> оборудование</span><span><i class="is-route"></i> линия / направление</span><span><i class="is-stage"></i> этап монтажа</span><b>Источник: ${escapeHtml(source)}</b></footer></section>`;
+}
+
+function openProjectDrawingPreview(title, source) {
+  showDialog(escapeHtml(title), `Источник: ${escapeHtml(source)}`, `${projectDrawingSceneMarkup(title, source)}<section class="project-drawing-explanation"><span>⌖</span><div><strong>Что показывает StructOS</strong><p>Подсвечивает позицию, выделяет линию и направление монтажа, ставит номера этапов и сохраняет ссылку на исходный лист.</p></div></section>`);
+  $('[data-dialog]')?.classList.add('project-analysis-dialog');
+}
+
+function projectInstallationGuideMarkup(item) {
+  const steps = [
+    `Проверить позицию «${item.name}» и привязку на листе ${item.sheet}.`,
+    'Подготовить место монтажа, проверить основание и инженерные пересечения.',
+    'Выполнить разметку и установить предусмотренный проектом крепёж.',
+    'Смонтировать позицию, соблюдая характеристики и направление подключения.',
+    'Проверить соединения, маркировку и зафиксировать результат для исполнительной документации.'
+  ];
+  return `<section class="project-install-guide"><div><small>ПОШАГОВЫЙ МОНТАЖ</small><h3>${escapeHtml(item.name)}</h3><p>${escapeHtml(item.characteristics)}</p></div><ol>${steps.map((step, index) => `<li><span>${index + 1}</span><p>${escapeHtml(step)}</p></li>`).join('')}</ol><section><strong>Необходимый инструмент</strong><div><span>Лазерный уровень</span><span>Рулетка и маркер</span><span>Перфоратор / шуруповёрт</span><span>Измерительный инструмент</span><span>СИЗ</span></div></section><small>Инструкция сформирована StructOS. Перед монтажом проверьте требования производителя и ППР.</small></section>`;
+}
+
+function openProjectSpecificationViewer(item) {
+  showDialog(escapeHtml(item.name), `${escapeHtml(item.designation)} · лист ${escapeHtml(item.sheet)}`, '<div class="project-spec-viewer" data-project-spec-viewer></div>');
+  $('[data-dialog]')?.classList.add('project-analysis-dialog');
+  const renderMode = (mode) => {
+    const rootElement = $('[data-project-spec-viewer]');
+    if (!rootElement) return;
+    const content = mode === 'guide' ? projectInstallationGuideMarkup(item) : projectDrawingSceneMarkup(item.name, `Лист ${item.sheet}`, mode === 'original' ? 'original' : 'focus');
+    rootElement.innerHTML = `<nav><button class="${mode === 'original' ? 'is-active' : ''}" type="button" data-spec-view-mode="original"><span>▤</span>Смотреть оригинал</button><button class="${mode === 'area' ? 'is-active' : ''}" type="button" data-spec-view-mode="area"><span>⌖</span>Смотреть область монтажа</button><button class="${mode === 'guide' ? 'is-active' : ''}" type="button" data-spec-view-mode="guide"><span>→</span>Инструкция по монтажу</button></nav><div class="project-spec-viewer-body">${content}</div>`;
+    $$('[data-spec-view-mode]', rootElement).forEach((button) => button.addEventListener('click', () => renderMode(button.dataset.specViewMode)));
+  };
+  renderMode('area');
+}
+
+function downloadProjectTextFile(filename, text) {
+  downloadReportBlob(new Blob([text], { type: 'text/plain;charset=utf-8' }), filename.replace(/[\\/:*?"<>|]+/g, '-'));
+}
+
+function bindProjectAnalysisWorkspace(rootElement, object, version, model) {
+  $$('[data-project-drawing-title]', rootElement).forEach((button) => button.addEventListener('click', () => openProjectDrawingPreview(button.dataset.projectDrawingTitle, button.dataset.projectDrawingSource)));
+  $$('[data-project-spec-view]', rootElement).forEach((button) => button.addEventListener('click', () => {
+    const item = model.specification.find((entry) => entry.id === button.dataset.projectSpecView);
+    if (item) openProjectSpecificationViewer(item);
+  }));
+  $$('[data-project-sheet-download]', rootElement).forEach((button) => button.addEventListener('click', () => {
+    const sheet = model.sheets.find((item) => item.id === button.dataset.projectSheetDownload);
+    if (!sheet) return;
+    const text = [`STRUCTOS · Лист ${sheet.number}`, sheet.title, '', sheet.description, '', 'Что потребуется для выполнения:', ...sheet.requires.map((item, index) => `${index + 1}. ${item}`), '', `Исходный файл: ${version.name}`, `Объект: ${object.name}`].join('\n');
+    downloadProjectTextFile(`Лист_${sheet.number}_${sheet.title}.txt`, text);
+    showToast('Лист подготовлен к скачиванию');
+  }));
+  $$('[data-project-sheet-question]', rootElement).forEach((form) => form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const input = $('input', form);
+    const text = input?.value.trim();
+    const sheet = model.sheets.find((item) => item.id === form.dataset.projectSheetQuestion);
+    if (!text || !sheet) { input?.focus(); return; }
+    const questions = loadProjectSheetQuestions();
+    questions.push({ id: `question-${Date.now()}-${Math.random().toString(16).slice(2)}`, objectId: object.id, versionId: version.id, sheetId: sheet.id, sheetNumber: sheet.number, sheetTitle: sheet.title, text: text.slice(0, 400), createdAt: new Date().toISOString() });
+    saveProjectSheetQuestions(questions);
+    input.value = '';
+    const status = $('[data-sheet-question-status]', form);
+    if (status) status.textContent = 'Вопрос сохранён и добавлен к проекту';
+    const count = $('[data-project-question-count]', rootElement);
+    if (count) count.textContent = String(Number(count.textContent || 0) + 1);
+    showToast('Вопрос по листу сохранён');
+  }));
+  $('[data-download-project-questions]', rootElement)?.addEventListener('click', () => {
+    const sections = [
+      'ВОПРОСЫ ЗАКАЗЧИКУ',
+      ...model.customerQuestions.map((item, index) => `${index + 1}. ${item.title}\n   Источник: ${item.source}`),
+      '', 'ВОПРОСЫ ПРОЕКТИРОВЩИКУ / РД / АВТОРСКОМУ НАДЗОРУ',
+      ...model.designerQuestions.map((item, index) => `${index + 1}. ${item.title}\n   Источник: ${item.source}`),
+      '', 'ВОПРОСЫ ПОЛЬЗОВАТЕЛЯ ПО ЛИСТАМ',
+      ...questionsForProjectVersion(object.id, version.id).map((item, index) => `${index + 1}. Лист ${item.sheetNumber} · ${item.sheetTitle}\n   ${item.text}`)
+    ];
+    downloadProjectTextFile(`Вопросы_по_проекту_${object.name}.txt`, [`STRUCTOS · Вопросы по проекту`, `Объект: ${object.name}`, `Файл: ${version.name}`, '', ...sections].join('\n'));
+    showToast('Список вопросов скачан');
+  });
+}
+
 function versionCatalogDifferences(previous, current, kind) {
   const beforeCatalog = cashSourceCatalogFromFileRecord(previous, kind);
   const afterCatalog = cashSourceCatalogFromFileRecord(current, kind);
@@ -9174,6 +9556,7 @@ function analysisDetailHeader(object, kind, file, version) {
 function renderAnalysisDetail() {
   const rootElement = $('[data-analysis-detail]');
   if (!rootElement) return;
+  let deepProjectModel = null;
   const object = objectRegistry.find((item) => item.id === activeAnalysisDocument.objectId);
   const kind = activeAnalysisDocument.kind;
   const file = objectFile(object, kind);
@@ -9183,8 +9566,8 @@ function renderAnalysisDetail() {
   } else if (!version || !isDocumentVersionAnalyzed(version)) {
     rootElement.innerHTML = `${version ? analysisDetailHeader(object, kind, file, version) : ''}<section class="analysis-document-placeholder"><span>⌛</span><h2>${escapeHtml(tr('fileAwaitingAnalysis'))}</h2><p>${escapeHtml(tr('fileAwaitingAnalysisCopy'))}</p>${version ? `<button class="primary-button" type="button" data-analyze-active-version>${escapeHtml(tr('analyze'))}</button>` : ''}</section>`;
   } else if (kind === 'project') {
-    const tabs = projectAnalysisTabs.map((tab) => `<button class="${tab.id === activeProjectAnalysisTab ? 'is-active' : ''}" type="button" data-project-analysis-tab="${tab.id}" aria-selected="${tab.id === activeProjectAnalysisTab}"><span>${tab.icon}</span><strong>${escapeHtml(tr(tab.label))}</strong></button>`).join('');
-    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file, version)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><nav class="project-analysis-tabs" aria-label="${escapeHtml(tr('projectAnalysis'))}">${tabs}</nav><section class="project-analysis-content"><header><span class="eyebrow">STRUCTOS DETAIL</span><h2>${escapeHtml(tr(projectAnalysisTabs.find((tab) => tab.id === activeProjectAnalysisTab)?.label || 'projectEstimate'))}</h2></header>${projectAnalysisTabContent(activeProjectAnalysisTab, version, kind)}</section>`;
+    deepProjectModel = projectAnalysisModel(object, version);
+    rootElement.innerHTML = `${analysisDetailHeader(object, kind, file, version)}${projectAnalysisWorkspaceMarkup(object, version, deepProjectModel)}`;
   } else if (kind === 'estimate') {
     rootElement.innerHTML = `${analysisDetailHeader(object, kind, file, version)}<section class="analysis-truth-note"><span>!</span><p>${escapeHtml(tr('analyzedDataOnly'))}</p></section><section class="project-analysis-content"><header><span class="eyebrow">STRUCTOS ESTIMATE</span><h2>${escapeHtml(tr('estimate'))}</h2></header>${projectAnalysisTabContent('proposal', version, kind)}</section>`;
   } else {
@@ -9194,6 +9577,7 @@ function renderAnalysisDetail() {
   $('[data-analysis-revision]', rootElement)?.addEventListener('click', (event) => openUploadDialog(event.currentTarget.dataset.analysisRevision, object?.id, 'revision'));
   $('[data-analyze-active-version]', rootElement)?.addEventListener('click', () => analyzeObjectDocument(object?.id, kind, version?.id));
   $$('[data-project-analysis-tab]', rootElement).forEach((button) => button.addEventListener('click', () => { activeProjectAnalysisTab = button.dataset.projectAnalysisTab; renderAnalysisDetail(); }));
+  if (deepProjectModel && object && version) bindProjectAnalysisWorkspace(rootElement, object, version, deepProjectModel);
 }
 
 function promptDocumentAnalysis(object, kind, versionId = null) {
@@ -10070,7 +10454,7 @@ function isDemoAccount() {
 async function pushRegistration() {
   const current = await navigator.serviceWorker.getRegistration();
   if (current) return current;
-  return navigator.serviceWorker.register('./sw.js?v=113', { updateViaCache: 'none' });
+  return navigator.serviceWorker.register('./sw.js?v=114', { updateViaCache: 'none' });
 }
 
 async function pushNotificationState() {
@@ -10736,7 +11120,7 @@ function detailedProjectCardMarkup(record) {
           <button type="button" data-rename-detailed-project="${escapeHtml(record.id)}" aria-label="Переименовать" title="Переименовать"><span aria-hidden="true">✎</span><strong>Переименовать</strong></button>
           <button class="is-delete" type="button" data-delete-detailed-project="${escapeHtml(record.id)}" aria-label="Удалить" title="Удалить">×</button>
         </div>
-        <b>Разбор запущен</b>
+        <b>${record.status === 'ready' ? 'Разбор готов' : 'Разбор запущен'}</b>
       </div>
     </header>
     <footer>
@@ -10830,11 +11214,23 @@ function renderDetailedProjectDetail() {
   }
   const sizeLabel = record.file ? fileSize(Number(record.file.size || 0)) : '—';
   const formatLabel = record.file ? fileFormatLabel(record.file) : '—';
+  const analysisObject = { id: record.id, name: record.projectName, projectSection: record.sectionName };
+  const analysisVersion = {
+    ...(record.file || {}),
+    id: String(record.file?.id || `${record.id}-source`),
+    name: String(record.file?.name || 'Файл проекта'),
+    size: Number(record.file?.size || 0),
+    addedAt: record.createdAt,
+    analyzedAt: record.updatedAt || record.createdAt,
+    analysisPending: false
+  };
+  const model = projectAnalysisModel(analysisObject, analysisVersion);
   rootElement.innerHTML = `
     <div class="page-title workflow-page-title">
       <div><span class="eyebrow">STRUCTOS PROJECT ANALYSIS</span><h1>${escapeHtml(record.projectName)}</h1><p>Раздел: ${escapeHtml(record.sectionName)}</p></div>
       <button class="outline-button" type="button" data-back-detailed-projects>← К списку проектов</button>
     </div>
+    ${projectAnalysisWorkspaceMarkup(analysisObject, analysisVersion, model)}
     <section class="proposal-workspace-summary detailed-project-open-summary">
       <span>▤</span>
       <div><small>Файл проекта</small><strong>${escapeHtml(record.file?.name || '—')}</strong></div>
@@ -10843,17 +11239,13 @@ function renderDetailedProjectDetail() {
     <div class="result-actions">
       <button class="outline-button" type="button" data-rename-open-detailed-project>Переименовать</button>
       <button class="outline-button is-danger" type="button" data-delete-open-detailed-project>Удалить</button>
-    </div>
-    <section class="empty-state">
-      <span class="proposal-empty-mark">⌁</span>
-      <h2>Разбор проекта запущен</h2>
-      <p>Следующие блоки анализа будут добавляться сюда по порядку.</p>
-    </section>`;
+    </div>`;
   $('[data-back-detailed-projects]', rootElement)?.addEventListener('click', () => setPanel('project-analysis'));
   $('[data-rename-open-detailed-project]', rootElement)?.addEventListener('click', () => renameDetailedProject(record.id));
   $('[data-delete-open-detailed-project]', rootElement)?.addEventListener('click', () => {
     deleteDetailedProject(record.id);
   });
+  bindProjectAnalysisWorkspace(rootElement, analysisObject, analysisVersion, model);
 }
 
 function renderDetailedProjectUpload() {
@@ -10960,7 +11352,7 @@ function renderDetailedProjectUpload() {
       file: { ...detailedProjectDraft.file },
       createdAt: now,
       updatedAt: now,
-      status: 'analysis'
+      status: 'ready'
     });
     saveDetailedProjectRecords();
     const createdName = detailedProjectDraft.projectName;
@@ -11085,4 +11477,4 @@ startActiveBonusAccrual();
 window.setTimeout(() => runLoginPrompts(dailyRewarded), window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1100 : 3750);
 if (pendingTransferImport?.intent === 'commercial-proposal' || location.hash === '#proposals') localStorage.removeItem(AUTH_RETURN_KEY);
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=112', { updateViaCache: 'none' }).catch(() => {}));
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=114', { updateViaCache: 'none' }).catch(() => {}));
