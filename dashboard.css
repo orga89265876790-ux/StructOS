@@ -3183,8 +3183,46 @@ table.commercial-proposal-labor-table.is-compact-proposal-table td:nth-last-chil
 .project-section-tile small { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .project-section-tile > b { color: var(--project-blue); font-size: 24px; }
 .project-section-tile > em { grid-column: 2 / -1; color: var(--project-blue); font-size: 12px; font-style: normal; }
-.project-section-tile:last-child { grid-column: 1 / -1; }
+.project-section-tile[data-project-section="sequence"],
+.project-section-tile[data-project-section="notes"] { grid-column: 1 / -1; }
 .project-section-back { min-height: 44px; margin-bottom: 18px; font-size: 12px; }
+.project-notes-panel { min-width: 0; margin: 0 0 22px; padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface-soft); }
+.project-notes-panel > header, .project-note-card > header, .project-question-entry > header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; }
+.project-notes-panel > header { margin-bottom: 16px; }
+.project-notes-panel > header small { color: var(--project-blue); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.project-notes-panel h3 { margin: 5px 0 0; font-size: 17px; }
+.project-notes-panel > header > span { min-width: 32px; padding: 7px; border-radius: 10px; text-align: center; background: var(--surface); color: var(--project-blue); font-weight: 800; }
+.project-notes-panel form { display: grid; min-width: 0; gap: 9px; }
+.project-notes-panel label { display: grid; gap: 8px; color: var(--text); font-size: 13px; font-weight: 700; }
+.project-notes-panel textarea, .project-notes-panel select { box-sizing: border-box; width: 100%; max-width: 100%; min-width: 0; padding: 12px; color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; font: inherit; font-size: 16px; line-height: 1.5; }
+.project-notes-panel textarea { min-height: 100px; resize: vertical; }
+.project-notes-panel textarea:focus-visible, .project-notes-panel select:focus-visible { outline: 2px solid var(--project-blue); outline-offset: 2px; }
+.project-notes-panel form > footer, .project-note-card > footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; }
+.project-notes-panel form > footer > small { margin-right: auto; color: var(--muted); font-size: 12px; }
+.project-notes-panel button, .project-sheet-conversation button { min-height: 44px; font-size: 13px; white-space: normal; }
+.project-notes-hint, .project-notes-empty, .project-answer-hint { margin: 12px 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.project-note-status { min-height: 18px; margin: 0; color: var(--project-blue); font-size: 12px; line-height: 1.5; }
+.project-notes-filter { margin: 16px 0; max-width: 460px; }
+.project-notes-list, .project-sheet-conversation { display: grid; min-width: 0; gap: 12px; margin-top: 16px; }
+.project-note-card, .project-question-entry { min-width: 0; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.project-note-card > header > strong, .project-question-entry > header > strong { color: var(--project-blue); font-size: 13px; }
+.project-note-card time, .project-question-entry time, .project-note-card > small { color: var(--muted); font-size: 11px; line-height: 1.5; }
+.project-note-card > small { display: block; margin-top: 6px; overflow-wrap: anywhere; }
+.project-note-card p, .project-question-entry p { margin: 12px 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.65; }
+.project-answer { padding: 12px; margin: 12px 0; border-radius: 12px; background: var(--surface-soft); border-left: 3px solid var(--muted); }
+.project-answer.has-evidence { border-left-color: var(--project-blue); }
+.project-answer > strong { display: block; font-size: 12px; color: var(--text); }
+.project-answer > small { display: block; overflow-wrap: anywhere; font-size: 11px; line-height: 1.5; color: var(--muted); }
+.project-notes-panel [data-note-undo] { margin: 12px 0; padding: 10px; border-radius: 12px; background: var(--surface); font-size: 13px; }
+.project-notes-panel [data-note-undo][hidden] { display: none; }
+@media (max-width: 600px) {
+  .project-notes-panel { padding: 14px; }
+  .project-note-card, .project-question-entry { padding: 12px; }
+  .project-notes-panel form > footer { align-items: stretch; }
+  .project-notes-panel form > footer > button { flex: 1 1 140px; }
+  .project-notes-panel form > footer > small { flex-basis: 100%; }
+  .project-notes-panel h3 { font-size: 16px; }
+}
 .project-deep-workspace.is-section-open > .project-info-hero { display: none; }
 @media (max-width: 600px) {
   .project-section-menu { grid-template-columns: 1fr; gap: 10px; }

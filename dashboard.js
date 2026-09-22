@@ -2,6 +2,7 @@ import { supabaseConfig } from './auth-config.js';
 import { professions } from './professions.js';
 import { metroDirectory } from './metro-directory.js';
 import { createOfflineSyncEngine } from './offline-sync.js';
+import { answerFromProjectSheet, bindProjectNotes, createProjectNotesStore, projectQuestionHistoryMarkup } from './project-notebook.js';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -1317,6 +1318,7 @@ const CABINET_WELCOME_PROFILES = Object.freeze({
 let language = copy[localStorage.getItem('structos-language')] ? localStorage.getItem('structos-language') : 'RU';
 let currentId = '4 820 197';
 let authClient = null;
+let projectNotebookOwner = 'local';
 let toastTimer;
 const STATISTICS_USERS_BASE = 1324;
 const STATISTICS_USERS_EPOCH = Date.parse('2026-08-29T07:42:00Z');
@@ -3005,6 +3007,7 @@ async function shareReferral() {
 async function initAuth() {
   const demoSession = JSON.parse(localStorage.getItem(DEMO_SESSION_KEY) || 'null');
   if (demoSession?.email === 'str@str.com') {
+    projectNotebookOwner = `demo:${demoSession.id || '4820197'}`;
     const role = demoSession.role || tr('userTariff');
     currentId = formattedId(demoSession.id || '4820197');
     serverReferralCount = Math.max(0, Math.floor(Number(demoSession.referralCount) || 0));
@@ -3024,6 +3027,7 @@ async function initAuth() {
     const { data, error } = await authClient.auth.getUser();
     if (error || !data?.user) { window.location.replace('login.html#login'); return null; }
     const user = data.user;
+    projectNotebookOwner = user.id;
     const meta = user.user_metadata || {};
     const fullName = String(meta.full_name || user.email?.split('@')[0] || 'Пользователь').trim();
     const role = String(meta.primary_role || tr('userTariff'));
@@ -9296,11 +9300,13 @@ function loadProjectSheetQuestions() {
 }
 
 function saveProjectSheetQuestions(questions) {
-  localStorage.setItem(PROJECT_SHEET_QUESTIONS_KEY, JSON.stringify((Array.isArray(questions) ? questions : []).slice(-500)));
+  const previous = localStorage.getItem(PROJECT_SHEET_QUESTIONS_KEY);
+  if (previous && !Array.isArray(JSON.parse(previous))) throw new Error('Question storage is invalid');
+  localStorage.setItem(PROJECT_SHEET_QUESTIONS_KEY, JSON.stringify(Array.isArray(questions) ? questions : []));
 }
 
 function questionsForProjectVersion(objectId, versionId) {
-  return loadProjectSheetQuestions().filter((item) => item.objectId === objectId && item.versionId === versionId);
+  return loadProjectSheetQuestions().filter((item) => item.objectId === objectId && item.versionId === versionId && (!item.ownerId || item.ownerId === projectNotebookOwner));
 }
 
 function projectAnalysisModel(object, version) {
@@ -9388,7 +9394,7 @@ function projectAnalysisWorkspaceMarkup(object, version, model) {
   const sheets = model.sheets.slice(0, 18).map((sheet) => {
     const count = model.userQuestions.filter((question) => question.sheetId === sheet.id).length;
     const requirements = sheet.requires.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
-    return `<article class="project-sheet-card"><header><span>${escapeHtml(sheet.number)}</span><div><small>ЛИСТ ${escapeHtml(sheet.number)}</small><h3>${escapeHtml(sheet.title)}</h3></div><button class="project-sheet-download" type="button" data-project-sheet-download="${escapeHtml(sheet.id)}" title="Скачать лист"><span aria-hidden="true">↓</span>Скачать лист</button></header><p>${escapeHtml(sheet.description)}</p><section><strong>Что потребуется для выполнения</strong><ul>${requirements}</ul></section><div class="project-sheet-actions">${projectDrawingButton(sheet.title, `Лист ${sheet.number}`)}</div><form class="project-sheet-question" data-project-sheet-question="${escapeHtml(sheet.id)}"><label for="question-${escapeHtml(sheet.id)}">Задать вопрос по этому листу${count ? ` · сохранено ${count}` : ''}</label><div><input id="question-${escapeHtml(sheet.id)}" maxlength="400" placeholder="Например: на какой высоте установить оборудование?" /><button class="primary-button" type="submit">Задать</button></div><small data-sheet-question-status></small></form></article>`;
+    return `<article class="project-sheet-card"><header><span>${escapeHtml(sheet.number)}</span><div><small>ЛИСТ ${escapeHtml(sheet.number)}</small><h3>${escapeHtml(sheet.title)}</h3></div><button class="project-sheet-download" type="button" data-project-sheet-download="${escapeHtml(sheet.id)}" title="Скачать лист"><span aria-hidden="true">↓</span>Скачать лист</button></header><p>${escapeHtml(sheet.description)}</p><section><strong>Что потребуется для выполнения</strong><ul>${requirements}</ul></section><div class="project-sheet-actions">${projectDrawingButton(sheet.title, `Лист ${sheet.number}`)}</div><form class="project-sheet-question" data-project-sheet-question="${escapeHtml(sheet.id)}"><label for="question-${escapeHtml(sheet.id)}">Задать вопрос по этому листу${count ? ` · сохранено ${count}` : ''}</label><div><input id="question-${escapeHtml(sheet.id)}" maxlength="400" placeholder="Например: на какой высоте установить оборудование?" /><button class="primary-button" type="submit">Спросить StructOS</button></div><small data-sheet-question-status role="status" aria-live="polite"></small></form></article>`;
   }).join('');
   const specificationRows = model.specification.slice(0, 80).map((item, index) => `<tr><td data-label="№">${index + 1}</td><td data-label="Обозначение"><b>${escapeHtml(item.designation)}</b></td><td data-label="Наименование / характеристики"><strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.characteristics)}</small></td><td data-label="Единица">${escapeHtml(item.unit)}</td><td data-label="Количество">${escapeHtml(item.quantity || '—')}</td><td data-label="Где находится"><span class="project-sheet-pill">Лист ${escapeHtml(item.sheet)}</span></td><td data-label="Действия"><div class="project-spec-actions"><button class="outline-button" type="button" data-project-spec-view="${escapeHtml(item.id)}">Смотреть</button>${projectDrawingButton(item.name, `Лист ${item.sheet}`, 'На чертеже')}</div></td></tr>`).join('');
   const visualItems = model.specification.slice(0, 6).map((item, index) => `<article><div class="project-visual-mini"><i style="--visual-x:${18 + index * 12}%;--visual-y:${25 + (index % 3) * 22}%"></i><span>${index + 1}</span><b></b></div><small>${escapeHtml(item.designation)}</small><h3>${escapeHtml(item.name)}</h3><p>StructOS покажет оборудование, линию, направление монтажа, этапы и источник.</p>${projectDrawingButton(item.name, `Лист ${item.sheet}`, 'Показать на проекте')}</article>`).join('');
@@ -9467,6 +9473,11 @@ function setupProjectSectionMenu(rootElement, model) {
   discrepancies.className = 'project-deep-section';
   discrepancies.innerHTML = projectAnalysisSectionHead('⇄', 'PROJECT CHECK', 'Расхождения проекта', 'Сводка выявленных несоответствий. Детали марок и отсутствующих позиций доступны в отдельных разделах.') + `<div class="project-insight-grid">${model.errors.length ? model.errors.map(item => projectInsightCard(item)).join('') : '<p class="project-deep-empty">Расхождения в данных анализа не обнаружены.</p>'}</div>`;
   workspace.append(discrepancies);
+  const notes = document.createElement('section');
+  notes.id = 'project-block-notes';
+  notes.className = 'project-deep-section';
+  notes.innerHTML = projectAnalysisSectionHead('✎', 'PROJECT NOTES', 'Мои заметки к проекту', 'Все ваши записи из первых четырёх разделов и общие заметки.');
+  workspace.append(notes);
   const entries = [
     ['sheets', '▤', 'Оригинал проекта по листам', 'Листы, описание и вопросы по каждому листу'],
     ['spec', '≡', 'Весь проект по спецификации', 'Позиции, количество и привязка к чертежам'],
@@ -9480,7 +9491,8 @@ function setupProjectSectionMenu(rootElement, model) {
     ['materials', '◇', 'Основной материал', 'Материалы, крепёж и расходные позиции'],
     ['marks', '≠', 'Расхождение марок', 'Марки и характеристики на листах и в спецификации'],
     ['missing', '∅', 'Позиции которых нет', 'Позиции спецификации, не найденные на чертежах'],
-    ['sequence', '→', 'ППРабот', 'Последовательность выполнения работ — не утверждённый ППР']
+    ['sequence', '→', 'ППРабот', 'Последовательность выполнения работ — не утверждённый ППР'],
+    ['notes', '✎', 'Мои заметки к проекту', 'Личные записи, уточнения и задачи из разделов проекта']
   ];
   const menu = document.createElement('nav');
   menu.className = 'project-section-menu';
@@ -9515,8 +9527,22 @@ function setupProjectSectionMenu(rootElement, model) {
   });
 }
 
+function projectSheetAnswerContext(version, sheet, model) {
+  const source = `${version.name} · Лист ${sheet.number} · ${sheet.title}`;
+  if (model.isDemo) return { source, isDemo: true, evidence: [] };
+  const rawSheets = projectAnalysisFindCollection(version, ['sheets', 'pages', 'drawings', 'projectSheets', 'листы', 'страницы', 'чертежи']);
+  const rawSheet = rawSheets.find((entry, index) => normalizeProjectSheet(entry, index).id === sheet.id);
+  const textFields = rawSheet && typeof rawSheet === 'object'
+    ? ['text', 'content', 'summary', 'description', 'explanation'].map((key) => rawSheet[key]).filter((value) => typeof value === 'string' && value.trim()) : [];
+  const sheetKey = (value) => String(value || '').toLowerCase().replace(/^(?:лист|стр(?:аница)?\.?)\s*/u, '').replace(/^0+(?=\d)/u, '').trim();
+  const catalog = cashSourceCatalogFromFileRecord(version, 'project').filter((entry) => entry.sourceSheet && sheetKey(entry.sourceSheet) === sheetKey(sheet.number));
+  const specification = catalog.map((entry) => [entry.name, entry.quantity > 0 ? `${entry.quantity} ${entry.unit || ''}` : '', entry.characteristics || ''].filter(Boolean).join(' · '));
+  return { source, evidence: [...textFields, ...specification], isDemo: false };
+}
+
 function bindProjectAnalysisWorkspace(rootElement, object, version, model) {
   setupProjectSectionMenu(rootElement, model);
+  bindProjectNotes({ rootElement, object, version, ownerId: projectNotebookOwner, showToast });
   $$('[data-project-drawing-title]', rootElement).forEach((button) => button.addEventListener('click', () => openProjectDrawingPreview(button.dataset.projectDrawingTitle, button.dataset.projectDrawingSource)));
   $$('[data-project-spec-view]', rootElement).forEach((button) => button.addEventListener('click', () => {
     const item = model.specification.find((entry) => entry.id === button.dataset.projectSpecView);
@@ -9529,22 +9555,63 @@ function bindProjectAnalysisWorkspace(rootElement, object, version, model) {
     downloadProjectTextFile(`Лист_${sheet.number}_${sheet.title}.txt`, text);
     showToast('Лист подготовлен к скачиванию');
   }));
-  $$('[data-project-sheet-question]', rootElement).forEach((form) => form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const input = $('input', form);
-    const text = input?.value.trim();
+  $$('[data-project-sheet-question]', rootElement).forEach((form) => {
     const sheet = model.sheets.find((item) => item.id === form.dataset.projectSheetQuestion);
-    if (!text || !sheet) { input?.focus(); return; }
-    const questions = loadProjectSheetQuestions();
-    questions.push({ id: `question-${Date.now()}-${Math.random().toString(16).slice(2)}`, objectId: object.id, versionId: version.id, sheetId: sheet.id, sheetNumber: sheet.number, sheetTitle: sheet.title, text: text.slice(0, 400), createdAt: new Date().toISOString() });
-    saveProjectSheetQuestions(questions);
-    input.value = '';
-    const status = $('[data-sheet-question-status]', form);
-    if (status) status.textContent = 'Вопрос сохранён и добавлен к проекту';
-    const count = $('[data-project-question-count]', rootElement);
-    if (count) count.textContent = String(Number(count.textContent || 0) + 1);
-    showToast('Вопрос по листу сохранён');
-  }));
+    if (!sheet) return;
+    const history = document.createElement('div');
+    history.className = 'project-sheet-conversation';
+    history.setAttribute('aria-label', `Вопросы и ответы по листу ${sheet.number}`);
+    form.after(history);
+    const hint = document.createElement('p');
+    hint.className = 'project-answer-hint';
+    hint.textContent = 'StructOS ищет ответ в сохранённых данных этого листа и указывает источник. Если данных недостаточно, вопрос остаётся для уточнения.';
+    form.before(hint);
+    const renderHistory = () => {
+      const questions = questionsForProjectVersion(object.id, version.id).filter((item) => item.sheetId === sheet.id);
+      history.innerHTML = projectQuestionHistoryMarkup(questions);
+      const label = $('label', form);
+      if (label) label.textContent = `Задать вопрос StructOS по этому листу${questions.length ? ` · вопросов: ${questions.length}` : ''}`;
+    };
+    const saveAnswer = (question, isNew) => {
+      const input = $('input', form);
+      const status = $('[data-sheet-question-status]', form);
+      try {
+        const answer = answerFromProjectSheet(question.text, projectSheetAnswerContext(version, sheet, model));
+        const questions = loadProjectSheetQuestions();
+        const updated = { ...question, answer, answeredAt: new Date().toISOString() };
+        if (isNew) questions.push(updated);
+        else {
+          const index = questions.findIndex((item) => item.id === question.id && item.objectId === object.id && item.versionId === version.id);
+          if (index < 0) throw new Error('Question no longer exists');
+          questions[index] = updated;
+        }
+        saveProjectSheetQuestions(questions);
+        if (isNew) {
+          input.value = '';
+          const count = $('[data-project-question-count]', rootElement);
+          if (count) count.textContent = String(Number(count.textContent || 0) + 1);
+        }
+        status.textContent = answer.status === 'evidence' ? 'Ответ сохранён вместе с вопросом' : 'Вопрос сохранён. Для ответа нужны дополнительные данные листа';
+        renderHistory();
+      } catch {
+        status.textContent = 'Не удалось сохранить вопрос и ответ. Текст оставлен в поле — попробуйте ещё раз.';
+      }
+    };
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const input = $('input', form);
+      const text = input?.value.trim();
+      if (!text) { input?.focus(); return; }
+      saveAnswer({ id: `question-${Date.now()}-${Math.random().toString(16).slice(2)}`, ownerId: projectNotebookOwner, objectId: object.id, versionId: version.id, sheetId: sheet.id, sheetNumber: sheet.number, sheetTitle: sheet.title, text: text.slice(0, 400), createdAt: new Date().toISOString() }, true);
+    });
+    history.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-project-question-retry]');
+      if (!button) return;
+      const question = questionsForProjectVersion(object.id, version.id).find((item) => item.id === button.dataset.projectQuestionRetry && item.sheetId === sheet.id);
+      if (question) saveAnswer(question, false);
+    });
+    renderHistory();
+  });
   $('[data-download-project-questions]', rootElement)?.addEventListener('click', () => {
     const sections = [
       'ВОПРОСЫ ЗАКАЗЧИКУ',
@@ -9552,7 +9619,7 @@ function bindProjectAnalysisWorkspace(rootElement, object, version, model) {
       '', 'ВОПРОСЫ ПРОЕКТИРОВЩИКУ / РД / АВТОРСКОМУ НАДЗОРУ',
       ...model.designerQuestions.map((item, index) => `${index + 1}. ${item.title}\n   Источник: ${item.source}`),
       '', 'ВОПРОСЫ ПОЛЬЗОВАТЕЛЯ ПО ЛИСТАМ',
-      ...questionsForProjectVersion(object.id, version.id).map((item, index) => `${index + 1}. Лист ${item.sheetNumber} · ${item.sheetTitle}\n   ${item.text}`)
+      ...questionsForProjectVersion(object.id, version.id).map((item, index) => `${index + 1}. Лист ${item.sheetNumber} · ${item.sheetTitle}\n   ${item.text}${item.answer ? `\n   StructOS: ${item.answer.text}\n   Источник: ${item.answer.source}` : ''}`)
     ];
     downloadProjectTextFile(`Вопросы_по_проекту_${object.name}.txt`, [`STRUCTOS · Вопросы по проекту`, `Объект: ${object.name}`, `Файл: ${version.name}`, '', ...sections].join('\n'));
     showToast('Список вопросов скачан');
@@ -10520,7 +10587,7 @@ function isDemoAccount() {
 async function pushRegistration() {
   const current = await navigator.serviceWorker.getRegistration();
   if (current) return current;
-  return navigator.serviceWorker.register('./sw.js?v=116', { updateViaCache: 'none' });
+  return navigator.serviceWorker.register('./sw.js?v=117', { updateViaCache: 'none' });
 }
 
 async function pushNotificationState() {
@@ -10755,7 +10822,10 @@ async function collectOfflineSyncCategory(category) {
       invitedObjects,
       objectOrder: unifiedObjectOrder,
       currentUploads: selectedFiles,
-      collapsedProjectIds: [...collapsedProjectIds].sort()
+      collapsedProjectIds: [...collapsedProjectIds].sort(),
+      detailedProjects: readStoredJSON('structos-detailed-project-records', []),
+      projectNotes: createProjectNotesStore(localStorage, projectNotebookOwner).all(),
+      projectSheetQuestions: loadProjectSheetQuestions().filter((item) => !item.ownerId || item.ownerId === projectNotebookOwner)
     });
   }
 
@@ -11543,4 +11613,4 @@ startActiveBonusAccrual();
 window.setTimeout(() => runLoginPrompts(dailyRewarded), window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1100 : 3750);
 if (pendingTransferImport?.intent === 'commercial-proposal' || location.hash === '#proposals') localStorage.removeItem(AUTH_RETURN_KEY);
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=116', { updateViaCache: 'none' }).catch(() => {}));
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=117', { updateViaCache: 'none' }).catch(() => {}));

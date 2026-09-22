@@ -1,7 +1,8 @@
-const CACHE_NAME = 'structos-offline-v116';
+const CACHE_NAME = 'structos-offline-v117';
 const CORE_PAGES = ['./', './dashboard.html', './passport.html', './login.html', './manifest.webmanifest'];
 const OPTIONAL_SOURCE_ASSETS = [
   './dashboard.js',
+  './project-notebook.js',
   './dashboard.css',
   './contract.js',
   './contract.css',
