@@ -9450,7 +9450,73 @@ function downloadProjectTextFile(filename, text) {
   downloadReportBlob(new Blob([text], { type: 'text/plain;charset=utf-8' }), filename.replace(/[\\/:*?"<>|]+/g, '-'));
 }
 
+function setupProjectSectionMenu(rootElement, model) {
+  const workspace = rootElement.querySelector('.project-deep-workspace');
+  if (!workspace || workspace.querySelector('.project-section-menu')) return;
+  const paired = workspace.querySelector('.project-two-up');
+  if (paired) {
+    [...paired.children].forEach((section, index) => {
+      section.id = index === 0 ? 'project-block-missing' : 'project-block-marks';
+      section.classList.add('project-deep-section');
+      paired.before(section);
+    });
+    paired.remove();
+  }
+  const discrepancies = document.createElement('section');
+  discrepancies.id = 'project-block-discrepancies';
+  discrepancies.className = 'project-deep-section';
+  discrepancies.innerHTML = projectAnalysisSectionHead('⇄', 'PROJECT CHECK', 'Расхождения проекта', 'Сводка выявленных несоответствий. Детали марок и отсутствующих позиций доступны в отдельных разделах.') + `<div class="project-insight-grid">${model.errors.length ? model.errors.map(item => projectInsightCard(item)).join('') : '<p class="project-deep-empty">Расхождения в данных анализа не обнаружены.</p>'}</div>`;
+  workspace.append(discrepancies);
+  const entries = [
+    ['sheets', '▤', 'Оригинал проекта по листам', 'Листы, описание и вопросы по каждому листу'],
+    ['spec', '≡', 'Весь проект по спецификации', 'Позиции, количество и привязка к чертежам'],
+    ['visual', '⌖', 'Визуальный разбор', 'Оборудование и материалы на чертеже'],
+    ['extra', '＋', 'Доп. работы', 'Дополнительные работы для выполнения проекта'],
+    ['risks', '!', 'Риски проекта', 'Что требует внимания до начала работ'],
+    ['errors', '△', 'Ошибки и несоответствия', 'Критические, значимые и незначительные'],
+    ['discrepancies', '⇄', 'Расхождения проекта', 'Сводная проверка несоответствий'],
+    ['questions', '?', 'Вопросы по проекту', 'Заказчику и проектировщику'],
+    ['equipment', '▣', 'Основное оборудование', 'Характеристики, размещение и подключение'],
+    ['materials', '◇', 'Основной материал', 'Материалы, крепёж и расходные позиции'],
+    ['marks', '≠', 'Расхождение марок', 'Марки и характеристики на листах и в спецификации'],
+    ['missing', '∅', 'Позиции которых нет', 'Позиции спецификации, не найденные на чертежах'],
+    ['sequence', '→', 'ППРабот', 'Последовательность выполнения работ — не утверждённый ППР']
+  ];
+  const menu = document.createElement('nav');
+  menu.className = 'project-section-menu';
+  menu.setAttribute('aria-label', 'Разделы проекта');
+  menu.innerHTML = entries.map(([key, icon, title, description]) => `<button type="button" class="project-section-tile" data-project-section="${key}" aria-controls="project-block-${key}"><span aria-hidden="true">${icon}</span><div><strong>${title}</strong><small>${description}</small></div><b aria-hidden="true">›</b><em>Открыть раздел →</em></button>`).join('');
+  workspace.querySelector('.project-deep-nav')?.replaceWith(menu);
+  const sections = [...workspace.querySelectorAll(':scope > .project-deep-section')];
+  sections.forEach(section => {
+    section.hidden = true;
+    const back = document.createElement('button');
+    back.type = 'button';
+    back.className = 'outline-button project-section-back';
+    back.textContent = '← К разделам проекта';
+    back.addEventListener('click', () => {
+      section.hidden = true;
+      menu.hidden = false;
+      workspace.classList.remove('is-section-open');
+      menu.querySelector(`[aria-controls="${section.id}"]`)?.focus();
+    });
+    section.prepend(back);
+  });
+  menu.addEventListener('click', event => {
+    const tile = event.target.closest('[data-project-section]');
+    if (!tile) return;
+    const target = sections.find(section => section.id === tile.getAttribute('aria-controls'));
+    if (!target) return;
+    sections.forEach(section => { section.hidden = section !== target; });
+    menu.hidden = true;
+    workspace.classList.add('is-section-open');
+    target.querySelector('.project-section-back').focus();
+    target.scrollIntoView({ block: 'start' });
+  });
+}
+
 function bindProjectAnalysisWorkspace(rootElement, object, version, model) {
+  setupProjectSectionMenu(rootElement, model);
   $$('[data-project-drawing-title]', rootElement).forEach((button) => button.addEventListener('click', () => openProjectDrawingPreview(button.dataset.projectDrawingTitle, button.dataset.projectDrawingSource)));
   $$('[data-project-spec-view]', rootElement).forEach((button) => button.addEventListener('click', () => {
     const item = model.specification.find((entry) => entry.id === button.dataset.projectSpecView);
@@ -10454,7 +10520,7 @@ function isDemoAccount() {
 async function pushRegistration() {
   const current = await navigator.serviceWorker.getRegistration();
   if (current) return current;
-  return navigator.serviceWorker.register('./sw.js?v=115', { updateViaCache: 'none' });
+  return navigator.serviceWorker.register('./sw.js?v=116', { updateViaCache: 'none' });
 }
 
 async function pushNotificationState() {
@@ -11477,4 +11543,4 @@ startActiveBonusAccrual();
 window.setTimeout(() => runLoginPrompts(dailyRewarded), window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1100 : 3750);
 if (pendingTransferImport?.intent === 'commercial-proposal' || location.hash === '#proposals') localStorage.removeItem(AUTH_RETURN_KEY);
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=115', { updateViaCache: 'none' }).catch(() => {}));
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=116', { updateViaCache: 'none' }).catch(() => {}));

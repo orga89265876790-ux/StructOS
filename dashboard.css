@@ -3173,6 +3173,26 @@ table.commercial-proposal-labor-table.is-compact-proposal-table td:nth-last-chil
   .project-drawing-scene > footer b { width: 100%; margin-left: 0; }
 }
 
+/* Project section entrance cards */
+.project-section-menu { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.project-section-menu[hidden], .project-deep-workspace > .project-deep-section[hidden] { display: none; }
+.project-section-tile { min-width: 0; min-height: 150px; padding: 20px; display: grid; grid-template-columns: 46px minmax(0, 1fr) 18px; align-items: center; gap: 12px; color: var(--text); text-align: left; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(135deg, var(--surface), var(--surface-soft)); box-shadow: var(--shadow); cursor: pointer; }
+.project-section-tile:hover, .project-section-tile:focus-visible { border-color: var(--project-blue); outline: 2px solid var(--project-blue); outline-offset: 2px; }
+.project-section-tile > span { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 13px; background: rgba(25, 162, 233, .12); color: var(--project-blue); font-size: 24px; }
+.project-section-tile strong { display: block; font-size: 17px; line-height: 1.3; overflow-wrap: anywhere; }
+.project-section-tile small { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.project-section-tile > b { color: var(--project-blue); font-size: 24px; }
+.project-section-tile > em { grid-column: 2 / -1; color: var(--project-blue); font-size: 12px; font-style: normal; }
+.project-section-tile:last-child { grid-column: 1 / -1; }
+.project-section-back { min-height: 44px; margin-bottom: 18px; font-size: 12px; }
+.project-deep-workspace.is-section-open > .project-info-hero { display: none; }
+@media (max-width: 600px) {
+  .project-section-menu { grid-template-columns: 1fr; gap: 10px; }
+  .project-section-tile { min-height: 125px; padding: 15px; gap: 10px; }
+  .project-section-tile strong { font-size: 16px; }
+  .project-section-back { width: 100%; }
+}
+
 /* Responsive QA pass: detailed project workspace */
 .detailed-project-detail-panel,
 .detailed-project-detail-panel > div,
