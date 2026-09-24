@@ -3,6 +3,15 @@ export const PROJECT_NOTE_SECTIONS = Object.freeze({
   spec: 'Весь проект по спецификации',
   visual: 'Визуальный разбор',
   extra: 'Доп. работы',
+  risks: 'Риски проекта',
+  errors: 'Ошибки и несоответствия',
+  discrepancies: 'Расхождения проекта',
+  questions: 'Вопросы по проекту',
+  equipment: 'Основное оборудование',
+  materials: 'Основной материал',
+  marks: 'Расхождение марок',
+  missing: 'Позиции которых нет',
+  sequence: 'ППРабот',
   notes: 'Мои заметки к проекту'
 });
 
@@ -81,7 +90,7 @@ export function projectQuestionHistoryMarkup(questions) {
 export function bindProjectNotes({ rootElement, object, version, ownerId, showToast, onChange = () => {} }) {
   const escape = escapeProjectText;
   const store = createProjectNotesStore(localStorage, ownerId);
-  const contexts = ['sheets', 'spec', 'visual', 'extra', 'notes'];
+  const contexts = Object.keys(PROJECT_NOTE_SECTIONS);
   const statusText = 'Заметки сохраняются на этом устройстве. Общий список находится в «Мои заметки к проекту».';
   let deletedNoteId = null;
   const listFor = (sectionId) => store.list(object.id, sectionId === 'notes' ? {} : { sectionId, versionId: version.id });
@@ -99,6 +108,35 @@ export function bindProjectNotes({ rootElement, object, version, ownerId, showTo
     panel.dataset.projectNotesPanel = sectionId;
     panel.innerHTML = `<header><div><small>ЛИЧНЫЕ ЗАПИСИ</small><h3>${sectionId === 'notes' ? 'Все заметки этого проекта' : 'Мои заметки к разделу'}</h3></div><span data-notes-count>0</span></header><form data-project-note-form="${sectionId}"><label for="project-note-${sectionId}">${sectionId === 'notes' ? 'Добавить общую заметку' : 'Оставить заметку'}</label><textarea id="project-note-${sectionId}" name="text" rows="3" maxlength="2000" required placeholder="Запишите мысль, уточнение или задачу по проекту…"></textarea><footer><small>До 2000 символов</small><button class="primary-button" type="submit">Сохранить заметку</button></footer><p class="project-note-status" data-note-status role="status" aria-live="polite"></p></form><p class="project-notes-hint">${statusText}</p>${sectionId === 'notes' ? '<label class="project-notes-filter">Раздел<select data-note-filter><option value="">Все разделы</option>' + Object.entries(PROJECT_NOTE_SECTIONS).map(([key, title]) => `<option value="${key}">${escape(title)}</option>`).join('') + '</select></label>' : ''}<div data-note-undo hidden></div><div class="project-notes-list" data-notes-list></div>`;
     section.querySelector('.project-deep-section-head')?.after(panel);
+    if (sectionId !== 'notes') {
+      panel.hidden = true;
+      const tile = document.createElement('button');
+      tile.type = 'button';
+      tile.className = 'project-section-tile project-section-notes-tile';
+      tile.dataset.openSectionNotes = sectionId;
+      panel.id = `project-section-notes-${sectionId}`;
+      tile.setAttribute('aria-controls', panel.id);
+      tile.setAttribute('aria-expanded', 'false');
+      tile.innerHTML = '<span aria-hidden="true">✎</span><div><strong>Мои заметки по разделу</strong><small>Личные записи, уточнения и задачи</small></div><b aria-hidden="true">›</b><em data-section-note-count>Открыть заметки →</em>';
+      panel.before(tile);
+      const back = document.createElement('button');
+      back.type = 'button';
+      back.className = 'outline-button project-section-back';
+      back.textContent = '← К содержимому раздела';
+      panel.prepend(back);
+      tile.addEventListener('click', () => {
+        section.classList.add('is-notes-open');
+        panel.hidden = false;
+        tile.setAttribute('aria-expanded', 'true');
+        back.focus();
+      });
+      back.addEventListener('click', () => {
+        section.classList.remove('is-notes-open');
+        panel.hidden = true;
+        tile.setAttribute('aria-expanded', 'false');
+        tile.focus();
+      });
+    }
     panel.querySelector('form').addEventListener('submit', (event) => {
       event.preventDefault();
       const input = panel.querySelector('textarea');
@@ -153,6 +191,8 @@ export function bindProjectNotes({ rootElement, object, version, ownerId, showTo
     const filter = panel.querySelector('[data-note-filter]')?.value;
     const visible = filter ? notes.filter((note) => note.sectionId === filter) : notes;
     panel.querySelector('[data-notes-count]').textContent = String(notes.length);
+    const tileCount = panel.parentElement.querySelector('[data-section-note-count]');
+    if (tileCount) tileCount.textContent = notes.length ? `Заметок: ${notes.length} · Открыть →` : 'Открыть заметки →';
     panel.querySelector('[data-notes-list]').innerHTML = visible.length ? visible.map((note) => `<article class="project-note-card" data-note-card="${escape(note.id)}"><header><strong>${escape(PROJECT_NOTE_SECTIONS[note.sectionId])}</strong><time>${escape(dateLabel(note.updatedAt))}</time></header><small>${escape(note.versionName || 'Файл проекта')}${note.versionId !== version.id ? ' · другая версия' : ''}</small><p>${escape(note.text)}</p><footer><button class="outline-button" type="button" data-note-action="edit" data-note-id="${escape(note.id)}">Изменить</button><button class="outline-button" type="button" data-note-action="delete" data-note-id="${escape(note.id)}">Удалить</button></footer></article>`).join('') : '<p class="project-notes-empty">Заметок пока нет. Добавьте первую запись выше.</p>';
     const undo = panel.querySelector('[data-note-undo]');
     undo.hidden = !deletedNoteId;

@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="dashboard.css?v=71" />
+    <link rel="stylesheet" href="dashboard.css?v=72" />
     <link rel="stylesheet" href="home-dashboard.css?v=2" />
   </head>
   <body class="is-cabinet-entering">
@@ -424,17 +424,17 @@
       if ('serviceWorker' in navigator) {
         let reloadingForUpdate = false;
         navigator.serviceWorker.addEventListener('controllerchange', () => {
-          if (reloadingForUpdate || sessionStorage.getItem('structos-sw-reload-v118') === '1') return;
+          if (reloadingForUpdate || sessionStorage.getItem('structos-sw-reload-v119') === '1') return;
           reloadingForUpdate = true;
-          sessionStorage.setItem('structos-sw-reload-v118', '1');
+          sessionStorage.setItem('structos-sw-reload-v119', '1');
           window.location.reload();
         });
-        navigator.serviceWorker.register('./sw.js?v=118', { updateViaCache: 'none' })
+        navigator.serviceWorker.register('./sw.js?v=119', { updateViaCache: 'none' })
           .then((registration) => registration.update())
           .catch(() => {});
       }
     </script>
-    <script type="module" src="dashboard.js?v=82"></script>
+    <script type="module" src="dashboard.js?v=83"></script>
     <script type="module" src="home-dashboard.js?v=1"></script>
   </body>
 </html>

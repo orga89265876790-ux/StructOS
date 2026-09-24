@@ -207,12 +207,12 @@
       if ('serviceWorker' in navigator) {
         let reloadingForUpdate = false;
         navigator.serviceWorker.addEventListener('controllerchange', () => {
-          if (reloadingForUpdate || sessionStorage.getItem('structos-sw-reload-v118') === '1') return;
+          if (reloadingForUpdate || sessionStorage.getItem('structos-sw-reload-v119') === '1') return;
           reloadingForUpdate = true;
-          sessionStorage.setItem('structos-sw-reload-v118', '1');
+          sessionStorage.setItem('structos-sw-reload-v119', '1');
           window.location.reload();
         });
-        navigator.serviceWorker.register('./sw.js?v=118', { updateViaCache: 'none' })
+        navigator.serviceWorker.register('./sw.js?v=119', { updateViaCache: 'none' })
           .then((registration) => registration.update())
           .catch(() => {});
       }

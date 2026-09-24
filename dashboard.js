@@ -4,6 +4,7 @@ import { metroDirectory } from './metro-directory.js';
 import { createOfflineSyncEngine } from './offline-sync.js';
 import { bindProjectNotes, createProjectNotesStore } from './project-notebook.js';
 import { mountProjectSheetPage, saveProjectOriginal, describeProjectOriginal } from './project-sheet.js';
+import { bindProjectSectionQuestions } from './project-section-questions.js';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -9477,7 +9478,7 @@ function setupProjectSectionMenu(rootElement, model) {
   const notes = document.createElement('section');
   notes.id = 'project-block-notes';
   notes.className = 'project-deep-section';
-  notes.innerHTML = projectAnalysisSectionHead('✎', 'PROJECT NOTES', 'Мои заметки к проекту', 'Все ваши записи из первых четырёх разделов и общие заметки.');
+  notes.innerHTML = projectAnalysisSectionHead('✎', 'PROJECT NOTES', 'Мои заметки к проекту', 'Все ваши записи из разделов проекта и общие заметки.');
   workspace.append(notes);
   const entries = [
     ['sheets', '▤', 'Оригинал проекта по листам', 'Листы, описание и вопросы по каждому листу'],
@@ -9544,6 +9545,7 @@ function projectSheetAnswerContext(version, sheet, model) {
 function bindProjectAnalysisWorkspace(rootElement, object, version, model) {
   setupProjectSectionMenu(rootElement, model);
   bindProjectNotes({ rootElement, object, version, ownerId: projectNotebookOwner, showToast });
+  bindProjectSectionQuestions({ rootElement, object, version, ownerId: projectNotebookOwner });
   $$('[data-project-drawing-title]', rootElement).forEach((button) => button.addEventListener('click', () => openProjectDrawingPreview(button.dataset.projectDrawingTitle, button.dataset.projectDrawingSource)));
   $$('[data-project-spec-view]', rootElement).forEach((button) => button.addEventListener('click', () => {
     const item = model.specification.find((entry) => entry.id === button.dataset.projectSpecView);
@@ -10581,7 +10583,7 @@ function isDemoAccount() {
 async function pushRegistration() {
   const current = await navigator.serviceWorker.getRegistration();
   if (current) return current;
-  return navigator.serviceWorker.register('./sw.js?v=118', { updateViaCache: 'none' });
+  return navigator.serviceWorker.register('./sw.js?v=119', { updateViaCache: 'none' });
 }
 
 async function pushNotificationState() {
@@ -11630,4 +11632,4 @@ startActiveBonusAccrual();
 window.setTimeout(() => runLoginPrompts(dailyRewarded), window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1100 : 3750);
 if (pendingTransferImport?.intent === 'commercial-proposal' || location.hash === '#proposals') localStorage.removeItem(AUTH_RETURN_KEY);
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=118', { updateViaCache: 'none' }).catch(() => {}));
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=119', { updateViaCache: 'none' }).catch(() => {}));
