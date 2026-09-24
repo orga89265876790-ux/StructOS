@@ -1,8 +1,17 @@
+import { cpSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
   base: './',
+  plugins: [{
+    name: 'project-pdf-resources',
+    writeBundle(options) {
+      for (const directory of ['cmaps', 'standard_fonts', 'wasm']) {
+        cpSync(resolve('node_modules/pdfjs-dist', directory), resolve(options.dir, 'pdfjs', directory), { recursive: true });
+      }
+    }
+  }],
   build: {
     rollupOptions: {
       input: {

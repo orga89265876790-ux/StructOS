@@ -2,7 +2,8 @@ import { supabaseConfig } from './auth-config.js';
 import { professions } from './professions.js';
 import { metroDirectory } from './metro-directory.js';
 import { createOfflineSyncEngine } from './offline-sync.js';
-import { answerFromProjectSheet, bindProjectNotes, createProjectNotesStore, projectQuestionHistoryMarkup } from './project-notebook.js';
+import { bindProjectNotes, createProjectNotesStore } from './project-notebook.js';
+import { mountProjectSheetPage, saveProjectOriginal, describeProjectOriginal } from './project-sheet.js';
 
 const root = document.documentElement;
 const $ = (selector, scope = document) => scope.querySelector(selector);
@@ -1544,7 +1545,7 @@ function fileVersionSnapshot(file) {
   const size = Number(file?.size) || 0;
   const lastModified = Number(file?.lastModified) || Number(new Date(addedAt)) || Date.now();
   const structuredFields = {};
-  ['analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'commercialProposal', 'proposalBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'].forEach((key) => {
+  ['sheets', 'pages', 'drawings', 'pageCount', 'analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'commercialProposal', 'proposalBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'].forEach((key) => {
     if (file?.[key] != null) structuredFields[key] = file[key];
   });
   return {
@@ -1617,7 +1618,7 @@ function isDocumentVersionAnalyzed(version) {
 function syncLatestDocumentVersion(file, versions) {
   if (!file || !Array.isArray(versions) || !versions.length) return file;
   const latest = fileVersionSnapshot(versions[versions.length - 1]);
-  const syncedFields = ['id', 'name', 'size', 'type', 'lastModified', 'addedAt', 'analyzedAt', 'analysisPending', 'contractNumber', 'projectSection', 'sourceCatalog', 'sourceCatalogScanned', 'analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'commercialProposal', 'proposalBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'];
+  const syncedFields = ['sheets', 'pages', 'drawings', 'pageCount', 'id', 'name', 'size', 'type', 'lastModified', 'addedAt', 'analyzedAt', 'analysisPending', 'contractNumber', 'projectSection', 'sourceCatalog', 'sourceCatalogScanned', 'analysisData', 'analysisResult', 'result', 'extractedData', 'extraction', 'estimateBreakdown', 'commercialProposal', 'proposalBreakdown', 'boq', 'items', 'positions', 'rows', 'works', 'materials', 'services', 'equipment', 'specification'];
   syncedFields.forEach((key) => {
     if (Object.prototype.hasOwnProperty.call(latest, key)) file[key] = latest[key];
     else if (key !== 'projectSection') delete file[key];
@@ -9268,14 +9269,14 @@ function projectAnalysisFindMetric(version, aliases, fallback = 0) {
 }
 
 function normalizeProjectSheet(entry, index) {
-  if (typeof entry === 'string' || typeof entry === 'number') return { id: `sheet-${index + 1}`, number: String(index + 1).padStart(2, '0'), title: String(entry), description: 'Содержание листа определено при анализе проекта.', requires: ['Проверить привязки', 'Подготовить материалы'] };
+  if (typeof entry === 'string' || typeof entry === 'number') return { id: `sheet-${index + 1}`, number: String(index + 1).padStart(2, '0'), pageNumber: index + 1, title: String(entry), description: 'Содержание листа определено при анализе проекта.', requires: ['Проверить привязки', 'Подготовить материалы'] };
   const item = entry && typeof entry === 'object' ? entry : {};
   const number = item.number ?? item.sheetNumber ?? item.sheet ?? item.page ?? item.pageNumber ?? index + 1;
   const title = item.title || item.name || item.sheetName || item.pageName || item.description || `Лист ${number}`;
   const description = item.summary || item.description || item.content || item.explanation || 'Содержание листа определено при анализе проекта.';
   const rawRequirements = item.requires || item.requirements || item.tools || item.needed || [];
   const requires = Array.isArray(rawRequirements) ? rawRequirements.map((value) => typeof value === 'object' ? value.name || value.title || JSON.stringify(value) : String(value)).filter(Boolean).slice(0, 6) : [String(rawRequirements)].filter(Boolean);
-  return { id: `sheet-${index + 1}`, number: String(number), title: String(title), description: String(description), requires: requires.length ? requires : ['Проверить привязки', 'Подготовить материалы'] };
+  return { id: `sheet-${index + 1}`, number: String(number), pageNumber: Number(item.pdfPage ?? item.pageNumber ?? index + 1), title: String(title), description: String(description), requires: requires.length ? requires : ['Проверить привязки', 'Подготовить материалы'] };
 }
 
 function normalizeProjectInsight(entry, index, severity = 'warning') {
@@ -9306,7 +9307,7 @@ function saveProjectSheetQuestions(questions) {
 }
 
 function questionsForProjectVersion(objectId, versionId) {
-  return loadProjectSheetQuestions().filter((item) => item.objectId === objectId && item.versionId === versionId && (!item.ownerId || item.ownerId === projectNotebookOwner));
+  return loadProjectSheetQuestions().filter((item) => !item.deletedAt && item.objectId === objectId && item.versionId === versionId && (!item.ownerId || item.ownerId === projectNotebookOwner));
 }
 
 function projectAnalysisModel(object, version) {
@@ -9391,10 +9392,10 @@ function projectAnalysisWorkspaceMarkup(object, version, model) {
   const nav = [
     ['project-block-sheets', 'Оригинал по листам'], ['project-block-spec', 'Спецификация'], ['project-block-visual', 'Визуальный разбор'], ['project-block-risks', 'Риски'], ['project-block-questions', 'Вопросы'], ['project-block-errors', 'Несоответствия'], ['project-block-extra', 'Доп. работы'], ['project-block-sequence', 'Последовательность'], ['project-block-equipment', 'Оборудование'], ['project-block-materials', 'Материалы']
   ].map(([id, label]) => `<a href="#${id}">${escapeHtml(label)}</a>`).join('');
-  const sheets = model.sheets.slice(0, 18).map((sheet) => {
+  const sheets = model.sheets.map((sheet) => {
     const count = model.userQuestions.filter((question) => question.sheetId === sheet.id).length;
     const requirements = sheet.requires.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
-    return `<article class="project-sheet-card"><header><span>${escapeHtml(sheet.number)}</span><div><small>ЛИСТ ${escapeHtml(sheet.number)}</small><h3>${escapeHtml(sheet.title)}</h3></div><button class="project-sheet-download" type="button" data-project-sheet-download="${escapeHtml(sheet.id)}" title="Скачать лист"><span aria-hidden="true">↓</span>Скачать лист</button></header><p>${escapeHtml(sheet.description)}</p><section><strong>Что потребуется для выполнения</strong><ul>${requirements}</ul></section><div class="project-sheet-actions">${projectDrawingButton(sheet.title, `Лист ${sheet.number}`)}</div><form class="project-sheet-question" data-project-sheet-question="${escapeHtml(sheet.id)}"><label for="question-${escapeHtml(sheet.id)}">Задать вопрос по этому листу${count ? ` · сохранено ${count}` : ''}</label><div><input id="question-${escapeHtml(sheet.id)}" maxlength="400" placeholder="Например: на какой высоте установить оборудование?" /><button class="primary-button" type="submit">Спросить StructOS</button></div><small data-sheet-question-status role="status" aria-live="polite"></small></form></article>`;
+    return `<article class="project-sheet-card"><header><span>${escapeHtml(sheet.number)}</span><div><small>ЛИСТ ${escapeHtml(sheet.number)}</small><h3>${escapeHtml(sheet.title)}</h3></div></header><p>${escapeHtml(sheet.description)}</p><section><strong>Что потребуется для выполнения</strong><ul>${requirements}</ul></section><div class="project-sheet-actions"><button class="outline-button" type="button" data-open-project-sheet="${escapeHtml(sheet.id)}">▤ Открыть чертёж</button><button class="primary-button" type="button" data-open-project-sheet="${escapeHtml(sheet.id)}">Задать вопрос</button></div><small class="project-sheet-question-summary" data-sheet-summary="${escapeHtml(sheet.id)}">${count ? `Вопросов: ${count}` : 'Чертёж и история вопросов — на отдельной странице'}</small></article>`;
   }).join('');
   const specificationRows = model.specification.slice(0, 80).map((item, index) => `<tr><td data-label="№">${index + 1}</td><td data-label="Обозначение"><b>${escapeHtml(item.designation)}</b></td><td data-label="Наименование / характеристики"><strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.characteristics)}</small></td><td data-label="Единица">${escapeHtml(item.unit)}</td><td data-label="Количество">${escapeHtml(item.quantity || '—')}</td><td data-label="Где находится"><span class="project-sheet-pill">Лист ${escapeHtml(item.sheet)}</span></td><td data-label="Действия"><div class="project-spec-actions"><button class="outline-button" type="button" data-project-spec-view="${escapeHtml(item.id)}">Смотреть</button>${projectDrawingButton(item.name, `Лист ${item.sheet}`, 'На чертеже')}</div></td></tr>`).join('');
   const visualItems = model.specification.slice(0, 6).map((item, index) => `<article><div class="project-visual-mini"><i style="--visual-x:${18 + index * 12}%;--visual-y:${25 + (index % 3) * 22}%"></i><span>${index + 1}</span><b></b></div><small>${escapeHtml(item.designation)}</small><h3>${escapeHtml(item.name)}</h3><p>StructOS покажет оборудование, линию, направление монтажа, этапы и источник.</p>${projectDrawingButton(item.name, `Лист ${item.sheet}`, 'Показать на проекте')}</article>`).join('');
@@ -9532,7 +9533,7 @@ function projectSheetAnswerContext(version, sheet, model) {
   if (model.isDemo) return { source, isDemo: true, evidence: [] };
   const rawSheets = projectAnalysisFindCollection(version, ['sheets', 'pages', 'drawings', 'projectSheets', 'листы', 'страницы', 'чертежи']);
   const rawSheet = rawSheets.find((entry, index) => normalizeProjectSheet(entry, index).id === sheet.id);
-  const textFields = rawSheet && typeof rawSheet === 'object'
+  const textFields = rawSheet && typeof rawSheet === 'object' && !rawSheet.originalPage
     ? ['text', 'content', 'summary', 'description', 'explanation'].map((key) => rawSheet[key]).filter((value) => typeof value === 'string' && value.trim()) : [];
   const sheetKey = (value) => String(value || '').toLowerCase().replace(/^(?:лист|стр(?:аница)?\.?)\s*/u, '').replace(/^0+(?=\d)/u, '').trim();
   const catalog = cashSourceCatalogFromFileRecord(version, 'project').filter((entry) => entry.sourceSheet && sheetKey(entry.sourceSheet) === sheetKey(sheet.number));
@@ -9548,70 +9549,52 @@ function bindProjectAnalysisWorkspace(rootElement, object, version, model) {
     const item = model.specification.find((entry) => entry.id === button.dataset.projectSpecView);
     if (item) openProjectSpecificationViewer(item);
   }));
-  $$('[data-project-sheet-download]', rootElement).forEach((button) => button.addEventListener('click', () => {
-    const sheet = model.sheets.find((item) => item.id === button.dataset.projectSheetDownload);
+  let previousQuestionCount = questionsForProjectVersion(object.id, version.id).length;
+  $$('[data-open-project-sheet]', rootElement).forEach((button) => button.addEventListener('click', () => {
+    if (rootElement.querySelector('.project-sheet-page')) return;
+    const sheet = model.sheets.find((item) => item.id === button.dataset.openProjectSheet);
     if (!sheet) return;
-    const text = [`STRUCTOS · Лист ${sheet.number}`, sheet.title, '', sheet.description, '', 'Что потребуется для выполнения:', ...sheet.requires.map((item, index) => `${index + 1}. ${item}`), '', `Исходный файл: ${version.name}`, `Объект: ${object.name}`].join('\n');
-    downloadProjectTextFile(`Лист_${sheet.number}_${sheet.title}.txt`, text);
-    showToast('Лист подготовлен к скачиванию');
-  }));
-  $$('[data-project-sheet-question]', rootElement).forEach((form) => {
-    const sheet = model.sheets.find((item) => item.id === form.dataset.projectSheetQuestion);
-    if (!sheet) return;
-    const history = document.createElement('div');
-    history.className = 'project-sheet-conversation';
-    history.setAttribute('aria-label', `Вопросы и ответы по листу ${sheet.number}`);
-    form.after(history);
-    const hint = document.createElement('p');
-    hint.className = 'project-answer-hint';
-    hint.textContent = 'StructOS ищет ответ в сохранённых данных этого листа и указывает источник. Если данных недостаточно, вопрос остаётся для уточнения.';
-    form.before(hint);
-    const renderHistory = () => {
-      const questions = questionsForProjectVersion(object.id, version.id).filter((item) => item.sheetId === sheet.id);
-      history.innerHTML = projectQuestionHistoryMarkup(questions);
-      const label = $('label', form);
-      if (label) label.textContent = `Задать вопрос StructOS по этому листу${questions.length ? ` · вопросов: ${questions.length}` : ''}`;
-    };
-    const saveAnswer = (question, isNew) => {
-      const input = $('input', form);
-      const status = $('[data-sheet-question-status]', form);
-      try {
-        const answer = answerFromProjectSheet(question.text, projectSheetAnswerContext(version, sheet, model));
-        const questions = loadProjectSheetQuestions();
-        const updated = { ...question, answer, answeredAt: new Date().toISOString() };
-        if (isNew) questions.push(updated);
-        else {
-          const index = questions.findIndex((item) => item.id === question.id && item.objectId === object.id && item.versionId === version.id);
-          if (index < 0) throw new Error('Question no longer exists');
-          questions[index] = updated;
-        }
-        saveProjectSheetQuestions(questions);
-        if (isNew) {
-          input.value = '';
-          const count = $('[data-project-question-count]', rootElement);
-          if (count) count.textContent = String(Number(count.textContent || 0) + 1);
-        }
-        status.textContent = answer.status === 'evidence' ? 'Ответ сохранён вместе с вопросом' : 'Вопрос сохранён. Для ответа нужны дополнительные данные листа';
-        renderHistory();
-      } catch {
-        status.textContent = 'Не удалось сохранить вопрос и ответ. Текст оставлен в поле — попробуйте ещё раз.';
+    const workspace = rootElement.querySelector('.project-deep-workspace');
+    workspace.hidden = true;
+    rootElement.classList.add('is-sheet-page-open');
+    let recoveredOriginal = false;
+    mountProjectSheetPage({ rootElement, object, version, sheet, ownerId: projectNotebookOwner,
+      context: projectSheetAnswerContext(version, sheet, model), loadQuestions: loadProjectSheetQuestions, saveQuestions: saveProjectSheetQuestions,
+      onQuestionsChanged() {
+        const questions = questionsForProjectVersion(object.id, version.id);
+        const count = $('[data-project-question-count]', rootElement);
+        if (count) count.textContent = String(Math.max(0, Number(count.textContent || 0) + questions.length - previousQuestionCount));
+        previousQuestionCount = questions.length;
+        $$('[data-sheet-summary]', rootElement).forEach((label) => {
+          const total = questions.filter((item) => item.sheetId === label.dataset.sheetSummary).length;
+          label.textContent = total ? `Вопросов: ${total}` : 'Чертёж и история вопросов — на отдельной странице';
+        });
+      },
+      onOriginalMetadata(details) {
+        if (!model.isDemo) return;
+        Object.assign(version, details);
+        recoveredOriginal = true;
+        try {
+          const record = detailedProjectRecords.find((item) => item.id === object.id);
+          if (record?.file) { Object.assign(record.file, details); saveDetailedProjectRecords(); }
+          else {
+            const storedObject = objectRegistry.find((item) => item.id === object.id);
+            const file = objectFile(storedObject, 'project');
+            if (file) { updateDocumentVersion(file, version.id, details); saveObjects(); }
+          }
+        } catch { showToast('Оригинал открыт, но список листов не удалось сохранить.'); }
+      },
+      onClose() {
+        rootElement.classList.remove('is-sheet-page-open');
+        if (recoveredOriginal) {
+          const updatedModel = projectAnalysisModel(object, version);
+          workspace.outerHTML = projectAnalysisWorkspaceMarkup(object, version, updatedModel);
+          bindProjectAnalysisWorkspace(rootElement, object, version, updatedModel);
+          rootElement.querySelector('[data-project-section="sheets"]')?.click();
+        } else { workspace.hidden = false; button.focus(); }
       }
-    };
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const input = $('input', form);
-      const text = input?.value.trim();
-      if (!text) { input?.focus(); return; }
-      saveAnswer({ id: `question-${Date.now()}-${Math.random().toString(16).slice(2)}`, ownerId: projectNotebookOwner, objectId: object.id, versionId: version.id, sheetId: sheet.id, sheetNumber: sheet.number, sheetTitle: sheet.title, text: text.slice(0, 400), createdAt: new Date().toISOString() }, true);
     });
-    history.addEventListener('click', (event) => {
-      const button = event.target.closest('[data-project-question-retry]');
-      if (!button) return;
-      const question = questionsForProjectVersion(object.id, version.id).find((item) => item.id === button.dataset.projectQuestionRetry && item.sheetId === sheet.id);
-      if (question) saveAnswer(question, false);
-    });
-    renderHistory();
-  });
+  }));
   $('[data-download-project-questions]', rootElement)?.addEventListener('click', () => {
     const sections = [
       'ВОПРОСЫ ЗАКАЗЧИКУ',
@@ -10402,9 +10385,20 @@ async function confirmUpload() {
   const shouldExtractSourceCatalog = Boolean(sourceFile && CASH_SOURCE_DOCUMENT_KINDS.includes(activeUploadKind));
   const confirmButton = $('[data-confirm-upload]');
   if (confirmButton) confirmButton.disabled = true;
+  let originalDetails = {};
+  if (sourceFile && activeUploadKind === 'project') {
+    try {
+      await saveProjectOriginal(projectNotebookOwner, pendingFile, sourceFile);
+      originalDetails = await describeProjectOriginal(sourceFile);
+    } catch {
+      if (confirmButton?.isConnected) confirmButton.disabled = false;
+      showToast('Оригинал не удалось подготовить. Проверьте файл и свободное место на устройстве.');
+      return;
+    }
+  }
   const sourceCatalog = shouldExtractSourceCatalog ? await extractCashSourceCatalogFromFile(sourceFile, activeUploadKind) : [];
   if (confirmButton?.isConnected) confirmButton.disabled = false;
-  let uploadedFile = { ...pendingFile, kind: activeUploadKind, addedAt: uploadedAt, analysisPending: true, analyzedAt: null, sourceCatalog, sourceCatalogScanned: shouldExtractSourceCatalog };
+  let uploadedFile = { ...pendingFile, ...originalDetails, kind: activeUploadKind, addedAt: uploadedAt, analysisPending: true, analyzedAt: null, sourceCatalog, sourceCatalogScanned: shouldExtractSourceCatalog };
   if (activeUploadKind === 'contract') uploadedFile.contractNumber = String(pendingFile.contractNumber || extractContractNumberFromName(pendingFile.name) || '');
   if (!destination) {
     destination = { id: createObjectId(), name: objectName, projectTitle: objectName, projectSection: objectName, documentTitles: normalizeProjectDocumentTitles(), contractNumber: '', status: 'uploaded', createdAt: uploadedAt, updatedAt: uploadedAt, uploadedAt, analyzedAt: null, startedAt: null, files: [] };
@@ -10587,7 +10581,7 @@ function isDemoAccount() {
 async function pushRegistration() {
   const current = await navigator.serviceWorker.getRegistration();
   if (current) return current;
-  return navigator.serviceWorker.register('./sw.js?v=117', { updateViaCache: 'none' });
+  return navigator.serviceWorker.register('./sw.js?v=118', { updateViaCache: 'none' });
 }
 
 async function pushNotificationState() {
@@ -11171,7 +11165,9 @@ async function forceRefresh() {
 
 $('[data-language]').addEventListener('change', (event) => applyLanguage(event.target.value));
 
+let detailedProjectFileSelection = 0;
 const detailedProjectDraft = {
+  reading: false,
   projectName: '',
   sectionName: '',
   file: null,
@@ -11187,6 +11183,8 @@ try {
   if (savedDetailedProjectDraft && typeof savedDetailedProjectDraft === 'object') {
     detailedProjectDraft.projectName = String(savedDetailedProjectDraft.projectName || '').slice(0, 120);
     detailedProjectDraft.sectionName = String(savedDetailedProjectDraft.sectionName || '').slice(0, 140);
+    detailedProjectDraft.file = savedDetailedProjectDraft.file?.name ? savedDetailedProjectDraft.file : null;
+    detailedProjectDraft.uploaded = Boolean(savedDetailedProjectDraft.uploaded && detailedProjectDraft.file);
   }
 } catch {}
 
@@ -11225,7 +11223,7 @@ function detailedProjectUploadMarkup() {
   const selectedFile = detailedProjectDraft.file
     ? `<div class="proposal-create-selected-file"><span aria-hidden="true">▤</span><div><strong>${escapeHtml(detailedProjectDraft.file.name)}</strong><small>${escapeHtml(fileFormatLabel(detailedProjectDraft.file))} · ${escapeHtml(fileSize(detailedProjectDraft.file.size))}</small></div><button type="button" data-detailed-project-replace-file>${escapeHtml(tr('replace'))}</button><button class="proposal-create-delete-file" type="button" data-detailed-project-delete-file aria-label="${escapeHtml(tr('deleteFile'))}" title="${escapeHtml(tr('deleteFile'))}">×</button></div>`
     : `<div class="proposal-create-dropzone" data-detailed-project-dropzone role="button" tabindex="0"><span aria-hidden="true">↑</span><div><strong>Выбрать проект</strong><small>Перетащите файл сюда или нажмите для выбора · ${escapeHtml(rule.formats)} · до ${rule.maxMb} МБ</small></div></div>`;
-  const disabled = !detailedProjectDraft.file || !detailedProjectDraft.projectName.trim() || !detailedProjectDraft.sectionName.trim() || detailedProjectDraft.uploaded;
+  const disabled = !detailedProjectDraft.file || !detailedProjectDraft.projectName.trim() || !detailedProjectDraft.sectionName.trim() || detailedProjectDraft.uploaded || detailedProjectDraft.reading;
   return `<article class="proposal-create-card is-project detailed-project-upload-card">
     <header><span aria-hidden="true">▤</span><div><h2>Загрузить проект</h2><p>Укажите название проекта и раздел, затем загрузите один файл проекта.</p></div></header>
     <div class="proposal-create-fields">
@@ -11394,7 +11392,7 @@ function renderDetailedProjectUpload() {
   const fileInput = $('[data-detailed-project-file]', rootElement);
   const refreshSubmit = () => {
     const button = $('[data-detailed-project-upload-submit]', rootElement);
-    if (button) button.disabled = !detailedProjectDraft.file || !detailedProjectDraft.projectName.trim() || !detailedProjectDraft.sectionName.trim() || detailedProjectDraft.uploaded;
+    if (button) button.disabled = !detailedProjectDraft.file || !detailedProjectDraft.projectName.trim() || !detailedProjectDraft.sectionName.trim() || detailedProjectDraft.uploaded || detailedProjectDraft.reading;
   };
   nameInput?.addEventListener('input', () => {
     detailedProjectDraft.projectName = nameInput.value.slice(0, 120);
@@ -11410,16 +11408,33 @@ function renderDetailedProjectUpload() {
     saveDetailedProjectDraft();
     refreshSubmit();
   });
-  const chooseFile = (file) => {
+  const chooseFile = async (file) => {
     if (!file) return;
     if (file.size > rule.maxMb * 1024 * 1024) { showToast(`${tr('fileTooLarge')}: ${rule.maxMb} МБ`); return; }
     if (!isAllowedFile(file, rule)) { showToast(`${tr('unsupportedFormat')}: ${rule.formats}`); return; }
-    detailedProjectDraft.file = fileMetadata(file);
-    detailedProjectDraft.sourceFile = file;
+    const selection = ++detailedProjectFileSelection;
+    detailedProjectDraft.reading = true;
+    detailedProjectDraft.file = null;
     detailedProjectDraft.uploaded = false;
-    saveDetailedProjectDraft();
     renderDetailedProjectUpload();
-    showToast(`Файл выбран: ${file.name}`);
+    showToast('Сохраняем оригинал и определяем страницы…');
+    try {
+      const metadata = fileMetadata(file);
+      await saveProjectOriginal(projectNotebookOwner, metadata, file);
+      const details = await describeProjectOriginal(file);
+      if (selection !== detailedProjectFileSelection) return;
+      detailedProjectDraft.file = { ...metadata, ...details };
+      detailedProjectDraft.sourceFile = file;
+      detailedProjectDraft.reading = false;
+      saveDetailedProjectDraft();
+      renderDetailedProjectUpload();
+      showToast(`Оригинал сохранён: ${file.name}`);
+    } catch {
+      if (selection !== detailedProjectFileSelection) return;
+      detailedProjectDraft.reading = false;
+      renderDetailedProjectUpload();
+      showToast('Не удалось подготовить оригинал. Проверьте файл и свободное место на устройстве.');
+    }
   };
   fileInput?.addEventListener('change', () => {
     chooseFile(fileInput.files?.[0]);
@@ -11427,6 +11442,8 @@ function renderDetailedProjectUpload() {
   });
   $('[data-detailed-project-replace-file]', rootElement)?.addEventListener('click', () => fileInput?.click());
   $('[data-detailed-project-delete-file]', rootElement)?.addEventListener('click', () => {
+    ++detailedProjectFileSelection;
+    detailedProjectDraft.reading = false;
     detailedProjectDraft.file = null;
     detailedProjectDraft.sourceFile = null;
     detailedProjectDraft.uploaded = false;
@@ -11613,4 +11630,4 @@ startActiveBonusAccrual();
 window.setTimeout(() => runLoginPrompts(dailyRewarded), window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1100 : 3750);
 if (pendingTransferImport?.intent === 'commercial-proposal' || location.hash === '#proposals') localStorage.removeItem(AUTH_RETURN_KEY);
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=117', { updateViaCache: 'none' }).catch(() => {}));
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=118', { updateViaCache: 'none' }).catch(() => {}));

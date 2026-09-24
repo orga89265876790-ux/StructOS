@@ -1,8 +1,9 @@
-const CACHE_NAME = 'structos-offline-v117';
+const CACHE_NAME = 'structos-offline-v118';
 const CORE_PAGES = ['./', './dashboard.html', './passport.html', './login.html', './manifest.webmanifest'];
 const OPTIONAL_SOURCE_ASSETS = [
   './dashboard.js',
   './project-notebook.js',
+  './project-sheet.js',
   './dashboard.css',
   './contract.js',
   './contract.css',
@@ -110,7 +111,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(navigationResponse(request));
     return;
   }
-  if (['script', 'style', 'image', 'font', 'manifest'].includes(request.destination)) {
+  if (['script', 'style', 'image', 'font', 'manifest', 'worker', 'sharedworker'].includes(request.destination)) {
     event.respondWith(staticResponse(request));
   }
 });
