@@ -3930,11 +3930,16 @@ function historyMarkup(items, bonus = false) {
   if (!items.length) return `<div class="history-empty">${tr('noOperations')}</div>`;
   const formatter = new Intl.DateTimeFormat(root.lang || 'ru', { day: '2-digit', month: 'short', year: 'numeric' });
   const bonusFormatter = new Intl.NumberFormat(root.lang || 'ru-RU', { minimumFractionDigits: 1, maximumFractionDigits: 5 });
-  return `<div class="transaction-list">${items.map((item) => `<div class="transaction-row"><span><strong>${tr(item.key)}${item.detail ? ` · ${escapeHtml(item.detail)}` : ''}</strong><small>${formatter.format(new Date(item.date))}</small></span><b>+${bonus ? bonusFormatter.format(item.amount) : formatMoney(item.amount)}</b></div>`).join('')}</div>`;
+  return `<div class="transaction-list">${items.map((item) => `<div class="transaction-row"><span><strong>${tr(item.key)}${item.detail ? ` · ${escapeHtml(item.detail)}` : ''}</strong><small>${formatter.format(new Date(item.date))}</small></span><b>+${bonus ? `${bonusFormatter.format(item.amount)} OS` : formatMoney(item.amount)}</b></div>`).join('')}</div>`;
 }
 
+Object.assign(copy.RU, { bonusPerMonth: 'в месяц' });
+Object.assign(copy.EN, { bonusPerMonth: 'per month' });
+Object.assign(copy.KY, { bonusPerMonth: 'айына' });
+Object.assign(copy.TJ, { bonusPerMonth: 'дар як моҳ' });
+
 function bonusRulesMarkup() {
-  return `<section class="finance-bonus-rules"><header><h3>${tr('bonusRules')}</h3><p>${tr('newBonusRulesHint')}</p></header><div class="bonus-rules"><div><b>+25 ₽</b><span>${tr('dailyLoginReward')}</span></div><div><b>+750 ₽</b><span>${tr('activityMonthlyAccrual')}</span></div><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200</b><span>${tr('passportFirstReward')}</span></div><div><b>+300</b><span>${tr('passport65Reward')}</span></div><div><b>+150 ₽</b><span>${tr('referralReward')}</span></div><div><b>+150</b><span>${tr('accountLinkReward')} · ${tr('rewardOnce')}</span></div><div><b>+10 ₽</b><span>${tr('gameWinReward')}</span></div></div></section>`;
+  return `<section class="finance-bonus-rules"><header><h3>${tr('bonusRules')}</h3><p>${tr('newBonusRulesHint')}</p></header><div class="bonus-rules"><div><b>+25 OS</b><span>${tr('dailyLoginReward')}</span></div><div><b>+750 OS ${tr('bonusPerMonth')}</b><span>${tr('activityMonthlyAccrual')}</span></div><div><b>10%</b><span>${tr('topUpHint')}</span></div><div><b>+200 OS</b><span>${tr('passportFirstReward')}</span></div><div><b>+300 OS</b><span>${tr('passport65Reward')}</span></div><div><b>+150 OS</b><span>${tr('referralReward')}</span></div><div><b>+150 OS</b><span>${tr('accountLinkReward')} · ${tr('rewardOnce')}</span></div></div></section>`;
 }
 
 function processBalanceTopUp(input, reopen) {
@@ -3975,7 +3980,7 @@ function setFinanceHubTab(tab) {
 function openFinanceHubDialog(activeTab = 'balance') {
   const balanceValue = formatMoney(finance.balance);
   const bonusValue = new Intl.NumberFormat(root.lang || 'ru-RU', { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(finance.bonuses);
-  const markup = `<section class="finance-hub"><div class="finance-hub-balances"><button type="button" data-finance-hub-tab="balance"><span>${tr('moneyBalance')}</span><strong>${balanceValue}</strong><small>${tr('balanceHistory')}</small></button><button type="button" data-finance-hub-tab="bonuses"><span>${tr('bonusBalance')}</span><strong>${bonusValue}</strong><small>${tr('bonusHistory')}</small></button></div>${bonusRulesMarkup()}<div class="finance-hub-pane" data-finance-hub-pane="balance"><div class="topup-form"><label><span>${tr('topUpAmount')}</span><input data-topup-amount type="number" inputmode="decimal" min="1" step="1" placeholder="1000" /></label><button class="primary-button" type="button" data-topup>${tr('topUp')}</button></div><section class="history-section"><h3>${tr('balanceHistory')}</h3>${historyMarkup(finance.balanceHistory)}</section></div><div class="finance-hub-pane" data-finance-hub-pane="bonuses" hidden><section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section></div></section>`;
+  const markup = `<section class="finance-hub"><div class="finance-hub-balances"><button type="button" data-finance-hub-tab="balance"><span>${tr('moneyBalance')}</span><strong>${balanceValue}</strong><small>${tr('balanceHistory')}</small></button><button type="button" data-finance-hub-tab="bonuses"><span>${tr('bonusBalance')}</span><strong>${bonusValue} OS</strong><small>${tr('bonusHistory')}</small></button></div>${bonusRulesMarkup()}<div class="finance-hub-pane" data-finance-hub-pane="balance"><div class="topup-form"><label><span>${tr('topUpAmount')}</span><input data-topup-amount type="number" inputmode="decimal" min="1" step="1" placeholder="1000" /></label><button class="primary-button" type="button" data-topup>${tr('topUp')}</button></div><section class="history-section"><h3>${tr('balanceHistory')}</h3>${historyMarkup(finance.balanceHistory)}</section></div><div class="finance-hub-pane" data-finance-hub-pane="bonuses" hidden><section class="history-section"><h3>${tr('bonusHistory')}</h3>${historyMarkup(finance.bonusHistory, true)}</section></div></section>`;
   showDialog(tr('balanceBonuses'), tr('financeHubHint'), markup);
   const scope = $('[data-dialog-content]');
   $$('[data-finance-hub-tab]', scope).forEach((button) => button.addEventListener('click', () => setFinanceHubTab(button.dataset.financeHubTab)));
