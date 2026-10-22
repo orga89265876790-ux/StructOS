@@ -2683,3 +2683,10 @@ html[data-theme="dark"] .finale-base { color: #c3d8f2; }
     animation-delay: 0s !important;
   }
 }
+
+/* Separate the installation button from the easy-start card. */
+#landing-view > .install-app-button {
+  margin-bottom: 16px;
+  border-color: rgba(0, 94, 232, 0.28);
+  box-shadow: 0 3px 12px rgba(0, 94, 232, 0.10);
+}
