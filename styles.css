@@ -2690,3 +2690,28 @@ html[data-theme="dark"] .finale-base { color: #c3d8f2; }
   border-color: rgba(0, 94, 232, 0.28);
   box-shadow: 0 3px 12px rgba(0, 94, 232, 0.10);
 }
+
+/* Compact refresh control beside the language selector. */
+.refresh-button {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  padding: 7px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(27, 57, 109, 0.16);
+  border-radius: 50%;
+  color: var(--blue);
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 3px 11px rgba(28, 70, 132, 0.06);
+  cursor: pointer;
+}
+.refresh-button svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.refresh-button:hover { border-color: var(--blue); }
+.refresh-button:active { transform: scale(0.94); }
+.refresh-button:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+html[data-theme="dark"] .refresh-button { color: var(--text); background: rgba(10, 22, 39, 0.85); border-color: rgba(160, 195, 255, 0.25); }
+@media (max-width: 380px) {
+  .refresh-button { flex-basis: 30px; width: 30px; height: 30px; padding: 5px; }
+  .topbar { flex-wrap: wrap; gap: 6px; }
+}
