@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="styles.css?v=14" />
+    <link rel="stylesheet" href="styles.css?v=15" />
   </head>
   <body>
     <main class="site-shell" id="app-shell">
@@ -35,6 +35,7 @@
             <button class="language-button" type="button" aria-expanded="false" aria-controls="language-menu"><span id="current-language">RU</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5" /></svg></button>
             <div class="language-menu" id="language-menu" role="menu" hidden><button type="button" data-language="RU">RU</button><button type="button" data-language="EN">EN</button><button type="button" data-language="TJ">TJ</button><button type="button" data-language="KG">KG</button><button type="button" data-language="TR">TR</button></div>
           </div>
+          <button class="refresh-button" type="button" aria-label="Обновить страницу" title="Обновить страницу"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.1 7a7 7 0 0 1 11.6-1L20 9M4 15l2.3 3A7 7 0 0 0 17.9 17"/></svg></button>
           <button class="theme-switch" type="button" aria-label="Включить тёмную тему" aria-pressed="false"><span class="theme-icon sun" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></span><span class="theme-icon moon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z"/></svg></span></button>
           <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-menu"><span></span><span></span><span></span></button>
         </div>
@@ -217,6 +218,6 @@
           .catch(() => {});
       }
     </script>
-    <script type="module" src="script.js?v=15"></script>
+    <script type="module" src="script.js?v=16"></script>
   </body>
 </html>
