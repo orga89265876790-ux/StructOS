@@ -757,3 +757,8 @@ window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault
 window.addEventListener('appinstalled', () => { localStorage.setItem('structos-installed', 'true'); $$('.install-app-button').forEach((button) => { button.hidden = true; }); showToast('StructOS установлен ✓'); });
 
 if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=119', { updateViaCache: 'none' }).catch(() => {}));
+
+// A manual refresh is useful for installed PWA users as well as browser users.
+$('.refresh-button')?.addEventListener('click', () => {
+  window.location.reload();
+});
