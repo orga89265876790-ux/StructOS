@@ -4,7 +4,7 @@ const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)]
 
 const translations = {
   RU: {
-    tagline: 'ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ', login: 'Войти', register: 'Регистрация', installPhone: 'Установить на телефон',
+    tagline: 'ЕДИНЫЙ СТРОИТЕЛЬНЫЙ ИНТЕЛЛЕКТ', login: 'Войти', register: 'Регистрация', installPhone: 'Установить StructOS на телефон',
     hero1: 'Единый', hero2: 'строительный', hero3: 'интеллект России', subtitle1: 'Операционная система для запуска', subtitle2: 'объекта', subtitle3: 'в один клик.',
     benefit1: 'Анализирует проект,<br>смету, договор', benefit2: 'Находит ошибки и риски<br>до начала работ', benefit3: 'Экономит время,<br>деньги и ресурсы',
     click: 'КЛИК', easyStart: 'ДЛЯ ЛЁГКОГО СТАРТА', startDescription: 'Загрузите проект, смету<br>или договор и получите<br>результат за минуты',
