@@ -300,6 +300,10 @@
           <div data-analysis-detail></div>
         </section>
 
+        <section class="tab-panel" data-panel="timesheet" aria-labelledby="timesheet-title" hidden>
+          <div class="page-title"><h1 id="timesheet-title" data-i18n="timesheet">Табель</h1></div>
+        </section>
+
         <section class="tab-panel objects-panel" data-panel="objects" aria-label="Объекты" hidden>
           <div class="page-title"><div><span class="eyebrow">STRUCTOS OBJECTS</span><h1 data-i18n="allObjects">Все действующие объекты</h1><p><span data-i18n="activeObjectsCount">Активных</span>: <span data-all-active-count>0</span></p></div><button class="primary-button" type="button" data-add-object data-i18n="addObject">Добавить объект</button></div>
           <p class="objects-reorder-hint" data-i18n="reorderObjectsHint">Активные объекты можно менять местами перетаскиванием</p>
@@ -366,6 +370,7 @@
           <section class="drawer-user"><div class="drawer-avatar" data-person-avatar><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><strong data-user-name>Александр</strong><button class="user-id" type="button" data-copy-id><span>ID <span data-user-id>4 820 197</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg></button><small data-user-role>Пользователь</small></div></section>
           <button class="drawer-passport" type="button" data-open-view="passport"><span><b data-i18n="builderPassport">Паспорт строителя</b><strong data-passport-progress>0%</strong></span><span data-i18n="complete">Заполнить</span><i class="progress" data-passport-progressbar aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i style="--progress:0%"></i></i></button>
           <nav class="drawer-nav">
+            <button type="button" data-open-view="timesheet"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 10h18M9 10v11M15 10v11M3 15h18M7 2v4M17 2v4"/></svg><span data-i18n="timesheet">Табель</span></button>
             <button type="button" data-open-view="projects"><svg viewBox="0 0 24 24"><path d="M3 7h7l2 2h9v11H3zM3 7V4h7l2 3"/></svg><span data-i18n="myProjects">Анализировать</span></button>
             <button type="button" data-open-view="proposals"><span class="drawer-proposal-icon" aria-hidden="true">₽</span><span data-i18n="commercialProposals">Коммерческие предложения</span></button>
             <div class="drawer-group is-open"><button type="button" data-profile-menu><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span data-i18n="myProfile">Мой профиль</span><i>⌃</i></button><div class="drawer-submenu"><button type="button" data-open-view="profile"><span class="submenu-dot"></span><span data-i18n="myProfile">Мой профиль</span></button><button type="button" data-open-view="subscription"><span class="submenu-dot"></span><span data-i18n="tariffSubscription">Тарифы и подписка</span></button><button type="button" data-open-view="balanceBonuses"><span class="submenu-dot"></span><span data-i18n="balanceBonuses">Баланс и бонусы</span></button></div></div>
@@ -434,7 +439,7 @@
           .catch(() => {});
       }
     </script>
-    <script type="module" src="dashboard.js?v=84"></script>
+    <script type="module" src="dashboard.js?v=85"></script>
     <script type="module" src="home-dashboard.js?v=1"></script>
   </body>
 </html>
