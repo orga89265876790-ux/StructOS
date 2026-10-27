@@ -1,3 +1,4 @@
+import { mountTimesheet, timesheetSnapshot } from './timesheet.js';
 import { supabaseConfig } from './auth-config.js';
 import { professions } from './professions.js';
 import { metroDirectory } from './metro-directory.js';
@@ -10592,7 +10593,7 @@ function isDemoAccount() {
 async function pushRegistration() {
   const current = await navigator.serviceWorker.getRegistration();
   if (current) return current;
-  return navigator.serviceWorker.register('./sw.js?v=119', { updateViaCache: 'none' });
+  return navigator.serviceWorker.register('./sw.js?v=120', { updateViaCache: 'none' });
 }
 
 async function pushNotificationState() {
@@ -10838,6 +10839,7 @@ async function collectOfflineSyncCategory(category) {
   if (category === 'staff') {
     return offlineJsonCopy({
       schemaVersion: 1,
+      timesheets: timesheetSnapshot(projectNotebookOwner),
       objects: cashflowObjects.map((object) => ({
         ...cashObjectIdentitySnapshot(object),
         sections: object.sections
@@ -10946,7 +10948,7 @@ function countOfflineSyncSubsections(category, payload = {}) {
   }
 
   if (category === 'staff') {
-    return (payload.objects || []).reduce((total, object) => total + (object.sections || []).length, 0);
+    return (payload.timesheets?.sheets?.length || 0) + (payload.objects || []).reduce((total, object) => total + (object.sections || []).length, 0);
   }
 
   if (category === 'finance') {
@@ -11636,10 +11638,11 @@ document.addEventListener('click', trackConstructionActivity, true);
 setPanel(pendingTransferImport?.intent === 'commercial-proposal' ? 'proposals' : (location.hash.slice(1) || 'home'));
 restoreBottomMenuState();
 const cabinetRole = await initAuth();
+mountTimesheet({ root: $('[data-timesheet-root]'), ownerId: projectNotebookOwner, onChange: () => offlineSync.capture(['staff']) });
 if (cabinetRole) playCabinetWelcome(cabinetRole);
 const dailyRewarded = awardDailyLoginReward();
 startActiveBonusAccrual();
 window.setTimeout(() => runLoginPrompts(dailyRewarded), window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 1100 : 3750);
 if (pendingTransferImport?.intent === 'commercial-proposal' || location.hash === '#proposals') localStorage.removeItem(AUTH_RETURN_KEY);
 
-if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=119', { updateViaCache: 'none' }).catch(() => {}));
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js?v=120', { updateViaCache: 'none' }).catch(() => {}));

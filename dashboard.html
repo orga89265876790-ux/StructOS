@@ -11,6 +11,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="dashboard.css?v=72" />
     <link rel="stylesheet" href="home-dashboard.css?v=2" />
+    <link rel="stylesheet" href="timesheet.css?v=1" />
   </head>
   <body class="is-cabinet-entering">
     <section class="cabinet-entry" data-cabinet-entry role="status" aria-live="polite" aria-label="Вход в личный кабинет">
@@ -301,7 +302,7 @@
         </section>
 
         <section class="tab-panel" data-panel="timesheet" aria-labelledby="timesheet-title" hidden>
-          <div class="page-title"><h1 id="timesheet-title" data-i18n="timesheet">Табель</h1></div>
+          <div class="ts-root" data-timesheet-root><h1 id="timesheet-title" data-i18n="timesheet">Табель</h1><p role="status">Загрузка табелей…</p></div>
         </section>
 
         <section class="tab-panel objects-panel" data-panel="objects" aria-label="Объекты" hidden>
@@ -434,12 +435,12 @@
           sessionStorage.setItem('structos-sw-reload-v119', '1');
           window.location.reload();
         });
-        navigator.serviceWorker.register('./sw.js?v=119', { updateViaCache: 'none' })
+        navigator.serviceWorker.register('./sw.js?v=120', { updateViaCache: 'none' })
           .then((registration) => registration.update())
           .catch(() => {});
       }
     </script>
-    <script type="module" src="dashboard.js?v=85"></script>
+    <script type="module" src="dashboard.js?v=86"></script>
     <script type="module" src="home-dashboard.js?v=1"></script>
   </body>
 </html>
