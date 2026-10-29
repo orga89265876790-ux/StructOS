@@ -17,7 +17,7 @@ export function mountTimesheet({ root, ownerId, onChange = () => {} }) {
   try { store = createTimesheetStore(localStorage, ownerId); }
   catch (error) { root.innerHTML = `<p class="ts-error" role="alert">${escape(error.message)}</p>`; return; }
   let state = store.read();
-  let selectedId = state.sheets[0]?.id;
+  let selectedId = null;
   let selectedDate = today();
   let calendarMonth = selectedDate.slice(0, 7);
   let showFormer = false;
@@ -140,15 +140,19 @@ export function mountTimesheet({ root, ownerId, onChange = () => {} }) {
   }
   function render() {
     const current = sheet();
-    root.innerHTML = `<header class="ts-top"><div><span class="eyebrow">УЧЁТ РАБОЧЕГО ВРЕМЕНИ</span><h1 id="timesheet-title">Табель</h1></div><button class="primary-button" type="button" data-ts-create>${plus} Создать табель</button></header><p class="ts-error" data-ts-error role="alert" hidden></p>${current ? '' : '<div class="ts-empty"><span aria-hidden="true">▦</span><h2>Первый рабочий день начинается здесь</h2><p>Создайте табель объекта, добавьте сотрудников и отмечайте часы по датам.</p></div>'}`;
-    if (!current) return;
+    root.innerHTML = `<header class="ts-top"><div><span class="eyebrow">УЧЁТ РАБОЧЕГО ВРЕМЕНИ</span><h1 id="timesheet-title">Табель</h1></div><button class="primary-button" type="button" data-ts-create>${plus} Создать табель</button></header><p class="ts-error" data-ts-error role="alert" hidden></p>`;
+    if (!current) {
+      root.insertAdjacentHTML('beforeend', state.sheets.length ? `<p class="ts-objects-intro">Выберите объект, чтобы открыть учёт сотрудников и рабочих дней.</p><div class="ts-object-cards">${state.sheets.map((item) => `<button type="button" class="ts-object-card" data-ts-open="${item.id}"><span class="ts-object-card-icon" aria-hidden="true">▦</span><span class="ts-object-card-content"><strong>${escape(item.objectName)}</strong><span>${escape(item.projectName)}</span><small>Начало работ: ${dateText(item.startDate)}</small><small>Сотрудников: ${item.employees.filter((employee) => !employee.dismissed).length} · Завершено дней: ${Object.values(item.days).filter((day) => day.status === 'completed').length}</small><b>Открыть учёт →</b></span></button>`).join('')}</div>` : '<div class="ts-empty"><span aria-hidden="true">▦</span><h2>Первый рабочий день начинается здесь</h2><p>Создайте табель объекта, добавьте сотрудников и отмечайте часы по датам.</p></div>');
+      return;
+    }
+    root.insertAdjacentHTML('beforeend', '<button class="ts-text-button ts-back-objects" type="button" data-ts-back>← К объектам</button>');
     if (selectedDate < current.startDate) selectedDate = current.startDate;
     const completed = current.days[selectedDate]?.status === 'completed';
     const relevant = current.employees.filter((employee) => availableOn(employee, selectedDate) || current.days[selectedDate]?.entries[employee.id]?.hours > 0);
     const active = relevant.filter((employee) => !employee.dismissed);
     const former = current.employees.filter((employee) => employee.dismissed);
     const dayPeople = relevant.filter((employee) => current.days[selectedDate]?.entries[employee.id]?.hours > 0);
-    root.insertAdjacentHTML('beforeend', `<section class="ts-object"><label class="ts-field">Объект / проект<select data-ts-sheet>${state.sheets.map((item) => `<option value="${item.id}" ${item.id === selectedId ? 'selected' : ''}>${escape(item.objectName)} · ${escape(item.projectName)}</option>`).join('')}</select></label><p>Начало работ: ${dateText(current.startDate)}</p></section><div class="ts-layout"><aside>${calendarMarkup(current)}<p class="ts-storage-note">Табели сохраняются в этом браузере, отдельно для вашего аккаунта. На другие устройства автоматически не переносятся.</p></aside><div class="ts-workspace"><div class="ts-day-head"><div><h2>${dateText(selectedDate)}</h2><span class="ts-status ${completed ? 'is-completed' : ''}">${completed ? '✓ День завершён' : current.days[selectedDate] ? 'Черновик сохранён' : 'День не заполнен'}</span></div>${field('Перейти к дате', 'selectedDate', 'date', selectedDate, `data-ts-jump required min="${current.startDate}" max="${today()}"`)}</div><div class="ts-actions"><button class="outline-button" type="button" data-ts-add>${plus} Добавить сотрудника</button><button class="outline-button" type="button" data-ts-pay>Выплатить зарплату</button><button class="ts-text-button" type="button" data-ts-history>История сотрудника</button></div><div class="ts-filters"><label><input type="checkbox" data-ts-show ${showFormer ? 'checked' : ''}>Показать всех работавших сотрудников</label><label><input type="checkbox" data-ts-hide ${!showFormer ? 'checked' : ''}>Скрыть уволенных сотрудников</label></div>${completed && dayPeople.length ? `<p class="ts-note">Работали: ${dayPeople.map((employee) => escape(employee.name)).join(', ')}.</p>` : ''}${completed && !dayPeople.length ? '<p class="ts-note">В этот день никто не работал.</p>' : ''}<div class="ts-people">${active.map((employee) => employeeCard(current, employee)).join('')}${!active.length ? '<p class="ts-note">На выбранную дату активных сотрудников нет.</p>' : ''}</div>${former.length ? `<details class="ts-former" ${showFormer ? 'open' : ''}><summary>Уволенные сотрудники <span>${former.length}</span></summary><p class="ts-note">История и начисления сохранены. Сотрудника можно восстановить.</p>${former.map((employee) => employeeCard(current, employee)).join('')}</details>` : ''}<footer class="ts-day-footer"><div><span>Итого за выбранный день</span><strong data-ts-day-total></strong><small data-ts-day-count></small></div><button class="primary-button" type="button" data-ts-finish>${completed ? 'Редактировать день' : 'Завершить день'}</button></footer><p class="ts-note">«Дней по датам» — число дат с часами от начала работ до выбранной даты. Неполный рабочий день оплачивается пропорционально часам.</p><div class="ts-cumulative" data-ts-cumulative></div></div></div>`);
+    root.insertAdjacentHTML('beforeend', `<section class="ts-object"><div class="ts-selected-object"><h2>${escape(current.objectName)}</h2><p>${escape(current.projectName)}</p></div><p>Начало работ: ${dateText(current.startDate)}</p></section><div class="ts-layout"><aside>${calendarMarkup(current)}<p class="ts-storage-note">Табели сохраняются в этом браузере, отдельно для вашего аккаунта. На другие устройства автоматически не переносятся.</p></aside><div class="ts-workspace"><div class="ts-day-head"><div><h2>${dateText(selectedDate)}</h2><span class="ts-status ${completed ? 'is-completed' : ''}">${completed ? '✓ День завершён' : current.days[selectedDate] ? 'Черновик сохранён' : 'День не заполнен'}</span></div>${field('Перейти к дате', 'selectedDate', 'date', selectedDate, `data-ts-jump required min="${current.startDate}" max="${today()}"`)}</div><div class="ts-actions"><button class="outline-button" type="button" data-ts-add>${plus} Добавить сотрудника</button><button class="outline-button" type="button" data-ts-pay>Выплатить зарплату</button><button class="ts-text-button" type="button" data-ts-history>История сотрудника</button></div><div class="ts-filters"><label><input type="checkbox" data-ts-show ${showFormer ? 'checked' : ''}>Показать всех работавших сотрудников</label><label><input type="checkbox" data-ts-hide ${!showFormer ? 'checked' : ''}>Скрыть уволенных сотрудников</label></div>${completed && dayPeople.length ? `<p class="ts-note">Работали: ${dayPeople.map((employee) => escape(employee.name)).join(', ')}.</p>` : ''}${completed && !dayPeople.length ? '<p class="ts-note">В этот день никто не работал.</p>' : ''}<div class="ts-people">${active.map((employee) => employeeCard(current, employee)).join('')}${!active.length ? '<p class="ts-note">На выбранную дату активных сотрудников нет.</p>' : ''}</div>${former.length ? `<details class="ts-former" ${showFormer ? 'open' : ''}><summary>Уволенные сотрудники <span>${former.length}</span></summary><p class="ts-note">История и начисления сохранены. Сотрудника можно восстановить.</p>${former.map((employee) => employeeCard(current, employee)).join('')}</details>` : ''}<footer class="ts-day-footer"><div><span>Итого за выбранный день</span><strong data-ts-day-total></strong><small data-ts-day-count></small></div><button class="primary-button" type="button" data-ts-finish>${completed ? 'Редактировать день' : 'Завершить день'}</button></footer><p class="ts-note">«Дней по датам» — число дат с часами от начала работ до выбранной даты. Неполный рабочий день оплачивается пропорционально часам.</p><div class="ts-cumulative" data-ts-cumulative></div></div></div>`);
     updateNumbers();
   }
   function updateNumbers() {
@@ -184,7 +188,6 @@ export function mountTimesheet({ root, ownerId, onChange = () => {} }) {
   root.addEventListener('change', (event) => {
     try {
       guardInputs();
-      if (event.target.matches('[data-ts-sheet]')) { selectedId = event.target.value; selectedDate = today(); calendarMonth = selectedDate.slice(0, 7); render(); }
       if (event.target.matches('[data-ts-jump]')) {
         if (!event.target.reportValidity() || !validDate(event.target.value)) return;
         selectedDate = event.target.value; calendarMonth = selectedDate.slice(0, 7); render();
@@ -198,6 +201,12 @@ export function mountTimesheet({ root, ownerId, onChange = () => {} }) {
     if (!button) return;
     try {
       guardInputs();
+      if (button.dataset.tsOpen) {
+        selectedId = button.dataset.tsOpen;
+        selectedDate = today(); calendarMonth = selectedDate.slice(0, 7); showFormer = false;
+        render();
+      }
+      if (button.hasAttribute('data-ts-back')) { selectedId = null; render(); }
       if (button.hasAttribute('data-ts-create')) createDialog();
       if (button.hasAttribute('data-ts-add')) addEmployeeDialog();
       if (button.hasAttribute('data-ts-pay')) paymentDialog();
@@ -229,5 +238,9 @@ export function mountTimesheet({ root, ownerId, onChange = () => {} }) {
   window.addEventListener('storage', (event) => {
     if (event.key === store.key) errorMessage(new Error('Табель изменён в другой вкладке. Обновите страницу, чтобы продолжить.'));
   });
+  const panel = root.closest('[data-panel="timesheet"]');
+  if (panel) new MutationObserver(() => {
+    if (!panel.hidden) { selectedId = null; render(); }
+  }).observe(panel, { attributes: true, attributeFilter: ['hidden'] });
   render();
 }
