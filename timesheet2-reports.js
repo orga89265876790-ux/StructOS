@@ -1,6 +1,7 @@
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const titles = {work:'Фотоотчёт работ',people:'Фотоотчёт людей',project:'Проект',tools:'Инструмент'};
 const stamp = value => new Date(value).toLocaleString('ru-RU', {dateStyle:'short',timeStyle:'medium'});
+export function reportsForWeek(records,kind,week) { return kind==='work'||kind==='people'?records.filter(record=>record.week===week):records; }
 let database;
 function openDatabase() {
  if(database)return database;
@@ -29,8 +30,10 @@ export async function saveReport(record) {
 }
 export function openReportDialog({owner,objectId,objectName,week,kind}) {
  const scope=JSON.stringify([owner,objectId,kind]);
+ const weekly=kind==='work'||kind==='people';
+ const period=weekly?'Неделя с '+week.split('-').reverse().join('.'):'За всё время по объекту';
  const dialog=document.createElement('dialog');dialog.className='t2-dialog t2-report-dialog';dialog.setAttribute('aria-label',titles[kind]);
- dialog.innerHTML=`<header class="t2-report-head"><h2>${titles[kind]}</h2><button type="button" class="outline-button" data-close aria-label="Закрыть">×</button></header><p class="t2-hint">${escape(objectName)} · Сохраняется на этом устройстве в браузере.</p><button type="button" class="primary-button" data-add-report>+ ${kind==='people'?'Сделать фото':'Добавить'}</button><p role="alert"></p><div data-editor></div><div data-records aria-live="polite"></div>`;
+ dialog.innerHTML=`<header class="t2-report-head"><h2>${titles[kind]}</h2><button type="button" class="outline-button" data-close aria-label="Закрыть">×</button></header><p class="t2-hint">${escape(objectName)} · ${period}<br>Сохраняется на этом устройстве в браузере.</p><button type="button" class="primary-button" data-add-report>+ ${kind==='people'?'Сделать фото':'Добавить'}</button><p role="alert"></p><div data-editor></div><div data-records aria-live="polite"></div>`;
  document.body.append(dialog);
  const $=selector=>dialog.querySelector(selector);
  let stream=null,draft=null,busy=false,closed=false,cameraRequest=0;
@@ -42,9 +45,9 @@ export function openReportDialog({owner,objectId,objectName,week,kind}) {
  dialog.addEventListener('close',cleanup);
  $('[data-close]').onclick=()=>dialog.close();
  async function renderRecords(){
-  const records=await reportRecords(scope);if(closed)return;
+  const records=reportsForWeek(await reportRecords(scope),kind,week);if(closed)return;
   $('[data-records]').innerHTML=records.length?records.map((record,i)=>{
-   if(kind==='tools')return `<article class="t2-report-record t2-tool-record"><span>${i+1}</span><strong>${escape(record.name)}</strong><span>${record.quantity} шт.</span></article>`;
+   if(kind==='tools')return `<article class="t2-report-record t2-tool-record"><span>${i+1}</span><div><strong>${escape(record.name)}</strong><small class="t2-tool-date">Добавлено: ${stamp(record.createdAt)}</small></div><span>${record.quantity} шт.</span></article>`;
    const url=urlFor(record.file),photo=kind!=='project';
    return `<article class="t2-report-record">${photo?`<a href="${url}" target="_blank" rel="noopener"><img src="${url}" alt="${escape(titles[kind])}" loading="lazy"></a>`:`<strong>${i+1}. ${escape(record.filename)}</strong>`}<small>${kind==='people'?'Снято':'Добавлено'}: ${stamp(record.capturedAt||record.createdAt)}</small>${record.comment?`<p>${escape(record.comment)}</p>`:''}<a href="${url}" download="${escape(record.filename)}">${photo?'Скачать фото':'Скачать проект'}</a></article>`;
   }).join(''):'<p class="t2-hint">Записей пока нет.</p>';
