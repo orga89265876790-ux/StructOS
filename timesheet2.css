@@ -22,3 +22,5 @@
 .t2-add-row td{text-align:left;padding-top:8px;padding-bottom:8px}.t2-add-row [data-t2-add]{padding:7px 10px;font-size:12px;white-space:nowrap}
 
 .t2-menu-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%}.t2-menu-columns>div{display:grid;gap:8px}.t2-menu-columns button{padding:10px 6px;font-size:12px}.t2-object-action+.t2-object-action{margin-top:8px}
+
+.t2-object-card{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0 16px 16px}.t2-object-card>[data-t2-open]{grid-column:1/-1}.t2-objects .t2-object-card>.t2-object-action{margin:0;width:100%;text-align:center;box-sizing:border-box;white-space:nowrap}
