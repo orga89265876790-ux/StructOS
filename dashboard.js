@@ -1,5 +1,5 @@
 import { mountTimesheet2 } from './timesheet2.js';
-import { mountTimesheet, timesheetSnapshot } from './timesheet.js';
+import { timesheetSnapshot } from './timesheet.js';
 import { supabaseConfig } from './auth-config.js';
 import { professions } from './professions.js';
 import { metroDirectory } from './metro-directory.js';
@@ -3072,14 +3072,14 @@ async function initAuth() {
 }
 
 function setPanel(name) {
-  const requested = String(name || 'home');
+  const requested = String(name || 'home').replace(/^timesheet$/, 'timesheet2');
   const [requestedPanel, ...pathParts] = requested.split('/');
   if (requestedPanel === 'proposal-detail' && pathParts.length) {
     try { activeCommercialProposalId = decodeURIComponent(pathParts.join('/')); }
     catch { activeCommercialProposalId = pathParts.join('/'); }
   }
   const projectPanels = ['proposals', 'proposal-detail', 'project-analysis', 'detailed-project-detail', 'contract-review', 'analysis-detail'];
-  const next = ['home', 'projects', ...projectPanels, 'space', 'games', 'objects', 'cashflow', 'profile', 'passport', 'timesheet', 'timesheet2'].includes(requestedPanel) ? requestedPanel : 'home';
+  const next = ['home', 'projects', ...projectPanels, 'space', 'games', 'objects', 'cashflow', 'profile', 'passport', 'timesheet2'].includes(requestedPanel) ? requestedPanel : 'home';
   $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
   if (next !== 'space') {
     $('[data-space-toolbar]').hidden = true;
@@ -10739,7 +10739,7 @@ async function openNotificationsCenter() {
 
 function openView(view) {
   if (view === 'timesheet2') { setPanel('timesheet2'); return; }
-  if (view === 'timesheet') { setPanel('timesheet'); return; }
+  if (view === 'timesheet') { setPanel('timesheet2'); return; }
   if (view === 'profile') { setPanel('profile'); return; }
   if (view === 'passport') { setPanel('passport'); return; }
   if (view === 'projects') { setPanel('projects'); return; }
@@ -11659,7 +11659,6 @@ setPanel(pendingTransferImport?.intent === 'commercial-proposal' ? 'proposals' :
 restoreBottomMenuState();
 const cabinetRole = await initAuth();
 mountTimesheet2($('[data-timesheet2-root]'), projectNotebookOwner, lookupTimesheetPassport);
-mountTimesheet({ root: $('[data-timesheet-root]'), ownerId: projectNotebookOwner, onChange: () => offlineSync.capture(['staff']) });
 if (cabinetRole) playCabinetWelcome(cabinetRole);
 const dailyRewarded = awardDailyLoginReward();
 startActiveBonusAccrual();
