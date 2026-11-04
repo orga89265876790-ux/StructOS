@@ -2213,8 +2213,11 @@ function queueIdentityAutosave() {
   identityAutosaveTimer = setTimeout(() => saveIdentityState(false), 120);
 }
 
+let passportDirectoryTimer;
 function saveIdentityState(syncRemote = true) {
   persistIdentityLocal();
+  clearTimeout(passportDirectoryTimer);
+  passportDirectoryTimer=setTimeout(()=>syncPassportDirectory().catch(()=>showToast('Не удалось синхронизировать доступность паспорта. Проверьте подключение и сохраните ещё раз.')),500);
   const passportProgress = passportCompletion();
   const profileProgress = calculatedProfileCompletion();
   localStorage.setItem(PROFILE_COMPLETION_KEY, String(profileProgress));
@@ -2225,6 +2228,21 @@ function saveIdentityState(syncRemote = true) {
   renderProfilePersonalData();
   renderConnectionsSummary();
   if (syncRemote) syncIdentityToAccount();
+}
+
+async function syncPassportDirectory() {
+ if(!authClient || !projectNotebookOwner || projectNotebookOwner.startsWith('demo:'))return;
+ const visible=builderPassport.visibleFields;
+ const fullName=['lastName','firstName','patronymic'].filter(k=>visible[k]).map(k=>personData[k]).filter(Boolean).join(' ');
+ const entry={user_id:projectNotebookOwner,passport_number:currentId.replace(/\s/g,''),full_name:fullName,profession:visible.professions?profileData.profession:'',published:!!(builderPassport.important.passportAvailable&&visible.id&&fullName),updated_at:new Date().toISOString()};
+ const {error}=await authClient.from('builder_passport_directory').upsert(entry,{onConflict:'user_id'});
+ if(error)throw Error('Не удалось обновить доступный паспорт');
+}
+async function lookupTimesheetPassport(number) {
+ if(!authClient)throw Error('Войдите в аккаунт StructOS для поиска паспорта. В деморежиме привязка недоступна.');
+ const {data,error}=await authClient.from('builder_passport_directory').select('user_id,passport_number,full_name,profession').eq('passport_number',number).eq('published',true).limit(1);
+ if(error)throw Error('Поиск паспорта сейчас недоступен. Проверьте подключение и повторите.');
+ return data?.[0]||null;
 }
 
 async function syncIdentityToAccount() {
@@ -11640,7 +11658,7 @@ document.addEventListener('click', trackConstructionActivity, true);
 setPanel(pendingTransferImport?.intent === 'commercial-proposal' ? 'proposals' : (location.hash.slice(1) || 'home'));
 restoreBottomMenuState();
 const cabinetRole = await initAuth();
-mountTimesheet2($('[data-timesheet2-root]'), projectNotebookOwner);
+mountTimesheet2($('[data-timesheet2-root]'), projectNotebookOwner, lookupTimesheetPassport);
 mountTimesheet({ root: $('[data-timesheet-root]'), ownerId: projectNotebookOwner, onChange: () => offlineSync.capture(['staff']) });
 if (cabinetRole) playCabinetWelcome(cabinetRole);
 const dailyRewarded = awardDailyLoginReward();

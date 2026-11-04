@@ -49,3 +49,10 @@ test('employee entries accumulate in the selected week and preserve payroll on d
  const next=carryRoster(o.weeks,'2026-11-09',o.dismissals,o.restorations);assert.equal(next.rows[0].id,'a');assert.equal(next.rows[0].entries.length,0);assert.equal(totals(next.rows[0]).pay,0);
  setEmployment(o,'a',null,'2026-11-14');setEmployment(o,'a','2026-11-16');assert.ok(dayLocked(o,'a','2026-11-11'));assert.equal(o.employmentEvents.length,4);
 });
+
+import {emptyRow} from '../timesheet2.js';
+test('only untouched empty rows can be removed; profile identity carries across weeks',()=>{
+ const row={id:'r',name:'',position:'',rateCents:0,norm:8,hours:Array(7).fill('')};assert.equal(emptyRow(row),true);
+ for(const patch of [{name:'Иван'},{rateCents:100},{hours:[0,'','','','','','']},{norm:10},{entries:[{kind:'fine'}]},{profileId:'uuid'}])assert.equal(emptyRow({...row,...patch}),false);
+ const linked={...row,name:'Иван',profileId:'uuid',passportNumber:'1234567'};const carried=carryRoster({'2026-11-02':{rows:[linked]}},'2026-11-09').rows[0];assert.equal(carried.profileId,'uuid');assert.equal(carried.passportNumber,'1234567');
+});
