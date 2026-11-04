@@ -16,3 +16,5 @@
 .t2-tool-date{display:block;margin-top:6px;font-size:11px;line-height:1.5}
 
 .t2-object-card{border:1px solid var(--line);border-radius:16px;background:var(--surface);overflow:hidden;padding-bottom:16px}.t2-objects .t2-object-card>[data-t2-open]{width:100%;border:0;background:transparent}.t2-objects .t2-object-action{display:block;width:auto;margin:0 20px;padding:8px 14px;font-size:12px;border:1px solid var(--line);border-radius:8px}.t2-object-card.is-archived{background:color-mix(in srgb,var(--surface) 60%,#000)}.t2-object-card.is-archived [data-t2-open]{opacity:.45;cursor:default}.t2-object-card.is-archived .t2-object-action{color:var(--blue)}
+
+.t2-report-record video{display:block;width:100%;max-height:340px;border-radius:10px;background:#000}

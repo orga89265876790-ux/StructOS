@@ -17,16 +17,24 @@ function openDatabase() {
 export async function reportRecords(scope) {
  const db=await openDatabase();return new Promise((resolve,reject)=>{const request=db.transaction('records').objectStore('records').index('scope').getAll(scope);request.onsuccess=()=>resolve(request.result.sort((a,b)=>a.createdAt.localeCompare(b.createdAt)));request.onerror=()=>reject(Error('Не удалось прочитать отчёты.'));});
 }
-export async function saveReport(record) {
+export function validateMediaBatch(files) {
+ if(!files.length||files.length>15)throw Error('Выберите от 1 до 15 фото или видео за один раз.');
+ if(files.some(file=>!file.size||!(/^(image|video)\//.test(file.type))))throw Error('Можно добавить только фотографии и видео.');
+}
+export async function saveReport(record) { return saveReports([record]); }
+export async function saveReports(records) {
+ if(!records.length||records.length>15)throw Error('Можно сохранить от 1 до 15 файлов за один раз.');
+ for(const record of records){
  if(!record.scope || !titles[record.kind])throw Error('Не выбран объект.');
  if(record.kind==='tools'){
   if(!record.name?.trim() || !Number.isSafeInteger(record.quantity) || record.quantity<=0)throw Error('Введите наименование и количество больше нуля.');
  }else{
   if(!(record.file instanceof Blob) || !record.file.size)throw Error('Добавьте файл.');
-  if(record.kind==='work' && !record.file.type.startsWith('image/'))throw Error('Выберите файл фотографии.');
+  if(record.kind==='work' && !(/^(image|video)\//.test(record.file.type)))throw Error('Выберите фото или видео.');
   if(record.kind==='people' && (!record.capturedAt || !record.comment?.trim()))throw Error('Сделайте фото и напишите комментарий.');
  }
- const db=await openDatabase();return new Promise((resolve,reject)=>{const tx=db.transaction('records','readwrite');tx.objectStore('records').add(record);tx.oncomplete=()=>resolve();tx.onerror=tx.onabort=()=>reject(Error('Не удалось сохранить. Возможно, на устройстве недостаточно места.'));});
+ }
+ const db=await openDatabase();return new Promise((resolve,reject)=>{const tx=db.transaction('records','readwrite');for(const record of records)tx.objectStore('records').add(record);tx.oncomplete=()=>resolve();tx.onerror=tx.onabort=()=>reject(Error('Не удалось сохранить. Возможно, на устройстве недостаточно места.'));});
 }
 export function openReportDialog({owner,objectId,objectName,week,kind}) {
  const scope=JSON.stringify([owner,objectId,kind]);
@@ -48,8 +56,8 @@ export function openReportDialog({owner,objectId,objectName,week,kind}) {
   const records=reportsForWeek(await reportRecords(scope),kind,week);if(closed)return;
   $('[data-records]').innerHTML=records.length?records.map((record,i)=>{
    if(kind==='tools')return `<article class="t2-report-record t2-tool-record"><span>${i+1}</span><div><strong>${escape(record.name)}</strong><small class="t2-tool-date">Добавлено: ${stamp(record.createdAt)}</small></div><span>${record.quantity} шт.</span></article>`;
-   const url=urlFor(record.file),photo=kind!=='project';
-   return `<article class="t2-report-record">${photo?`<a href="${url}" target="_blank" rel="noopener"><img src="${url}" alt="${escape(titles[kind])}" loading="lazy"></a>`:`<strong>${i+1}. ${escape(record.filename)}</strong>`}<small>${kind==='people'?'Снято':'Добавлено'}: ${stamp(record.capturedAt||record.createdAt)}</small>${record.comment?`<p>${escape(record.comment)}</p>`:''}<a href="${url}" download="${escape(record.filename)}">${photo?'Скачать фото':'Скачать проект'}</a></article>`;
+   const url=urlFor(record.file),photo=kind!=='project',video=record.file.type.startsWith('video/');
+   return `<article class="t2-report-record">${photo?(video?`<video controls playsinline preload="metadata" src="${url}" aria-label="Видеоотчёт"></video>`:`<a href="${url}" target="_blank" rel="noopener"><img src="${url}" alt="${escape(titles[kind])}" loading="lazy"></a>`):`<strong>${i+1}. ${escape(record.filename)}</strong>`}<small>${kind==='people'?'Снято':'Добавлено'}: ${stamp(record.capturedAt||record.createdAt)}</small>${record.comment?`<p>${escape(record.comment)}</p>`:''}<a href="${url}" download="${escape(record.filename)}">${photo?(video?'Скачать видео':'Скачать фото'):'Скачать проект'}</a></article>`;
   }).join(''):'<p class="t2-hint">Записей пока нет.</p>';
  }
  function editorForm(content){
@@ -61,7 +69,7 @@ export function openReportDialog({owner,objectId,objectName,week,kind}) {
    if(kind==='tools'){record.name=form.elements.toolName.value.trim();record.quantity=Number(form.elements.quantity.value);}
    else{const file=kind==='people'?draft?.file:form.elements.file.files[0];Object.assign(record,{file,filename:kind==='people'?draft?.filename:file?.name,comment:form.elements.comment.value.trim(),capturedAt:kind==='people'?draft?.capturedAt:null});}
    busy=true;form.querySelector('[type=submit]').disabled=true;$('[role=alert]').textContent='';
-   try{await saveReport(record);if(closed)return;clearEditor();await renderRecords();}
+   try{if(kind==='work'){const files=[...form.elements.file.files];validateMediaBatch(files);await saveReports(files.map(file=>({...record,id:crypto.randomUUID(),file,filename:file.name})));}else await saveReport(record);if(closed)return;clearEditor();await renderRecords();}
    catch(reason){if(!closed)error(reason);}
    finally{busy=false;if(form.isConnected)form.querySelector('[type=submit]').disabled=false;}
   };
@@ -98,7 +106,7 @@ export function openReportDialog({owner,objectId,objectName,week,kind}) {
   try{
    if(kind==='people'){await startCamera();return;}
    if(kind==='tools')editorForm('<label>Наименование инструмента<input name="toolName" required maxlength="180" placeholder="Например, перфоратор"></label><label>Количество, шт.<input name="quantity" type="number" required min="1" max="1000000" step="1" inputmode="numeric" value="1"></label>');
-   else editorForm(`<label>${kind==='work'?'Фотография':'Файл проекта'}<input name="file" type="file" required ${kind==='work'?'accept="image/*"':''}></label><label>Комментарий<textarea name="comment" maxlength="2000" rows="3" placeholder="${kind==='work'?'Описание выполненных работ':'Комментарий к проекту'}"></textarea></label>`);
+   else editorForm(`<label>${kind==='work'?'Фото и видео — от 1 до 15 файлов':'Файл проекта'}<input name="file" type="file" required ${kind==='work'?'accept="image/*,video/*" multiple':''}></label><label>Комментарий<textarea name="comment" maxlength="2000" rows="3" placeholder="${kind==='work'?'Описание выполненных работ':'Комментарий к проекту'}"></textarea></label>`);
   }catch(reason){error(reason);$('[data-add-report]').disabled=false;}
  };
  dialog.showModal();renderRecords().catch(error);
