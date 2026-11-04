@@ -36,12 +36,12 @@ export async function saveReports(records) {
  }
  const db=await openDatabase();return new Promise((resolve,reject)=>{const tx=db.transaction('records','readwrite');for(const record of records)tx.objectStore('records').add(record);tx.oncomplete=()=>resolve();tx.onerror=tx.onabort=()=>reject(Error('Не удалось сохранить. Возможно, на устройстве недостаточно места.'));});
 }
-export function openReportDialog({owner,objectId,objectName,week,kind}) {
+export function openReportDialog({owner,objectId,objectName,week,kind,readOnly=false}) {
  const scope=JSON.stringify([owner,objectId,kind]);
  const weekly=kind==='work'||kind==='people';
  const period=weekly?'Неделя с '+week.split('-').reverse().join('.'):'За всё время по объекту';
  const dialog=document.createElement('dialog');dialog.className='t2-dialog t2-report-dialog';dialog.setAttribute('aria-label',titles[kind]);
- dialog.innerHTML=`<header class="t2-report-head"><h2>${titles[kind]}</h2><button type="button" class="outline-button" data-close aria-label="Закрыть">×</button></header><p class="t2-hint">${escape(objectName)} · ${period}<br>Сохраняется на этом устройстве в браузере.</p><button type="button" class="primary-button" data-add-report>+ ${kind==='people'?'Сделать фото':'Добавить'}</button><p role="alert"></p><div data-editor></div><div data-records aria-live="polite"></div>`;
+ dialog.innerHTML=`<header class="t2-report-head"><h2>${titles[kind]}</h2><button type="button" class="outline-button" data-close aria-label="Закрыть">×</button></header><p class="t2-hint">${escape(objectName)} · ${period}<br>Сохраняется на этом устройстве в браузере.</p><button type="button" class="primary-button" data-add-report ${readOnly?'hidden':''}>+ ${kind==='people'?'Сделать фото':'Добавить'}</button><p role="alert"></p><div data-editor></div><div data-records aria-live="polite"></div>`;
  document.body.append(dialog);
  const $=selector=>dialog.querySelector(selector);
  let stream=null,draft=null,busy=false,closed=false,cameraRequest=0;
@@ -102,6 +102,7 @@ export function openReportDialog({owner,objectId,objectName,week,kind}) {
   };
  }
  $('[data-add-report]').onclick=async()=>{
+  if(readOnly)return;
   $('[role=alert]').textContent='';$('[data-add-report]').disabled=true;
   try{
    if(kind==='people'){await startCamera();return;}
@@ -110,4 +111,8 @@ export function openReportDialog({owner,objectId,objectName,week,kind}) {
   }catch(reason){error(reason);$('[data-add-report]').disabled=false;}
  };
  dialog.showModal();renderRecords().catch(error);
+}
+
+export async function deleteObjectReports(owner,objectId){
+ const db=await openDatabase();return new Promise((resolve,reject)=>{const tx=db.transaction('records','readwrite'),store=tx.objectStore('records');const request=store.openCursor();request.onsuccess=()=>{const cursor=request.result;if(!cursor)return;const scope=JSON.parse(cursor.value.scope);if(scope[0]===owner&&scope[1]===objectId)cursor.delete();cursor.continue();};tx.oncomplete=resolve;tx.onerror=tx.onabort=()=>reject(Error('Не удалось удалить файлы объекта. Повторите удаление.'));});
 }
