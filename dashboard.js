@@ -1,3 +1,4 @@
+import { mountTimesheet2 } from './timesheet2.js';
 import { mountTimesheet, timesheetSnapshot } from './timesheet.js';
 import { supabaseConfig } from './auth-config.js';
 import { professions } from './professions.js';
@@ -3060,7 +3061,7 @@ function setPanel(name) {
     catch { activeCommercialProposalId = pathParts.join('/'); }
   }
   const projectPanels = ['proposals', 'proposal-detail', 'project-analysis', 'detailed-project-detail', 'contract-review', 'analysis-detail'];
-  const next = ['home', 'projects', ...projectPanels, 'space', 'games', 'objects', 'cashflow', 'profile', 'passport', 'timesheet'].includes(requestedPanel) ? requestedPanel : 'home';
+  const next = ['home', 'projects', ...projectPanels, 'space', 'games', 'objects', 'cashflow', 'profile', 'passport', 'timesheet', 'timesheet2'].includes(requestedPanel) ? requestedPanel : 'home';
   $('[data-dashboard]').classList.toggle('is-space-mode', next === 'space');
   if (next !== 'space') {
     $('[data-space-toolbar]').hidden = true;
@@ -10719,6 +10720,7 @@ async function openNotificationsCenter() {
 }
 
 function openView(view) {
+  if (view === 'timesheet2') { setPanel('timesheet2'); return; }
   if (view === 'timesheet') { setPanel('timesheet'); return; }
   if (view === 'profile') { setPanel('profile'); return; }
   if (view === 'passport') { setPanel('passport'); return; }
@@ -11638,6 +11640,7 @@ document.addEventListener('click', trackConstructionActivity, true);
 setPanel(pendingTransferImport?.intent === 'commercial-proposal' ? 'proposals' : (location.hash.slice(1) || 'home'));
 restoreBottomMenuState();
 const cabinetRole = await initAuth();
+mountTimesheet2($('[data-timesheet2-root]'), projectNotebookOwner);
 mountTimesheet({ root: $('[data-timesheet-root]'), ownerId: projectNotebookOwner, onChange: () => offlineSync.capture(['staff']) });
 if (cabinetRole) playCabinetWelcome(cabinetRole);
 const dailyRewarded = awardDailyLoginReward();
