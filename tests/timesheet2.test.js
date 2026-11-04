@@ -18,3 +18,22 @@ test('weekly headcount counts each marked person once and ignores unmarked emplo
  const result=weekSummary([row,{...row,id:'b',hours:Array(7).fill('')}]);
  assert.equal(result.people,1);assert.equal(result.days,2);assert.equal(result.hours,12);assert.equal(result.pay,1050000);assert.deepEqual(result.daily,[1,1,0,0,0,0,0]);
 });
+
+import {settlement} from '../timesheet2.js';
+test('weekly adjustments subtract fines and payments and reset on carry',()=>{
+ const row={id:'a',name:'Иван',rateCents:700000,norm:8,hours:[8,4,'','','','',''],fineCents:50000,bonusCents:100000,paidCents:300000};
+ assert.equal(settlement(row),800000);
+ const next=carryRoster({'2026-11-02':{rows:[row]}},'2026-11-09').rows[0];
+ assert.equal(settlement(next),0);assert.equal(next.fineCents,0);assert.equal(next.bonusCents,0);assert.equal(next.paidCents,0);
+ assert.equal(weekSummary([row]).net,800000);assert.equal(settlement({...row,paidCents:2000000}),-900000);
+});
+test('dismissal excludes staff from future weeks but preserves historical and entered data',()=>{
+ const row={id:'a',name:'Иван',rateCents:700000,norm:8,hours:[8,'','','','','','']};
+ const weeks={'2026-11-02':{rows:[row]},'2026-11-09':newWeek({rows:[row]})};const dismissed={a:'2026-11-04'};
+ assert.equal(carryRoster(weeks,'2026-11-02',dismissed).rows[0].hours[0],8);
+ assert.ok(!carryRoster(weeks,'2026-11-09',dismissed).rows.some(r=>r.id==='a'));
+ assert.ok(!carryRoster(weeks,'2026-11-16',dismissed).rows.some(r=>r.id==='a'));
+ weeks['2026-11-09'].rows[0].paidCents=100;
+ assert.equal(carryRoster(weeks,'2026-11-09',dismissed).rows[0].paidCents,100);
+ assert.equal(carryRoster(weeks,'2026-11-16',{}).rows[0].name,'Иван');
+});
