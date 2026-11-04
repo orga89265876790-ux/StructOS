@@ -37,3 +37,15 @@ test('dismissal excludes staff from future weeks but preserves historical and en
  assert.equal(carryRoster(weeks,'2026-11-09',dismissed).rows[0].paidCents,100);
  assert.equal(carryRoster(weeks,'2026-11-16',{}).rows[0].name,'Иван');
 });
+
+import {addEntry,setEmployment,dayLocked} from '../timesheet2.js';
+test('employee entries accumulate in the selected week and preserve payroll on dismissal',()=>{
+ const r={id:'a',name:'Иван',rateCents:700000,norm:8,hours:[8,'','','','','','']};const o={weeks:{'2026-11-02':{rows:[r]}}};
+ addEntry(o,'2026-11-02','a','fine',10000);addEntry(o,'2026-11-02','a','fine',20000);addEntry(o,'2026-11-02','a','extra',50000);addEntry(o,'2026-11-02','a','bonus',10000);addEntry(o,'2026-11-02','a','paid',100000);
+ assert.equal(r.fineCents,30000);assert.equal(r.entries.length,5);assert.equal(settlement(r),630000);
+ setEmployment(o,'a',null,'2026-11-04');assert.ok(dayLocked(o,'a','2026-11-02'));assert.throws(()=>addEntry(o,'2026-11-02','a','bonus',100));assert.equal(settlement(r),630000);
+ assert.throws(()=>setEmployment(o,'a','2026-11-03'));setEmployment(o,'a','2026-11-11');assert.ok(dayLocked(o,'a','2026-11-10'));assert.ok(!dayLocked(o,'a','2026-11-11'));
+ assert.ok(!carryRoster(o.weeks,'2026-11-02',o.dismissals,o.restorations).rows[0].hours.every(h=>h===''));
+ const next=carryRoster(o.weeks,'2026-11-09',o.dismissals,o.restorations);assert.equal(next.rows[0].id,'a');assert.equal(next.rows[0].entries.length,0);assert.equal(totals(next.rows[0]).pay,0);
+ setEmployment(o,'a',null,'2026-11-14');setEmployment(o,'a','2026-11-16');assert.ok(dayLocked(o,'a','2026-11-11'));assert.equal(o.employmentEvents.length,4);
+});
